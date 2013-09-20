@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3d',['operator=',['../a00004.html#ac89b58368a49a3de99c285fb66aea33a',1,'graph::Edge::operator=()'],['../a00006.html#a0d3c4952062d0726344a4dd8e2625557',1,'graph::Token::operator=()']]]
+  ['operator_3d',['operator=',['../a00004.html#aefb1da11b9ddf052d8940d6637cbc0c9',1,'graph::Node::operator=()'],['../a00005.html#a5ca1b9dcf1082d68cc167791bd072eec',1,'graph::Token::operator=()']]]
 ];

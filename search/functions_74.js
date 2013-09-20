@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['token',['Token',['../a00006.html#ade6bc3ee978fa297102fb67b3d23aad0',1,'graph::Token::Token()'],['../a00006.html#ae141a8120279186a3ee60e34b13aefa8',1,'graph::Token::Token(const Token &amp;other)']]]
+  ['token',['Token',['../a00005.html#aa3c5868ba4115f3189df6b2ac5b36f39',1,'graph::Token::Token()'],['../a00005.html#a28857fe5c15e75db89ef881dd5a90bea',1,'graph::Token::Token(const Token &amp;other)']]]
 ];
