@@ -7,3 +7,12 @@
 //
 
 #include "token.h"
+
+using namespace graph;
+
+Token::Token() {};
+Token::Token(const Token& other) {};
+
+Token& Token::operator= (const Token& rhs) {
+    return *this;
+}

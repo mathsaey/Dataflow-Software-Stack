@@ -3,7 +3,7 @@
 #############
 
 # Compiler
-COMPILER = clang
+COMPILER = gcc
 COMPILE_INVOCATION = $(COMPILER)
 LINK_INVOCATION = $(COMPILER) -lstdc++
 
@@ -40,7 +40,7 @@ link: $(EXECUTABLE)
 
 #Create the directory if it doesn't exist
 directory:
-	test -d $(OUTPUT-DIR) || mkdir $(OUTPUT-DIR)
+	@ test -d $(OUTPUT-DIR) || mkdir $(OUTPUT-DIR)
 
 # Run the Documentation tool
 doc: 

@@ -22,17 +22,27 @@ namespace graph {
         /**
          Default constructor
          */
-        explicit Token() {};
+        explicit Token();
         
         /**
          Copy constructor
+         
+        @param other
+            Token to copy
+         @return
+            A newly copied token
          */
-        explicit Token(const Token& other) {};
+        explicit Token(const Token& other);
         
         /**
-         Assigment operator
+         Assignment operator
+         
+         @param rhs
+            Right hand side of the assignment
+         @return
+            The new token.
          */
-        Token& operator= (const Token& rhs) {return *this;};
+        Token& operator= (const Token& rhs);
     };
 }
 
