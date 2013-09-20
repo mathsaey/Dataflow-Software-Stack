@@ -3,13 +3,18 @@
 	[
 		{
 			"path": "./",
-			"name":"Root"
-		}
+			"name":"Root",
+            "folder_exclude_patterns": [""]
+        },
+        {
+        	"path": "./src",
+        	"name": "Source"
+        }
 	],
 	"build_systems":
     [
         {
-            "name": "C++",
+            "name": "C++ make",
             "selector": "source.c++",
             "cmd": ["make"]
         }
