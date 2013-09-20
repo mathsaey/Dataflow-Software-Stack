@@ -7,18 +7,18 @@ COMPILER = clang
 COMPILE_INVOCATION = $(COMPILER)
 LINK_INVOCATION = $(COMPILER) -lstdc++
 
-# Input locations
-INPUT_DIR = src/
-SOURCE_FILES = $(wildcard $(INPUT_DIR)*.cpp)
-
-# Output locations
-EXECUTABLE = dvm
-OUTPUT-DIR = bin/
-OBJECT_FILES = $(SOURCE_FILES:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o)
-
 # Documentation 
 DOCUMENTATION = doxygen
 DOCUMENTATION_CONFIG = DoxygenConfig
+
+# Locations
+EXECUTABLE = dvm
+INPUT_DIR = src/
+OUTPUT-DIR = obj/
+
+# Pattern matching
+SOURCE_FILES = $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
+OBJECT_FILES = $(foreach file, $(SOURCE_FILES), $(OUTPUT-DIR)$(notdir $(file:%.cpp=%.o)))
 
 ###########
 # Targets #
@@ -61,6 +61,8 @@ clean:
 
 # Object files dependency
 $(OUTPUT-DIR)%.o : $(INPUT_DIR)%.cpp
+	$(COMPILE_INVOCATION) -c $< -o $@
+$(OUTPUT-DIR)%.o : $(INPUT_DIR)**/%.cpp
 	$(COMPILE_INVOCATION) -c $< -o $@
 
 # Executable dependency
