@@ -8,7 +8,7 @@
 
 #include "node.h"
 
-using namespace graph;
+using namespace core;
 
 Node::Node(const Node &other):
     _output(std::vector<Node *>(other._output)),

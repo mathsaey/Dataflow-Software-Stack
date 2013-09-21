@@ -12,7 +12,7 @@
 #import <vector>
 #import "token.h"
 
-namespace graph {
+namespace core {
     /**
      This class represents a node in a dataflow graph.
      A node represents a single operation on an arbitrary

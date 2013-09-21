@@ -9,9 +9,7 @@
 #ifndef __DVM_TOKEN_H__
 #define __DVM_TOKEN_H__
 
-#include <iostream>
-
-namespace graph {
+namespace core {
     /**
      This class represents a token in a dataflow graph.
      A token in a dataflow graph represents a single piece

@@ -8,7 +8,7 @@
 
 #include "token.h"
 
-using namespace graph;
+using namespace core;
 
 Token::Token() {};
 Token::Token(const Token& other) {};
