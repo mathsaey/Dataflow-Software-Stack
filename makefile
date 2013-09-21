@@ -3,9 +3,9 @@
 #############
 
 # Compiler
-COMPILER = gcc
-COMPILE_INVOCATION = $(COMPILER)
-LINK_INVOCATION = $(COMPILER) -lstdc++
+COMPILER = clang
+COMPILE_INVOCATION = $(COMPILER) -std=c++11
+LINK_INVOCATION = $(COMPILER) -lstdc++ 
 
 # Documentation 
 DOCUMENTATION = doxygen

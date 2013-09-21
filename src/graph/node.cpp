@@ -10,24 +10,50 @@
 
 using namespace graph;
 
-Node::Node() {};
-
 Node::Node(const Node &other):
-    _output(other._output) {};
-
-Node::Node(std::vector<const Node*> &output):
-    _output(output) {};
+    _output(std::vector<Node *>(other._output)),
+    _input(std::vector<Token *>(other._input)),
+    _treshold(other._treshold)
+    {};
 
 Node& Node::operator= (const Node& rhs) {
     if (this == &rhs) return *this;
-    _output = rhs._output;
+    _treshold = rhs._treshold;
+    _output = std::vector<Node *>(rhs._output);
+    _input = std::vector<Token *>(rhs._input);
     return *this;
 }
 
-void Node::addOutput(const Node * node) {
+Node::Node(int treshold):
+    _input(std::vector<Token *>(treshold)),
+    _treshold(treshold)
+    {_input.reserve(_treshold);};
+
+Node::Node(int treshold, std::vector<Node*> &output):
+    _output(output),
+    _input(std::vector<Token *>(treshold)),
+    _treshold(treshold)
+    {_input.reserve(_treshold);};
+
+
+void Node::addOutput(Node * node) {
     _output.push_back(node);
 }
 
-const std::vector<const Node*> Node::getChildren() const {
+const std::vector<Node*> Node::getChildren() {
     return _output;
+}
+
+void Node::acceptToken(Token * token) {
+    _input.push_back(token);
+    
+    if (_input.size() >= _treshold) {
+        execute();
+    }
+}
+
+void Node::execute() {
+    for (auto i:_output) {
+        i->acceptToken(new Token());
+    }
 }

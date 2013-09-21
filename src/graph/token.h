@@ -13,7 +13,9 @@
 
 namespace graph {
     /**
-     This class represents a token
+     This class represents a token in a dataflow graph.
+     A token in a dataflow graph represents a single piece
+     of data that a Node needs to execute.
      
      @author Mathijs Saey
      */
