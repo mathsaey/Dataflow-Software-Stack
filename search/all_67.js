@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getchildren',['getChildren',['../a00004.html#a5c06e4ec6c5fe6b2d6d754b9c5a688af',1,'graph::Node']]]
+  ['getchildren',['getChildren',['../a00004.html#a4bdef23ee2e31c88ea7faadde086ca3d',1,'graph::Node']]]
 ];
