@@ -9,6 +9,10 @@
         {
         	"path": "./src",
         	"name": "Source"
+        },
+        {
+            "path": "./docpages",
+            "name": "Documentation"
         }
 	],
 	"build_systems":
@@ -16,6 +20,7 @@
         {
             "name": "C++ make",
             "selector": "source.c++",
+            "working_dir": "${project_path}",
             "cmd": ["make"]
         }
     ]
