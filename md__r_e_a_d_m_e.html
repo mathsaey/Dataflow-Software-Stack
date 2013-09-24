@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>DataFlow Virtual Machine: About</title>
+<title>DVM: About</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">DataFlow Virtual Machine
+   <div id="projectname">DVM
    </div>
-   <div id="projectbrief">A Virtual Machine for the IF1 DataFlow language</div>
+   <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
  </tr>
  </tbody>
@@ -78,12 +78,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">About </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This is the repository of the master thesis of Mathijs Saey at the Vrije Universiteit Brussel. More info will be added later.</p>
-<p>Documentation can be found on the <a href="http://mathsaey.github.io/DVM/">github pages</a> of this repository </p>
+<div class="textblock"><p>This is the repository of the master thesis of Mathijs Saey at the Vrije Universiteit Brussel. The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.</p>
+<p>More info about the project can be found on the <a href="http://mathsaey.github.io/DVM/">documentation</a> pages of this project.</p>
+<h1>Context</h1>
+<h2><a href="http://en.wikipedia.org/wiki/Dataflow_architecture">Dataflow</a></h2>
+<p>The dataflow architecture is an architecture that differs from the von Neumann architecture seen in most mainstream programming languages these days. The idea behind dataflow is that instructions are executed when all of the data they depend on is available.</p>
+<h2>IF1 and <a href="http://en.wikipedia.org/wiki/SISAL">Sisal</a></h2>
+<p>Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. sisalc, the sisal compiler, is compiled to the IF1 intermediate language, which represents the sisal source code as a dataflow graph.</p>
+<h2>Goal, revisited</h2>
+<blockquote class="doxtable">
+<p>The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.</p>
+<p></p>
+</blockquote>
+<p>The goal of this project is the creation of a virtual machine that internally works according to the dataflow model. This VM will be able to parse IF1 files. Other languages could be added later, but IF1 was chosen for the goals of this project since it is already represents a dataflow graph. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 24 2013 18:53:47 for DataFlow Virtual Machine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 24 2013 22:01:15 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
