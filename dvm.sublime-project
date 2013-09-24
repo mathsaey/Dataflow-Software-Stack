@@ -4,7 +4,7 @@
 		{
 			"path": "./",
 			"name":"Root",
-            "folder_exclude_patterns": [""]
+            "folder_exclude_patterns": ["src", "docpages", "obj", "documentation", "DataFlow Virtual Machine.xcodeproj"]
         },
         {
         	"path": "./src",
@@ -22,6 +22,12 @@
             "selector": "source.c++",
             "working_dir": "${project_path}",
             "cmd": ["make"]
+        },
+        {
+            "name": "doxygen markdown",
+            "selector":"text.html.markdown",
+            "working_dir": "${project_path}",
+            "cmd": ["make", "doc"]
         }
     ]
 }
