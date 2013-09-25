@@ -8,7 +8,7 @@ If you like to look at an example while browsing this page, check out [Quicksort
 
 [TOC]
 
-# IF1 Basics # {#Basics}
+# IF1 Concepts # {#Concepts}
 
 IF1 represents directed, acyclic graphs, these graphs have a few components.
 
@@ -26,36 +26,43 @@ IF1 represents directed, acyclic graphs, these graphs have a few components.
 		* Contain the text of a literal as a string.
 * Graph boundaries surround groups of nodes and edges.
 
-IF1 can also contain comments.
+# IF1 Instructions # {#Form}
 
-# IF1 form # {#Form}
+IF1 instructions are delimited by newlines. The first character after a newline determines the type of instruction the line represents, the rest of the line consists of a number of whitespace separated fields, the amount of which depends on that specific instruction. Any extra text listed after the fields is considered to be a comment, so are lines that start with C. For more information about comments, look into [appendix A](#Comments).
 
-IF1 instructions are delimited by newlines. The first character after a newline determines the instruction the line represents, the rest of the line consists of a number of whitespace separated fields, the amount of which depends on that specific instruction. Any extra text listed after the fields is considered to be a comment, so are lines that start with C. For more information about comments, look into [appendix A](#Comments).
-
-The following table lists the different instructions. 
+The following table lists the different instructions types.
 
 Character | Represents | Syntax 
 ----------| -----------|-------
-T         | type   						| `T label type_descriptor basic_type `
+T         | type   						| `T label type_code arg_1 arg_2 `
 E 		  | edge 						| `E source_node port destination_node port type `
 L 		  | literal						| `L destination_node port type string `
-G 		  | subgraph of a compound node | `G integer `
+G 		  | subgraph of a compound node | `G type_reference `
 G 		  | local function graph 		| `G type_reference "name" `
 X 		  | global function graph 		| `X type_reference "name" `
-L 		  | imported function   		| `L type_reference "name" `
+I 		  | imported function   		| `I type_reference "name" `
 N 		  | simple node   				| `N label operation `
-{		  | compound node 				| `{compound definition (contains newlines)} label operation integers `
-
-## Definitions ## {#Definitions}
-
-### Labels ### {#label}
-
-In IF1, labels are represented by integers. Currently, only nodes and types use labels, nodes and types do not share labels, that is, a node and a type may have the same integer as label without being related in any way. Type labels share a global scope, while Node labels only have to be unique within their enclosing graph.
+{		  | start compound node 		| `{ `
+}		  | end compound node 			| `} label operation integers 
 
 
-### Types ### {#types}
+The semantics of these instructions are explained below, explanation about *labels* and *types* are presented in the [labels and types](#types) section.
 
-`T label type_code arg_1 arg_2 `
+* Graph boundaries represent a function and simply contain the type (check out the function type) and name of this function.
+* Graph boundaries have a scope associated with them, anything below the boundary declaration is part of the graph's scope until either a "}, G,X or I" is encountered.
+* Subgraphs in compound nodes are not required to give a type.
+* Edges simply contain the input node, and the port on this node, the destination node, and the port on this node that this edge leads to. Furthermore, the edge also contains the type of it's data.
+* Literals contain their destination, the port on this destination, their type and a string version of their counts. [Appendix B](ref #Literal_def) contains an overview of some of the most common literals.
+
+## Labels and Types ## {#types}
+
+IF1 instructions commonly contain a type identifier, the purpose of this section is to explain IF1 type definitions, any defined type is referred to by it's *label*.
+
+Labels are represented by integers, and are used to identify nodes and types. Nodes and types do not share labels, that is, a node and a type may have the same integer as label without being related in any way. Type labels share a global scope, while Node labels only have to be unique within their enclosing graph. It's also worth noting that a missing or unknown type is referred to by using the label 0.
+
+With that being said, we can look at the type definitions:
+
+    T label type_code arg_1 arg_2
 
 * Label can be used to refer to the type later on.
 * The type code can be considers to be an argument that indicates what type of type we are dealing with, based on this information, the basic_type is used as another argument to construct the actual type.
@@ -125,15 +132,6 @@ A function type simple contains "pointers" to 2 tuples, the first tuple represen
 In terms of higher level languages, the function type simple declares the function's signature, without the name.
 
 
-### Nodes ### {#node}
-
-### Graphs ### {#graph}
-
-### Edges ### {#edge}
-
-### Literals ### {#literal}
-
-
 # Appendix A: Comments {#Comments}
 
 2 main types of comments exist in IF1, stamps and pragmas, stamps are comments that occupy an entire line that starts with `C$`, pragmas are comments that are added after the fields of a line.
@@ -177,6 +175,17 @@ of | A | offset in activation record
 st | A | style of memory allocation (%st=p for pointer, %st=c for contiguous)
 xy | A | position for node in graphic output
 
+# Appendix B: Literal Definitions {#Literal_def}
+
+Type | String
+-----|-------
+Function names | "someName"
+Boolean values | "T" or "F"
+Integer values | "03349"
+Characters 	   | "'\n'" or "'x'"
+Null value 	   | nil
+Single-precision floating point value | "3.503" or "5e3" or ".503"
+Double-precision floating point value | "6.626198d-34" ".056D24"
 
 \page QSSis Quicksort in Sisal
 \include quicksort.sis
