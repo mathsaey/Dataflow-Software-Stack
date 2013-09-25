@@ -79,27 +79,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Basics">IF1 Basics</a></li>
-<li class="level1"><a href="#Form">IF1 form</a><ul><li class="level2"><a href="#Definitions">Definitions</a><ul><li class="level3"><a href="#label">Labels</a></li>
-<li class="level3"><a href="#types">Types</a></li>
-<li class="level3"><a href="#node">Nodes</a></li>
-<li class="level3"><a href="#graph">Graphs</a></li>
-<li class="level3"><a href="#edge">Edges</a></li>
-<li class="level3"><a href="#literal">Literals</a></li>
-</ul>
-</li>
+<ul><li class="level1"><a href="#Concepts">IF1 Concepts</a></li>
+<li class="level1"><a href="#Form">IF1 Instructions</a><ul><li class="level2"><a href="#types">Labels and Types</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#Comments">Appendix A: Comments</a><ul><li class="level2"><a href="#Stamps">Stamps</a></li>
 <li class="level2"><a href="#Pragmas">Pragmas</a></li>
 </ul>
 </li>
+<li class="level1"><a href="#Literal_def">Appendix B: Literal Definitions</a></li>
 </ul>
 </div>
 <div class="textblock"><p>This page serves as a basic introduction to the IF1 language. The information on this page is based on the paper: <code>IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)</code></p>
 <p>On this page, we attempt to create a compact IF1 overview that can serve as a full reference to the language while still being complete. If you like to look at an example while browsing this page, check out <a class="el" href="_q_s_i_f1.html">Quicksort in IF1</a>, generated from <a class="el" href="_q_s_sis.html">this sisal code</a>.</p>
-<h1><a class="anchor" id="Basics"></a>
-IF1 Basics</h1>
+<h1><a class="anchor" id="Concepts"></a>
+IF1 Concepts</h1>
 <p>IF1 represents directed, acyclic graphs, these graphs have a few components.</p>
 <ul>
 <li>IF1 nodes are operations.<ul>
@@ -124,42 +118,49 @@ IF1 Basics</h1>
 </li>
 <li>Graph boundaries surround groups of nodes and edges.</li>
 </ul>
-<p>IF1 can also contain comments.</p>
 <h1><a class="anchor" id="Form"></a>
-IF1 form</h1>
-<p>IF1 instructions are delimited by newlines. The first character after a newline determines the instruction the line represents, the rest of the line consists of a number of whitespace separated fields, the amount of which depends on that specific instruction. Any extra text listed after the fields is considered to be a comment, so are lines that start with C. For more information about comments, look into <a href="#Comments">appendix A</a>.</p>
-<p>The following table lists the different instructions.</p>
+IF1 Instructions</h1>
+<p>IF1 instructions are delimited by newlines. The first character after a newline determines the type of instruction the line represents, the rest of the line consists of a number of whitespace separated fields, the amount of which depends on that specific instruction. Any extra text listed after the fields is considered to be a comment, so are lines that start with C. For more information about comments, look into <a href="#Comments">appendix A</a>.</p>
+<p>The following table lists the different instructions types.</p>
 <table class="doxtable">
 <tr>
 <th>Character </th><th>Represents </th><th>Syntax  </th></tr>
 <tr>
-<td>T </td><td>type </td><td><code>T label type_descriptor basic_type</code> </td></tr>
+<td>T </td><td>type </td><td><code>T label type_code arg_1 arg_2</code> </td></tr>
 <tr>
 <td>E </td><td>edge </td><td><code>E source_node port destination_node port type</code> </td></tr>
 <tr>
 <td>L </td><td>literal </td><td><code>L destination_node port type string</code> </td></tr>
 <tr>
-<td>G </td><td>subgraph of a compound node </td><td><code>G integer</code> </td></tr>
+<td>G </td><td>subgraph of a compound node </td><td><code>G type_reference</code> </td></tr>
 <tr>
 <td>G </td><td>local function graph </td><td><code>G type_reference "name"</code> </td></tr>
 <tr>
 <td>X </td><td>global function graph </td><td><code>X type_reference "name"</code> </td></tr>
 <tr>
-<td>L </td><td>imported function </td><td><code>L type_reference "name"</code> </td></tr>
+<td>I </td><td>imported function </td><td><code>I type_reference "name"</code> </td></tr>
 <tr>
 <td>N </td><td>simple node </td><td><code>N label operation</code> </td></tr>
 <tr>
-<td>{ </td><td>compound node </td><td><code>{compound definition (contains newlines)} label operation integers</code> </td></tr>
+<td>{ </td><td>start compound node </td><td><code>{</code> </td></tr>
+<tr>
+<td>} </td><td>end compound node </td><td><code>} label operation integers</code> </td></tr>
 </table>
-<h2><a class="anchor" id="Definitions"></a>
-Definitions</h2>
-<h3><a class="anchor" id="label"></a>
-Labels</h3>
-<p>In IF1, labels are represented by integers. Currently, only nodes and types use labels, nodes and types do not share labels, that is, a node and a type may have the same integer as label without being related in any way. Type labels share a global scope, while Node labels only have to be unique within their enclosing graph.</p>
-<h3><a class="anchor" id="types"></a>
-Types</h3>
-<p><code>T label type_code arg_1 arg_2</code></p>
+<p>The semantics of these instructions are explained below, explanation about <em>labels</em> and <em>types</em> are presented in the <a href="#types">labels and types</a> section.</p>
 <ul>
+<li>Graph boundaries represent a function and simply contain the type (check out the function type) and name of this function.</li>
+<li>Graph boundaries have a scope associated with them, anything below the boundary declaration is part of the graph's scope until either a "}, G,X or I" is encountered.</li>
+<li>Subgraphs in compound nodes are not required to give a type.</li>
+<li>Edges simply contain the input node, and the port on this node, the destination node, and the port on this node that this edge leads to. Furthermore, the edge also contains the type of it's data.</li>
+<li>Literals contain their destination, the port on this destination, their type and a string version of their counts. <a href="ref #Literal_def">Appendix B</a> contains an overview of some of the most common literals.</li>
+</ul>
+<h2><a class="anchor" id="types"></a>
+Labels and Types</h2>
+<p>IF1 instructions commonly contain a type identifier, the purpose of this section is to explain IF1 type definitions, any defined type is referred to by it's <em>label</em>.</p>
+<p>Labels are represented by integers, and are used to identify nodes and types. Nodes and types do not share labels, that is, a node and a type may have the same integer as label without being related in any way. Type labels share a global scope, while Node labels only have to be unique within their enclosing graph. It's also worth noting that a missing or unknown type is referred to by using the label 0.</p>
+<p>With that being said, we can look at the type definitions: </p>
+<pre class="fragment">T label type_code arg_1 arg_2
+</pre><ul>
 <li>Label can be used to refer to the type later on.</li>
 <li>The type code can be considers to be an argument that indicates what type of type we are dealing with, based on this information, the basic_type is used as another argument to construct the actual type.</li>
 <li>The exact use of the other codes depends on the type_code.</li>
@@ -230,14 +231,6 @@ Types</h3>
 <h4>Functions</h4>
 <p>A function type simple contains "pointers" to 2 tuples, the first tuple represents the arguments this function accepts while the second tuple represents the result it returns.</p>
 <p>In terms of higher level languages, the function type simple declares the function's signature, without the name.</p>
-<h3><a class="anchor" id="node"></a>
-Nodes</h3>
-<h3><a class="anchor" id="graph"></a>
-Graphs</h3>
-<h3><a class="anchor" id="edge"></a>
-Edges</h3>
-<h3><a class="anchor" id="literal"></a>
-Literals</h3>
 <h1><a class="anchor" id="Comments"></a>
 Appendix A: Comments</h1>
 <p>2 main types of comments exist in IF1, stamps and pragmas, stamps are comments that occupy an entire line that starts with <code>C$</code>, pragmas are comments that are added after the fields of a line.</p>
@@ -297,10 +290,30 @@ Pragmas</h2>
 <tr>
 <td>xy </td><td>A </td><td>position for node in graphic output </td></tr>
 </table>
+<h1><a class="anchor" id="Literal_def"></a>
+Appendix B: Literal Definitions</h1>
+<table class="doxtable">
+<tr>
+<th>Type </th><th>String  </th></tr>
+<tr>
+<td>Function names </td><td>"someName" </td></tr>
+<tr>
+<td>Boolean values </td><td>"T" or "F" </td></tr>
+<tr>
+<td>Integer values </td><td>"03349" </td></tr>
+<tr>
+<td>Characters </td><td>"'\n'" or "'x'" </td></tr>
+<tr>
+<td>Null value </td><td>nil </td></tr>
+<tr>
+<td>Single-precision floating point value </td><td>"3.503" or "5e3" or ".503" </td></tr>
+<tr>
+<td>Double-precision floating point value </td><td>"6.626198d-34" ".056D24" </td></tr>
+</table>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 22:51:52 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 26 2013 00:03:09 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
