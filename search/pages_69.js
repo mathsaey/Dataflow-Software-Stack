@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['if1',['IF1',['../md_docpages__i_f1.html',1,'']]]
+  ['if1_20quick_20reference',['IF1 Quick Reference',['../md_docpages__i_f1.html',1,'']]]
 ];
