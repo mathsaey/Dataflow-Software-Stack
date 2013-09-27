@@ -4,13 +4,16 @@
 		{
 			"path": "./",
 			"name":"Root",
-            "folder_exclude_patterns": ["src", "docpages", "obj", "documentation", "DataFlow Virtual Machine.xcodeproj"]
-        },
-        {
+            "folder_exclude_patterns": 
+                ["src", "docpages", "obj", "documentation", 
+                "DataFlow Virtual Machine.xcodeproj", "prototypes"]
+        },{
         	"path": "./src",
         	"name": "Source"
-        },
-        {
+        },{
+            "path": "./prototypes/1.flow",
+            "name": "Prototype"
+        },{
             "path": "./docpages",
             "name": "Documentation"
         }
@@ -22,8 +25,7 @@
             "selector": "source.c++",
             "working_dir": "${project_path}",
             "cmd": ["make"]
-        },
-        {
+        },{
             "name": "doxygen markdown",
             "selector":"text.html.markdown",
             "working_dir": "${project_path}",
