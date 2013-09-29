@@ -144,10 +144,13 @@ IF1 Instructions</h1>
 <tr>
 <td>{ </td><td>start compound node </td><td><code>{</code> </td></tr>
 <tr>
-<td>} </td><td>end compound node </td><td><code>} label operation integers</code> </td></tr>
+<td>} </td><td>end compound node </td><td>`} label operation association_list_length association_list_element_1 association_list_element_2 ... </td></tr>
 </table>
 <p>The semantics of these instructions are explained below, explanation about <em>labels</em> and <em>types</em> are presented in the <a href="#types">labels and types</a> section.</p>
 <ul>
+<li>Simple nodes simply contain a label and an identifier, this identifier represents a native IF1 instruction.</li>
+<li>Compound nodes contain subgraphs and represent more complex operations, such as a for loop.</li>
+<li>The compound node contains a few subgraphs that represent parts of the compound node, such as the initialization and the condition check, the association list shows which subgraphs represent which action.</li>
 <li>Graph boundaries represent a function and simply contain the type (check out the function type) and name of this function.</li>
 <li>Graph boundaries have a scope associated with them, anything below the boundary declaration is part of the graph's scope until either a "}, G,X or I" is encountered.</li>
 <li>Subgraphs in compound nodes are not required to give a type.</li>
@@ -313,7 +316,7 @@ Appendix B: Literal Definitions</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 26 2013 00:03:09 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 30 2013 01:34:11 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
