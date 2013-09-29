@@ -43,11 +43,14 @@ X 		  | global function graph 		| `X type_reference "name" `
 I 		  | imported function   		| `I type_reference "name" `
 N 		  | simple node   				| `N label operation `
 {		  | start compound node 		| `{ `
-}		  | end compound node 			| `} label operation integers 
+}		  | end compound node 			| `} label operation association_list_length association_list_element_1 association_list_element_2 ...  
 
 
 The semantics of these instructions are explained below, explanation about *labels* and *types* are presented in the [labels and types](#types) section.
 
+* Simple nodes simply contain a label and an identifier, this identifier represents a native IF1 instruction. 
+* Compound nodes contain subgraphs and represent more complex operations, such as a for loop.
+* The compound node contains a few subgraphs that represent parts of the compound node, such as the initialization and the condition check, the association list shows which subgraphs represent which action.
 * Graph boundaries represent a function and simply contain the type (check out the function type) and name of this function.
 * Graph boundaries have a scope associated with them, anything below the boundary declaration is part of the graph's scope until either a "}, G,X or I" is encountered.
 * Subgraphs in compound nodes are not required to give a type.

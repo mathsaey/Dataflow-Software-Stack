@@ -6,7 +6,8 @@
 			"name":"Root",
             "folder_exclude_patterns": 
                 ["src", "docpages", "obj", "documentation", 
-                "DataFlow Virtual Machine.xcodeproj", "prototypes"]
+                "DataFlow Virtual Machine.xcodeproj", "prototypes"],
+            "file_exclude_patterns":["dvm"]
         },{
         	"path": "./src",
         	"name": "Source"
