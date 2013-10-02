@@ -1,0 +1,84 @@
+% sort.sis
+% Mathijs Saey
+% dvm examples
+
+% This file contains an implementation of a combined sorting algorithm in sisal.
+% The algorithm will sort using quicksort until the remaining array to sort has
+% reached a cutoff point, once this happens, insertion sort is called on the
+% nodes that remain.
+
+% The main purpose of this file is to produce some IF1 code to use in testing.
+
+define	Main
+
+type IntArr = array[integer]
+
+% Insertion sort definition
+function insertion_sort(arr: IntArr returns IntArr)
+
+    % Inserts an element in at the correct spot in the sorted part of the array
+    function insert_el(arr: IntArr; el :integer returns IntArr)
+        let L, M, R := 
+        for E in arr
+            returns 
+                array of E when E < el
+                array of E when E = el
+                array of E when E > el
+        end for
+        in 
+            if array_size(arr) = 0 then
+                array [1: el]
+            else
+                L || M || array [1: el] || R
+            end if
+        end let
+    end function
+
+    % Inserts every element into the sorted part of the array one by one.
+    function inner_loop(source, res: IntArr ; idx, max_idx : integer returns IntArr)
+            if max_idx >= idx then
+                let new_res := insert_el(res, source[idx]);
+                in inner_loop(source, new_res, idx + 1, max_idx)
+                end let
+            else
+                res
+            end if
+    end function
+
+    inner_loop(arr, array IntArr [], 1, array_limh(arr))
+end function
+
+% Returns 2 arrays, one with every element smaller than or equal to the pivot,
+% and one more with every element greater than the pivot
+function split (arr : IntArr returns IntArr, IntArr, IntArr)
+    for E in arr
+      pivot := 1
+      returns 
+        array of E when E < arr[pivot]
+        array of E when E = arr[pivot]
+        array of E when E > arr[pivot]
+    end for
+end function
+
+% Keeps on splitting the array in smaller parts using split
+% until the cutoff point is reached, after this, insertion sort is called.
+function sort (arr : IntArr returns IntArr)
+    % We use bubble sort instead once only 10 elements remain
+    if array_size(arr) > 10 then
+        let lower, pivot, higher := split(arr)
+        in sort(lower) || pivot || sort(higher)
+        end let
+    else
+        insertion_sort(arr)
+    end if
+end function
+
+
+function Main (arr : IntArr returns IntArr)
+    sort(arr)
+end function
+
+% An array of random numbers to be used as test input
+%   [1: 50 51 95 14 89 35 39 6 93 61 55 15 12 35 39 45 24 20 19 34 50 92 29 63 88 3 33 49 52 27 32 86 
+%   73 97 100 49 37 86 87 76 91 13 18 3 42 69 75 42 12 48 53 58 8 57 70 97 11 1 74 71 78 57 28 100 46 9 
+%4  96 91 18 32 1 86 80 81 55 3 20 60 91 33 39 75 80 33 41 8 89 37 99 23 69 21 98 16 91 64 40 89 67]

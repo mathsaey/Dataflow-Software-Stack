@@ -4,7 +4,7 @@ This page serves as a basic introduction to the IF1 language.
 The information on this page is based on the paper: `IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)`
 
 On this page, we attempt to create a compact IF1 overview that can serve as a full reference to the language while still being complete.
-If you like to look at an example while browsing this page, check out [Quicksort in IF1](@ref QSIF1), generated from [this sisal code](@ref QSSis).
+If you like to look at an example while browsing this page, check out [a sorting algorithm in IF1](@ref SortIF1), generated from [this sisal code](@ref SortSis).
 
 [TOC]
 
@@ -190,8 +190,8 @@ Null value 	   | nil
 Single-precision floating point value | "3.503" or "5e3" or ".503"
 Double-precision floating point value | "6.626198d-34" ".056D24"
 
-\page QSSis Quicksort in Sisal
-\include quicksort.sis
+\page SortSis Sorting algorithm in Sisal
+\include sort.sis
 
-\page QSIF1 Quicksort in IF1
-\include quicksort.if1
+\page SortIF1 Sorting algorithm in IF1
+\include sort.if1
