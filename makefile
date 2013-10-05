@@ -49,6 +49,7 @@ doc:
 # Removes all output
 clean: 
 	rm $(OUTPUT-DIR)*
+	rm $(EXECUTABLE)
 
 # Phony targets (targets that don't depend on a file)
 .PHONY: clean
