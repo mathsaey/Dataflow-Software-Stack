@@ -12,9 +12,6 @@
         	"path": "./src",
         	"name": "Source"
         },{
-            "path": "./prototypes/1.flow",
-            "name": "Prototype"
-        },{
             "path": "./docpages",
             "name": "Documentation"
         }
