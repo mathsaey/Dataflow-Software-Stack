@@ -2,18 +2,24 @@
 # Mathijs Saey
 # dvm prototype
 
+from port import Port
+
 class AbstractNode(object):
-	"""This class represents a node in any graph type."""
+	"""This class represents a node in any graph type.
+
+		A Node contains an arbitrary amount of input nodes
+		and an arbitrary amount of output edges.
+	"""
 	
 	def __init__(self,inputs):
-		self.inputs = [None] * inputs
+		self.inputs = [Port(self)] * inputs
 		self.outputs = []
 
-	def addInput(self, idx, input):
-		self.inputs[idx] = input
+	def getInput(self, idx):
+		return self.inputs[idx]
 
-	def addOutput(self, output):
-		self.outputs += [output]
+	def getOutput(self):
+		return self.outputs
 
 	def getArguments(self):
 		resLst = []
@@ -21,7 +27,7 @@ class AbstractNode(object):
 			resLst += [el.value()]
 		return resLst
 
-	def sendOutput(self, output):
+	def sendOutput(self, outputs):
 		for el in self.outputs:
 			el.acceptInput(output)
 
@@ -30,7 +36,6 @@ class AbstractNode(object):
 			if el is None:
 				return False
 			elif el.ready():
-				print 'top lel'
 				return False
 		return True
 	

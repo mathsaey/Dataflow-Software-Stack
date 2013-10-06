@@ -16,12 +16,12 @@ def testFunc(a,b):
 
 endNode1 = OperationNode(1,useless)
 endNode2 = OperationNode(1,useless)
-endPort1 = Port(endNode1,0)
-endPort2 = Port(endNode2,0)
+endPort1 = endNode1.getInput(0)
+endPort2 = endNode1.getInput(0)
 
 testNode = OperationNode(2,testFunc)
-IP1 = Port(testNode, 0)
-IP2 = Port(testNode, 1)
+IP1 = testNode.getInput(0)
+IP2 = testNode.getInput(1)
 
 outE1 = Edge(testNode, endPort1)
 outE2 = Edge(testNode, endPort2)

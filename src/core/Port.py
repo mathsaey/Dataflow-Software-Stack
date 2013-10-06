@@ -2,13 +2,14 @@
 # Mathijs Saey
 # dvm prototype
 
-class Port(object):
-	"""This class represents an input to a node"""
+from dataconnector import DataConnector
 
-	def __init__(self, node, idx):
+class Port(DataConnector):
+	"""This class represents an input or output of a node"""
+
+	def __init__(self, node):
 		"""Creates the port and adds it to the node"""
 		self.node = node
-		node.addInput(idx,self)
 
 	def value(self):
 		return self.input

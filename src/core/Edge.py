@@ -2,7 +2,9 @@
 # Mathijs Saey
 # dvm prototype
 
-class Edge(object):
+from dataconnector import DataConnector
+
+class Edge(DataConnector):
 	"""Represents an edge between 2 nodes
 
 	An edge knows the node that it originated from
@@ -11,7 +13,6 @@ class Edge(object):
 	def __init__(self, source, destination):
 		self.source = source
 		self.destination = destination
-		source.addOutput(self)
 
 	def acceptInput(self, input):
 		print "Edge:", self, "accepted input:", input
