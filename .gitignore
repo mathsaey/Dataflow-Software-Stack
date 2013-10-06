@@ -5,6 +5,7 @@
 examples/s.out
 obj/
 dvm
+*.pyc
 
 # Editor files #
 
