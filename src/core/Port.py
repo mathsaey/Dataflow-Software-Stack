@@ -10,6 +10,7 @@ class Port(DataConnector):
 	def __init__(self, node):
 		"""Creates the port and adds it to the node"""
 		self.node = node
+		self.input = None
 
 	def value(self):
 		return self.input
@@ -20,11 +21,7 @@ class Port(DataConnector):
 	def acceptInput(self,input):
 		print "Port:", self, "accepting input:", input
 		self.input = input
+		self.node.receivedInput()
 
 	def ready(self):
-		try:
-			self.input
-		except AttributeError:
-			return False
-		else:
-			return True
+		return self.input is not None

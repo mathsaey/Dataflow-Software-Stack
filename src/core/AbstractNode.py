@@ -2,7 +2,8 @@
 # Mathijs Saey
 # dvm prototype
 
-from port import Port
+import port
+import edge
 
 class AbstractNode(object):
 	"""This class represents a node in any graph type.
@@ -12,14 +13,18 @@ class AbstractNode(object):
 	"""
 	
 	def __init__(self,inputs):
-		self.inputs = [Port(self)] * inputs
+		self.inputs = [None] * inputs
 		self.outputs = []
+		for i in xrange(0,inputs):
+			self.inputs[i] = port.Port(self)
 
 	def getInput(self, idx):
 		return self.inputs[idx]
 
-	def getOutput(self):
-		return self.outputs
+	def addOutput(self, destination):
+		e = edge.Edge(self, destination)
+		self.outputs += [e]
+		return e
 
 	def getArguments(self):
 		resLst = []
@@ -27,17 +32,19 @@ class AbstractNode(object):
 			resLst += [el.value()]
 		return resLst
 
-	def sendOutput(self, outputs):
+	def sendOutput(self, output):
 		for el in self.outputs:
 			el.acceptInput(output)
 
 	def isInputReady(self):
 		for el in self.inputs:
-			if el is None:
-				return False
-			elif el.ready():
+			if (el is None) or not el.ready():
 				return False
 		return True
 	
+	def receivedInput(self):
+		if self.isInputReady():
+			self.execute()
+
 	def execute(self):
 		raise NotImplementedError("Execute is an abstract method!")
