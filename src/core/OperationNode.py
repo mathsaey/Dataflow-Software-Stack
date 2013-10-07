@@ -16,3 +16,4 @@ class OperationNode(AbstractNode):
 		lst = self.getArguments()
 		res = self.operation(*lst)
 		self.sendOutput(res)
+		self.reset()

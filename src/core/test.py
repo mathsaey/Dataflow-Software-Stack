@@ -7,7 +7,7 @@ from abstractnode import *
 from operationnode import *
 
 def useless(*ignore):
-	pass
+	print "I'm useless :("
 
 def testFunc(a,b):
 	print "function called!"
@@ -26,3 +26,10 @@ outE1 = testNode.addOutput(endPort1)
 outE2 = testNode.addOutput(endPort2)
 inL1 = Literal(IP1, 1)
 inL2 = Literal(IP2, 3)
+
+import run
+
+run.addLiteral(inL1)
+run.addLiteral(inL2)
+
+run.main()

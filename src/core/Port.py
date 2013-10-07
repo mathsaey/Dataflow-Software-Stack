@@ -19,9 +19,12 @@ class Port(DataConnector):
 		return self.node
 
 	def acceptInput(self,input):
-		print "Port:", self, "accepting input:", input
+		print "Port:", self, "accepted input:", input
 		self.input = input
 		self.node.receivedInput()
 
 	def ready(self):
 		return self.input is not None
+
+	def clear(self):
+		self.input = None

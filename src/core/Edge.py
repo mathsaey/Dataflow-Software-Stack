@@ -5,10 +5,12 @@
 from dataconnector import DataConnector
 
 class Edge(DataConnector):
-	"""Represents an edge between 2 nodes
+	"""
+	Represents an edge between 2 nodes
 
 	An edge knows the node that it originated from
-	along with the port it leads to."""
+	along with the port it leads to.
+	"""
 
 	def __init__(self, source, destination):
 		self.source = source
