@@ -1,25 +1,67 @@
 # type.py
 # Mathijs Saey
 # dvm prototype
+		
+""" 
+IF1 type parser
+
+This module defines the functions that allow
+us to parse type declarations and to retrieve
+the type that corresponds to a certain label.
+
+Types are stored as the closest matching python type.
+
+"""
+# ---------------- #
+# Public functions #
+# ---------------- #
+
+def parseType(arr): pass
+def getType(label): pass
+
+# -------------------- #
+# Forward declarations #
+# -------------------- #
+
+def _Tag(arr): 		_parseTag(arr) 	
+def _Tuple(arr): 	_parseTuple(arr) 
+def _Union(arr): 	_parseUnion(arr) 
+def _Array(arr): 	_parseArray(arr) 
+def _Basic(arr): 	_parseBasic(arr) 
+def _Field(arr): 	_parseField(arr) 
+def _Record(arr): 	_parseRecord(arr) 
+def _Stream(arr): 	_parseStream(arr) 
+def _Unknown(arr): 	_parseUnknown(arr) 
+def _Function(arr): _parseFunction(arr)
+def _Multiple(arr): _parseMultiple(arr)
+
+# --------- #
+# Constants #
+# --------- #
 
 # T <label> <type_code> <arg_1> <arg_2>
-_label_idx 	= 1
+_label_idx 	= 1 
 _code_idx 	= 2
 _arg_1_idx 	= 3
 _arg_2_idx 	= 4
 
-type_pool = {}
-
-def update_pool(arr, type):
-	type_pool.update({int(arr[_label_idx]) : type})
-def update_pool_idx(key, type):
-	type_pool.update({key : type})
-
-def get_pool(label):
-	return type_pool[int(label)]
+# The function that is needed to parse a given idx
+_type_codes = {
+	 0 : _Array,
+	 1 : _Basic,
+	 2 : _Field,
+	 3 : _Function,
+	 4 : _Multiple,
+	 5 : _Record,
+	 6 : _Stream,
+	 7 : _Tag,
+	 8 : _Tuple,
+	 9 : _Union,
+	10 : _Unknown
+}
 
 # Basic type codes and the python types to match them
-basic_types = {
+_basic_types = {
 	0 : bool,
 	1 : str,  # Python has no built-in charachter
 	2 : float,
@@ -30,77 +72,58 @@ basic_types = {
 	#6 : WildBasic 	Type not mentioned in the reference manual
 }
 
-def Basic(arr):
-	base_type = basic_types[int(arr[_arg_1_idx])]
-	update_pool(arr, base_type)
+#############
+# Type Pool #
+#############
 
-def Array(arr):
-	base_type = get_pool(arr[_arg_1_idx])
-	update_pool(arr, [base_type])
+class _TypePool(object):
+	"""A type pool object stores all the encountered types"""
 
-tuples = {}
+	def __init__(self):
+		super(_TypePool, self).__init__()
+		self._type_pool = {}
 
-def Tuple(arr):
-	# Get the label
-	label = arr[_label_idx]
-	rootKey = 0
+	def addType(self, arr, type):
+		key = int(arr[_label_idx])
+		self._type_pool.update({key : type})
+	def addTypeIdx(self, key, type):
+		self._type_pool.update({key : type})
 
-	if label not in tuples:
-		tuples.update({label : []})
-		rootKey = label
-	else: 
-		rootKey = tuples[label]
+	def getType(self, key):
+		return self._type_pool[int(key)]
 
-	# Get the current tuple status
-	rootLst = tuples[rootKey]
-	# Add the current element to the list
-	rootLst = rootLst + [get_pool(arr[_arg_1_idx])]
-	tuples[rootKey] = rootLst
+_pool = _TypePool()
 
-	if int(arr[_arg_2_idx]) == 0:
-		# If the tuple is complete, add it to the pool
-		update_pool_idx(rootKey, tuple(rootLst))
-		del tuples[rootKey]
-	else: 
-		# Get the next element idx and store the 
-		# idx of the root element
-		next = arr[_arg_2_idx]
-		tuples.update({next : rootKey})
-		del tuples[label]
-	
+def getType(label):
+	_pool.getType(label)
 
-def Field(arr):
-	pass
-def Function(arr):
-	pass
-def Multiple(arr):
-	pass
-def Record(arr):
-	pass
-def Stream(arr):
-	pass
-def Tag(arr):
-	pass
-def Union(arr):
-	pass
-def Unknown(arr):
-	pass
+##########
+# Parser #
+##########
 
-# Type codes and the functions to parse them
-type_codes = {
-	0 : Array,
-	1 : Basic,
-	2 : Field,
-	3 : Function,
-	4 : Multiple,
-	5 : Record,
-	6 : Stream,
-	7 : Tag,
-	8 : Tuple,
-	9 : Union,
-	10 : Unknown
-}
-
-def parse_type(arr):
+def parseType(arr):
 	funcKey = int(arr[_code_idx])
-	type_codes[funcKey](arr)
+	_type_codes[funcKey](arr)
+
+# Placeholders
+
+def _parseTag(arr): 		pass 	
+def _parseTuple(arr): 		pass 
+def _parseUnion(arr): 		pass 
+def _parseArray(arr): 		pass 
+def _parseBasic(arr): 		pass 
+def _parseField(arr): 		pass 
+def _parseRecord(arr): 		pass 
+def _parseStream(arr): 		pass 
+def _parseUnknown(arr): 	pass 
+def _parseFunction(arr): 	pass
+def _parseMultiple(arr): 	pass
+
+
+def _parseBasic(arr):
+	base_type = _basic_types[int(arr[_arg_1_idx])]
+	_pool.addType(arr, base_type)
+
+def _parseArray(arr):
+	base_type = _pool.getType(arr[_arg_1_idx])
+	_pool.addType(arr, [base_type])

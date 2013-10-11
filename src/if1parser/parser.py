@@ -9,7 +9,7 @@ def parse_comment(str):
 
 functions = {
 	'C' : parse_comment,
-	'T' : type.parse_type
+	'T' : type.parseType
 }
 
 def parseString(str):
@@ -17,7 +17,7 @@ def parseString(str):
 	for line in lines:
 		arr = line.split()
 		if len(arr) is not 0:
-#			print line
+			print line
 			functions[line[0]](arr)
 
 
