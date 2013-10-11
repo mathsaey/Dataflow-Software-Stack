@@ -1,4 +1,4 @@
-# core.py
+# parser.py
 # Mathijs Saey
 # dvm prototype
 
@@ -46,3 +46,6 @@ T 21 8	9	20
 T 22 3	10	21
 T 23 4	1
 """
+
+parseString(test)
+print type._pool
