@@ -78,6 +78,7 @@ class _Type(object): pass
 
 class _BasicType(_Type):
 	""" Wrapper around a basic type """
+
 	def __init__(self, type):
 		super(_BasicType, self).__init__()
 		self.type = type
@@ -91,13 +92,14 @@ class _BasicType(_Type):
 
 class _ContainerType(_Type):
 	""" Wrapper around a container that contains a single base type """
+
 	def __init__(self, baseType, containerType):
 		super(_ContainerType, self).__init__()
 		self.base = baseType
 		self.container = containerType
 
 	def __str__(self):
-		res = "Container: " + self.container.__name__ + " " + self.base.__str__()
+		res = "Container: " + self.container + " " + self.base.__str__()
 		return res
 
 class _CombinedType(_Type):
@@ -117,9 +119,37 @@ class _CombinedType(_Type):
 			self.list += next.list
 
 	def __str__(self):
-		res = "Combined:"
+		res = "Combined: (" + self.type + ")"
 		for el in self.list:
 			res += " <" + el.__str__() + ">"
+		return res
+
+class _PointerType(_Type):
+	""" Wrapper around a pointer to the first element of a combined type """
+
+	def __init__(self, dest, containerType):
+		super(_PointerType, self).__init__()
+		self.type = containerType
+		self.dest = dest
+
+	def __str__(self):
+		return "Pointer: (" + self.type + "): " + self.dest
+
+	def follow(self):
+		return getType(self.dest)
+
+class _FunctionType(_Type):
+	""" Wrapper around a function type """
+	
+	def __init__(self, args, res):
+		super(_FunctionType, self).__init__()
+		self.args = args
+		self.res = res
+
+	def __str__(self):
+		res = "Function: \n"
+		res += "\t arg: " + self.args.__str__() + "\n"
+		res += "\t res: " + self.res.__str__()
 		return res
 
 #############
@@ -161,45 +191,42 @@ def parseType(arr):
 		_type_codes[funcKey](arr)
 	except KeyError:
 		print "Unknown type code:", funcKey, "encountered"
-		
-# Placeholders
-
-def _parseTag(arr): 		pass 	
-def _parseUnion(arr): 		pass 
-def _parseField(arr): 		pass 
-def _parseRecord(arr): 		pass 
-def _parseFunction(arr): 	pass
-def _parseMultiple(arr): 	pass
-
 
 def _parseBasic(arr):
 	base_type = _basic_types[int(arr[_arg_1_idx])]
 	_pool.addType(arr, _BasicType(base_type))
 
-def _parseArray(arr):
-	base_type = _pool.getType(arr[_arg_1_idx])
-	_pool.addType(arr, _ContainerType(base_type, list))
+def _parseFunction(arr):
+	args = getType(arr[_arg_1_idx])
+	res  = getType(arr[_arg_2_idx])
+	_pool.addType(arr, _FunctionType(args, res))
 
-def _parseStream(arr):
-	base_type = _pool.getType(arr[_arg_1_idx])
-	_pool.addType(arr, _ContainerType(base_type, "stream"))
+def _parseContainer(arr, container):
+	base_type = getType(arr[_arg_1_idx])
+	_pool.addType(arr, _ContainerType(base_type, container))
 
-# ------ #
-# Tuples #
-# ------ #
+def _parseCombinedPtr(arr, container):
+	dest = arr[_arg_1_idx]
+	_pool.addType(arr, _PointerType(container, dest))
 
-def _parseTuple(arr):
+def _parseCombined(arr, container):
 	label = arr[_label_idx]
-	baseType = _pool.getType(arr[_arg_1_idx])
+	baseType = getType(arr[_arg_1_idx])
 	
 	# Add the new type, if there is a previous, link to it
 	try:
 		next = getType(arr[_arg_2_idx])
 	except KeyError:
-		_pool.addType(arr, _CombinedType(baseType, tuple))
+		_pool.addType(arr, _CombinedType(baseType, container))
 	else:
-		_pool.addType(arr, _CombinedType(baseType, tuple, next))
+		_pool.addType(arr, _CombinedType(baseType, container, next))
 
 
-
-
+def _parseTag(arr): 		_parseCombined(arr, "tag")
+def _parseTuple(arr): 		_parseCombined(arr, "tuple")
+def _parseField(arr): 		_parseCombined(arr, "field") 
+def _parseArray(arr):		_parseContainer(arr, "array")
+def _parseStream(arr):		_parseContainer(arr, "stream")
+def _parseMultiple(arr):	_parseContainer(arr, "multiple")
+def _parseUnion(arr):		_parseCombinedPtr(arr, "Union") 
+def _parseRecord(arr): 		_parseCombinedPtr(arr, "Record")
