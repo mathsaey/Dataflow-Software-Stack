@@ -5,6 +5,7 @@ from edge import *
 from literal import *
 from abstractnode import *
 from operationnode import *
+import run
 
 def useless(*ignore):
 	print "I'm useless :("
@@ -27,9 +28,5 @@ outE2 = testNode.addOutput(endPort2)
 inL1 = Literal(IP1, 1)
 inL2 = Literal(IP2, 3)
 
-import run
-
-run.addLiteral(inL1)
-run.addLiteral(inL2)
 
 run.main()
