@@ -43,7 +43,7 @@ X 		  | global function graph 		| `X type_reference "name" `
 I 		  | imported function   		| `I type_reference "name" `
 N 		  | simple node   				| `N label operation `
 {		  | start compound node 		| `{ `
-}		  | end compound node 			| `} label operation association_list_length association_list_element_1 association_list_element_2 ...  
+}		  | end compound node 			| `} label operation association_list_length association_list_element_1 association_list_element_2 ...`
 
 
 The semantics of these instructions are explained below, explanation about *labels* and *types* are presented in the [labels and types](#types) section.
