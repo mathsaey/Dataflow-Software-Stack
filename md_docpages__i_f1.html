@@ -88,6 +88,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 </li>
 <li class="level1"><a href="#Literal_def">Appendix B: Literal Definitions</a></li>
+<li class="level1"><a href="#Nodes">Appendix C: Nodes</a><ul><li class="level2"><a href="#Nodes_Simple">Simple nodes</a></li>
+<li class="level2"><a href="#Nodes_Comound">Compound Nodes</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="textblock"><p>This page serves as a basic introduction to the IF1 language. The information on this page is based on the paper: <code>IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)</code></p>
@@ -313,10 +317,353 @@ Appendix B: Literal Definitions</h1>
 <tr>
 <td>Double-precision floating point value </td><td>"6.626198d-34" ".056D24" </td></tr>
 </table>
+<h1><a class="anchor" id="Nodes"></a>
+Appendix C: Nodes</h1>
+<p>The next section desribes both the simple and compound nodes that IF1 predefines, a few datatype conventions should be established for this.</p>
+<ul>
+<li><em>arith</em> types correspond to any numeric type</li>
+<li><em>algeb</em> types correspond to arith types and booleans</li>
+<li><em>atom</em> types correspond to algeb types and characters</li>
+<li><em>T</em> corresponds to any type</li>
+<li><code>(T)+</code> Represents one or more occurence of T</li>
+<li><code>(T)*</code> Represents zero or more occurence of T</li>
+<li><code>[T]</code> Represents one or zero occurence of T</li>
+<li><code>AS(T)</code> Represents an array or a stream that contains type T.</li>
+<li><code>ASM(T)</code> Represents an array,stream or multiple that contains type T.</li>
+</ul>
+<h2><a class="anchor" id="Nodes_Simple"></a>
+Simple nodes</h2>
+<table class="doxtable">
+<tr>
+<th>Label </th><th>Name </th><th>Signature </th><th>Operation  </th></tr>
+<tr>
+<td>100 </td><td>AAddH </td><td><code>AS(T) x T =&gt; AS(T)</code> </td><td>Add an element to the back of the array/stream </td></tr>
+<tr>
+<td>101 </td><td>AAddL </td><td><code>AS(T) x T =&gt; AS(T)</code> </td><td>Add an element to the front of the array/stream </td></tr>
+<tr>
+<td>102 </td><td>AAdjust </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>103 </td><td>ABuild </td><td><code>Int x (T)* =&gt; AS(T)</code> </td><td>Create an array/stream with a lower bound, following arguments are elements of the array </td></tr>
+<tr>
+<td>104 </td><td>ACatenate </td><td><code>AS(T) x (AS(T))+ =&gt; Array(T)</code> </td><td>Catenate arrays/streams. </td></tr>
+<tr>
+<td>105 </td><td>AElement </td><td><code>AS(T) x Int =&gt; T</code> </td><td>Returns element at a given index. </td></tr>
+<tr>
+<td>106 </td><td>AFill </td><td><code>Int x Int x (T)* =&gt; AS(T)</code> </td><td>Create an array/stream with a lower and upper bound and fill it with the last argument.<br/>
+ An empty array/stream is created if the lower bound &gt; upper bound </td></tr>
+<tr>
+<td>107 </td><td>AGather </td><td><code>Int x Mult(T) x [Mult(T)] =&gt; AS(T)</code> </td><td><b>Only used in return subgraph</b> <br/>
+Creates an array or stream with the values of the 2nd argument, <br/>
+if the corresponding 3rd argument is true (or not given). <br/>
+The first argument represents the lower bound of the array. </td></tr>
+<tr>
+<td>108 </td><td>AIsEmpty </td><td><code>AS(T) =&gt; Bool</code> </td><td>Returns True if the array/stream is empty </td></tr>
+<tr>
+<td>109 </td><td>ALimH </td><td><code>AS(T) =&gt; Int</code> </td><td>upper bound of array/stream </td></tr>
+<tr>
+<td>110 </td><td>ALimL </td><td><code>AS(T) =&gt; Int</code> </td><td>lower bound of array/stream (always 1 in case of a stream) </td></tr>
+<tr>
+<td>111 </td><td>ARemH </td><td><code>ASM(T) =&gt; ASM(T)</code> </td><td>Remove last element, returns error if empty </td></tr>
+<tr>
+<td>112 </td><td>ARemL </td><td><code>ASM(T) =&gt; ASM(T)</code> </td><td>Remove first element, returns error if empty </td></tr>
+<tr>
+<td>113 </td><td>AReplace </td><td><code>Array(T) x Int x (T)+ =&gt; Array(T)</code> </td><td>Returns a new array with with the given value at the given idx of the old array. <br/>
+ If multiple values are provided, they are placed consecutively </td></tr>
+<tr>
+<td>114 </td><td>AScatter </td><td><code>AS(T) =&gt; Multiple(T) x Multiple(Int)</code> </td><td><b>Only appears in generator of forall nodes</b> <br/>
+Places array at port one, and the indices of this array at port 2. </td></tr>
+<tr>
+<td>115 </td><td>ASetL </td><td><code>Array(T) x Int =&gt; Array(T)</code> </td><td>Shifts the lower index of the array, all indices are shifted to reflect this </td></tr>
+<tr>
+<td>116 </td><td>ASize </td><td><code>AS(T) =&gt; Int</code> </td><td>Returns the amount of elements in the highest dimension of the stream/array </td></tr>
+<tr>
+<td>117 </td><td>Abs </td><td><code>Arith =&gt; Arith</code> </td><td>Absolute value </td></tr>
+<tr>
+<td>118 </td><td>BindArguments </td><td><code>Func x (T)* =&gt; Func</code> </td><td>Returns a new function with the given arguments bound to it. </td></tr>
+<tr>
+<td>119 </td><td>Bool </td><td><code>Int =&gt; Bool</code> </td><td>0 =&gt; false, 1 =&gt; true, anything else =&gt; error </td></tr>
+<tr>
+<td>120 </td><td>Call </td><td><code>Func x (T)* =&gt; (T)+</code> </td><td>Call a function (function is represented as literal) </td></tr>
+<tr>
+<td>121 </td><td>Char </td><td><code>Int =&gt; Char</code> </td><td>Maps to the appropriate error value (or to an error) </td></tr>
+<tr>
+<td>122 </td><td>Div </td><td><code>Arith x Arith =&gt; Arith</code> </td><td>Division, when applied to integer, round to integer. </td></tr>
+<tr>
+<td>123 </td><td>Double </td><td><code>Real OR Int =&gt; Double</code> </td><td>Converts to double, returns an error if the value cannot be represented as a double </td></tr>
+<tr>
+<td>124 </td><td>Equal </td><td><code>Atom x Atom =&gt; Boolean</code> </td><td><code>==</code> </td></tr>
+<tr>
+<td>125 </td><td>Exp </td><td><code>Arith x Arith =&gt; Arith</code> </td><td><code>exp(x,y) = x^y</code> May lead to errors depending on input </td></tr>
+<tr>
+<td>126 </td><td>FirstValue </td><td><code>Mult(T) x [Mult(Bool)] =&gt; T</code> </td><td><b>Only used in return subgraph</b> <br/>
+Returns the first value for which the corresponding bool is true (if present) </td></tr>
+<tr>
+<td>127 </td><td>FinalValue </td><td><code>Mult(T) x [Mult(Bool)] =&gt; T</code> </td><td><b>Only used in return subgraph</b> <br/>
+Returns the last value for which the corresponding bool is true (if present) </td></tr>
+<tr>
+<td>128 </td><td>Floor </td><td><code>Real OR Double =&gt; Int</code> </td><td>Rounds down, returns error if the result is not in the integer range. </td></tr>
+<tr>
+<td>129 </td><td>Int </td><td><code>Atom =&gt; Int</code> </td><td>Real or double get rounded (floor after adding 0,5). Charachters returns the matching ASCII code. <br/>
+False maps to 0, True maps to 1. <br/>
+Returns an error if the value is out of the integer range. </td></tr>
+<tr>
+<td>130 </td><td>IsError </td><td><code>T x T =&gt; Boolean</code> </td><td>Returns true if the second error has the same value as the first (string literal). <br/>
+If the first value is the special <em>error</em> value, this function should match any error value. </td></tr>
+<tr>
+<td>131 </td><td>Less </td><td><code>Atom x Atom =&gt; Boolean</code> </td><td><code>&lt;</code> Both inputs should be of the same type </td></tr>
+<tr>
+<td>132 </td><td>LessEqual </td><td><code>Atom x Atom =&gt; Boolean</code> </td><td><code>=&lt;</code> Both inputs should be of the same type. Also represents boolean implication </td></tr>
+<tr>
+<td>133 </td><td>Max </td><td><code>Algeb x Algeb =&gt; Algeb</code> </td><td>Maximum when used on <em>arith</em> types, <em>or</em> when used on boolean types </td></tr>
+<tr>
+<td>134 </td><td>Min </td><td><code>Algeb x Algeb =&gt; Algeb</code> </td><td>Minimum when used on <em>arith</em> types, <em>and</em> when used on boolean types </td></tr>
+<tr>
+<td>135 </td><td>Minus </td><td><code>Arith x Arith =&gt; Arith</code> </td><td><code>-</code> </td></tr>
+<tr>
+<td>136 </td><td>Mod </td><td><code>Arith x Arith =&gt; Arith</code> </td><td>Modulo </td></tr>
+<tr>
+<td>137 </td><td>Neg </td><td><code>Arith =&gt; Arith</code> </td><td>Negation </td></tr>
+<tr>
+<td>138 </td><td>NoOp </td><td><code>(T)+ =&gt; (T)+</code> </td><td>Returns the input </td></tr>
+<tr>
+<td>139 </td><td>Not </td><td><code>Boolean =&gt; Boolean</code> </td><td>Not </td></tr>
+<tr>
+<td>140 </td><td>NotEqual </td><td><code>atom x atom =&gt; Boolean</code> </td><td><code>!=</code> Also represents exclusive or when used on boolean types </td></tr>
+<tr>
+<td>141 </td><td>Plus </td><td><code>Algeb x Algeb =&gt; Algeb</code> </td><td><code>+</code> when used on <em>arith</em> types, <em>or</em> when used on boolean types </td></tr>
+<tr>
+<td>142 </td><td>RangeGenerate </td><td><code>Int x Int =&gt; Multiple(Int)</code> </td><td><b>Only appears in forall generator</b> <br/>
+Generates an inclusive sequence between the first and second int. </td></tr>
+<tr>
+<td>143 </td><td>RBuild </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>144 </td><td>RElements </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>145 </td><td>RReplace </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>146 <br/>
+147<br/>
+148<br/>
+149 </td><td>RedLeft<br/>
+RedRight<br/>
+RedTree<br/>
+Reduce </td><td><code>func x T x Mult(T) x [Mult(Bool)] =&gt; T</code> </td><td><b>Only used in return subgraph</b> <br/>
+Works like foldl, the 3rd argument determines if this element is used. <br/>
+The suffixes determine if the function is left, right, undetermined or pairwise associative. <br/>
+func is a string literal representing one of the following functions: <br/>
+ {<em>sum</em>, <em>product</em>,<em>least</em>, <em>greatest</em>, <em>catenate</em>} </td></tr>
+<tr>
+<td>150 </td><td>RestValues </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>151 </td><td>Single </td><td><code>Double OR Int =&gt; Real</code> </td><td>Converts to real, error if it's outside the range of real numbers. </td></tr>
+<tr>
+<td>152 </td><td>Times </td><td><code>Algeb x Algeb =&gt; Algeb</code> </td><td><code>*</code> when used on <em>arith</em> types, <em>and</em> when used on boolean types </td></tr>
+<tr>
+<td>153 </td><td>Trunc </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>154 </td><td>PrefixSize </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>155 </td><td>Error </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>156 </td><td>ReplaceMulti </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>157 </td><td>Convert </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>158 </td><td>CallForeign </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>159 </td><td>AElementN </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>160 </td><td>AElementP </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>161 </td><td>AElementM </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>170 </td><td>AAddLAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>171 </td><td>AAddHAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>172 </td><td>ABufPartition </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>173 </td><td>ABuildAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>174 </td><td>ABufScatter </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>175 </td><td>ACatenateAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>176 </td><td>AElementAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>177 </td><td>AExtractAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>178 </td><td>AFillAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>179 </td><td>AGatherAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>180 </td><td>ARemHAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>181 </td><td>ARemLAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>182 </td><td>AReplaceAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>183 </td><td>ArrayToBuf </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>184 </td><td>ASetLAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>185 </td><td>DefArrayBuf </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>186 </td><td>DefRecordBuf </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>187 </td><td>FinalValueAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>188 </td><td>MemAlloc </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>189 </td><td>BufElements </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>190 </td><td>RBuildAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>191 </td><td>RecordToBuf </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>192 </td><td>RElementsAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>193 </td><td>ReduceAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>19 </td><td>ShiftBuffer </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>195 </td><td>ScatterBufPartitions </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>196 </td><td>RedLeftAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>197 </td><td>RedRightAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+<tr>
+<td>198 </td><td>RedTreeAT </td><td><b>Unknown</b> </td><td><b>Unknown</b> </td></tr>
+</table>
+<h2><a class="anchor" id="Nodes_Comound"></a>
+Compound Nodes</h2>
+<p>What follows is a table defining the different compound nodes and their labels, an explanation of every compound node follows afterwards.</p>
+<table class="doxtable">
+<tr>
+<th>Label </th><th>Name  </th></tr>
+<tr>
+<td>0 </td><td>Forall </td></tr>
+<tr>
+<td>1 </td><td>Select </td></tr>
+<tr>
+<td>2 </td><td>TagCase </td></tr>
+<tr>
+<td>3 </td><td>LoopA </td></tr>
+<tr>
+<td>4 </td><td>LoopB </td></tr>
+<tr>
+<td>5 </td><td>IfThenElse </td></tr>
+<tr>
+<td>6 </td><td>Iterate </td></tr>
+<tr>
+<td>7 </td><td>WhileLoop </td></tr>
+<tr>
+<td>8 </td><td>RepeatLoop </td></tr>
+<tr>
+<td>9 </td><td>SeqForall </td></tr>
+<tr>
+<td>10 </td><td>UReduce </td></tr>
+</table>
+<h3>Select</h3>
+<ul>
+<li>Goal: The select node represents a multiway selection. Sisal only supports a 2 way selection, but this compound node could be used to implement different constructs such as a switch too.</li>
+<li>Subnodes:<ul>
+<li>1 predicate node that returns a number between 0 and n - 1, n being the amount of subnodes.</li>
+<li>Every other node is a path that can be followed depending on the result of the predicate.</li>
+</ul>
+</li>
+<li>Association list:<ul>
+<li>At least 3 associations (predicate, iftrue and iffalse in case of if)</li>
+<li>First element identifies predicate subgraph</li>
+<li>Every other element identify the subgraph to use for a given predicate result.</li>
+</ul>
+</li>
+<li>Signature: <code>(value)+ -&gt; (value)+</code></li>
+</ul>
+<h3>Forall</h3>
+<ul>
+<li>Goal: Independent execution of multiple instances of an expression</li>
+<li>Subnodes:<ul>
+<li><b>Generator:</b> Produce values for every instance of the body</li>
+<li><b>Body:</b> Expression to be evaluated</li>
+<li><b>Results:</b> Gathers the <em>ordered</em> results.</li>
+</ul>
+</li>
+<li>Association list:<ul>
+<li>Generator</li>
+<li>Body</li>
+<li>Returns</li>
+</ul>
+</li>
+<li>Signature: <code>(value)+ -&gt; (value)+</code></li>
+</ul>
+<h3>TagCase</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>LoopA</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>LoopB</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>IfThenEl</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>Iterate</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>WhileLoo</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>RepeatLo</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>SeqForal</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature:</li>
+</ul>
+<h3>UReduce</h3>
+<ul>
+<li>Goal:</li>
+<li>Subnodes:</li>
+<li>Association list:</li>
+<li>Signature: </li>
+</ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 3 2013 00:27:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 13 2013 22:09:37 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
