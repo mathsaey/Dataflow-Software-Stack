@@ -334,16 +334,86 @@ Label | Name
 	* At least 3 associations (predicate, iftrue and iffalse in case of if)
 	* First element identifies predicate subgraph
 	* Every other element identify the subgraph to use for a given predicate result.
-* Signature: `(value)+ -> (value)+
-
+* Signature: `(value)+ -> (value)+`
 
 ### Forall
 
+* Goal: Independent execution of multiple instances of an expression
+* Subnodes: 
+	* **Generator:** Produce values for every instance of the body
+	* **Body:** Expression to be evaluated
+	* **Results:** Gathers the *ordered* results.
+* Association list:
+	* Generator
+	* Body 
+	* Returns
+* Signature: `(value)+ -> (value)+`
 
+### TagCase
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### LoopA	
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### LoopB	
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### IfThenEl
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### Iterate 
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### WhileLoo
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### RepeatLo
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### SeqForal
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
+
+### UReduce 
+
+* Goal: 
+* Subnodes: 
+* Association list:
+* Signature: 
 
 \page SortSis Sorting algorithm in Sisal
 \include sort.sis
 
 \page SortIF1 Sorting algorithm in IF1
 \include sort.if1
-
