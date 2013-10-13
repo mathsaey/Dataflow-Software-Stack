@@ -35,4 +35,4 @@ T 23 4	1
 """
 
 if1parser.parser.parseString(test)
-print if1parser.type._TypePool
+print if1parser.type._pool
