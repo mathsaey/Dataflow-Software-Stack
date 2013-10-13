@@ -190,8 +190,142 @@ Null value 	   | nil
 Single-precision floating point value | "3.503" or "5e3" or ".503"
 Double-precision floating point value | "6.626198d-34" ".056D24"
 
+# Appendix C: Nodes {#Nodes}
+
+<!--
+arith = integer real double
+algeb = arith + bool
+atom = algeb + char
+T = any
+-->
+
+The next section desribes both the simple and compound nodes that IF1 predefines, a few datatype conventions should be established for this.
+
+* *arith* types correspond to any numeric type
+* *algeb* types correspond to arith types and booleans
+* *atom*  types correspond to algeb types and characters
+* *T* corresponds to any type
+* `(T)+` Represents one or more occurence of T
+* `(T)*` Represents zero or more occurence of T
+* `[T]` Represents one or zero occurence of T
+* `AS(T)` Represents an array or a stream that contains type T.
+* `ASM(T)` Represents an array,stream or multiple that contains type T.
+
+
+## Simple nodes ## {#Nodes_Simple}
+
+Label | Name | Signature | Operation
+------|------|-----------|----------
+100 | AAddH					| `AS(T) x T => AS(T)`						| Add an element to the back of the array/stream
+101 | AAddL					| `AS(T) x T => AS(T)`						| Add an element to the front of the array/stream
+102 | AAdjust				| **Unknown**								| **Unknown**
+103 | ABuild				| `Int x (T)* => AS(T)`						| Create an array/stream with a lower bound, following arguments are elements of the array
+104 | ACatenate				| `AS(T) x (AS(T))+ => Array(T)`			| Catenate arrays/streams.
+105 | AElement				| `AS(T) x Int => T`						| Returns element at a given index. 
+106 | AFill					| `Int x Int x (T)* => AS(T)`				| Create an array/stream with a lower and upper bound and fill it with the last argument.<br/> 																						An empty array/stream is created if the lower bound > upper bound
+107 | AGather				| `Int x Mult(T) x [Mult(T)] => AS(T)`		| **Only used in return subgraph**  																																				<br/>Creates an array or stream with the values of the 2nd argument, 																											<br/>if the corresponding 3rd argument is true (or not given).  																												<br/>The first argument represents the lower bound of the array.
+108 | AIsEmpty				| `AS(T) => Bool`							| Returns True if the array/stream is empty
+109 | ALimH					| `AS(T) => Int`							| upper bound of array/stream
+110 | ALimL					| `AS(T) => Int`							| lower bound of array/stream (always 1 in case of a stream)
+111 | ARemH					| `ASM(T) => ASM(T)`						| Remove last element, returns error if empty
+112 | ARemL					| `ASM(T) => ASM(T)`						| Remove first element, returns error if empty
+113 | AReplace				| `Array(T) x Int x (T)+ => Array(T)`		| Returns a new array with with the given value at the given idx of the old array.																									<br/> If multiple values are provided, they are placed consecutively
+114 | AScatter				| `AS(T) => Multiple(T) x Multiple(Int)`	| **Only appears in generator of forall nodes** 																																	<br/>Places array at port one, and the indices of this array at port 2.
+115 | ASetL					| `Array(T) x Int => Array(T)`				| Shifts the lower index of the array, all indices are shifted to reflect this
+116 | ASize					| `AS(T) => Int`							| Returns the amount of elements in the highest dimension of the stream/array
+117 | Abs					| `Arith => Arith`							| Absolute value
+118 | BindArguments			| `Func x (T)* => Func`						| Returns a new function with the given arguments bound to it.
+119 | Bool					| `Int => Bool`								| 0 => false, 1 => true, anything else => error
+120 | Call					| `Func x (T)* => (T)+`						| Call a function (function is represented as literal)
+121 | Char					| `Int => Char`								| Maps to the appropriate error value (or to an error)
+122 | Div					| `Arith x Arith => Arith`					| Division, when applied to integer, round to integer.
+123 | Double				| `Real OR Int => Double`					| Converts to double, returns an error if the value cannot be represented as a double
+124 | Equal					| `Atom x Atom => Boolean`					| `==`
+125 | Exp					| `Arith x Arith => Arith`					| `exp(x,y) = x^y` May lead to errors depending on input
+126 | FirstValue			| `Mult(T) x [Mult(Bool)] => T`				| **Only used in return subgraph**																																					<br/>Returns the first value for which the corresponding bool is true (if present)
+127 | FinalValue			| `Mult(T) x [Mult(Bool)] => T`				| **Only used in return subgraph**																																					<br/>Returns the last value for which the corresponding bool is true (if present)
+128 | Floor					| `Real OR Double => Int`					| Rounds down, returns error if the result is not in the integer range.
+129 | Int					| `Atom => Int`								| Real or double get rounded (floor after adding 0,5). Charachters returns the matching ASCII code. 																				<br/>False maps to 0, True maps to 1. 																																			<br/>Returns an error if the value is out of the integer range.
+130 | IsError				| `T x T => Boolean`						| Returns true if the second error has the same value as the first (string literal). 																								<br/>If the first value is the special *error* value, this function should match any error value.
+131 | Less					| `Atom x Atom => Boolean`					| `<` Both inputs should be of the same type
+132 | LessEqual				| `Atom x Atom => Boolean`					| `=<` Both inputs should be of the same type. Also represents boolean implication
+133 | Max					| `Algeb x Algeb => Algeb`					| Maximum when used on *arith* types, *or* when used on boolean types
+134 | Min					| `Algeb x Algeb => Algeb`					| Minimum when used on *arith* types, *and* when used on boolean types
+135 | Minus					| `Arith x Arith => Arith`					| `-`
+136 | Mod					| `Arith x Arith => Arith`					| Modulo
+137 | Neg					| `Arith => Arith`							| Negation
+138 | NoOp					| `(T)+ => (T)+`							| Returns the input
+139 | Not					| `Boolean => Boolean`						| Not
+140 | NotEqual				| `atom x atom => Boolean`					| `!=` Also represents exclusive or when used on boolean types
+141 | Plus					| `Algeb x Algeb => Algeb`					| `+` when used on *arith* types, *or* when used on boolean types
+142 | RangeGenerate			| `Int x Int => Multiple(Int)`				| **Only appears in forall generator** 																																				<br/>Generates an inclusive sequence between the first and second int.
+143 | RBuild				| **Unknown**								| **Unknown**
+144 | RElements				| **Unknown**								| **Unknown**
+145 | RReplace				| **Unknown**								| **Unknown** 
+146	<br/>147<br/>148<br/>149																																					| RedLeft<br/>RedRight<br/>RedTree<br/>Reduce 																																	| `func x T x Mult(T) x [Mult(Bool)] => T`																																		|  **Only used in return subgraph**																																					<br/>Works like foldl, the 3rd argument determines if this element is used.																										<br/>The suffixes determine if the function is left, right, undetermined or pairwise associative.																				<br/>func is a string literal representing one of the following functions:																										<br/> {*sum*, *product*,*least*, *greatest*, *catenate*}
+150 | RestValues			| **Unknown**								| **Unknown**
+151 | Single				| `Double OR Int => Real`					| Converts to real, error if it's outside the range of real numbers.
+152 | Times					| `Algeb x Algeb => Algeb`					| `*` when used on *arith* types, *and* when used on boolean types
+153 | Trunc					| **Unknown**								| **Unknown**
+154 | PrefixSize			| **Unknown**								| **Unknown**
+155 | Error					| **Unknown**								| **Unknown**
+156 | ReplaceMulti			| **Unknown**								| **Unknown**
+157 | Convert				| **Unknown**								| **Unknown**
+158 | CallForeign			| **Unknown**								| **Unknown**
+159 | AElementN				| **Unknown**								| **Unknown**
+160 | AElementP				| **Unknown**								| **Unknown**
+161 | AElementM				| **Unknown**								| **Unknown**
+170 | AAddLAT				| **Unknown**								| **Unknown**
+171 | AAddHAT				| **Unknown**								| **Unknown**
+172 | ABufPartition			| **Unknown**								| **Unknown**
+173 | ABuildAT				| **Unknown**								| **Unknown**
+174 | ABufScatter			| **Unknown**								| **Unknown**
+175 | ACatenateAT			| **Unknown**								| **Unknown**
+176 | AElementAT			| **Unknown**								| **Unknown**
+177 | AExtractAT			| **Unknown**								| **Unknown**
+178 | AFillAT				| **Unknown**								| **Unknown**
+179 | AGatherAT				| **Unknown**								| **Unknown**
+180 | ARemHAT				| **Unknown**								| **Unknown**
+181 | ARemLAT				| **Unknown**								| **Unknown**
+182 | AReplaceAT			| **Unknown**								| **Unknown**
+183 | ArrayToBuf			| **Unknown**								| **Unknown**
+184 | ASetLAT				| **Unknown**								| **Unknown**
+185 | DefArrayBuf			| **Unknown**								| **Unknown**
+186 | DefRecordBuf			| **Unknown**								| **Unknown**
+187 | FinalValueAT			| **Unknown**								| **Unknown**
+188 | MemAlloc				| **Unknown**								| **Unknown**
+189 | BufElements			| **Unknown**								| **Unknown**
+190 | RBuildAT				| **Unknown**								| **Unknown**
+191 | RecordToBuf			| **Unknown**								| **Unknown**
+192 | RElementsAT			| **Unknown**								| **Unknown**
+193 | ReduceAT				| **Unknown**								| **Unknown**
+19  | ShiftBuffer			| **Unknown**								| **Unknown**
+195 | ScatterBufPartitions	| **Unknown**								| **Unknown**
+196 | RedLeftAT				| **Unknown**								| **Unknown**
+197 | RedRightAT			| **Unknown**								| **Unknown**
+198 | RedTreeAT				| **Unknown**								| **Unknown**
+
+
+## Compound Nodes ## {#Nodes_Comound}
+
+Label | Name | Arguments | Operation
+------|------|-----------|-----------
+0  | Forall				| pass | pass
+1  | Select				| pass | pass
+2  | TagCase			| pass | pass
+3  | LoopA				| pass | pass
+4  | LoopB				| pass | pass
+5  | IfThenElse 		| pass | pass
+6  | Iterate 			| pass | pass
+7  | WhileLoop 			| pass | pass
+8  | RepeatLoop 		| pass | pass
+9  | SeqForall 			| pass | pass
+10 | UReduce 			| pass | pass
+
+
 \page SortSis Sorting algorithm in Sisal
 \include sort.sis
 
 \page SortIF1 Sorting algorithm in IF1
 \include sort.if1
+
