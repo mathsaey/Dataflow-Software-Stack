@@ -2,6 +2,7 @@
 # Mathijs Saey
 # dvm prototype
 
+import scheduler
 import port
 import edge
 
@@ -57,7 +58,7 @@ class AbstractNode(object):
 	def receivedInput(self):
 		""" Respond to a port receiving input"""
 		if self.isInputReady():
-			self.execute()
+			scheduler.main.addNode(self)
 
 	def execute(self):
 		""" 
