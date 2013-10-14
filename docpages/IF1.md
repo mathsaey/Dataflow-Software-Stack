@@ -349,68 +349,58 @@ Label | Name
 	* Returns
 * Signature: `(value)+ -> (value)+`
 
-### TagCase
-
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
-
 ### LoopA	
 
-* Goal: 
+* Goal: Iterative looping construct. Stops when the *test* subgraph returns false. The test is executed after the body has executed once.
 * Subnodes: 
+	* Initialization
+	* Test
+	* Body
+	* Returns
 * Association list:
-* Signature: 
+	* Same order as subnodes
+* Signature: `(value)+ -> (value)+`
 
 ### LoopB	
 
-* Goal: 
+* Goal: Iterative looping construct. Stops when the *test* subgraph returns false. The test is executed before the body is executed for the first time.
 * Subnodes: 
+	* Initialization
+	* Test
+	* Body
+	* Returns
 * Association list:
-* Signature: 
+	* Same order as subnodes
+* Signature: `(value)+ -> (value)+`
+ 
+
+### TagCase
+
+**Unknown**
 
 ### IfThenEl
 
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
+**Unknown**
 
 ### Iterate 
 
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
+**Unknown**
 
 ### WhileLoo
 
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
+**Unknown**
 
 ### RepeatLo
 
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
+**Unknown**
 
 ### SeqForal
 
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
+**Unknown**
 
 ### UReduce 
 
-* Goal: 
-* Subnodes: 
-* Association list:
-* Signature: 
+**Unknown**
 
 \page SortSis Sorting algorithm in Sisal
 \include sort.sis
