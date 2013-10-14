@@ -34,8 +34,12 @@ class Scheduler(object):
 			lit.activate()
 
 	def run(self):
-		nodeThread = threading.Thread(target = self.fetchNodes, args = tuple())
-		litThread = threading.Thread(target = self.fetchLiterals, args = tuple())
+		nodeThread = threading.Thread(
+			target = self.fetchNodes, 
+			args = tuple())
+		litThread = threading.Thread(
+			target = self.fetchLiterals, 
+			args = tuple())
 		nodeThread.start()
 		litThread.start()
 
