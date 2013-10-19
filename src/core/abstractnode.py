@@ -4,7 +4,6 @@
 
 import scheduler
 import port
-import edge
 
 """
 @todo don't remove literals when resetting
@@ -18,22 +17,22 @@ class AbstractNode(object):
 	and an arbitrary amount of output edges.
 	"""
 	
-	def __init__(self,inputs):
-		""" Initialize a node with a predetermined amount of inputs """
+	def __init__(self,inputs, outputs):
+		""" Initialize a node with a predetermined amount of in -and outputs """
 		self.inputs = [None] * inputs
-		self.outputs = []
+		self.outputs = [None] * outputs
 		for i in xrange(0,inputs):
-			self.inputs[i] = port.Port(self)
+			self.inputs[i] = port.InputPort(self)
+		for i in xrange(0,outputs):
+			self.outputs[i] = port.OutputPort(self)
 
 	def getInput(self, idx):
 		""" Gets the input at idx """
 		return self.inputs[idx]
 
-	def addOutput(self, destination):
-		""" Adds an output edge and returns it """
-		e = edge.Edge(self, destination)
-		self.outputs += [e]
-		return e
+	def getOutput(self, idx):
+		""" Gets the output at idx """
+		return self.outputs[idx]
 
 	def getArguments(self):
 		""" Gather the arguments from all the input ports """
@@ -42,14 +41,23 @@ class AbstractNode(object):
 			resLst += [el.value()]
 		return resLst
 
-	def sendOutput(self, output):
-		""" Send a value to all the output edges """
-		for el in self.outputs:
-			el.acceptInput(output)
+	def sendOutput(self, idx, output):
+		""" Send a value to an output port """
+		self.getOutput(idx).acceptInput(output)
+
+	def sendOutputs(self, outputs):
+		""" 
+		Send a list of outputs, the amount of elements
+		the list contains should match the amount of output ports
+		"""
+		for idx in xrange(0, len(self.outputs)):
+			self.sendOutput(idx, outputs[idx])
 
 	def reset(self):
-		""" Reset all input """
+		""" Reset all ports """
 		for el in self.inputs:
+			el.clear()
+		for el in self.outputs:
 			el.clear()
 
 	def isInputReady(self):

@@ -13,4 +13,4 @@ class Literal(object):
 		scheduler.main.addLiteral(self)
 
 	def activate(self):
-		self.destination.acceptInput(self.value)
+		self.destination.acceptInput(self.value, True)
