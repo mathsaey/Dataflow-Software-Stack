@@ -27,15 +27,17 @@ C$  F Livermore Frontend   Version1.8
 G	11	"insertion_sort"	%sl=17	%sf=sort.sis
 N 1	103	%sl=48	%sf=sort.sis
 L		1 1	4 "1"	%mk=V
-N 2	109	%sl=48	%sf=sort.sis
+N 2	110	%sl=48	%sf=sort.sis
 E	0 1	2 1	9	 %na=arr	%mk=V	%sl=48
-N 3	120	%sl=48	%sf=sort.sis
-L		3 1	19 "insertion_sort.inner_loop"	%mk=V
-E	0 1	3 2	9	 %na=arr	%mk=V	%sl=48
-E	1 1	3 3	9	%mk=V
-L		3 4	4 "1"	%mk=V
-E	2 1	3 5	4	%mk=V
-E	3 1	0 1	9	%mk=V
+N 3	109	%sl=48	%sf=sort.sis
+E	0 1	3 1	9	 %na=arr	%mk=V	%sl=48
+N 4	120	%sl=48	%sf=sort.sis
+L		4 1	19 "insertion_sort.inner_loop"	%mk=V
+E	0 1	4 2	9	 %na=arr	%mk=V	%sl=48
+E	1 1	4 3	9	%mk=V
+E	2 1	4 4	4	%mk=V
+E	3 1	4 5	4	%mk=V
+E	4 1	0 1	9	%mk=V
 G	14	"insertion_sort.insert_el"	%sl=20	%sf=sort.sis
 N 1	110	%sl=23	%sf=sort.sis
 E	0 1	1 1	9	 %na=arr	%mk=V	%sl=22
@@ -103,7 +105,7 @@ N 1	104	%sl=32	%sf=sort.sis
 E	0 3	1 1	9	 %na=l	%mk=V	%sl=32
 E	0 4	1 2	9	 %na=m	%mk=V	%sl=32
 N 2	103	%sl=32	%sf=sort.sis
-L		2 1	4 "1"	%mk=V
+L		2 1	4 "0"	%mk=V
 E	0 2	2 2	4	 %na=el	%mk=V	%sl=32
 N 3	104	%sl=32	%sf=sort.sis
 E	1 1	3 1	9	%mk=V
@@ -114,7 +116,7 @@ E	0 5	4 2	9	 %na=r	%mk=V	%sl=32
 E	4 1	0 1	9	%mk=V
 G	0	%sl=30	%sf=sort.sis
 N 1	103	%sl=30	%sf=sort.sis
-L		1 1	4 "1"	%mk=V
+L		1 1	4 "0"	%mk=V
 E	0 2	1 2	4	 %na=el	%mk=V	%sl=30
 E	1 1	0 1	9	%mk=V
 } 9 1 3 0 1 2	%sl=30	%sf=sort.sis
@@ -165,61 +167,62 @@ E	4 1	0 1	9	%mk=V
 G	22	"split"	%sl=53	%sf=sort.sis
 N 1	110	%sl=55	%sf=sort.sis
 E	0 1	1 1	9	 %na=arr	%mk=V	%sl=54
-N 2	105	%sl=58	%sf=sort.sis
-E	0 1	2 1	9	 %na=arr	%mk=V
-L		2 2	4 "1"	 %na=pivot	%mk=V
-{ Compound   3   0
+{ Compound   2   0
 G	0	%sl=55	%sf=sort.sis
 N 1	114	%sl=55	%sf=sort.sis
 E	0 1	1 1	9	 %na=arr	%mk=V	%sl=54
-E	1 1	0 3	15	 %na=e	%mk=V
-E	1 2	0 4	15	%mk=V
+E	1 1	0 2	15	 %na=e	%mk=V
+E	1 2	0 3	15	%mk=V
 G	0	%sl=55	%sf=sort.sis
-N 1	131	%sl=57	%sf=sort.sis
-E	0 3	1 1	4	 %na=e	%mk=V
-E	0 2	1 2	4	%mk=V
-N 2	124	%sl=58	%sf=sort.sis
-E	0 3	2 1	4	 %na=e	%mk=V
-E	0 2	2 2	4	%mk=V
-N 3	132	%sl=59	%sf=sort.sis
-E	0 3	3 1	4	 %na=e	%mk=V
-E	0 2	3 2	4	%mk=V
-N 4	139	%sl=59	%sf=sort.sis
-E	3 1	4 1	1	%mk=V
-E	1 1	0 5	1	%mk=V
-E	2 1	0 6	1	%mk=V
-E	4 1	0 7	1	%mk=V
+N 1	110	%sl=55	%sf=sort.sis
+E	0 1	1 1	9	 %na=arr	%mk=V	%sl=55
+N 2	105	%sl=58	%sf=sort.sis
+E	0 1	2 1	9	 %na=arr	%mk=V
+E	1 1	2 2	4	 %na=pivot	%mk=V
+N 3	131	%sl=57	%sf=sort.sis
+E	0 2	3 1	4	 %na=e	%mk=V
+E	2 1	3 2	4	%mk=V
+N 4	124	%sl=58	%sf=sort.sis
+E	0 2	4 1	4	 %na=e	%mk=V
+E	2 1	4 2	4	%mk=V
+N 5	132	%sl=59	%sf=sort.sis
+E	0 2	5 1	4	 %na=e	%mk=V
+E	2 1	5 2	4	%mk=V
+N 6	139	%sl=59	%sf=sort.sis
+E	5 1	6 1	1	%mk=V
+E	3 1	0 4	1	%mk=V
+E	4 1	0 5	1	%mk=V
+E	6 1	0 6	1	%mk=V
 G	0	%sl=55	%sf=sort.sis
 N 7	107	%sl=58	%sf=sort.sis
 L		7 1	4 "1"	%mk=V
-E	0 3	7 2	15	 %na=e	%mk=V	%sl=57
-E	0 5	7 3	23	%mk=V
+E	0 2	7 2	15	 %na=e	%mk=V	%sl=57
+E	0 4	7 3	23	%mk=V
 N 8	107	%sl=59	%sf=sort.sis
 L		8 1	4 "1"	%mk=V
-E	0 3	8 2	15	 %na=e	%mk=V	%sl=58
-E	0 6	8 3	23	%mk=V
+E	0 2	8 2	15	 %na=e	%mk=V	%sl=58
+E	0 5	8 3	23	%mk=V
 N 10	107	%sl=60	%sf=sort.sis
 L		10 1	4 "1"	%mk=V
-E	0 3	10 2	15	 %na=e	%mk=V	%sl=59
-E	0 7	10 3	23	%mk=V
+E	0 2	10 2	15	 %na=e	%mk=V	%sl=59
+E	0 6	10 3	23	%mk=V
 E	7 1	0 1	9	%mk=V
 E	8 1	0 2	9	%mk=V
 E	10 1	0 3	9	%mk=V
-} 3 0 3 0 1 2	%sl=55	%sf=sort.sis
-E	0 1	3 1	9	 %na=arr	%mk=V	%sl=55
-E	2 1	3 2	4	%mk=V
-N 4	115	%sl=58	%sf=sort.sis
-E	3 1	4 1	9	%mk=V
+} 2 0 3 0 1 2	%sl=55	%sf=sort.sis
+E	0 1	2 1	9	 %na=arr	%mk=V	%sl=55
+N 3	115	%sl=58	%sf=sort.sis
+E	2 1	3 1	9	%mk=V
+E	1 1	3 2	4	%mk=V
+N 4	115	%sl=59	%sf=sort.sis
+E	2 2	4 1	9	%mk=V
 E	1 1	4 2	4	%mk=V
-N 5	115	%sl=59	%sf=sort.sis
-E	3 2	5 1	9	%mk=V
+N 5	115	%sl=60	%sf=sort.sis
+E	2 3	5 1	9	%mk=V
 E	1 1	5 2	4	%mk=V
-N 6	115	%sl=60	%sf=sort.sis
-E	3 3	6 1	9	%mk=V
-E	1 1	6 2	4	%mk=V
-E	4 1	0 1	9	%mk=V
-E	5 1	0 2	9	%mk=V
-E	6 1	0 3	9	%mk=V
+E	3 1	0 1	9	%mk=V
+E	4 1	0 2	9	%mk=V
+E	5 1	0 3	9	%mk=V
 G	11	"sort"	%sl=65	%sf=sort.sis
 N 1	116	%sl=67	%sf=sort.sis
 E	0 1	1 1	9	 %na=arr	%mk=V	%sl=67
