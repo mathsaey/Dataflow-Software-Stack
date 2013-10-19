@@ -27,9 +27,9 @@ function insertion_sort(arr: IntArr returns IntArr)
         end for
         in 
             if array_size(arr) = 0 then
-                array [1: el]
+                array [0: el]
             else
-                L || M || array [1: el] || R
+                L || M || array [0: el] || R
             end if
         end let
     end function
@@ -45,14 +45,14 @@ function insertion_sort(arr: IntArr returns IntArr)
             end if
     end function
 
-    inner_loop(arr, array IntArr [], 1, array_limh(arr))
+    inner_loop(arr, array IntArr [], array_liml(arr), array_limh(arr))
 end function
 
 % Returns 2 arrays, one with every element smaller than or equal to the pivot,
 % and one more with every element greater than the pivot
 function split (arr : IntArr returns IntArr, IntArr, IntArr)
     for E in arr
-      pivot := 1
+      pivot := array_liml(arr)
       returns 
         array of E when E < arr[pivot]
         array of E when E = arr[pivot]

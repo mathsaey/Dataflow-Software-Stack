@@ -6,6 +6,10 @@ import scheduler
 import port
 import edge
 
+"""
+@todo don't remove literals when resetting
+"""
+
 class AbstractNode(object):
 	"""
 	This class represents a node in any graph type.

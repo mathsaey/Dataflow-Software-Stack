@@ -70,9 +70,9 @@ _basic_types = {
 	#6 : WildBasic 	Type not mentioned in the reference manual
 }
 
-#######################
+# ------------------- #
 # Type representation #
-#######################
+# ------------------- #
 
 class _Type(object): pass
 
@@ -152,9 +152,9 @@ class _FunctionType(_Type):
 		res += "\t res: " + self.res.__str__()
 		return res
 
-#############
+# --------- #
 # Type Pool #
-#############
+# --------- #
 
 class _TypePool(object):
 	"""A type pool object stores all the encountered types"""
@@ -181,9 +181,9 @@ _pool = _TypePool()
 def getType(label):
 	return _pool.getType(label)
 
-##########
+# ------ #
 # Parser #
-##########
+# ------ #
 
 def parseType(arr):
 	funcKey = int(arr[_code_idx])

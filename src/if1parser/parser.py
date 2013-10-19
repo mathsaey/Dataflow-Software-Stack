@@ -21,9 +21,15 @@ def parseString(str):
 	for line in lines:
 		arr = line.split()
 		if len(arr) is not 0:
-#			print line
-			functions[line[0]](arr)
+#			print "Parsing:", line
+			key = line[0]
+			try:
+				functions[key](arr)
+			except KeyError:
+				print "Unrecognized line type,", key,  ", in line:", line
 
 def parseFile(loc):
 	file = open(loc, 'r')
 	parseString(file.read())
+
+test = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"

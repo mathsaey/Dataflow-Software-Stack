@@ -7,6 +7,10 @@ The Scheduler module defines the scheduler, which is responsible
 for executing nodes and adding literals to the runtime
 """
 
+"""
+@todo: Add literals first, don't worry about them later.
+"""
+
 import Queue
 import thread
 import threading
