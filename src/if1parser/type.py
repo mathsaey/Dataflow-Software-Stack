@@ -1,7 +1,9 @@
 # type.py
 # Mathijs Saey
 # dvm prototype
-		
+	
+import tools
+
 """ 
 IF1 type parser
 
@@ -185,12 +187,12 @@ def getType(label):
 # Parser #
 # ------ #
 
-def parseType(arr):
+def parseType(arr, ctr):
 	funcKey = int(arr[_code_idx])
 	try:
 		_type_codes[funcKey](arr)
 	except KeyError:
-		print "Unknown type code:", funcKey, "encountered"
+		tools.warning("Unknown type code: " + str(funcKey) + " encountered.", ctr)
 
 def _parseBasic(arr):
 	base_type = _basic_types[int(arr[_arg_1_idx])]

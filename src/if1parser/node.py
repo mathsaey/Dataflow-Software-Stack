@@ -2,7 +2,7 @@
 # Mathijs Saey
 # dvm prototype
 
-#import core.operationnode
+import core.operationnode
 
-def parseNode(arr):
+def parseNode(arr, ctr):
 	pass

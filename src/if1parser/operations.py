@@ -8,8 +8,11 @@ IF1 nodes.
 
 """
 
-from functools import partial
-from math import floor
+from if1error 	import if1error
+from functools 	import partial
+from math 		import floor
+
+import tools
 
 # ---------------- #
 # Public functions #
@@ -36,6 +39,7 @@ def Div(l, r): 						return l / r
 def Equal(l, r): 					return l == r
 def NotEqual(l, r): 				return l != r
 def LessEqual(l,r):					return l <= r
+def IsError(l,r): 					return l == r
 def Neg(arith):						return - arith
 def ARemL(arr): 					return arr[1:]
 def ALimH(arr): 					return len(arr)
@@ -70,9 +74,6 @@ def ASetL(arr, idx):
 def AScatter(arr): 					
 	print "TODO: see if ASCatter is still needed with compound nodes"
 
-def IsError(l,r): 
-	print "TODO: create internal error type"
-	return (l == r) or (l == "error" and isinstance(r, str))
 
 
 def ACatenate(arr, *arrs):
@@ -142,14 +143,22 @@ def Times(l,r):
 	else:
 		return l * r
 
+# No documentation for this, 
+# so unsure about signature
+def Error(reason):
+	print "IF1 error created"
+	return IF1Error(reason)
+
 # ---------------- #
 # Function Mapping #
 # ---------------- #
 
 def unkownFunctionError(name, *args):
-	print "Undefined IF1 function with name:", name, "encountered."
+	err = "Undefined IF1 function with name: " + name + " encountered."
+	tools.error(err)
 
 def createPartial(name):
+	tools.warning("Undefined function " + name + " encountered.")
 	return partial(unkownFunctionError, name)
 
 _functions = {
@@ -208,7 +217,7 @@ _functions = {
 	152 : Times,
 	153 : createPartial("Trunc"),
 	154 : createPartial("PrefixSize"),
-	155 : createPartial("Error"),
+	155 : Error,
 	156 : createPartial("ReplaceMulti"),
 	157 : createPartial("Convert"),
 	158 : createPartial("CallForeign"),
@@ -246,12 +255,12 @@ _functions = {
 	198 : createPartial("RedTreeAT")
 }
 
-def getFunction(label):
+def getFunction(label, ctr = "?"):
 	key = int(label)
 	try:
 		func = _functions[key]
 	except KeyError:
-		print "Cannot find function with label:", label, "NoOp will be used instead."
+		tools.warning("Cannot find function with label: " + label + " NoOp will be used instead.", ctr)
 		return NoOp
 	else: 
 		return func
