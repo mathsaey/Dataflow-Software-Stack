@@ -1,14 +1,10 @@
-# Scheduler.py
+# runtime.py
 # Mathijs Saey
 # dvm prototype
 
 """
 The Scheduler module defines the scheduler, which is responsible
 for executing nodes and adding literals to the runtime
-"""
-
-"""
-@todo: Add literals first, don't worry about them later.
 """
 
 import Queue
@@ -33,18 +29,25 @@ class Scheduler(object):
 			node.execute()
 
 	def fetchLiterals(self):
-		while True:
+		while not self.literalQueue.empty():
 			lit = self.literalQueue.get()
 			lit.activate()
 
 	def run(self):
-		nodeThread = threading.Thread(
-			target = self.fetchNodes, 
-			args = tuple())
-		litThread = threading.Thread(
-			target = self.fetchLiterals, 
-			args = tuple())
-		nodeThread.start()
-		litThread.start()
+		self.fetchLiterals()
+		self.fetchNodes()
+
+class FunctionPool(object):
+	def __init__(self):
+		super(FunctionPool, self).__init__()
+		self.pool = {}
+
+	def addFunction(self, key, node):
+		self.pool.update({key : node})
+		
+	def getFunction(self, key):
+		return self.pool[key]
 
 main = Scheduler()
+pool = FunctionPool()
+

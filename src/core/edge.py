@@ -13,11 +13,9 @@ class Edge(DataConnector):
 	"""
 
 	def __init__(self, source, destination):
+		self.destination = destination
 		self.source = source
 		self.source.addEdge(self)
-		self.destination = destination
-
 
 	def acceptInput(self, input):
-		print "Edge:", self, "accepted input:", input
 		self.destination.acceptInput(input)

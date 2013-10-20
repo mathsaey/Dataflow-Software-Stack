@@ -1,0 +1,20 @@
+% simple.sis
+% Mathijs Saey
+% dvm examples
+
+% This file contains some simple sisal code for testing purposes
+
+define Main
+
+function foo(a,b: integer returns integer)
+	a + b
+end function
+
+function main(returns integer)
+	let 
+		a := foo(1,2);
+		b := foo(3,4)
+	in
+		a + b
+	end let
+end function

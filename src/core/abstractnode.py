@@ -2,79 +2,54 @@
 # Mathijs Saey
 # dvm prototype
 
-import scheduler
-import port
-
-"""
-@todo don't remove literals when resetting
-"""
-
+# Represents any node type in a graph
 class AbstractNode(object):
-	"""
-	This class represents a node in any graph type.
 
-	A Node contains an arbitrary amount of input nodes
-	and an arbitrary amount of output edges.
-	"""
-	
+	# Creates the in and outputs lists with the desired lengthts
+	# Subclasses should take care to fill the list with the desired port type
 	def __init__(self,inputs, outputs):
-		""" Initialize a node with a predetermined amount of in -and outputs """
 		self.inputs = [None] * inputs
 		self.outputs = [None] * outputs
-		for i in xrange(0,inputs):
-			self.inputs[i] = port.InputPort(self)
-		for i in xrange(0,outputs):
-			self.outputs[i] = port.OutputPort(self)
 
+	# Get the input at idx, expand the list if needed
 	def getInput(self, idx):
-		""" Gets the input at idx """
-		return self.inputs[idx]
+		raise NotImplementedError("GetInput is an abstract method!")
 
+	# Get the output at idx, expand the list if needed
 	def getOutput(self, idx):
-		""" Gets the output at idx """
-		return self.outputs[idx]
+		raise NotImplementedError("GetOutput is an abstract method!")
 
-	def getArguments(self):
-		""" Gather the arguments from all the input ports """
-		resLst = []
-		for el in self.inputs:
-			resLst += [el.value()]
-		return resLst
-
+	# Send a value to an output port
 	def sendOutput(self, idx, output):
-		""" Send a value to an output port """
 		self.getOutput(idx).acceptInput(output)
 
+	# Send a list of outputs, the amount of elements
+	# the list contains should match the amount of output ports
 	def sendOutputs(self, outputs):
-		""" 
-		Send a list of outputs, the amount of elements
-		the list contains should match the amount of output ports
-		"""
 		for idx in xrange(0, len(self.outputs)):
 			self.sendOutput(idx, outputs[idx])
 
+	# Reset all ports
 	def reset(self):
-		""" Reset all ports """
 		for el in self.inputs:
 			el.clear()
 		for el in self.outputs:
 			el.clear()
 
-	def isInputReady(self):
-		""" Check if all the ports have received inputs"""
-		for el in self.inputs:
-			if (el is None) or not el.ready():
-				return False
-		return True
-	
-	def receivedInput(self):
-		""" Respond to a port receiving input"""
-		if self.isInputReady():
-			scheduler.main.addNode(self)
+	# Fill a list with a given port type
+	def fillList(self, lst, constructor):
+		for idx in xrange(0, len(lst)):
+			lst[idx] = constructor(self)
 
-	def execute(self):
-		""" 
-		Consume all inputs, execute this node, send the 
-		output and reset the node 
-		"""
-		raise NotImplementedError("Execute is an abstract method!")
+	# Fetches the element at idx
+	# If the idx is not present, the list is expanded.
+	# This allows us to define nodes that accept a non-constant amount of inputs
+	def getFromList(self, lst, constructor, idx):
+		try:
+			res = lst[idx]
+		except IndexError:
+			lst += [constructor(self)]
+			res = lst[idx]
+		finally:
+			return res
+	

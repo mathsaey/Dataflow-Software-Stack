@@ -3,37 +3,39 @@
 # dvm prototype
 
 import type
-import node
 import edge
-import func
+import graph
 import tools
 
 def parse_comment(str, ctr):
 	pass
 
 functions = {
-	'E' : parse_comment,
-	'L' : parse_comment,
-	'G' : parse_comment,
-	'X' : parse_comment,
-	'{' : parse_comment,
-	'}' : parse_comment,
 	'C' : parse_comment,
 	'T' : type.parseType,
-	'N' : node.parseNode
+	'E' : edge.parseEdge,
+	'L' : edge.parseLiteral,
+	'N' : graph.parseNode,
+	'G' : graph.parseGraph,
+	'X' : graph.parseGraph,
+	'{' : graph.parseCompoundStart,
+	'}' : graph.parseCompoundEnd
 }
 
 def parseLine(line, ctr = "?"):
+	#print line
 	arr = line.split()
 	key = line[0]
 	try:
-		functions[key](arr, ctr)
+		func = functions[key]
 	except KeyError:
 		error = "Unrecognized line type: " + key
 		tools.error(error, ctr)
-	except Exception, e:
-		error = "Exception: '" + str(e) + "' while parsing: '" + line + "'"
-		tools.error(error, ctr)
+	#except Exception, e:
+	#	error = "Exception: '" + str(e) + "' while parsing: '" + line + "'"
+	#	tools.error(error, ctr)
+	else:
+		func(arr, ctr)
 
 def parseString(str):
 	ctr = 1

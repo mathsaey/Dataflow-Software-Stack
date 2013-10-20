@@ -13,4 +13,4 @@ def warning(msg, line = "?"):
 
 def error(msg, line = "?"):
 	print "Error\t at line:", line, "\t:", msg
-	sys.exit()
+	#sys.exit()

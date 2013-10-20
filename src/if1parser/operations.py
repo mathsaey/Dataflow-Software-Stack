@@ -8,11 +8,12 @@ IF1 nodes.
 
 """
 
-from if1error 	import if1error
+from if1error 	import IF1Error
 from functools 	import partial
 from math 		import floor
 
 import tools
+import graph
 
 # ---------------- #
 # Public functions #
@@ -67,13 +68,10 @@ def RedTree(func, acc, mult, filt):
 def Reduce(func, acc, mult, filt): 
 	print "TODO: see if foldl is still needed with compound nodes"
 
-def Call(func, *args): 				
-	print "TODO: add higher order call..."
 def ASetL(arr, idx): 				
 	print "ASetL not supported in IF1 subset..."
 def AScatter(arr): 					
 	print "TODO: see if ASCatter is still needed with compound nodes"
-
 
 
 def ACatenate(arr, *arrs):
@@ -158,7 +156,6 @@ def unkownFunctionError(name, *args):
 	tools.error(err)
 
 def createPartial(name):
-	tools.warning("Undefined function " + name + " encountered.")
 	return partial(unkownFunctionError, name)
 
 _functions = {
@@ -182,7 +179,7 @@ _functions = {
 	117 : Abs,
 	118 : BindArguments,
 	119 : Bool,
-	120 : Call,
+	#120 : Call,
 	121 : Char,
 	122 : Div,
 	123 : Double,

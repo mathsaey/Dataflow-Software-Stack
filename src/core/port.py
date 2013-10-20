@@ -5,9 +5,11 @@
 from dataconnector import DataConnector
 
 class Port(DataConnector):
+	""" Represents a port, a port contains the in- or output data of a node"""
 	def __init__(self, node):
 		self.node = node
 		self.input = None
+		self.fromLiteral = False
 
 	def value(self):
 		return self.input
@@ -15,39 +17,36 @@ class Port(DataConnector):
 	def node(self):
 		return self.node
 
-	def acceptInput(self,input):
+	def acceptInput(self,input, fromLiteral):
 		print "Port:", self, "accepted input:", input
+		self.fromLiteral = fromLiteral
 		self.input = input
 
 	def ready(self):
 		return self.input is not None
 
 	def clear(self):
-		self.input = None
-
-class InputPort(Port):
-	def __init__(self, node):
-		super(InputPort, self).__init__(node)
-		self.fromLiteral = False
-
-	def acceptInput(self,input, fromLiteral = False):
-		super(InputPort, self).acceptInput(input)
-		self.fromLiteral = fromLiteral
-		self.node.receivedInput()
-
-	def clear(self):
 		if not self.fromLiteral:
 			self.input = None
 
+class InputPort(Port):
+	""" Represents a port that keeps it's input until the node is ready"""
+	def acceptInput(self,input, fromLiteral = False):
+		super(InputPort, self).acceptInput(input, fromLiteral)
+		self.node.receivedInput()
+
 class OutputPort(Port):	
+	""" Represents a port that just forwards it's input right away """
 	def __init__(self, node):
 		super(OutputPort, self).__init__(node)
 		self.edges = []
 
 	def addEdge(self, edge):
 		self.edges += [edge]
+		if self.ready():
+			edge.acceptInput(self.input)
 
-	def acceptInput(self,input):
-		super(OutputPort, self).acceptInput(input)
+	def acceptInput(self,input, fromLiteral = False):
+		super(OutputPort, self).acceptInput(input, fromLiteral)
 		for el in self.edges:
 			el.acceptInput(input)

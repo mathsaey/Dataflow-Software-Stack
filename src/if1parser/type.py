@@ -18,7 +18,7 @@ Types are stored as the closest matching python type.
 # Public functions #
 # ---------------- #
 
-def parseType(arr): pass
+def parseType(arr, ctr): pass
 def getType(label): pass
 
 # -------------------- #
@@ -77,6 +77,13 @@ _basic_types = {
 # ------------------- #
 
 class _Type(object): pass
+
+class _UnknownType(_Type):
+	""" Represents any possible type """
+	def __init__(self):
+		super(_UnknownType, self).__init__()
+		self.list = []
+		self.type = None
 
 class _BasicType(_Type):
 	""" Wrapper around a basic type """
@@ -163,7 +170,7 @@ class _TypePool(object):
 
 	def __init__(self):
 		super(_TypePool, self).__init__()
-		self._type_pool = {}
+		self._type_pool = {0 : _UnknownType()}
 
 	def __str__(self):
 		res = "Type pool:\n"
@@ -190,9 +197,11 @@ def getType(label):
 def parseType(arr, ctr):
 	funcKey = int(arr[_code_idx])
 	try:
-		_type_codes[funcKey](arr)
+		func = _type_codes[funcKey]
 	except KeyError:
 		tools.warning("Unknown type code: " + str(funcKey) + " encountered.", ctr)
+	else:
+		func(arr)
 
 def _parseBasic(arr):
 	base_type = _basic_types[int(arr[_arg_1_idx])]
