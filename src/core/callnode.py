@@ -26,6 +26,7 @@ class CallNode(ExecutableNode):
 		if self.inputs[0].ready():
 			self.addToScheduler()
 
+	# Find the function to execute and "wire" it.
 	def execute(self):
 		print "Node:", self, "Calling..."
 		key = self.inputs[0].value()

@@ -138,7 +138,6 @@ def parseNormalGraph(arr, ctr):
 	envAdd()
 	envNode(0, node)
 
-
 def parseSubGraph(arr, ctr):
 	pass
 

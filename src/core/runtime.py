@@ -2,11 +2,7 @@
 # Mathijs Saey
 # dvm prototype
 
-"""
-The Scheduler module defines the scheduler, which is responsible
-for executing nodes and adding literals to the runtime
-"""
-
+import copy
 import Queue
 import thread
 import threading
@@ -46,7 +42,7 @@ class FunctionPool(object):
 		self.pool.update({key : node})
 		
 	def getFunction(self, key):
-		return self.pool[key]
+		return copy.deepcopy(self.pool[key])
 
 main = Scheduler()
 pool = FunctionPool()
