@@ -13,6 +13,10 @@ class OperationNode(ExecutableNode):
 		self.fillList(self.inputs, port.InputPort)
 		self.operation = operation
 
+	def __str__(self):
+		id = super(OperationNode, self).__str__()
+		return "OperationNode:\t(" + id + ")"
+
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.InputPort, idx)
 	def getOutput(self, idx):
@@ -30,7 +34,7 @@ class OperationNode(ExecutableNode):
 		return resLst
 
 	def execute(self):
-		print "Node:", self, "executing..."
+		super(OperationNode, self).execute()
 		lst = self.gatherInput()
 		res = self.operation(*lst)
 		self.sendOutputs([res])

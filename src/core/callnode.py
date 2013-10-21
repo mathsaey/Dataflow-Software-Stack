@@ -17,6 +17,10 @@ class CallNode(ExecutableNode):
 		self.fillList(self.outputs, port.OutputPort)
 		self.inputs[0] = port.InputPort(self)
 
+	def __str__(self):
+		id = super(CallNode, self).__str__()
+		return "CallNode\t\t(" + id + ")"
+
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.OutputPort, idx)
 	def getOutput(self, idx):
@@ -28,7 +32,7 @@ class CallNode(ExecutableNode):
 
 	# Find the function to execute and "wire" it.
 	def execute(self):
-		print "Node:", self, "Calling..."
+		super(CallNode, self).execute()
 		key = self.inputs[0].value()
 		func = runtime.pool.getFunction(key)
 		for idx in xrange(0,len(func.outputs)):

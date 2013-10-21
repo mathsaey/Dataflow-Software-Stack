@@ -19,11 +19,6 @@ class Scheduler(object):
 	def addNode(self, node):
 		self.readyQueue.put(node)
 
-	def fetchNodes(self):
-		while True:
-			node = self.readyQueue.get()
-			node.execute()
-
 	def fetchLiterals(self):
 		while not self.literalQueue.empty():
 			lit = self.literalQueue.get()
@@ -31,7 +26,9 @@ class Scheduler(object):
 
 	def run(self):
 		self.fetchLiterals()
-		self.fetchNodes()
+		while True:
+			node = self.readyQueue.get()
+			node.execute()
 
 class FunctionPool(object):
 	def __init__(self):

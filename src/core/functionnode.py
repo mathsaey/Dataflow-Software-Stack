@@ -14,6 +14,10 @@ class FunctionNode(AbstractNode):
 		self.fillList(self.inputs, port.OutputPort)
 		self.fillList(self.outputs, port.OutputPort)
 
+	def __str__(self):
+		id = super(FunctionNode, self).__str__()
+		return "FunctionNode:\t(" + id + ")"
+
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.OutputPort, idx)
 	def getOutput(self, idx):

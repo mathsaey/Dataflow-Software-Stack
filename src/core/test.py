@@ -57,4 +57,4 @@ lit2 = Literal(mainNode.getInput(2), 2)
 lit3 = Literal(mainNode.getInput(3), 3)
 lit4 = Literal(mainNode.getInput(4), 4)
 
-runtime.main.run()
+#runtime.main.run()

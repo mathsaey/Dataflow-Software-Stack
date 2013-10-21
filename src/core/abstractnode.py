@@ -11,6 +11,9 @@ class AbstractNode(object):
 		self.inputs = [None] * inputs
 		self.outputs = [None] * outputs
 
+	def __str__(self):
+		return str(id(self))
+
 	# Get the input at idx, expand the list if needed
 	def getInput(self, idx):
 		raise NotImplementedError("GetInput is an abstract method!")

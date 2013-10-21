@@ -11,6 +11,19 @@ class Port(DataConnector):
 		self.input = None
 		self.fromLiteral = False
 
+	def __str__(self):
+		idx = None
+		typ = None
+
+		try:
+			idx = self.node.inputs.index(self)
+			typ = "Input "
+		except ValueError:
+			idx = self.node.outputs.index(self)
+			typ = "Output"
+
+		return typ + " port " + str(idx) + " of node " + str(self.node)
+
 	def value(self):
 		return self.input
 

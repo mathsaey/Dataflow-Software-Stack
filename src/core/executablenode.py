@@ -23,4 +23,5 @@ class ExecutableNode(AbstractNode):
 	
 	# Called by the scheduler, what happens depends on the node type
 	def execute(self):
-		raise NotImplementedError("Execute is an abstract method!")
+		print "Node:", self, "executing..."
+
