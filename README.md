@@ -14,8 +14,7 @@ The idea behind dataflow is that instructions are executed when all of the data 
 
 ## IF1 and [Sisal](http://en.wikipedia.org/wiki/SISAL)
 
-Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines.
-sisalc, the sisal compiler, is compiled to the IF1 intermediate language, which represents the sisal source code as a dataflow graph. 
+Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph. 
 
 ## Goal, revisited
 
