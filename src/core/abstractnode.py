@@ -42,7 +42,7 @@ class AbstractNode(object):
 	# Fill a list with a given port type
 	def fillList(self, lst, constructor):
 		for idx in xrange(0, len(lst)):
-			lst[idx] = constructor(self)
+			lst[idx] = constructor(self, idx)
 
 	# Fetches the element at idx
 	# If the idx is not present, the list is expanded.
@@ -51,7 +51,7 @@ class AbstractNode(object):
 		try:
 			res = lst[idx]
 		except IndexError:
-			lst += [constructor(self)]
+			lst += [constructor(self, idx)]
 			res = lst[idx]
 		finally:
 			return res

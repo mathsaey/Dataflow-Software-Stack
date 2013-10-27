@@ -6,23 +6,15 @@ from dataconnector import DataConnector
 
 class Port(DataConnector):
 	""" Represents a port, a port contains the in- or output data of a node"""
-	def __init__(self, node):
+	def __init__(self, node, idx, typ = "Unknown"):
+		self.idx = idx
+		self.typ = typ
 		self.node = node
 		self.input = None
 		self.fromLiteral = False
 
 	def __str__(self):
-		idx = None
-		typ = None
-
-		try:
-			idx = self.node.inputs.index(self)
-			typ = "Input "
-		except ValueError:
-			idx = self.node.outputs.index(self)
-			typ = "Output"
-
-		return typ + " port " + str(idx) + " of node " + str(self.node)
+		return self.typ + "port " + str(self.idx) + " of node " + str(self.node)
 
 	def value(self):
 		return self.input
@@ -44,14 +36,17 @@ class Port(DataConnector):
 
 class InputPort(Port):
 	""" Represents a port that keeps it's input until the node is ready"""
+	def __init__(self, node, idx = "?"):
+		super(InputPort, self).__init__(node, idx, "Input")
+
 	def acceptInput(self,input, fromLiteral = False):
 		super(InputPort, self).acceptInput(input, fromLiteral)
 		self.node.receivedInput()
 
 class OutputPort(Port):	
 	""" Represents a port that just forwards it's input right away """
-	def __init__(self, node):
-		super(OutputPort, self).__init__(node)
+	def __init__(self, node, idx = "?"):
+		super(OutputPort, self).__init__(node, idx, "Output")
 		self.edges = []
 
 	def addEdge(self, edge):

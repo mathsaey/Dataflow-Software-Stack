@@ -15,7 +15,7 @@ class OperationNode(ExecutableNode):
 
 	def __str__(self):
 		id = super(OperationNode, self).__str__()
-		return "OperationNode:\t(" + id + ")"
+		return "OperationNode: (" + id + ")"
 
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.InputPort, idx)

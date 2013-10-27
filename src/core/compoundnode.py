@@ -2,10 +2,15 @@
 # Mathijs Saey
 # dvm prototype
 
-from abstractnode import AbstractNode
+from executablenode import ExecutableNode
 
-class CompoundNode(AbstractNode):
+class CompoundNode(ExecutableNode):
 	"""A Compound node represents a more complex node that contains subgraphs"""
 
-	def __init__(self, inputs):
+	def __init__(self, inputs, outputs, subgraphs):
 		super(CompoundNode, self).__init__(inputs)
+		self.subgraphs = subgraphs
+
+
+class IfThenElseNode(CompoundNode):
+	

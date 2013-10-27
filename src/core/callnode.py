@@ -15,11 +15,11 @@ class CallNode(ExecutableNode):
 		super(CallNode, self).__init__(inputs, outputs)
 		self.fillList(self.inputs, port.OutputPort)
 		self.fillList(self.outputs, port.OutputPort)
-		self.inputs[0] = port.InputPort(self)
+		self.inputs[0] = port.InputPort(self, 0)
 
 	def __str__(self):
 		id = super(CallNode, self).__str__()
-		return "CallNode\t\t(" + id + ")"
+		return "CallNode: (" + id + ")"
 
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.OutputPort, idx)

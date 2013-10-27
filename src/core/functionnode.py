@@ -16,7 +16,7 @@ class FunctionNode(AbstractNode):
 
 	def __str__(self):
 		id = super(FunctionNode, self).__str__()
-		return "FunctionNode:\t(" + id + ")"
+		return "FunctionNode: (" + id + ")"
 
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.OutputPort, idx)
