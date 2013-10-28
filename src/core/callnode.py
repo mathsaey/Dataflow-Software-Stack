@@ -26,8 +26,8 @@ class CallNode(ExecutableNode):
 	def getOutput(self, idx):
 		return self.getFromList(self.outputs, port.OutputPort, idx)
 
-	def receivedInput(self):
-		if self.inputs[0].ready():
+	def receivedInput(self, idx):
+		if idx is 0:
 			self.addToScheduler()
 
 	# Find the function to execute and "wire" it.

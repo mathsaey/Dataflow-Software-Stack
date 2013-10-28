@@ -12,6 +12,8 @@ from if1error 	import IF1Error
 from functools 	import partial
 from math 		import floor
 
+import core.compoundnode
+
 import tools
 import graph
 
@@ -19,8 +21,39 @@ import graph
 # Public functions #
 # ---------------- #
 
-# Get a function by it's IF1 label.
 def getFunction(label): pass
+def getCompound(label): pass
+
+# -------------- #
+# Compound Nodes #
+# -------------- #
+
+def unknownCompound():
+	err = "Undefined compound node encountered."
+	tools.error(err)
+
+_compound = {
+	0 	: 	unknownCompound,
+	1 	: 	core.compoundnode.SelectNode,
+	2 	: 	unknownCompound,
+	3 	: 	unknownCompound,
+	4 	: 	unknownCompound,
+	5 	: 	unknownCompound,
+	6 	: 	unknownCompound,
+	7 	: 	unknownCompound,
+	8 	: 	unknownCompound,
+	9 	: 	unknownCompound,
+	10	: 	unknownCompound
+}
+
+def getCompound(label, ctr = "?"):
+	key = int(label)
+	try:
+		node = _compound[key]
+	except KeyError:
+		tools.err("Unkown compound node, " + label + " requested.", ctr)
+	else: 
+		return node
 
 # -------------------- #
 # Function Definitions #

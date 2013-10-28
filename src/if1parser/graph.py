@@ -3,6 +3,7 @@
 # dvm prototype
 
 import core.operationnode
+import core.compoundnode
 import core.functionnode
 import core.callnode
 import core.runtime
@@ -22,8 +23,11 @@ edges and functions.
 # Public functions #
 # ---------------- #
 
+def parseCompoundStart(arr, ctr): pass
+def parseCompoundEnd(arr, ctr): pass
+def parseGraph(arr, ctr): pass
 def parseNode(arr, ctr): pass
-def envGet(key, ctr): pass
+def getNode(key, ctr): pass
 
 # --------- #
 # Constants #
@@ -39,27 +43,29 @@ _n_code_idx 	= 2
 _g_type_idx		= 1
 _g_name_idx		= 2
 
-# ----- #
-# State #
-# ----- #
+# { Compound <label> <operation code>
+_cs_label_idx	= 2
+_cs_code_idx  	= 3
 
-__PARSING_COMPOUND = 0
+# } <label> <operation code> <association list length> <association list>
+_ce_label_idx	= 1
+_ce_code_idx 	= 2
+_ce_len_idx		= 3
+_ce_lis_idx		= 4
 
 # ------- #
 # Scoping #
 # ------- #
 
 class _Scope(object):
-	"""
-	A scope represents a single level of node definitions. 
-	"""
+	""" Represents a single scope"""
 
-	def __init__(self):
+	def __init__(self, collection):
 		super(_Scope, self).__init__()
-		self.map = {}
+		self.map = collection
 
-	def addEl(self, key, node):
-		self.map.update({key: node})
+	def addEl(self):
+		raise NotImplementedError("addEl is an abstract method!")
 
 	def getEl(self, key):
 		try:
@@ -69,19 +75,34 @@ class _Scope(object):
 		else:
 			return res
 
+class _NodeScope(_Scope):
+	def __init__(self):
+		super(_NodeScope, self).__init__({})
+
+	def addEl(self, key, node):
+		self.map.update({int(key): node})
+
+class _SequentialScope(_Scope):
+	def __init__(self):
+		super(_SequentialScope, self).__init__([])
+
+	def addEl(self, node):
+		self.map += [node]
+
 class _Environment(object):
 	""" 
 	An environment represents the current execution environment.
 	It keeps track of the scoping rules when looking up nodes.
 	"""
-	def __init__(self):
+	def __init__(self, scopeType):
 		super(_Environment, self).__init__()
-		self.level = 0
+		self.scopeType = scopeType
 		self.stack = []
-		self.stack.append(_Scope())
+		self.level = 0
+		self.stack.append(self.scopeType())
 
 	def addScope(self):
-		self.stack.append(_Scope())
+		self.stack.append(self.scopeType())
 		self.level += 1
 
 	def popScope(self):
@@ -89,8 +110,8 @@ class _Environment(object):
 			self.stack.pop()
 			self.level -= 1
 
-	def addEl(self, key, node):
-		self.stack[-1].addEl(key, node)
+	def addEl(self, *args):
+		self.stack[-1].addEl(*args)
 
 	def getEl(self, key, ctr):
 		res = None
@@ -101,25 +122,48 @@ class _Environment(object):
 		if res:
 			return res
 		else:
-			err = "Undefined node reference: " + str(key)
+			err = "Undefined label: " + str(key)
 			tools.error(err,ctr)
 
-_env = _Environment()
+# ----- #
+# State #
+# ----- #
 
-def envGet(key, ctr = "?"):
-	return _env.getEl(key, ctr)
+_COMP_LEVEL = 0
+_nodes 		= _Environment(_NodeScope)
+_subgraphs 	= _Environment(_SequentialScope)
 
-def envNode(key, node):
-	_env.addEl(int(key), node)
+# ------------ #
+# Abstractions #
+# ------------ #
 
-def envNamed(key, node):
+def isCompound():
+	return _COMP_LEVEL is 0
+def addFunction(key, node):
 	core.runtime.pool.addFunction(key, node)
 
-def envAdd():
-	_env.addScope()
+def nodeScope():
+	_nodes.addScope()
+def nodePop():
+	_nodes.popScope()
+def addNode(key, node):
+	_nodes.addEl(key, node)
+def getNode(key, ctr = "?"):
+	return _nodes.getEl(key, ctr)
 
-def envPop():
-	_env.popScope()
+def enterComp():
+	global _COMP_LEVEL
+	_COMP_LEVEL += 1
+	_subgraphs.addScope()
+def exitComp():
+	global _COMP_LEVEL
+	_COMP_LEVEL -= 1
+	_subgraphs.popScope()
+
+def addSubGraph(graph):
+	_subgraphs.addEl(graph)
+def getSubGraph(idx, ctr = "?"):
+	return _subgraphs.getEl(idx, ctr)
 
 # ------------ #
 # Graph Parser #
@@ -133,19 +177,59 @@ def parseNormalGraph(arr, ctr):
 
 	node = core.functionnode.FunctionNode(inputs, outputs)
 	name = arr[_g_name_idx][1:-1]
-	envPop()
-	envNamed(name, node)
-	envAdd()
-	envNode(0, node)
+	nodePop()
+	addFunction(name, node)
+	nodeScope()
+	addNode(0, node)
 
 def parseSubGraph(arr, ctr):
-	pass
+	node = core.functionnode.FunctionNode(0,0)
+	addSubGraph(node)
+	nodePop()
+	nodeScope()
+	addNode(0, node)
 
 def parseGraph(arr, ctr):
-	if __PARSING_COMPOUND is 0:
+	if _COMP_LEVEL is 0:
 		parseNormalGraph(arr, ctr)
 	else:
 		parseSubGraph(arr, ctr)
+
+def parseGraphDef(arr, ctr):
+	pass
+
+# --------------- #
+# Compound Parser #
+# --------------- #
+
+def parseCompoundStart(arr, ctr):
+	opCode = arr[_cs_code_idx]
+	const = operations.getCompound(opCode)
+	node = const()
+
+	enterComp()
+	addNode(0, node)
+	nodeScope()
+	nodeScope()
+
+
+def parseCompoundEnd(arr, ctr):
+	nodePop()
+	node 	= getNode(0, ctr)
+	label 	= arr[_ce_label_idx]
+	length	= int(arr[_ce_len_idx])
+	end 	= _ce_lis_idx + length
+	lst 	= arr[_ce_lis_idx:end]
+	resLst 	= []
+
+	for idx in xrange(0, len(lst)):
+		graphIdx = lst[idx]
+		graph = getSubGraph(idx, ctr)
+		resLst += [graph]
+
+	node.addSubGraphs(resLst)
+	addNode(label, node)
+	exitComp()
 
 # ----------- #
 # Node Parser #
@@ -157,12 +241,11 @@ def parseStandardNode(key, label):
 	outputs 	= 1
 
 	node = core.operationnode.OperationNode(inputs, outputs, operation)
-	envNode(label, node)
+	addNode(label, node)
 
 def parseCallNode(label):
 	node = core.callnode.CallNode(1,1)
-	envNode(label, node)
-
+	addNode(label, node)
 
 def parseNode(arr, ctr): 
 	key 		= int(arr[_n_code_idx])
@@ -172,13 +255,3 @@ def parseNode(arr, ctr):
 		parseCallNode(label)
 	else:
 		parseStandardNode(key, label)
-
-# --------------- #
-# Compound Parser #
-# --------------- #
-
-def parseCompoundStart(arr, ctr):
-	__PARSING_COMPOUND += 1
-
-def parseCompoundEnd(arr, ctr):
-	__PARSING_COMPOUND -= 1

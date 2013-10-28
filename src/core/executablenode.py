@@ -18,7 +18,7 @@ class ExecutableNode(AbstractNode):
 		runtime.main.addNode(self)
 
 	# Respond to a port receiving input
-	def receivedInput(self):
+	def receivedInput(self, idx):
 		raise NotImplementedError("ReceivedInput is an abstract method!")
 	
 	# Called by the scheduler, what happens depends on the node type

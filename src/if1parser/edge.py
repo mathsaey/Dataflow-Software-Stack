@@ -49,8 +49,8 @@ def parseEdge(arr, ctr):
 	destKey 	= int(arr[_e_dest_idx])
 	destPort 	= int(arr[_e_destp_idx])
 
-	src 	= graph.envGet(srcKey, ctr)
-	dest 	= graph.envGet(destKey, ctr)
+	src 	= graph.getNode(srcKey, ctr)
+	dest 	= graph.getNode(destKey, ctr)
 	sport 	= None
 	dport 	= None
 
@@ -93,7 +93,7 @@ def parseLiteral(arr, ctr):
 	typeKey	= int(arr[_l_type_idx])
 	string 	= arr[_l_str_idx]
 
-	node = graph.envGet(destKey, ctr)
+	node = graph.getNode(destKey, ctr)
 	port = node.getInput(portKey - 1)
 	typ = type.getType(typeKey)
 

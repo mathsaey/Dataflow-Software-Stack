@@ -6,15 +6,24 @@
 
 define Main
 
-function foo(a,b: integer returns integer)
-	a + b
-end function
-
-function main(returns integer)
+function test(returns integer)
 	let 
-		a := foo(1,2);
-		b := foo(3,4)
+		a := 
+		if 1 < 2 then 1 + 2 else 3 + 4
+			%then if True then 1 + 2 else 10 + 20 end if
+			%else 3 + 4 
+		end if;
+		b := 
+			if 1 > 2 
+				then 1 + 2 
+				else 3 + 4 
+			end if
 	in
 		a + b
 	end let
+end function
+
+
+function main(returns integer)
+	test()
 end function

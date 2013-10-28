@@ -22,7 +22,7 @@ class OperationNode(ExecutableNode):
 	def getOutput(self, idx):
 		return self.getFromList(self.outputs, port.OutputPort, idx)
 
-	def receivedInput(self):
+	def receivedInput(self, idx):
 		if self.isInputReady():
 			self.addToScheduler()
 
