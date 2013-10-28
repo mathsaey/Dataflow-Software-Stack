@@ -2,13 +2,34 @@
 # Mathijs Saey
 # dvm prototype
 
+# The MIT License (MIT)
+#
+# Copyright (c) 2013 Mathijs Saey
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
 """
 This module allows us to retrieve python versions of the base
 IF1 nodes.
 
 """
 
-from if1error 	import IF1Error
 from functools 	import partial
 from math 		import floor
 
@@ -73,7 +94,6 @@ def Div(l, r): 						return l / r
 def Equal(l, r): 					return l == r
 def NotEqual(l, r): 				return l != r
 def LessEqual(l,r):					return l <= r
-def IsError(l,r): 					return l == r
 def Neg(arith):						return - arith
 def ARemL(arr): 					return arr[1:]
 def ALimH(arr): 					return len(arr)
@@ -174,12 +194,6 @@ def Times(l,r):
 	else:
 		return l * r
 
-# No documentation for this, 
-# so unsure about signature
-def Error(reason):
-	print "IF1 error created"
-	return IF1Error(reason)
-
 # ---------------- #
 # Function Mapping #
 # ---------------- #
@@ -222,7 +236,7 @@ _functions = {
 	127 : FinalValue,
 	128 : Floor,
 	129 : Int,
-	130 : IsError,
+	130 : createPartial("IsError"),
 	131 : Less,
 	132 : LessEqual,
 	133 : Max,
