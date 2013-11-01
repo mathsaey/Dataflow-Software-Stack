@@ -28,13 +28,13 @@
 This module contains edges, which are links between nodes
 """
 
-from dataconnector import DataConnector
+from receiver import Receiver
 
-class Edge(DataConnector):
+class Edge(Receiver):
 	def __init__(self, source, destination):
-		self.destination = destination
 		self.source = source
+		self.destination = destination
 		self.source.addEdge(self)
 
-	def acceptInput(self, input):
-		self.destination.acceptInput(input)
+	def receiveInput(self, input):
+		self.destination.receiveInput(input)
