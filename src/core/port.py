@@ -35,7 +35,7 @@ class Port(Receiver):
 	def __init__(self, node, idx):
 		self.idx = idx
 		self.node = node
-		self.value = None
+		self.data = None
 		self.fromLiteral = False
 
 	def __str__(self):
@@ -43,17 +43,17 @@ class Port(Receiver):
 
 	def idx(self): return self.idx
 	def node(self): return self.node
-	def value(self): return self.value
-	def ready(self): return self.value is not None
+	def value(self): return self.data
+	def ready(self): return self.data is not None
 
 	def receiveInput(self,input, fromLiteral):
 		print "Port:", self, "accepted input:", input
 		self.fromLiteral = fromLiteral
-		self.value = input
+		self.data = input
 
 	def clear(self):
 		if not self.fromLiteral:
-			self.value = None
+			self.data = None
 
 class InputPort(Port):
 	""" Represents a port that stores it's value until it's requested"""
@@ -77,11 +77,11 @@ class OutputPort(Port):
 	def addEdge(self, edge):
 		self.edges += [edge]
 		if self.ready():
-			edge.receiveInput(self.value)
+			edge.receiveInput(self.data)
 
 	def sendOutput(self):
 		for el in self.edges:
-			el.receiveInput(self.value)
+			el.receiveInput(self.data)
 
 	def receiveInput(self,input, fromLiteral = False):
 		super(OutputPort, self).receiveInput(input, fromLiteral)
