@@ -28,82 +28,61 @@
 This file contains the various ports, in and outputs to nodes
 """
 
-from dataconnector import DataConnector
+from receiver import Receiver
 
-class Port(DataConnector):
+class Port(Receiver):
 	""" Represents a port, a port contains the in- or output data of a node"""
-	def __init__(self, node, idx, typ = "Unknown"):
+	def __init__(self, node, idx):
 		self.idx = idx
-		self.typ = typ
 		self.node = node
-		self.input = None
+		self.value = None
 		self.fromLiteral = False
 
 	def __str__(self):
-		return self.typ + " port " + str(self.idx) + " of node " + str(self.node)
+		return "port " + str(self.idx) + " of node " + str(self.node)
 
-	def value(self):
-		return self.input
+	def idx(self): return self.idx
+	def node(self): return self.node
+	def value(self): return self.value
+	def ready(self): return self.value is not None
 
-	def node(self):
-		return self.node
-
-	def acceptInput(self,input, fromLiteral):
+	def receiveInput(self,input, fromLiteral):
 		print "Port:", self, "accepted input:", input
 		self.fromLiteral = fromLiteral
-		self.input = input
-
-	def ready(self):
-		return self.input is not None
+		self.value = input
 
 	def clear(self):
 		if not self.fromLiteral:
-			self.input = None
+			self.value = None
 
 class InputPort(Port):
-	""" Represents a port that keeps it's input until the node is ready"""
-	def __init__(self, node, idx, typ = "Input"):
-		super(InputPort, self).__init__(node, idx, typ)
+	""" Represents a port that stores it's value until it's requested"""
 
-	def acceptInput(self,input, fromLiteral = False):
-		super(InputPort, self).acceptInput(input, fromLiteral)
-		self.node.receivedInput(self.idx)
+	def __str__(self):
+		return "Input " + super(InputPort, self).__str__()
+
+	def receiveInput(self,input, fromLiteral = False):
+		super(InputPort, self).receiveInput(input, fromLiteral)
+		self.node.receiveInput(self.idx)
 
 class OutputPort(Port):	
-	""" Represents a port that just forwards it's input right away """
-	def __init__(self, node, idx, typ = "Output"):
-		super(OutputPort, self).__init__(node, idx, typ)
+	""" Represents a port that just forwards it's input right away"""
+	def __init__(self, node, idx):
+		super(OutputPort, self).__init__(node, idx)
 		self.edges = []
+
+	def __str__(self):
+		return "Output " + super(OutputPort, self).__str__()
 
 	def addEdge(self, edge):
 		self.edges += [edge]
 		if self.ready():
-			edge.acceptInput(self.input)
+			edge.receiveInput(self.value)
 
 	def sendOutput(self):
 		for el in self.edges:
-			el.acceptInput(self.input)
+			el.receiveInput(self.value)
 
-	def acceptInput(self,input, fromLiteral = False):
-		super(OutputPort, self).acceptInput(input, fromLiteral)
+	def receiveInput(self,input, fromLiteral = False):
+		super(OutputPort, self).receiveInput(input, fromLiteral)
 		self.sendOutput()
-
-class StopPort(OutputPort):
-	""" Represents an output port that only forwards it's input when told """
-	def __init__(self, node, idx, typ = "Stop"):
-		super(StopPort, self).__init__(node, idx, typ)
-		self.activated = False
-
-	def addEdge(self, edge):
-		super(StopPort, self).addEdge(edge)
-
-	def acceptInput(self, input, fromLiteral = False):
-		super(OutputPort, self).acceptInput(input, fromLiteral)
-		self.node.receivedInput(self.idx)
-		if (self.activated):
-			self.sendOutput()
-
-	def activate(self):
-		self.activated = True
-		if self.input:
-			self.sendOutput()
