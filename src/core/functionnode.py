@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 """
-This module contains function nodes, nodes that contain subgraphs
+This module contains function nodes, a node that represents a function
 """
 
 from abstractnode import AbstractNode

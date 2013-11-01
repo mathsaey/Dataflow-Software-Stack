@@ -30,8 +30,8 @@ This module contains the top level node type
 
 class AbstractNode(object):
 	def __init__(self,inputs, outputs):
-		self.inputs = [None] * inputs
-		self.outputs = [None] * outputs
+		self.inputs		= [None] * inputs
+		self.outputs	= [None] * outputs
 
 	def __str__(self):
 		return str(id(self))
@@ -43,7 +43,7 @@ class AbstractNode(object):
 		raise NotImplementedError("GetOutput is an abstract method!")
 
 	def sendOutput(self, idx, output):
-		self.getOutput(idx).acceptInput(output)
+		self.getOutput(idx).receiveInput(output)
 
 	def sendOutputs(self, outputs):
 		for idx in xrange(0, len(self.outputs)):

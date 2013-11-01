@@ -261,7 +261,7 @@ _functions = {
 	152 : Times,
 	153 : createPartial("Trunc"),
 	154 : createPartial("PrefixSize"),
-	155 : Error,
+	155 : createPartial("Error"),
 	156 : createPartial("ReplaceMulti"),
 	157 : createPartial("Convert"),
 	158 : createPartial("CallForeign"),

@@ -224,7 +224,7 @@ def parseGraphDef(arr, ctr):
 def parseCompoundStart(arr, ctr):
 	opCode = arr[_cs_code_idx]
 	const = operations.getCompound(opCode)
-	node = const()
+	node = core.compoundnode.CompoundNode(1,1, const)
 
 	enterComp()
 	addNode(0, node)

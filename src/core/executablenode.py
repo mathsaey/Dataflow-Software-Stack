@@ -29,11 +29,12 @@ This module contains nodes that can be executed
 """
 
 from abstractnode import AbstractNode
+from receiver import Receiver
 import runtime
 
-class ExecutableNode(AbstractNode):
+class ExecutableNode(AbstractNode, Receiver):
+	
 	def isInputReady(self):
-		""" Check if all the ports have received inputs"""
 		for el in self.inputs:
 			if (el is None) or not el.ready():
 				return False
@@ -42,9 +43,6 @@ class ExecutableNode(AbstractNode):
 	def addToScheduler(self):
 		runtime.main.addNode(self)
 
-	def receivedInput(self, idx):
-		raise NotImplementedError("ReceivedInput is an abstract method!")
-	
 	def execute(self):
 		print "Node:", self, "executing..."
 

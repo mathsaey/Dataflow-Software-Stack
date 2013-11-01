@@ -9,9 +9,9 @@ define Main
 function test(returns integer)
 	let 
 		a := 
-		if 1 < 2 then 1 + 2 else 3 + 4
-			%then if True then 1 + 2 else 10 + 20 end if
-			%else 3 + 4 
+		if 1 < 2
+			then if True then 1 + 2 else 10 + 20 end if
+			else 3 + 4 
 		end if;
 		b := 
 			if 1 > 2 

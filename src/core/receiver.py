@@ -30,9 +30,5 @@ This module contains any element that can accept input
 
 class Receiver(object):
 
-	def __init__(self):
-		super(Receiver, self).__init__()
-
 	def receiveInput(self):
 		raise NotImplementedError("ReceivedInput is an abstract method!")
-		

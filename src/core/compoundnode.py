@@ -28,66 +28,87 @@
 This module contains the compound nodes, nodes that have subgraphs
 """
 
+import copy
+
 import edge
 import port
 import runtime
 
 from abstractnode import AbstractNode
+from executablenode import ExecutableNode
 
 class CompoundNode(AbstractNode):
 	"""A Compound node represents a more complex node that contains subgraphs"""
 
-	def __init__(self, inputs, outputs):
+	def __init__(self, inputs, outputs, mergeNode):
 		super(CompoundNode, self).__init__(inputs, outputs)
-		self.fillList(self.outputs, port.StopPort)
+		self.fillList(self.outputs, port.OutputPort)
 		self.fillList(self.inputs, port.OutputPort)
-		self.controller = port.StopPort(self, -1)
+		self.mergeNode = mergeNode
 		self.subgraphs = []
+
+	def __str__(self):
+		id = super(CompoundNode, self).__str__()
+		return "CompoundNode: (" + id + ")"
+
 
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.OutputPort, idx)
 	def getOutput(self, idx):
-		return self.getFromList(self.outputs, port.StopPort, idx)
+		return self.getFromList(self.outputs, port.OutputPort, idx)
 
-	def attach(self, subGraph):
-		print subGraph
+	def attach(self, subGraph, idx):
 		for idx in xrange(0, len(subGraph.outputs)):
+			dst = self.mergeNode.getInput(idx, subGraph)
 			src = subGraph.getOutput(idx)
-			dst = self.getOutput(idx)
 			edge.Edge(src, dst)
 		for idx in xrange(0, len(subGraph.inputs)):
-			src = self.getInput(idx)
 			dst = subGraph.getInput(idx)
+			src = self.getInput(idx)
 			edge.Edge(src, dst)
-		print "=====>", self.outputs#[0].edges[0].destination
-
 
 	def addSubGraphs(self, lst):
+		mergeNode = self.mergeNode(
+			len(self.inputs), 
+			len(self.outputs), 
+			len(lst))
+		self.mergeNode = mergeNode
 		self.subgraphs = lst
+		for idx in xrange(0, len(lst)):
+			el = lst[idx]
+			self.attach(el, idx)
 
-	def receivedInput(self, idx):
-		raise NotImplementedError("ReceivedInput is an abstract method!")
+class MergeNode(ExecutableNode):
 
-class SelectNode(CompoundNode):
-	def __init__(self):
-		super(SelectNode, self).__init__(0, 0)
+	def __init__(self, inputs, outputs, subgraphs):
+		super(MergeNode, self).__init__(inputs, outputs)
+		self.fillList(self.outputs, port.OutputPort)
+		self.fillList(self.inputs, port.InputPort)
+		self.inputs = [copy.copy(self.inputs)] * subgraphs
+
+	def getInput(self, idx, graphIdx):
+		return self.getFromList(self.inputs[idx], port.InputPort, idx)
+	def getOutput(self, idx):
+		return self.getFromList(self.outputs, port.OutputPort, idx)
+
+class SelectNode(MergeNode):
 
 	def __str__(self):
 		id = super(SelectNode, self).__str__()
-		return "Select node: (" + id + ")"
+		return "SelectNode: (" + id + ")"
 
-	def addSubGraphs(self, lst):
-		super(SelectNode, self).addSubGraphs(lst)
-		pred = self.subgraphs[0]
-		edge.Edge(self.getInput(0), pred.getInput(0))
-		edge.Edge(pred.getOutput(0), self.controller)
+	def receiveInput(self, idx):
+		if self.inputs[0][0].ready:
+			self.select = self.inputs[0][0].value() + 1
+			self.addToScheduler()
 
-	def receivedInput(self, idx):
-		if idx is -1:
-			val = self.controller.value()
-			graph = self.subgraphs[val + 1]
+	def gatherInput(self):
+		resLst = []
+		for el in self.inputs[self.select]:
+			resLst += [el.value()]
+		return resLst
 
-			self.outputs[0].clear()
-			self.outputs[0].activate()
-			self.attach(graph)
-
+	def execute(self):
+		print "EXEC", self.inputs
+		res = self.gatherInput()
+		self.sendOutputs(res)

@@ -30,8 +30,6 @@ This module controls in which order that various nodes and literals are executed
 
 import copy
 import Queue
-import thread
-import threading
 
 class Scheduler(object):
 	def __init__(self):
