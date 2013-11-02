@@ -246,9 +246,11 @@ def parseCompoundEnd(arr, ctr):
 		graph = getSubGraph(idx, ctr)
 		resLst += [graph]
 
+	exitComp()
+	nodePop()
+
 	node.addSubGraphs(resLst)
 	addNode(label, node)
-	exitComp()
 
 # ----------- #
 # Node Parser #
