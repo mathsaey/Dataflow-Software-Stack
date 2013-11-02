@@ -227,8 +227,8 @@ def parseCompoundStart(arr, ctr):
 	node = core.compoundnode.CompoundNode(1,1, const)
 
 	enterComp()
-	addNode(0, node)
 	nodeScope()
+	addNode(0, node)
 	nodeScope()
 
 

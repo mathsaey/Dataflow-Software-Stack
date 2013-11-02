@@ -76,6 +76,10 @@ class CompoundNode(AbstractNode):
 		for idx in xrange(0, len(lst)):
 			el = lst[idx]
 			self.attach(el, idx)
+		for idx in xrange(0, len(self.outputs)):
+			src = self.mergeNode.getOutput(idx)
+			dst = self.getOutput(idx)
+			edge.Edge(src, dst)
 
 class MergeNode(ExecutableNode):
 

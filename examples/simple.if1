@@ -29,24 +29,10 @@ L		1 1	4 "3"	%mk=V
 L		1 2	4 "4"	%mk=V
 E	1 1	0 1	4	%mk=V
 G	0	%sl=13	%sf=simple.sis
-N 1	129
-L		1 1	1 "True"	%mk=V
-{ Compound   2   1
-G	0
-E	0 1	0 1	4	%mk=V
-G	0	%sl=13	%sf=simple.sis
-N 1	141	%sl=13	%sf=simple.sis
-L		1 1	4 "10"	%mk=V
-L		1 2	4 "20"	%mk=V
-E	1 1	0 1	4	%mk=V
-G	0	%sl=13	%sf=simple.sis
 N 1	141	%sl=13	%sf=simple.sis
 L		1 1	4 "1"	%mk=V
 L		1 2	4 "2"	%mk=V
 E	1 1	0 1	4	%mk=V
-} 2 1 3 0 1 2	%sl=13	%sf=simple.sis
-E	1 1	2 1	4	%mk=V
-E	2 1	0 1	4	%mk=V
 } 4 1 3 0 1 2	%sl=13	%sf=simple.sis
 E	3 1	4 1	4	%mk=V
 N 5	139	%sl=17	%sf=simple.sis
