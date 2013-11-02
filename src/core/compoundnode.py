@@ -51,15 +51,14 @@ class CompoundNode(AbstractNode):
 		id = super(CompoundNode, self).__str__()
 		return "CompoundNode: (" + id + ")"
 
-
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, port.OutputPort, idx)
 	def getOutput(self, idx):
 		return self.getFromList(self.outputs, port.OutputPort, idx)
 
-	def attach(self, subGraph, idx):
+	def attach(self, subGraph, graphIdx):
 		for idx in xrange(0, len(subGraph.outputs)):
-			dst = self.mergeNode.getInput(idx, subGraph)
+			dst = self.mergeNode.getInput(idx, graphIdx)
 			src = subGraph.getOutput(idx)
 			edge.Edge(src, dst)
 		for idx in xrange(0, len(subGraph.inputs)):
@@ -83,11 +82,15 @@ class MergeNode(ExecutableNode):
 	def __init__(self, inputs, outputs, subgraphs):
 		super(MergeNode, self).__init__(inputs, outputs)
 		self.fillList(self.outputs, port.OutputPort)
-		self.fillList(self.inputs, port.InputPort)
-		self.inputs = [copy.copy(self.inputs)] * subgraphs
+		self.inputs = [None] * subgraphs
+
+		for idx in xrange(0, subgraphs):
+			lst = [None] * inputs
+			self.fillList(lst, port.InputPort)
+			self.inputs[idx] = lst
 
 	def getInput(self, idx, graphIdx):
-		return self.getFromList(self.inputs[idx], port.InputPort, idx)
+		return self.getFromList(self.inputs[graphIdx], port.InputPort, idx)
 	def getOutput(self, idx):
 		return self.getFromList(self.outputs, port.OutputPort, idx)
 
@@ -98,7 +101,7 @@ class SelectNode(MergeNode):
 		return "SelectNode: (" + id + ")"
 
 	def receiveInput(self, idx):
-		if self.inputs[0][0].ready:
+		if self.inputs[0][0].ready():
 			self.select = self.inputs[0][0].value() + 1
 			self.addToScheduler()
 
@@ -109,6 +112,5 @@ class SelectNode(MergeNode):
 		return resLst
 
 	def execute(self):
-		print "EXEC", self.inputs
 		res = self.gatherInput()
 		self.sendOutputs(res)
