@@ -49,7 +49,7 @@ def getCompound(label): pass
 # Compound Nodes #
 # -------------- #
 
-def unknownCompound():
+def unknownCompound(*args):
 	err = "Undefined compound node encountered."
 	tools.error(err)
 

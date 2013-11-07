@@ -118,3 +118,4 @@ class SelectNode(MergeNode):
 	def execute(self):
 		res = self.gatherInput()
 		self.sendOutputs(res)
+

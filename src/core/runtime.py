@@ -67,4 +67,3 @@ class FunctionPool(object):
 
 main = Scheduler()
 pool = FunctionPool()
-

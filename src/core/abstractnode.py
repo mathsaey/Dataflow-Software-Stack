@@ -64,7 +64,7 @@ class AbstractNode(object):
 			res = lst[idx]
 		except IndexError:
 			lst += [constructor(self, idx)]
-			res = lst[idx]
-		finally:
+			return self.getFromList(lst, constructor, idx)
+		else:
 			return res
 	
