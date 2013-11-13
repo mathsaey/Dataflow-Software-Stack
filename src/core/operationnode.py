@@ -33,19 +33,17 @@ import port
 
 class OperationNode(ExecutableNode):
 	def __init__(self, inputs, outputs, operation):
-		super(OperationNode, self).__init__(inputs, outputs)
-		self.fillList(self.outputs, port.OutputPort)
-		self.fillList(self.inputs, port.InputPort)
+		super(OperationNode, self).__init__(
+			inputs, 
+			outputs,
+			port.InputPort,
+			port.OutputPort)
+
 		self.operation = operation
 
 	def __str__(self):
 		id = super(OperationNode, self).__str__()
 		return "OperationNode: (" + id + ")"
-
-	def getInput(self, idx):
-		return self.getFromList(self.inputs, port.InputPort, idx)
-	def getOutput(self, idx):
-		return self.getFromList(self.outputs, port.OutputPort, idx)
 
 	def receiveInput(self, idx):
 		if self.isInputReady():

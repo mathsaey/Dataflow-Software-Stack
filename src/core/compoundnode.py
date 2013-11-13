@@ -28,11 +28,8 @@
 This module contains the compound nodes, nodes that have subgraphs
 """
 
-import copy
-
 import edge
 import port
-import runtime
 
 from abstractnode import AbstractNode
 from executablenode import ExecutableNode
@@ -41,20 +38,18 @@ class CompoundNode(AbstractNode):
 	"""A Compound node represents a more complex node that contains subgraphs"""
 
 	def __init__(self, inputs, outputs, mergeNode):
-		super(CompoundNode, self).__init__(inputs, outputs)
-		self.fillList(self.outputs, port.OutputPort)
-		self.fillList(self.inputs, port.OutputPort)
+		super(CompoundNode, self).__init__(
+			inputs, 
+			outputs,
+			port.OutputPort,
+			port.OutputPort)
+
 		self.mergeNode = mergeNode
 		self.subgraphs = []
 
 	def __str__(self):
 		id = super(CompoundNode, self).__str__()
 		return "CompoundNode: (" + id + ")"
-
-	def getInput(self, idx):
-		return self.getFromList(self.inputs, port.OutputPort, idx)
-	def getOutput(self, idx):
-		return self.getFromList(self.outputs, port.OutputPort, idx)
 
 	def attach(self, subGraph, graphIdx):
 		for idx in xrange(0, len(subGraph.outputs)):
@@ -84,10 +79,13 @@ class CompoundNode(AbstractNode):
 class MergeNode(ExecutableNode):
 
 	def __init__(self, inputs, outputs, subgraphs):
-		super(MergeNode, self).__init__(inputs, outputs)
-		self.fillList(self.outputs, port.OutputPort)
-		self.inputs = [None] * subgraphs
+		super(MergeNode, self).__init__(
+			inputs, 
+			outputs,
+			port.InputPort,
+			port.OutputPort)
 
+		self.inputs = [None] * subgraphs
 		for idx in xrange(0, subgraphs):
 			lst = [None] * inputs
 			self.fillList(lst, port.InputPort)
@@ -95,8 +93,6 @@ class MergeNode(ExecutableNode):
 
 	def getInput(self, idx, graphIdx):
 		return self.getFromList(self.inputs[graphIdx], port.InputPort, idx)
-	def getOutput(self, idx):
-		return self.getFromList(self.outputs, port.OutputPort, idx)
 
 class SelectNode(MergeNode):
 

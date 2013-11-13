@@ -34,15 +34,12 @@ import port
 class FunctionNode(AbstractNode):
 
 	def __init__(self, inputs, outputs):
-		super(FunctionNode, self).__init__(inputs, outputs)
-		self.fillList(self.inputs, port.OutputPort)
-		self.fillList(self.outputs, port.OutputPort)
+		super(FunctionNode, self).__init__(
+			inputs, 
+			outputs, 
+			port.OutputPort, 
+			port.OutputPort)
 
 	def __str__(self):
 		id = super(FunctionNode, self).__str__()
 		return "FunctionNode: (" + id + ")"
-
-	def getInput(self, idx):
-		return self.getFromList(self.inputs, port.OutputPort, idx)
-	def getOutput(self, idx):
-		return self.getFromList(self.outputs, port.OutputPort, idx)

@@ -29,18 +29,22 @@ This module contains the top level node type
 """
 
 class AbstractNode(object):
-	def __init__(self,inputs, outputs):
-		self.inputs		= [None] * inputs
-		self.outputs	= [None] * outputs
+	def __init__(self,inputs, outputs, inputConstructor, outputConstructor):
+		self.inputs				= [None] * inputs
+		self.outputs			= [None] * outputs
+		self.inputConstructor 	= inputConstructor
+		self.outputConstructor 	= outputConstructor
+
+		self.fillList(self.inputs, self.inputConstructor)
+		self.fillList(self.outputs, self.outputConstructor)
 
 	def __str__(self):
 		return str(id(self))
 
 	def getInput(self, idx):
-		raise NotImplementedError("GetInput is an abstract method!")
-
+		return self.getFromList(self.inputs, self.inputConstructor, idx)
 	def getOutput(self, idx):
-		raise NotImplementedError("GetOutput is an abstract method!")
+		return self.getFromList(self.outputs, self.outputConstructor, idx)
 
 	def sendOutput(self, idx, output):
 		self.getOutput(idx).receiveInput(output)

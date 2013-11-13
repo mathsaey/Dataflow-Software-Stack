@@ -41,10 +41,10 @@ class Port(Receiver):
 	def __str__(self):
 		return "port " + str(self.idx) + " of node " + str(self.node)
 
-	def idx(self): return self.idx
-	def node(self): return self.node
-	def value(self): return self.data
-	def ready(self): return self.data is not None
+	def idx(self): 		return self.idx
+	def node(self): 	return self.node
+	def value(self): 	return self.data
+	def ready(self): 	return self.data is not None
 
 	def receiveInput(self,input, fromLiteral):
 		print "Port:", self, "accepted input:", input

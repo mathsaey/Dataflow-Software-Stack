@@ -44,11 +44,11 @@ def parseString(str): pass
 # Parser #
 # ------ #
 
-def parseComment(str, ctr):
+def skipLine(str, ctr):
 	pass
 
 functions = {
-	'C' : parseComment,
+	'C' : skipLine,
 	'T' : type.parseType,
 	'E' : edge.parseEdge,
 	'L' : edge.parseLiteral,
@@ -60,6 +60,7 @@ functions = {
 }
 
 def parseLine(line, ctr = "?"):
+	print line
 	arr = line.split()
 	key = line[0]
 	try:
