@@ -86,3 +86,22 @@ class OutputPort(Port):
 	def receiveInput(self,input, fromLiteral = False):
 		super(OutputPort, self).receiveInput(input, fromLiteral)
 		self.sendOutput()
+
+class TargetPort(Port):
+	""" Represents a port with a dynamic target """
+	def __init__(self, node, idx):
+		super(TargetPort, self).__init__(node, idx)
+		self.target = None
+
+	def __str__(self):
+		return "Target " + super(TargetPort, self).__str__()
+
+	def setTarget(self, target):
+		self.target = target
+		if self.ready():
+			target.receiveInput(self.data)
+
+	def receiveInput(self, input, fromLiteral = False):
+		super(TargetPort, self).receiveInput(input, fromLiteral)
+		if self.target:
+			self.target.receiveInput(self.data)

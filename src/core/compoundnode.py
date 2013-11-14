@@ -53,9 +53,9 @@ class CompoundNode(AbstractNode):
 
 	def attach(self, subGraph, graphIdx):
 		for idx in xrange(0, len(subGraph.outputs)):
-			dst = self.mergeNode.getInput(idx, graphIdx)
-			src = subGraph.getOutput(idx)
-			edge.Edge(src, dst)
+			target = self.mergeNode.getInput(idx, graphIdx)
+			port = subGraph.getOutput(idx)
+			port.setTarget(target)
 		for idx in xrange(0, len(subGraph.inputs)):
 			dst = subGraph.getInput(idx)
 			src = self.getInput(idx)

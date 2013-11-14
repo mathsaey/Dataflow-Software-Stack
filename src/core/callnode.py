@@ -30,7 +30,6 @@ This module contains the nodes used to call functions
 
 from executablenode import ExecutableNode
 import runtime
-import edge
 import port
 
 class CallNode(ExecutableNode):
@@ -39,7 +38,7 @@ class CallNode(ExecutableNode):
 		super(CallNode, self).__init__(
 			inputs, 
 			outputs,
-			port.OutputPort,
+			port.TargetPort,
 			port.OutputPort)
 		self.inputs[0] = port.InputPort(self, 0)
 
@@ -56,11 +55,11 @@ class CallNode(ExecutableNode):
 		key = self.inputs[0].value()
 		func = runtime.pool.getFunction(key)
 		for idx in xrange(0,len(func.outputs)):
-			src = func.getOutput(idx)
-			dst = self.getOutput(idx)
-			edge.Edge(src, dst)
+			port = func.getOutput(idx)
+			target = self.getOutput(idx)
+			port.setTarget(target)
 		for idx in xrange(0,len(func.inputs)):
-			src = self.getInput(idx + 1)
-			dst = func.getInput(idx)
-			edge.Edge(src, dst)
+			port = self.getInput(idx + 1)
+			target = func.getInput(idx)
+			port.setTarget(target)
 

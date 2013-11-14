@@ -60,7 +60,6 @@ functions = {
 }
 
 def parseLine(line, ctr = "?"):
-	print line
 	arr = line.split()
 	key = line[0]
 	try:

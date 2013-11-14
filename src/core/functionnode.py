@@ -38,7 +38,7 @@ class FunctionNode(AbstractNode):
 			inputs, 
 			outputs, 
 			port.OutputPort, 
-			port.OutputPort)
+			port.TargetPort)
 
 	def __str__(self):
 		id = super(FunctionNode, self).__str__()
