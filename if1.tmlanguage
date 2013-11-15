@@ -18,13 +18,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^C(.)*$</string>
+			<string>^C.*$</string>
 			<key>name</key>
 			<string>comment.line.if1</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\%(.)*$</string>
+			<string>\%.*$</string>
 			<key>name</key>
 			<string>comment.line.if1</string>
 		</dict>
@@ -60,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>"(.)*"</string>
+			<string>".*"</string>
 			<key>name</key>
 			<string>string.quoted.double.if1</string>
 		</dict>
