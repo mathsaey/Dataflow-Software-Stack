@@ -99,7 +99,6 @@ class OutputPort(Port):
 			res += [edge.destination]
 		return res
 
-
 class TargetPort(Port):
 	""" Represents a port with a dynamic target """
 	def __init__(self, node, idx):
