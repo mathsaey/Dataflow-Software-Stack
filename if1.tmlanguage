@@ -76,7 +76,7 @@
 			<key>end</key>
 			<string>^\}</string>
 			<key>name</key>
-			<string>meta.block,if1</string>
+			<string>meta.block.if1</string>
 			<key>patterns</key>
 			<array>
 				<dict>
