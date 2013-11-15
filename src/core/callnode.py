@@ -50,10 +50,13 @@ class CallNode(ExecutableNode):
 		if idx is 0:
 			self.addToScheduler()
 
+	def getFunction(self):
+		key = self.inputs[0].value()
+		return runtime.pool.getFunction(key)
+
 	def execute(self):
 		super(CallNode, self).execute()
-		key = self.inputs[0].value()
-		func = runtime.pool.getFunction(key)
+		func = self.getFunction()
 		for idx in xrange(0,len(func.outputs)):
 			port = func.getOutput(idx)
 			target = self.getOutput(idx)

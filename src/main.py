@@ -30,10 +30,16 @@ This module serves as a top level file to access the other modules
 
 import if1parser.parser
 import core.runtime
+import core.iterator
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 
 if1parser.parser.parseFile(loc)
-core.runtime.main.run()
+#core.runtime.main.run()
+
+
+core.runtime.main.prepare()
+root = core.runtime.pool.getFunction("test")
+core.iterator.GraphIterator(root)

@@ -55,6 +55,9 @@ class Port(Receiver):
 		if not self.fromLiteral:
 			self.data = None
 
+	def follow(self):
+		raise NotImplementedError("follow is an abstract method!")
+
 class InputPort(Port):
 	""" Represents a port that stores it's value until it's requested"""
 
@@ -64,6 +67,9 @@ class InputPort(Port):
 	def receiveInput(self,input, fromLiteral = False):
 		super(InputPort, self).receiveInput(input, fromLiteral)
 		self.node.receiveInput(self.idx)
+
+	def follow(self):
+		return self.node.getOutputs()
 
 class OutputPort(Port):	
 	""" Represents a port that just forwards it's input right away"""
@@ -86,6 +92,13 @@ class OutputPort(Port):
 	def receiveInput(self,input, fromLiteral = False):
 		super(OutputPort, self).receiveInput(input, fromLiteral)
 		self.sendOutput()
+
+	def follow(self):
+		res = []
+		for edge in self.edges:
+			res += [edge.destination]
+		return res
+
 
 class TargetPort(Port):
 	""" Represents a port with a dynamic target """

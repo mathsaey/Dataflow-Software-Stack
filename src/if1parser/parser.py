@@ -54,7 +54,7 @@ functions = {
 	'L' : edge.parseLiteral,
 	'N' : graph.parseNode,
 	'G' : graph.parseGraph,
-	'X' : graph.parseGraphDef,
+	'X' : graph.parseGraph,
 	'{' : graph.parseCompoundStart,
 	'}' : graph.parseCompoundEnd
 }

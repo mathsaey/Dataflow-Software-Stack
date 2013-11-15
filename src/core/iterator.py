@@ -1,4 +1,4 @@
-# runtime.py
+# iterator.py
 # Mathijs Saey
 # dvm prototype
 
@@ -25,48 +25,20 @@
 # THE SOFTWARE.
 
 """
-This module controls in which order that various nodes and literals are executed
+This module contains the definition of the iterator that traverses nodes
 """
 
-import copy
-import Queue
+class GraphIterator(object):
 
-class Scheduler(object):
-	def __init__(self):
-		super(Scheduler, self).__init__()
-		self.literalQueue 	= Queue.Queue()
-		self.readyQueue 	= Queue.Queue()
+	def __init__(self, node):
+		super(GraphIterator, self).__init__()
+		self.node = node
+		self.root = node.getInput(0)
+		print self.root.follow()
 
-	def addLiteral(self, lit):
-		self.literalQueue.put(lit)
+	def __iter__(self):
+		return self
 
-	def addNode(self, node):
-		self.readyQueue.put(node)
+	def next(self): pass
 
-	def fetchLiterals(self):
-		while not self.literalQueue.empty():
-			lit = self.literalQueue.get()
-			lit.activate()
-
-	def prepare(self):
-		self.fetchLiterals()
-
-	def run(self):
-		self.prepare()
-		while True:
-			node = self.readyQueue.get()
-			node.execute()
-
-class FunctionPool(object):
-	def __init__(self):
-		super(FunctionPool, self).__init__()
-		self.pool = {}
-
-	def addFunction(self, key, node):
-		self.pool.update({key : node})
 		
-	def getFunction(self, key):
-		return copy.deepcopy(self.pool[key])
-
-main = Scheduler()
-pool = FunctionPool()

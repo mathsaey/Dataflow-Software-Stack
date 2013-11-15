@@ -41,6 +41,12 @@ class AbstractNode(object):
 	def __str__(self):
 		return str(id(self))
 
+	def getOutputs(self):
+		res = []
+		for port in self.outputs:
+			res += port.follow()
+		return res
+
 	def getInput(self, idx):
 		return self.getFromList(self.inputs, self.inputConstructor, idx)
 	def getOutput(self, idx):
