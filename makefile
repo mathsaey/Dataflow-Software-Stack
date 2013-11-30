@@ -8,7 +8,7 @@ COMPILE_INVOCATION = $(COMPILER) -std=c++11
 LINK_INVOCATION = $(COMPILER) -lstdc++ 
 
 # Documentation 
-DOCUMENTATION = doxygen
+DOCUMENTATION_TOOL = doxygen
 DOCUMENTATION_CONFIG = DoxygenConfig
 
 # Locations
@@ -44,7 +44,7 @@ directory:
 
 # Run the Documentation tool
 doc: 
-	$(DOCUMENTATION) $(DOCUMENTATION_CONFIG)
+	$(DOCUMENTATION_TOOL) $(DOCUMENTATION_CONFIG)
 
 # Removes all output
 clean: 
