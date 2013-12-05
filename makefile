@@ -8,13 +8,14 @@ COMPILE_INVOCATION = $(COMPILER) -std=c++11
 LINK_INVOCATION = $(COMPILER) -lstdc++ 
 
 # Documentation 
-DOCUMENTATION = doxygen
-DOCUMENTATION_CONFIG = DoxygenConfig
+DOCUMENTATION 			= doxygen
+DOCUMENTATION_DIR 		= documentation
+DOCUMENTATION_CONFIG 	= DoxygenConfig
 
 # Locations
-EXECUTABLE = dvm
-INPUT_DIR = src/
-OUTPUT-DIR = obj/
+EXECUTABLE 	= dvm
+INPUT_DIR 	= src/
+OUTPUT-DIR 	= obj/
 
 # Pattern matching
 SOURCE_FILES = $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
@@ -45,6 +46,7 @@ directory:
 # Run the Documentation tool
 doc: 
 	$(DOCUMENTATION) $(DOCUMENTATION_CONFIG)
+	make -C $(DOCUMENTATION_DIR) -f Makefile
 
 # Removes all output
 clean: 
