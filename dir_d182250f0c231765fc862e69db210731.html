@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>DVM: Quicksort in Sisal</title>
+<title>DVM: src/graph Directory Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
+   &#160;<span id="projectnumber">0.0</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -38,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -72,44 +74,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Quicksort in Sisal </div>  </div>
+<div class="title">graph Directory Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="fragment"><div class="line">define  Main</div>
-<div class="line"></div>
-<div class="line">type Info = array[ integer ]</div>
-<div class="line"></div>
-<div class="line"><span class="keyword">function</span> Main ( Data : Info returns Info )</div>
-<div class="line"></div>
-<div class="line">    <span class="keyword">function</span> Split (Data : Info  returns Info, Info, Info )</div>
-<div class="line">    for E in Data</div>
-<div class="line">    returns array of E when E &lt; Data[ 1 ]</div>
-<div class="line">        array of E when E = Data[ 1 ]</div>
-<div class="line">        array of E when E &gt; Data[ 1 ]</div>
-<div class="line">    end for</div>
-<div class="line">    end function</div>
-<div class="line"></div>
-<div class="line">    % routine body</div>
-<div class="line">    %</div>
-<div class="line"></div>
-<div class="line">    if array_size( Data ) &gt; 2 then</div>
-<div class="line">       let</div>
-<div class="line">          L, Middle, R := Split( Data )</div>
-<div class="line">       in</div>
-<div class="line">      Main( L ) || Middle || Main( R )</div>
-<div class="line">       end let</div>
-<div class="line">    else</div>
-<div class="line">       Data</div>
-<div class="line">    end if</div>
-<div class="line"></div>
-<div class="line">end function % quicksort</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
+Files</h2></td></tr>
+<tr class="memitem:node_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>node.cpp</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:node_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>node.h</b> <a href="node_8h_source.html">[code]</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:token_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>token.cpp</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:token_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><b>token.h</b> <a href="token_8h_source.html">[code]</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 30 2013 01:34:11 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 11 2013 15:37:34 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

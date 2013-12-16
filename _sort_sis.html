@@ -21,8 +21,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
+   &#160;<span id="projectnumber">0.0</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -107,9 +109,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        end <span class="keywordflow">for</span></div>
 <div class="line">        in </div>
 <div class="line">            <span class="keywordflow">if</span> array_size(arr) = 0 then</div>
-<div class="line">                array [1: el]</div>
+<div class="line">                array [0: el]</div>
 <div class="line">            <span class="keywordflow">else</span></div>
-<div class="line">                L || M || array [1: el] || R</div>
+<div class="line">                L || M || array [0: el] || R</div>
 <div class="line">            end <span class="keywordflow">if</span></div>
 <div class="line">        end let</div>
 <div class="line">    end <span class="keyword">function</span></div>
@@ -125,14 +127,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">            end if</div>
 <div class="line">    end function</div>
 <div class="line"></div>
-<div class="line">    inner_loop(arr, array IntArr [], 1, array_limh(arr))</div>
+<div class="line">    inner_loop(arr, array IntArr [], array_liml(arr), array_limh(arr))</div>
 <div class="line">end function</div>
 <div class="line"></div>
 <div class="line">% Returns 2 arrays, one with every element smaller than or equal to the pivot,</div>
 <div class="line">% and one more with every element greater than the pivot</div>
 <div class="line">function split (arr : IntArr returns IntArr, IntArr, IntArr)</div>
 <div class="line">    for E in arr</div>
-<div class="line">      pivot := 1</div>
+<div class="line">      pivot := array_liml(arr)</div>
 <div class="line">      returns </div>
 <div class="line">        array of E when E &lt; arr[pivot]</div>
 <div class="line">        array of E when E = arr[pivot]</div>
@@ -157,15 +159,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">function Main (arr : IntArr returns IntArr)</div>
 <div class="line">    sort(arr)</div>
 <div class="line">end function</div>
-<div class="line"></div>
-<div class="line">% An array of random numbers to be used as test input</div>
-<div class="line">%   [1: 50 51 95 14 89 35 39 6 93 61 55 15 12 35 39 45 24 20 19 34 50 92 29 63 88 3 33 49 52 27 32 86 </div>
-<div class="line">%   73 97 100 49 37 86 87 76 91 13 18 3 42 69 75 42 12 48 53 58 8 57 70 97 11 1 74 71 78 57 28 100 46 9 </div>
-<div class="line">%   4  96 91 18 32 1 86 80 81 55 3 20 60 91 33 39 75 80 33 41 8 89 37 99 23 69 21 98 16 91 64 40 89 67]</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 14 2013 10:32:18 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 11 2013 15:37:34 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

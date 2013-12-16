@@ -21,8 +21,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
+   &#160;<span id="projectnumber">0.0</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -84,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2><a href="http://en.wikipedia.org/wiki/Dataflow_architecture">Dataflow</a></h2>
 <p>The dataflow architecture is an architecture that differs from the von Neumann architecture seen in most mainstream programming languages these days. The idea behind dataflow is that instructions are executed when all of the data they depend on is available.</p>
 <h2>IF1 and <a href="http://en.wikipedia.org/wiki/SISAL">Sisal</a></h2>
-<p>Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. sisalc, the sisal compiler, is compiled to the IF1 intermediate language, which represents the sisal source code as a dataflow graph.</p>
+<p>Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph.</p>
 <h2>Goal, revisited</h2>
 <blockquote class="doxtable">
 <p>The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.</p>
@@ -94,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 14 2013 10:32:18 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 11 2013 15:37:34 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
