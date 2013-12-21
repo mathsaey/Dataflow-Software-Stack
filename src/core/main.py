@@ -26,9 +26,9 @@
 
 import Queue
 
-# ------ #
-# Tokens #
-# ------ #
+# ------- #
+# Classes #
+# ------- #
 
 class Token(object):
 	def __init__(self, destination, port, datum):
@@ -36,21 +36,41 @@ class Token(object):
 		self.destination = destination
 		self.datum = datum
 		self.port = port
-	def getDestination(self): self.destination
-	def getDatum(self): self.datum
-	def getPort(self): self.port
-
-# ------------- #
-# Insctructions #
-# ------------- #
 
 class Instruction(object):
-
-	def __init__(self, operation, inputs, outputs):
+	def __init__(self, operation, inputs):
 		super(Instruction, self).__init__()
+		self.inputs = [None] * inputs
+		for idx in xrange(0, inputs):
+			self.inputs[idx] = Port(self, idx)
+
+	def gatherInput(self):
+		resLst = []
+		for el in self.inputs:
+			resLst += [el.token.datum]
+		return resLst
 
 	def execute(self):
-		self.operation(*input)
+		lst = self.gatherInput()
+		self.operation(*lst)
+
+class Port(object):
+	def __init__(self, instruction, idx):
+		super(Port, self).__init__()
+		self.instruction = instruction
+		self.token = None
+		self.idx = idx
+     
+	def __str__(self):
+		return "port " + str(self.idx) + " of instruction " + str(self.instruction)
+
+	def acceptToken(self, token):
+		print "Port:", self, "accepted input:", token
+		self.token = token
+
+	def isReady(self):
+		return self.token is not None
+
 
 # ------------------ #
 # Instruction Memory #
