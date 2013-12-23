@@ -26,6 +26,26 @@
 
 import Queue
 
+# ----- #
+# Token #
+# ----- #
+
+class Token(object):
+	def __init__(self, iKey, iPort, datum):
+		super(Token, self).__init__()
+		self.datum = datum
+		self.iPort = iPort
+		self.iKey = iKey
+
+	def __str__(self):
+		dest = str(self.iKey) + " (" + str(self.iPort) + ")"
+		summary = str(self.datum) + " | " + str(dest)
+		return "Token (" + summary + ")"
+
+	def send(self, destination):
+		print "Sending:", self, "to", destination
+		destination.acceptToken(self)
+
 # ---- #
 # Port #
 # ---- #
@@ -52,21 +72,23 @@ class Port(object):
 # ----------- #
 
 class Instruction(object):
-	def __init__(self, operation, inputs):
+	def __init__(self, operation, key, inputs):
 		super(Instruction, self).__init__()
 		self.operation = operation
-		self.destI = None
-		self.destP = None
+		self.nextI 	= None
+		self.nextP 	= None
+		self.key 	= key
+
 		self.inputs = [None] * inputs
 		for idx in xrange(0, inputs):
 			self.inputs[idx] = Port(self, idx)
 
 	def __str__(self):
-		return "Instruction: " + str(id(self))
+		return "Instruction: " + "'" + str(self.key) + "'"
 
-	def setDestination(self, instruction, port):
-		self.destI = instruction
-		self.destP = port 
+	def setNext(self, instruction, port):
+		self.nextI = instruction
+		self.nextP = port 
 
 	def isReady(self):
 		for el in self.inputs:
@@ -75,7 +97,7 @@ class Instruction(object):
     		return True
 
 	def acceptToken(self, token):
-		port = self.inputs[token.port]
+		port = self.inputs[token.iPort]
 		port.acceptToken(token)
 		if self.isReady(): self.execute()
 
@@ -86,7 +108,7 @@ class Instruction(object):
 		return resLst
 
 	def createToken(self, datum):
-		return Token(self.destI, self.destP, datum)
+		return Token(self.nextI, self.nextP, datum)
 
 	def execute(self):
 		lst = self.gatherInput()
@@ -94,38 +116,17 @@ class Instruction(object):
 		tok = self.createToken(res)
 		addToken(tok)
 
-# ----- #
-# Token #
-# ----- #
-
-class Token(object):
-	def __init__(self, instruction, port, datum):
-		super(Token, self).__init__()
-		self.instruction = instruction
-		self.datum = datum
-		self.port = port
-
-	def __str__(self):
-		dest = str(self.instruction) + " (" + str(self.port) + ")"
-		summary = str(self.datum) + " | " + str(dest)
-		return "Token (" + summary + ")"
-
-	def send(self):
-		print "Sending: ", self
-		self.instruction.acceptToken(self)
-
-
 # ------------------ #
 # Instruction Memory #
 # ------------------ #
 
 __INSTRUCTION_MEMORY__ 	= {}
 
-def addInstruction(key, instruction):
-	__INSTRUCTION_MEMORY__.update({key:instruction})
+def addInstruction(instruction):
+	__INSTRUCTION_MEMORY__.update({instruction.key:instruction})
 
 def fetchInstruction(key):
-	__INSTRUCTION_MEMORY__[key]
+	return __INSTRUCTION_MEMORY__[key]
 
 # ------- #
 # Runtime #
@@ -139,10 +140,17 @@ def addToken(token):
 def getToken():
 	return __TOKEN__QUEUE__.get()
 
+def sendToken(token):
+	if token.iKey is None: return
+
+	key = token.iKey
+	dst = fetchInstruction(key)
+	token.send(dst)
+
 def run():
 	 while True:
 	 	t = getToken()
-	 	t.send()
+	 	sendToken(t)
 
 # ---- #
 # Test #
@@ -155,13 +163,15 @@ def tOP(a,b):
 def dummy(*any):
 	pass
 
-inst1 = Instruction(tOP, 2)
-inst2 = Instruction(dummy, 1)
-inst1.setDestination(inst2, 0)
+inst1 = Instruction(tOP, "test instruction 1", 2)
+inst2 = Instruction(dummy, "end test instruction",1)
+inst1.setNext("end test instruction", 0)
 
+addInstruction(inst1)
+addInstruction(inst2)
 
-t1 = Token(inst1, 0, "top")
-t2 = Token(inst1, 1, "lel")
+t1 = Token("test instruction 1", 0, "top")
+t2 = Token("test instruction 1", 1, "lel")
 
 addToken(t1)
 addToken(t2)
