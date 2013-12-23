@@ -1,4 +1,4 @@
-# main.py
+# port.py
 # Mathijs Saey
 # dvm prototype
 
@@ -24,27 +24,23 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import instructions
-import runtime
-import token
+"""
+This file defines ports, input acceptors for instructions
+"""
 
+class Port(object):
+	def __init__(self, instruction, idx):
+		super(Port, self).__init__()
+		self.instruction = instruction
+		self.token = None
+		self.idx = idx
+     
+	def __str__(self):
+		return "Port " + str(self.idx) + " of instruction " + str(self.instruction)
 
-def tOP(a,b):
-	return a + b
+	def acceptToken(self, token):
+		print self, "accepted input:", token
+		self.token = token
 
-def dummy(*any):
-	pass
-
-
-k1 = instructions.createInstruction(tOP, 2)
-k2 = instructions.createInstruction(dummy, 1)
-instructions.getInstruction(k1).setNext(k2, 0)
-
-
-t1 = token.Token(k1, 0, "top")
-t2 = token.Token(k1, 1, "lel")
-
-runtime.addToken(t1)
-runtime.addToken(t2)
-
-runtime.run()
+	def isReady(self):
+		return self.token is not None

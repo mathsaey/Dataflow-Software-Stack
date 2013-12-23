@@ -1,4 +1,4 @@
-# main.py
+# runtime.py
 # Mathijs Saey
 # dvm prototype
 
@@ -24,27 +24,40 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+"""
+This file defines the runtime system of the dynamic prototype
+"""
+
+import Queue
 import instructions
-import runtime
-import token
 
+# ---------------- #
+# Public functions #
+# ---------------- #
 
-def tOP(a,b):
-	return a + b
+def addToken(token): pass
+def run(): pass
 
-def dummy(*any):
-	pass
+# ------- #
+# Runtime #
+# ------- #
 
+__TOKEN__QUEUE__ = Queue.Queue()
 
-k1 = instructions.createInstruction(tOP, 2)
-k2 = instructions.createInstruction(dummy, 1)
-instructions.getInstruction(k1).setNext(k2, 0)
+def addToken(token):
+	__TOKEN__QUEUE__.put(token)
 
+def getToken():
+	return __TOKEN__QUEUE__.get()
 
-t1 = token.Token(k1, 0, "top")
-t2 = token.Token(k1, 1, "lel")
+def sendToken(token):
+	if token.key is None: return
 
-runtime.addToken(t1)
-runtime.addToken(t2)
+	key = token.key
+	dst = instructions.getInstruction(key)
+	dst.acceptToken(token)
 
-runtime.run()
+def run():
+	 while True:
+	 	t = getToken()
+	 	sendToken(t)

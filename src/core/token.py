@@ -1,4 +1,4 @@
-# main.py
+# token.py
 # Mathijs Saey
 # dvm prototype
 
@@ -24,27 +24,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import instructions
-import runtime
-import token
+""" 
+This file defines tokens, elements that carry tagged data
+"""
 
+class Token(object):
+	def __init__(self, key, port, datum):
+		super(Token, self).__init__()
+		self.datum = datum
+		self.port = port
+		self.key = key
 
-def tOP(a,b):
-	return a + b
-
-def dummy(*any):
-	pass
-
-
-k1 = instructions.createInstruction(tOP, 2)
-k2 = instructions.createInstruction(dummy, 1)
-instructions.getInstruction(k1).setNext(k2, 0)
-
-
-t1 = token.Token(k1, 0, "top")
-t2 = token.Token(k1, 1, "lel")
-
-runtime.addToken(t1)
-runtime.addToken(t2)
-
-runtime.run()
+	def __str__(self):
+		dest = str(self.key) + " (" + str(self.port) + ")"
+		summary = str(self.datum) + " | " + str(dest)
+		return "Token (" + summary + ")"
