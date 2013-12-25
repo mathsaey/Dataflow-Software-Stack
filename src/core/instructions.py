@@ -28,7 +28,6 @@
 This file allows the user to create and retrieve instructions
 """
 
-import copy
 import port
 import token
 import runtime
