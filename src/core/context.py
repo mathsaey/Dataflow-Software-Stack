@@ -30,11 +30,18 @@ This file declares the context object, an object that can add context informatio
 
 __CURRENT__ID__ = 0
 
+# ---------------- #
+# Public functions #
+# ---------------- #
+
 def createContext():
 	global __CURRENT__ID__
 	__CURRENT__ID__ += 1
 	return Context(__CURRENT__ID__ -1)
 
+# -------------- #
+# Context Object #
+# -------------- #
 
 class Context(object):
 	def __init__(self, key):
