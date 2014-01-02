@@ -28,8 +28,8 @@
 This file defines the runtime system of the dynamic prototype
 """
 
-import Queue
 import instructions
+import queue
 
 # ---------------- #
 # Public functions #
@@ -42,7 +42,7 @@ def run(): pass
 # Runtime #
 # ------- #
 
-__TOKEN__QUEUE__ = Queue.Queue()
+__TOKEN__QUEUE__ = queue.Queue()
 
 def addToken(token):
 	__TOKEN__QUEUE__.put(token)

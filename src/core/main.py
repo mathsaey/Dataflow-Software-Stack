@@ -25,8 +25,9 @@
 # THE SOFTWARE.
 
 import instructions
+import context
 import runtime
-import token
+import tokens
 
 
 def tOP(a,b):
@@ -41,8 +42,8 @@ k2 = instructions.createInstruction(dummy, 1)
 instructions.getInstruction(k1).setNext(k2, 0)
 
 
-t1 = token.Token(k1, 0, "top")
-t2 = token.Token(k1, 1, "lel")
+t1 = tokens.Token(k1, 0, "top", context.createContext())
+t2 = tokens.Token(k1, 1, "lel", t1.context)
 
 runtime.addToken(t1)
 runtime.addToken(t2)

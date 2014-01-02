@@ -28,9 +28,9 @@
 This file allows the user to create and retrieve instructions
 """
 
-import port
-import token
+import tokens
 import runtime
+import context
 
 # ---------------- #
 # Public functions #
@@ -74,13 +74,11 @@ class Instruction(object):
 	def __init__(self, operation, key, inputs):
 		super(Instruction, self).__init__()
 		self.operation 	= operation
+		self.inputs		= inputs
+		self.tokens		= {}
 		self.nextPort	= None
 		self.nextKey 	= None
 		self.key 		= key
-
-		self.inputs = [None] * inputs
-		for idx in xrange(0, inputs):
-			self.inputs[idx] = port.Port(self, idx)
 
 	def __str__(self):
 		return "Instruction: " + "'" + str(self.key) + "'"
@@ -89,28 +87,39 @@ class Instruction(object):
 		self.nextPort 	= port
 		self.nextKey	= key
 
-	def isReady(self):
-		for el in self.inputs:
-			if (el is None) or not el.isReady():
-				return False
-    		return True
+	def isReady(self, context):
+		try:
+			arr = self.tokens[context]
+		except KeyError:
+			return False
+		else:
+			return arr.count(None) == 0
 
 	def acceptToken(self, token):
-		port = self.inputs[token.port]
-		port.acceptToken(token)
-		if self.isReady(): self.execute()
+		print(self, "accepting", token)
 
-	def gatherInput(self):
-		resLst = []
-		for el in self.inputs: 
-			resLst += [el.token.datum]
-		return resLst
+		cont = token.context
+		try:
+			arr = self.tokens[cont]
+			arr[token.port] = token
+		except KeyError:
+			arr = [None] * self.inputs
+			arr[token.port] = token
+			self.tokens.update({cont : arr})
+		finally:
+			if self.isReady(cont): 
+				self.execute(cont)
 
 	def createToken(self, datum):
-		return token.Token(self.nextKey, self.nextPort, datum)
+		return tokens.Token(
+			self.nextKey, 
+			self.nextPort, 
+			datum, 
+			context.createContext())
 
-	def execute(self):
-		lst = self.gatherInput()
-		res = self.operation(*lst)
+	def execute(self, context):
+		args = self.tokens[context]
+		args = map(lambda x : x.datum, args)
+		res = self.operation(*args)
 		tok = self.createToken(res)
 		runtime.addToken(tok)

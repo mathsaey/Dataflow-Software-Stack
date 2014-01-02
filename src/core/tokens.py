@@ -28,14 +28,18 @@
 This file defines tokens, elements that carry tagged data
 """
 
+import context
+
 class Token(object):
-	def __init__(self, key, port, datum):
+	def __init__(self, key, port, datum, context):
 		super(Token, self).__init__()
+		self.context = context
 		self.datum = datum
 		self.port = port
 		self.key = key
 
 	def __str__(self):
 		dest = str(self.key) + " (" + str(self.port) + ")"
-		summary = str(self.datum) + " | " + str(dest)
+		cont = "<" + str(self.context) + ">"
+		summary = str(self.datum) + " | " + str(dest) + " " + cont
 		return "Token (" + summary + ")"

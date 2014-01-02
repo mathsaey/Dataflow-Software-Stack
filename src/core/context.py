@@ -53,3 +53,6 @@ class Context(object):
 
 	def __eq__(self, other):
 		return other.key == self.key
+
+	def __hash__(self):
+		return self.key
