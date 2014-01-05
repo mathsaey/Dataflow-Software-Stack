@@ -96,8 +96,8 @@ class Instruction(object):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
 
-	def addDestination(self, key, port):
-		self.outputs += [(key, port)]
+	def addDestination(self, port, toKey, toPort):
+		self.outputs += [(toKey, toPort)]
 
 	def sendDatum(self, datum):
 		for o in self.outputs:

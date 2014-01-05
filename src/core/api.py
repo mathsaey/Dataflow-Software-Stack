@@ -27,6 +27,17 @@
 """
 This file collects all of the public functions offered by the core
 """
+import instructions
+import runtime
+import tokens
 
-from instructions 	import addOperationInstruction, addFunctionInstruction, addCallInstruction, getInstruction
-from runtime 		import run, addToken
+from instructions 	import addOperationInstruction, addFunctionInstruction, addCallInstruction
+from runtime 		import run
+
+def addLiteral(key, port, value):
+	t = tokens.LiteralToken(key, port, value)
+	runtime.addToken(t)
+
+def setDestination(srcKey, srcPort, dstKey, dstPort):
+	inst = instructions.getInstruction(srcKey)
+	inst.addDestination(srcPort, dstKey, dstPort)

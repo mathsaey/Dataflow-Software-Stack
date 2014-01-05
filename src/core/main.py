@@ -25,7 +25,6 @@
 # THE SOFTWARE.
 
 import api
-import tokens
 
 def tOP(a,b):
 	return a + b
@@ -36,13 +35,9 @@ def dummy(*any):
 
 k1 = api.addOperationInstruction(tOP, 2)
 k2 = api.addOperationInstruction(dummy, 1)
-api.getInstruction(k1).addDestination(k2, 0)
+api.setDestination(k1, 0, k2, 0)
 
-
-t1 = tokens.LiteralToken(k1, 0, "top")
-t2 = tokens.LiteralToken(k1, 1, "lel")
-
-api.addToken(t1)
-api.addToken(t2)
+api.addLiteral(k1, 0, "top")
+api.addLiteral(k1, 1, "kek")
 
 api.run()
