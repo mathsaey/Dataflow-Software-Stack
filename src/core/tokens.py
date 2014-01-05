@@ -28,8 +28,6 @@
 This file defines tokens, elements that carry tagged data
 """
 
-import context
-
 class Token(object):
 	def __init__(self, key, port, datum, context):
 		super(Token, self).__init__()

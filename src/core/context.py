@@ -45,7 +45,7 @@ def createContext():
 
 class Context(object):
 	def __init__(self, key):
-		super(Context, self).__init__()
+		super().__init__()
 		self.key = key
 
 	def __str__(self):

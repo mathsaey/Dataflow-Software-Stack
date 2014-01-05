@@ -71,34 +71,36 @@ def getInstruction(key):
 # ----------- #
 
 class Instruction(object):
-	def __init__(self, operation, key, inputs):
-		super(Instruction, self).__init__()
-		self.operation 	= operation
-		self.inputs		= inputs
-		self.tokens		= {}
-		self.nextPort	= None
-		self.nextKey 	= None
-		self.key 		= key
+	def __init__(self, key, inputs, outputs):
+		super().__init__()
+		self.key 			= key
+		self.tokens			= {}
+		self.inputs 		= inputs
+		self.outputs 		= outputs
+		self.destinations 	= [None] * self.outputs
 
 	def __str__(self):
-		return "Instruction: " + "'" + str(self.key) + "'"
+		name = self.__class__.__name__
+		return name + " " + "'" + str(self.key) + "'"
 
-	def setNext(self, key, port):
-		self.nextPort 	= port
-		self.nextKey	= key
+	def setNext(self, output, key, port):
+		self.destinations[output] = (key, port)
 
-	def isReady(self, context):
-		try:
-			arr = self.tokens[context]
-		except KeyError:
-			return False
-		else:
-			return arr.count(None) == 0
+	def sendToken(self):
+		pass
+
+	def createToken(self, datum):
+		return tokens.Token(
+			self.nextKey, 
+			self.nextPort, 
+			datum, 
+			#context.createContext())
+			0)
 
 	def acceptToken(self, token):
 		print(self, "accepting", token)
-
 		cont = token.context
+		
 		try:
 			arr = self.tokens[cont]
 			arr[token.port] = token
@@ -106,20 +108,61 @@ class Instruction(object):
 			arr = [None] * self.inputs
 			arr[token.port] = token
 			self.tokens.update({cont : arr})
-		finally:
-			if self.isReady(cont): 
-				self.execute(cont)
 
-	def createToken(self, datum):
-		return tokens.Token(
-			self.nextKey, 
-			self.nextPort, 
-			datum, 
-			context.createContext())
+	def isContextComplete(self, context):
+		try:
+			arr = self.tokens[context]
+		except KeyError:
+			return False
+		else:
+			return arr.count(None) == 0
+
+	def grabData(self, context):
+		lst = self.tokens[context]
+		return map(lambda x : x.datum, lst)
+
+# --------------------- #
+# Operation Instruction #
+# --------------------- #
+
+class OperationInstruction(Instruction):
+	def __init__(self, key, operation, inputs, outputs):
+		super().__init__(key, inputs, outputs)
+		self.operation = operation
+
+	def __str__(self):
+		str = super().__str__()
+		return "Operation " + str
+
+	def acceptToken(self, token):
+		super().acceptToken(self, token)
+		cont = token.context
+		if self.isContextComplete(cont):
+			pass
 
 	def execute(self, context):
-		args = self.tokens[context]
-		args = map(lambda x : x.datum, args)
-		res = self.operation(*args)
-		tok = self.createToken(res)
+		args 	= self.grabData(context)
+		res 	= self.operation(*args)
+		tok 	= self.createToken(res)
 		runtime.addToken(tok)
+
+# -------------------- #
+# Function Instruction #
+# -------------------- #
+
+class FunctionInstruction(Instruction):
+	def __init__(self, inputs, outputs):
+		super().__init__()
+	
+# ---------------- #
+# Call Instruction #
+# ---------------- #
+
+class CallInstruction(Instruction):
+	def __init__(self, inputs, outputs):
+		super().__init__()
+		self.inputKey = None
+		self.outputKey = None
+
+	def setTarget(self, key):
+		self.key = key	
