@@ -37,7 +37,10 @@ import context
 # ---------------- #
 
 """ Creates an instruction and returns it's key """
-def createInstruction(operation, inputs): pass
+def addOperationInstruction(operation, inputs): pass
+def addFunctionInstruction(inputs, outputs): pass
+def addCallInstruction(inputs, outputs): pass
+
 """ Retrieve an instruction with a given key """
 def getInstruction(key): pass
 
@@ -58,44 +61,48 @@ def getKey():
 
 __INSTRUCTION_MEMORY__ 	= {}
 
-def createInstruction(operation, inputs):
-	inst = Instruction(operation, getKey(), inputs)
-	__INSTRUCTION_MEMORY__.update({inst.key:inst})
-	return inst.key
-
 def getInstruction(key):
 	return __INSTRUCTION_MEMORY__[key]
+
+def createInstruction(constructor, args):
+	key 	= getKey()
+	args	= [key] + args
+	inst	= constructor(*args)
+	__INSTRUCTION_MEMORY__.update({key:inst})
+	return key
+
+def addOperationInstruction(operation, inputs):
+	return createInstruction(OperationInstruction, [operation, inputs])
+def addFunctionInstruction(inputs, outputs):
+	return createInstruction(FunctionInstruction, [inputs, outputs])
+def addCallInstruction(inputs, outputs):
+	return createInstruction(CallInstruction, [inputs, outputs])
 
 # ----------- #
 # Instruction #
 # ----------- #
 
 class Instruction(object):
-	def __init__(self, key, inputs, outputs):
+	def __init__(self, key, inputs):
 		super().__init__()
 		self.key 			= key
 		self.tokens			= {}
 		self.inputs 		= inputs
-		self.outputs 		= outputs
-		self.destinations 	= [None] * self.outputs
+		self.outputs 		= []
 
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
 
-	def setNext(self, output, key, port):
-		self.destinations[output] = (key, port)
+	def addDestination(self, key, port):
+		self.outputs += [(key, port)]
 
-	def sendToken(self):
-		pass
-
-	def createToken(self, datum):
-		return tokens.Token(
-			self.nextKey, 
-			self.nextPort, 
-			datum, 
-			#context.createContext())
-			0)
+	def sendDatum(self, datum):
+		for o in self.outputs:
+			key 	= o[0]
+			port 	= o[1]
+			token 	= tokens.Token(key, port, datum, 0)
+			runtime.addToken(token)
 
 	def acceptToken(self, token):
 		print(self, "accepting", token)
@@ -126,41 +133,36 @@ class Instruction(object):
 # --------------------- #
 
 class OperationInstruction(Instruction):
-	def __init__(self, key, operation, inputs, outputs):
-		super().__init__(key, inputs, outputs)
+	def __init__(self, key, operation, inputs):
+		super().__init__(key, inputs)
 		self.operation = operation
-
-	def __str__(self):
-		str = super().__str__()
-		return "Operation " + str
 
 	def acceptToken(self, token):
 		super().acceptToken(self, token)
 		cont = token.context
 		if self.isContextComplete(cont):
-			pass
+			self.execute(cont)
 
 	def execute(self, context):
 		args 	= self.grabData(context)
 		res 	= self.operation(*args)
-		tok 	= self.createToken(res)
-		runtime.addToken(tok)
+		self.sendDatum(res)
 
 # -------------------- #
 # Function Instruction #
 # -------------------- #
 
 class FunctionInstruction(Instruction):
-	def __init__(self, inputs, outputs):
-		super().__init__()
+	def __init__(self, key, inputs, outputs):
+		super().__init__(key, inputs)
 	
 # ---------------- #
 # Call Instruction #
 # ---------------- #
 
 class CallInstruction(Instruction):
-	def __init__(self, inputs, outputs):
-		super().__init__()
+	def __init__(self, key, inputs, outputs):
+		super().__init__(key, inputs)
 		self.inputKey = None
 		self.outputKey = None
 
