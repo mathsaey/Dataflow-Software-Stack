@@ -30,7 +30,7 @@ This file defines tokens, elements that carry tagged data
 
 class Token(object):
 	def __init__(self, key, port, datum, context):
-		super(Token, self).__init__()
+		super().__init__()
 		self.context = context
 		self.datum = datum
 		self.port = port
@@ -41,3 +41,10 @@ class Token(object):
 		cont = "<" + str(self.context) + ">"
 		summary = str(self.datum) + " | " + str(dest) + " " + cont
 		return "Token (" + summary + ")"
+
+	def isLiteral(self):
+		return self.context == "lit"
+
+class LiteralToken(Token):
+	def __init__(self, key, port, datum):
+		super().__init__(key, port, datum, "lit")

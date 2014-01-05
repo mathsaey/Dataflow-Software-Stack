@@ -28,6 +28,7 @@
 This file allows the user to create and retrieve instructions
 """
 
+import copy
 import tokens
 import runtime
 import context
@@ -89,6 +90,7 @@ class Instruction(object):
 		self.tokens			= {}
 		self.inputs 		= inputs
 		self.outputs 		= []
+		self.literals		= [None] * self.inputs
 
 	def __str__(self):
 		name = self.__class__.__name__
@@ -107,12 +109,16 @@ class Instruction(object):
 	def acceptToken(self, token):
 		print(self, "accepting", token)
 		cont = token.context
-		
+
+		if token.isLiteral():
+			self.acceptLiteral(token)
+			return
+
 		try:
 			arr = self.tokens[cont]
 			arr[token.port] = token
 		except KeyError:
-			arr = [None] * self.inputs
+			arr = copy.copy(self.literals)
 			arr[token.port] = token
 			self.tokens.update({cont : arr})
 
@@ -124,9 +130,9 @@ class Instruction(object):
 		else:
 			return arr.count(None) == 0
 
-	def grabData(self, context):
-		lst = self.tokens[context]
-		return map(lambda x : x.datum, lst)
+	def acceptLiteral(self, literal):
+		self.literals[literal.port] = literal
+
 
 # --------------------- #
 # Operation Instruction #
@@ -138,15 +144,28 @@ class OperationInstruction(Instruction):
 		self.operation = operation
 
 	def acceptToken(self, token):
-		super().acceptToken(self, token)
+		super().acceptToken(token)
 		cont = token.context
 		if self.isContextComplete(cont):
-			self.execute(cont)
+			self.executeContext(cont)
 
-	def execute(self, context):
-		args 	= self.grabData(context)
-		res 	= self.operation(*args)
-		self.sendDatum(res)
+	def acceptLiteral(self, literal):
+		super().acceptLiteral(literal)
+		if self.literals.count(None) == 0:
+			self.executeLiterals()
+
+	def execute(self, lst):
+		print(self, "executing")
+		args = map(lambda x : x.datum, lst)
+		res = self.operation(*args)
+		self.sendDatum(res)		
+
+	def executeContext(self, context):
+		lst = self.tokens[context]
+		self.execute(lst)
+
+	def executeLiterals(self):
+		self.execute(self.literals)
 
 # -------------------- #
 # Function Instruction #

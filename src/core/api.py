@@ -1,4 +1,4 @@
-# runtime.py
+# api.py
 # Mathijs Saey
 # dvm prototype
 
@@ -25,40 +25,8 @@
 # THE SOFTWARE.
 
 """
-This file defines the runtime system of the dynamic prototype
+This file collects all of the public functions offered by the core
 """
 
-import instructions
-import queue
-
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def addToken(token): pass
-def run(): pass
-
-# ------- #
-# Runtime #
-# ------- #
-
-__TOKEN__QUEUE__ = queue.Queue()
-
-def addToken(token):
-	__TOKEN__QUEUE__.put(token)
-
-def getToken():
-	return __TOKEN__QUEUE__.get()
-
-def sendToken(token):
-	if token.key is None: return
-
-	key = token.key
-	dst = instructions.getInstruction(key)
-	dst.acceptToken(token)
-
-def run():
-	 while True:
-	 	t = getToken()
-	 	sendToken(t)
-
+from instructions 	import addOperationInstruction, addFunctionInstruction, addCallInstruction, getInstruction
+from runtime 		import run, addToken

@@ -24,11 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import instructions
-import context
-import runtime
+import api
 import tokens
-
 
 def tOP(a,b):
 	return a + b
@@ -37,15 +34,15 @@ def dummy(*any):
 	pass
 
 
-k1 = instructions.createInstruction(tOP, 2)
-k2 = instructions.createInstruction(dummy, 1)
-instructions.getInstruction(k1).setNext(k2, 0)
+k1 = api.addOperationInstruction(tOP, 2)
+k2 = api.addOperationInstruction(dummy, 1)
+api.getInstruction(k1).addDestination(k2, 0)
 
 
-t1 = tokens.Token(k1, 0, "top", context.createContext())
-t2 = tokens.Token(k1, 1, "lel", t1.context)
+t1 = tokens.LiteralToken(k1, 0, "top")
+t2 = tokens.LiteralToken(k1, 1, "lel")
 
-runtime.addToken(t1)
-runtime.addToken(t2)
+api.addToken(t1)
+api.addToken(t2)
 
-runtime.run()
+api.run()
