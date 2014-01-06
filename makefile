@@ -18,8 +18,9 @@ INPUT_DIR 	= src/
 OUTPUT-DIR 	= obj/
 
 # Pattern matching
-SOURCE_FILES = $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
-OBJECT_FILES = $(foreach file, $(SOURCE_FILES), $(OUTPUT-DIR)$(notdir $(file:%.cpp=%.o)))
+SOURCE_FILES 	= $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
+OBJECT_FILES 	= $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o))
+OBJECT_DIRS		= $(sort $(dir $(OBJECT_FILES)))
 
 ###########
 # Targets #
@@ -27,21 +28,20 @@ OBJECT_FILES = $(foreach file, $(SOURCE_FILES), $(OUTPUT-DIR)$(notdir $(file:%.c
 
 # Compile and link, default option
 main: compile link
+	
 # Compile, link and run
 run: main
 	./$(EXECUTABLE)
-# Clean before compiling
-flush: clean main
 
-#Create a .o file for every cpp file (usefull when combining multiple files)
+#Create a .o file for every cpp file
 compile: directory $(OBJECT_FILES)
 
 # Create the executable
 link: $(EXECUTABLE)
 
-#Create the directory if it doesn't exist
+#Create required directories
 directory:
-	@ test -d $(OUTPUT-DIR) || mkdir $(OUTPUT-DIR)
+	@ mkdir -p $(OBJECT_DIRS)
 
 # Run the Documentation tool
 doc: 
@@ -50,8 +50,9 @@ doc:
 
 # Removes all output
 clean: 
-	rm $(OUTPUT-DIR)*
-	rm $(EXECUTABLE)
+	- rm $(EXECUTABLE)
+	- rm $(OBJECT_FILES)
+	- rm -r $(OUTPUT-DIR)
 
 # Phony targets (targets that don't depend on a file)
 .PHONY: clean
@@ -62,12 +63,10 @@ clean:
 # Dependencies #
 ################
 
-# Object files dependency
+# Object files
 $(OUTPUT-DIR)%.o : $(INPUT_DIR)%.cpp
 	$(COMPILE_INVOCATION) -c $< -o $@
-$(OUTPUT-DIR)%.o : $(INPUT_DIR)**/%.cpp
-	$(COMPILE_INVOCATION) -c $< -o $@
 
-# Executable dependency
+# Executable
 $(EXECUTABLE) : $(OBJECT_FILES)
 	$(LINK_INVOCATION) $(OBJECT_FILES) -o $(EXECUTABLE)
