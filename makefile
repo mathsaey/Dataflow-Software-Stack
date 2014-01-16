@@ -49,6 +49,10 @@ compile: directory $(OBJECT_FILES)
 # Create the executable
 link: $(EXECUTABLE)
 
+# Static analysiss
+analyse:
+	clang -cc1 -analyze $(SOURCE_FILES)
+
 #Create required directories
 directory:
 	@ mkdir -p $(OBJECT_DIRS)
@@ -65,9 +69,9 @@ clean:
 	- rm -r $(OUTPUT-DIR)
 
 # Phony targets (targets that don't depend on a file)
+.PHONY: doc
 .PHONY: clean
 .PHONY: analyze
-.PHONY: documentation
 
 ################
 # Dependencies #

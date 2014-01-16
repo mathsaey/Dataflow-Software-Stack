@@ -6,15 +6,12 @@
 //  Copyright (c) 2013 Vrije Universiteit Brussel. All rights reserved.
 //
 
-#define BOOST_LOG_DYN_LINK  //Has to be defined for boost/log to work
 
 #include <iostream>
-#include <boost/log/trivial.hpp>
+#include "log.h"
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
     std::cout << "Hello, World!\n";
     return 0;
 }
