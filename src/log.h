@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Vrije Universiteit Brussel. All rights reserved.
 //
 
-////////////////////////////////////////////////////////////////////////////////
 /// \file log.h
 /// \author Mathijs Saey
 ///
@@ -14,7 +13,9 @@
 /// 
 /// This file imports the various headers for boost/log.
 /// It also declares the the severity levels and type 
-/// necessary to create logger instances
+/// necessary to create logger instances.
+///
+/// This file is also the location for any global logger configuration.
 /// 
 /// In order to create a global logger, use the following code.
 ///
@@ -27,7 +28,9 @@
 ///
 /// \code{.cpp}
 /// BOOST_LOG_SEV(loggerName::get(), info) << "Hello, world!"; \endcode
-////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __DVM_LOG_H_
+#define __DVM_LOG_H_
 
 #define BOOST_LOG_DYN_LINK
 
@@ -50,3 +53,5 @@ typedef boost::log::sources::severity_channel_logger_mt<
     severity, 
     std::string        
 > DVMLogger;
+
+#endif
