@@ -3,21 +3,31 @@
 #############
 
 # Compiler
-COMPILER = clang
+COMPILER = g++
 COMPILE_INVOCATION = $(COMPILER) -std=c++11
-LINK_INVOCATION = $(COMPILER) -lstdc++ 
+
+# Linker
+STDLIB = libc++
+LINK_INVOCATION = \
+	$(COMPILER) -stdlib=$(STDLIB) \
+	-I $(BOOST_HEADER_PATH) -L$(BOOST_LIB_PATH) $(BOOST_LIBS)
+
+# Boost configuration
+BOOST_LIBS = -lboost_log-mt
+BOOST_LIB_PATH = /usr/local/include/
+BOOST_HEADER_PATH = /usr/local/include/boost/
 
 # Documentation 
 DOCUMENTATION 			= doxygen
 DOCUMENTATION_DIR 		= documentation
 DOCUMENTATION_CONFIG 	= DoxygenConfig
 
-# Locations
+# In and output Folders
 EXECUTABLE 	= dvm
 INPUT_DIR 	= src/
 OUTPUT-DIR 	= obj/
 
-# Pattern matching
+# Map in and output to paths
 SOURCE_FILES 	= $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
 OBJECT_FILES 	= $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o))
 OBJECT_DIRS		= $(sort $(dir $(OBJECT_FILES)))
