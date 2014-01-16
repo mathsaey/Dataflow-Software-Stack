@@ -1,20 +1,8 @@
-###################
-# Generated files #
-###################
+##########
+# Docset #
+##########
 
-bin/
-dvm
-
-# Editor files #
-
-*.sublime-workspace
-*.xcodeproj/
-
-#################
-# Documentation #
-#################
-
-documentation/
+*.docset
 
 ############
 # OS Files #
