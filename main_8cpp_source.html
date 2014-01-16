@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>DVM: src/log.h Source File</title>
+<title>DVM: src/main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,10 +49,10 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">log.h</div>  </div>
+<div class="title">main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="log_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// log.h</span></div>
+<a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// main.cpp</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// DVM</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Mathijs Saey</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
@@ -78,36 +78,16 @@
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// THE SOFTWARE.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifndef __DVM_LOG_H__</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DVM_LOG_H__</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define BOOST_LOG_DYN_LINK</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;boost/log/core.hpp&gt;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;boost/log/trivial.hpp&gt;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &lt;boost/log/expressions.hpp&gt;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;boost/log/sources/global_logger_storage.hpp&gt;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;boost/log/sources/severity_channel_logger.hpp&gt;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887">   64</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887">DVMLogLevel</a> {</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4">   65</a></span>&#160;    <a class="code" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4">info</a>,       </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492">   66</a></span>&#160;    <a class="code" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492">warning</a>,    </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed">   67</a></span>&#160;    <a class="code" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed">error</a>       </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">typedef</span> boost::log::sources::severity_channel_logger_mt&lt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887">DVMLogLevel</a>, </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string        </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="log_8h.html#a374d75aae5a33e7ab0e81b82ef9836dc">   76</a></span>&#160;&gt; <a class="code" href="log_8h.html#a374d75aae5a33e7ab0e81b82ef9836dc">DVMLogger</a>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="log_8h_html_a374d75aae5a33e7ab0e81b82ef9836dc"><div class="ttname"><a href="log_8h.html#a374d75aae5a33e7ab0e81b82ef9836dc">DVMLogger</a></div><div class="ttdeci">boost::log::sources::severity_channel_logger_mt&lt; DVMLogLevel, std::string &gt; DVMLogger</div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00076">log.h:76</a></div></div>
-<div class="ttc" id="log_8h_html_ada6f0a733bef12d00b2bc0824fa54887"><div class="ttname"><a href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887">DVMLogLevel</a></div><div class="ttdeci">DVMLogLevel</div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00064">log.h:64</a></div></div>
-<div class="ttc" id="log_8h_html_ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492"><div class="ttname"><a href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492">warning</a></div><div class="ttdoc">Signals warning. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00066">log.h:66</a></div></div>
-<div class="ttc" id="log_8h_html_ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4"><div class="ttname"><a href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4">info</a></div><div class="ttdoc">Signals information. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00065">log.h:65</a></div></div>
-<div class="ttc" id="log_8h_html_ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed"><div class="ttname"><a href="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed">error</a></div><div class="ttdoc">Signals error. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00067">log.h:67</a></div></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">log.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> * argv[])</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Hello, World!\n&quot;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="ttc" id="log_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div><div class="ttdoc">Contains boost log configuration. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

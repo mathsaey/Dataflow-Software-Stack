@@ -7,8 +7,7 @@
       <Type>tdef</Type>
     </TokenIdentifier>
     <Path>log_8h.html</Path>
-    <Anchor>ad4fe916cea850c862d493f59f08e5879</Anchor>
-    <Abstract>Type of the DVM logger. </Abstract>
+    <Anchor>a374d75aae5a33e7ab0e81b82ef9836dc</Anchor>
     <DeclaredIn>log.h</DeclaredIn>
   </Token>
   <Token>
@@ -18,7 +17,7 @@
       <Type>econst</Type>
     </TokenIdentifier>
     <Path>log_8h.html</Path>
-    <Anchor>ac43d617574d9fb283e14222f57084270aa4abb266e72efba828327b605b2ab0f4</Anchor>
+    <Anchor>ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4</Anchor>
     <Abstract>Signals information. </Abstract>
     <DeclaredIn>log.h</DeclaredIn>
   </Token>
@@ -29,7 +28,7 @@
       <Type>econst</Type>
     </TokenIdentifier>
     <Path>log_8h.html</Path>
-    <Anchor>ac43d617574d9fb283e14222f57084270a8de9aef05fc85e519a0cfce33573f492</Anchor>
+    <Anchor>ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492</Anchor>
     <Abstract>Signals warning. </Abstract>
     <DeclaredIn>log.h</DeclaredIn>
   </Token>
@@ -40,7 +39,7 @@
       <Type>econst</Type>
     </TokenIdentifier>
     <Path>log_8h.html</Path>
-    <Anchor>ac43d617574d9fb283e14222f57084270ad606e435413ea0944dd00d49e901e4ed</Anchor>
+    <Anchor>ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed</Anchor>
     <Abstract>Signals error. </Abstract>
     <DeclaredIn>log.h</DeclaredIn>
   </Token>
@@ -78,197 +77,5 @@
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
     <Path>md__r_e_a_d_m_e.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>core::Node</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Node</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a327cb611fb189d5252b6026917c226b7</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Node</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>ad3815f8afcd9f21b50b935ea3396bfb9</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Node</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a63b4d302f2d5459a25d15c375dd3ca73</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>operator=</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>aefb1da11b9ddf052d8940d6637cbc0c9</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addOutput</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a9d7f4c2bbc6adb8dea3d93ef77f9ab54</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>acceptToken</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a54203e5d9a16ad6dd9fc8ccf70064af6</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getChildren</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a4bdef23ee2e31c88ea7faadde086ca3d</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Node</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>ae117f4bba6270bc994d48fd38b7a1007</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>execute</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a6890991303fcc6c9b2b3dec678c8b5db</Anchor>
-    <DeclaredIn>node.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>_treshold</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>aaf2c47b915eca8128054368d4142c4a1</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>_executed</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a3856299264f7cc5223f5019d0bfa2bbb</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>_input</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a1a3fe957e4b27519b81ba657f678e78b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>_output</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>core::Node</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_node.html</Path>
-    <Anchor>a4551418fe5548279ce9aece1bc62716b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>core::Token</Name>
-      <APILanguage>c</APILanguage>
-      <Type>cl</Type>
-      <Scope>core::Token</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_token.html</Path>
-    <DeclaredIn>token.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Token</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Token</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_token.html</Path>
-    <Anchor>aa3c5868ba4115f3189df6b2ac5b36f39</Anchor>
-    <DeclaredIn>token.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Token</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Token</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_token.html</Path>
-    <Anchor>a28857fe5c15e75db89ef881dd5a90bea</Anchor>
-    <DeclaredIn>token.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>operator=</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>instm</Type>
-      <Scope>core::Token</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1_token.html</Path>
-    <Anchor>a5ca1b9dcf1082d68cc167791bd072eec</Anchor>
-    <DeclaredIn>token.h</DeclaredIn>
   </Token>
 </Tokens>

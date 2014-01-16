@@ -84,138 +84,6 @@
         <Path>md__r_e_a_d_m_e.html</Path>
        </Node>
        <Node>
-        <Name>Classes</Name>
-        <Path></Path>
-        <Subnodes>
-         <Node>
-          <Name>Class List</Name>
-          <Path>annotated.html</Path>
-          <Subnodes>
-           <Node>
-            <Name>core</Name>
-            <Path></Path>
-            <Subnodes>
-             <Node>
-              <Name>Node</Name>
-              <Path>classcore_1_1_node.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>Node</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a327cb611fb189d5252b6026917c226b7</Anchor>
-               </Node>
-               <Node>
-                <Name>Node</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>ad3815f8afcd9f21b50b935ea3396bfb9</Anchor>
-               </Node>
-               <Node>
-                <Name>Node</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a63b4d302f2d5459a25d15c375dd3ca73</Anchor>
-               </Node>
-               <Node>
-                <Name>Node</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>ae117f4bba6270bc994d48fd38b7a1007</Anchor>
-               </Node>
-               <Node>
-                <Name>operator=</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>aefb1da11b9ddf052d8940d6637cbc0c9</Anchor>
-               </Node>
-               <Node>
-                <Name>addOutput</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a9d7f4c2bbc6adb8dea3d93ef77f9ab54</Anchor>
-               </Node>
-               <Node>
-                <Name>acceptToken</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a54203e5d9a16ad6dd9fc8ccf70064af6</Anchor>
-               </Node>
-               <Node>
-                <Name>getChildren</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a4bdef23ee2e31c88ea7faadde086ca3d</Anchor>
-               </Node>
-               <Node>
-                <Name>execute</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a6890991303fcc6c9b2b3dec678c8b5db</Anchor>
-               </Node>
-               <Node>
-                <Name>_treshold</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>aaf2c47b915eca8128054368d4142c4a1</Anchor>
-               </Node>
-               <Node>
-                <Name>_executed</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a3856299264f7cc5223f5019d0bfa2bbb</Anchor>
-               </Node>
-               <Node>
-                <Name>_input</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a1a3fe957e4b27519b81ba657f678e78b</Anchor>
-               </Node>
-               <Node>
-                <Name>_output</Name>
-                <Path>classcore_1_1_node.html</Path>
-                <Anchor>a4551418fe5548279ce9aece1bc62716b</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>Token</Name>
-              <Path>classcore_1_1_token.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>Token</Name>
-                <Path>classcore_1_1_token.html</Path>
-                <Anchor>aa3c5868ba4115f3189df6b2ac5b36f39</Anchor>
-               </Node>
-               <Node>
-                <Name>Token</Name>
-                <Path>classcore_1_1_token.html</Path>
-                <Anchor>a28857fe5c15e75db89ef881dd5a90bea</Anchor>
-               </Node>
-               <Node>
-                <Name>operator=</Name>
-                <Path>classcore_1_1_token.html</Path>
-                <Anchor>a5ca1b9dcf1082d68cc167791bd072eec</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-            </Subnodes>
-           </Node>
-          </Subnodes>
-         </Node>
-         <Node>
-          <Name>Class Index</Name>
-          <Path>classes.html</Path>
-         </Node>
-         <Node>
-          <Name>Class Members</Name>
-          <Path>functions.html</Path>
-          <Subnodes>
-           <Node>
-            <Name>All</Name>
-            <Path>functions.html</Path>
-           </Node>
-           <Node>
-            <Name>Functions</Name>
-            <Path>functions_func.html</Path>
-           </Node>
-           <Node>
-            <Name>Variables</Name>
-            <Path>functions_vars.html</Path>
-           </Node>
-          </Subnodes>
-         </Node>
-        </Subnodes>
-       </Node>
-       <Node>
         <Name>Files</Name>
         <Path></Path>
         <Subnodes>
@@ -228,20 +96,6 @@
             <Path>dir_68267d1309a1af8e8297ef4c3efbcdba.html</Path>
             <Subnodes>
              <Node>
-              <Name>graph</Name>
-              <Path>dir_d182250f0c231765fc862e69db210731.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>node.h</Name>
-                <Path>node_8h_source.html</Path>
-               </Node>
-               <Node>
-                <Name>token.h</Name>
-                <Path>token_8h_source.html</Path>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
               <Name>log.h</Name>
               <Path>log_8h.html</Path>
               <Subnodes>
@@ -253,29 +107,40 @@
                <Node>
                 <Name>DVMLogger</Name>
                 <Path>log_8h.html</Path>
-                <Anchor>ad4fe916cea850c862d493f59f08e5879</Anchor>
+                <Anchor>a374d75aae5a33e7ab0e81b82ef9836dc</Anchor>
                </Node>
                <Node>
-                <Name>severity</Name>
+                <Name>DVMLogLevel</Name>
                 <Path>log_8h.html</Path>
-                <Anchor>ac43d617574d9fb283e14222f57084270</Anchor>
+                <Anchor>ada6f0a733bef12d00b2bc0824fa54887</Anchor>
                 <Subnodes>
                  <Node>
                   <Name>info</Name>
                   <Path>log_8h.html</Path>
-                  <Anchor>ac43d617574d9fb283e14222f57084270aa4abb266e72efba828327b605b2ab0f4</Anchor>
+                  <Anchor>ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4</Anchor>
                  </Node>
                  <Node>
                   <Name>warning</Name>
                   <Path>log_8h.html</Path>
-                  <Anchor>ac43d617574d9fb283e14222f57084270a8de9aef05fc85e519a0cfce33573f492</Anchor>
+                  <Anchor>ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492</Anchor>
                  </Node>
                  <Node>
                   <Name>error</Name>
                   <Path>log_8h.html</Path>
-                  <Anchor>ac43d617574d9fb283e14222f57084270ad606e435413ea0944dd00d49e901e4ed</Anchor>
+                  <Anchor>ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed</Anchor>
                  </Node>
                 </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>main.cpp</Name>
+              <Path>main_8cpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>main</Name>
+                <Path>main_8cpp.html</Path>
+                <Anchor>ac0f2228420376f4db7e1274f2b41667c</Anchor>
                </Node>
               </Subnodes>
              </Node>
