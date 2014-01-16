@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,6 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcore_1_1_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">core::Node Class Reference</div>  </div>
@@ -116,6 +119,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a54203e5d9a16ad6dd9fc8ccf70064af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bdef23ee2e31c88ea7faadde086ca3d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classcore_1_1_node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#a4bdef23ee2e31c88ea7faadde086ca3d">getChildren</a> ()</td></tr>
 <tr class="separator:a4bdef23ee2e31c88ea7faadde086ca3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae117f4bba6270bc994d48fd38b7a1007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#ae117f4bba6270bc994d48fd38b7a1007">Node</a> ()</td></tr>
+<tr class="separator:ae117f4bba6270bc994d48fd38b7a1007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6890991303fcc6c9b2b3dec678c8b5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#a6890991303fcc6c9b2b3dec678c8b5db">execute</a> ()</td></tr>
+<tr class="separator:a6890991303fcc6c9b2b3dec678c8b5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaf2c47b915eca8128054368d4142c4a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#aaf2c47b915eca8128054368d4142c4a1">_treshold</a></td></tr>
+<tr class="separator:aaf2c47b915eca8128054368d4142c4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3856299264f7cc5223f5019d0bfa2bbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#a3856299264f7cc5223f5019d0bfa2bbb">_executed</a></td></tr>
+<tr class="separator:a3856299264f7cc5223f5019d0bfa2bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3fe957e4b27519b81ba657f678e78b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcore_1_1_token.html">Token</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#a1a3fe957e4b27519b81ba657f678e78b">_input</a></td></tr>
+<tr class="separator:a1a3fe957e4b27519b81ba657f678e78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4551418fe5548279ce9aece1bc62716b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcore_1_1_node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1_node.html#a4551418fe5548279ce9aece1bc62716b">_output</a></td></tr>
+<tr class="separator:a4551418fe5548279ce9aece1bc62716b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents a node in a dataflow graph. A node represents a single operation on an arbitrary amount of input data.</p>
@@ -226,6 +247,30 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae117f4bba6270bc994d48fd38b7a1007"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">core::Node::Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default constructor. Declared private to avoid default implementation. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aefb1da11b9ddf052d8940d6637cbc0c9"></a>
 <div class="memitem">
@@ -314,10 +359,119 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6890991303fcc6c9b2b3dec678c8b5db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::execute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consume all the input tokens, execute the operation and send the result to the output. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aaf2c47b915eca8128054368d4142c4a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int core::Node::_treshold</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Amount of tokens the node needs to activate </p>
+
+</div>
+</div>
+<a class="anchor" id="a3856299264f7cc5223f5019d0bfa2bbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool core::Node::_executed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Keeps track of wether this node executed </p>
+
+</div>
+</div>
+<a class="anchor" id="a1a3fe957e4b27519b81ba657f678e78b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classcore_1_1_token.html">Token</a> *&gt; core::Node::_input</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Collection of input tokens </p>
+
+</div>
+</div>
+<a class="anchor" id="a4551418fe5548279ce9aece1bc62716b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classcore_1_1_node.html">Node</a> *&gt; core::Node::_output</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nodes that are connected to this node </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 5 2014 03:57:56 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 16 2014 15:39:53 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

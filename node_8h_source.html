@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,12 +61,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,16 +108,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>core {</div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcore_1_1_node.html">   28</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcore_1_1_node.html">Node</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">int</span> _treshold;                      </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> _executed;                     </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::vector&lt;Token *&gt; _input;  </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt;Node *&gt; _output;  </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classcore_1_1_node.html#aaf2c47b915eca8128054368d4142c4a1">   30</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classcore_1_1_node.html#aaf2c47b915eca8128054368d4142c4a1">_treshold</a>;                      </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classcore_1_1_node.html#a3856299264f7cc5223f5019d0bfa2bbb">   31</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classcore_1_1_node.html#a3856299264f7cc5223f5019d0bfa2bbb">_executed</a>;                     </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcore_1_1_node.html#a1a3fe957e4b27519b81ba657f678e78b">   33</a></span>&#160;        std::vector&lt;Token *&gt; <a class="code" href="classcore_1_1_node.html#a1a3fe957e4b27519b81ba657f678e78b">_input</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classcore_1_1_node.html#a4551418fe5548279ce9aece1bc62716b">   34</a></span>&#160;        std::vector&lt;Node *&gt; <a class="code" href="classcore_1_1_node.html#a4551418fe5548279ce9aece1bc62716b">_output</a>;  </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html">Node</a>(<span class="keyword">const</span> <a class="code" href="classcore_1_1_node.html">Node</a> &amp;other);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html#ae117f4bba6270bc994d48fd38b7a1007">Node</a>(<span class="keyword">const</span> <a class="code" href="classcore_1_1_node.html">Node</a> &amp;other);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html">Node</a>(<span class="keywordtype">int</span> treshold);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html#ae117f4bba6270bc994d48fd38b7a1007">Node</a>(<span class="keywordtype">int</span> treshold);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html">Node</a>(<span class="keywordtype">int</span> treshold, std::vector&lt;Node *&gt; &amp;output);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html#ae117f4bba6270bc994d48fd38b7a1007">Node</a>(<span class="keywordtype">int</span> treshold, std::vector&lt;Node *&gt; &amp;output);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classcore_1_1_node.html">Node</a>&amp; <a class="code" href="classcore_1_1_node.html#aefb1da11b9ddf052d8940d6637cbc0c9">operator= </a>(<span class="keyword">const</span> <a class="code" href="classcore_1_1_node.html">Node</a>&amp; rhs);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        </div>
@@ -121,23 +128,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">const</span> std::vector&lt;Node *&gt; <a class="code" href="classcore_1_1_node.html#a4bdef23ee2e31c88ea7faadde086ca3d">getChildren</a>();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html">Node</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcore_1_1_node.html#ae117f4bba6270bc994d48fd38b7a1007">Node</a>();</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> execute();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcore_1_1_node.html#a6890991303fcc6c9b2b3dec678c8b5db">execute</a>();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    };</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classcore_1_1_node_html_a9d7f4c2bbc6adb8dea3d93ef77f9ab54"><div class="ttname"><a href="classcore_1_1_node.html#a9d7f4c2bbc6adb8dea3d93ef77f9ab54">core::Node::addOutput</a></div><div class="ttdeci">void addOutput(Node *node)</div><div class="ttdef"><b>Definition:</b> node.cpp:39</div></div>
 <div class="ttc" id="classcore_1_1_node_html"><div class="ttname"><a href="classcore_1_1_node.html">core::Node</a></div><div class="ttdef"><b>Definition:</b> node.h:28</div></div>
+<div class="ttc" id="classcore_1_1_node_html_aaf2c47b915eca8128054368d4142c4a1"><div class="ttname"><a href="classcore_1_1_node.html#aaf2c47b915eca8128054368d4142c4a1">core::Node::_treshold</a></div><div class="ttdeci">int _treshold</div><div class="ttdef"><b>Definition:</b> node.h:30</div></div>
 <div class="ttc" id="classcore_1_1_node_html_a54203e5d9a16ad6dd9fc8ccf70064af6"><div class="ttname"><a href="classcore_1_1_node.html#a54203e5d9a16ad6dd9fc8ccf70064af6">core::Node::acceptToken</a></div><div class="ttdeci">void acceptToken(Token *token)</div><div class="ttdef"><b>Definition:</b> node.cpp:47</div></div>
 <div class="ttc" id="classcore_1_1_node_html_a4bdef23ee2e31c88ea7faadde086ca3d"><div class="ttname"><a href="classcore_1_1_node.html#a4bdef23ee2e31c88ea7faadde086ca3d">core::Node::getChildren</a></div><div class="ttdeci">const std::vector&lt; Node * &gt; getChildren()</div><div class="ttdef"><b>Definition:</b> node.cpp:43</div></div>
+<div class="ttc" id="classcore_1_1_node_html_a6890991303fcc6c9b2b3dec678c8b5db"><div class="ttname"><a href="classcore_1_1_node.html#a6890991303fcc6c9b2b3dec678c8b5db">core::Node::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition:</b> node.cpp:55</div></div>
+<div class="ttc" id="classcore_1_1_node_html_a1a3fe957e4b27519b81ba657f678e78b"><div class="ttname"><a href="classcore_1_1_node.html#a1a3fe957e4b27519b81ba657f678e78b">core::Node::_input</a></div><div class="ttdeci">std::vector&lt; Token * &gt; _input</div><div class="ttdef"><b>Definition:</b> node.h:33</div></div>
+<div class="ttc" id="classcore_1_1_node_html_ae117f4bba6270bc994d48fd38b7a1007"><div class="ttname"><a href="classcore_1_1_node.html#ae117f4bba6270bc994d48fd38b7a1007">core::Node::Node</a></div><div class="ttdeci">Node()</div></div>
 <div class="ttc" id="classcore_1_1_token_html"><div class="ttname"><a href="classcore_1_1_token.html">core::Token</a></div><div class="ttdef"><b>Definition:</b> token.h:20</div></div>
+<div class="ttc" id="classcore_1_1_node_html_a3856299264f7cc5223f5019d0bfa2bbb"><div class="ttname"><a href="classcore_1_1_node.html#a3856299264f7cc5223f5019d0bfa2bbb">core::Node::_executed</a></div><div class="ttdeci">bool _executed</div><div class="ttdef"><b>Definition:</b> node.h:31</div></div>
+<div class="ttc" id="classcore_1_1_node_html_a4551418fe5548279ce9aece1bc62716b"><div class="ttname"><a href="classcore_1_1_node.html#a4551418fe5548279ce9aece1bc62716b">core::Node::_output</a></div><div class="ttdeci">std::vector&lt; Node * &gt; _output</div><div class="ttdef"><b>Definition:</b> node.h:34</div></div>
 <div class="ttc" id="classcore_1_1_node_html_aefb1da11b9ddf052d8940d6637cbc0c9"><div class="ttname"><a href="classcore_1_1_node.html#aefb1da11b9ddf052d8940d6637cbc0c9">core::Node::operator=</a></div><div class="ttdeci">Node &amp; operator=(const Node &amp;rhs)</div><div class="ttdef"><b>Definition:</b> node.cpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 5 2014 03:57:56 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 16 2014 15:39:53 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
