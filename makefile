@@ -61,6 +61,10 @@ OBJECT_DIRS		= $(sort $(dir $(OBJECT_FILES)))
 # Compile and link
 main: compile link
 
+# Compile and run
+test: main
+	./dvm
+
 #Create object files
 compile: directory $(OBJECT_FILES)
 

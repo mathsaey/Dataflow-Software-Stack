@@ -22,12 +22,18 @@
             "name": "C++ make",
             "selector": "source.c++",
             "working_dir": "${project_path}",
-            "cmd": ["make"]
+            "cmd": ["make", "test"]
+        },{
+            "name":"sublimeRepl",
+            "selector":"source.python",
+            "target": "run_existing_window_command",
+            "id": "repl_python3_run",
+            "file": "config/Python/Main.sublime-menu"
         },{
             "name": "doxygen markdown",
             "selector":"text.html.markdown",
             "working_dir": "${project_path}",
-            "cmd": ["make", "doc"]
+            "cmd": ["make", "docset"]
         }
     ]
 }
