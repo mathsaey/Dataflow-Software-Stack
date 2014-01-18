@@ -1,6 +1,7 @@
 #!/bin/bash
 # Quick script to add documentation to gh pages
 
+# Store directory
 pushd .
 
 # Change to the script directory
@@ -13,4 +14,5 @@ git add *
 git commit -a -m "Documentation update"
 git push origin gh-pages
 
+# Restore directory
 popd

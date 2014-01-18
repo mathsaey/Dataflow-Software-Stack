@@ -18,8 +18,10 @@ software_8md_source.html
 _r_e_a_d_m_e_8md_source.html
 log_8h_source.html
 main_8cpp_source.html
+version_8h_source.html
 log_8h.html
 main_8cpp.html
+version_8h.html
 md_doc__i_f1.html
 _sort_sis.html
 _sort_i_f1.html
@@ -31,6 +33,8 @@ index.html
 pages.html
 files.html
 globals.html
+globals_func.html
+globals_vars.html
 globals_type.html
 globals_enum.html
 globals_eval.html
@@ -67,5 +71,7 @@ ftv2splitbar.png
 log_8h__incl.png
 log_8h__dep__incl.png
 main_8cpp__incl.png
+version_8h__incl.png
+version_8h__dep__incl.png
 graph_legend.png
 dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png

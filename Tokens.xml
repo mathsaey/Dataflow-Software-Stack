@@ -18,7 +18,6 @@
     </TokenIdentifier>
     <Path>log_8h.html</Path>
     <Anchor>ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4</Anchor>
-    <Abstract>Signals information. </Abstract>
     <DeclaredIn>log.h</DeclaredIn>
   </Token>
   <Token>
@@ -29,7 +28,6 @@
     </TokenIdentifier>
     <Path>log_8h.html</Path>
     <Anchor>ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492</Anchor>
-    <Abstract>Signals warning. </Abstract>
     <DeclaredIn>log.h</DeclaredIn>
   </Token>
   <Token>
@@ -40,8 +38,27 @@
     </TokenIdentifier>
     <Path>log_8h.html</Path>
     <Anchor>ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed</Anchor>
-    <Abstract>Signals error. </Abstract>
     <DeclaredIn>log.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>buildString</Name>
+      <APILanguage>c</APILanguage>
+      <Type>func</Type>
+    </TokenIdentifier>
+    <Path>version_8h.html</Path>
+    <Anchor>ac87111ff1070fb0831d9e5dd1adb9abf</Anchor>
+    <DeclaredIn>version.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__BUILD_NUMBER__</Name>
+      <APILanguage>c</APILanguage>
+      <Type>data</Type>
+    </TokenIdentifier>
+    <Path>version_8h.html</Path>
+    <Anchor>a57c5164f8a8765b46dcb96efe28fe0a8</Anchor>
+    <DeclaredIn>version.h</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>

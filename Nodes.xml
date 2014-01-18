@@ -6,7 +6,7 @@
       <Path>index.html</Path>
       <Subnodes>
        <Node>
-        <Name>IF1 Quick Reference</Name>
+        <Name>IF1</Name>
         <Path>md_doc__i_f1.html</Path>
         <Subnodes>
          <Node>
@@ -144,6 +144,32 @@
                </Node>
               </Subnodes>
              </Node>
+             <Node>
+              <Name>version.h</Name>
+              <Path>version_8h.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>buildString</Name>
+                <Path>version_8h.html</Path>
+                <Anchor>ac87111ff1070fb0831d9e5dd1adb9abf</Anchor>
+               </Node>
+               <Node>
+                <Name>__BUILD_NUMBER__</Name>
+                <Path>version_8h.html</Path>
+                <Anchor>a57c5164f8a8765b46dcb96efe28fe0a8</Anchor>
+               </Node>
+               <Node>
+                <Name>__MAJOR_VERSION__</Name>
+                <Path>version_8h.html</Path>
+                <Anchor>ab315935d3e6c1d8052a034f4dc471c32</Anchor>
+               </Node>
+               <Node>
+                <Name>__MINOR_VERSION__</Name>
+                <Path>version_8h.html</Path>
+                <Anchor>a982f1722ac27e4d3af64847d48373fda</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
             </Subnodes>
            </Node>
           </Subnodes>
@@ -155,6 +181,14 @@
            <Node>
             <Name>All</Name>
             <Path>globals.html</Path>
+           </Node>
+           <Node>
+            <Name>Functions</Name>
+            <Path>globals_func.html</Path>
+           </Node>
+           <Node>
+            <Name>Variables</Name>
+            <Path>globals_vars.html</Path>
            </Node>
            <Node>
             <Name>Typedefs</Name>

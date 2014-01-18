@@ -4,10 +4,14 @@
 <param name="FrameName" value="right">
 </OBJECT>
 <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#a57c5164f8a8765b46dcb96efe28fe0a8"><param name="Name" value="__BUILD_NUMBER__"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#ab315935d3e6c1d8052a034f4dc471c32"><param name="Name" value="__MAJOR_VERSION__"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#a982f1722ac27e4d3af64847d48373fda"><param name="Name" value="__MINOR_VERSION__"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="md__r_e_a_d_m_e.html"><param name="Name" value="About"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#ac87111ff1070fb0831d9e5dd1adb9abf"><param name="Name" value="buildString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="log_8h.html#a374d75aae5a33e7ab0e81b82ef9836dc"><param name="Name" value="DVMLogger"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed"><param name="Name" value="error"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="md_doc__i_f1.html"><param name="Name" value="IF1 Quick Reference"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md_doc__i_f1.html"><param name="Name" value="IF1"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4"><param name="Name" value="info"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="log_8h.html"><param name="Name" value="log.h"></OBJECT>
   <UL>
@@ -21,6 +25,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="md_doc_software.html"><param name="Name" value="Software"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_sort_i_f1.html"><param name="Name" value="Sorting algorithm in IF1"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_sort_sis.html"><param name="Name" value="Sorting algorithm in Sisal"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html"><param name="Name" value="version.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#a57c5164f8a8765b46dcb96efe28fe0a8"><param name="Name" value="__BUILD_NUMBER__"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#ab315935d3e6c1d8052a034f4dc471c32"><param name="Name" value="__MAJOR_VERSION__"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#a982f1722ac27e4d3af64847d48373fda"><param name="Name" value="__MINOR_VERSION__"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="version_8h.html#ac87111ff1070fb0831d9e5dd1adb9abf"><param name="Name" value="buildString"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="log_8h.html#ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492"><param name="Name" value="warning"></OBJECT>
 </UL>
 </BODY>

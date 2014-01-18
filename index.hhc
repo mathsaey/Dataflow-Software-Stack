@@ -4,7 +4,7 @@
 <param name="FrameName" value="right">
 </OBJECT>
 <UL>
-<LI><OBJECT type="text/sitemap"><param name="Name" value="IF1 Quick Reference"><param name="Local" value="md_doc__i_f1.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="IF1"><param name="Local" value="md_doc__i_f1.html"><param name="ImageNumber" value="11"></OBJECT>
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="IF1 Concepts"><param name="Local" value="md_doc__i_f1.html#Concepts"><param name="ImageNumber" value="1"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="IF1 Instructions"><param name="Local" value="md_doc__i_f1.html#Form"><param name="ImageNumber" value="1"></OBJECT>
@@ -48,11 +48,20 @@
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="main"><param name="Local" value="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="version.h"><param name="Local" value="version_8h.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="buildString"><param name="Local" value="version_8h.html#ac87111ff1070fb0831d9e5dd1adb9abf"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__BUILD_NUMBER__"><param name="Local" value="version_8h.html#a57c5164f8a8765b46dcb96efe28fe0a8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__MAJOR_VERSION__"><param name="Local" value="version_8h.html#ab315935d3e6c1d8052a034f4dc471c32"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="__MINOR_VERSION__"><param name="Local" value="version_8h.html#a982f1722ac27e4d3af64847d48373fda"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
       </UL>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="File Members"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="globals_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Variables"><param name="Local" value="globals_vars.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Typedefs"><param name="Local" value="globals_type.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Enumerations"><param name="Local" value="globals_enum.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Enumerator"><param name="Local" value="globals_eval.html"><param name="ImageNumber" value="11"></OBJECT>
