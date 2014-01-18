@@ -40,9 +40,10 @@ BOOST_LIB_PATH = /usr/local/include/
 BOOST_HEADER_PATH = /usr/local/include/boost/
 
 # Documentation 
-DOCUMENTATION 			= doxygen
-DOCUMENTATION_DIR 		= documentation
-DOCUMENTATION_CONFIG 	= DoxygenConfig
+PAGE_SCRIPT             = pages.sh
+DOCUMENTATION           = doxygen
+DOCUMENTATION_DIR       = documentation
+DOCUMENTATION_CONFIG    = DoxygenConfig
 
 # In and output Folders
 EXECUTABLE 	= dvm
@@ -50,9 +51,9 @@ INPUT_DIR 	= src/
 OUTPUT-DIR 	= obj/
 
 # Map in and output to paths
-SOURCE_FILES 	= $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
-OBJECT_FILES 	= $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o))
-OBJECT_DIRS		= $(sort $(dir $(OBJECT_FILES)))
+SOURCE_FILES    = $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
+OBJECT_FILES    = $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o))
+OBJECT_DIRS     = $(sort $(dir $(OBJECT_FILES)))
 
 # Versioning
 VERSION_FILE  = $(INPUT_DIR)version.h
@@ -87,6 +88,10 @@ doc:
 	(cat $(DOCUMENTATION_CONFIG) ; echo PROJECT_NUMBER=\"$(BUILD_STRING)\") |\
 	$(DOCUMENTATION) - 
 
+# Upload the docs to github
+docpages: doc
+	./$(DOCUMENTATION_DIR)/$(PAGE_SCRIPT)
+
 # Generate and install docset
 docset: doc
 	make -C $(DOCUMENTATION_DIR) -f Makefile
@@ -98,8 +103,10 @@ clean:
 	- rm $(OBJECT_FILES)
 	- rm -r $(OUTPUT-DIR)
 
-# Phony targets (targets that don't depend on a file)
+# Phony targets
 .PHONY: doc
+.PHONY: docset
+.PHONY: docpages
 .PHONY: clean
 
 ################
