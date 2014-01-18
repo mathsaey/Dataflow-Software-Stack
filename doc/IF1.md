@@ -1,3 +1,5 @@
+<!-- Written by Mathijs Saey at the VUB, all rights reserved -->
+
 # IF1 Quick Reference
 
 This page serves as a basic introduction to the IF1 language.
