@@ -76,6 +76,7 @@ directory:
 	@ mkdir -p $(OBJECT_DIRS)
 
 # Run the Documentation tool
+#  (cat DoxygenConfig ; echo "PROJECT_NUMBER=1") | doxygen - => set version number
 doc: 
 	$(DOCUMENTATION) $(DOCUMENTATION_CONFIG)
 

@@ -22,7 +22,7 @@
             "name": "C++ make",
             "selector": "source.c++",
             "working_dir": "${project_path}",
-            "cmd": ["make", "test"]
+            "cmd": ["make"]
         },{
             "name":"sublimeRepl",
             "selector":"source.python",
