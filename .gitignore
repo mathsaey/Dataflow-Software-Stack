@@ -3,6 +3,7 @@
 ##########
 
 *.docset
+pages.sh
 
 ############
 # OS Files #

@@ -1,9 +1,9 @@
 #!/bin/bash
 # Quick script to add documentation to gh pages
 
-pushd $PWD
+pushd .
 
-# Find the current dir location
+# Change to the script directory
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 # Add al fils to git, commit and push
