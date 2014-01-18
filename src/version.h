@@ -1,4 +1,4 @@
-// main.cpp
+// version.cpp
 // DVM
 // Mathijs Saey
 
@@ -27,20 +27,40 @@
  */
 
 /**
- * \file main.cpp
+ * \file version.h
  * \author Mathijs Saey
  *
- * \brief DVM entry point
+ * \brief Version storage
  * 
- * This file contains the DVM entry point.
+ * This file contains the major and minor version of
+ * dvm, as well as the build number.
  */
 
-#include <iostream>
+#ifndef __DVM_VERSION_H__
+#define __DVM_VERSION_H__
 
-#include "version.h"
-#include "log.h"
+#include <sstream>
 
-int main(int argc, const char * argv[]) {
-	std::cout <<"DVM " << buildString() << "\n";
-	return 0;
+/** 
+ * Incremental build number.
+ * You should not update this by hand,
+ * make will take care of this.
+ */
+const int __BUILD_NUMBER__  =0;
+const int __MAJOR_VERSION__ =0;
+const int __MINOR_VERSION__ =0;
+
+/**
+ * Creates a string displaying the version info
+ * \return 
+ *	A string that contains the current version info. <br/>
+ *	major.minor (build number)
+ */
+std::string buildString() {
+  std::ostringstream os;
+  os << __MAJOR_VERSION__ << "." << __MINOR_VERSION__;
+  os << " (build " << __BUILD_NUMBER__ << ")";
+  return os.str();
 }
+
+#endif

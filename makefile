@@ -54,6 +54,13 @@ SOURCE_FILES 	= $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
 OBJECT_FILES 	= $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o))
 OBJECT_DIRS		= $(sort $(dir $(OBJECT_FILES)))
 
+# Versioning
+VERSION_FILE  = $(INPUT_DIR)version.h
+BUILD_STRING  = "$(MAJOR_VERSION).$(MINOR_VERSION) (build $(BUILD_NUMBER))"
+MAJOR_VERSION = $(shell grep 'int __BUILD_NUMBER__'  $(VERSION_FILE) | cut -d = -f 2 | cut -d \; -f1)
+MINOR_VERSION = $(shell grep 'int __MAJOR_VERSION__' $(VERSION_FILE) | cut -d = -f 2 | cut -d \; -f1)
+BUILD_NUMBER  = $(shell grep 'int __MINOR_VERSION__' $(VERSION_FILE) | cut -d = -f 2 | cut -d \; -f1)
+
 ###########
 # Targets #
 ###########
@@ -75,10 +82,10 @@ link: $(EXECUTABLE)
 directory:
 	@ mkdir -p $(OBJECT_DIRS)
 
-# Run the Documentation tool
-#  (cat DoxygenConfig ; echo "PROJECT_NUMBER=1") | doxygen - => set version number
+# Run the Documentation tool 
 doc: 
-	$(DOCUMENTATION) $(DOCUMENTATION_CONFIG)
+	(cat $(DOCUMENTATION_CONFIG) ; echo PROJECT_NUMBER=\"$(BUILD_STRING)\") |\
+	$(DOCUMENTATION) - 
 
 # Generate and install docset
 docset: doc

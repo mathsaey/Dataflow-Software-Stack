@@ -30,7 +30,7 @@
  * \file log.h
  * \author Mathijs Saey
  *
- * \brief Contains boost log configuration.
+ * \brief Boost log configuration.
  * 
  * This file imports the various headers for boost/log.
  * It also declares the the severity levels and type 
