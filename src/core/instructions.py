@@ -85,7 +85,7 @@ def addCallInstruction(inputs, outputs):
 
 class Instruction(object):
 	def __init__(self, key, inputs):
-		super().__init__()
+		super(Instruction, self).__init__()
 		self.key 			= key
 		self.tokens			= {}
 		self.inputs 		= inputs
@@ -107,7 +107,7 @@ class Instruction(object):
 			runtime.addToken(token)
 
 	def acceptToken(self, token):
-		print(self, "accepting", token)
+		print self, "accepting", token
 		cont = token.context
 
 		if token.isLiteral():
@@ -140,22 +140,22 @@ class Instruction(object):
 
 class OperationInstruction(Instruction):
 	def __init__(self, key, operation, inputs):
-		super().__init__(key, inputs)
+		super(OperationInstruction, self).__init__(key, inputs)
 		self.operation = operation
 
 	def acceptToken(self, token):
-		super().acceptToken(token)
+		super(OperationInstruction, self).acceptToken(token)
 		cont = token.context
 		if self.isContextComplete(cont):
 			self.executeContext(cont)
 
 	def acceptLiteral(self, literal):
-		super().acceptLiteral(literal)
+		super(OperationInstruction, self).acceptLiteral(literal)
 		if self.literals.count(None) == 0:
 			self.executeLiterals()
 
 	def execute(self, lst):
-		print(self, "executing")
+		print self, "executing"
 		args = map(lambda x : x.datum, lst)
 		res = self.operation(*args)
 		self.sendDatum(res)		
@@ -173,7 +173,7 @@ class OperationInstruction(Instruction):
 
 class FunctionInstruction(Instruction):
 	def __init__(self, key, inputs, outputs):
-		super().__init__(key, inputs)
+		super(FunctionInstruction, self).__init__(key, inputs)
 	
 # ---------------- #
 # Call Instruction #
@@ -181,7 +181,7 @@ class FunctionInstruction(Instruction):
 
 class CallInstruction(Instruction):
 	def __init__(self, key, inputs, outputs):
-		super().__init__(key, inputs)
+		super(CallInstruction, self).__init__(key, inputs)
 		self.inputKey = None
 		self.outputKey = None
 

@@ -24,6 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+
 """
 This file declares the context object, an object that can add context information to a token.
 """
@@ -39,13 +40,16 @@ def createContext():
 	__CURRENT__ID__ += 1
 	return Context(__CURRENT__ID__ -1)
 
+def literalContext():
+	return -1
+
 # -------------- #
 # Context Object #
 # -------------- #
 
 class Context(object):
 	def __init__(self, key):
-		super().__init__()
+		super(Context,self).__init__()
 		self.key = key
 
 	def __str__(self):

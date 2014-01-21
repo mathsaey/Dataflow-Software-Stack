@@ -28,23 +28,59 @@
 This file defines tokens, elements that carry tagged data
 """
 
+import context
+
+# ---------------- #
+# Public Functions #
+# ---------------- #
+
+def createToken(inst, port, cont, datum):
+	tag = Tag(inst, port, cont)
+	return Token(datum, tag)
+
+def createLiteral(inst, port, datum):
+	tag = LiteralTag(inst, port)
+	return Token(datum, tag)
+
+# ----- #
+# Token #
+# ----- #
+
 class Token(object):
-	def __init__(self, key, port, datum, context):
-		super().__init__()
-		self.context = context
+	def __init__(self, datum, tag):
+		super(Token, self).__init__()
 		self.datum = datum
-		self.port = port
-		self.key = key
+		self.tag = tag
 
 	def __str__(self):
-		dest = str(self.key) + " (" + str(self.port) + ")"
-		cont = "<" + str(self.context) + ">"
-		summary = str(self.datum) + " | " + str(dest) + " " + cont
-		return "Token (" + summary + ")"
+		tagString = "[" + str(self.tag) + "]"
+		dataString = "(" + str(self.datum) + ")"
+		return "<| " + dataString + " " + tagString + " |>"
+
+# ---- #
+# Tags #
+# ---- #
+
+class Tag(object):
+	def __init__(self, inst, port, cont):
+		super(Tag, self).__init__()
+		self.cont = cont
+		self.port = port
+		self.inst = inst
+
+	def __str__(self):
+		inst = str(self.inst) + " | "
+		port = str(self.port) + " | "
+		return inst + port + str(self.cont)
+
+	def __eq__(self, other):
+		return (self.inst == other.inst and
+		       self.port == other.port and
+		       self.cont == other.cont)
 
 	def isLiteral(self):
-		return self.context == "lit"
+		return self.cont == context.literalContext()
 
-class LiteralToken(Token):
-	def __init__(self, key, port, datum):
-		super().__init__(key, port, datum, "lit")
+class LiteralTag(Tag):
+	def __init__(self, inst, port):
+		super(LiteralTag, self).__init__(inst, port, context.literalContext())
