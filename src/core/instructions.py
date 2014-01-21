@@ -25,72 +25,71 @@
 # THE SOFTWARE.
 
 """
-This file allows the user to create and retrieve instructions
+Create and retrieve instructions.
+
+The following functions are available for use by other modules:
+
+getInstruction(key)
+	Get the instruction matching key
+
+add<type>Instruction(args)
+	Create and add an instruction of type
+	the arguments depend on the type of the instruction
 """
 
-import copy
 import tokens
 import runtime
-import context
-
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-""" Creates an instruction and returns it's key """
-def addOperationInstruction(operation, inputs): pass
-def addFunctionInstruction(inputs, outputs): pass
-def addCallInstruction(inputs, outputs): pass
-
-""" Retrieve an instruction with a given key """
-def getInstruction(key): pass
-
-# ------------- #
-# Key Generator #
-# ------------- #
-
-__KEY__ = 1
-
-def getKey():
-	global __KEY__
-	__KEY__ += 1
-	return __KEY__ - 1
+import contextMatcher
 
 # ------------------ #
 # Instruction Memory #
 # ------------------ #
 
-__INSTRUCTION_MEMORY__ 	= {}
+__CURRENT_KEY__ = 0
+__INSTRUCTION_MEMORY__ 	= []
 
+# Add a key in a given slot.
+def _addInstruction(inst):
+	__INSTRUCTION_MEMORY__[inst.key] = inst
+
+# Reserve a slot for an instruction
+# returns the key of the reserved slot
+def _reserveSlot():
+	global __INSTRUCTION_MEMORY__
+	global __CURRENT_KEY__
+	__INSTRUCTION_MEMORY__ += [None]
+	key = __CURRENT_KEY__
+	__CURRENT_KEY__ += 1
+	return key
+
+# Get an instruction from the memory
 def getInstruction(key):
 	return __INSTRUCTION_MEMORY__[key]
 
-def createInstruction(constructor, args):
-	key 	= getKey()
+# -------------------- #
+# Instruction creation #
+# -------------------- #
+
+def _createInstruction(constructor, inputs, args):
+	key 	= _reserveSlot()
 	args	= [key] + args
 	inst	= constructor(*args)
-	__INSTRUCTION_MEMORY__.update({key:inst})
+	contextMatcher.initLitArr(key, inputs)
+	_addInstruction(inst)
 	return key
 
 def addOperationInstruction(operation, inputs):
-	return createInstruction(OperationInstruction, [operation, inputs])
-def addFunctionInstruction(inputs, outputs):
-	return createInstruction(FunctionInstruction, [inputs, outputs])
-def addCallInstruction(inputs, outputs):
-	return createInstruction(CallInstruction, [inputs, outputs])
+	return _createInstruction(OperationInstruction, inputs, [operation])
 
 # ----------- #
 # Instruction #
 # ----------- #
 
-class Instruction(object):
-	def __init__(self, key, inputs):
-		super(Instruction, self).__init__()
-		self.key 			= key
-		self.tokens			= {}
-		self.inputs 		= inputs
-		self.outputs 		= []
-		self.literals		= [None] * self.inputs
+class AbstractInstruction(object):
+	def __init__(self, key):
+		super(AbstractInstruction, self).__init__()
+		self.key     = key
+		self.outputs = []
 
 	def __str__(self):
 		name = self.__class__.__name__
@@ -103,87 +102,19 @@ class Instruction(object):
 		for o in self.outputs:
 			key 	= o[0]
 			port 	= o[1]
-			token 	= tokens.Token(key, port, datum, 0)
+			token 	= tokens.createToken(key, port, 0, datum)
 			runtime.addToken(token)
-
-	def acceptToken(self, token):
-		print self, "accepting", token
-		cont = token.context
-
-		if token.isLiteral():
-			self.acceptLiteral(token)
-			return
-
-		try:
-			arr = self.tokens[cont]
-			arr[token.port] = token
-		except KeyError:
-			arr = copy.copy(self.literals)
-			arr[token.port] = token
-			self.tokens.update({cont : arr})
-
-	def isContextComplete(self, context):
-		try:
-			arr = self.tokens[context]
-		except KeyError:
-			return False
-		else:
-			return arr.count(None) == 0
-
-	def acceptLiteral(self, literal):
-		self.literals[literal.port] = literal
-
 
 # --------------------- #
 # Operation Instruction #
 # --------------------- #
 
-class OperationInstruction(Instruction):
-	def __init__(self, key, operation, inputs):
-		super(OperationInstruction, self).__init__(key, inputs)
+class OperationInstruction(AbstractInstruction):
+	def __init__(self, key, operation):
+		super(OperationInstruction, self).__init__(key)
 		self.operation = operation
 
-	def acceptToken(self, token):
-		super(OperationInstruction, self).acceptToken(token)
-		cont = token.context
-		if self.isContextComplete(cont):
-			self.executeContext(cont)
-
-	def acceptLiteral(self, literal):
-		super(OperationInstruction, self).acceptLiteral(literal)
-		if self.literals.count(None) == 0:
-			self.executeLiterals()
-
 	def execute(self, lst):
-		print self, "executing"
-		args = map(lambda x : x.datum, lst)
-		res = self.operation(*args)
+		print self, "executing", lst
+		res = self.operation(*lst)
 		self.sendDatum(res)		
-
-	def executeContext(self, context):
-		lst = self.tokens[context]
-		self.execute(lst)
-
-	def executeLiterals(self):
-		self.execute(self.literals)
-
-# -------------------- #
-# Function Instruction #
-# -------------------- #
-
-class FunctionInstruction(Instruction):
-	def __init__(self, key, inputs, outputs):
-		super(FunctionInstruction, self).__init__(key, inputs)
-	
-# ---------------- #
-# Call Instruction #
-# ---------------- #
-
-class CallInstruction(Instruction):
-	def __init__(self, key, inputs, outputs):
-		super(CallInstruction, self).__init__(key, inputs)
-		self.inputKey = None
-		self.outputKey = None
-
-	def setTarget(self, key):
-		self.key = key	

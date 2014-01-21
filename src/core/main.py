@@ -32,7 +32,6 @@ def tOP(a,b):
 def dummy(*any):
 	pass
 
-
 k1 = api.addOperationInstruction(tOP, 2)
 k2 = api.addOperationInstruction(dummy, 1)
 api.setDestination(k1, 0, k2, 0)
@@ -41,3 +40,6 @@ api.addLiteral(k1, 0, "top")
 api.addLiteral(k1, 1, "kek")
 
 api.run()
+
+# Goede encoding van tag vragen
+# Output van instructie laten wrappen door module?

@@ -26,7 +26,14 @@
 
 
 """
-This file declares the context object, an object that can add context information to a token.
+Context creation
+
+The following functions can be used by other modules:
+
+createContext()
+	Create and return a new context
+literalContext()
+	Return the context carried by every literal
 """
 
 __CURRENT__ID__ = 0

@@ -25,7 +25,24 @@
 # THE SOFTWARE.
 
 """ 
-This file defines tokens, elements that carry tagged data
+Tagged token creation
+
+Responsible for the creation and definition of tokens
+
+The following functions can be used by other modules:
+
+createToken(inst, port, cont, datum)
+	Create a tagged token.
+
+	inst: The target instruction
+	port: A port of this instruction
+	cont: The context of this instruction
+	datum: The datum this token carries
+
+createLiteral(inst, port, datum)
+	Create a literal token.
+	Works like createToken but doesn't use
+	a context.
 """
 
 import context

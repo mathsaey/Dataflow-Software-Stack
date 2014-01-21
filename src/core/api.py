@@ -31,11 +31,11 @@ import instructions
 import runtime
 import tokens
 
-from instructions 	import addOperationInstruction, addFunctionInstruction, addCallInstruction
+from instructions 	import addOperationInstruction
 from runtime 		import run
 
-def addLiteral(key, port, value):
-	t = tokens.LiteralToken(key, port, value)
+def addLiteral(inst, port, value):
+	t = tokens.createLiteral(inst, port, value)
 	runtime.addToken(t)
 
 def setDestination(srcKey, srcPort, dstKey, dstPort):

@@ -25,27 +25,30 @@
 # THE SOFTWARE.
 
 """
-This file defines the runtime system of the dynamic prototype.
+Runtime system
 
 The system has 2 responsibilities:
 - Dispatching tokens that are available
 - Determining which instruction to exectue
+
+The following functions can be used by other modules:
+run()
+	Start the runtime
+addToken(token)
+	Add a token to process
+addInstruction(instruction, inputLst)
+	Add an instruction that should be executed with
+	the inputLst as argument
 """
 
-import instructions
 import Queue
+import threading
+import instructions
+import contextMatcher
 
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def run(): pass
-def addToken(token): pass
-def addInstruction(instruction, inputLst): pass
-
-# ---------------- #
-# Some Abstraction #
-# ---------------- #
+# ------- #
+# Storage #
+# ------- #
 
 __TOKEN_QUEUE__ = Queue.Queue()
 __INSTRUCTION_QUEUE__ = Queue.Queue()
@@ -55,21 +58,32 @@ def addToken(token):
 def addInstruction(instruction, inputLst):
 	__INSTRUCTION_QUEUE__.put((instruction, inputLst))
 
-def getToken(): return __TOKEN_QUEUE__.get()
-def getInstruction(): return __INSTRUCTION_QUEUE__.get()
+def _getToken(): return __TOKEN_QUEUE__.get()
+def _getInstruction(): return __INSTRUCTION_QUEUE__.get()
 
+# -------- #
+# Run Loop #
+# -------- #
 
+def _processToken(token):
+	contextMatcher.addToken(token)
 
+def _processInstruction(instruction, lst):
+	inst = instructions.getInstruction(instruction)
+	inst.execute(lst)
 
-def sendToken(token):
-	if token.key is None: return
+def _tokenLoop():
+	while True:
+		token = _getToken()
+		_processToken(token)
 
-	key = token.key
-	dst = instructions.getInstruction(key)
-	dst.acceptToken(token)
+def _instructionLoop():
+	while True:
+		inst = _getInstruction()
+		_processInstruction(inst[0], inst[1])
 
 def run():
-	 while True:
-	 	t = getToken()
-	 	sendToken(t)
-
+	tokenThread = threading.Thread(target = _tokenLoop)
+	instThread  = threading.Thread(target = _instructionLoop)
+	tokenThread.start()
+	instThread.start()
