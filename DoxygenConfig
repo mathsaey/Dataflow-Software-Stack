@@ -764,8 +764,10 @@ INPUT_ENCODING         = UTF-8
 # *.md, *.mm, *.dox, *.py, *.f90, *.f, *.for, *.tcl, *.vhd, *.vhdl, *.ucf,
 # *.qsf, *.as and *.js.
 
-FILE_PATTERNS          = *.md \
-                         *.h \
+FILE_PATTERNS          = *.md  \
+                         *.h   \
+                         *.py  \
+                         *.hpp \
                          *.cpp
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
