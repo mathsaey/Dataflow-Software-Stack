@@ -38,6 +38,6 @@ def addLiteral(inst, port, value):
 	t = tokens.createLiteral(inst, port, value)
 	runtime.addToken(t)
 
-def setDestination(srcKey, srcPort, dstKey, dstPort):
+def addDestination(srcKey, srcPort, dstKey, dstPort):
 	inst = instructions.getInstruction(srcKey)
 	inst.addDestination(srcPort, dstKey, dstPort)

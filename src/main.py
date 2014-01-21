@@ -33,7 +33,8 @@ import core.runtime
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
 if1parser.parser.parseFile(loc)
 core.runtime.main.run()

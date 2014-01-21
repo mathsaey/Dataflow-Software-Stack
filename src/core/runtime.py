@@ -53,9 +53,11 @@ import contextMatcher
 __TOKEN_QUEUE__ = Queue.Queue()
 __INSTRUCTION_QUEUE__ = Queue.Queue()
 
-def addToken(token): 
+def addToken(token):
+	print "['RUNTIME']", "new token:", token 
 	__TOKEN_QUEUE__.put(token)
 def addInstruction(instruction, inputLst):
+	print "['RUNTIME']", "new instruction is ready:", instruction
 	__INSTRUCTION_QUEUE__.put((instruction, inputLst))
 
 def _getToken(): return __TOKEN_QUEUE__.get()

@@ -70,51 +70,74 @@ def getInstruction(key):
 # Instruction creation #
 # -------------------- #
 
-def _createInstruction(constructor, inputs, args):
+def _createInstruction(constructor, inputs, outputs, args):
 	key 	= _reserveSlot()
-	args	= [key] + args
+	args	= [key] + [inputs] + [outputs] + args
 	inst	= constructor(*args)
 	contextMatcher.initLitArr(key, inputs)
 	_addInstruction(inst)
 	return key
 
-def addOperationInstruction(operation, inputs):
-	return _createInstruction(OperationInstruction, inputs, [operation])
+def addOperationInstruction(operation, inputs, outputs):
+	return _createInstruction(OperationInstruction, inputs, outputs, [operation])
 
 # ----------- #
 # Instruction #
 # ----------- #
 
 class AbstractInstruction(object):
-	def __init__(self, key):
+	def __init__(self, key, inputs, outputs):
 		super(AbstractInstruction, self).__init__()
 		self.key     = key
-		self.outputs = []
+		self.inputs  = inputs
+		self.outputs = outputs
+		self.destinations = [[] for x in xrange(0,outputs)]
 
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
 
-	def addDestination(self, port, toKey, toPort):
-		self.outputs += [(toKey, toPort)]
+	def addDestination(self, port, toInst, toPort):
+		self.destinations[port] += [(toInst, toPort)]
 
-	def sendDatum(self, datum):
-		for o in self.outputs:
-			key 	= o[0]
-			port 	= o[1]
-			token 	= tokens.createToken(key, port, 0, datum)
+	# Send data on a given port to any destination
+	# of this port
+	def sendDatum(self, port, datum):
+		for dst in self.destinations[port]:
+			inst = dst[0]
+			port = dst[1]
+			token 	= tokens.createToken(inst, port, 0, datum)
 			runtime.addToken(token)
+
+	# Send a list of results
+	# Every element in this list should have a matching output port
+	def sendResults(self, results):
+		for i in xrange(0, len(results)):
+			res = results[i]
+			self.sendDatum(i, res)
 
 # --------------------- #
 # Operation Instruction #
 # --------------------- #
 
 class OperationInstruction(AbstractInstruction):
-	def __init__(self, key, operation):
-		super(OperationInstruction, self).__init__(key)
+	def __init__(self, key, inputs, outputs, operation):
+		super(OperationInstruction, self).__init__(key, inputs, outputs)
 		self.operation = operation
 
-	def execute(self, lst):
-		print self, "executing", lst
+	def execute(self, tokens):
+		print "['INSTRUCTION']", self, "executing", tokens
+		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
-		self.sendDatum(res)		
+		self.sendResults([res])		
+
+# -------------------- #
+# Function Instruction #
+# -------------------- #
+
+class ForwardInstruction(AbstractInstruction):
+	def __init__(self, key, inputs, outputs):
+		super(ForwardInstruction, self).__init__(key, inputs, outputs)
+
+	def acceptToken(self, token):
+		self.sendDatum(token.tag.port, token.datum)

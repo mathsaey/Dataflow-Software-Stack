@@ -28,19 +28,11 @@
 This module is responsible for parsing edges and literals.
 """
 
-import core.literal
-import core.edge
+import core.api
 
 import graph
 import tools
 import type
-
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def parseLiteral(arr, ctr): pass
-def parseEdge(arr, ctr): pass
 
 # --------- #
 # Constants #
@@ -88,7 +80,7 @@ def parseEdge(arr, ctr):
 # Literal Parser #
 # -------------- #
 
-def parseBasicLit(str, typ, ctr):
+def _parseBasicLit(str, typ, ctr):
 	if typ.type is int:
 		return int(str)
 	elif typ.type is bool:
@@ -97,10 +89,10 @@ def parseBasicLit(str, typ, ctr):
 		err = "Unsupported literal, " + str + " encountered."
 		tools.error(err,ctr)
 
-def parseLitStr(str, typ, ctr):
+def _parseLitStr(str, typ, ctr):
 	string = str[1:-1] #strip enclosing ""
 	if isinstance(typ, type._BasicType):
-		return parseBasicLit(string, typ, ctr)
+		return _parseBasicLit(string, typ, ctr)
 	elif isinstance(typ, type._FunctionType):
 		return string
 	else:
@@ -117,5 +109,5 @@ def parseLiteral(arr, ctr):
 	port = node.getInput(portKey - 1)
 	typ = type.getType(typeKey)
 
-	val = parseLitStr(string, typ, ctr)
+	val = _parseLitStr(string, typ, ctr)
 	core.literal.Literal(port, val)

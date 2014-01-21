@@ -91,9 +91,7 @@ def _isKeyReady(key):
 def _executeKey(key):
 	arr = __TOKENS__[key]
 	del __TOKENS__[key]	
-
-	inputs = map(lambda x : x.datum, arr)
-	runtime.addInstruction(key[0], inputs)
+	runtime.addInstruction(key[0], arr)
 
 # Add a token to the matcher
 def addToken(token):

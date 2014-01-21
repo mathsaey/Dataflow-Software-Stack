@@ -250,7 +250,6 @@ def _parseCombined(arr, container):
 	else:
 		_pool.addType(arr, _CombinedType(baseType, container, next))
 
-
 def _parseTag(arr): 		_parseCombined(arr, "tag")
 def _parseTuple(arr): 		_parseCombined(arr, "tuple")
 def _parseField(arr): 		_parseCombined(arr, "field") 

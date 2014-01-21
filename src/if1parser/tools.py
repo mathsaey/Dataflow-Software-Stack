@@ -30,17 +30,6 @@ This module contains a few tools that don't belong in any other module
 
 import sys
 
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def warning(msg, line = "?"): pass
-def error(msg, line = "?"): pass
-
-# -------------- #
-# Error handling #
-# -------------- #
-
 def warning(msg, line = "?"):
 	print "Warning\t at line:", line, "\t:", msg
 
