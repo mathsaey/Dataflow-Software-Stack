@@ -152,7 +152,7 @@ class OperationInstruction(StaticInstruction):
 		self.operation = operation
 
 	def execute(self, tokens):
-		print "['INSTRUCTION']", self, "executing", tokens
+		print "['INS']", self, "executing", tokens
 		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
@@ -167,7 +167,7 @@ class ForwardInstruction(StaticInstruction):
 		super(ForwardInstruction, self).__init__(key, inputs, outputs)
 
 	def execute(self, tokens):
-		print "['INSTRUCTION']", self, "forwarding", tokens
+		print "['INS']", self, "forwarding", tokens
 		lst = map(lambda x : x.datum, tokens)
 		cont = tokens[0].tag.cont
 		self.sendResults(lst, cont)	
@@ -183,7 +183,7 @@ class CallInstruction(DynamicInstruction):
 		self.funcRet.attachReturn(newCont, oldCont, self.callRet)
 
 	def execute(self, tokens):
-		print "['INSTRUCTION']", self, "calling", self.func, "with:", tokens
+		print "['INS']", self, "calling", self.func, "with:", tokens
 		newCont = context.createContext()
 		oldCont = tokens[0].tag.cont
 		self.setReturn(newCont, oldCont)
@@ -198,7 +198,7 @@ class ReturnInstruction(DynamicInstruction):
 		self.map.update({newCont : (target, oldCont)})
 
 	def execute(self, tokens):
-		print "['INSTRUCTION']", self, "returning", tokens
+		print "['INS']", self, "returning", tokens
 		pair = self.map[tokens[0].tag.cont]
 		self.passModifiedToken(tokens, pair[0], pair[1])
 
@@ -211,5 +211,5 @@ class StopInstruction(DynamicInstruction):
 		super(StopInstruction, self).__init__(key, inputs)
 
 	def execute(self, tokens):
-		print "['INSTRUCTION']", self, "stopping"
+		print "['INS']", self, "stopping"
 		runtime.stop(tokens)

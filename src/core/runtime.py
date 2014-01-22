@@ -56,10 +56,10 @@ __TOKEN_QUEUE__ = Queue.Queue()
 __INSTRUCTION_QUEUE__ = Queue.Queue()
 
 def addToken(token):
-	print "['RUNTIME']", "new token:", token 
+	print "['RUN']", "new token:", token 
 	__TOKEN_QUEUE__.put(token)
 def addInstruction(instruction, inputLst):
-	print "['RUNTIME']", "new instruction is ready:", instruction
+	print "['RUN']", "new instruction is ready:", instruction
 	__INSTRUCTION_QUEUE__.put((instruction, inputLst))
 
 def _getToken(): return __TOKEN_QUEUE__.get()
@@ -99,6 +99,6 @@ def run():
 	instThread.join()
 
 def stop(tokens):
-	print "['RUNTIME']", "Stop signal received", tokens
+	print "['RUN']", "Stop signal received", tokens
 	global __ACTIVE__
 	__ACTIVE__ = False
