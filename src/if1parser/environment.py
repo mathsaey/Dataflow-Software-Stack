@@ -42,18 +42,16 @@ getInst(node):
 	Get a node in the current scope
 addNode(node, inst):
 	Get the instance key that matches a given node
-getSubGraphExit(node):
-	Get the instruction key the exit of node
-getSubGraphEntry(node): 
-	Get the instruction key matching the entry of node
-addSubGraph(node, enter):
-	Add the entry and exit instructions matching node
+getSubGraphExit():
+	Get the instruction key of the subgraph exit
+getSubGraphEntry(): 
+	Get the instruction key of the subgraph entry
+addSubGraph(enter, exit):
+	Set the subgraph of the current scope
 addFunction(name, enter, exit):
 	Bind the name of a function to it's entry and exit points (instruction keys)
-getFunctionEntry(name):
-	Get the entry point of a function from it's name
-getFunctionExit(name): 
-	Get the exit point of a functoin from it's name
+getFunctionPair(name):
+	Get the (entry, exit) pair for a functoin name
 addCallNode(node):
 	Add a node as a call node
 isCallNode(node):
@@ -68,24 +66,28 @@ class Frame(object):
 
 	def __init__(self):
 		super(Frame, self).__init__()
+		self.subgraph = None
 		self.functions = {}
 		self.nodes = {}
 		self.call = []
 
+	def addSubGraph(self, enter, exit):
+		self.subgraph = (enter, exit)
+	def getSubGraphEntry(self):
+		return self.subgraph[0]
+	def getSubGraphExit(self):
+		return self.subgraph[1]
+
 	def addNode(self, node, inst):
 		self.map.update({node : inst})
-	def addSubGraph(self, node, enter, exit):
-		self.map.update({node : (enter, exit)})
 	def getInst(self, node):
 		return self.map[node]
-	def getSubGraphEntry(self, node):
-		return self.map[node][0]
-	def getSubGraphExit(self, node):
-		return self.map[node][1]
+
 	def addFunction(self, name, enter, exit): 
 		self.functions.update({name : (enter, exit)})
 	def getFunctionPair(self, name): 
 		return self.functions[name]
+		
 	def addCallNode(self, node):
 		self.call += [node]
 	def isCallNode(self, node):
@@ -102,22 +104,21 @@ def scope():
 	__STACK__ += [Frame()]
 
 def popScope():
-	global __STACK__
-	frame = __STACK__[0]
-	__STACK__ = __STACK__[1:]
-	return frame
+	if len(__STACK__) > 1:
+		global __STACK__
+		__STACK__ = __STACK__[1:]
 
 def getInst(node): 
 	return __STACK__[0].getInst(node)
 def addNode(node, inst): 
 	__STACK__[0].addNode(node, inst)
 
-def getSubGraphExit(node): 
-	return __STACK__[0].getSubGraphExit(node)
-def getSubGraphEntry(node): 
-	return __STACK__[0].getSubGraphEntry(node)
-def addSubGraph(node, enter): 
-	__STACK__[0].addSubGraph(node, enter, exit)
+def getSubGraphExit(): 
+	return __STACK__[0].getSubGraphExit()
+def getSubGraphEntry(): 
+	return __STACK__[0].getSubGraphEntry()
+def addSubGraph(enter, exit): 
+	__STACK__[0].addSubGraph(enter, exit)
 
 def isCallNode(node): 
 	return __STACK__[0].isCallNode(node)
@@ -127,7 +128,7 @@ def addCallNode(node):
 def addFunction(name, enter, exit):
 	__STACK__[0].addFunction(name, enter, exit)
 
-def _getFunctionPair(name):
+def getFunctionPair(name):
 	err = None
 	for frame in __STACK__:
 		try:
@@ -136,8 +137,3 @@ def _getFunctionPair(name):
 		except KeyError:
 			err = KeyError
 	raise err
-
-def getFunctionEntry(name):
-	return _getFunctionPair(name)[0]
-def getFunctionExit(name):
-	return _getFunctionPair(name)[1]
