@@ -36,20 +36,6 @@ literalContext()
 	Return the context carried by every literal
 """
 
-__CURRENT__ID__ = 0
-
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def createContext():
-	global __CURRENT__ID__
-	__CURRENT__ID__ += 1
-	return Context(__CURRENT__ID__ -1)
-
-def literalContext():
-	return -1
-
 # -------------- #
 # Context Object #
 # -------------- #
@@ -67,3 +53,19 @@ class Context(object):
 
 	def __hash__(self):
 		return self.key
+
+# --------------- #
+# Context creator #
+# --------------- #
+
+__CURRENT__ID__ = 0
+
+def createContext():
+	global __CURRENT__ID__
+	__CURRENT__ID__ += 1
+	return Context(__CURRENT__ID__ -1)
+
+__LITCONTEXT__ = createContext()
+
+def literalContext():
+	return __LITCONTEXT__

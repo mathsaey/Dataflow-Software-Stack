@@ -38,6 +38,7 @@ add<type>Instruction(args)
 """
 
 import tokens
+import context
 import runtime
 import contextMatcher
 
@@ -70,39 +71,50 @@ def getInstruction(key):
 # Instruction creation #
 # -------------------- #
 
-def _createInstruction(constructor, inputs, outputs, args = []):
+def _createInstruction(constructor, inputs, args = []):
 	key 	= _reserveSlot()
-	args	= [key] + [inputs] + [outputs] + args
+	args	= [key] + [inputs] + args
 	inst	= constructor(*args)
 	contextMatcher.initLitArr(key, inputs)
 	_addInstruction(inst)
 	return key
 
 def addOperationInstruction(operation, inputs, outputs):
-	return _createInstruction(OperationInstruction, inputs, outputs, [operation])
+	return _createInstruction(OperationInstruction, inputs, [outputs, operation])
 
 def addForwardInstruction(inputs, outputs):
-	return _createInstruction(ForwardInstruction, inputs, outputs)
+	return _createInstruction(ForwardInstruction, inputs, [outputs])
+
+def addCallInstruction(inputs, func, funcRet, callRet):
+	return _createInstruction(CallInstruction, inputs, [func, funcRet, callRet])
+
+def addReturnInstruction(inputs):
+	return _createInstruction(ReturnInstruction, inputs)
 
 def addStopInstruction(inputs):
-	return _createInstruction(StopInstruction, inputs, 0)
-
+	return _createInstruction(StopInstruction, inputs)
 
 # ------------ #
 # Instructions #
 # ------------ #
 
 class AbstractInstruction(object):
-	def __init__(self, key, inputs, outputs):
+	def __init__(self, key, inputs):
 		super(AbstractInstruction, self).__init__()
 		self.key     = key
 		self.inputs  = inputs
-		self.outputs = outputs
-		self.destinations = [[] for x in xrange(0,outputs)]
 
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
+
+	def execute(self, tokenList):
+		raise NotImplementedError("Execute is an abstract method")
+
+class StaticInstruction(AbstractInstruction):
+	def __init__(self, key, inputs, outputs):
+		super(StaticInstruction, self).__init__(key, inputs)
+		self.destinations = [[] for x in xrange(0,outputs)]
 
 	def addDestination(self, port, toInst, toPort):
 		self.destinations[port] += [(toInst, toPort)]
@@ -123,10 +135,18 @@ class AbstractInstruction(object):
 			res = results[i]
 			self.sendDatum(i, res, cont)
 
-	def execute(self, tokenList):
-		raise NotImplementedError("Execute is an abstract method")
+class DynamicInstruction(AbstractInstruction):
+	def passModifiedToken(self, tokens, inst, cont):
+		for token in tokens:
+			token.tag.inst = inst
+			token.tag.cont = cont
+			runtime.addToken(token)
 
-class OperationInstruction(AbstractInstruction):
+# ---------- #
+# Operations #
+# ---------- #
+
+class OperationInstruction(StaticInstruction):
 	def __init__(self, key, inputs, outputs, operation):
 		super(OperationInstruction, self).__init__(key, inputs, outputs)
 		self.operation = operation
@@ -138,7 +158,11 @@ class OperationInstruction(AbstractInstruction):
 		cont = tokens[0].tag.cont
 		self.sendResults([res], cont)		
 
-class ForwardInstruction(AbstractInstruction):
+# --------- #
+# Functions #
+# --------- #
+
+class ForwardInstruction(StaticInstruction):
 	def __init__(self, key, inputs, outputs):
 		super(ForwardInstruction, self).__init__(key, inputs, outputs)
 
@@ -148,9 +172,43 @@ class ForwardInstruction(AbstractInstruction):
 		cont = tokens[0].tag.cont
 		self.sendResults(lst, cont)	
 
-class StopInstruction(AbstractInstruction):
-	def __init__(self, key, inputs, outputs):
-		super(StopInstruction, self).__init__(key, inputs, 0)
+class CallInstruction(DynamicInstruction):
+	def __init__(self, key, inputs, func, funcRet, callRet):
+		super(CallInstruction, self).__init__(key, inputs)
+		self.func = func
+		self.callRet = callRet
+		self.funcRet = getInstruction(funcRet)
+
+	def setReturn(self, newCont, oldCont):
+		self.funcRet.attachReturn(newCont, oldCont, self.callRet)
+
+	def execute(self, tokens):
+		print "['INSTRUCTION']", self, "calling", self.func, "with:", tokens
+		newCont = context.createContext()
+		oldCont = tokens[0].tag.cont
+		self.setReturn(newCont, oldCont)
+		self.passModifiedToken(tokens, self.func, newCont)	
+
+class ReturnInstruction(DynamicInstruction):
+	def __init__(self, key, inputs):
+		super(ReturnInstruction, self).__init__(key, inputs)
+		self.map = {}
+
+	def attachReturn(self, newCont, oldCont, target):
+		self.map.update({newCont : (target, oldCont)})
+
+	def execute(self, tokens):
+		print "['INSTRUCTION']", self, "returning", tokens
+		pair = self.map[tokens[0].tag.cont]
+		self.passModifiedToken(tokens, pair[0], pair[1])
+
+# ----- #
+# Other #
+# ----- #
+
+class StopInstruction(DynamicInstruction):
+	def __init__(self, key, inputs):
+		super(StopInstruction, self).__init__(key, inputs)
 
 	def execute(self, tokens):
 		print "['INSTRUCTION']", self, "stopping"

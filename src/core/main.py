@@ -29,16 +29,24 @@ import api
 def tOP(a,b):
 	return a + b
 
-f1 = api.addForwardInstruction(2, 2)
-k1 = api.addOperationInstruction(tOP, 2, 1)
-k2 = api.addStopInstruction(1)
-api.addDestination(f1, 0, k1, 0)
-api.addDestination(f1, 1, k1, 1)
-api.addDestination(k1, 0, k2, 0)
+# function
+fStart = api.addForwardInstruction(2, 2)
+body = api.addOperationInstruction(tOP, 2, 1)
+fEnd = api.addReturnInstruction(1)
 
+api.addDestination(fStart, 0, body, 0)
+api.addDestination(fStart, 1, body, 1)
+api.addDestination(body, 0, fEnd, 0)
 
-api.addLiteral(f1, 0, "top")
-api.addLiteral(f1, 1, "kek")
+# call
+ret = api.addForwardInstruction(1,1)
+call = api.addCallInstruction(2, fStart, fEnd, ret)
+pEnd = api.addStopInstruction(1)
+
+api.addDestination(ret, 0, pEnd, 0)
+
+api.addLiteral(call, 0, "top")
+api.addLiteral(call, 1, "kek")
 
 api.run()
 
