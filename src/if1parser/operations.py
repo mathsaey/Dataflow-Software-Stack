@@ -25,92 +25,55 @@
 # THE SOFTWARE.
 
 """
-This module allows us to retrieve python versions of the base
-IF1 nodes.
+IF1 node functions
 
+This module defines python equivalents of the if1 native nodes.
+
+When requesting the function for a given key, this module will return a
+(function, inputs, outputs) tuple.
+
+functions can be requested with the getFunction function.
 """
 
-from functools 	import partial
-from math 		import floor
-
-import core.compoundnode
-
+import math
 import tools
-import graph
-
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def getFunction(label): pass
-def getCompound(label): pass
-
-# -------------- #
-# Compound Nodes #
-# -------------- #
-
-def unknownCompound(*args):
-	err = "Undefined compound node encountered."
-	tools.error(err)
-
-_compound = {
-	0 	: 	unknownCompound,
-	1 	: 	core.compoundnode.SelectNode,
-	2 	: 	unknownCompound,
-	3 	: 	unknownCompound,
-	4 	: 	unknownCompound,
-	5 	: 	unknownCompound,
-	6 	: 	unknownCompound,
-	7 	: 	unknownCompound,
-	8 	: 	unknownCompound,
-	9 	: 	unknownCompound,
-	10	: 	unknownCompound
-}
-
-def getCompound(label, ctr = "?"):
-	key = int(label)
-	try:
-		node = _compound[key]
-	except KeyError:
-		tools.err("Unkown compound node, " + label + " requested.", ctr)
-	else: 
-		return node
+import functools
 
 # -------------------- #
 # Function Definitions #
 # -------------------- #
 
-def NoOp(*args): 					pass
-def ALimL(arr): 					return 0
-def Not(x):							return not x
-def Mod(l,r):						return l % r
-def Minus(l,r):						return l - r
-def Exp(l, r): 						return l ** r
-def Max(l,r): 						return max(l,r)
-def Min(l,r):						return min(l,r)
-def ASize(arr): 					return len(arr)
-def Less(l,r): 						return l < r
-def Div(l, r): 						return l / r
-def Equal(l, r): 					return l == r
-def NotEqual(l, r): 				return l != r
-def LessEqual(l,r):					return l <= r
-def Neg(arith):						return - arith
-def ARemL(arr): 					return arr[1:]
-def ALimH(arr): 					return len(arr)
-def Bool(int): 						return bool(int)
-def Abs(arith): 					return abs(arith)
-def Floor(int): 					return floor(int)
-def Double(int): 					return int + 0.0
-def AIsEmpty(arr): 					return arr == []
-def RangeGenerate(l, h): 			return range(l,h)
-def Single(val): 					return float(val)
-def Char(int): 						return str(unichr(int))
-def AAddL(arr, el): 				return [el] + arr
-def AElement(arr, idx): 			return arr[idx]
-def ARemH(arr): 					return arr[:len(arr) - 1]
-def AAddH(arr, el): 				return arr[:] + [el]
-def ABuild(bound, *elements): 		return list(elements)
-def BindArguments(func, *args): 	return partial(func, args)
+def NoOp(*args):                return args
+def ALimL(arr):                 return 0
+def Not(x):                     return not x
+def Mod(l,r):                   return l % r
+def Minus(l,r):                 return l - r
+def Exp(l, r):                  return l ** r
+def Max(l,r):                   return max(l,r)
+def Min(l,r):                   return min(l,r)
+def ASize(arr):                 return len(arr)
+def Less(l,r):                  return l < r
+def Div(l, r):                  return l / r
+def Equal(l, r):                return l == r
+def NotEqual(l, r):             return l != r
+def LessEqual(l,r):             return l <= r
+def Neg(arith):                 return - arith
+def ARemL(arr):                 return arr[1:]
+def ALimH(arr):                 return len(arr)
+def Bool(int):                  return bool(int)
+def Abs(arith):                 return abs(arith)
+def Floor(int):                 return math.floor(int)
+def Double(int):                return int + 0.0
+def AIsEmpty(arr):              return arr == []
+def RangeGenerate(l, h):        return range(l,h)
+def Single(val):                return float(val)
+def Char(int):                  return str(unichr(int))
+def AAddL(arr, el):             return [el] + arr
+def AElement(arr, idx):         return arr[idx]
+def ARemH(arr):                 return arr[:len(arr) - 1]
+def AAddH(arr, el):             return arr[:] + [el]
+def ABuild(bound, *elements):   return list(elements)
+def BindArguments(func, *args): return functools.partial(func, args)
 
 def RedLeft(func, acc, mult, filt): 
 	print "TODO: see if foldl is still needed with compound nodes"
@@ -198,105 +161,98 @@ def Times(l,r):
 # Function Mapping #
 # ---------------- #
 
-def unkownFunctionError(name, *args):
-	err = "Undefined IF1 function with name: " + name + " encountered."
-	tools.error(err)
-
-def createPartial(name):
-	return partial(unkownFunctionError, name)
-
 _functions = {
-	100 : AAddH,
-	101 : AAddL,
-	102 : createPartial("AAdjust"),
-	103 : ABuild,
-	104 : ACatenate,
-	105 : AElement,
-	106 : AFill,
-	107 : AGather,
-	108 : AIsEmpty,
-	109 : ALimH,
-	110 : ALimL,
-	111 : ARemH,
-	112 : ARemL,
-	113 : AReplace,
-	114 : AScatter,
-	115 : ASetL,
-	116 : ASize,
-	117 : Abs,
-	118 : BindArguments,
-	119 : Bool,
-	#120 : Call,
-	121 : Char,
-	122 : Div,
-	123 : Double,
-	124 : Equal,
-	125 : Exp,
-	126 : FirstValue,
-	127 : FinalValue,
-	128 : Floor,
-	129 : Int,
-	130 : createPartial("IsError"),
-	131 : Less,
-	132 : LessEqual,
-	133 : Max,
-	134 : Min,
-	135 : Minus,
-	136 : Mod,
-	137 : Neg,
-	138 : NoOp,
-	139 : Not,
-	140 : NotEqual,
-	141 : Plus,
-	142 : RangeGenerate,
-	143 : createPartial("RBuild"),
-	144 : createPartial("RElements"),
-	145 : createPartial("RReplace"),
-	146 : createPartial("RedLeft"),
-	147 : createPartial("RedRight"),
-	148 : createPartial("RedTree"),
-	149 : createPartial("Reduce"),
-	150 : createPartial("RestValues"),
-	151 : Single,
-	152 : Times,
-	153 : createPartial("Trunc"),
-	154 : createPartial("PrefixSize"),
-	155 : createPartial("Error"),
-	156 : createPartial("ReplaceMulti"),
-	157 : createPartial("Convert"),
-	158 : createPartial("CallForeign"),
-	159 : createPartial("AElementN"),
-	160 : createPartial("AElementP"),
-	161 : createPartial("AElementM"),
-	170 : createPartial("AAddLAT"),
-	171 : createPartial("AAddHAT"),
-	172 : createPartial("ABufPartition"),
-	173 : createPartial("ABuildAT"),
-	174 : createPartial("ABufScatter"),
-	175 : createPartial("ACatenateAT"),
-	176 : createPartial("AElementAT"),
-	177 : createPartial("AExtractAT"),
-	178 : createPartial("AFillAT"),
-	179 : createPartial("AGatherAT"),
-	180 : createPartial("ARemHAT"),
-	181 : createPartial("ARemLAT"),
-	182 : createPartial("AReplaceAT"),
-	183 : createPartial("ArrayToBuf"),
-	184 : createPartial("ASetLAT"),
-	185 : createPartial("DefArrayBuf"),
-	186 : createPartial("DefRecordBuf"),
-	187 : createPartial("FinalValueAT"),
-	188 : createPartial("MemAlloc"),
-	189 : createPartial("BufElements"),
-	190 : createPartial("RBuildAT"),
-	191 : createPartial("RecordToBuf"),
-	192 : createPartial("RElementsAT"),
-	193 : createPartial("ReduceAT"),
-	19  : createPartial("ShiftBuffer"),
-	195 : createPartial("ScatterBufPartitions"),
-	196 : createPartial("RedLeftAT"),
-	197 : createPartial("RedRightAT"),
-	198 : createPartial("RedTreeAT")
+	100 : (AAddH, 2, 1),
+	101 : (AAddL, 2, 1),
+#	102 : AAdjust,
+	103 : (ABuild, 2, 1),
+	104 : (ACatenate, 2, 1),
+	105 : (AElement, 2, 1),
+	106 : (AFill, 3, 1),
+	107 : (AGather, 3, 1),
+	108 : (AIsEmpty, 1, 1),
+	109 : (ALimH, 1, 1),
+	110 : (ALimL, 1, 1),
+	111 : (ARemH, 1, 1),
+	112 : (ARemL, 1, 1),
+	113 : (AReplace, 3, 1),
+	114 : (AScatter, 1, 2),
+	115 : (ASetL, 2, 1),
+	116 : (ASize, 1, 1),
+	117 : (Abs, 1, 1),
+	118 : (BindArguments, 2, 1),
+	119 : (Bool, 1, 1),
+#	120 : Call,
+	121 : (Char, 1, 1),
+	122 : (Div, 2, 1),
+	123 : (Double, 1, 1),
+	124 : (Equal, 2, 1),
+	125 : (Exp, 2, 1),
+	126 : (FirstValue, 2, 1),
+	127 : (FinalValue, 2, 1),
+	128 : (Floor, 1, 1),
+	129 : (Int, 1, 1),
+#	130 : IsError,
+	131 : (Less, 2, 1),
+	132 : (LessEqual, 2, 1),
+	133 : (Max, 2, 1),
+	134 : (Min, 2, 1),
+	135 : (Minus, 2, 1),
+	136 : (Mod, 2, 1),
+	137 : (Neg, 1, 1),
+	138 : (NoOp, 1, 1),
+	139 : (Not, 1, 1),
+	140 : (NotEqual, 2, 1),
+	141 : (Plus, 2, 1),
+	142 : (RangeGenerate, 2, 1),
+#	143 : RBuild,
+#	144 : RElements,
+#	145 : RReplace,
+#	146 : RedLeft,
+#	147 : RedRight,
+#	148 : RedTree,
+#	149 : Reduce,
+#	150 : RestValues,
+	151 : (Single, 1, 1),
+	152 : (Times, 2, 1),
+#	153 : Trunc,
+#	154 : PrefixSize,
+#	155 : Error,
+#	156 : ReplaceMulti,
+#	157 : Convert,
+#	158 : CallForeign,
+#	159 : AElementN,
+#	160 : AElementP,
+#	161 : AElementM,
+#	170 : AAddLAT,
+#	171 : AAddHAT,
+#	172 : ABufPartition,
+#	173 : ABuildAT,
+#	174 : ABufScatter,
+#	175 : ACatenateAT,
+#	176 : AElementAT,
+#	177 : AExtractAT,
+#	178 : AFillAT,
+#	179 : AGatherAT,
+#	180 : ARemHAT,
+#	181 : ARemLAT,
+#	182 : AReplaceAT,
+#	183 : ArrayToBuf,
+#	184 : ASetLAT,
+#	185 : DefArrayBuf,
+#	186 : DefRecordBuf,
+#	187 : FinalValueAT,
+#	188 : MemAlloc,
+#	189 : BufElements,
+#	190 : RBuildAT,
+#	191 : RecordToBuf,
+#	192 : RElementsAT,
+#	193 : ReduceAT,
+#	19  : ShiftBuffer,
+#	195 : ScatterBufPartitions,
+#	196 : RedLeftAT,
+#	197 : RedRightAT,
+#	198 : RedTreeAT
 }
 
 def getFunction(label, ctr = "?"):
