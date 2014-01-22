@@ -30,7 +30,7 @@ This module is responsible for parsing edges and literals.
 
 import core.api
 
-import graph
+import environment
 import tools
 import type
 
@@ -39,42 +39,40 @@ import type
 # --------- #
 
 # E <source_node> <port> <destination_node> <port> <type>
-_e_src_idx 		= 1
-_e_srcp_idx 	= 2 
-_e_dest_idx 	= 3
-_e_destp_idx	= 4
-_e_type_idx 	= 5
+_e_src_idx  = 1
+_e_srcp_idx = 2 
+_e_dst_idx  = 3
+_e_dstp_idx = 4
+_e_type_idx = 5
 
 # L destination_node port type string 
-_l_dest_idx		= 1
-_l_destp_idx	= 2
-_l_type_idx 	= 3
-_l_str_idx		= 4
+_l_dst_idx  = 1
+_l_dstp_idx	= 2
+_l_type_idx = 3
+_l_str_idx  = 4
 
 # ----------- #
 # Edge Parser #
 # ----------- #
 
 def parseEdge(arr, ctr):
-	srcKey 		= int(arr[_e_src_idx])
+	srcNode 	= int(arr[_e_src_idx])
 	srcPort 	= int(arr[_e_srcp_idx])
-	destKey 	= int(arr[_e_dest_idx])
-	destPort 	= int(arr[_e_destp_idx])
+	dstNode 	= int(arr[_e_dst_idx])
+	dstPort 	= int(arr[_e_dstp_idx])
 
-	src 	= graph.getNode(srcKey, ctr)
-	dest 	= graph.getNode(destKey, ctr)
-	sport 	= None
-	dport 	= None
+	src 	= None
+	dst 	= None
 
-	if srcKey is 0:
-		sport = src.getInput(srcPort - 1)
-	else:
-		sport = src.getOutput(srcPort - 1)
-	if destKey is 0:
-		dport = dest.getOutput(destPort - 1)
-	else: 
-		dport = dest.getInput(destPort - 1)
-	core.edge.Edge(sport, dport)
+	if srcNode is 0: src = environment.getSubGraphEntry(srcNode)
+	else: src = environment.getInst(srcNode)
+	if dstNode is 0 : dst = environment.getSubGraphExit(dstNode)
+	else: dst = environment.getInst(dstNode)
+
+	if environment.isCallNode(srcNode): srcPort = srcPort - 1
+	if environment.isCallNode(dstNode): dstPort = dstPort - 1
+
+	core.api.addDestination(src, srcPort - 1, dst, dstPort - 1)
 
 # -------------- #
 # Literal Parser #
@@ -99,15 +97,29 @@ def _parseLitStr(str, typ, ctr):
 		err = "Unsupported literal, " + str + " encountered."
 		tools.error(err,ctr) 
 
+def _parseFunctionName(inst, str, ctr):
+	funcPair = environment.getFunctionPair(str)
+	core.api.bindCall(inst, funcPair[0], funcPair[1])
+
 def parseLiteral(arr, ctr):
-	destKey	= int(arr[_l_dest_idx])
-	portKey	= int(arr[_l_destp_idx])
-	typeKey	= int(arr[_l_type_idx])
-	string 	= arr[_l_str_idx]
+	key	    = int(arr[_l_dst_idx])
+	port    = int(arr[_l_dstp_idx])
+	typeKey = int(arr[_l_type_idx])
+	string  = arr[_l_str_idx]
 
-	node = graph.getNode(destKey, ctr)
-	port = node.getInput(portKey - 1)
 	typ = type.getType(typeKey)
-
 	val = _parseLitStr(string, typ, ctr)
-	core.literal.Literal(port, val)
+
+	inst = None
+
+	if key is 0: inst = environment.getSubGraphExit(key)
+	else: inst = environment.getNode(key)
+
+	if environment.isCallNode(key):
+		if (port is 1):
+			_parseFunctionName(inst, val, ctr)
+			return
+		else:
+			port = port - 1
+
+	core.api.addLiteral(inst, port - 1, val)
