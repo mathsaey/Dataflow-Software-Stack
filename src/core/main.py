@@ -29,20 +29,23 @@ import api
 def tOP(a,b):
 	return a + b
 
-def dummy(*any):
-	pass
-
+f1 = api.addForwardInstruction(2, 2)
 k1 = api.addOperationInstruction(tOP, 2, 1)
-k2 = api.addOperationInstruction(dummy, 1, 1)
+k2 = api.addStopInstruction(1)
+api.addDestination(f1, 0, k1, 0)
+api.addDestination(f1, 1, k1, 1)
 api.addDestination(k1, 0, k2, 0)
 
-api.addLiteral(k1, 0, "top")
-api.addLiteral(k1, 1, "kek")
+
+api.addLiteral(f1, 0, "top")
+api.addLiteral(f1, 1, "kek")
 
 api.run()
 
 # Goede encoding van tag vragen
+# run() een token meegeven van stdin
 
-# Afhankelijk van adres door matcher of niet (geheugen in zones opdelen)
-# Hoe omgaan met literals (aangezien niet alles door matcher gaat in echte versie)
-# Voorlopig alles met execute laten werken
+# Later:
+#	- Niet alle tokens door matcher laten gaan, sommige nodes zijn "direct"
+#	- Literals in instruction bewaren
+#	- Strategie vinden voor om te gaan met instructies die alleen literals bevatten (activation token?)

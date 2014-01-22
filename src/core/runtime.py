@@ -34,6 +34,8 @@ The system has 2 responsibilities:
 The following functions can be used by other modules:
 run()
 	Start the runtime
+stop(token)
+	Stop the runtime, the final token is returned to the user
 addToken(token)
 	Add a token to process
 addInstruction(instruction, inputLst)
@@ -67,6 +69,8 @@ def _getInstruction(): return __INSTRUCTION_QUEUE__.get()
 # Run Loop #
 # -------- #
 
+__ACTIVE__ = False
+
 def _processToken(token):
 	contextMatcher.addToken(token)
 
@@ -75,17 +79,26 @@ def _processInstruction(instruction, lst):
 	inst.execute(lst)
 
 def _tokenLoop():
-	while True:
+	while __ACTIVE__:
 		token = _getToken()
 		_processToken(token)
 
 def _instructionLoop():
-	while True:
+	while __ACTIVE__:
 		inst = _getInstruction()
 		_processInstruction(inst[0], inst[1])
 
 def run():
+	global __ACTIVE__
+	__ACTIVE__ = True
 	tokenThread = threading.Thread(target = _tokenLoop)
 	instThread  = threading.Thread(target = _instructionLoop)
 	tokenThread.start()
 	instThread.start()
+	tokenThread.join()
+	instThread.join()
+
+def stop(tokens):
+	print "['RUNTIME']", "Stop signal received", tokens
+	global __ACTIVE__
+	__ACTIVE__ = False
