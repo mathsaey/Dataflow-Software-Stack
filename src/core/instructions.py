@@ -85,8 +85,8 @@ def addOperationInstruction(operation, inputs, outputs):
 def addForwardInstruction(inputs, outputs):
 	return _createInstruction(ForwardInstruction, inputs, [outputs])
 
-def addCallInstruction(inputs, func, funcRet, callRet):
-	return _createInstruction(CallInstruction, inputs, [func, funcRet, callRet])
+def addCallInstruction(inputs, callRet):
+	return _createInstruction(CallInstruction, inputs, [callRet])
 
 def addReturnInstruction(inputs):
 	return _createInstruction(ReturnInstruction, inputs)
@@ -173,10 +173,14 @@ class ForwardInstruction(StaticInstruction):
 		self.sendResults(lst, cont)	
 
 class CallInstruction(DynamicInstruction):
-	def __init__(self, key, inputs, func, funcRet, callRet):
+	def __init__(self, key, inputs, callRet):
 		super(CallInstruction, self).__init__(key, inputs)
-		self.func = func
+		self.func = None
+		self.funcRet = None
 		self.callRet = callRet
+
+	def bind(self, func, funcRet):
+		self.func = func
 		self.funcRet = getInstruction(funcRet)
 
 	def setReturn(self, newCont, oldCont):

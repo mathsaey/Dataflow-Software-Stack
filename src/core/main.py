@@ -40,9 +40,10 @@ api.addDestination(body, 0, fEnd, 0)
 
 # call
 ret = api.addForwardInstruction(1,1)
-call = api.addCallInstruction(2, fStart, fEnd, ret)
+call = api.addCallInstruction(2, ret)
 pEnd = api.addStopInstruction(1)
 
+api.bindCall(call, fStart, fEnd)
 api.addDestination(ret, 0, pEnd, 0)
 
 api.addLiteral(call, 0, "top")
