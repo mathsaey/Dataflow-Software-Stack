@@ -166,6 +166,10 @@ class ForwardInstruction(StaticInstruction):
 	def __init__(self, key, inputs, outputs):
 		super(ForwardInstruction, self).__init__(key, inputs, outputs)
 
+	def rebind(self, inputs):
+		self.__init__(self.key, inputs, inputs)
+		contextMatcher.initLitArr(self.key, self.inputs)
+
 	def execute(self, tokens):
 		print "['INS']", self, "forwarding", tokens
 		lst = map(lambda x : x.datum, tokens)
@@ -181,7 +185,10 @@ class CallInstruction(DynamicInstruction):
 
 	def bind(self, func, funcRet):
 		self.func = func
+		self.inputs = getInstruction(func).inputs
 		self.funcRet = getInstruction(funcRet)
+		getInstruction(self.callRet).rebind(self.funcRet.inputs)
+		contextMatcher.initLitArr(self.key, self.inputs)
 
 	def setReturn(self, newCont, oldCont):
 		self.funcRet.attachReturn(newCont, oldCont, self.callRet)

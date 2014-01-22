@@ -33,13 +33,6 @@ import edge
 import graph
 import tools
 
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def parseFile(loc): pass
-def parseString(str): pass
-
 # ------ #
 # Parser #
 # ------ #
@@ -55,11 +48,12 @@ functions = {
 	'N' : graph.parseNode,
 	'G' : graph.parseGraph,
 	'X' : graph.parseGraph,
-	'{' : graph.parseCompoundStart,
-	'}' : graph.parseCompoundEnd
+	'{' : skipLine,
+	'}' : skipLine
 }
 
 def parseLine(line, ctr = "?"):
+	print line
 	arr = line.split()
 	key = line[0]
 	try:

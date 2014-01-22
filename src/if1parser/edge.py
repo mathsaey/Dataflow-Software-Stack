@@ -69,7 +69,10 @@ def parseEdge(arr, ctr):
 	if dstNode is 0 : dst = environment.getSubGraphExit()
 	else: dst = environment.getInst(dstNode)
 
-	if environment.isCallNode(srcNode): srcPort = srcPort - 1
+	if environment.isCallNode(srcNode):
+		print "sup"
+		srcPort = srcPort - 1
+		src = environment.getInst(-srcNode)
 	if environment.isCallNode(dstNode): dstPort = dstPort - 1
 
 	core.api.addDestination(src, srcPort - 1, dst, dstPort - 1)
@@ -113,7 +116,7 @@ def parseLiteral(arr, ctr):
 	inst = None
 
 	if key is 0: inst = environment.getSubGraphExit()
-	else: inst = environment.getNode(key)
+	else: inst = environment.getInst(key)
 
 	if environment.isCallNode(key):
 		if (port is 1):

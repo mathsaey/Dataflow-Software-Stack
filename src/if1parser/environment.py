@@ -79,9 +79,9 @@ class Frame(object):
 		return self.subgraph[1]
 
 	def addNode(self, node, inst):
-		self.map.update({node : inst})
+		self.nodes.update({node : inst})
 	def getInst(self, node):
-		return self.map[node]
+		return self.nodes[node]
 
 	def addFunction(self, name, enter, exit): 
 		self.functions.update({name : (enter, exit)})
@@ -97,7 +97,7 @@ class Frame(object):
 # Scoping #
 # ------- #
 
-__STACK__ = []
+__STACK__ = [Frame()]
 
 def scope():
 	global __STACK__
@@ -106,7 +106,7 @@ def scope():
 def popScope():
 	if len(__STACK__) > 1:
 		global __STACK__
-		__STACK__ = __STACK__[1:]
+		__STACK__ = __STACK__[:-1]
 
 def getInst(node): 
 	return __STACK__[0].getInst(node)
@@ -134,6 +134,6 @@ def getFunctionPair(name):
 		try:
 			pair = frame.getFunctionPair(name)
 			return pair
-		except KeyError:
-			err = KeyError
+		except KeyError as e:
+			err = e
 	raise err
