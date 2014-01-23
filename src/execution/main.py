@@ -32,7 +32,7 @@ def tOP(a,b):
 # function
 fStart = api.addForwardInstruction()
 body = api.addOperationInstruction(tOP, 2)
-fEnd = api.addReturnInstruction()
+fEnd = api.addContextRestoreInstruction()
 
 api.addDestination(fStart, 0, body, 0)
 api.addDestination(fStart, 1, body, 1)
@@ -40,7 +40,7 @@ api.addDestination(body, 0, fEnd, 0)
 
 # call
 ret = api.addForwardInstruction()
-call = api.addCallInstruction(ret)
+call = api.addContextChangeInstruction(ret)
 pEnd = api.addStopInstruction()
 
 api.bindCall(call, fStart, fEnd)
@@ -72,6 +72,6 @@ api.run()
 # {0: <instructions.OperationInstruction object at 0x10c4951d0>, 
 #-1: <instructions.ForwardInstruction object at 0x10c47fb50>,
 # -5: <instructions.StopInstruction object at 0x10c4d2c90>, 
-# -4: <instructions.CallInstruction object at 0x10c4d2c50>,
+# -4: <instructions.ContextChangeInstruction object at 0x10c4d2c50>,
 #  -3: <instructions.ForwardInstruction object at 0x10c4d2c10>, 
-#  -2: <instructions.ReturnInstruction object at 0x10c4953d0>}
+#  -2: <instructions.ContextRestoreInstruction object at 0x10c4953d0>}

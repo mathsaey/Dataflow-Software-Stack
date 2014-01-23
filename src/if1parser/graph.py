@@ -66,7 +66,7 @@ def parseGraph(arr, ctr):
 	name = arr[_g_name_idx][1:-1]
 
 	entry = core.api.addForwardInstruction()
-	exit = core.api.addReturnInstruction()
+	exit = core.api.addContextRestoreInstruction()
 
 	environment.popScope()
 	environment.addFunction(name, entry, exit)
@@ -87,7 +87,7 @@ def parseStandardNode(key, label):
 
 def parseCallNode(label):
 	ret  = core.api.addForwardInstruction()
-	inst = core.api.addCallInstruction(ret)
+	inst = core.api.addContextChangeInstruction(ret)
 	environment.addNode(label, inst)
 	environment.addNode(-label, ret)
 	environment.addCallNode(label)

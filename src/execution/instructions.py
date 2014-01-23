@@ -83,14 +83,14 @@ def _createInstruction(slotFunc, constructor, args = []):
 def addOperationInstruction(operation, inputs):
 	return _createInstruction(_reserveTLRSlot, OperationInstruction, [inputs, operation])
 
-def addCallInstruction(callRet):
-	return _createInstruction(_reserveSTRSlot, CallInstruction, [callRet])
+def addContextChangeInstruction(callRet):
+	return _createInstruction(_reserveSTRSlot, ContextChangeInstruction, [callRet])
 
 def addForwardInstruction():
 	return _createInstruction(_reserveSTRSlot, ForwardInstruction, [])
 
-def addReturnInstruction():
-	return _createInstruction(_reserveSTRSlot, ReturnInstruction, [])
+def addContextRestoreInstruction():
+	return _createInstruction(_reserveSTRSlot, ContextRestoreInstruction, [])
 
 def addStopInstruction():
 	return _createInstruction(_reserveSTRSlot, StopInstruction, [])
@@ -108,9 +108,6 @@ class AbstractInstruction(object):
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
-
-	def acceptLiteral(self, literal):
-		pass
 
 # -------------- #
 # Receiver Types #
@@ -142,7 +139,6 @@ class StaticInstruction(AbstractInstruction):
 		self.destinations = {}
 
 	def addDestination(self, port, toInst, toPort):
-		lst = []
 		if port in self.destinations:
 			self.destinations[port] += [(toInst, toPort)]
 		else:
@@ -181,8 +177,6 @@ class OperationInstruction(StaticInstruction, TokenListReceiver):
 		self.operation = operation
 		self.inputs    = inputs
 
-	def lift(self, literal): pass
-
 	# Send a list of results
 	# Every element in this list should have a matching output port
 	def sendResults(self, results, cont):
@@ -216,14 +210,14 @@ class ForwardInstruction(StaticInstruction, SingleTokenReceiver):
 		cont = token.tag.cont
 		datum = token.datum
 		self.sendDatum(port, datum, cont)
-		
-# ---------------- #
-# Call Instruction #
-# ---------------- #
 
-class CallInstruction(DynamicInstruction):
+# -------------- #
+# Context Change #
+# -------------- #
+
+class ContextChangeInstruction(DynamicInstruction):
 	def __init__(self, key, callRet):
-		super(CallInstruction, self).__init__(key)
+		super(ContextChangeInstruction, self).__init__(key)
 		self.func = None
 		self.funcRet = None
 		self.callRet = callRet
@@ -251,13 +245,13 @@ class CallInstruction(DynamicInstruction):
 		newCont = self.getNewContext(oldCont)
 		self.modifyAndSend(token, self.func, newCont)
 
-# ------------------ #
-# Return Instruction #
-# ------------------ #
+# --------------- #
+# Context Restore #
+# --------------- #
 
-class ReturnInstruction(DynamicInstruction):
+class ContextRestoreInstruction(DynamicInstruction):
 	def __init__(self, key):
-		super(ReturnInstruction, self).__init__(key)
+		super(ContextRestoreInstruction, self).__init__(key)
 		self.map = {}
 
 	def attachReturn(self, newCont, oldCont, target):

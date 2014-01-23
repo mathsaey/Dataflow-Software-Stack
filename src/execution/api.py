@@ -31,7 +31,7 @@ import instructions
 import runtime
 import tokens
 
-from instructions 	import addOperationInstruction, addForwardInstruction, addStopInstruction, addCallInstruction, addReturnInstruction
+from instructions 	import addOperationInstruction, addForwardInstruction, addStopInstruction, addContextChangeInstruction, addContextRestoreInstruction
 from runtime 		import run
 
 def addLiteral(inst, port, value):
