@@ -58,9 +58,9 @@ __INSTRUCTION_QUEUE__ = Queue.Queue()
 def addToken(token):
 	print "['RUN']", "new token:", token 
 	__TOKEN_QUEUE__.put(token)
-def addInstruction(instruction, inputLst):
+def addInstruction(instruction, input):
 	print "['RUN']", "new instruction is ready:", instruction
-	__INSTRUCTION_QUEUE__.put((instruction, inputLst))
+	__INSTRUCTION_QUEUE__.put((instruction, input))
 
 def _getToken(): return __TOKEN_QUEUE__.get()
 def _getInstruction(): return __INSTRUCTION_QUEUE__.get()
@@ -72,11 +72,15 @@ def _getInstruction(): return __INSTRUCTION_QUEUE__.get()
 __ACTIVE__ = False
 
 def _processToken(token):
-	contextMatcher.addToken(token)
+	inst = token.tag.inst
+	if inst < 0:
+		addInstruction(inst, token)
+	else:
+		contextMatcher.addToken(token)
 
-def _processInstruction(instruction, lst):
+def _processInstruction(instruction, input):
 	inst = instructions.getInstruction(instruction)
-	inst.execute(lst)
+	inst.run(input)
 
 def _tokenLoop():
 	while __ACTIVE__:
@@ -97,8 +101,3 @@ def run():
 	instThread.start()
 	tokenThread.join()
 	instThread.join()
-
-def stop(tokens):
-	print "['RUN']", "Stop signal received", tokens
-	global __ACTIVE__
-	__ACTIVE__ = False

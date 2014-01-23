@@ -41,40 +41,22 @@ initLitArr(inst, inputs)
 		inputs is the amount of inputs the instruction accepts
 """
 
-import copy
 import runtime
+import instructions
 
 # ------- #
-# Storage #
+# Matcher #
 # ------- #
 
-__LITERALS__ = {}
 __TOKENS__ = {}
-
-# -------- #
-# Literals #
-# -------- #
-
-# Create a literal array for instructions
-# Should be called when creating an instruction
-def initLitArr(inst, inputs):
-	arr = [None] * inputs
-	__LITERALS__.update({inst : arr})
-
-# Add a permanent literal to an instruction
-def _addLiteral(inst, port, token):
-	arr = __LITERALS__[inst]
-	arr[port] = token
-
-# --------------- #
-# Standard Tokens #
-# --------------- #
 
 # See if we already have a token array for a given key
 # if not, create one
 def _checkKey(key):
 	if key not in __TOKENS__:
-		arr = copy.copy(__LITERALS__[key[0]])
+		inst = instructions.getInstruction(key[0])
+		inputs = inst.inputs
+		arr = [None] * inputs
 		__TOKENS__.update({key:arr})
 
 # Add a token to an array
@@ -100,9 +82,6 @@ def addToken(token):
 	cont = tag.cont                   
 	port = tag.port                   
 	key  = (inst, cont)               
-
-	if tag.isLiteral():               
-		_addLiteral(inst, port, token) 
 
 	_checkKey(key)                     
 	_updateKeyArr(key, port, token)    

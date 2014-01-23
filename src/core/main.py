@@ -30,18 +30,18 @@ def tOP(a,b):
 	return a + b
 
 # function
-fStart = api.addForwardInstruction(2, 2)
+fStart = api.addForwardInstruction(2)
 body = api.addOperationInstruction(tOP, 2, 1)
-fEnd = api.addReturnInstruction(1)
+fEnd = api.addReturnInstruction()
 
 api.addDestination(fStart, 0, body, 0)
 api.addDestination(fStart, 1, body, 1)
 api.addDestination(body, 0, fEnd, 0)
 
 # call
-ret = api.addForwardInstruction(1,1)
-call = api.addCallInstruction(2, ret)
-pEnd = api.addStopInstruction(1)
+ret = api.addForwardInstruction(1)
+call = api.addCallInstruction(ret)
+pEnd = api.addStopInstruction()
 
 api.bindCall(call, fStart, fEnd)
 api.addDestination(ret, 0, pEnd, 0)
@@ -68,3 +68,10 @@ api.run()
 # => Zorgt ook voor problemen bij bijv call nodes, vrij "hacky" oplossing
 # => Bijv main wordt spontaan uitgevoerd door literals
 # => Echte versie, default nodes die main callen met stdin
+
+# {0: <instructions.OperationInstruction object at 0x10c4951d0>, 
+#-1: <instructions.ForwardInstruction object at 0x10c47fb50>,
+# -5: <instructions.StopInstruction object at 0x10c4d2c90>, 
+# -4: <instructions.CallInstruction object at 0x10c4d2c50>,
+#  -3: <instructions.ForwardInstruction object at 0x10c4d2c10>, 
+#  -2: <instructions.ReturnInstruction object at 0x10c4953d0>}

@@ -40,27 +40,29 @@ add<type>Instruction(args)
 import tokens
 import context
 import runtime
-import contextMatcher
 
 # ------------------ #
 # Instruction Memory #
 # ------------------ #
 
-__CURRENT_KEY__ = 0
-__INSTRUCTION_MEMORY__ 	= []
+__CURRENT_STR_KEY__     = -1
+__CURRENT_TLR_KEY__     = 0
+__INSTRUCTION_MEMORY__ 	= {}
 
 # Add a key in a given slot.
 def _addInstruction(inst):
-	__INSTRUCTION_MEMORY__[inst.key] = inst
+	__INSTRUCTION_MEMORY__.update({inst.key : inst})
 
-# Reserve a slot for an instruction
-# returns the key of the reserved slot
-def _reserveSlot():
-	global __INSTRUCTION_MEMORY__
-	global __CURRENT_KEY__
-	__INSTRUCTION_MEMORY__ += [None]
-	key = __CURRENT_KEY__
-	__CURRENT_KEY__ += 1
+def _reserveSTRSlot():
+	global __CURRENT_STR_KEY__
+	key = __CURRENT_STR_KEY__
+	__CURRENT_STR_KEY__ -= 1
+	return key
+
+def _reserveTLRSlot():
+	global __CURRENT_TLR_KEY__
+	key = __CURRENT_TLR_KEY__
+	__CURRENT_TLR_KEY__ += 1
 	return key
 
 # Get an instruction from the memory
@@ -71,50 +73,74 @@ def getInstruction(key):
 # Instruction creation #
 # -------------------- #
 
-def _createInstruction(constructor, inputs, args = []):
-	key 	= _reserveSlot()
-	args	= [key] + [inputs] + args
+def _createInstruction(slotFunc, constructor, args = []):
+	key 	= slotFunc()
+	args	= [key] + args
 	inst	= constructor(*args)
-	contextMatcher.initLitArr(key, inputs)
 	_addInstruction(inst)
 	return key
 
 def addOperationInstruction(operation, inputs, outputs):
-	return _createInstruction(OperationInstruction, inputs, [outputs, operation])
+	return _createInstruction(_reserveTLRSlot, OperationInstruction, [inputs, outputs, operation])
 
-def addForwardInstruction(inputs, outputs):
-	return _createInstruction(ForwardInstruction, inputs, [outputs])
+def addForwardInstruction(slots):
+	return _createInstruction(_reserveSTRSlot, ForwardInstruction, [slots])
 
-def addCallInstruction(inputs, callRet):
-	return _createInstruction(CallInstruction, inputs, [callRet])
+def addCallInstruction(callRet):
+	return _createInstruction(_reserveSTRSlot, CallInstruction, [callRet])
 
-def addReturnInstruction(inputs):
-	return _createInstruction(ReturnInstruction, inputs)
+def addReturnInstruction():
+	return _createInstruction(_reserveSTRSlot, ReturnInstruction, [])
 
-def addStopInstruction(inputs):
-	return _createInstruction(StopInstruction, inputs)
+def addStopInstruction():
+	return _createInstruction(_reserveSTRSlot, StopInstruction, [])
 
-# ------------ #
-# Instructions #
-# ------------ #
+# -------------------- #
+# Abstract Instruction #
+# -------------------- #
 
 class AbstractInstruction(object):
-	def __init__(self, key, inputs):
+	def __init__(self, key):
 		super(AbstractInstruction, self).__init__()
-		self.key     = key
-		self.inputs  = inputs
+		self.literals = []
+		self.key      = key
 
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
 
-	def execute(self, tokenList):
-		raise NotImplementedError("Execute is an abstract method")
+	def acceptLiteral(self, literal):
+		pass
+
+# -------------- #
+# Receiver Types #
+# -------------- #
+
+class ReceiverType(object):
+	def run(self, input): pass
+	def needsMatcher(self): pass
+
+class SingleTokenReceiver(object):
+	def acceptToken(self, token): pass
+	def needsMatcher(self): return False
+	def run(self, input):
+		self.acceptToken(input)
+
+class TokenListReceiver(object):
+	def execute(self, tokens): pass
+	def needsMatcher(self): return True
+	def run(self, input):
+		self.execute(input)
+
+# ------------------ #
+# Static Instruction #
+# ------------------ #
 
 class StaticInstruction(AbstractInstruction):
-	def __init__(self, key, inputs, outputs):
-		super(StaticInstruction, self).__init__(key, inputs)
-		self.destinations = [[] for x in xrange(0,outputs)]
+	def __init__(self, key, slots):
+		super(StaticInstruction, self).__init__(key)
+		self.destinations = [[] for x in xrange(0,slots)]
+		self.slots = slots
 
 	def addDestination(self, port, toInst, toPort):
 		self.destinations[port] += [(toInst, toPort)]
@@ -128,28 +154,38 @@ class StaticInstruction(AbstractInstruction):
 			token 	= tokens.createToken(inst, port, cont, datum)
 			runtime.addToken(token)
 
+# ------------------- #
+# Dynamic Instruction #
+# ------------------- #
+
+class DynamicInstruction(AbstractInstruction, SingleTokenReceiver):
+	def  modifyAndSend(self, token, inst, cont):
+		token.tag.inst = inst
+		token.tag.cont = cont
+		runtime.addToken(token)
+
+# ---------- #
+# Operations #
+# ---------- #
+
+"""
+Takes a list of tokens as input for it's internal function
+"""
+
+class OperationInstruction(StaticInstruction, TokenListReceiver):
+	def __init__(self, key, inputs, outputs, operation):
+		super(OperationInstruction, self).__init__(key, outputs)
+		self.operation = operation
+		self.inputs    = inputs
+
+	def lift(self, literal): pass
+
 	# Send a list of results
 	# Every element in this list should have a matching output port
 	def sendResults(self, results, cont):
 		for i in xrange(0, len(results)):
 			res = results[i]
 			self.sendDatum(i, res, cont)
-
-class DynamicInstruction(AbstractInstruction):
-	def passModifiedToken(self, tokens, inst, cont):
-		for token in tokens:
-			token.tag.inst = inst
-			token.tag.cont = cont
-			runtime.addToken(token)
-
-# ---------- #
-# Operations #
-# ---------- #
-
-class OperationInstruction(StaticInstruction):
-	def __init__(self, key, inputs, outputs, operation):
-		super(OperationInstruction, self).__init__(key, inputs, outputs)
-		self.operation = operation
 
 	def execute(self, tokens):
 		print "['INS']", self, "executing", tokens
@@ -158,69 +194,84 @@ class OperationInstruction(StaticInstruction):
 		cont = tokens[0].tag.cont
 		self.sendResults([res], cont)		
 
-# --------- #
-# Functions #
-# --------- #
+# ------------------- #
+# Forward Instruction #
+# ------------------- #
 
-class ForwardInstruction(StaticInstruction):
-	def __init__(self, key, inputs, outputs):
-		super(ForwardInstruction, self).__init__(key, inputs, outputs)
+"""
+A forward instruction simply accepts a token and forwards it to 
+it's destinations.
+"""
 
-	def rebind(self, inputs):
-		self.__init__(self.key, inputs, inputs)
-		contextMatcher.initLitArr(self.key, self.inputs)
+class ForwardInstruction(StaticInstruction, SingleTokenReceiver):
+	def __init__(self, key, slots):
+		super(ForwardInstruction, self).__init__(key, slots)
 
-	def execute(self, tokens):
-		print "['INS']", self, "forwarding", tokens
-		lst = map(lambda x : x.datum, tokens)
-		cont = tokens[0].tag.cont
-		self.sendResults(lst, cont)	
+	def acceptToken(self, token):
+		print "['INS']", self, "forwarding", token
+		port = token.tag.port
+		cont = token.tag.cont
+		datum = token.datum
+		self.sendDatum(port, datum, cont)
+
+# ---------------- #
+# Call Instruction #
+# ---------------- #
 
 class CallInstruction(DynamicInstruction):
-	def __init__(self, key, inputs, callRet):
-		super(CallInstruction, self).__init__(key, inputs)
+	def __init__(self, key, callRet):
+		super(CallInstruction, self).__init__(key)
 		self.func = None
 		self.funcRet = None
 		self.callRet = callRet
+		self.contexts = {}
 
 	def bind(self, func, funcRet):
 		self.func = func
-		self.inputs = getInstruction(func).inputs
 		self.funcRet = getInstruction(funcRet)
-		getInstruction(self.callRet).rebind(self.funcRet.inputs)
-		contextMatcher.initLitArr(self.key, self.inputs)
 
 	def setReturn(self, newCont, oldCont):
 		self.funcRet.attachReturn(newCont, oldCont, self.callRet)
 
-	def execute(self, tokens):
-		print "['INS']", self, "calling", self.func, "with:", tokens
-		newCont = context.createContext()
-		oldCont = tokens[0].tag.cont
-		self.setReturn(newCont, oldCont)
-		self.passModifiedToken(tokens, self.func, newCont)	
+	def getNewContext(self, oldCont):
+		if oldCont not in self.contexts:
+			newCont = context.createContext()
+			self.contexts.update({oldCont : newCont})
+			self.setReturn(newCont, oldCont)
+			return newCont
+		else:
+			return self.contexts[oldCont]
+
+	def acceptToken(self, token):
+		print "['INS']", self, "calling", self.func, "with:", token
+		oldCont = token.tag.cont
+		newCont = self.getNewContext(oldCont)
+		self.modifyAndSend(token, self.func, newCont)
+
+# ------------------ #
+# Return Instruction #
+# ------------------ #
 
 class ReturnInstruction(DynamicInstruction):
-	def __init__(self, key, inputs):
-		super(ReturnInstruction, self).__init__(key, inputs)
+	def __init__(self, key):
+		super(ReturnInstruction, self).__init__(key)
 		self.map = {}
 
 	def attachReturn(self, newCont, oldCont, target):
 		self.map.update({newCont : (target, oldCont)})
 
-	def execute(self, tokens):
-		print "['INS']", self, "returning", tokens
-		pair = self.map[tokens[0].tag.cont]
-		self.passModifiedToken(tokens, pair[0], pair[1])
+	def acceptToken(self, token):
+		print "['INS']", self, "returning", token
+		pair = self.map[token.tag.cont]
+		self.modifyAndSend(token, pair[0], pair[1])
 
-# ----- #
-# Other #
-# ----- #
+# ---------------- #
+# Stop Instruction #
+# ---------------- #
 
 class StopInstruction(DynamicInstruction):
-	def __init__(self, key, inputs):
-		super(StopInstruction, self).__init__(key, inputs)
+	def __init__(self, key):
+		super(StopInstruction, self).__init__(key)
 
-	def execute(self, tokens):
-		print "['INS']", self, "stopping"
-		runtime.stop(tokens)
+	def acceptToken(self, token):
+		print "['INS']", self, "stopping with token:", token
