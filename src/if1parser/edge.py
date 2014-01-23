@@ -70,7 +70,6 @@ def parseEdge(arr, ctr):
 	else: dst = environment.getInst(dstNode)
 
 	if environment.isCallNode(srcNode):
-		print "sup"
 		srcPort = srcPort - 1
 		src = environment.getInst(-srcNode)
 	if environment.isCallNode(dstNode): dstPort = dstPort - 1

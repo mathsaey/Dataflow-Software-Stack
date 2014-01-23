@@ -63,14 +63,10 @@ _ce_lis_idx		= 4
 # ------------ #
 
 def parseGraph(arr, ctr):
-	typeIdx = int(arr[_g_type_idx])
-	sig = type.getType(typeIdx)
-	inputs = len(sig.args.list)
-	outputs = len(sig.res.list)
 	name = arr[_g_name_idx][1:-1]
 
-	entry = core.api.addForwardInstruction(inputs, inputs)
-	exit = core.api.addReturnInstruction(outputs)
+	entry = core.api.addForwardInstruction()
+	exit = core.api.addReturnInstruction()
 
 	environment.popScope()
 	environment.addFunction(name, entry, exit)
@@ -85,14 +81,13 @@ def parseStandardNode(key, label):
 	tuple 	  = operations.getFunction(key)
 	operation = tuple[0]
 	inputs    = tuple[1]
-	outputs   = tuple[2]
 
-	inst = core.api.addOperationInstruction(operation, inputs, outputs)
+	inst = core.api.addOperationInstruction(operation, inputs)
 	environment.addNode(label, inst)
 
 def parseCallNode(label):
-	ret  = core.api.addForwardInstruction(1,1)
-	inst = core.api.addCallInstruction(1, ret)
+	ret  = core.api.addForwardInstruction()
+	inst = core.api.addCallInstruction(ret)
 	environment.addNode(label, inst)
 	environment.addNode(-label, ret)
 	environment.addCallNode(label)
