@@ -30,8 +30,8 @@ def tOP(a,b):
 	return a + b
 
 # function
-fStart = api.addForwardInstruction(2)
-body = api.addOperationInstruction(tOP, 2, 1)
+fStart = api.addForwardInstruction()
+body = api.addOperationInstruction(tOP, 2)
 fEnd = api.addReturnInstruction()
 
 api.addDestination(fStart, 0, body, 0)
@@ -39,7 +39,7 @@ api.addDestination(fStart, 1, body, 1)
 api.addDestination(body, 0, fEnd, 0)
 
 # call
-ret = api.addForwardInstruction(1)
+ret = api.addForwardInstruction()
 call = api.addCallInstruction(ret)
 pEnd = api.addStopInstruction()
 

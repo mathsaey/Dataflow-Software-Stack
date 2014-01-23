@@ -43,6 +43,7 @@ addInstruction(instruction, inputLst)
 	the inputLst as argument
 """
 
+import log
 import Queue
 import threading
 import instructions
@@ -56,10 +57,10 @@ __TOKEN_QUEUE__ = Queue.Queue()
 __INSTRUCTION_QUEUE__ = Queue.Queue()
 
 def addToken(token):
-	print "['RUN']", "new token:", token 
+	log.log("RUN", "new token:", token)
 	__TOKEN_QUEUE__.put(token)
 def addInstruction(instruction, input):
-	print "['RUN']", "new instruction is ready:", instruction
+	log.log("RUN", "new instruction is ready:", instruction)
 	__INSTRUCTION_QUEUE__.put((instruction, input))
 
 def _getToken(): return __TOKEN_QUEUE__.get()
