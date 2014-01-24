@@ -28,7 +28,7 @@
 This module is responsible for parsing edges and literals.
 """
 
-import core.api
+import execution.api
 
 import environment
 import tools
@@ -74,7 +74,7 @@ def parseEdge(arr, ctr):
 		src = environment.getInst(-srcNode)
 	if environment.isCallNode(dstNode): dstPort = dstPort - 1
 
-	core.api.addDestination(src, srcPort - 1, dst, dstPort - 1)
+	execution.api.addDestination(src, srcPort - 1, dst, dstPort - 1)
 
 # -------------- #
 # Literal Parser #
@@ -101,7 +101,7 @@ def _parseLitStr(str, typ, ctr):
 
 def _parseFunctionName(inst, str, ctr):
 	funcPair = environment.getFunctionPair(str)
-	core.api.bindCall(inst, funcPair[0], funcPair[1])
+	execution.api.bindCall(inst, funcPair[0], funcPair[1])
 
 def parseLiteral(arr, ctr):
 	key	    = int(arr[_l_dst_idx])
@@ -124,4 +124,4 @@ def parseLiteral(arr, ctr):
 		else:
 			port = port - 1
 
-	core.api.addLiteral(inst, port - 1, val)
+	execution.api.addLiteral(inst, port - 1, val)

@@ -1,6 +1,6 @@
-# main.py
+# subgraphs.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,18 +24,31 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This module serves as a top level file to access the other modules
-"""
+##
+# \file subgraphs.py
+# \namespace intermediate.subgraphs
+# \brief SubGraph definitions
+# 
+# IGR subgraphs. 
+##
 
-import if1parser.environment
-import if1parser.parser
-import execution
+##
+# SubGraph
+# 
+# An IGR subgraph is either a function body,
+# or a part of the compound node. 
+##
+class SubGraph(object):
 
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
+	def __init__(self, entry, exit, name):
+		super(SubGraph, self).__init__()
+		self.name = name
+		self.entry = entry
+		self.exit = exit
 
-if1parser.parser.parseFile(loc)
-execution.run()
+	##
+	# Printable subgraph
+	##
+	def __str__(self):
+		pair = "(" + str(self.entry) + "|" + str(self.exit) + ")"
+		return "'" + self.name + "'" + "subgraph" + pair

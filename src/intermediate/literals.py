@@ -1,6 +1,6 @@
-# main.py
+# literal.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,18 +24,34 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This module serves as a top level file to access the other modules
-"""
+##
+# \file literals.py
+# \namespace intermediate.literals
+# \brief Literal definitions
+# 
+# IGR Literals
+##
 
-import if1parser.environment
-import if1parser.parser
-import execution
-
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
-
-if1parser.parser.parseFile(loc)
-execution.run()
+##
+# Literal
+#
+# Literals are values inherent to the program.
+# Examples include constants in arithmetic expressions,
+# function names, strings, ...
+# 
+# Every literal has a value and a target, which is an intermediate::ports::InputPort.
+##
+class Literal(object):
+	
+	##
+	# Create a new literal.
+	#
+	# @param value
+	#		The value of the literal
+	# @param destination
+	#		The destination of the literal value
+	##
+	def __init__(self, value, destination):
+		super(Literal, self).__init__()
+		self.value = value
+		self.destination = destination

@@ -1,6 +1,6 @@
-# main.py
+# __init__.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,18 +24,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This module serves as a top level file to access the other modules
-"""
-
-import if1parser.environment
-import if1parser.parser
-import execution
-
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
-
-if1parser.parser.parseFile(loc)
-execution.run()
+##
+# \package intermediate
+# \author Mathijs Saey
+# 
+# \brief DVM Intermediate Graph Representation
+#
+# This python module contains the DVM intermediate form, called 
+# Intermediate Graph Representation (IGR).
+#
+# This form is produced by the parser and is the target of some
+# optimizations. 
+##

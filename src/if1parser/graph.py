@@ -28,7 +28,7 @@
 This module defines the functions that allow us to parse nodes and subgraphs
 """
 
-import core.api
+import execution.api
 import environment
 
 import operations
@@ -65,8 +65,8 @@ _ce_lis_idx		= 4
 def parseGraph(arr, ctr):
 	name = arr[_g_name_idx][1:-1]
 
-	entry = core.api.addForwardInstruction()
-	exit = core.api.addContextRestoreInstruction()
+	entry = execution.api.addForwardInstruction()
+	exit = execution.api.addContextRestoreInstruction()
 
 	environment.popScope()
 	environment.addFunction(name, entry, exit)
@@ -82,12 +82,12 @@ def parseStandardNode(key, label):
 	operation = tuple[0]
 	inputs    = tuple[1]
 
-	inst = core.api.addOperationInstruction(operation, inputs)
+	inst = execution.api.addOperationInstruction(operation, inputs)
 	environment.addNode(label, inst)
 
 def parseCallNode(label):
-	ret  = core.api.addForwardInstruction()
-	inst = core.api.addContextChangeInstruction(ret)
+	ret  = execution.api.addForwardInstruction()
+	inst = execution.api.addContextChangeInstruction(ret)
 	environment.addNode(label, inst)
 	environment.addNode(-label, ret)
 	environment.addCallNode(label)
