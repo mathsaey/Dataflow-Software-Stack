@@ -46,9 +46,9 @@ class Literal(object):
 	##
 	# Create a new literal.
 	#
-	# @param value
+	# \param value
 	#		The value of the literal
-	# @param destination
+	# \param destination
 	#		The destination of the literal value
 	##
 	def __init__(self, value, destination):

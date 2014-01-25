@@ -51,27 +51,3 @@ api.addLiteral(call, 1, "kek")
 
 api.run()
 
-# Goede encoding van tag vragen
-# run() een token meegeven van stdin
-# Verschillen met "sisal" if1 => parser
-# => Vooral in arrays
-# => Onbekend aantal inputs met context matcher?
-# => Linker?
-
-# dynamische calls? (in if1 is functie naam eig een gewone input)
-# nu => ik sta alleen literals als calls toe
-
-# Later:
-#	- Niet alle tokens door matcher laten gaan, sommige nodes zijn "direct"
-#	- Literals in instruction bewaren
-#	- Strategie vinden voor om te gaan met instructies die alleen literals bevatten (activation token?)
-# => Zorgt ook voor problemen bij bijv call nodes, vrij "hacky" oplossing
-# => Bijv main wordt spontaan uitgevoerd door literals
-# => Echte versie, default nodes die main callen met stdin
-
-# {0: <instructions.OperationInstruction object at 0x10c4951d0>, 
-#-1: <instructions.ForwardInstruction object at 0x10c47fb50>,
-# -5: <instructions.StopInstruction object at 0x10c4d2c90>, 
-# -4: <instructions.ContextChangeInstruction object at 0x10c4d2c50>,
-#  -3: <instructions.ForwardInstruction object at 0x10c4d2c10>, 
-#  -2: <instructions.ContextRestoreInstruction object at 0x10c4953d0>}

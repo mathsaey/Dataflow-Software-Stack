@@ -1,6 +1,6 @@
 # tools.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,15 +24,47 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-""" 
-This module contains a few tools that don't belong in any other module
-"""
+##
+# \file tools.py
+# \namespace if1parser.tools
+# \brief Parser Frontend
+#
+# This module contains a few tools that 
+# are used when parsing if1
+##
 
 import sys
 
+##
+# Print a warning to stdout.
+#
+# \param msg
+#		The message to print
+# \param line
+#		The line where the warning was encountered
+#		"?" is used if no line is provided.
+#
+# \todo Make this pass an error to the host application
+#		when this runs embedded
+##
 def warning(msg, line = "?"):
-	print "Warning\t at line:", line, "\t:", msg
+	print >> sys.stderr, "Warning\t at line:", line, "\t:", msg
 
+##
+# Print an error to stdout.
+# Quits the application after printing.
+# You should only use this if correct execution is impossible.
+# use warning() in other cases.
+#
+# \param msg
+#		The message to print
+# \param line
+#		The line where the warning was encountered
+#		"?" is used if no line is provided.
+#
+# \todo Make this pass an error to the host application
+#		when this runs embedded
+##
 def error(msg, line = "?"):
-	print "Error\t at line:", line, "\t:", msg
+	print >> sys.stderr, "Error\t at line:", line, "\t:", msg
 	sys.exit()

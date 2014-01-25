@@ -1,6 +1,6 @@
 # parser.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,9 +24,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This file serves as the top level access point for the parser.
-"""
+##
+# \file parser.py
+# \namespace if1parser.parser
+# \brief Main parser loop
+# 
+# This module is the main parser interface.
+# It is responsible for scanning the type of the IF1
+# instructions and calling the correct module for this type. 
+##
 
 import type
 import edge
@@ -37,10 +43,14 @@ import tools
 # Parser #
 # ------ #
 
-def skipLine(str, ctr):
-	pass
+## Skip a line #
+def skipLine(str, ctr): pass
 
-functions = {
+##
+# Parser values and the function to call when
+# they are encountered
+##
+__FUNCTIONS__ = {
 	'C' : skipLine,
 	'T' : type.parseType,
 	'E' : edge.parseEdge,
@@ -52,20 +62,38 @@ functions = {
 	'}' : skipLine
 }
 
+##
+# Parse a single if1 line.
+#
+# \param line
+#		The string of the line to parse
+# \param ctr
+#		The line number of the current line,
+#		used for error handling.
+##
 def parseLine(line, ctr = "?"):
 	arr = line.split()
 	key = line[0]
 	try:
-		func = functions[key]
+		func = __FUNCTIONS__[key]
 	except KeyError:
-		error = "Unrecognized line type: " + key
-		tools.error(error, ctr)
+		warn = "Unrecognized line type: " + key
+		tools.warning(warn, ctr)
 	except Exception, e:
 		error = "Exception: '" + str(e) + "' while parsing: '" + line + "'"
 		tools.error(error, ctr)
 	else:
 		func(arr, ctr)
 
+##
+# Parse a complete IF1 string.
+# This function simply splits the file 
+# based on the newlines and passes each
+# line to parseLine()
+#
+# \param str
+#		The string
+##
 def parseString(str):
 	ctr = 1
 	lines = str.split("\n")
@@ -74,6 +102,14 @@ def parseString(str):
 			parseLine(line, ctr)
 			ctr += 1
 
+##
+# Parses an IF1 file.
+# Simply extracts the contents of the
+# file before passing it to parseString()
+#
+# \param loc
+#		The location of the file.
+##
 def parseFile(loc):
 	file = open(loc, 'r')
 	parseString(file.read())

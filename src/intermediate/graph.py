@@ -56,11 +56,11 @@ def _bindName(name, graph):
 ##
 # Create a new subgraph
 #
-# @param inputs
+# \param inputs
 #		The amount of inputs the subgraph accepts
-# @param outputs
+# \param outputs
 # 		The amount of data the subgraph returns
-# @return
+# \return
 # 		The entry exit pair belonging to the subgraph
 #
 def createSubGraph(name , inputs, outputs):
@@ -76,43 +76,43 @@ def createSubGraph(name , inputs, outputs):
 ##
 # Connect 2 ports with an implicit edge.
 #
-# @param srcNode
+# \param srcNode
 #		The node that provides data
-# @param srcPort
+# \param srcPort
 #		The idx of the output port on src
-# @param dstNode
+# \param dstNode
 #		The node that accepts the data
-# @param dstPort
+# \param dstPort
 #		The idx of the port on dst that accepts the data.
 ##
 def connect(srcNode, srcPort, dstNode, dstPort):
-	srcP = srcNode.outputs[srcPort]
-	dstP = dstNode.inputs[dstNode]
+	srcP = srcNode.getOutputPort(srcPort)
+	dstP = dstNode.getInputPort(dstNode)
 	srcP.addTarget(dstP)
 	dstP.attach(srcP)
 
 ##
 # Add a literal to a port.
 #
-# @param value
+# \param value
 #		The value of the literal
-# @param dstNode
+# \param dstNode
 #		The node that the literal targets
-# @param dstPort
+# \param dstPort
 #		The idx of the port on this node
 ##
 def addLiteral(value, dstNode, dstPort):
-	dest = dstNode.inputs[dstPort]
+	dest = dstNode.getInputPort(dstPort)
 	lit = literals.Literal(value, dest)
 	dest.attach(lit)
 
 ##
 # Create an operation node
 #
-# @param subGraph
+# \param subGraph
 #		The subGraph that this node is part of
 #
-# @param operation
+# \param operation
 #		The operation that this node performs
 ##
 def createOperationNode(subGraph, operation):
@@ -121,9 +121,9 @@ def createOperationNode(subGraph, operation):
 ##
 # Create a Compound nodes
 #
-# @param subGraph
+# \param subGraph
 #		The subgraph this node belongs too
-# @param subGraphss
+# \param subGraphss
 #		The subgraphs that are part of this compound node
 ##
 def createCompoundNode(subGraph, subGraphs):
@@ -132,9 +132,9 @@ def createCompoundNode(subGraph, subGraphs):
 ##
 # Create a call node.
 #
-# @param subGraph
+# \param subGraph
 # 		the subgraph this node belongs to
-# @param inputs
+# \param inputs
 #		the amount of inputs this 
 ##
 def createCallNode(subGraph):

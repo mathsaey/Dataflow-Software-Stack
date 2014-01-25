@@ -43,9 +43,9 @@ class Port(object):
 	##
 	# Creates a new port for a node and an index
 	#
-	# @param node
+	# \param node
 	#		The node that this port belongs to
-	# @param idx
+	# \param idx
 	# 		The index that this node belongs to
 	##
 	def __init__(self, node, idx):
@@ -56,7 +56,7 @@ class Port(object):
 	##
 	# Create a string version of the port.
 	#
-	# @return
+	# \return
 	#	A string representing this port.
 	# 	This string should not be used to recreate this port.
 	##
@@ -79,7 +79,7 @@ class InputPort(Port):
 	# Attach this port to another port or literal
 	# This is an implicit edge representation.
 	# 
-	# @param source
+	# \param source
 	#		The source of the connection, a port or literal.
 	##
 	def attach(self, source):
@@ -102,7 +102,7 @@ class OutputPort(Port):
 	# Add a target to this output port,
 	# has to be an input port.
 	#
-	# @param target
+	# \param target
 	#		The target to add.
 	##
 	def addTarget(self, target):

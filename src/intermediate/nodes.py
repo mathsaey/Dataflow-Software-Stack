@@ -66,7 +66,7 @@ class Node(object):
 	##
 	# Create a new node.
 	#
-	# @param subGraph
+	# \param subGraph
 	#		The subgraph this node belongs to.
 	##
 	def __init__(self, subGraph):
@@ -81,6 +81,32 @@ class Node(object):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
 
+	## 
+	# Fetch an element from a list and expand the list if it
+	# is not long enough. 
+	# 
+	# This allows us to find out the exact amount of inputs and
+	# outputs that a certain node produces even if we cannot know
+	# this in advance (for instance, call nodes).
+	#
+	# \param lst
+	#		The list from which we want to grab an element
+	# \param var
+	#		The var to update if we had to expand the list
+	# \param constructor
+	#		The constructor to use when expanding the list.
+	# \param idx
+	#		The idx of the element we want
+	##
+	def getFromList(self, lst, var, constructor, idx):
+		try:
+			res = lst[idx]
+			return res
+		except IndexError:
+			var += 1
+			lst += [constructor(self, idx)]
+			return self.getFromList(lst, constructor, idx)
+
 # --------------------------- #
 # Graph entry and exit points #
 # --------------------------- #
@@ -94,17 +120,25 @@ class AbstractSubGraphNode(Node):
 	##
 	# Initialize a subgraphnode. 
 	#
-	# @param subGraph
+	# \param subGraph
 	#		The graph this node belongs to
-	# @param slots
+	# \param slots
 	#		The amount of ports this node has.
-	# @param constructor
+	# \param constructor
 	# 		The constructor for the port type of the slots
 	##
 	def __init__(self, subGraph, slots, constructor):
 		super(SubGraphEntryNode, self).__init__(self, subGraph)
 		self.slots = slots
 		self.ports = [constructor(self, i) for i in xrange(0,slots)]
+
+	##
+	# Get a port, extend the list if it's out of bounds.
+	# 
+	# \param idx
+	#		The idx of the port
+	##
+	def getPort(self, idx): pass
 
 ##
 # Entry point of a subgraph.
@@ -117,8 +151,11 @@ class AbstractSubGraphNode(Node):
 ##
 class SubGraphEntryNode(AbstractSubGraphNode): 
 
-	def __init__(self, subGraph, slots):
+	def __init__(self, subGraph, slots = 0):
 		super(SubGraphEntryNode, self).__init__(self, subGraph, ports.OutputPort)
+
+	def getPort(self, idx):
+		self.getFromList(self.slotList, self.slots, ports.OutputPort, idx)
 
 ##
 # Exit point of a subgraph.
@@ -130,8 +167,12 @@ class SubGraphEntryNode(AbstractSubGraphNode):
 ##
 class SubGraphExitNode(AbstractSubGraphNode): 
 
-	def __init__(self, subGraph, slots):
+	def __init__(self, subGraph, slots = 0):
 		super(SubGraphExitNode, self).__init__(self, subGraph, ports.InputPort)
+
+	def getPort(self, idx):
+		self.getFromList(self.slotList, self.slots, ports.InputPort, idx)
+
 
 # -------------- #
 # Standard Nodes #
@@ -148,11 +189,11 @@ class StandardNode(Node):
 	##
 	# Initialize a node.
 	#
-	# @param subGraph
+	# \param subGraph
 	#		The subGraph this node belongs to.
-	# @param inputs
+	# \param inputs
 	#		The amount of inputs this node accepts.
-	# @param outputs 
+	# \param outputs 
 	#		The amount of outputs this node produces.
 	##
 	def __init__(self, subGraph):
@@ -162,52 +203,26 @@ class StandardNode(Node):
 		self.inputPorts  = []
 		self.OutputPorts = []
 
-	## 
-	# Fetch an element from a list and expand it if the list
-	# is not long enough. 
-	# 
-	# This allows us to find out the exact amount of inputs and
-	# outputs that a certain node produces even if we cannot know
-	# this in advance (for instance, call nodes).
-	#
-	# @param lst
-	#		The list from which we want to grab an element
-	# @param var
-	#		The var to update if we had to expand the list
-	# @param constructor
-	#		The constructor to use when expanding the list.
-	# @param idx
-	#		The idx of the element we want
-	##
-	def getFromList(self, lst, var, constructor, idx):
-		try:
-			res = lst[idx]
-			return res
-		except IndexError:
-			var += 1
-			lst += [constructor(self, idx)]
-			return self.getFromList(lst, constructor, idx)
-
 	##
 	# Gets an input port
 	#
-	# @param idx
+	# \param idx
 	# 		The idx of the port you need
-	# @return
+	# \return
 	#		The port at idx
 	##
-	def getInput(self, idx):
+	def getInputPort(self, idx):
 		self.getFromList(self.inputPorts, self.inputs, ports.InputPort, idx)
 
 	##
 	# Gets an output port
 	#
-	# @param idx
+	# \param idx
 	# 		The idx of the port you need
-	# @return
+	# \return
 	#		The port at idx
 	##
-	def getOutput(self, idx):
+	def getOutputPort(self, idx):
 		self.getFromList(self.OutputPorts, self.outputs, ports.OutputPort, idx)
 
 

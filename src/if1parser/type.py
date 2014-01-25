@@ -24,11 +24,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-""" 
-This module defines the functions that allow
-us to parse type declarations and to retrieve
-the type that corresponds to a certain label.
-"""
 
 import tools
 
