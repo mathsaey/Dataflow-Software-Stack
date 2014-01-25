@@ -96,9 +96,9 @@ def getSubGraph(name):
 #		return values of this subgraph.
 #
 def createSubGraph(name , inputs, outputs):
-	subGraph = subgraphs.SubGraph(None, None, name)
-	entry = nodes.SubGraphEntryNode(subGraph, inputs)
-	exit  = nodes.SubGraphExitNodes(subGraph, outputs)
+	subGraph = subgraph.SubGraph(None, None, name)
+	entry = node.SubGraphEntryNode(subGraph, inputs)
+	exit  = node.SubGraphExitNodes(subGraph, outputs)
 	subGraph.entry = entry
 	subGraph.exit = exit
 	graph.addSubGraph(subGraph)
