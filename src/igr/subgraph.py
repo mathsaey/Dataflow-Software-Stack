@@ -25,8 +25,8 @@
 # THE SOFTWARE.
 
 ##
-# \file subgraphs.py
-# \namespace intermediate.subgraphs
+# \file subgraph.py
+# \namespace igr.subgraph
 # \brief SubGraph definitions
 # 
 # IGR subgraphs. 

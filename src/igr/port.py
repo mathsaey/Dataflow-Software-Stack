@@ -25,8 +25,8 @@
 # THE SOFTWARE.
 
 ##
-# \file ports.py
-# \namespace intermediate.ports
+# \file port.py
+# \namespace igr.port
 # \brief Port definitions
 #
 # Defines the various port types of IGR

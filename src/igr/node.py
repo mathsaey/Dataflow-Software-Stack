@@ -25,14 +25,14 @@
 # THE SOFTWARE.
 
 ##
-# \file nodes.py
-# \namespace intermediate.nodes
+# \file node.py
+# \namespace igr.node
 # \brief Node definitions
 # 
 # IGR node types. 
 ##
 
-import ports
+import port
 
 # ------------------ #
 # Unique Identifiers #
@@ -152,10 +152,10 @@ class AbstractSubGraphNode(Node):
 class SubGraphEntryNode(AbstractSubGraphNode): 
 
 	def __init__(self, subGraph, slots = 0):
-		super(SubGraphEntryNode, self).__init__(self, subGraph, ports.OutputPort)
+		super(SubGraphEntryNode, self).__init__(self, subGraph, port.OutputPort)
 
 	def getPort(self, idx):
-		self.getFromList(self.slotList, self.slots, ports.OutputPort, idx)
+		self.getFromList(self.slotList, self.slots, port.OutputPort, idx)
 
 ##
 # Exit point of a subgraph.
@@ -168,10 +168,10 @@ class SubGraphEntryNode(AbstractSubGraphNode):
 class SubGraphExitNode(AbstractSubGraphNode): 
 
 	def __init__(self, subGraph, slots = 0):
-		super(SubGraphExitNode, self).__init__(self, subGraph, ports.InputPort)
+		super(SubGraphExitNode, self).__init__(self, subGraph, port.InputPort)
 
 	def getPort(self, idx):
-		self.getFromList(self.slotList, self.slots, ports.InputPort, idx)
+		self.getFromList(self.slotList, self.slots, port.InputPort, idx)
 
 
 # -------------- #
@@ -212,7 +212,7 @@ class StandardNode(Node):
 	#		The port at idx
 	##
 	def getInputPort(self, idx):
-		self.getFromList(self.inputPorts, self.inputs, ports.InputPort, idx)
+		self.getFromList(self.inputPorts, self.inputs, port.InputPort, idx)
 
 	##
 	# Gets an output port
@@ -223,7 +223,7 @@ class StandardNode(Node):
 	#		The port at idx
 	##
 	def getOutputPort(self, idx):
-		self.getFromList(self.OutputPorts, self.outputs, ports.OutputPort, idx)
+		self.getFromList(self.OutputPorts, self.outputs, port.OutputPort, idx)
 
 
 ##

@@ -26,7 +26,7 @@
 
 ##
 # \file graph.py
-# \namespace intermediate.graph
+# \namespace igr.graph
 # \brief Complete program
 # 
 # This defines the complete program graph. All of the subgraphs
@@ -46,96 +46,43 @@ __SUBGRAPHS__ = []
 ## The function names, combined with the subgraph they map to.
 __FUNCTION_NAMES__ = {}
 
-
-def _addSubGraph(subGraph):
+##
+# Add a subgraph to the program.
+#
+# \param subGraph
+#		The subgraph to add.
+## 
+def addSubGraph(subGraph):
 	__SUBGRAPHS__.append(subGraph)
 
-def _bindName(name, graph):
-	__FUNCTION_NAMES__.update({name : graph})
+##
+# Add a subgraph to a given name.
+#
+# \param graph
+#		The graph to add. It's name 
+#		field will be used to retrieve it.
+##
+def bindName(name, graph):
+	__FUNCTION_NAMES__.update({graph.name : graph})
 
 ##
-# Create a new subgraph
+# Get a list of all the non-compound subgraphs
+# in the program.
 #
-# \param inputs
-#		The amount of inputs the subgraph accepts
-# \param outputs
-# 		The amount of data the subgraph returns
+# \return 
+#	 	All the non compound subgraphs in the program.
+## 
+def getSubGraphs():
+	return __SUBGRAPHS__
+
+##
+# Get a subgraph by name.
+#
+# \param name
+#		The name of the subgraph 
+# 		we want to retrieve.
 # \return
-# 		The entry exit pair belonging to the subgraph
-#
-def createSubGraph(name , inputs, outputs):
-	graph = subgraphs.SubGraph(None, None, name)
-	entry = nodes.SubGraphEntryNode(graph, inputs)
-	exit  = nodes.SubGraphExitNodes(graph, outputs)
-	graph.entry = entry
-	graph.exit = exit
-	_addSubGraph(graph)
-	_bindName(name, graph)
-	return (entry, exit)
-
+#		The subgraph
 ##
-# Connect 2 ports with an implicit edge.
-#
-# \param srcNode
-#		The node that provides data
-# \param srcPort
-#		The idx of the output port on src
-# \param dstNode
-#		The node that accepts the data
-# \param dstPort
-#		The idx of the port on dst that accepts the data.
-##
-def connect(srcNode, srcPort, dstNode, dstPort):
-	srcP = srcNode.getOutputPort(srcPort)
-	dstP = dstNode.getInputPort(dstNode)
-	srcP.addTarget(dstP)
-	dstP.attach(srcP)
-
-##
-# Add a literal to a port.
-#
-# \param value
-#		The value of the literal
-# \param dstNode
-#		The node that the literal targets
-# \param dstPort
-#		The idx of the port on this node
-##
-def addLiteral(value, dstNode, dstPort):
-	dest = dstNode.getInputPort(dstPort)
-	lit = literals.Literal(value, dest)
-	dest.attach(lit)
-
-##
-# Create an operation node
-#
-# \param subGraph
-#		The subGraph that this node is part of
-#
-# \param operation
-#		The operation that this node performs
-##
-def createOperationNode(subGraph, operation):
-	return nodes.OperationNode(subGraph, operation)
-
-##
-# Create a Compound nodes
-#
-# \param subGraph
-#		The subgraph this node belongs too
-# \param subGraphss
-#		The subgraphs that are part of this compound node
-##
-def createCompoundNode(subGraph, subGraphs):
-	return nodes.CompoundNode(subGraph, subGraphs)
-
-##
-# Create a call node.
-#
-# \param subGraph
-# 		the subgraph this node belongs to
-# \param inputs
-#		the amount of inputs this 
-##
-def createCallNode(subGraph):
-	return nodes.CallNode(subGraph)
+def getSubGraph(name):
+	return __FUNCTION_NAMES__[name]

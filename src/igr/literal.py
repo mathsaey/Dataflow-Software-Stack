@@ -25,8 +25,8 @@
 # THE SOFTWARE.
 
 ##
-# \file literals.py
-# \namespace intermediate.literals
+# \file literal.py
+# \namespace igr.literal
 # \brief Literal definitions
 # 
 # IGR Literals
@@ -39,7 +39,7 @@
 # Examples include constants in arithmetic expressions,
 # function names, strings, ...
 # 
-# Every literal has a value and a target, which is an intermediate::ports::InputPort.
+# Every literal has a value and a target, which is an igr::port::InputPort.
 ##
 class Literal(object):
 	

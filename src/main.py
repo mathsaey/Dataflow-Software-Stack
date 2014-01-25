@@ -30,7 +30,7 @@ This module serves as a top level file to access the other modules
 
 import if1parser.environment
 import if1parser.parser
-import execution
+import dvm
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
@@ -38,4 +38,4 @@ loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
 if1parser.parser.parseFile(loc)
-execution.run()
+dvm.run()
