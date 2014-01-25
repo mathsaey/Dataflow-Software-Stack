@@ -36,10 +36,6 @@
 # facilitate adding nodes, ports and literals to the IGR.
 ##
 
-import subgraphs
-import literals
-import nodes
-
 ## All of the functions in the program 
 __SUBGRAPHS__ = []
 
