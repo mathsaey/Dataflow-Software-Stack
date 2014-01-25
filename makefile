@@ -56,7 +56,7 @@ OBJECT_FILES    = $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OU
 OBJECT_DIRS     = $(sort $(dir $(OBJECT_FILES)))
 
 # Versioning
-VERSION_FILE  = $(INPUT_DIR)version.h
+VERSION_FILE  = $(INPUT_DIR)version.hpp
 BUILD_STRING  = "$(MAJOR_VERSION).$(MINOR_VERSION) (build $(BUILD_NUMBER))"
 MAJOR_VERSION = $(shell grep 'int __BUILD_NUMBER__'  $(VERSION_FILE) | cut -d = -f 2 | cut -d \; -f1)
 MINOR_VERSION = $(shell grep 'int __MAJOR_VERSION__' $(VERSION_FILE) | cut -d = -f 2 | cut -d \; -f1)
