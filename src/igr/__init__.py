@@ -121,6 +121,24 @@ def createCompoundSubGraph(inputs = 0, outputs = 0): pass
 ## \{
 
 ##
+# Create a node, add it to it's subgraph
+# and return it.
+#
+# \param constructor
+#		The constructor to create the node.
+# \param subGraph
+#		The subgraph that contains this node.
+# \param arguments
+#		The arguments to pass to the constructor
+#		(not including the subgraph)
+##
+def createNode(constructor, subGraph, arguments = []):
+	args = [subGraph] + arguments
+	node = constructor(*args)
+	subGraph.addNode(node)
+	return node
+
+##
 # Create an operation node
 #
 # \param subGraph
@@ -130,7 +148,7 @@ def createCompoundSubGraph(inputs = 0, outputs = 0): pass
 #		The operation that this node performs
 ##
 def createOperationNode(subGraph, operation):
-	return node.OperationNode(subGraph, operation)
+	return createNode(node.OperationNode, subGraph, [operation])
 
 ##
 # Create a Compound node
@@ -141,7 +159,7 @@ def createOperationNode(subGraph, operation):
 #		The subgraphs that are part of this compound node
 ##
 def createCompoundNode(subGraph, subGraphs):
-	return node.CompoundNode(subGraph, subGraphs)
+	return createNode(node.CompoundNode, subGraph, [subGraphs])
 
 ##
 # Create a call node.
@@ -152,7 +170,7 @@ def createCompoundNode(subGraph, subGraphs):
 #		the amount of inputs this 
 ##
 def createCallNode(subGraph):
-	return node.CallNode(subGraph)
+	return createNode(node.CallNode, subGraph)
 
 ##\}
 

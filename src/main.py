@@ -39,4 +39,4 @@ def tmp(node):
 	print node
 
 if1parser.parseFile(loc)
-compiler.traverse.traverse(tmp, tmp, tmp)
+compiler.traverse.traverseAll(tmp, tmp, tmp)

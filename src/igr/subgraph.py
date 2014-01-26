@@ -45,13 +45,14 @@ class SubGraph(object):
 		super(SubGraph, self).__init__()
 		self.name = name
 		self.entry = entry
-		self.exit = exit
+		self.exit  = exit
+		self.nodes = []
 
 	##
 	# Printable subgraph
 	##
 	def __str__(self):
-		pair = "(" + str(self.entry) + "|" + str(self.exit) + ")"
+		pair = "(" + str(self.entry) + " | " + str(self.exit) + ")"
 		return "'" + self.name + "' " + "subgraph " + pair
 
 	##
@@ -76,3 +77,10 @@ class SubGraph(object):
 	##
 	def getInputPort(self, idx):
 		return self.exit.getInputPort(idx)
+
+	##
+	# Add a node to the node list of the
+	# subgraph.
+	##
+	def addNode(self, node):
+		self.nodes.append(node)

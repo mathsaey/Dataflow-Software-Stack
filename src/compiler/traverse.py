@@ -29,118 +29,118 @@
 # \namespace compiler.traverse
 # \brief IGR Traversals
 # 
-# This module defines the traversal operations.
-# These traversals allow us to iterate over the IGR graph.
+# This module defines different functions that allow
+# us to traverse the IGR in various ways.
 ##
 
 import igr
+import visitor
+
+# ------------------- #
+# SubGraph Traversals #
+# ------------------- #
+## \name SubGraph Traversals
+## Traversals that iterate over a subgraph
+## \{
 
 ##
-# This abstract class allows us to implement various
-# traversals in terms of a few basic methods.
+# Traverses every node in a subgraph, in the order
+# that the parser encountered them.
 #
-# By default it contains a list of the nodes that it
-# has already visited and a function to invoke any time
-# it encounters a new node. This function should accept
-# the node as argument.
+# \param nodeProc
+#		The function to call when we encounter a node.
 ##
-class AbstractVisitor(object):
-
-	##
-	# Create a new traversal with the given
-	# nodeProc.
-	#
-	# \param nodeProc
-	#		The function to call when we encounter
-	#		a new node. should accept a node as argument.
-	##
-	def __init__(self, nodeProc):
-		super(AbstractVisitor, self).__init__()
-		self.nodeProc = nodeProc
-		self.found = []
-
-	##
-	# Reset the found list in case the 
-	# object should be reused.
-	##
-	def reset(self):
-		self.found = []
-
-	##
-	# Start traversal on a given subgraph
-	## 
-	def start(self, subGraph): pass
-
-	##
-	# Called for every node we visit.
-	# Determines the order of the various calls.
-	# (preorder, inorder, postorder).
-	##
-	def visitNode(self, node): pass
-
-	##
-	# Called by visitNode(). Determines
-	# how the children are fetched and the
-	# order to call them in.
-	##
-	def visitChildren(self, node): pass
+def traverseNodes(subGraph, nodeProc):
+	for node in subGraph.nodes:
+		nodeProc(node)
 
 ##
-# A visitor that executes the traversal in a
-# depth-first, preorder way.
-##
-class DepthFirstVisitor(AbstractVisitor):
-	def visitNode(self, node):
-		if node not in self.found:
-			self.nodeProc(node)
-			self.found.append(node)
-			self.visitChildren(node)
-
-##
-# Traverses in a depth first, preorder,
-# top to bottom way.
-##
-class ForwardVisitor(DepthFirstVisitor):
-
-	def start(self, subGraph):
-		self.visitNode(subGraph.entry)
-
-	def visitChildren(self, node):
-		for ports in node.outputPorts:
-			for port in ports.targets:
-				self.visitNode(port.node)
-
-##
-# Travers from the bottom up,
-# such as from the return of a 
-# function call.
-##
-class BackwardVisitor(DepthFirstVisitor):
-	def __init__(self, nodeProc, literalProc):
-		super(BackwardVisitor, self).__init__(nodeProc)
-		self.literalProc = literalProc
-
-	def start(self, subGraph):
-		self.visitNode(subGraph.exit)
-
-	def visitChildren(self, node):
-		if node.hasPrevious(): 
-			for port in node.inputPorts:
-				if port.source:
-					if port.source.isPort():
-						self.visitNode(port.source.node)
-					else: 
-						self.literalProc(port.source)
-
-##
-# Traverse all of the subGraphs in the system.
+# Traverse the nodes in the subgraph, starting from
+# the entry point and heading down following the edges
+# in a depth-first manner.
 #
-# \param subGraphEncounter
-#		Function to call when we see a new subgraph
-# \param visitor
-#		The visitor class to traverse the various subgraphs.
-## 
-def traverseAll(subGraphEncounter, visitor):
-	for sub in igr.getSubGraphs():
-		subGraphEncounter(sub)
-		visitor.start(sub)
+# Depending on the way the subgraph is wired, this 
+# traversal may not encounter all the nodes. Only the nodes
+# that are (indirectly) connected to the entryNode are encountered.
+#
+# \param nodeProc
+#		The function to call when we encounter a node.
+##
+def traverseTopToBottom(subGraph, nodeProc):
+	v = visitor.ForwardVisitor(nodeProc)
+	v.start(subGraph)
+
+##
+# Traverse the nodes in the subgraph, starting from the
+# exit point and heading up following the incoming edges of 
+# every node.
+#
+# Only the nodes that are (indirectly) wired to the exit node
+# are encountered.
+#
+# \param nodeProc
+#		The function to call when we encounter a node.
+# \param literalProc
+#		The function to call when we encounter a literal.
+##
+def traverseBottomToTop(subGraph, nodeProc, literalProc):
+	v = visitor.BackwardVisitor(nodeProc, literalProc)
+	v.start(subGraph)
+
+## \}
+
+# --------------------- #
+# Full Graph Traversals #
+# --------------------- #
+## \name Full Graph Traversals
+## Traversals that iterate over the complete program.
+## \{
+
+##
+# Traverse all the subgraphs in the program.
+#
+# All of the other program traversals are defined in terms of this.
+#
+# \param subGraphProc
+#		The function to call when we encounter a subgraph.
+# \param traversal
+#		The function that performs the subgraph traversal.
+# \param traversalArgs
+#		The arguments that the traversal needs (without the subgraph)
+##
+def traverseAll(subGraphProc, traversal, traversalArgs):
+	for subGraph in igr.getSubGraphs():
+		subGraphProc(subGraph)
+		args = [subGraph] + traversalArgs
+		traversal(*args)
+
+##
+# Traverse every node in the graph.
+##
+def traverseAllNodes(subGraphProc, nodeProc):
+	traverseAll(subGraphProc, traverseNodes, [nodeProc])
+
+##
+# Traverse every subgraph with traverseTopToBottom()
+#
+# \param subGraphProc
+#		The function to call when we encounter a subgraph.
+# \param nodeProc
+#		The function to call when we encounter a node.
+##
+def traverseAllTopToBottom(subGraphProc, nodeProc):
+	traverseAll(subGraphProc, traverseTopToBottom, [nodeProc])
+##
+# Traverse every subgraph with traverseBottomToTop()
+#
+# \param subGraphProc
+#		The function to call when we encounter a subgraph.
+# \param nodeProc
+#		The function to call when we encounter a node.
+# \param literalProc
+#		The function to call when we encounter a literal.
+##
+def traverseAllBottomToTop(subGraphProc, nodeProc, literalProc):
+	traverseAll(subGraphProc, traverseBottomToTop, [nodeProc, literalProc])
+
+## \}
