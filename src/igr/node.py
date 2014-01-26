@@ -68,11 +68,23 @@ class Node(object):
 	#
 	# \param subGraph
 	#		The subgraph this node belongs to.
+	# \param inputs
+	#		The amount of inputs this node will accept
+	#		This argument is optional, the input amount
+	# 		will be updated depending on the amount of 
+	#		incoming edges.
+	# \param outputs
+	#		The amount of outputs this node will return.
+	#		The same rules that apply to inputs apply here.
 	##
-	def __init__(self, subGraph):
+	def __init__(self, subGraph, inputs = 0, outputs = 0):
 		super(Node, self).__init__()
-		self.subGraph = subGraph
-		self.key = getKey()
+		self.subGraph    = subGraph
+		self.key         = getKey()
+		self.inputs      = inputs
+		self.outputs     = outputs
+		self.inputPorts  = [port.InputPort(self, i) for i in xrange(0,inputs)]
+		self.outputPorts = [port.OutputPort(self, i) for i in xrange(0,outputs)]
 
 	##
 	# Create a printable version of the node
@@ -107,103 +119,7 @@ class Node(object):
 			lst += [constructor(self, idx)]
 			return self.getFromList(lst, var, constructor, idx)
 
-# --------------------------- #
-# Graph entry and exit points #
-# --------------------------- #
-
-##
-# Parent of SubGraphEntryNode and SubGraphExitNode.
-# Mainly introduced to remove common code.
-##
-class AbstractSubGraphNode(Node):
-
-	##
-	# Initialize a subgraphnode. 
-	#
-	# \param subGraph
-	#		The graph this node belongs to
-	# \param slots
-	#		The amount of ports this node has.
-	# \param constructor
-	# 		The constructor for the port type of the slots
-	##
-	def __init__(self, subGraph, slots, constructor):
-		super(AbstractSubGraphNode, self).__init__(subGraph)
-		self.slots = slots
-		self.ports = [constructor(self, i) for i in xrange(0,slots)]
-
-	##
-	# Get a port, extend the list if it's out of bounds.
-	# 
-	# \param idx
-	#		The idx of the port
-	##
-	def getPort(self, idx): pass
-
-##
-# Entry point of a subgraph.
-# 
-# Defines the topmost point of a subgraph.
-# Nodes in the subgraph use this node to get their inputs.
-#
-# This corresponds to the values of the parameters for a function
-# invocation.
-##
-class SubGraphEntryNode(AbstractSubGraphNode): 
-
-	def __init__(self, subGraph, slots = 0):
-		super(SubGraphEntryNode, self).__init__(subGraph, slots, port.OutputPort)
-
-	def getPort(self, idx):
-		return self.getFromList(self.ports, self.slots, port.OutputPort, idx)
-
-##
-# Exit point of a subgraph.
-# 
-# Defines the leaves of a subgraph.
-# Nodes in the subgraph use this node to dump their outputs.s
-#
-# This corresponds to the return value of a function.
-##
-class SubGraphExitNode(AbstractSubGraphNode): 
-
-	def __init__(self, subGraph, slots = 0):
-		super(SubGraphExitNode, self).__init__(subGraph, slots, port.InputPort)
-
-	def getPort(self, idx):
-		return self.getFromList(self.ports, self.slots, port.InputPort, idx)
-
-
-# -------------- #
-# Standard Nodes #
-# -------------- #
-
-##
-# Node with in and output ports.
-#
-# This class represents the more common node type of nodes 
-# that have both in and output ports.
-##
-class StandardNode(Node):
-
-	##
-	# Initialize a node.
-	#
-	# \param subGraph
-	#		The subGraph this node belongs to.
-	# \param inputs
-	#		The amount of inputs this node accepts.
-	# \param outputs 
-	#		The amount of outputs this node produces.
-	##
-	def __init__(self, subGraph):
-		super(StandardNode, self).__init__(subGraph)
-		self.inputs      = 0
-		self.outputs     = 0
-		self.inputPorts  = []
-		self.OutputPorts = []
-
-	##
+				##
 	# Gets an input port
 	#
 	# \param idx
@@ -223,8 +139,57 @@ class StandardNode(Node):
 	#		The port at idx
 	##
 	def getOutputPort(self, idx):
-		return self.getFromList(self.OutputPorts, self.outputs, port.OutputPort, idx)
+		return self.getFromList(self.outputPorts, self.outputs, port.OutputPort, idx)
 
+
+	## See if this node can be followed to other nodes.
+	def hasNext(self): return True
+
+	## See if this node can be follow to other nodes.
+	def hasPrevious(self): return True
+
+# --------------------------- #
+# Graph entry and exit points #
+# --------------------------- #
+
+##
+# Entry point of a subgraph.
+# 
+# Defines the topmost point of a subgraph.
+# Nodes in the subgraph use this node to get their inputs.
+#
+# This corresponds to the values of the parameters for a function
+# invocation.
+##
+class SubGraphEntryNode(Node): 
+
+	def __init__(self, subGraph, outputs = 0):
+		super(SubGraphEntryNode, self).__init__(subGraph, 0, outputs)
+		self.inputPorts = None
+
+	def getInputPort(self, idx): return None
+	def hasPrevious(self): return False
+
+##
+# Exit point of a subgraph.
+# 
+# Defines the leaves of a subgraph.
+# Nodes in the subgraph use this node to dump their outputs.s
+#
+# This corresponds to the return value of a function.
+##
+class SubGraphExitNode(Node): 
+
+	def __init__(self, subGraph, inputs = 0):
+		super(SubGraphExitNode, self).__init__(subGraph, inputs, 0)
+		self.OutputPorts = None
+
+	def hasNext(self): return False
+	def getOutputPort(self, idx): return None
+
+# -------------- #
+# Standard Nodes #
+# -------------- #
 
 ##
 # Operation node
@@ -233,8 +198,7 @@ class StandardNode(Node):
 # It contains the standard in and output ports along with
 # the function that it represents.
 ##
-class OperationNode(StandardNode):
-
+class OperationNode(Node):
 	def __init__(self, subGraph, operation):
 		super(OperationNode, self).__init__(subGraph)
 		self.operation = operation
@@ -245,8 +209,7 @@ class OperationNode(StandardNode):
 # Represents an operation that calls a function (a subgraph)
 # The output ports of the callnode are bound to the return values of the function.
 ##
-class CallNode(StandardNode):
-
+class CallNode(Node):
 	def __init__(self, subGraph):
 		super(CallNode, self).__init__(subGraph)
 		self.function = None
@@ -265,8 +228,7 @@ class CallNode(StandardNode):
 # Represents a node that contains subgraphs.
 # Examples of such nodes include if-then-else, for loops, ...
 ##
-class CompoundNode(StandardNode):
-
+class CompoundNode(Node):
 	def __init__(self, subGraph, subGraphs):
 		super(CompoundNode, self).__init__(subGraph)
 		self.subGraphs = subGraphs

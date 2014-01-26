@@ -66,6 +66,9 @@ class Port(object):
 		node = str(self.node)
 		return name + " " + idx + " of " + node
 
+	## See if this is a port (mainly for traversal)
+	def isPort(self): return True
+
 ##
 # Port that accepts input for a node.
 ##

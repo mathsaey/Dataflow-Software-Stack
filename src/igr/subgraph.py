@@ -64,7 +64,7 @@ class SubGraph(object):
 	# from the subgraph.
 	##
 	def getOutputPort(self, idx):
-		return self.entry.getPort(idx)
+		return self.entry.getOutputPort(idx)
 
 	##
 	# Gets an input port of the subgraph.
@@ -75,4 +75,4 @@ class SubGraph(object):
 	# to the outside world, which is done through the exit node.
 	##
 	def getInputPort(self, idx):
-		return self.exit.getPort(idx)
+		return self.exit.getInputPort(idx)

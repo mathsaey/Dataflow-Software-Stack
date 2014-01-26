@@ -55,3 +55,6 @@ class Literal(object):
 		super(Literal, self).__init__()
 		self.value = value
 		self.destination = destination
+
+	## See if this is a port (mainly for traversal)
+	def isPort(self): return False

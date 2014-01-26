@@ -74,7 +74,6 @@ __FUNCTIONS__ = {
 def parseLine(line, ctr = "?"):
 	arr = line.split()
 	key = line[0]
-	print line
 	try:
 		func = __FUNCTIONS__[key]
 	except KeyError:
