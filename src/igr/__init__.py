@@ -102,6 +102,8 @@ def createSubGraph(name , inputs, outputs):
 	exit  = node.SubGraphExitNode(subGraph, outputs)
 	subGraph.entry = entry
 	subGraph.exit = exit
+	subGraph.addNode(entry)
+	subGraph.addNode(exit)
 	graph.addSubGraph(subGraph)
 	graph.bindName(subGraph)
 	return subGraph

@@ -39,4 +39,5 @@ def tmp(node):
 	print node
 
 if1parser.parseFile(loc)
-compiler.traverse.traverseAll(tmp, tmp, tmp)
+#compiler.traverse.traverseAllNodes(tmp, tmp)
+compiler.dot.getDot()
