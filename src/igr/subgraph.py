@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file subgraph.py
+# \file igr/subgraph.py
 # \namespace igr.subgraph
 # \brief SubGraph definitions
 # 
@@ -37,6 +37,7 @@
 # 
 # An IGR subgraph is either a function body,
 # or a part of the compound node. 
+#
 ##
 class SubGraph(object):
 
@@ -51,4 +52,27 @@ class SubGraph(object):
 	##
 	def __str__(self):
 		pair = "(" + str(self.entry) + "|" + str(self.exit) + ")"
-		return "'" + self.name + "'" + "subgraph" + pair
+		return "'" + self.name + "' " + "subgraph " + pair
+
+	##
+	# Get an output port of the subgraph. 
+	# This maps to the ports of the entry node.
+	#
+ 	# This may seem counterintuitive, but this is seen
+	# from the perspective of the inside of the subgraph.
+	# In which case the output port is used to retrieve data
+	# from the subgraph.
+	##
+	def getOutputPort(self, idx):
+		return self.entry.getPort(idx)
+
+	##
+	# Gets an input port of the subgraph.
+	# This maps to the input of the return (exit) node.
+	#
+	# Once again this is seen from the inside of the subgraph.
+	# If we want to add data to the subgraph, we try to return it
+	# to the outside world, which is done through the exit node.
+	##
+	def getInputPort(self, idx):
+		return self.exit.getPort(idx)

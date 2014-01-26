@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file literal.py
+# \file igr/literal.py
 # \namespace igr.literal
 # \brief Literal definitions
 # 

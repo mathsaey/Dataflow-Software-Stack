@@ -37,5 +37,5 @@ import dvm
 loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
-if1parser.parser.parseFile(loc)
-dvm.run()
+if1parser.parseFile(loc)
+print if1parser.type._pool

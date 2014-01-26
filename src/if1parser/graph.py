@@ -1,6 +1,6 @@
 # graph.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,15 +24,20 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This module defines the functions that allow us to parse nodes and subgraphs
-"""
+##
+# \file if1parser/graph.py
+# \namespace if1parser.graph
+# \brief Node parser
+# 
+# This module allows us to parse all of the 
+# graph elements (compound nodes, nodes and subgraphs)
+##
 
-import execution.api
 import environment
-
 import operations
 import type
+
+import igr
 
 # --------- #
 # Constants #
@@ -62,41 +67,38 @@ _ce_lis_idx		= 4
 # Graph Parser #
 # ------------ #
 
+## Parse an IF1 subgraph.
 def parseGraph(arr, ctr):
-	name = arr[_g_name_idx][1:-1]
+	name    = arr[_g_name_idx][1:-1]
+	typeIdx = int(arr[_g_type_idx])
+	sig     = type.getType(typeIdx)
+	inputs  = len(sig.args.list)
+	outputs = len(sig.res.list)
 
-	entry = execution.api.addForwardInstruction()
-	exit = execution.api.addContextRestoreInstruction()
+	graph = igr.createSubGraph(name, inputs, outputs)
 
 	environment.popScope()
-	environment.addFunction(name, entry, exit)
-	environment.scope()
-	environment.addSubGraph(entry, exit)
+	environment.scope(graph)
 
 # ----------- #
 # Node Parser #
 # ----------- #
 
-def parseStandardNode(key, label):
-	tuple 	  = operations.getFunction(key)
-	operation = tuple[0]
-	inputs    = tuple[1]
+def parseStandardNode(opCode):
+	operation = operations.getFunction(opCode)
+	return igr.createOperationNode(environment.getSubGraph(), operation)
 
-	inst = execution.api.addOperationInstruction(operation, inputs)
-	environment.addNode(label, inst)
-
-def parseCallNode(label):
-	ret  = execution.api.addForwardInstruction()
-	inst = execution.api.addContextChangeInstruction(ret)
-	environment.addNode(label, inst)
-	environment.addNode(-label, ret)
-	environment.addCallNode(label)
+def parseCallNode():
+	return igr.createCallNode(environment.getSubGraph())
 
 def parseNode(arr, ctr): 
-	key 		= int(arr[_n_code_idx])
-	label 		= int(arr[_n_label_idx])
+	label  = int(arr[_n_label_idx])
+	opCode = int(arr[_n_code_idx])
+	node   = None
 
-	if key is 120:
-		parseCallNode(label)
+	if opCode is 120:
+		node = parseCallNode()
 	else:
-		parseStandardNode(key, label)
+		node = parseStandardNode(opCode)
+	
+	environment.addNode(label, node)

@@ -1,6 +1,6 @@
 # environment.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,116 +24,123 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-if1 scope definitions.
+##
+# \file if1parser/environment.py
+# \namespace if1parser.environment
+# \brief Node lookup and scoping rules.
+# 
+# This module contains the "state" of the parser.
+# It keeps track of the discovered nodes and graphs
+# and the scopes they are in. 
+##
 
-This module keeps track of the instructions that we added to the api and the
-nodes that they map to.
-
-The following functions are available for use by other modules:
-
-scope():
-	Add a new scope to the stack
-
-popScope():
-	Pop the current scope
-
-getInst(node):
-	Get a node in the current scope
-addNode(node, inst):
-	Get the instance key that matches a given node
-getSubGraphExit():
-	Get the instruction key of the subgraph exit
-getSubGraphEntry(): 
-	Get the instruction key of the subgraph entry
-addSubGraph(enter, exit):
-	Set the subgraph of the current scope
-addFunction(name, enter, exit):
-	Bind the name of a function to it's entry and exit points (instruction keys)
-getFunctionPair(name):
-	Get the (entry, exit) pair for a functoin name
-addCallNode(node):
-	Add a node as a call node
-isCallNode(node):
-	Check if a node is a call node
-"""
+import tools
 
 # ----- #
 # Frame #
 # ----- #
 
-class Frame(object):
+##
+# Single part of the scope stack.
+# 
+# A scope contains all of the definitions
+# of the current scope.
+#
+##
+class Scope(object):
 
-	def __init__(self):
-		super(Frame, self).__init__()
-		self.subgraph = None
-		self.functions = {}
-		self.nodes = {}
-		self.call = []
+	##
+	# Create a scope belonging to a subgraph.s
+	# By convention, the subgraph can always be 
+	# found at label 0.
+	##
+	def __init__(self, subGraph = None):
+		super(Scope, self).__init__()
+		self.nodes = [subGraph]
 
-	def addSubGraph(self, enter, exit):
-		self.subgraph = (enter, exit)
-	def getSubGraphEntry(self):
-		return self.subgraph[0]
-	def getSubGraphExit(self):
-		return self.subgraph[1]
+	##
+	# Add a node to the scope.
+	#
+	# The label of the node should match
+	# the current length of the node list of this object.
+	# This is the case since IF1 nodes start are sequentially
+	# numbered starting from one.
+	#
+	# \param label
+	# 		The IF1 label of the node.
+	# \param node
+	#		The IGR node to assign to the label
+	##
+	def addNode(self, label, node):
+		if len(self.nodes) is label:
+			self.nodes += [node]
+		else:
+			tools.error("Non-sequential node label added!")
 
-	def addNode(self, node, inst):
-		self.nodes.update({node : inst})
-	def getInst(self, node):
-		return self.nodes[node]
+	##
+	# Get a node from the scope.
+	#
+	# \param label
+	#		The label of the node to get
+	##
+	def getNode(self, label):
+		return self.nodes[label]
 
-	def addFunction(self, name, enter, exit): 
-		self.functions.update({name : (enter, exit)})
-	def getFunctionPair(self, name): 
-		return self.functions[name]
-		
-	def addCallNode(self, node):
-		self.call += [node]
-	def isCallNode(self, node):
-		return node in self.call
+	##
+	# Get the subgraph of the scope.
+	##
+	def getSubGraph(self):
+		return self.nodes[0]
 
 # ------- #
 # Scoping #
 # ------- #
 
-__STACK__ = [Frame()]
+##
+# A stack with the global scope at the bottom,
+# and the current scope at the top.
+##
+__STACK__ = [Scope()]
 
-def scope():
+##
+# Create a new scope and push
+# it on top of the stack.
+##
+def scope(subGraph):
 	global __STACK__
-	__STACK__ += [Frame()]
+	__STACK__ = [Scope(subGraph)] + __STACK__
 
+##
+# Remove the current scope.
+# Returns to the previous scope.
+##
 def popScope():
+	global __STACK__
 	if len(__STACK__) > 1:
-		global __STACK__
 		__STACK__ = __STACK__[:-1]
 
-def getInst(node): 
-	return __STACK__[0].getInst(node)
-def addNode(node, inst): 
-	__STACK__[0].addNode(node, inst)
+##
+# Get the node with label in the current scope.
+#
+# \param label
+#		The label to look for.
+##
+def getNode(label):
+	return __STACK__[0].getNode(label)
 
-def getSubGraphExit(): 
-	return __STACK__[0].getSubGraphExit()
-def getSubGraphEntry(): 
-	return __STACK__[0].getSubGraphEntry()
-def addSubGraph(enter, exit): 
-	__STACK__[0].addSubGraph(enter, exit)
+##
+# Add node with label to the current scope.
+#
+# \param label
+#		The IF1 label of the node.
+# \param node
+#		The node to add
+##
+def addNode(label, node): 
+	__STACK__[0].addNode(label, node)
 
-def isCallNode(node): 
-	return __STACK__[0].isCallNode(node)
-def addCallNode(node): 
-	__STACK__[0].addCallNode(node)
-
-def addFunction(name, enter, exit):
-	__STACK__[0].addFunction(name, enter, exit)
-
-def getFunctionPair(name):
-	err = None
-	for frame in __STACK__:
-		try:
-			pair = frame.getFunctionPair(name)
-			return pair
-		except KeyError as e:
-			err = e
-	raise err
+##
+# Get the subgraph of the current scope.
+##
+def getSubGraph():
+	return __STACK__[0].getSubGraph()

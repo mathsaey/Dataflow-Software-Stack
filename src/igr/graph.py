@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file graph.py
+# \file igr/graph.py
 # \namespace igr.graph
 # \brief Complete program
 # 
@@ -58,7 +58,7 @@ def addSubGraph(subGraph):
 #		The graph to add. It's name 
 #		field will be used to retrieve it.
 ##
-def bindName(name, graph):
+def bindName(graph):
 	__FUNCTION_NAMES__.update({graph.name : graph})
 
 ##

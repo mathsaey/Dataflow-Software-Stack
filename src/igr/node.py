@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file node.py
+# \file igr/node.py
 # \namespace igr.node
 # \brief Node definitions
 # 
@@ -105,7 +105,7 @@ class Node(object):
 		except IndexError:
 			var += 1
 			lst += [constructor(self, idx)]
-			return self.getFromList(lst, constructor, idx)
+			return self.getFromList(lst, var, constructor, idx)
 
 # --------------------------- #
 # Graph entry and exit points #
@@ -128,7 +128,7 @@ class AbstractSubGraphNode(Node):
 	# 		The constructor for the port type of the slots
 	##
 	def __init__(self, subGraph, slots, constructor):
-		super(SubGraphEntryNode, self).__init__(self, subGraph)
+		super(AbstractSubGraphNode, self).__init__(subGraph)
 		self.slots = slots
 		self.ports = [constructor(self, i) for i in xrange(0,slots)]
 
@@ -152,10 +152,10 @@ class AbstractSubGraphNode(Node):
 class SubGraphEntryNode(AbstractSubGraphNode): 
 
 	def __init__(self, subGraph, slots = 0):
-		super(SubGraphEntryNode, self).__init__(self, subGraph, port.OutputPort)
+		super(SubGraphEntryNode, self).__init__(subGraph, slots, port.OutputPort)
 
 	def getPort(self, idx):
-		self.getFromList(self.slotList, self.slots, port.OutputPort, idx)
+		return self.getFromList(self.ports, self.slots, port.OutputPort, idx)
 
 ##
 # Exit point of a subgraph.
@@ -168,10 +168,10 @@ class SubGraphEntryNode(AbstractSubGraphNode):
 class SubGraphExitNode(AbstractSubGraphNode): 
 
 	def __init__(self, subGraph, slots = 0):
-		super(SubGraphExitNode, self).__init__(self, subGraph, port.InputPort)
+		super(SubGraphExitNode, self).__init__(subGraph, slots, port.InputPort)
 
 	def getPort(self, idx):
-		self.getFromList(self.slotList, self.slots, port.InputPort, idx)
+		return self.getFromList(self.ports, self.slots, port.InputPort, idx)
 
 
 # -------------- #
@@ -212,7 +212,7 @@ class StandardNode(Node):
 	#		The port at idx
 	##
 	def getInputPort(self, idx):
-		self.getFromList(self.inputPorts, self.inputs, port.InputPort, idx)
+		return self.getFromList(self.inputPorts, self.inputs, port.InputPort, idx)
 
 	##
 	# Gets an output port
@@ -223,7 +223,7 @@ class StandardNode(Node):
 	#		The port at idx
 	##
 	def getOutputPort(self, idx):
-		self.getFromList(self.OutputPorts, self.outputs, port.OutputPort, idx)
+		return self.getFromList(self.OutputPorts, self.outputs, port.OutputPort, idx)
 
 
 ##

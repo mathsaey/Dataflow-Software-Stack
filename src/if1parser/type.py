@@ -1,6 +1,6 @@
 # type.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 	
 # The MIT License (MIT)
 #
@@ -24,15 +24,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+##
+# \file if1parser/file.py
+# \namespace if1parser.type
+# \brief Type parser
+# 
+# Discover IF1 types.
+# For an introduction on how types are represented in
+# IF1, check out the [IF1 reference](md_doc__i_f1.html#types)
+#
+# \todo Change this to express IF1 types in relation to DVM types
+##
 
 import tools
-
-# ---------------- #
-# Public functions #
-# ---------------- #
-
-def parseType(arr, ctr): pass
-def getType(label): pass
 
 # -------------------- #
 # Forward declarations #
@@ -59,7 +63,7 @@ _code_idx 	= 2
 _arg_1_idx 	= 3
 _arg_2_idx 	= 4
 
-# The function that is needed to parse a given idx
+## The function that is needed to parse a given idx
 _type_codes = {
 	 0 : _Array,
 	 1 : _Basic,
@@ -73,7 +77,7 @@ _type_codes = {
 	 9 : _Union
 }
 
-# Basic type codes and the python types to match them
+## Basic type codes and the python types to match them
 _basic_types = {
 	0 : bool,
 	1 : str,  # Python has no built-in charachter
@@ -91,29 +95,34 @@ _basic_types = {
 
 class _Type(object): pass
 
+##
+# Represents any possible type
+##
 class _UnknownType(_Type):
-	""" Represents any possible type """
 	def __init__(self):
 		super(_UnknownType, self).__init__()
 		self.list = []
 		self.type = None
 
-class _BasicType(_Type):
-	""" Wrapper around a basic type """
+	def __str__(self):
+		return "Unknown Type"
 
+##
+# Represents one of the basic IF1 types.
+##
+class _BasicType(_Type):
 	def __init__(self, type):
 		super(_BasicType, self).__init__()
 		self.type = type
 
 	def __str__(self):
-		if self.type:
-			res = "Basic Type: " + self.type.__name__
-		else:
-			res = "None"
-		return res
+		return "Basic Type: " + str(self.type)
 
+##
+# Wrapper around a container that contains
+# a single base type (such as an array)
+##
 class _ContainerType(_Type):
-	""" Wrapper around a container that contains a single base type """
 
 	def __init__(self, baseType, containerType):
 		super(_ContainerType, self).__init__()
@@ -121,18 +130,17 @@ class _ContainerType(_Type):
 		self.container = containerType
 
 	def __str__(self):
-		res = "Container: " + self.container + " " + self.base.__str__()
-		return res
+		return "Container: " + self.container + " " + self.base.__str__()
 
+##
+# Wrapper around a combined type that contains multiple base types
+#
+# The wrapper represents the full type starting at it's index.
+# So if we have a tuple (int, str, int), then we would have 3
+# _CombinedType instances, one that represents the full type,
+# one that represents (str, int) and one that represents (int).
+##
 class _CombinedType(_Type):
-	""" Wrapper around a combined type that contains multiple base types
-
-	The wrapper represents the full type starting at it's index.
-	So if we have a tuple (int, str, int), then we would have 3
-	_CombinedType instances, one that represents the full type,
-	one that represents (str, int) and one that represents (int).
-	"""
-
 	def __init__(self, type, containerType, next = None):
 		super(_CombinedType, self).__init__()
 		self.type = containerType
@@ -143,12 +151,13 @@ class _CombinedType(_Type):
 	def __str__(self):
 		res = "Combined: (" + self.type + ")"
 		for el in self.list:
-			res += " <" + el.__str__() + ">"
+			res += " <" + str(el) + ">"
 		return res
 
+##
+# Wrapper around a pointer to the first element of a combined type
+##
 class _PointerType(_Type):
-	""" Wrapper around a pointer to the first element of a combined type """
-
 	def __init__(self, dest, containerType):
 		super(_PointerType, self).__init__()
 		self.type = containerType
@@ -160,9 +169,10 @@ class _PointerType(_Type):
 	def follow(self):
 		return getType(self.dest)
 
-class _FunctionType(_Type):
-	""" Wrapper around a function type """
-	
+##
+# Wrapper around a function type
+##
+class _FunctionType(_Type):	
 	def __init__(self, args, res):
 		super(_FunctionType, self).__init__()
 		self.args = args
@@ -170,17 +180,18 @@ class _FunctionType(_Type):
 
 	def __str__(self):
 		res = "Function: \n"
-		res += "\t arg: " + self.args.__str__() + "\n"
-		res += "\t res: " + self.res.__str__()
+		res += "\t arg: " + str(self.args) + "\n"
+		res += "\t res: " + str(self.res)
 		return res
 
 # --------- #
 # Type Pool #
 # --------- #
 
+##
+# Store all the encountered types
+##
 class _TypePool(object):
-	"""A type pool object stores all the encountered types"""
-
 	def __init__(self):
 		super(_TypePool, self).__init__()
 		self._type_pool = {0 : _UnknownType()}
@@ -188,7 +199,7 @@ class _TypePool(object):
 	def __str__(self):
 		res = "Type pool:\n"
 		for key, value in self._type_pool.iteritems():
-			res +=  "\t" + key.__str__() + ": " +  value.__str__() + "\n"
+			res +=  "\t" + str(key) + ": " +  str(value) + "\n"
 		return res
 
 	def addType(self, arr, type):
@@ -200,6 +211,9 @@ class _TypePool(object):
 
 _pool = _TypePool()
 
+##
+# Get a type from the pool
+##
 def getType(label):
 	return _pool.getType(label)
 
@@ -213,6 +227,7 @@ def parseType(arr, ctr):
 		func = _type_codes[funcKey]
 	except KeyError:
 		tools.warning("Unknown type code: " + str(funcKey) + " encountered.", ctr)
+		_pool.addType(arr, _UnknownType())
 	else:
 		func(arr)
 
@@ -234,7 +249,6 @@ def _parseCombinedPtr(arr, container):
 	_pool.addType(arr, _PointerType(container, dest))
 
 def _parseCombined(arr, container):
-	label = arr[_label_idx]
 	baseType = getType(arr[_arg_1_idx])
 	
 	# Add the new type, if there is a previous, link to it

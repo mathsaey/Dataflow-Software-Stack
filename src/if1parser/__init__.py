@@ -25,11 +25,23 @@
 # THE SOFTWARE.
 
 ##
+# \file if1parser/__init__.py
 # \package if1parser
 # \author Mathijs Saey
 # 
 # \brief DVM IF1 Parser.
 #
 # This module parses [IF1](\ref IF1) files and converts them to 
-# IGR, our own, internal, graph representation.
+# IGR, our own, internal graph representation.
 ##
+
+import parser
+
+##
+# Parses an IF1 file.
+#
+# \param loc
+#		The location of the file.
+##
+def parseFile(loc):
+	parser.parseFile(loc)

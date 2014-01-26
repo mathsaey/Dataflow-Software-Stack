@@ -25,6 +25,7 @@
 # THE SOFTWARE.
 
 ##
+# \file igr/__init__.py
 # \package igr
 # \author Mathijs Saey
 # 
@@ -98,12 +99,12 @@ def getSubGraph(name):
 def createSubGraph(name , inputs, outputs):
 	subGraph = subgraph.SubGraph(None, None, name)
 	entry = node.SubGraphEntryNode(subGraph, inputs)
-	exit  = node.SubGraphExitNodes(subGraph, outputs)
+	exit  = node.SubGraphExitNode(subGraph, outputs)
 	subGraph.entry = entry
 	subGraph.exit = exit
 	graph.addSubGraph(subGraph)
 	graph.bindName(subGraph)
-	return graph
+	return subGraph
 
 ##
 # Create a subgraph that will be pair of a compound node.
@@ -190,7 +191,7 @@ def addLiteral(value, dstNode, dstPort):
 ##
 def connect(srcNode, srcPort, dstNode, dstPort):
 	srcP = srcNode.getOutputPort(srcPort)
-	dstP = dstNode.getInputPort(dstNode)
+	dstP = dstNode.getInputPort(dstPort)
 	srcP.addTarget(dstP)
 	dstP.attach(srcP)
 

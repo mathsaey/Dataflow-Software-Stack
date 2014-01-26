@@ -1,6 +1,6 @@
 # edge.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -24,11 +24,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This module is responsible for parsing edges and literals.
-"""
+##
+# \file if1parser/edge.py
+# \namespace if1parser.edge
+# \brief Parse edges and literalss
+# 
+# This module is responsible for parsing 
+# IF1 edges and literals and adding them to 
+# the IGR.
+##
 
-import execution.api
+import igr
 
 import environment
 import tools
@@ -55,31 +61,22 @@ _l_str_idx  = 4
 # Edge Parser #
 # ----------- #
 
+## Parse an IF1 edge 
 def parseEdge(arr, ctr):
-	srcNode 	= int(arr[_e_src_idx])
-	srcPort 	= int(arr[_e_srcp_idx])
-	dstNode 	= int(arr[_e_dst_idx])
-	dstPort 	= int(arr[_e_dstp_idx])
+	srcLabel = int(arr[_e_src_idx])
+	dstLabel = int(arr[_e_dst_idx])
+	srcPort  = int(arr[_e_srcp_idx]) - 1
+	dstPort	 = int(arr[_e_dstp_idx]) - 1
+	srcNode  = environment.getNode(srcLabel)
+	dstNode  = environment.getNode(dstLabel)
 
-	src 	= None
-	dst 	= None
-
-	if srcNode is 0: src = environment.getSubGraphEntry()
-	else: src = environment.getInst(srcNode)
-	if dstNode is 0 : dst = environment.getSubGraphExit()
-	else: dst = environment.getInst(dstNode)
-
-	if environment.isCallNode(srcNode):
-		srcPort = srcPort - 1
-		src = environment.getInst(-srcNode)
-	if environment.isCallNode(dstNode): dstPort = dstPort - 1
-
-	execution.api.addDestination(src, srcPort - 1, dst, dstPort - 1)
+	igr.connect(srcNode, srcPort, dstNode, dstPort)
 
 # -------------- #
 # Literal Parser #
 # -------------- #
 
+## Parse a literal string that represents a basic type
 def _parseBasicLit(str, typ, ctr):
 	if typ.type is int:
 		return int(str)
@@ -89,6 +86,7 @@ def _parseBasicLit(str, typ, ctr):
 		err = "Unsupported literal, " + str + " encountered."
 		tools.error(err,ctr)
 
+## Parse a literal string.
 def _parseLitStr(str, typ, ctr):
 	string = str[1:-1] #strip enclosing ""
 	if isinstance(typ, type._BasicType):
@@ -99,29 +97,15 @@ def _parseLitStr(str, typ, ctr):
 		err = "Unsupported literal, " + str + " encountered."
 		tools.error(err,ctr) 
 
-def _parseFunctionName(inst, str, ctr):
-	funcPair = environment.getFunctionPair(str)
-	execution.api.bindCall(inst, funcPair[0], funcPair[1])
-
+## Parse an IF1 literal
 def parseLiteral(arr, ctr):
-	key	    = int(arr[_l_dst_idx])
-	port    = int(arr[_l_dstp_idx])
+	label   = int(arr[_l_dst_idx])
+	port    = int(arr[_l_dstp_idx]) - 1
 	typeKey = int(arr[_l_type_idx])
 	string  = arr[_l_str_idx]
 
-	typ = type.getType(typeKey)
-	val = _parseLitStr(string, typ, ctr)
+	node    = environment.getNode(label)
+	typ     = type.getType(typeKey)
+	val     = _parseLitStr(string, typ, ctr)
 
-	inst = None
-
-	if key is 0: inst = environment.getSubGraphExit()
-	else: inst = environment.getInst(key)
-
-	if environment.isCallNode(key):
-		if (port is 1):
-			_parseFunctionName(inst, val, ctr)
-			return
-		else:
-			port = port - 1
-
-	execution.api.addLiteral(inst, port - 1, val)
+	igr.addLiteral(val, node, port)

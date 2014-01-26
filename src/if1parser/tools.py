@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file tools.py
+# \file if1parser/tools.py
 # \namespace if1parser.tools
 # \brief Parser Frontend
 #

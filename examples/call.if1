@@ -17,10 +17,7 @@ G	11	"test"	%sl=9	%sf=call.sis
 N 1	141	%sl=10	%sf=call.sis
 E	0 1	1 1	4	 %na=a	%mk=V	%sl=10
 E	0 2	1 2	4	 %na=b	%mk=V	%sl=10
-N 2	141	%sl=10	%sf=call.sis
-E	1 1	2 1	4	%mk=V
-L		2 2	4 "1"	%mk=V
-E	2 1	0 1	4	%mk=V
+E	1 1	0 1	4	%mk=V
 X	12	"main"	%sl=13	%sf=call.sis
 N 1	120	%sl=14	%sf=call.sis
 L		1 1	11 "test"	%mk=V

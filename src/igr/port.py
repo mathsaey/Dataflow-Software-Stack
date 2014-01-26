@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file port.py
+# \file igr/port.py
 # \namespace igr.port
 # \brief Port definitions
 #
