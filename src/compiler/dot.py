@@ -30,6 +30,7 @@
 # \brief IGR dot parser
 # 
 # This module can return a dot version of the graph.
+# Mainly useful for debugging the compilation process.
 ##
 
 import traverse
@@ -42,102 +43,123 @@ import subprocess
 # --------- #
 
 ##
-# Generate a string for the start of a subgraph.
+# Add the attributes of the subgraph.
 ##
-def sgStart(subGraph):
-	return "subgraph cluster_" + subGraph.name + " {\n"
+def subGraphHeader(buffer, subGraph):
+	buffer.write("subgraph cluster_" + subGraph.name + " {\n")
+	buffer.write("label = " + subGraph.name + "\n")
+
+## "close" the subgraph.
+def subGraphFooter(buffer, subGraph):
+	buffer.write("}\n")
+
+# ----- #
+# Ports #
+# ----- #
 
 ##
-# Generate a string for the end of a subgraph.
+# Get a representation for a port.
+#
+# \return 
+# 		Return the value of the literal, if this port
+#		accepts a literal. * if this port is connected to
+#		another port. Returns the empty string if this port
+#		is not connected to anything
 ##
-def sgEnd():
-	return "}\n"
+def portString(port):
+	if port.acceptsLiteral(): return str(port.source.value)
+	elif port.isConnected():  return "*"
+	else: return ""
+
+##
+# String representation of a port list.
+#
+# \param portLst
+#		The list with ports, should not be None
+#
+# \return 
+# 		Returns a string that will show the values of all the ports
+# 		in a horizontal line when parsed by dot.
+# 		Returns the empty string if the portLst is None
+##
+def ports(portLst):
+	res = ""
+	for port in portLst:
+		res += "|" + portString(port)
+	return "{" + res[1:] + "}"
+
+## Get the portlist for the inputs of a node.
+def inputList(node):
+	if node.inputPorts:
+		return ports(node.inputPorts) + "|"
+	else: return ""
+
+## Get the portlist for the outputs of a node.
+def outputList(node):
+	if node.outputPorts:
+		return "|" + ports(node.outputPorts)
+	else: return ""
 
 # ----- #
 # Nodes #
 # ----- #
 
-##
-# Get a string key for the node.
-##
-def nodeKey(node):
+## Identifier of the node.
+def nodeIdentifier(node):
 	return str(node.key)
 
-def nodeInputs(node):
-	res = ""
-	for port in node.inputPorts:
-		if port.source.isPort():
-			res += "|"
-		else:
-			res += "| " + str(port.source.value)
-	return res[1:]
-
-##
-# Get the node label.
-## 
-def nodeLabel(node):
-	if node.inputs is 0:
-		inputs = ""
-	else:
-		inputs = "{" + nodeInputs(node) + "}|"
-	if node.outputs is 0:
-		outputs = ""
-	else:
-		outputs = "|{" + (node.outputs * "|")[1:] + "}"
-
-	title   = str(node)
-	return '{' + inputs + title + outputs + '}' 
-
-##
-# String representation of a connection between nodes.
-##
+## Convert a connection to a string
 def edgeStr(src, dst):
-	return nodeKey(src) + " -> " + nodeKey(dst) + ";"
+	return nodeIdentifier(src) + " -> " + nodeIdentifier(dst) + ";"
 
-##
-# Get all the outgoing edges of a node.
-##
-def nodeLinks(node):
-	links = ""
+## Add the label of the node to the buffer. 
+def nodeLabel(buffer, node):
+	buffer.write(nodeIdentifier(node))
+	buffer.write(' [label="')
+	buffer.write('{' + inputList(node) + str(node) + outputList(node) + '}')
+	buffer.write('"];\n')
+
+## Add all the outgoing edges of a node to the buffer.
+def nodeLinks(buffer, node):
 	if node.hasNext():
 		for ports in node.outputPorts:
 			for port in ports.targets:
-				links += edgeStr(node, port.node) + "\n"
-	return links
+				buffer.write(edgeStr(node, port.node) + "\n")
 
-##
-# Convert a node to a string
-##
-def nodeStr(node):
-	desc = str(node.key) + ' [label="' + nodeLabel(node) + '"];\n'
-	link = nodeLinks(node)
-	return desc + link
+## Write the information of a node to the buffer
+def node(buffer, node):
+	nodeLabel(buffer, node)
+	nodeLinks(buffer, node)
 
 # --- #
 # Dot #
 # --- #
 
-##
-# Get the dot string for the graph.
-##
+## Write general dot information
+def dotHeader(buffer):
+	buffer.write("digraph IGR {\n")
+	buffer.write("graph [compound=true];\n")
+	buffer.write("node [shape=record];\n")
+
+## Close the dot graph
+def dotFooter(buffer):
+	buffer.write("}")
+
+## Create the dot string
 def getDot():
-	res = StringIO.StringIO()
-	res.write("digraph G {\n")
-	res.write("graph [compound=true];\n")
-	res.write("node [shape=record];\n")
+	buffer = StringIO.StringIO()
+	dotHeader(buffer)
 
-	def subGraphStart(sg):
-		res.write(sgStart(sg))
-	def subGraphStop(sg):
-		res.write(sgEnd())
-	def nodeProc(n):
-		res.write(nodeStr(n))
+	traverse.traverseAllNodes(
+		lambda sg: subGraphHeader(buffer, sg),
+		lambda sg: subGraphFooter(buffer, sg),
+		lambda nd: node(buffer, nd)
+	)
 
-	traverse.traverseAllNodes(subGraphStart, subGraphStop, nodeProc)
-	res.write("}")
-	dot = res.getvalue()
-	res.close()
-	return dot
+	dotFooter(buffer)
+	str = buffer.getvalue()
+	buffer.close()
+	return str
 
 ##
 # Get the dot representation and 
@@ -148,13 +170,37 @@ def dotToFile(path):
 	f.write(getDot())
 
 ##
-# Get the dot representation,
-# write it to a file and run dot on it.
-# Requires dot to be in your path.
+# Convert the IGR graph to dot, save it,
+# and run dot on this file. 
 #
-# Will store the output in png format.
-# The image will be stored as <path>.png
+# This function should be call with keyword arguments.
+# The default arguments will cause the following behaviour:
+# 		* dot is assumed to be in your PATH.
+#		* the dot file will be saved in igr.dot
+#		* the output will be in png format.
+#		* dot will decide where to store the output.
+#			With the default settings this would be in igr.dot.png
+#
+# \param dotpath
+#		The path of the dot executable, in case it's not in your PATH
+# \param path
+#		The location where the dot file will be stored.
+# \param format
+#		The output format of the graph dot creates from the dot file.
+# \param output
+#		The location where we store the output of dot.
+#		Leaving this blank will pass the -O option.
+#		The -O option let's dot choose the path.
+# \param other
+#		Any other options you want to pass to doth.
+#		These options should be passed as a list of strings.
 ##
-def runDot(path):
+def runDot(dotpath = "dot", path = "igr.dot", format = "png", output = "", other = []):
 	dotToFile(path)
-	subprocess.call(["dot", "-Tpng", path, "-O"])
+
+	format = "-T" + format
+
+	if output: output = "-o" + output
+	else: output = "-O"
+
+	subprocess.check_call([dotpath, format, path, output] + other)

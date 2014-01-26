@@ -40,4 +40,4 @@ def tmp(node):
 
 if1parser.parseFile(loc)
 #compiler.traverse.traverseAllNodes(tmp, tmp)
-compiler.dot.runDot("../igr.dot")
+compiler.dot.runDot(path="../igr.dot")

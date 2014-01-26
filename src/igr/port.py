@@ -66,6 +66,19 @@ class Port(object):
 		node = str(self.node)
 		return name + " " + idx + " of " + node
 
+	##
+	# See if the port is connected to something.
+	#
+	# \return 
+	# 		True if this node is connected.
+	##
+	def isConnected(self): pass
+
+	##
+	# Returns true if this port accepts a literal.
+	##
+	def acceptsLiteral(self): return False
+
 	## See if this is a port (mainly for traversal)
 	def isPort(self): return True
 
@@ -88,6 +101,11 @@ class InputPort(Port):
 	def attach(self, source):
 		self.source = source
 
+	def isConnected(self):
+		return self.source is not None
+
+	def acceptsLiteral(self): 
+		return self.isConnected() and not self.source.isPort()
 ##
 # Exit point of a node.
 #
@@ -110,3 +128,6 @@ class OutputPort(Port):
 	##
 	def addTarget(self, target):
 		self.targets.append(target)
+
+	def isConnected(self):
+		return self.targets is not []
