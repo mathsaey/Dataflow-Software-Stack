@@ -75,7 +75,12 @@ class Scope(object):
 		if len(self.nodes) is label:
 			self.nodes += [node]
 		else:
-			tools.error("Non-sequential node label added!")
+			# This situation can occur in IF1 (might be a bug)
+			# so fill the list with none until the length is ok.
+			tools.warning("Non-sequential node label added!")
+			padding = [None for i in xrange(0, label - len(self.nodes))]
+			self.nodes += padding
+			self.addNode(label, node)
 
 	##
 	# Get a node from the scope.
@@ -91,6 +96,24 @@ class Scope(object):
 	##
 	def getSubGraph(self):
 		return self.nodes[0]
+
+##
+# Single part of the scope stack.
+#
+# This scope is only to be used inside the global
+# environment of a compound node. It is meant to store
+# the various subgraphs of a compound node.
+##
+class CompoundScope(object):
+	def __init__(self):
+		super(CompoundScope, self).__init__()
+		self.graphs = []
+
+	##
+	# Add a graph to the list of subgraphs
+	##
+	def addSubGraph(self, graph):
+		self.graphs.append(graph)
 
 # ------- #
 # Scoping #
@@ -111,13 +134,21 @@ def scope(subGraph):
 	__STACK__ = [Scope(subGraph)] + __STACK__
 
 ##
+# Create a new compound scope and push it
+# on top of the stack.
+##
+def scopeCompound():
+	global __STACK__
+	__STACK__ = [CompoundScope()] + __STACK__
+
+##
 # Remove the current scope.
 # Returns to the previous scope.
 ##
 def popScope():
 	global __STACK__
 	if len(__STACK__) > 1:
-		__STACK__ = __STACK__[:-1]
+		__STACK__ = __STACK__[1:]
 
 ##
 # Get the node with label in the current scope.
@@ -144,3 +175,46 @@ def addNode(label, node):
 ##
 def getSubGraph():
 	return __STACK__[0].getSubGraph()
+
+##
+# Add a subgraph to the compound scope.
+# This will cause errors if the current
+# scope is not a compound scope.
+##
+def addSubGraph(graph):
+	__STACK__[0].addSubGraph(graph)
+
+##
+# Get the subgraphs.
+# This will cause errors if the current
+# scope is not a compound scope.
+##
+def getSubGraphs():
+	return __STACK__[0].graphs
+
+# ----------------- #
+# Compound Checking #
+# ----------------- #
+
+## 
+# Keeps track of the level of depth
+# w.r.t. a compound definition.
+# 
+# This allows us to handle nested compound
+# nodes without issues.
+##
+__COMP_LEVEL__ = 0
+
+## Are we currently in a compound node?
+def isCompound():
+	return __COMP_LEVEL__ is not 0
+
+## Enter a compound node.
+def enterComp():
+	global __COMP_LEVEL__
+	__COMP_LEVEL__ += 1
+
+## Exit a compound node.
+def exitComp():
+	global __COMP_LEVEL__
+	__COMP_LEVEL__ -= 1

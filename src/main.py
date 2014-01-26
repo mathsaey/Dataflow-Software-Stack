@@ -31,13 +31,12 @@ This module serves as a top level file to access the other modules
 import if1parser
 import compiler.dot
 
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 
 def tmp(node):
 	print node
 
 if1parser.parseFile(loc)
-#compiler.traverse.traverseAllNodes(tmp, tmp)
 compiler.dot.runDot(path="../igr.dot")

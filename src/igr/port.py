@@ -130,4 +130,4 @@ class OutputPort(Port):
 		self.targets.append(target)
 
 	def isConnected(self):
-		return self.targets is not []
+		return self.targets != []

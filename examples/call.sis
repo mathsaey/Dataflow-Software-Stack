@@ -10,6 +10,6 @@ function test(a, b : integer returns integer)
 	a + b
 end function
 
-function main(returns integer)
+function main(a : integer returns integer)
 	test(1,2) + test(3,4)
 end function

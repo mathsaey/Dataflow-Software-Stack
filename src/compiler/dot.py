@@ -46,8 +46,9 @@ import subprocess
 # Add the attributes of the subgraph.
 ##
 def subGraphHeader(buffer, subGraph):
-	buffer.write("subgraph cluster_" + subGraph.name + " {\n")
-	buffer.write("label = " + subGraph.name + "\n")
+	name = subGraph.name.replace(".", "_")
+	buffer.write("subgraph cluster_" + name + " {\n")
+	buffer.write("label = " + name + "\n")
 
 ## "close" the subgraph.
 def subGraphFooter(buffer, subGraph):

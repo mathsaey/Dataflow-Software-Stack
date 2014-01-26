@@ -96,7 +96,7 @@ def getSubGraph(name):
 #		should be used to access parameters and
 #		return values of this subgraph.
 #
-def createSubGraph(name , inputs, outputs):
+def createGeneralSubGraph(name , inputs, outputs):
 	subGraph = subgraph.SubGraph(None, None, name)
 	entry = node.SubGraphEntryNode(subGraph, inputs)
 	exit  = node.SubGraphExitNode(subGraph, outputs)
@@ -104,15 +104,22 @@ def createSubGraph(name , inputs, outputs):
 	subGraph.exit = exit
 	subGraph.addNode(entry)
 	subGraph.addNode(exit)
-	graph.addSubGraph(subGraph)
-	graph.bindName(subGraph)
 	return subGraph
 
 ##
-# Create a subgraph that will be pair of a compound node.
-# Compound node subgraphs are nameless subgraphs.
+# Create a subgraph and add it to the program graph.
 ##
-def createCompoundSubGraph(inputs = 0, outputs = 0): pass
+def createSubGraph(name, inputs, outputs):
+	subGraph = createGeneralSubGraph(name, inputs, outputs)
+	graph.addSubGraph(subGraph)
+	graph.bindName(subGraph)
+	return subGraph
+ 
+##
+# Create a subgraph for a compound node.
+##
+def createCompoundSubGraph():
+	return createGeneralSubGraph("compound subgraph", 0, 0)
 
 ##\}
 
@@ -155,13 +162,15 @@ def createOperationNode(subGraph, operation):
 ##
 # Create a Compound node
 #
+# \param constructor
+#		The constructor of the compound node to use
 # \param subGraph
 #		The subgraph this node belongs too
 # \param subGraphss
 #		The subgraphs that are part of this compound node
 ##
-def createCompoundNode(subGraph, subGraphs):
-	return createNode(node.CompoundNode, subGraph, [subGraphs])
+def createCompoundNode(constructor, subGraph, subGraphs):
+	return createNode(constructor, subGraph, [subGraphs])
 
 ##
 # Create a call node.

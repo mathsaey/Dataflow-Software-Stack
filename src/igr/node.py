@@ -137,6 +137,9 @@ class Node(object):
 	## See if this node can be follow to other nodes.
 	def hasPrevious(self): return True
 
+	## Check if this node is a compound node
+	def isCompound(self): return False
+
 # --------------------------- #
 # Graph entry and exit points #
 # --------------------------- #
@@ -211,6 +214,11 @@ class CallNode(Node):
 	def bindFunction(self, func):
 		self.function = func
 
+
+# -------------- #
+# Compound Nodes #
+# -------------- #
+
 ##
 # Compound node
 #
@@ -221,3 +229,17 @@ class CompoundNode(Node):
 	def __init__(self, subGraph, subGraphs):
 		super(CompoundNode, self).__init__(subGraph)
 		self.subGraphs = subGraphs
+
+	def isCompound(self): return True
+
+class ForallCNode(CompoundNode): pass
+class SelectCNode(CompoundNode): pass
+class TagCaseCNode(CompoundNode): pass
+class LoopACNode(CompoundNode): pass
+class LoopBCNode(CompoundNode): pass
+class IfThenElseCNode(CompoundNode): pass
+class IterateCNode(CompoundNode): pass
+class WhileLoopCNode(CompoundNode): pass
+class RepeatLoopCNode(CompoundNode): pass
+class SeqForallCNode(CompoundNode): pass
+class UReduceCNode(CompoundNode): pass

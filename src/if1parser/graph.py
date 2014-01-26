@@ -35,6 +35,7 @@
 
 import environment
 import operations
+import compound
 import type
 
 import igr
@@ -67,8 +68,8 @@ _ce_lis_idx		= 4
 # Graph Parser #
 # ------------ #
 
-## Parse an IF1 subgraph.
-def parseGraph(arr, ctr):
+## Parse a standard subgraph.
+def parseSubGraph(arr, ctr):
 	name    = arr[_g_name_idx][1:-1]
 	typeIdx = int(arr[_g_type_idx])
 	sig     = type.getType(typeIdx)
@@ -79,6 +80,24 @@ def parseGraph(arr, ctr):
 
 	environment.popScope()
 	environment.scope(graph)
+
+## Parse a subgraph of a compound node.
+def parseCompoundSubGraph(arr, ctr):
+	graph = igr.createCompoundSubGraph()
+
+	environment.popScope()
+	environment.addSubGraph(graph)
+	environment.scope(graph)
+
+## 
+# Determine which kind of 
+# subgraph we are dealing with.
+##
+def parseGraph(arr, ctr):
+	if environment.isCompound():
+		parseCompoundSubGraph(arr, ctr)
+	else: 
+		parseSubGraph(arr, ctr)
 
 # ----------- #
 # Node Parser #
@@ -101,4 +120,54 @@ def parseNode(arr, ctr):
 	else:
 		node = parseStandardNode(opCode)
 	
+	environment.addNode(label, node)
+
+# --------------- #
+# Compound Parser #
+# --------------- #
+
+##
+# Parse the start of a compound node.
+#
+# We do this by creating a compound scope to 
+# store the subgraphs. We also tell the environment
+# that we entered a compound node.
+#
+# Finally, we add a dummy node that will be popped
+# by the first subgraph we meet.
+##
+def parseCompoundStart(arr, ctr):
+	environment.scopeCompound()
+	environment.enterComp()
+	environment.scope(None)
+
+def parseCompoundEnd(arr, ctr):
+	# Enter the compound scope
+	environment.popScope()
+	
+	# get and order the subgraphs of the compound node.
+	length    = int(arr[_ce_len_idx])
+	endIdx    = _ce_lis_idx + length
+	assocLst  = arr[_ce_lis_idx:endIdx]
+	subGraphs = environment.getSubGraphs()
+	resGraphs = []
+
+	for idx in assocLst:
+		graph = subGraphs[int(idx)]
+		resGraphs += [graph]
+
+	# Restore the environment
+	environment.exitComp()
+	environment.popScope()
+
+	# Create the compound node
+	compType = arr[_ce_code_idx]
+	const = compound.getCompound(compType, ctr)
+	node = igr.createCompoundNode(
+		const, 
+		environment.getSubGraph(), 
+		resGraphs)
+
+	# Add the node to the environment.
+	label  = int(arr[_ce_label_idx])
 	environment.addNode(label, node)

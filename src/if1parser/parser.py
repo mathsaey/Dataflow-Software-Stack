@@ -58,8 +58,8 @@ __FUNCTIONS__ = {
 	'N' : graph.parseNode,
 	'G' : graph.parseGraph,
 	'X' : graph.parseGraph,
-	'{' : skipLine,
-	'}' : skipLine
+	'{' : graph.parseCompoundStart,
+	'}' : graph.parseCompoundEnd
 }
 
 ##
