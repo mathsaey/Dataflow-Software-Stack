@@ -29,7 +29,7 @@ This module serves as a top level file to access the other modules
 """
 
 import if1parser
-import compiler.traverse
+import compiler.dot
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
@@ -40,4 +40,4 @@ def tmp(node):
 
 if1parser.parseFile(loc)
 #compiler.traverse.traverseAllNodes(tmp, tmp)
-compiler.dot.getDot()
+compiler.dot.runDot("../igr.dot")

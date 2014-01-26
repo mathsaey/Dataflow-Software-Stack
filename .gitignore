@@ -5,6 +5,8 @@
 examples/s.out
 obj/
 *.pyc
+*.dot
+*.dot.png
 
 # Editor files #
 

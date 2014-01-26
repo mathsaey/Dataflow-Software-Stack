@@ -101,46 +101,53 @@ def traverseBottomToTop(subGraph, nodeProc, literalProc):
 #
 # All of the other program traversals are defined in terms of this.
 #
-# \param subGraphProc
+# \param subGraphStart
 #		The function to call when we encounter a subgraph.
+# \param subGraphStop
+#		The function to call when we exit a subgraph.
 # \param traversal
 #		The function that performs the subgraph traversal.
 # \param traversalArgs
 #		The arguments that the traversal needs (without the subgraph)
 ##
-def traverseAll(subGraphProc, traversal, traversalArgs):
+def traverseAll(subGraphStart, subGraphStop, traversal, traversalArgs):
 	for subGraph in igr.getSubGraphs():
-		subGraphProc(subGraph)
+		subGraphStart(subGraph)
 		args = [subGraph] + traversalArgs
 		traversal(*args)
+		subGraphStop(subGraph)
 
 ##
 # Traverse every node in the graph.
 ##
-def traverseAllNodes(subGraphProc, nodeProc):
-	traverseAll(subGraphProc, traverseNodes, [nodeProc])
+def traverseAllNodes(subGraphStart, subGraphStop, nodeProc):
+	traverseAll(subGraphStart, subGraphStop, traverseNodes, [nodeProc])
 
 ##
 # Traverse every subgraph with traverseTopToBottom()
 #
-# \param subGraphProc
+# \param subGraphStart
 #		The function to call when we encounter a subgraph.
+# \param subGraphStop
+#		The function to call when we exit a subgraph.
 # \param nodeProc
 #		The function to call when we encounter a node.
 ##
-def traverseAllTopToBottom(subGraphProc, nodeProc):
-	traverseAll(subGraphProc, traverseTopToBottom, [nodeProc])
+def traverseAllTopToBottom(subGraphStart, subGraphStop, nodeProc):
+	traverseAll(subGraphStart, subGraphStop, traverseTopToBottom, [nodeProc])
 ##
 # Traverse every subgraph with traverseBottomToTop()
 #
-# \param subGraphProc
+# \param subGraphStart
 #		The function to call when we encounter a subgraph.
+# \param subGraphStop
+#		The function to call when we exit a subgraph.
 # \param nodeProc
 #		The function to call when we encounter a node.
 # \param literalProc
 #		The function to call when we encounter a literal.
 ##
-def traverseAllBottomToTop(subGraphProc, nodeProc, literalProc):
-	traverseAll(subGraphProc, traverseBottomToTop, [nodeProc, literalProc])
+def traverseAllBottomToTop(subGraphStart, subGraphStop, nodeProc, literalProc):
+	traverseAll(subGraphStart, subGraphStop, traverseBottomToTop, [nodeProc, literalProc])
 
 ## \}

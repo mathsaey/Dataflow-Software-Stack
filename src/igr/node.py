@@ -92,35 +92,10 @@ class Node(object):
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
-
-	## 
-	# Fetch an element from a list and expand the list if it
-	# is not long enough. 
-	# 
-	# This allows us to find out the exact amount of inputs and
-	# outputs that a certain node produces even if we cannot know
-	# this in advance (for instance, call nodes).
-	#
-	# \param lst
-	#		The list from which we want to grab an element
-	# \param var
-	#		The var to update if we had to expand the list
-	# \param constructor
-	#		The constructor to use when expanding the list.
-	# \param idx
-	#		The idx of the element we want
 	##
-	def getFromList(self, lst, var, constructor, idx):
-		try:
-			res = lst[idx]
-			return res
-		except IndexError:
-			var += 1
-			lst += [constructor(self, idx)]
-			return self.getFromList(lst, var, constructor, idx)
-
-				##
-	# Gets an input port
+	# Gets an input port. Create it if it doesn't exist yet.
+	# This allows us to determine the amount of inputs
+	# a certain node will have, even if this is not explicit in IF1
 	#
 	# \param idx
 	# 		The idx of the port you need
@@ -128,10 +103,18 @@ class Node(object):
 	#		The port at idx
 	##
 	def getInputPort(self, idx):
-		return self.getFromList(self.inputPorts, self.inputs, port.InputPort, idx)
+		try:
+			res = self.inputPorts[idx]
+			return res
+		except IndexError:
+			self.inputs += 1
+			self.inputPorts += [port.InputPort(self, idx)]
+			return self.getInputPort(idx)
 
 	##
-	# Gets an output port
+	# Gets an output port. Create it if it doesn't exist yet.
+	# This allows us to determine the amount of outputs
+	# a certain node will have, even if this is not explicit in IF1
 	#
 	# \param idx
 	# 		The idx of the port you need
@@ -139,7 +122,13 @@ class Node(object):
 	#		The port at idx
 	##
 	def getOutputPort(self, idx):
-		return self.getFromList(self.outputPorts, self.outputs, port.OutputPort, idx)
+		try:
+			res = self.outputPorts[idx]
+			return res
+		except IndexError:
+			self.outputs += 1
+			self.outputPorts += [port.OutputPort(self, idx)]
+			return self.getOutputPort(idx)
 
 
 	## See if this node can be followed to other nodes.
