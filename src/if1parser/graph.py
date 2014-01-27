@@ -154,6 +154,7 @@ def parseCompoundEnd(arr, ctr):
 
 	for idx in assocLst:
 		graph = subGraphs[int(idx)]
+		graph.name = str(idx)
 		resGraphs += [graph]
 
 	# Restore the environment

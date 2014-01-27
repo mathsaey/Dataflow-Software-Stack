@@ -119,7 +119,7 @@ def createSubGraph(name, inputs, outputs):
 # Create a subgraph for a compound node.
 ##
 def createCompoundSubGraph():
-	return createGeneralSubGraph("compound subgraph", 0, 0)
+	return createGeneralSubGraph(None, 0, 0)
 
 ##\}
 

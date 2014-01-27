@@ -9,7 +9,7 @@ T 8 10
 T 9 8	4	0
 T 10 8	4	9
 T 11 3	10	9
-T 12 3	9	9
+T 12 3	0	9
 C$  C Faked IF1CHECK
 C$  D Nodes are DFOrdered
 C$  F Livermore Frontend   Version1.8

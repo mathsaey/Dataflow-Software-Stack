@@ -29,125 +29,68 @@
 # \namespace compiler.traverse
 # \brief IGR Traversals
 # 
-# This module defines different functions that allow
-# us to traverse the IGR in various ways.
+# This module defines the functions that allow us to
+# traverse the IGR graph.
 ##
 
 import igr
-import visitor
-
-# ------------------- #
-# SubGraph Traversals #
-# ------------------- #
-## \name SubGraph Traversals
-## Traversals that iterate over a subgraph
-## \{
 
 ##
-# Traverses every node in a subgraph, in the order
-# that the parser encountered them.
+# Traverse all the nodes in the program.
 #
 # \param nodeProc
-#		The function to call when we encounter a node.
-##
-def traverseNodes(subGraph, nodeProc):
-	for node in subGraph.nodes:
-		nodeProc(node)
-
-##
-# Traverse the nodes in the subgraph, starting from
-# the entry point and heading down following the edges
-# in a depth-first manner.
-#
-# Depending on the way the subgraph is wired, this 
-# traversal may not encounter all the nodes. Only the nodes
-# that are (indirectly) connected to the entryNode are encountered.
-#
-# \param nodeProc
-#		The function to call when we encounter a node.
-##
-def traverseTopToBottom(subGraph, nodeProc):
-	v = visitor.ForwardVisitor(nodeProc)
-	v.start(subGraph)
-
-##
-# Traverse the nodes in the subgraph, starting from the
-# exit point and heading up following the incoming edges of 
-# every node.
-#
-# Only the nodes that are (indirectly) wired to the exit node
-# are encountered.
-#
-# \param nodeProc
-#		The function to call when we encounter a node.
-# \param literalProc
-#		The function to call when we encounter a literal.
-##
-def traverseBottomToTop(subGraph, nodeProc, literalProc):
-	v = visitor.BackwardVisitor(nodeProc, literalProc)
-	v.start(subGraph)
-
-## \}
-
-# --------------------- #
-# Full Graph Traversals #
-# --------------------- #
-## \name Full Graph Traversals
-## Traversals that iterate over the complete program.
-## \{
-
-##
-# Traverse all the subgraphs in the program.
-#
-# All of the other program traversals are defined in terms of this.
-#
+#		The function that is called when we encounter a node.
+#		node is passed as an argument to this function.
 # \param subGraphStart
-#		The function to call when we encounter a subgraph.
+#		The function that is called when we enter a new subgraph.
+#		The subgraph is passed as an argument.
 # \param subGraphStop
-#		The function to call when we exit a subgraph.
-# \param traversal
-#		The function that performs the subgraph traversal.
-# \param traversalArgs
-#		The arguments that the traversal needs (without the subgraph)
+#		The function that is called when we exit a subgraph.
+#		The subgraph is passed as an argument.
+# \param skipCompound
+#		Should be true is you want to treat compounds as normal nodes.
+#		If this value is false, the subgraphs of any compound node will
+#		be traversed.
+# \param compoundStart
+#		The function that is called when we start parsing a compound node.
+#		The node is passed as an argument to this function.
+#		Remember that we have already called nodeProc on this node!
+# \param comoundEnd
+#		The function that is called when we exit a compound node.
+#		The node in question is passed to the function.
+# \param subGraphs
+#		The subgraphs to traverse. Parses the entire program by default.
 ##
-def traverseAll(subGraphStart, subGraphStop, traversal, traversalArgs):
-	for subGraph in igr.getSubGraphs():
+def traverseAll(
+ 	nodeProc, 
+	subGraphStart,
+	subGraphStop, 
+	skipCompound,
+	compoundStart,
+	compoundStop,
+	subGraphs = igr.getSubGraphs()
+	):
+
+	def traverseSubGraph(subGraph, nodeProc):
 		subGraphStart(subGraph)
-		args = [subGraph] + traversalArgs
-		traversal(*args)
+		for node in subGraph.nodes:
+			nodeProc(node)
+			checkCompound(node)
 		subGraphStop(subGraph)
 
-##
-# Traverse every node in the graph.
-##
-def traverseAllNodes(subGraphStart, subGraphStop, nodeProc):
-	traverseAll(subGraphStart, subGraphStop, traverseNodes, [nodeProc])
+	def checkCompound(node):
+		if (not skipCompound) and (node.isCompound()):
+			compoundStart(node)
+			traverseAll(
+				nodeProc,
+				subGraphStart,
+				subGraphStop,
+				skipCompound,
+				compoundStart,
+				compoundStop,
+				node.subGraphs
+				)
+			compoundStop(node)
 
-##
-# Traverse every subgraph with traverseTopToBottom()
-#
-# \param subGraphStart
-#		The function to call when we encounter a subgraph.
-# \param subGraphStop
-#		The function to call when we exit a subgraph.
-# \param nodeProc
-#		The function to call when we encounter a node.
-##
-def traverseAllTopToBottom(subGraphStart, subGraphStop, nodeProc):
-	traverseAll(subGraphStart, subGraphStop, traverseTopToBottom, [nodeProc])
-##
-# Traverse every subgraph with traverseBottomToTop()
-#
-# \param subGraphStart
-#		The function to call when we encounter a subgraph.
-# \param subGraphStop
-#		The function to call when we exit a subgraph.
-# \param nodeProc
-#		The function to call when we encounter a node.
-# \param literalProc
-#		The function to call when we encounter a literal.
-##
-def traverseAllBottomToTop(subGraphStart, subGraphStop, nodeProc, literalProc):
-	traverseAll(subGraphStart, subGraphStop, traverseBottomToTop, [nodeProc, literalProc])
-
-## \}
+	for subGraph in subGraphs:
+		traverseSubGraph(subGraph, nodeProc)

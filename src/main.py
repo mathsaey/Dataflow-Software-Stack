@@ -39,4 +39,4 @@ def tmp(node):
 	print node
 
 if1parser.parseFile(loc)
-compiler.dot.runDot(path="../igr.dot")
+compiler.dot.runDot(path="../igr.dot", skipCompound = True)

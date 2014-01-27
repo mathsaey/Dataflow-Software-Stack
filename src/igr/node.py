@@ -140,6 +140,10 @@ class Node(object):
 	## Check if this node is a compound node
 	def isCompound(self): return False
 
+	## Check if this node is a call node
+	def isCall(self): return False
+
+
 # --------------------------- #
 # Graph entry and exit points #
 # --------------------------- #
@@ -195,6 +199,11 @@ class OperationNode(Node):
 		super(OperationNode, self).__init__(subGraph)
 		self.operation = operation
 
+	def __str__(self):
+		key = str(self.key)
+		opname = self.operation.__name__
+		return "OpN '" + key + "' " + opname 
+
 ##
 # Call node
 #
@@ -214,7 +223,8 @@ class CallNode(Node):
 	def bindFunction(self, func):
 		self.function = func
 
-
+	def isCall(self): return True
+	
 # -------------- #
 # Compound Nodes #
 # -------------- #

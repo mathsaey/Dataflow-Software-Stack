@@ -49,9 +49,23 @@ def subGraphHeader(buffer, subGraph):
 	name = subGraph.name.replace(".", "_")
 	buffer.write("subgraph cluster_" + name + " {\n")
 	buffer.write("label = " + name + "\n")
+	buffer.write("graph [pencolor = black, bgcolor = white]\n")
 
 ## "close" the subgraph.
 def subGraphFooter(buffer, subGraph):
+	buffer.write("}\n")
+
+# -------- #
+# Compound #
+# -------- #
+
+def compoundHeader(buffer, node):
+	name = str(node.key)
+	buffer.write("subgraph cluster_compound_" + name + " {\n")
+	buffer.write("label = compound_" + name + "\n")
+	buffer.write("graph [pencolor = black, bgcolor = lightgrey]\n")
+
+def compoundFooter(buffer, node):
 	buffer.write("}\n")
 
 # ----- #
@@ -67,9 +81,9 @@ def subGraphFooter(buffer, subGraph):
 #		another port. Returns the empty string if this port
 #		is not connected to anything
 ##
-def portString(port):
+def portString(port, preFix = ""):
 	if port.acceptsLiteral(): return str(port.source.value)
-	elif port.isConnected():  return "*"
+	elif port.isConnected():  return "<" + preFix + str(port.idx) + ">" + " *"
 	else: return ""
 
 ##
@@ -83,22 +97,22 @@ def portString(port):
 # 		in a horizontal line when parsed by dot.
 # 		Returns the empty string if the portLst is None
 ##
-def ports(portLst):
+def ports(portLst, prefix = ""):
 	res = ""
 	for port in portLst:
-		res += "|" + portString(port)
+		res += "|" + portString(port, prefix)
 	return "{" + res[1:] + "}"
 
 ## Get the portlist for the inputs of a node.
 def inputList(node):
 	if node.inputPorts:
-		return ports(node.inputPorts) + "|"
+		return ports(node.inputPorts, "I") + "|"
 	else: return ""
 
 ## Get the portlist for the outputs of a node.
 def outputList(node):
 	if node.outputPorts:
-		return "|" + ports(node.outputPorts)
+		return "|" + ports(node.outputPorts, "O")
 	else: return ""
 
 # ----- #
@@ -110,22 +124,26 @@ def nodeIdentifier(node):
 	return str(node.key)
 
 ## Convert a connection to a string
-def edgeStr(src, dst):
-	return nodeIdentifier(src) + " -> " + nodeIdentifier(dst) + ";"
+def edgeStr(srcNode, scrPort, dstNode, dstPort):
+	src = nodeIdentifier(srcNode) + " : O" + str(scrPort) 
+	dst = nodeIdentifier(dstNode) + " : I" + str(dstPort)
+	return src + " -> " + dst + ";"
 
 ## Add the label of the node to the buffer. 
 def nodeLabel(buffer, node):
 	buffer.write(nodeIdentifier(node))
-	buffer.write(' [label="')
-	buffer.write('{' + inputList(node) + str(node) + outputList(node) + '}')
-	buffer.write('"];\n')
+	buffer.write(' [')
+	buffer.write('label="' + '{' + inputList(node) + str(node) + outputList(node) + '}"')
+	if node.isCompound(): buffer.write("style = filled, fillcolor = lightgrey")
+	if node.isCall(): buffer.write("style = dashed")
+	buffer.write('];\n')
 
 ## Add all the outgoing edges of a node to the buffer.
 def nodeLinks(buffer, node):
 	if node.hasNext():
-		for ports in node.outputPorts:
-			for port in ports.targets:
-				buffer.write(edgeStr(node, port.node) + "\n")
+		for port in node.outputPorts:
+			for target in port.targets:
+				buffer.write(edgeStr(node, port.idx, target.node, target.idx) + "\n")
 
 ## Write the information of a node to the buffer
 def node(buffer, node):
@@ -147,14 +165,17 @@ def dotFooter(buffer):
 	buffer.write("}")
 
 ## Create the dot string
-def getDot():
+def getDot(skipCompound):
 	buffer = StringIO.StringIO()
 	dotHeader(buffer)
 
-	traverse.traverseAllNodes(
+	traverse.traverseAll(
+		lambda nd: node(buffer, nd),
 		lambda sg: subGraphHeader(buffer, sg),
 		lambda sg: subGraphFooter(buffer, sg),
-		lambda nd: node(buffer, nd)
+		skipCompound,
+		lambda nd: compoundHeader(buffer, nd),
+		lambda nd: compoundFooter(buffer, nd)
 	)
 
 	dotFooter(buffer)
@@ -166,9 +187,9 @@ def getDot():
 # Get the dot representation and 
 # write it to a file.
 ##
-def dotToFile(path):
+def dotToFile(path, skipCompound = True):
 	f = open(path, 'w')
-	f.write(getDot())
+	f.write(getDot(skipCompound))
 
 ##
 # Convert the IGR graph to dot, save it,
@@ -195,9 +216,19 @@ def dotToFile(path):
 # \param other
 #		Any other options you want to pass to doth.
 #		These options should be passed as a list of strings.
+# \param skipCompound 
+#		True if you do not want to display the compound nodes.
 ##
-def runDot(dotpath = "dot", path = "igr.dot", format = "png", output = "", other = []):
-	dotToFile(path)
+def runDot(
+	dotpath = "dot",
+	path = "igr.dot", 
+	format = "png", 
+	output = "", 
+	other = [], 
+	skipCompound = True
+	):
+
+	dotToFile(path, skipCompound)
 
 	format = "-T" + format
 
