@@ -94,6 +94,7 @@ def _instructionLoop():
 		_processInstruction(inst[0], inst[1])
 
 def run():
+	log.log("RUN", "starting runtime")
 	global __ACTIVE__
 	__ACTIVE__ = True
 	tokenThread = threading.Thread(target = _tokenLoop)
@@ -102,3 +103,4 @@ def run():
 	instThread.start()
 	tokenThread.join()
 	instThread.join()
+	log.log("RUN", "runtime has finished")

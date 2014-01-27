@@ -69,6 +69,14 @@ def _reserveTLRSlot():
 def getInstruction(key):
 	return __INSTRUCTION_MEMORY__[key]
 
+# Reset the instruction memory
+def reset():
+	global __CURRENT_STR_KEY__
+	global __CURRENT_TLR_KEY__
+	__INSTRUCTION_MEMORY__.clear()
+	__CURRENT_STR_KEY__     = -1
+	__CURRENT_TLR_KEY__     = 0
+
 # -------------------- #
 # Instruction creation #
 # -------------------- #
@@ -83,14 +91,14 @@ def _createInstruction(slotFunc, constructor, args = []):
 def addOperationInstruction(operation, inputs):
 	return _createInstruction(_reserveTLRSlot, OperationInstruction, [inputs, operation])
 
-def addContextChangeInstruction(callRet):
-	return _createInstruction(_reserveSTRSlot, ContextChangeInstruction, [callRet])
+def addContextChange(callRet):
+	return _createInstruction(_reserveSTRSlot, ContextChange, [callRet])
 
-def addForwardInstruction():
-	return _createInstruction(_reserveSTRSlot, ForwardInstruction, [])
+def addSink():
+	return _createInstruction(_reserveSTRSlot, Sink, [])
 
-def addContextRestoreInstruction():
-	return _createInstruction(_reserveSTRSlot, ContextRestoreInstruction, [])
+def addContextRestore():
+	return _createInstruction(_reserveSTRSlot, ContextRestore, [])
 
 def addStopInstruction():
 	return _createInstruction(_reserveSTRSlot, StopInstruction, [])
@@ -200,9 +208,9 @@ A forward instruction simply accepts a token and forwards it to
 it's destinations.
 """
 
-class ForwardInstruction(StaticInstruction, SingleTokenReceiver):
+class Sink(StaticInstruction, SingleTokenReceiver):
 	def __init__(self, key):
-		super(ForwardInstruction, self).__init__(key)
+		super(Sink, self).__init__(key)
 
 	def acceptToken(self, token):
 		log.log("INS", self, "forwarding", token)
@@ -215,20 +223,20 @@ class ForwardInstruction(StaticInstruction, SingleTokenReceiver):
 # Context Change #
 # -------------- #
 
-class ContextChangeInstruction(DynamicInstruction):
-	def __init__(self, key, callRet):
-		super(ContextChangeInstruction, self).__init__(key)
-		self.func = None
-		self.funcRet = None
-		self.callRet = callRet
+class ContextChange(DynamicInstruction):
+	def __init__(self, key, returnSink):
+		super(ContextChange, self).__init__(key)
+		self.returnSink = returnSink
+		self.entrySink  = None
+		self.restore    = None
 		self.contexts = {}
 
-	def bind(self, func, funcRet):
-		self.func = func
-		self.funcRet = getInstruction(funcRet)
+	def bind(self, entrySink, restore):
+		self.entrySink = entrySink
+		self.restore = getInstruction(restore)
 
 	def setReturn(self, newCont, oldCont):
-		self.funcRet.attachReturn(newCont, oldCont, self.callRet)
+		self.restore.attachSink(newCont, oldCont, self.returnSink)
 
 	def getNewContext(self, oldCont):
 		if oldCont not in self.contexts:
@@ -240,31 +248,31 @@ class ContextChangeInstruction(DynamicInstruction):
 			return self.contexts[oldCont]
 
 	def acceptToken(self, token):
-		log.log("INS", self, "calling", self.func, "with:", token)
+		log.log("INS", self, "calling", self.entrySink, "with:", token)
 		oldCont = token.tag.cont
 		newCont = self.getNewContext(oldCont)
-		self.modifyAndSend(token, self.func, newCont)
+		self.modifyAndSend(token, self.entrySink, newCont)
 
 # --------------- #
 # Context Restore #
 # --------------- #
 
-class ContextRestoreInstruction(DynamicInstruction):
+class ContextRestore(DynamicInstruction):
 	def __init__(self, key):
-		super(ContextRestoreInstruction, self).__init__(key)
+		super(ContextRestore, self).__init__(key)
 		self.map = {}
 
-	def attachReturn(self, newCont, oldCont, target):
+	def attachSink(self, newCont, oldCont, target):
 		self.map.update({newCont : (target, oldCont)})
 
 	def acceptToken(self, token):
-		log.log("INS", self, "returning", token)
+		log.log("INS", self, "restoring", token)
 		pair = self.map[token.tag.cont]
 		self.modifyAndSend(token, pair[0], pair[1])
 
-# ---------------- #
-# Stop Instruction #
-# ---------------- #
+# ----------------- #
+# Meta Instructions #
+# ----------------- #
 
 class StopInstruction(DynamicInstruction):
 	def __init__(self, key):

@@ -87,3 +87,18 @@ def addToken(token):
 	_updateKeyArr(key, port, token)    
 	if _isKeyReady(key):               
 		_executeKey(key)
+
+
+
+class ContextMatcher(object):
+	def __init__(self):
+		super(ContextMatcher, self).__init__()
+		self.tokens = {}
+		self.queue = []
+
+	def checkKey(self, key):
+		if key not in self.tokens:
+			inst = instructions.getInstruction(key[0])
+			inputs = inst.inputs
+			arr = [None] * inputs
+			__TOKENS__.update({key:arr})

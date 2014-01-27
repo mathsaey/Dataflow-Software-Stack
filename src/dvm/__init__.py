@@ -24,10 +24,51 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from instructions import addOperationInstruction
-from instructions import addForwardInstruction
-from instructions import addStopInstruction
-from instructions import addContextChangeInstruction
-from instructions import addContextRestoreInstruction
+import instructions
+import runtime
+import tokens
 
-from runtime import run
+from instructions 	import addOperationInstruction, addSink, addStopInstruction, addContextChange, addContextRestore
+from runtime 		import run
+
+def addLiteral(inst, port, value):
+	t = tokens.createLiteral(inst, port, value)
+	runtime.addToken(t)
+
+def bindCall(inst, func, funcRet):
+	inst = instructions.getInstruction(inst)
+	inst.bind(func, funcRet)
+
+def addDestination(srcKey, srcPort, dstKey, dstPort):
+	inst = instructions.getInstruction(srcKey)
+	inst.addDestination(srcPort, dstKey, dstPort)
+
+
+## TEST CODE ##
+
+
+def tOP(a,b):
+	return a + b
+
+# function
+fStart = addSink()
+body = addOperationInstruction(tOP, 2)
+fEnd = addContextRestore()
+
+addDestination(fStart, 0, body, 0)
+addDestination(fStart, 1, body, 1)
+addDestination(body, 0, fEnd, 0)
+
+# call
+ret = addSink()
+call = addContextChange(ret)
+pEnd = addStopInstruction()
+
+bindCall(call, fStart, fEnd)
+addDestination(ret, 0, pEnd, 0)
+
+addLiteral(call, 0, "top")
+addLiteral(call, 1, "kek")
+
+run()
+

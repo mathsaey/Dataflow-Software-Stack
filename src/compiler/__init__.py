@@ -47,3 +47,5 @@
 #			* Express in terms of small amount of instructions
 #		* Compile to DVM 
 ##
+
+from dot import runDot, dotToFile
