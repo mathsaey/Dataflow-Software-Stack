@@ -35,4 +35,15 @@
 #
 # The compiler also performs a few passes on IGR before
 # doing so in order to simplify and optimize the produced dataflow.
+#
+# \todo
+#		* Remove all literals
+#			* Add as an implicit part of instruction
+#			* If all are literals, execute and add as literal to next
+#			* Cascade from here
+#			* Literal calls should execute the entire function with input
+#		* Break down compound nodes.
+#			* Collection of standard operations
+#			* Express in terms of small amount of instructions
+#		* Compile to DVM 
 ##

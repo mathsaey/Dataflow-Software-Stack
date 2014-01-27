@@ -40,6 +40,12 @@
 # This module should be considerd a stable frontend of the module,
 # external modules (such as parsers) should only use these functions
 # to create and modify the IGR.
+#
+# \todo 
+#		General structure should remain the same
+#		Operation lifting will be different with own
+#		instructions.
+#		Various new node types to make compounds work on a low level
 ##
 
 import node

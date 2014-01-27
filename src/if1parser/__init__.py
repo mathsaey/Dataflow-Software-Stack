@@ -33,6 +33,11 @@
 #
 # This module parses [IF1](\ref IF1) files and converts them to 
 # IGR, our own, internal graph representation.
+#
+#
+# \todo 
+#		The type module and the operations module should be adjusted
+# 		once we roll out our own instruction and data set.
 ##
 
 import parser
