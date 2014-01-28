@@ -13,7 +13,7 @@ DVM is split up into a few components:
 * The compiler, which transforms DVM and converts it to work with the runtime
 * DVM, the actual Virtual Machine which serves as our runtime.
 
-In order to save some time, only the DVM part of the code were written in C++. The other parts of the code were written in python, which is embedded into DVM. This design choice also has the benefit of giving us the flexibility of having a high level language with limited access to the internals. This makes it possible to write parsers for various backends with relative ease.
+In order to save some time, only the DVM parts of the code were written in C++. The other parts of the code were written in python, which is embedded into DVM. This design choice also has the benefit of giving us the flexibility of having a high level language with limited access to the internals. This makes it possible to write parsers for various backends with relative ease.
 
 More information about the implementation of these components and their inner workings will be added once these make it out of the prototype branch.
 
