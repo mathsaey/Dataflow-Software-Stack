@@ -40,6 +40,9 @@ Log LOG_CREATE(std::string channel) {
 	return Log(boost::log::keywords::channel = channel);
 }
 
+#define BLACK   "\033[30m"      /* Black */
+#define RED     "\033[31m"      /* Red */
+
 void LOG_SETUP() {
 	// Ouput format
 	logging::formatter formatter = expr::stream
@@ -53,7 +56,7 @@ void LOG_SETUP() {
 
     // Add format and filtering
 	console->set_formatter(formatter);
-	console->set_filter(severity >= info);
+	console->set_filter(severity >= debug);
 }
 
 // Put a LogLevel in a log stream
@@ -63,10 +66,10 @@ logging::formatting_ostream& operator<<
     logging::to_log_manip<LogLevel, tag::severity> const& manip
 ){
     static const char* strings[] = {
-        "DBG",
-        "INF",
-        "WRN",
-        "ERR"
+        "\033[32mDEBG\033[0m",
+        "\033[34mINFO\033[0m",
+        "\033[33mWARN\033[0m",
+        "\033[31mERR!\033[0m"
     };
     LogLevel level = manip.get();
     if (static_cast< std::size_t >(level) < sizeof(strings) / sizeof(*strings))
