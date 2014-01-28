@@ -96,40 +96,64 @@
             <Path>dir_68267d1309a1af8e8297ef4c3efbcdba.html</Path>
             <Subnodes>
              <Node>
-              <Name>log.h</Name>
-              <Path>log_8h.html</Path>
+              <Name>log.cpp</Name>
+              <Path>log_8cpp_source.html</Path>
+             </Node>
+             <Node>
+              <Name>log.hpp</Name>
+              <Path>log_8hpp.html</Path>
               <Subnodes>
                <Node>
                 <Name>BOOST_LOG_DYN_LINK</Name>
-                <Path>log_8h.html</Path>
+                <Path>log_8hpp.html</Path>
                 <Anchor>aad6fe6f21d1c647548b1e2cb79197363</Anchor>
                </Node>
                <Node>
-                <Name>DVMLogger</Name>
-                <Path>log_8h.html</Path>
-                <Anchor>a374d75aae5a33e7ab0e81b82ef9836dc</Anchor>
+                <Name>LOG</Name>
+                <Path>log_8hpp.html</Path>
+                <Anchor>a159ca84d25a5487d8e81e4438725df19</Anchor>
                </Node>
                <Node>
-                <Name>DVMLogLevel</Name>
-                <Path>log_8h.html</Path>
-                <Anchor>ada6f0a733bef12d00b2bc0824fa54887</Anchor>
+                <Name>Log</Name>
+                <Path>log_8hpp.html</Path>
+                <Anchor>a44d913b0bdecdedf36a6a4c10580ed76</Anchor>
+               </Node>
+               <Node>
+                <Name>LogLevel</Name>
+                <Path>log_8hpp.html</Path>
+                <Anchor>aca1fd1d8935433e6ba2e3918214e07f9</Anchor>
                 <Subnodes>
                  <Node>
+                  <Name>debug</Name>
+                  <Path>log_8hpp.html</Path>
+                  <Anchor>aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da</Anchor>
+                 </Node>
+                 <Node>
                   <Name>info</Name>
-                  <Path>log_8h.html</Path>
-                  <Anchor>ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4</Anchor>
+                  <Path>log_8hpp.html</Path>
+                  <Anchor>aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4</Anchor>
                  </Node>
                  <Node>
                   <Name>warning</Name>
-                  <Path>log_8h.html</Path>
-                  <Anchor>ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492</Anchor>
+                  <Path>log_8hpp.html</Path>
+                  <Anchor>aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492</Anchor>
                  </Node>
                  <Node>
                   <Name>error</Name>
-                  <Path>log_8h.html</Path>
-                  <Anchor>ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed</Anchor>
+                  <Path>log_8hpp.html</Path>
+                  <Anchor>aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed</Anchor>
                  </Node>
                 </Subnodes>
+               </Node>
+               <Node>
+                <Name>LOG_SETUP</Name>
+                <Path>log_8hpp.html</Path>
+                <Anchor>ad4eb7db26314c6f360138c7f5a7e568f</Anchor>
+               </Node>
+               <Node>
+                <Name>LOG_CREATE</Name>
+                <Path>log_8hpp.html</Path>
+                <Anchor>a6a08d49d2ef3ba40eb49205648b6dcb2</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -145,27 +169,27 @@
               </Subnodes>
              </Node>
              <Node>
-              <Name>version.h</Name>
-              <Path>version_8h.html</Path>
+              <Name>version.hpp</Name>
+              <Path>version_8hpp.html</Path>
               <Subnodes>
                <Node>
                 <Name>buildString</Name>
-                <Path>version_8h.html</Path>
+                <Path>version_8hpp.html</Path>
                 <Anchor>ac87111ff1070fb0831d9e5dd1adb9abf</Anchor>
                </Node>
                <Node>
                 <Name>__BUILD_NUMBER__</Name>
-                <Path>version_8h.html</Path>
+                <Path>version_8hpp.html</Path>
                 <Anchor>a57c5164f8a8765b46dcb96efe28fe0a8</Anchor>
                </Node>
                <Node>
                 <Name>__MAJOR_VERSION__</Name>
-                <Path>version_8h.html</Path>
+                <Path>version_8hpp.html</Path>
                 <Anchor>ab315935d3e6c1d8052a034f4dc471c32</Anchor>
                </Node>
                <Node>
                 <Name>__MINOR_VERSION__</Name>
-                <Path>version_8h.html</Path>
+                <Path>version_8hpp.html</Path>
                 <Anchor>a982f1722ac27e4d3af64847d48373fda</Anchor>
                </Node>
               </Subnodes>
@@ -201,6 +225,10 @@
            <Node>
             <Name>Enumerator</Name>
             <Path>globals_eval.html</Path>
+           </Node>
+           <Node>
+            <Name>Macros</Name>
+            <Path>globals_defs.html</Path>
            </Node>
           </Subnodes>
          </Node>

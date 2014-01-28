@@ -2,13 +2,63 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>DVMLogger</Name>
+      <Name>BOOST_LOG_DYN_LINK</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>log_8hpp.html</Path>
+    <Anchor>aad6fe6f21d1c647548b1e2cb79197363</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>LOG</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>log_8hpp.html</Path>
+    <Anchor>a159ca84d25a5487d8e81e4438725df19</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Log</Name>
       <APILanguage>c</APILanguage>
       <Type>tdef</Type>
     </TokenIdentifier>
-    <Path>log_8h.html</Path>
-    <Anchor>a374d75aae5a33e7ab0e81b82ef9836dc</Anchor>
-    <DeclaredIn>log.h</DeclaredIn>
+    <Path>log_8hpp.html</Path>
+    <Anchor>a44d913b0bdecdedf36a6a4c10580ed76</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>LOG_SETUP</Name>
+      <APILanguage>c</APILanguage>
+      <Type>func</Type>
+    </TokenIdentifier>
+    <Path>log_8hpp.html</Path>
+    <Anchor>ad4eb7db26314c6f360138c7f5a7e568f</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>LOG_CREATE</Name>
+      <APILanguage>c</APILanguage>
+      <Type>func</Type>
+    </TokenIdentifier>
+    <Path>log_8hpp.html</Path>
+    <Anchor>a6a08d49d2ef3ba40eb49205648b6dcb2</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>debug</Name>
+      <APILanguage>c</APILanguage>
+      <Type>econst</Type>
+    </TokenIdentifier>
+    <Path>log_8hpp.html</Path>
+    <Anchor>aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -16,9 +66,9 @@
       <APILanguage>c</APILanguage>
       <Type>econst</Type>
     </TokenIdentifier>
-    <Path>log_8h.html</Path>
-    <Anchor>ada6f0a733bef12d00b2bc0824fa54887aa4abb266e72efba828327b605b2ab0f4</Anchor>
-    <DeclaredIn>log.h</DeclaredIn>
+    <Path>log_8hpp.html</Path>
+    <Anchor>aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -26,9 +76,9 @@
       <APILanguage>c</APILanguage>
       <Type>econst</Type>
     </TokenIdentifier>
-    <Path>log_8h.html</Path>
-    <Anchor>ada6f0a733bef12d00b2bc0824fa54887a8de9aef05fc85e519a0cfce33573f492</Anchor>
-    <DeclaredIn>log.h</DeclaredIn>
+    <Path>log_8hpp.html</Path>
+    <Anchor>aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -36,9 +86,9 @@
       <APILanguage>c</APILanguage>
       <Type>econst</Type>
     </TokenIdentifier>
-    <Path>log_8h.html</Path>
-    <Anchor>ada6f0a733bef12d00b2bc0824fa54887ad606e435413ea0944dd00d49e901e4ed</Anchor>
-    <DeclaredIn>log.h</DeclaredIn>
+    <Path>log_8hpp.html</Path>
+    <Anchor>aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed</Anchor>
+    <DeclaredIn>log.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -46,9 +96,9 @@
       <APILanguage>c</APILanguage>
       <Type>func</Type>
     </TokenIdentifier>
-    <Path>version_8h.html</Path>
+    <Path>version_8hpp.html</Path>
     <Anchor>ac87111ff1070fb0831d9e5dd1adb9abf</Anchor>
-    <DeclaredIn>version.h</DeclaredIn>
+    <DeclaredIn>version.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -56,9 +106,9 @@
       <APILanguage>c</APILanguage>
       <Type>data</Type>
     </TokenIdentifier>
-    <Path>version_8h.html</Path>
+    <Path>version_8hpp.html</Path>
     <Anchor>a57c5164f8a8765b46dcb96efe28fe0a8</Anchor>
-    <DeclaredIn>version.h</DeclaredIn>
+    <DeclaredIn>version.hpp</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
