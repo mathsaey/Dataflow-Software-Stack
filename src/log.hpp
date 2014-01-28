@@ -39,16 +39,14 @@
  * Any logging configuration should happen in LOG_SETUP()
  *
  * Logging in DVM can be done in the following way:
- *		* Creating a log: 
- *			\code{.cpp} Log log = LOG_CREATE("channel"); \endcode
- * 		* writing to a log 
- *			\code{.cpp} LOG(log, level) << "message"; \endcode
+ *	* Creating a log:  \code{.cpp} Log log = LOG_CREATE("channel"); \endcode
+ *  * writing to a log: \code{.cpp} LOG(log, level) << "message"; \endcode
  */
 
 #ifndef __DVM_LOG_H__
 #define __DVM_LOG_H__
 
-/** Configure boost log for dynamic linking */
+// Configure boost log for dynamic linking
 #define BOOST_LOG_DYN_LINK
 
 #include <boost/log/expressions.hpp>
@@ -100,7 +98,7 @@ Log LOG_CREATE(std::string channel);
  * \param logger
  *		The logger to log to.
  * \param severirity
- *		The severity level to use.
+ *		The LogLevel to use.
  * \return 
  *		A stream that can be written to.
  */
