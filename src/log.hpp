@@ -27,58 +27,83 @@
  */
 
 /**
- * \file log.h
+ * \file log.hpp
  * \author Mathijs Saey
  *
- * \brief Boost log configuration.
+ * \brief DVM Log abstraction layer.
  * 
- * This file imports the various headers for boost/log.
- * It also declares the the severity levels and type 
- * necessary to create logger instances.
+ * This header provides all the required function to create and
+ * use logs. This is done by creating a few light wrappers around
+ * [boost/log](http://boost-log.sourceforge.net).
  *
- * This file is also the location for any global logger configuration.
- * 
- * In order to create a global logger, use the following code.
+ * Any logging configuration should happen in LOG_SETUP()
  *
- * \code{.cpp}
- * BOOST_LOG_INLINE_GLOBAL_LOGGER_INIT(loggerName, DVMLogger) {
- *     return DVMLogger(boost::log::keywords::channel = "channel name");
- * } \endcode
- *
- * Using a logger can be done with the following macro
- *
- * \code{.cpp}
- * BOOST_LOG_SEV(loggerName::get(), info) << "Hello, world!"; \endcode
+ * Logging in DVM can be done in the following way:
+ *		* Creating a log: 
+ *			\code{.cpp} Log log = LOG_CREATE("channel"); \endcode
+ * 		* writing to a log 
+ *			\code{.cpp} LOG(log, level) << "message"; \endcode
  */
 
 #ifndef __DVM_LOG_H__
 #define __DVM_LOG_H__
 
+/** Configure boost log for dynamic linking */
 #define BOOST_LOG_DYN_LINK
 
-#include <boost/log/core.hpp>
-#include <boost/log/trivial.hpp>
 #include <boost/log/expressions.hpp>
-#include <boost/log/sources/global_logger_storage.hpp>
+#include <boost/log/utility/setup/console.hpp>
+#include <boost/log/sources/record_ostream.hpp>
 #include <boost/log/sources/severity_channel_logger.hpp>
 
 /** 
- * The various log levels supported by the ::DVMLogger
+ * The various log levels supported by the ::Log
  */  
-enum DVMLogLevel {
-	info,     /**< Signals information */
-	warning,  /**< Signals warning     */
-	error     /**< Signals error       */
+enum LogLevel {
+	debug,	  /**< Debugging information */
+	info,     /**< Signals information   */
+	warning,  /**< Signals warning       */
+	error     /**< Signals error         */
 };
 
 /**
- * Type of a generic DVM Logger
- * A DVM logger is a global logger of [boost/log](http://boost-log.sourceforge.net).
- * It supports the levels defined in ::DVMLogLevel and is part of a channel.
+ * Log type wrapper
+ * A DVM log is a boost log log, it has a channel and supports
+ * the severity levels provided in ::LogLevel
  */
-typedef boost::log::sources::severity_channel_logger_mt<
-	DVMLogLevel, 
-	std::string        
-> DVMLogger;
+typedef boost::log::sources::severity_channel_logger_mt<LogLevel, std::string> Log;
+
+/**
+ * Logging setup
+ * Should happen at the start of the program.
+ */
+void LOG_SETUP();
+
+/**
+ * Create a new Log.
+ *
+ * \param channel
+ *		The name of the channel of the logger.
+ * \return
+ *		The newly created logger.
+ */
+Log LOG_CREATE(std::string channel);
+
+/**
+ * Create an input stream for the log.
+ * Equivalent to BOOST_LOG_SEV.
+ *
+ * Use this in the following manner:
+ *
+ * \code{.cpp} LOG(logger, level) << "message"; \endcode
+ *
+ * \param logger
+ *		The logger to log to.
+ * \param severirity
+ *		The severity level to use.
+ * \return 
+ *		A stream that can be written to.
+ */
+#define LOG BOOST_LOG_SEV
 
 #endif

@@ -35,9 +35,9 @@ LIB_PATH =  -L $(BOOST_LIB_PATH)
 INCLUDE_PATH = -I $(BOOST_HEADER_PATH)
 
 # Boost
-BOOST_LIBS = -lboost_log-mt
 BOOST_LIB_PATH = /usr/local/include/
 BOOST_HEADER_PATH = /usr/local/include/boost/
+BOOST_LIBS = -lboost_log-mt -lboost_thread-mt -lboost_system-mt
 
 # Documentation 
 PAGE_SCRIPT             = pages.sh

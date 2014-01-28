@@ -27,7 +27,7 @@
  */
 
 /**
- * \file version.h
+ * \file version.hpp
  * \author Mathijs Saey
  *
  * \brief Version storage

@@ -6,6 +6,8 @@ examples/s.out
 obj/
 dvm
 
+*.dot*
+
 # Editor files #
 
 *.sublime-workspace

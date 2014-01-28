@@ -37,10 +37,11 @@
 
 #include <iostream>
 
-#include "version.h"
-#include "log.h"
+#include "version.hpp"
+#include "log.hpp"
 
 int main(int argc, const char * argv[]) {
-	std::cout <<"DVM " << buildString() << "\n";
+	LOG_SETUP();
+
 	return 0;
 }
