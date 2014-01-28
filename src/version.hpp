@@ -1,4 +1,4 @@
-// version.cpp
+// version.hpp
 // DVM
 // Mathijs Saey
 

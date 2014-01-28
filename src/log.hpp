@@ -1,4 +1,4 @@
-// log.h
+// log.hpp
 // DVM
 // Mathijs Saey
 

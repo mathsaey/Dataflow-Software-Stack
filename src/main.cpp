@@ -40,7 +40,7 @@
 #include "version.hpp"
 #include "log.hpp"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, char * argv[]) {
 	LOG_SETUP();
 
 	return 0;
