@@ -29,76 +29,62 @@ Context matcher.
 
 The context matcher is responsible for gathering tokens
 with the same context before sending them to the instruction they belong to.
-
-The following functions can be used by other modules
-
-addToken(token)           
-	Add a token to the context matcher
-
-initLitArr(inst, inputs)  
-	Create a literal container for an instruction.
-		inst is the key of the instruction
-		inputs is the amount of inputs the instruction accepts
 """
 
 import runtime
-import instructions
 
 # ------- #
 # Matcher #
 # ------- #
 
-__TOKENS__ = {}
-
-# See if we already have a token array for a given key
-# if not, create one
-def _checkKey(key):
-	if key not in __TOKENS__:
-		inst = instructions.getInstruction(key[0])
-		inputs = inst.inputs
-		arr = [None] * inputs
-		__TOKENS__.update({key:arr})
-
-# Add a token to an array
-def _updateKeyArr(key, port, token):
-	arr = __TOKENS__[key]
-	arr[port] = token
-
-# See if a certain array is ready
-def _isKeyReady(key):
-	return __TOKENS__[key].count(None) == 0
-
-# Execute an instruction with inputs
-# from a given context
-def _executeKey(key):
-	arr = __TOKENS__[key]
-	del __TOKENS__[key]	
-	runtime.addInstruction(key[0], arr)
-
-# Add a token to the matcher
-def addToken(token):
-	tag  = token.tag                  
-	inst = tag.inst                   
-	cont = tag.cont                   
-	port = tag.port                   
-	key  = (inst, cont)               
-
-	_checkKey(key)                     
-	_updateKeyArr(key, port, token)    
-	if _isKeyReady(key):               
-		_executeKey(key)
-
-
-
 class ContextMatcher(object):
+
 	def __init__(self):
 		super(ContextMatcher, self).__init__()
+		self.operations = {}
 		self.tokens = {}
-		self.queue = []
 
+	# Add the amount of inputs a given instruction
+	# will accept. Should be done while adding instructions.
+	def addInstruction(self, key, inputs):
+		self.operations.update({key : inputs})
+
+	# See if we have a token array for a key, 
+	# create one if we don't
 	def checkKey(self, key):
 		if key not in self.tokens:
-			inst = instructions.getInstruction(key[0])
-			inputs = inst.inputs
+			inputs = self.operations[key[0]]
 			arr = [None] * inputs
-			__TOKENS__.update({key:arr})
+			self.tokens.update({key : arr})
+
+	# Update the token array for a key
+	def updateKeyArr(self, key, port, token):
+		arr = self.tokens[key]
+		arr[port] = token
+	
+	# See if a given key is ready to execute
+	def isKeyReady(self, key):
+		return self.tokens[key].count(None) == 0
+
+	# Execute an instruction that's ready
+	def executeKey(self, key):
+		arr = self.tokens[key]
+		del self.tokens[key]
+		runtime.addInstruction(key[0], arr)
+
+	# Add a token to the matcher
+	def processToken(self, token):
+		tag  = token.tag                  
+		inst = tag.inst                   
+		cont = tag.cont                   
+		port = tag.port                   
+		key  = (inst, cont)
+
+		self.checkKey(key)
+		self.updateKeyArr(key, port, token)
+
+		if self.isKeyReady(key):
+			self.executeKey(key)
+
+	def process(self, x): 
+		self.processToken(x)
