@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0.0 (build 0)</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -132,44 +131,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a>(boost::log::keywords::channel = channel);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a>() {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Ouput format</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    logging::formatter formatter = expr::stream</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; severity &lt;&lt; <span class="stringliteral">&quot;]&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; channel  &lt;&lt; <span class="stringliteral">&quot;]&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; expr::smessage;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Create the console sink</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    boost::shared_ptr&lt;sinks::synchronous_sink&lt; sinks::text_ostream_backend&gt;&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        console = logging::add_console_log();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Add format and filtering</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    console-&gt;set_formatter(formatter);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    console-&gt;set_filter(severity &gt;= <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">info</a>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// Put a LogLevel in a log stream</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;logging::formatting_ostream&amp; <span class="keyword">operator</span>&lt;&lt; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;(</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    logging::formatting_ostream&amp; strm,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    logging::to_log_manip&lt;LogLevel, tag::severity&gt; <span class="keyword">const</span>&amp; manip</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;){</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* strings[] = {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="stringliteral">&quot;DBG&quot;</span>,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="stringliteral">&quot;INF&quot;</span>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="stringliteral">&quot;WRN&quot;</span>,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="stringliteral">&quot;ERR&quot;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level = manip.get();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (static_cast&lt; std::size_t &gt;(level) &lt; <span class="keyword">sizeof</span>(strings) / <span class="keyword">sizeof</span>(*strings))</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        strm &lt;&lt; strings[level];</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        strm &lt;&lt; static_cast&lt; int &gt;(level);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> strm;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">info</a></div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00064">log.hpp:64</a></div></div>
-<div class="ttc" id="log_8hpp_html_ad4eb7db26314c6f360138c7f5a7e568f"><div class="ttname"><a href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a></div><div class="ttdeci">void LOG_SETUP()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00043">log.cpp:43</a></div></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define BLACK   &quot;\033[30m&quot;      </span><span class="comment">/* Black */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RED     &quot;\033[31m&quot;      </span><span class="comment">/* Red */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a>() {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Ouput format</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    logging::formatter formatter = expr::stream</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; severity &lt;&lt; <span class="stringliteral">&quot;]&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; channel  &lt;&lt; <span class="stringliteral">&quot;]&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; expr::smessage;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Create the console sink</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    boost::shared_ptr&lt;sinks::synchronous_sink&lt; sinks::text_ostream_backend&gt;&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        console = logging::add_console_log();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// Add format and filtering</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    console-&gt;set_formatter(formatter);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    console-&gt;set_filter(severity &gt;= <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">debug</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// Put a LogLevel in a log stream</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;logging::formatting_ostream&amp; <span class="keyword">operator</span>&lt;&lt; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    logging::formatting_ostream&amp; strm,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    logging::to_log_manip&lt;LogLevel, tag::severity&gt; <span class="keyword">const</span>&amp; manip</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* strings[] = {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="stringliteral">&quot;\033[32mDEBG\033[0m&quot;</span>,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="stringliteral">&quot;\033[34mINFO\033[0m&quot;</span>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="stringliteral">&quot;\033[33mWARN\033[0m&quot;</span>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="stringliteral">&quot;\033[31mERR!\033[0m&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level = manip.get();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (static_cast&lt; std::size_t &gt;(level) &lt; <span class="keyword">sizeof</span>(strings) / <span class="keyword">sizeof</span>(*strings))</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        strm &lt;&lt; strings[level];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        strm &lt;&lt; static_cast&lt; int &gt;(level);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> strm;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="ttc" id="log_8hpp_html_ad4eb7db26314c6f360138c7f5a7e568f"><div class="ttname"><a href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a></div><div class="ttdeci">void LOG_SETUP()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00046">log.cpp:46</a></div></div>
+<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">debug</a></div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00063">log.hpp:63</a></div></div>
 <div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00062">log.hpp:62</a></div></div>
 <div class="ttc" id="log_8hpp_html_a44d913b0bdecdedf36a6a4c10580ed76"><div class="ttname"><a href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a></div><div class="ttdeci">boost::log::sources::severity_channel_logger_mt&lt; LogLevel, std::string &gt; Log</div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00074">log.hpp:74</a></div></div>
 <div class="ttc" id="log_8hpp_html"><div class="ttname"><a href="log_8hpp.html">log.hpp</a></div><div class="ttdoc">DVM Log abstraction layer. </div></div>
@@ -177,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 28 2014 03:06:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 28 2014 20:46:34 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

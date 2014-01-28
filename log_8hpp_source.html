@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">log.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="log_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// log.h</span></div>
+<a href="log_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// log.hpp</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// DVM</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Mathijs Saey</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
@@ -118,44 +118,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifndef __DVM_LOG_H__</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DVM_LOG_H__</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="log_8hpp.html#aad6fe6f21d1c647548b1e2cb79197363">   52</a></span>&#160;<span class="preprocessor">#define BOOST_LOG_DYN_LINK</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;boost/log/expressions.hpp&gt;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;boost/log/utility/setup/console.hpp&gt;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;boost/log/sources/record_ostream.hpp&gt;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &lt;boost/log/sources/severity_channel_logger.hpp&gt;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">   62</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> {</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">   63</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">debug</a>,    </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">   64</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">info</a>,     </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492">   65</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492">warning</a>,  </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed">   66</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed">error</a>     </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">   74</a></span>&#160;<span class="keyword">typedef</span> boost::log::sources::severity_channel_logger_mt&lt;LogLevel, std::string&gt; <a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a> <a class="code" href="log_8hpp.html#a6a08d49d2ef3ba40eb49205648b6dcb2">LOG_CREATE</a>(std::string channel);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="log_8hpp.html#a159ca84d25a5487d8e81e4438725df19">  107</a></span>&#160;<span class="preprocessor">#define LOG BOOST_LOG_SEV</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">info</a></div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00064">log.hpp:64</a></div></div>
-<div class="ttc" id="log_8hpp_html_ad4eb7db26314c6f360138c7f5a7e568f"><div class="ttname"><a href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a></div><div class="ttdeci">void LOG_SETUP()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00043">log.cpp:43</a></div></div>
-<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">debug</a></div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00063">log.hpp:63</a></div></div>
-<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed">error</a></div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00066">log.hpp:66</a></div></div>
-<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492">warning</a></div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00065">log.hpp:65</a></div></div>
-<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00062">log.hpp:62</a></div></div>
-<div class="ttc" id="log_8hpp_html_a44d913b0bdecdedf36a6a4c10580ed76"><div class="ttname"><a href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a></div><div class="ttdeci">boost::log::sources::severity_channel_logger_mt&lt; LogLevel, std::string &gt; Log</div><div class="ttdef"><b>Definition:</b> <a href="log_8hpp_source.html#l00074">log.hpp:74</a></div></div>
-<div class="ttc" id="log_8hpp_html_a6a08d49d2ef3ba40eb49205648b6dcb2"><div class="ttname"><a href="log_8hpp.html#a6a08d49d2ef3ba40eb49205648b6dcb2">LOG_CREATE</a></div><div class="ttdeci">Log LOG_CREATE(std::string channel)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00039">log.cpp:39</a></div></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifndef __DVM_LOG_H__</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DVM_LOG_H__</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// Configure boost log for dynamic linking</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define BOOST_LOG_DYN_LINK</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;boost/log/expressions.hpp&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;boost/log/utility/setup/console.hpp&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;boost/log/sources/record_ostream.hpp&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;boost/log/sources/severity_channel_logger.hpp&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">   60</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">   61</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">debug</a>,    </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">   62</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">info</a>,     </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492">   63</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492">warning</a>,  </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed">   64</a></span>&#160;    <a class="code" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed">error</a>     </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">   72</a></span>&#160;<span class="keyword">typedef</span> boost::log::sources::severity_channel_logger_mt&lt;LogLevel, std::string&gt; <a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> <a class="code" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a> <a class="code" href="log_8hpp.html#a6a08d49d2ef3ba40eb49205648b6dcb2">LOG_CREATE</a>(std::string channel);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="log_8hpp.html#a159ca84d25a5487d8e81e4438725df19">  105</a></span>&#160;<span class="preprocessor">#define LOG BOOST_LOG_SEV</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9aa4abb266e72efba828327b605b2ab0f4">info</a></div><div class="ttdef"><b>Definition:</b> log.hpp:62</div></div>
+<div class="ttc" id="log_8hpp_html_ad4eb7db26314c6f360138c7f5a7e568f"><div class="ttname"><a href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP</a></div><div class="ttdeci">void LOG_SETUP()</div></div>
+<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a5be0fd270d9cbf6a0b7445db855089da">debug</a></div><div class="ttdef"><b>Definition:</b> log.hpp:61</div></div>
+<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9ad606e435413ea0944dd00d49e901e4ed">error</a></div><div class="ttdef"><b>Definition:</b> log.hpp:64</div></div>
+<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492">warning</a></div><div class="ttdef"><b>Definition:</b> log.hpp:63</div></div>
+<div class="ttc" id="log_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> log.hpp:60</div></div>
+<div class="ttc" id="log_8hpp_html_a44d913b0bdecdedf36a6a4c10580ed76"><div class="ttname"><a href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a></div><div class="ttdeci">boost::log::sources::severity_channel_logger_mt&lt; LogLevel, std::string &gt; Log</div><div class="ttdef"><b>Definition:</b> log.hpp:72</div></div>
+<div class="ttc" id="log_8hpp_html_a6a08d49d2ef3ba40eb49205648b6dcb2"><div class="ttname"><a href="log_8hpp.html#a6a08d49d2ef3ba40eb49205648b6dcb2">LOG_CREATE</a></div><div class="ttdeci">Log LOG_CREATE(std::string channel)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 28 2014 03:06:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 28 2014 21:00:05 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

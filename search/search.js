@@ -7,14 +7,14 @@
 
 var indexSectionsWithContent =
 {
-  0: "_abdeilmsvw",
-  1: "lmv",
-  2: "bl",
+  0: "_abdeilpsvw",
+  1: "lpv",
+  2: "blp",
   3: "_",
   4: "l",
   5: "l",
   6: "deiw",
-  7: "bl",
+  7: "l",
   8: "ais"
 };
 

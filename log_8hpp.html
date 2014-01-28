@@ -108,15 +108,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="log_8hpp__dep__incl.png" border="0" usemap="#src_2log_8hppdep" alt=""/></div>
 <map name="src_2log_8hppdep" id="src_2log_8hppdep">
-<area shape="rect" id="node2" href="log_8cpp_source.html" title="src/log.cpp" alt="" coords="5,83,91,111"/><area shape="rect" id="node3" href="main_8cpp.html" title="DVM entry point. " alt="" coords="116,83,212,111"/></map>
+<area shape="rect" id="node2" href="python_8hpp.html" title="Python integration. " alt="" coords="4,83,112,111"/></map>
 </div>
 </div>
 <p><a href="log_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aad6fe6f21d1c647548b1e2cb79197363"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8hpp.html#aad6fe6f21d1c647548b1e2cb79197363">BOOST_LOG_DYN_LINK</a></td></tr>
-<tr class="separator:aad6fe6f21d1c647548b1e2cb79197363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159ca84d25a5487d8e81e4438725df19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8hpp.html#a159ca84d25a5487d8e81e4438725df19">LOG</a>&#160;&#160;&#160;BOOST_LOG_SEV</td></tr>
 <tr class="separator:a159ca84d25a5487d8e81e4438725df19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -150,31 +148,12 @@ Functions</h2></td></tr>
 <p>Any logging configuration should happen in <a class="el" href="log_8hpp.html#ad4eb7db26314c6f360138c7f5a7e568f">LOG_SETUP()</a></p>
 <p>Logging in DVM can be done in the following way:</p>
 <ul>
-<li>Creating a log: <div class="fragment"><div class="line"><a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a> log = <a class="code" href="log_8hpp.html#a6a08d49d2ef3ba40eb49205648b6dcb2">LOG_CREATE</a>(<span class="stringliteral">&quot;channel&quot;</span>); </div>
-</div><!-- fragment --><ul>
-<li>writing to a log <div class="fragment"><div class="line"><a class="code" href="log_8hpp.html#a159ca84d25a5487d8e81e4438725df19">LOG</a>(log, level) &lt;&lt; <span class="stringliteral">&quot;message&quot;</span>; </div>
+<li>Creating a log:<div class="fragment"><div class="line"><a class="code" href="log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76">Log</a> log = <a class="code" href="log_8hpp.html#a6a08d49d2ef3ba40eb49205648b6dcb2">LOG_CREATE</a>(<span class="stringliteral">&quot;channel&quot;</span>); </div>
+</div><!-- fragment --></li>
+<li>writing to a log:<div class="fragment"><div class="line"><a class="code" href="log_8hpp.html#a159ca84d25a5487d8e81e4438725df19">LOG</a>(log, level) &lt;&lt; <span class="stringliteral">&quot;message&quot;</span>; </div>
 </div><!-- fragment --> </li>
 </ul>
-</li>
-</ul>
-
-<p>Definition in file <a class="el" href="log_8hpp_source.html">log.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="aad6fe6f21d1c647548b1e2cb79197363"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BOOST_LOG_DYN_LINK</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Configure boost log for dynamic linking </p>
-
-<p>Definition at line <a class="el" href="log_8hpp_source.html#l00052">52</a> of file <a class="el" href="log_8hpp_source.html">log.hpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a159ca84d25a5487d8e81e4438725df19"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,13 +169,11 @@ Functions</h2></td></tr>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">logger</td><td>The logger to log to. </td></tr>
-    <tr><td class="paramname">severirity</td><td>The severity level to use. </td></tr>
+    <tr><td class="paramname">severirity</td><td>The LogLevel to use. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A stream that can be written to. </dd></dl>
-
-<p>Definition at line <a class="el" href="log_8hpp_source.html#l00107">107</a> of file <a class="el" href="log_8hpp_source.html">log.hpp</a>.</p>
 
 </div>
 </div>
@@ -211,8 +188,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Log type wrapper A DVM log is a boost log log, it has a channel and supports the severity levels provided in <a class="el" href="log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> </p>
-
-<p>Definition at line <a class="el" href="log_8hpp_source.html#l00074">74</a> of file <a class="el" href="log_8hpp_source.html">log.hpp</a>.</p>
 
 </div>
 </div>
@@ -242,8 +217,6 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="log_8hpp_source.html#l00062">62</a> of file <a class="el" href="log_8hpp_source.html">log.hpp</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -260,8 +233,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Logging setup Should happen at the start of the program. </p>
-
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00043">43</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -287,14 +258,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The newly created logger. </dd></dl>
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00039">39</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
-
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 28 2014 03:06:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 28 2014 21:00:05 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

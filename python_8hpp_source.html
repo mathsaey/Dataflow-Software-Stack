@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>DVM: src/version.hpp Source File</title>
+<title>DVM: src/python.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,10 +87,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">version.hpp</div>  </div>
+<div class="title">python.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="version_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// version.hpp</span></div>
+<a href="python_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// python.hpp</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// DVM</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Mathijs Saey</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
@@ -118,25 +118,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef __DVM_VERSION_H__</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DVM_VERSION_H__</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="version_8hpp.html#a57c5164f8a8765b46dcb96efe28fe0a8">   49</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="version_8hpp.html#a57c5164f8a8765b46dcb96efe28fe0a8">__BUILD_NUMBER__</a>  =0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> __MAJOR_VERSION__ =0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> __MINOR_VERSION__ =0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="version_8hpp.html#ac87111ff1070fb0831d9e5dd1adb9abf">   59</a></span>&#160;std::string <a class="code" href="version_8hpp.html#ac87111ff1070fb0831d9e5dd1adb9abf">buildString</a>() {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  std::ostringstream os;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  os &lt;&lt; __MAJOR_VERSION__ &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; __MINOR_VERSION__;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  os &lt;&lt; <span class="stringliteral">&quot; (build &quot;</span> &lt;&lt; <a class="code" href="version_8hpp.html#a57c5164f8a8765b46dcb96efe28fe0a8">__BUILD_NUMBER__</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">return</span> os.str();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#ifndef __DVM_PYTHON_H__</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DVM_PYTHON_H__</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;Python.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#import &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="log_8hpp.html">log.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="python_8hpp.html#aa034a0068cc90974c0beb57b5264774b">python_start</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> * argv[]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="python_8hpp.html#a483ee3f7712bae3acb09899f71d37599">python_extend</a>();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="version_8hpp_html_a57c5164f8a8765b46dcb96efe28fe0a8"><div class="ttname"><a href="version_8hpp.html#a57c5164f8a8765b46dcb96efe28fe0a8">__BUILD_NUMBER__</a></div><div class="ttdeci">const int __BUILD_NUMBER__</div><div class="ttdef"><b>Definition:</b> version.hpp:49</div></div>
-<div class="ttc" id="version_8hpp_html_ac87111ff1070fb0831d9e5dd1adb9abf"><div class="ttname"><a href="version_8hpp.html#ac87111ff1070fb0831d9e5dd1adb9abf">buildString</a></div><div class="ttdeci">std::string buildString()</div><div class="ttdef"><b>Definition:</b> version.hpp:59</div></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> <a class="code" href="python_8hpp.html#a54a964658d3fff2388569a09fab93bac">python_stop</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="python_8hpp_html_a483ee3f7712bae3acb09899f71d37599"><div class="ttname"><a href="python_8hpp.html#a483ee3f7712bae3acb09899f71d37599">python_extend</a></div><div class="ttdeci">void python_extend()</div></div>
+<div class="ttc" id="python_8hpp_html_aa034a0068cc90974c0beb57b5264774b"><div class="ttname"><a href="python_8hpp.html#aa034a0068cc90974c0beb57b5264774b">python_start</a></div><div class="ttdeci">void python_start(int argc, char *argv[])</div></div>
+<div class="ttc" id="log_8hpp_html"><div class="ttname"><a href="log_8hpp.html">log.hpp</a></div><div class="ttdoc">DVM Log abstraction layer. </div></div>
+<div class="ttc" id="python_8hpp_html_a54a964658d3fff2388569a09fab93bac"><div class="ttname"><a href="python_8hpp.html#a54a964658d3fff2388569a09fab93bac">python_stop</a></div><div class="ttdeci">void python_stop()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

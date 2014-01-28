@@ -96,18 +96,9 @@
             <Path>dir_68267d1309a1af8e8297ef4c3efbcdba.html</Path>
             <Subnodes>
              <Node>
-              <Name>log.cpp</Name>
-              <Path>log_8cpp_source.html</Path>
-             </Node>
-             <Node>
               <Name>log.hpp</Name>
               <Path>log_8hpp.html</Path>
               <Subnodes>
-               <Node>
-                <Name>BOOST_LOG_DYN_LINK</Name>
-                <Path>log_8hpp.html</Path>
-                <Anchor>aad6fe6f21d1c647548b1e2cb79197363</Anchor>
-               </Node>
                <Node>
                 <Name>LOG</Name>
                 <Path>log_8hpp.html</Path>
@@ -158,13 +149,23 @@
               </Subnodes>
              </Node>
              <Node>
-              <Name>main.cpp</Name>
-              <Path>main_8cpp.html</Path>
+              <Name>python.hpp</Name>
+              <Path>python_8hpp.html</Path>
               <Subnodes>
                <Node>
-                <Name>main</Name>
-                <Path>main_8cpp.html</Path>
-                <Anchor>ac0f2228420376f4db7e1274f2b41667c</Anchor>
+                <Name>python_start</Name>
+                <Path>python_8hpp.html</Path>
+                <Anchor>aa034a0068cc90974c0beb57b5264774b</Anchor>
+               </Node>
+               <Node>
+                <Name>python_extend</Name>
+                <Path>python_8hpp.html</Path>
+                <Anchor>a483ee3f7712bae3acb09899f71d37599</Anchor>
+               </Node>
+               <Node>
+                <Name>python_stop</Name>
+                <Path>python_8hpp.html</Path>
+                <Anchor>a54a964658d3fff2388569a09fab93bac</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -181,16 +182,6 @@
                 <Name>__BUILD_NUMBER__</Name>
                 <Path>version_8hpp.html</Path>
                 <Anchor>a57c5164f8a8765b46dcb96efe28fe0a8</Anchor>
-               </Node>
-               <Node>
-                <Name>__MAJOR_VERSION__</Name>
-                <Path>version_8hpp.html</Path>
-                <Anchor>ab315935d3e6c1d8052a034f4dc471c32</Anchor>
-               </Node>
-               <Node>
-                <Name>__MINOR_VERSION__</Name>
-                <Path>version_8hpp.html</Path>
-                <Anchor>a982f1722ac27e4d3af64847d48373fda</Anchor>
                </Node>
               </Subnodes>
              </Node>
