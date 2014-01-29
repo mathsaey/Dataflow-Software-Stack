@@ -45,73 +45,80 @@ import runtime
 # Instruction Memory #
 # ------------------ #
 
-__CURRENT_STR_KEY__     = -1
-__CURRENT_TLR_KEY__     = 0
-__INSTRUCTION_MEMORY__ 	= {}
+class InstructionMemory(object):
 
-# Add a key in a given slot.
-def _addInstruction(inst):
-	__INSTRUCTION_MEMORY__.update({inst.key : inst})
+	def __init__(self):
+		super(InstructionMemory, self).__init__()
+		self.memory = {}
+		self.strKey = -1
+		self.trlKey = 0
 
-def _reserveSTRSlot():
-	global __CURRENT_STR_KEY__
-	key = __CURRENT_STR_KEY__
-	__CURRENT_STR_KEY__ -= 1
-	return key
+	def getInstruction(self, key):
+		return self.memory[key]
 
-def _reserveTLRSlot():
-	global __CURRENT_TLR_KEY__
-	key = __CURRENT_TLR_KEY__
-	__CURRENT_TLR_KEY__ += 1
-	return key
+	def reserveSTRSlot(self):
+		key = self.strKey
+		self.strKey -= 1
+		return key
 
-# Get an instruction from the memory
-def getInstruction(key):
-	return __INSTRUCTION_MEMORY__[key]
+	def reserveTLRSlot(self):
+		key = self.trlKey
+		self.trlKey += 1
+		return key
 
-# Reset the instruction memory
-def reset():
-	global __CURRENT_STR_KEY__
-	global __CURRENT_TLR_KEY__
-	__INSTRUCTION_MEMORY__.clear()
-	__CURRENT_STR_KEY__     = -1
-	__CURRENT_TLR_KEY__     = 0
+	def addInstruction(self, inst):
+		key = None
+
+		if inst.isSTR():
+			key = self.reserveSTRSlot()
+		elif inst.isTLR():
+			key = self.reserveTLRSlot()
+		else:
+			log.log("INS", "Memory received invalid instruction", inst)
+
+		self.memory.update({key : inst})
+		inst.setMemory(key, self)
+		return key
+
+	def get(self, key):
+		self.memory[key]
+
+	def reset(self):
+		self.__init__()
 
 # -------------------- #
 # Instruction creation #
 # -------------------- #
 
-def _createInstruction(slotFunc, constructor, args = []):
-	key 	= slotFunc()
-	args	= [key] + args
-	inst	= constructor(*args)
-	_addInstruction(inst)
+def createInstruction(memory, constructor, args = []):
+	inst = constructor(*args)
+	key = memory.addInstruction(inst)
 	return key
 
-def addOperationInstruction(operation, inputs):
-	return _createInstruction(_reserveTLRSlot, OperationInstruction, [inputs, operation])
-
-def addContextChange(callRet):
-	return _createInstruction(_reserveSTRSlot, ContextChange, [callRet])
-
-def addSink():
-	return _createInstruction(_reserveSTRSlot, Sink, [])
-
-def addContextRestore():
-	return _createInstruction(_reserveSTRSlot, ContextRestore, [])
-
-def addStopInstruction():
-	return _createInstruction(_reserveSTRSlot, StopInstruction, [])
+def addOperationInstruction(memory, operation, inputs):
+	return createInstruction(memory, OperationInstruction, [inputs, operation])
+def addContextChange(memory, callRet):
+	return createInstruction(memory, ContextChange, [callRet])
+def addSink(memory): 
+	return createInstruction(memory, Sink, [])
+def addContextRestore(memory):
+	return createInstruction(memory, ContextRestore, [])
+def addStopInstruction(memory):
+	return createInstruction(memory, StopInstruction, [])
 
 # -------------------- #
 # Abstract Instruction #
 # -------------------- #
 
 class AbstractInstruction(object):
-	def __init__(self, key):
+	def __init__(self):
 		super(AbstractInstruction, self).__init__()
-		self.literals = []
-		self.key      = key
+		self.key      = None
+		self.mem 	  = None
+
+	def setMemory(self, key, mem):
+		self.key = key
+		self.mem = mem
 
 	def __str__(self):
 		name = self.__class__.__name__
@@ -122,28 +129,37 @@ class AbstractInstruction(object):
 # -------------- #
 
 class ReceiverType(object):
+	def isSTR(self): pass
+	def isTLR(self): pass
+
 	def run(self, input): pass
 	def needsMatcher(self): pass
 
-class SingleTokenReceiver(object):
-	def acceptToken(self, token): pass
+class SingleTokenReceiver(ReceiverType):
 	def needsMatcher(self): return False
+	def isSTR(self): return True
+	def isTLR(self): return False
+
+	def acceptToken(self, token): pass
 	def run(self, input):
 		self.acceptToken(input)
 
-class TokenListReceiver(object):
-	def execute(self, tokens): pass
+class TokenListReceiver(ReceiverType):
 	def needsMatcher(self): return True
+	def isSTR(self): return False
+	def isTLR(self): return True
+
+	def execute(self, tokens): pass
 	def run(self, input):
-		self.execute(input)
+		self.acceptList(input)
 
 # ------------------ #
 # Static Instruction #
 # ------------------ #
 
 class StaticInstruction(AbstractInstruction):
-	def __init__(self, key):
-		super(StaticInstruction, self).__init__(key)
+	def __init__(self):
+		super(StaticInstruction, self).__init__()
 		self.destinations = {}
 
 	def addDestination(self, port, toInst, toPort):
@@ -180,8 +196,8 @@ Takes a list of tokens as input for it's internal function
 """
 
 class OperationInstruction(StaticInstruction, TokenListReceiver):
-	def __init__(self, key, inputs, operation):
-		super(OperationInstruction, self).__init__(key)
+	def __init__(self, inputs, operation):
+		super(OperationInstruction, self).__init__()
 		self.operation = operation
 		self.inputs    = inputs
 
@@ -192,25 +208,18 @@ class OperationInstruction(StaticInstruction, TokenListReceiver):
 			res = results[i]
 			self.sendDatum(i, res, cont)
 
-	def execute(self, tokens):
+	def acceptList(self, tokens):
 		log.log("INS", self, "executing", tokens)
 		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
 		self.sendResults([res], cont)		
 
-# ------------------- #
-# Forward Instruction #
-# ------------------- #
-
-"""
-A forward instruction simply accepts a token and forwards it to 
-it's destinations.
-"""
+# ----- #
+# Sinks #
+# ----- #
 
 class Sink(StaticInstruction, SingleTokenReceiver):
-	def __init__(self, key):
-		super(Sink, self).__init__(key)
 
 	def acceptToken(self, token):
 		log.log("INS", self, "forwarding", token)
@@ -224,8 +233,8 @@ class Sink(StaticInstruction, SingleTokenReceiver):
 # -------------- #
 
 class ContextChange(DynamicInstruction):
-	def __init__(self, key, returnSink):
-		super(ContextChange, self).__init__(key)
+	def __init__(self, returnSink):
+		super(ContextChange, self).__init__()
 		self.returnSink = returnSink
 		self.entrySink  = None
 		self.restore    = None
@@ -233,16 +242,16 @@ class ContextChange(DynamicInstruction):
 
 	def bind(self, entrySink, restore):
 		self.entrySink = entrySink
-		self.restore = getInstruction(restore)
+		self.restore = self.mem.get(restore)
 
-	def setReturn(self, newCont, oldCont):
+	def setRestore(self, newCont, oldCont):
 		self.restore.attachSink(newCont, oldCont, self.returnSink)
 
-	def getNewContext(self, oldCont):
+	def getContext(self, oldCont):
 		if oldCont not in self.contexts:
 			newCont = context.createContext()
 			self.contexts.update({oldCont : newCont})
-			self.setReturn(newCont, oldCont)
+			self.setRestore(newCont, oldCont)
 			return newCont
 		else:
 			return self.contexts[oldCont]
@@ -250,7 +259,7 @@ class ContextChange(DynamicInstruction):
 	def acceptToken(self, token):
 		log.log("INS", self, "calling", self.entrySink, "with:", token)
 		oldCont = token.tag.cont
-		newCont = self.getNewContext(oldCont)
+		newCont = self.getContext(oldCont)
 		self.modifyAndSend(token, self.entrySink, newCont)
 
 # --------------- #
@@ -258,8 +267,8 @@ class ContextChange(DynamicInstruction):
 # --------------- #
 
 class ContextRestore(DynamicInstruction):
-	def __init__(self, key):
-		super(ContextRestore, self).__init__(key)
+	def __init__(self):
+		super(ContextRestore, self).__init__()
 		self.map = {}
 
 	def attachSink(self, newCont, oldCont, target):
@@ -275,8 +284,6 @@ class ContextRestore(DynamicInstruction):
 # ----------------- #
 
 class StopInstruction(DynamicInstruction):
-	def __init__(self, key):
-		super(StopInstruction, self).__init__(key)
 
 	def acceptToken(self, token):
 		log.log("INS", self, "stopping with token:", token)

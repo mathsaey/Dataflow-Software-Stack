@@ -44,40 +44,133 @@ addInstruction(instruction, inputLst)
 """
 
 import log
-import Queue
-import threading
 import instructions
-import contextMatcher
+import multiprocessing
 
-# ------- #
-# Storage #
-# ------- #
+# ------------- #
+# Runtime Class #
+# ------------- #
 
-__TOKEN_QUEUE__ = Queue.Queue()
-__INSTRUCTION_QUEUE__ = Queue.Queue()
+__STOP__ = "<|Stop|>"
 
-def addToken(token):
-	log.log("RUN", "new token:", token)
-	__TOKEN_QUEUE__.put(token)
-def addInstruction(instruction, input):
-	log.log("RUN", "new instruction is ready:", instruction)
-	__INSTRUCTION_QUEUE__.put((instruction, input))
+class RuntimeObject(object):
+	def __init__(self):
+		super(RuntimeObject, self).__init__()
+		self.messages = multiprocessing.Queue()
+		self.schedulerQueue = []
+		self.contextQueue   = []
+		self.tokenQueue     = []
+		self.logLock        = []
+		self.working        = False
 
-def _getToken(): return __TOKEN_QUEUE__.get()
-def _getInstruction(): return __INSTRUCTION_QUEUE__.get()
+	def setQueues(self, 
+			schedulerQueue = None, 
+			contextQueue = None, 
+			tokenQueue = None):
 
-# -------- #
-# Run Loop #
-# -------- #
+		self.schedulerQueue = schedulerQueue
+		self.contextQueue = contextQueue
+		self.tokenQueue = tokenQueue
 
-__ACTIVE__ = False
+	def addInstruction(self, inst, input):
+		self.schedulerQueue.put((inst, input))
+	def addToken(self, token):
+		self.tokenQueue.put(token)
+	def addToContext(self, token):
+		self.contextQueue.put(token)
 
-def _processToken(token):
-	inst = token.tag.inst
-	if inst < 0:
-		addInstruction(inst, token)
-	else:
-		contextMatcher.addToken(token)
+	def process(self, obj): pass
+
+	def log(self, message):
+		with logLock:
+			print "[RUN]", message
+
+	def runLoop(self):
+		self.working = True
+		while self.working:
+			message = self.messages.get()
+			if message == __STOP__:
+				self.working = False
+			else:
+				self.process(message)
+
+# --------------- #
+# Runtime Classes #
+# --------------- #
+
+class ContextMatcher(RuntimeObject):
+
+	def __init__(self):
+		super(ContextMatcher, self).__init__()
+		self.operations = {}
+		self.tokens = {}
+
+	# Add the amount of inputs a given instruction
+	# will accept. Should be done while adding instructions.
+	def addInstruction(self, key, inputs):
+		self.operations.update({key : inputs})
+
+	# See if we have a token array for a key, 
+	# create one if we don't
+	def checkKey(self, key):
+		if key not in self.tokens:
+			inputs = self.operations[key[0]]
+			arr = [None] * inputs
+			self.tokens.update({key : arr})
+
+	# Update the token array for a key
+	def updateKeyArr(self, key, port, token):
+		arr = self.tokens[key]
+		arr[port] = token
+	
+	# See if a given key is ready to execute
+	def isKeyReady(self, key):
+		return self.tokens[key].count(None) == 0
+
+	# Execute an instruction that's ready
+	def executeKey(self, key):
+		arr = self.tokens[key]
+		del self.tokens[key]
+		self.addInstruction(key[0], arr)
+
+	# Add a token to the matcher
+	def processToken(self, token):
+		tag  = token.tag                  
+		inst = tag.inst                   
+		cont = tag.cont                   
+		port = tag.port                   
+		key  = (inst, cont)
+
+		self.checkKey(key)
+		self.updateKeyArr(key, port, token)
+
+		if self.isKeyReady(key):
+			self.executeKey(key)
+
+	def process(self, obj): 
+		self.processToken(obj)
+
+
+class TokenDispatcher(RuntimeObject):
+
+	def __init__(self, contextQueue):
+		super(TokenDispatcher, self).__init__()
+
+	def processToken(self, token):
+		inst = token.tag.inst
+		if inst < 0:
+			self.addInstruction(inst, token)
+		else:
+			self.addToContext(token)
+
+	def process(self, obj):
+		self.processToken(obj)
+
+class Scheduler(RuntimeObject):
+	def processInstruction(self, obj):
+
+
+
 
 def _processInstruction(instruction, input):
 	inst = instructions.getInstruction(instruction)
