@@ -36,10 +36,8 @@ add<type>Instruction(args)
 	Create and add an instruction of type
 	the arguments depend on the type of the instruction
 """
-import log
 import tokens
 import context
-import runtime
 
 # ------------------ #
 # Instruction Memory #
@@ -74,14 +72,14 @@ class InstructionMemory(object):
 		elif inst.isTLR():
 			key = self.reserveTLRSlot()
 		else:
-			log.log("INS", "Memory received invalid instruction", inst)
+			print "INS", "Memory received invalid instruction", inst
 
 		self.memory.update({key : inst})
 		inst.setMemory(key, self)
 		return key
 
 	def get(self, key):
-		self.memory[key]
+		return self.memory[key]
 
 	def reset(self):
 		self.__init__()
@@ -90,21 +88,26 @@ class InstructionMemory(object):
 # Instruction creation #
 # -------------------- #
 
-def createInstruction(memory, constructor, args = []):
+__INSTRUCTIONS__ = InstructionMemory()
+
+def getInstruction(key):
+	return __INSTRUCTIONS__.get(key)
+
+def createInstruction(constructor, args = []):
 	inst = constructor(*args)
-	key = memory.addInstruction(inst)
+	key = __INSTRUCTIONS__.addInstruction(inst)
 	return key
 
-def addOperationInstruction(memory, operation, inputs):
-	return createInstruction(memory, OperationInstruction, [inputs, operation])
-def addContextChange(memory, callRet):
-	return createInstruction(memory, ContextChange, [callRet])
-def addSink(memory): 
-	return createInstruction(memory, Sink, [])
-def addContextRestore(memory):
-	return createInstruction(memory, ContextRestore, [])
-def addStopInstruction(memory):
-	return createInstruction(memory, StopInstruction, [])
+def addOperationInstruction(operation, inputs):
+	return createInstruction(OperationInstruction, [inputs, operation])
+def addContextChange(callRet):
+	return createInstruction(ContextChange, [callRet])
+def addSink(): 
+	return createInstruction(Sink, [])
+def addContextRestore():
+	return createInstruction(ContextRestore, [])
+def addStopInstruction():
+	return createInstruction(StopInstruction, [])
 
 # -------------------- #
 # Abstract Instruction #
@@ -115,6 +118,7 @@ class AbstractInstruction(object):
 		super(AbstractInstruction, self).__init__()
 		self.key      = None
 		self.mem 	  = None
+		self.run 	  = None
 
 	def setMemory(self, key, mem):
 		self.key = key
@@ -132,7 +136,7 @@ class ReceiverType(object):
 	def isSTR(self): pass
 	def isTLR(self): pass
 
-	def run(self, input): pass
+	def execute(self, input): pass
 	def needsMatcher(self): pass
 
 class SingleTokenReceiver(ReceiverType):
@@ -141,7 +145,7 @@ class SingleTokenReceiver(ReceiverType):
 	def isTLR(self): return False
 
 	def acceptToken(self, token): pass
-	def run(self, input):
+	def execute(self, input):
 		self.acceptToken(input)
 
 class TokenListReceiver(ReceiverType):
@@ -149,8 +153,8 @@ class TokenListReceiver(ReceiverType):
 	def isSTR(self): return False
 	def isTLR(self): return True
 
-	def execute(self, tokens): pass
-	def run(self, input):
+	def acceptList(self, tokens): pass
+	def execute(self, input):
 		self.acceptList(input)
 
 # ------------------ #
@@ -175,7 +179,7 @@ class StaticInstruction(AbstractInstruction):
 			inst = dst[0]
 			port = dst[1]
 			token 	= tokens.createToken(inst, port, cont, datum)
-			runtime.addToken(token)
+			self.run.addToken(token)
 
 # ------------------- #
 # Dynamic Instruction #
@@ -185,7 +189,7 @@ class DynamicInstruction(AbstractInstruction, SingleTokenReceiver):
 	def  modifyAndSend(self, token, inst, cont):
 		token.tag.inst = inst
 		token.tag.cont = cont
-		runtime.addToken(token)
+		self.run.addToken(token)
 
 # ---------- #
 # Operations #
@@ -209,7 +213,7 @@ class OperationInstruction(StaticInstruction, TokenListReceiver):
 			self.sendDatum(i, res, cont)
 
 	def acceptList(self, tokens):
-		log.log("INS", self, "executing", tokens)
+		self.run.log("INS", self, "executing", tokens)
 		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
@@ -222,7 +226,7 @@ class OperationInstruction(StaticInstruction, TokenListReceiver):
 class Sink(StaticInstruction, SingleTokenReceiver):
 
 	def acceptToken(self, token):
-		log.log("INS", self, "forwarding", token)
+		self.run.log("INS", self, "forwarding", token)
 		port = token.tag.port
 		cont = token.tag.cont
 		datum = token.datum
@@ -257,7 +261,7 @@ class ContextChange(DynamicInstruction):
 			return self.contexts[oldCont]
 
 	def acceptToken(self, token):
-		log.log("INS", self, "calling", self.entrySink, "with:", token)
+		self.run.log("INS", self, "calling", self.entrySink, "with:", token)
 		oldCont = token.tag.cont
 		newCont = self.getContext(oldCont)
 		self.modifyAndSend(token, self.entrySink, newCont)
@@ -275,7 +279,7 @@ class ContextRestore(DynamicInstruction):
 		self.map.update({newCont : (target, oldCont)})
 
 	def acceptToken(self, token):
-		log.log("INS", self, "restoring", token)
+		self.run.log("INS", self, "restoring", token)
 		pair = self.map[token.tag.cont]
 		self.modifyAndSend(token, pair[0], pair[1])
 
@@ -286,4 +290,5 @@ class ContextRestore(DynamicInstruction):
 class StopInstruction(DynamicInstruction):
 
 	def acceptToken(self, token):
-		log.log("INS", self, "stopping with token:", token)
+		self.run.log("INS", self, "stopping with token:", token)
+		self.run.stop()

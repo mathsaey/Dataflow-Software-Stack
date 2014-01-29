@@ -24,26 +24,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-Runtime system
-
-The system has 2 responsibilities:
-- Dispatching tokens that are available
-- Determining which instruction to exectue
-
-The following functions can be used by other modules:
-run()
-	Start the runtime
-stop(token)
-	Stop the runtime, the final token is returned to the user
-addToken(token)
-	Add a token to process
-addInstruction(instruction, inputLst)
-	Add an instruction that should be executed with
-	the inputLst as argument
-"""
-
-import log
 import instructions
 import multiprocessing
 
@@ -57,20 +37,31 @@ class RuntimeObject(object):
 	def __init__(self):
 		super(RuntimeObject, self).__init__()
 		self.messages = multiprocessing.Queue()
-		self.schedulerQueue = []
-		self.contextQueue   = []
-		self.tokenQueue     = []
-		self.logLock        = []
-		self.working        = False
+		self.instructionMemory = None
+		self.schedulerQueue    = None
+		self.contextQueue      = None
+		self.tokenQueue        = None
+		self.logLock           = None
+		self.working           = False
 
-	def setQueues(self, 
+	def addData(self, 
+			instructionMemory = None,
 			schedulerQueue = None, 
 			contextQueue = None, 
-			tokenQueue = None):
+			tokenQueue = None,
+			logLock = None,
+			):
 
+		self.instructionMemory = instructionMemory
 		self.schedulerQueue = schedulerQueue
 		self.contextQueue = contextQueue
 		self.tokenQueue = tokenQueue
+		self.logLock = logLock
+
+	def stop(self):
+		self.schedulerQueue.put(__STOP__)
+		self.contextQueue.put(__STOP__)
+		self.tokenQueue.put(__STOP__)
 
 	def addInstruction(self, inst, input):
 		self.schedulerQueue.put((inst, input))
@@ -81,9 +72,13 @@ class RuntimeObject(object):
 
 	def process(self, obj): pass
 
-	def log(self, message):
-		with logLock:
-			print "[RUN]", message
+	def log(self, name, *strings):
+		tail = ""
+		name = "['" + name + "']"
+		for s in strings:
+			tail += str(s) + " "
+		with self.logLock:
+			print name + tail
 
 	def runLoop(self):
 		self.working = True
@@ -95,26 +90,21 @@ class RuntimeObject(object):
 				self.process(message)
 
 # --------------- #
-# Runtime Classes #
+# Context Matcher #
 # --------------- #
 
 class ContextMatcher(RuntimeObject):
 
 	def __init__(self):
 		super(ContextMatcher, self).__init__()
-		self.operations = {}
 		self.tokens = {}
-
-	# Add the amount of inputs a given instruction
-	# will accept. Should be done while adding instructions.
-	def addInstruction(self, key, inputs):
-		self.operations.update({key : inputs})
 
 	# See if we have a token array for a key, 
 	# create one if we don't
 	def checkKey(self, key):
 		if key not in self.tokens:
-			inputs = self.operations[key[0]]
+			inst = self.instructionMemory.get(key[0])
+			inputs = inst.inputs
 			arr = [None] * inputs
 			self.tokens.update({key : arr})
 
@@ -150,10 +140,13 @@ class ContextMatcher(RuntimeObject):
 	def process(self, obj): 
 		self.processToken(obj)
 
+# ---------------- #
+# Token Dispatcher #
+# ---------------- #
 
 class TokenDispatcher(RuntimeObject):
 
-	def __init__(self, contextQueue):
+	def __init__(self):
 		super(TokenDispatcher, self).__init__()
 
 	def processToken(self, token):
@@ -166,34 +159,65 @@ class TokenDispatcher(RuntimeObject):
 	def process(self, obj):
 		self.processToken(obj)
 
+# --------- #
+# Scheduler #
+# --------- #
+
 class Scheduler(RuntimeObject):
-	def processInstruction(self, obj):
+	def processInstruction(self, pair):
+		inst = self.instructionMemory.get(pair[0])
+		inst.run = self
+		inst.execute(pair[1])
 
+	def process(self, obj):
+		self.processInstruction(obj)
 
+# -------- #
+# Run Loop #
+# -------- #
 
+def runProc(runtimeObj):
+	runtimeObj.runLoop()
 
-def _processInstruction(instruction, input):
-	inst = instructions.getInstruction(instruction)
-	inst.run(input)
+__TOKENS__ = []
 
-def _tokenLoop():
-	while __ACTIVE__:
-		token = _getToken()
-		_processToken(token)
-
-def _instructionLoop():
-	while __ACTIVE__:
-		inst = _getInstruction()
-		_processInstruction(inst[0], inst[1])
+def addToken(token):
+	__TOKENS__.append(token)
 
 def run():
-	log.log("RUN", "starting runtime")
-	global __ACTIVE__
-	__ACTIVE__ = True
-	tokenThread = threading.Thread(target = _tokenLoop)
-	instThread  = threading.Thread(target = _instructionLoop)
-	tokenThread.start()
-	instThread.start()
-	tokenThread.join()
-	instThread.join()
-	log.log("RUN", "runtime has finished")
+
+	t = TokenDispatcher()
+	c = ContextMatcher()
+	s = Scheduler()
+
+	lock = multiprocessing.Lock()
+	tQ = t.messages
+	cQ = c.messages
+	sQ = s.messages
+
+	t.addData(instructionMemory = instructions.__INSTRUCTIONS__,
+				 schedulerQueue = sQ, contextQueue = cQ, tokenQueue = tQ, logLock = lock)
+	c.addData(instructionMemory = instructions.__INSTRUCTIONS__,
+				 schedulerQueue = sQ, contextQueue = cQ, tokenQueue = tQ, logLock = lock)
+	s.addData(instructionMemory = instructions.__INSTRUCTIONS__,
+				 schedulerQueue = sQ, contextQueue = cQ, tokenQueue = tQ, logLock = lock)
+
+	for token in __TOKENS__:
+		t.addToken(token)
+
+	tProc = multiprocessing.Process(target = runProc, args = (t,), name = "TokenDispatcher")
+	cProc = multiprocessing.Process(target = runProc, args = (c,), name = "Context Matcher")
+	sProc = multiprocessing.Process(target = runProc, args = (s,), name = "Scheduler")
+
+	print "[RUN]", "starting processes..."
+
+	tProc.start()
+	cProc.start()
+	sProc.start()
+
+	tProc.join()
+	cProc.join()
+	sProc.join()
+
+	print "[RUN]", "runtime has finished..."
+
