@@ -34,6 +34,7 @@
 ##
 
 import sys
+import log
 
 ##
 # Print a warning to stdout.
@@ -48,7 +49,8 @@ import sys
 #		when this runs embedded
 ##
 def warning(msg, line = "?"):
-	print >> sys.stderr, "Warning\t at line:", line, "\t:", msg
+	message = "line: " + line + ": " + msg
+	log.logWarn("parser", message)
 
 ##
 # Print an error to stdout.
@@ -66,5 +68,7 @@ def warning(msg, line = "?"):
 #		when this runs embedded
 ##
 def error(msg, line = "?"):
-	print >> sys.stderr, "Error\t at line:", line, "\t:", msg
+	message = "line: " + line + ": " + msg
+	log.logErr("parser", message)
+	log.logErr("dvm", "Aborting after parse error.")
 	sys.exit()
