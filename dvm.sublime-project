@@ -27,7 +27,7 @@
             "name":"sublimeRepl",
             "selector":"source.python",
             "target": "run_existing_window_command",
-            "id": "repl_python_run",
+            "id": "repl_pypy_run",
             "file": "config/Python/Main.sublime-menu"
         },{
             "name": "doxygen markdown",
