@@ -1,6 +1,6 @@
 # __init__.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #

@@ -1,6 +1,6 @@
 # main.py
 # Mathijs Saey
-# dvm prototype
+# dvm
 
 # The MIT License (MIT)
 #
@@ -39,4 +39,4 @@ def tmp(node):
 	print node
 
 if1parser.parseFile(loc)
-compiler.dot.runDot(path="../igr.dot", skipCompound = False)
+compiler.dot.runDot(path="../igr.dot", skipCompound = True)
