@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/file.py
+# \file if1parser/type.py
 # \namespace if1parser.type
 # \brief Type parser
 # 
