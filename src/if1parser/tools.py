@@ -49,7 +49,7 @@ import log
 #		when this runs embedded
 ##
 def warning(msg, line = "?"):
-	message = "line: " + line + ": " + msg
+	message = "line: " + str(line) + ": " + msg
 	log.logWarn("parser", message)
 
 ##
@@ -68,7 +68,7 @@ def warning(msg, line = "?"):
 #		when this runs embedded
 ##
 def error(msg, line = "?"):
-	message = "line: " + line + ": " + msg
+	message = "line: " + str(line) + ": " + msg
 	log.logErr("parser", message)
 	log.logErr("dvm", "Aborting after parse error.")
 	sys.exit()
