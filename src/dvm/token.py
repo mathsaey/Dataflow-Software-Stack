@@ -78,7 +78,6 @@ class Tag(object):
 
 	def isSpecial(self): return False
 
-
 ##
 # Special Tag
 # Represents a tag that has to be treated 

@@ -24,22 +24,32 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+##
+# \file dvm/context.py
+# \namespace dvm.context
+# \brief DVM Contexts
+# 
+# This module defines contexts.
+# Contexts allow us to add extra state to the
+# runtime. They make it possible to have multiple inputs
+# to the same instruction (e.g. multiple instances of the same function).
+##
 
-"""
-Context creation
+import multiprocessing
 
-The following functions can be used by other modules:
-
-createContext()
-	Create and return a new context
-literalContext()
-	Return the context carried by every literal
-"""
-
-# -------------- #
-# Context Object #
-# -------------- #
-
+##
+# DVM Context
+#
+# A context is the part of a token tag.
+# Contexts differentiate between various instances
+# of a single part of the program.
+# 
+# For instance, when calling a function, DVM will create a new context
+# shared by all the arguments to this function. Upon returning, the context
+# will be used to find the destination of the function results.
+#
+# Internally, a context is a simple unique piece of data.
+##
 class Context(object):
 	def __init__(self, key):
 		super(Context,self).__init__()
@@ -54,18 +64,31 @@ class Context(object):
 	def __hash__(self):
 		return self.key
 
-# --------------- #
-# Context creator #
-# --------------- #
+##
+# Context creator
+#
+# Allows the generation of new contexts.
+# For efficieny reasons, it's possible to return
+# old contexts to the creator, this allows us to reclycle
+# contexts instead of always creating new ones.
+##
+class ContextCreator(object):
+	def __init__(self):
+		self.current = 0
+		self.free = []
+		self.lock = multiprocessing.Lock()
 
-__CURRENT__ID__ = 0
+	def get(self):
+		with self.lock:
+			if self.free:
+				res = self.free[0]
+				self.free = self.free[1:]
+				return res
+			else:
+				res = self.current
+				self.current += 1
+				return Context(res)
 
-def createContext():
-	global __CURRENT__ID__
-	__CURRENT__ID__ += 1
-	return Context(__CURRENT__ID__ -1)
-
-__LITCONTEXT__ = createContext()
-
-def literalContext():
-	return __LITCONTEXT__
+	def release(self, cont):
+		with self.lock:
+			self.free = [cont] + self.free
