@@ -24,46 +24,22 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-""" 
-Tagged token creation
-
-Responsible for the creation and definition of tokens
-
-The following functions can be used by other modules:
-
-createToken(inst, port, cont, datum)
-	Create a tagged token.
-
-	inst: The target instruction
-	port: A port of this instruction
-	cont: The context of this instruction
-	datum: The datum this token carries
-
-createLiteral(inst, port, datum)
-	Create a literal token.
-	Works like createToken but doesn't use
-	a context.
-"""
+##
+# \file dvm/token.py
+# \namespace dvm.token
+# \brief IGR dot parser
+# 
+# This module can return a dot version of the graph.
+# Mainly useful for debugging the compilation process.
+##
 
 import context
-
-# ---------------- #
-# Public Functions #
-# ---------------- #
-
-def createToken(inst, port, cont, datum):
-	tag = Tag(inst, port, cont)
-	return Token(datum, tag)
-
-def createLiteral(inst, port, datum):
-	tag = LiteralTag(inst, port)
-	return Token(datum, tag)
 
 # ----- #
 # Token #
 # ----- #
 
-class Token(object):
+class Token(object): pass
 	def __init__(self, datum, tag):
 		super(Token, self).__init__()
 		self.datum = datum
