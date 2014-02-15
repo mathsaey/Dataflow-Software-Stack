@@ -27,19 +27,19 @@
 ##
 # \file dvm/token.py
 # \namespace dvm.token
-# \brief IGR dot parser
+# \brief DVM Tagged tokens
 # 
-# This module can return a dot version of the graph.
-# Mainly useful for debugging the compilation process.
+# This module defines the various tokens that 
+# carry the state of the program.
 ##
 
-import context
-
-# ----- #
-# Token #
-# ----- #
-
-class Token(object): pass
+##
+# Represents a DVM token.
+# A token carries program data and a Tag.
+# The tag contains all the "meta" information about
+# the token, such as it's destination and context.
+##
+class Token(object):
 	def __init__(self, datum, tag):
 		super(Token, self).__init__()
 		self.datum = datum
@@ -50,10 +50,20 @@ class Token(object): pass
 		dataString = "(" + str(self.datum) + ")"
 		return "<| " + dataString + " " + tagString + " |>"
 
-# ---- #
-# Tags #
-# ---- #
+##
+# Represents a tag.
+# A tag contains the meta information about
+# a token.
+##
+class AbstractTag(object):
+	def isSpecial(self):
+		raise NotImplementedError("Abstract method")
 
+##
+# Standard tag.
+# A standard tag contains the destination
+# (instruction and port) of a token as well as it's context.
+##
 class Tag(object):
 	def __init__(self, inst, port, cont):
 		super(Tag, self).__init__()
@@ -66,14 +76,23 @@ class Tag(object):
 		port = str(self.port) + " | "
 		return inst + port + str(self.cont)
 
-	def __eq__(self, other):
-		return (self.inst == other.inst and
-		       self.port == other.port and
-		       self.cont == other.cont)
+	def isSpecial(self): return False
 
-	def isLiteral(self):
-		return self.cont == context.literalContext()
 
-class LiteralTag(Tag):
-	def __init__(self, inst, port):
-		super(LiteralTag, self).__init__(inst, port, context.literalContext())
+##
+# Special Tag
+# Represents a tag that has to be treated 
+# differently by the runtime, examples include
+# the stop tag, which indicates that the program has to
+# terminate upon receiving the token containing this tag.
+##
+class STag(AbstractTag):
+	def __str__(self): return "<STag>"
+	def isSpecial(self): return True
+
+##
+# Stop Tag
+# Signals the end of program execution.
+##
+class StopTag(STag):
+	def __str__(self): return "<STOP>"
