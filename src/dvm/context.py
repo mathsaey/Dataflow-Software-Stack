@@ -62,9 +62,6 @@ class Context(object):
 	def __eq__(self, other):
 		return other.key == self.key and other.prefix == self.prefix
 
-	#def __hash__(self):
-	#	return self.key
-
 ##
 # Context creator
 #
