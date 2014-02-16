@@ -24,6 +24,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+##
+# \file dvm/rumtime.py
+# \namespace dvm.runtime
+# \brief DVM runtime core
+# 
+# This module defines the runtime. 
+# The runtime is responsible for dispatching tokens,
+# matching tokens by their contexts and for scheduling
+# instructions that are ready to execute.
+#
+# Multiple runtime "cores" are active at any given time, depending
+# on the system. It is the responsibility of the runtime to find a
+# decent load balance accross these cores.
+##
+
 import instructions
 import multiprocessing
 
@@ -31,123 +46,38 @@ import multiprocessing
 # Runtime Class #
 # ------------- #
 
-__STOP__ = "<|Stop|>"
+##
+# Runtime core.
+#
+# A runtime core is a worker unit in DVM.
+# It defines it's own scheduler, matcher and
+# token dispatcher and it has a static copy of the
+# instruction memory.
+##
+class Core(object):
+	def __init__(self):
+		super(Core, self).__init__()
+		self.active         = False
+		self.instructions   = None
+		self.contextCreator = None
+
+		self.dispatcher = TokenDispatcher(self)
+		self.scheduler  = Scheduler(self)
+		self.matcher    = ContextMatcher(self)
+
+
 
 class RuntimeObject(object):
-	def __init__(self):
+
+	def __init__(self, core):
 		super(RuntimeObject, self).__init__()
-		self.messages = multiprocessing.Queue()
-		self.instructionMemory = None
-		self.schedulerQueue    = None
-		self.contextQueue      = None
-		self.tokenQueue        = None
-		self.logLock           = None
-		self.working           = False
-
-	def addData(self, 
-			instructionMemory = None,
-			schedulerQueue = None, 
-			contextQueue = None, 
-			tokenQueue = None,
-			logLock = None,
-			):
-
-		self.instructionMemory = instructionMemory
-		self.schedulerQueue = schedulerQueue
-		self.contextQueue = contextQueue
-		self.tokenQueue = tokenQueue
-		self.logLock = logLock
-
-	def stop(self):
-		self.schedulerQueue.put(__STOP__)
-		self.contextQueue.put(__STOP__)
-		self.tokenQueue.put(__STOP__)
-
-	def addInstruction(self, inst, input):
-		self.schedulerQueue.put((inst, input))
-	def addToken(self, token):
-		self.tokenQueue.put(token)
-	def addToContext(self, token):
-		self.contextQueue.put(token)
-
-	def process(self, obj): pass
-
-	def log(self, name, *strings):
-		tail = ""
-		name = "['" + name + "']"
-		for s in strings:
-			tail += str(s) + " "
-		with self.logLock:
-			print name + tail
-
-	def runLoop(self):
-		self.working = True
-		while self.working:
-			message = self.messages.get()
-			if message == __STOP__:
-				self.working = False
-			else:
-				self.process(message)
-
-# --------------- #
-# Context Matcher #
-# --------------- #
-
-class ContextMatcher(RuntimeObject):
-
-	def __init__(self):
-		super(ContextMatcher, self).__init__()
-		self.tokens = {}
-
-	# See if we have a token array for a key, 
-	# create one if we don't
-	def checkKey(self, key):
-		if key not in self.tokens:
-			inst = self.instructionMemory.get(key[0])
-			inputs = inst.inputs
-			arr = [None] * inputs
-			self.tokens.update({key : arr})
-
-	# Update the token array for a key
-	def updateKeyArr(self, key, port, token):
-		arr = self.tokens[key]
-		arr[port] = token
-	
-	# See if a given key is ready to execute
-	def isKeyReady(self, key):
-		return self.tokens[key].count(None) == 0
-
-	# Execute an instruction that's ready
-	def executeKey(self, key):
-		arr = self.tokens[key]
-		del self.tokens[key]
-		self.addInstruction(key[0], arr)
-
-	# Add a token to the matcher
-	def processToken(self, token):
-		tag  = token.tag                  
-		inst = tag.inst                   
-		cont = tag.cont                   
-		port = tag.port                   
-		key  = (inst, cont)
-
-		self.checkKey(key)
-		self.updateKeyArr(key, port, token)
-
-		if self.isKeyReady(key):
-			self.executeKey(key)
-
-	def process(self, obj): 
-		self.processToken(obj)
+		self.core = core
 
 # ---------------- #
 # Token Dispatcher #
 # ---------------- #
 
 class TokenDispatcher(RuntimeObject):
-
-	def __init__(self):
-		super(TokenDispatcher, self).__init__()
 
 	def processToken(self, token):
 		inst = token.tag.inst

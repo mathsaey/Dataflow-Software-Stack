@@ -69,6 +69,7 @@ class Context(object):
 	# for a pair of non-negative integers.
 	#
 	# Based on: http://szudzik.com/ElegantPairing.pdf
+	# courtesy of: http://stackoverflow.com/a/13871379
 	##
 	def hashPair(self, a, b):
 		if a >= b:
