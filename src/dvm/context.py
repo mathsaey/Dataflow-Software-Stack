@@ -49,18 +49,22 @@ import multiprocessing
 # will be used to find the destination of the function results.
 #
 # Internally, a context is a simple unique piece of data.
+#
+# \todo Find a good hash function, hash at init and use this as context
 ##
 class Context(object):
 	def __init__(self, prefix, key):
 		super(Context,self).__init__()
-		self.prefix = prefix
-		self.key = key
+		self.hash = hash((prefix, key))
 
 	def __str__(self):
-		return "Context: " + str(self.prefix) + " " + str(self.key)
+		return "Context: " + str(self.hash)
 
 	def __eq__(self, other):
-		return other.key == self.key and other.prefix == self.prefix
+		return self.hash == other.hash
+
+	def __hash__(self):
+		return self.hash
 
 ##
 # Context creator
