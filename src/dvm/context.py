@@ -53,7 +53,7 @@ import multiprocessing
 class Context(object):
 	def __init__(self, prefix, key):
 		super(Context,self).__init__()
-		self.hash = hashPair(prefix, key)
+		self.hash = self.hashPair(prefix, key)
 
 	def __str__(self):
 		return "Context: " + str(self.hash)
@@ -70,7 +70,7 @@ class Context(object):
 	#
 	# Based on: http://szudzik.com/ElegantPairing.pdf
 	##
-	def hashPair(a, b):
+	def hashPair(self, a, b):
 		if a >= b:
 			return a ** 2 + a + b 
 		else:
