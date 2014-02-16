@@ -51,18 +51,19 @@ import multiprocessing
 # Internally, a context is a simple unique piece of data.
 ##
 class Context(object):
-	def __init__(self, key):
+	def __init__(self, prefix, key):
 		super(Context,self).__init__()
+		self.prefix = prefix
 		self.key = key
 
 	def __str__(self):
-		return "Context: " + str(self.key)
+		return "Context: " + str(self.prefix) + " " + str(self.key)
 
 	def __eq__(self, other):
-		return other.key == self.key
+		return other.key == self.key and other.prefix == self.prefix
 
-	def __hash__(self):
-		return self.key
+	#def __hash__(self):
+	#	return self.key
 
 ##
 # Context creator
@@ -71,9 +72,14 @@ class Context(object):
 # For efficieny reasons, it's possible to return
 # old contexts to the creator, this allows us to reclycle
 # contexts instead of always creating new ones.
+#
+# A context creater also has a unique prefix.
+# Having this prefix allows us to have multiple context 
+# creators without concurrency issues.
 ##
 class ContextCreator(object):
-	def __init__(self):
+	def __init__(self, prefix):
+		self.prefix = prefix
 		self.current = 0
 		self.free = []
 		self.lock = multiprocessing.Lock()
@@ -87,7 +93,7 @@ class ContextCreator(object):
 			else:
 				res = self.current
 				self.current += 1
-				return Context(res)
+				return Context(prefix, res)
 
 	def release(self, cont):
 		with self.lock:
