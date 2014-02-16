@@ -90,7 +90,7 @@ class ContextCreator(object):
 			else:
 				res = self.current
 				self.current += 1
-				return Context(prefix, res)
+				return Context(self.prefix, res)
 
 	def release(self, cont):
 		with self.lock:
