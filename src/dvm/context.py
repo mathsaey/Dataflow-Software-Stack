@@ -48,14 +48,12 @@ import multiprocessing
 # shared by all the arguments to this function. Upon returning, the context
 # will be used to find the destination of the function results.
 #
-# Internally, a context is a simple unique piece of data.
-#
-# \todo Find a good hash function, hash at init and use this as context
+# Internally, a context is a wrapper around a unique integer.
 ##
 class Context(object):
 	def __init__(self, prefix, key):
 		super(Context,self).__init__()
-		self.hash = hash((prefix, key))
+		self.hash = hashPair(prefix, key)
 
 	def __str__(self):
 		return "Context: " + str(self.hash)
@@ -65,6 +63,18 @@ class Context(object):
 
 	def __hash__(self):
 		return self.hash
+
+	## 
+	# Generate a unique, integral identifier
+	# for a pair of non-negative integers.
+	#
+	# Based on: http://szudzik.com/ElegantPairing.pdf
+	##
+	def hashPair(a, b):
+		if a >= b:
+			return a ** 2 + a + b 
+		else:
+			return b ** 2 + a
 
 ##
 # Context creator
