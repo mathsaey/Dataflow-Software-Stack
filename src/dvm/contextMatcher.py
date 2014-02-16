@@ -40,7 +40,7 @@
 # The matcher should forward these tokens to the scheduler once
 # that all of the inputs for a given context are available.
 #
-# The matcher utilizes *(instruction, context)* pairs as **key**
+# The matcher utilizes <i>(instruction, context)</i> pairs as **keys**
 ##
 class ContextMatcher(object):
 
@@ -53,7 +53,11 @@ class ContextMatcher(object):
 	##
 	def __init__(self, core):
 		super(ContextMatcher, self).__init__()
+
+		## Dictionary that contains the tokens for all the keys
 		self.tokens = {}
+
+		## Reference to the DVM::Core
 		self.core = core
 
 	##
