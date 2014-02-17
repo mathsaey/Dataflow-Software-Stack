@@ -6,16 +6,16 @@
 #
 # Copyright (c) 2013, 2014 Mathijs Saey
 #
-# Permission is hereby granted, free of charge, to any person obtaining a copy 		
-# of this software and associated documentation files (the "Software"), to deal		      
-# in the Software without restriction, including without limitation the rights		
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell		
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -76,8 +76,7 @@ class Core(object):
 	def __init__(self, logLock = None, prefix = None, instructions = None):
 		super(Core, self).__init__()
 		log.setLock(logLock)
-
-		log.info("core", "Initializing core: " + prefix)
+		log.info("core", "Initializing core: " + str(prefix))
 
 		## Instruction memory
 		self.instructions   = instructions
@@ -120,17 +119,17 @@ class Core(object):
 	# will stop this core.
 	##
 	def run(self):
-		log.info("core", "(" + self.prefix + ") Starting run loop")
+		log.info("core", "(" + str(self.prefix) + ") Starting run loop")
 		while self.active:
 			t = self.tokens.get()
 			self.dispatcher.processToken(t)
-		log.info("core", "(" + self.prefix + ") Terminated")
+		log.info("core", "(" + str(self.prefix) + ") Terminated")
 
 
 def start(cores = 1):
 
 	logLock = log.getLock()
-	coreList = []
+	coreList = [None] * cores
 
 	for i in xrange(0, cores):
 		coreList[i] = Core(
