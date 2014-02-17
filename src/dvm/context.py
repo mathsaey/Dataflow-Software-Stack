@@ -59,7 +59,9 @@ class Context(object):
 		self.hash = self.hashPair(prefix, key)
 
 	def __str__(self):
-		return "Context: " + str(self.hash)
+		hash = str(self.hash)
+		pref = " (" + str(self.prefix) + ")"
+		return "Context: " + hash + pref
 
 	def __eq__(self, other):
 		return self.hash == other.hash

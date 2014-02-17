@@ -63,20 +63,23 @@ class AbstractTag(object):
 # Standard tag.
 # A standard tag contains the destination
 # (instruction and port) of a token as well as it's context.
+#
+# Conceptually, a tag has 2 parts:
+# * A static part, it's port and instruction which are part of the program
+# * A dynamic part, it's core and context, which are dynamically assigned at runtime.
 ##
 class Tag(object):
-	def __init__(self, core, inst, port, cont):
+	def __init__(self, inst, port, core, cont):
 		super(Tag, self).__init__()
 		self.cont = cont
-		self.core = core
 		self.port = port
 		self.inst = inst
 
 	def __str__(self):
-		core = str(self.core) + " | "
 		inst = str(self.inst) + " | "
 		port = str(self.port) + " | "
-		return inst + port + str(self.cont)
+		core = str(self.core) + " | "
+		return inst + port + core + str(self.cont)
 
 	def isSpecial(self): return False
 

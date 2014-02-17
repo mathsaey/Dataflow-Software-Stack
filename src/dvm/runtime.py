@@ -46,6 +46,7 @@ import multiprocessing
 from context import ContextCreator
 from scheduler import Scheduler
 from dispatcher import TokenDispatcher
+from tokenCreator import TokenCreator
 from contextMatcher import ContextMatcher
 
 # ------------- #
@@ -89,6 +90,8 @@ class Core(object):
 
 		## Context creator for this core
 		self.contextCreator = ContextCreator(self)
+		## Token creator for this core
+		self.tokenCreator   = TokenCreator(self)
 		## Token dispatcher for this core
 		self.dispatcher     = TokenDispatcher(self)
 		## Scheduler for this core

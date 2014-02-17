@@ -24,150 +24,136 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-Create and retrieve instructions.
+##
+# \file dvm/instruction.py
+# \namespace dvm.instruction
+# \brief DVM instruction definitions
+#
+# This module defines the various instruction types.
+##
 
-The following functions are available for use by other modules:
-
-getInstruction(key)
-	Get the instruction matching key
-
-add<type>Instruction(args)
-	Create and add an instruction of type
-	the arguments depend on the type of the instruction
-"""
-import tokens
-import context
-
-
-# -------------------- #
-# Instruction creation #
-# -------------------- #
-
-def getInstruction(key):
-	return __INSTRUCTIONS__.get(key)
-
-def createInstruction(constructor, args = []):
-	inst = constructor(*args)
-	key = __INSTRUCTIONS__.addInstruction(inst)
-	return key
-
-def addOperationInstruction(operation, inputs):
-	return createInstruction(OperationInstruction, [inputs, operation])
-def addContextChange(callRet):
-	return createInstruction(ContextChange, [callRet])
-def addSink(): 
-	return createInstruction(Sink, [])
-def addContextRestore():
-	return createInstruction(ContextRestore, [])
-def addStopInstruction():
-	return createInstruction(StopInstruction, [])
+import log
 
 # -------------------- #
 # Abstract Instruction #
 # -------------------- #
 
+##
+# General DVM instruction.
+#
+# Defines an interface that all instructions should
+# implement, along with some convenience functions.
+##
 class AbstractInstruction(object):
 	def __init__(self):
 		super(AbstractInstruction, self).__init__()
-		self.key      = None
-		self.mem 	  = None
-		self.run 	  = None
+		self.key = None
 
-	def setMemory(self, key, mem):
+	## Set the instruction address 
+	def setKey(self, key):
 		self.key = key
-		self.mem = mem
 
+	## Return a string representation of this instruction.
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
+	##
+	# Execute an instruction with a given input
+	# and a core.
+	#
+	# \param input
+	#		A token, or a list of tokens, depending
+	#		on the instruction type.
+	# \param core
+	#		The core where we execute this
+	##
+	def execute(self, input, core): pass
 
-# -------------- #
-# Receiver Types #
-# -------------- #
-
-class ReceiverType(object):
-	def isSTR(self): pass
-	def isTLR(self): pass
-
-	def execute(self, input): pass
-	def needsMatcher(self): pass
-
-class SingleTokenReceiver(ReceiverType):
+	## 
+	# See if an instruction requires
+	# context matching.
+	##
 	def needsMatcher(self): return False
-	def isSTR(self): return True
-	def isTLR(self): return False
 
-	def acceptToken(self, token): pass
-	def execute(self, input):
-		self.acceptToken(input)
-
-class TokenListReceiver(ReceiverType):
-	def needsMatcher(self): return True
-	def isSTR(self): return False
-	def isTLR(self): return True
-
-	def acceptList(self, tokens): pass
-	def execute(self, input):
-		self.acceptList(input)
 
 # ------------------ #
 # Static Instruction #
 # ------------------ #
 
+##
+# A static instruction will always send it's 
+# output to the same instructions.
+#
+# A static instruction can have multiple output ports.
+# Furthermore, multiple destinations can exist for a single port.
+##
 class StaticInstruction(AbstractInstruction):
 	def __init__(self):
 		super(StaticInstruction, self).__init__()
 		self.destinations = {}
 
+	##
+	# Add a destination to this instruction.
+	#
+	# \param port
+	# 		The output port to link *from*
+	# \param toInst
+	#		The instruction to send to
+	# \param toPort
+	#		The port on this instruction to send to.
+	##
 	def addDestination(self, port, toInst, toPort):
 		if port in self.destinations:
 			self.destinations[port] += [(toInst, toPort)]
 		else:
 			self.destinations.update({port : [(toInst, toPort)]})
 
-	# Send data on a given port to any destination
-	# of this port
-	def sendDatum(self, port, datum, cont):
+	##
+	# Send a datum to any destination of a given output port.
+	#
+	# \param port
+	#		The port that we send outputs from.
+	# \param datum
+	#		The piece of data to send
+	# \param cont
+	#		The context of the output.
+	##
+	def sendDatum(self, core, port, datum, cont):
 		for dst in self.destinations[port]:
 			inst = dst[0]
 			port = dst[1]
-			token 	= tokens.createToken(inst, port, cont, datum)
-			self.run.addToken(token)
-
-# ------------------- #
-# Dynamic Instruction #
-# ------------------- #
-
-class DynamicInstruction(AbstractInstruction, SingleTokenReceiver):
-	def  modifyAndSend(self, token, inst, cont):
-		token.tag.inst = inst
-		token.tag.cont = cont
-		self.run.addToken(token)
+			core.tokenCreator.simpleToken(datum, inst, port, cont)
 
 # ---------- #
 # Operations #
 # ---------- #
 
-"""
-Takes a list of tokens as input for it's internal function
-"""
+##
+# An operation instruction defines a single operation
+# on all of it's inputs.
+##
+class OperationInstruction(StaticInstruction):
+	def needsMatcher(self): return True
 
-class OperationInstruction(StaticInstruction, TokenListReceiver):
 	def __init__(self, inputs, operation):
 		super(OperationInstruction, self).__init__()
 		self.operation = operation
 		self.inputs    = inputs
 
-	# Send a list of results
-	# Every element in this list should have a matching output port
+	##
+	# Send results to the relevant destinations.
+	#
+	# Simply forwards any element in the list to all the
+	# destinations of the matching output port of the instruction.
+	# The length of results should be equal to the amount of output ports.
+	##
 	def sendResults(self, results, cont):
 		for i in xrange(0, len(results)):
 			res = results[i]
 			self.sendDatum(i, res, cont)
 
-	def acceptList(self, tokens):
-		self.run.log("INS", self, "executing", tokens)
+	def execute(self, tokens, core):
+		log.info("inst", self + " executing.")
 		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
@@ -177,72 +163,76 @@ class OperationInstruction(StaticInstruction, TokenListReceiver):
 # Sinks #
 # ----- #
 
-class Sink(StaticInstruction, SingleTokenReceiver):
-
-	def acceptToken(self, token):
-		self.run.log("INS", self, "forwarding", token)
+##
+# Sink instruction.
+#
+# A sink is an instruction that only serves
+# to forward any input it receives to it's destinations.
+##
+class Sink(StaticInstruction):
+	def execute(self, token, core):
 		port = token.tag.port
 		cont = token.tag.cont
 		datum = token.datum
-		self.sendDatum(port, datum, cont)
+		self.sendDatum(core, port, datum, cont)
 
 # -------------- #
 # Context Change #
 # -------------- #
 
-class ContextChange(DynamicInstruction):
-	def __init__(self, returnSink):
+##
+# Represents a context change in the program.
+# e.g. a function call.
+##
+class ContextChange(AbstractInstruction):
+
+	##
+	# Initialize a context change instruction.
+	#
+	# \param destSink
+	#		The destination of the tokens
+	# \param returnSink
+	#		The destination of the tokens 
+	#		**after** their context is restored.
+	##
+	def __init__(self, destSink, returnSink):
 		super(ContextChange, self).__init__()
-		self.returnSink = returnSink
-		self.entrySink  = None
-		self.restore    = None
+		self.retnSink = returnSink
+		self.destSink = destSink
 		self.contexts = {}
 
-	def bind(self, entrySink, restore):
-		self.entrySink = entrySink
-		self.restore = self.mem.get(restore)
+	def acceptToken(self, token, core):
+		log.info("inst", self + " changing context of: " + token)
 
-	def setRestore(self, newCont, oldCont):
-		self.restore.attachSink(newCont, oldCont, self.returnSink)
-
-	def getContext(self, oldCont):
-		if oldCont not in self.contexts:
-			newCont = context.createContext()
-			self.contexts.update({oldCont : newCont})
-			self.setRestore(newCont, oldCont)
-			return newCont
-		else:
-			return self.contexts[oldCont]
-
-	def acceptToken(self, token):
-		self.run.log("INS", self, "calling", self.entrySink, "with:", token)
-		oldCont = token.tag.cont
-		newCont = self.getContext(oldCont)
-		self.modifyAndSend(token, self.entrySink, newCont)
+		core.tokenCreator.changeContext(
+			token,
+			self,
+			self.destSink,
+			self.retnSink)
 
 # --------------- #
 # Context Restore #
 # --------------- #
 
-class ContextRestore(DynamicInstruction):
-	def __init__(self):
-		super(ContextRestore, self).__init__()
-		self.map = {}
-
-	def attachSink(self, newCont, oldCont, target):
-		self.map.update({newCont : (target, oldCont)})
-
-	def acceptToken(self, token):
-		self.run.log("INS", self, "restoring", token)
-		pair = self.map[token.tag.cont]
-		self.modifyAndSend(token, pair[0], pair[1])
+##
+# Represents the restoration of context.
+# e.g. returning from a function.
+##
+class ContextRestore(AbstractInstruction):
+	def acceptToken(self, token, core):
+		log.info("inst", self + " restoring: " + token)
+		core.tokenCreator.restoreContext(token)
 
 # ----------------- #
 # Meta Instructions #
 # ----------------- #
 
-class StopInstruction(DynamicInstruction):
+##
+# Represents the end of the program.
+# Any input of this instruction is 
+##
+class StopInstruction(AbstractInstruction):
 
-	def acceptToken(self, token):
-		self.run.log("INS", self, "stopping with token:", token)
-		self.run.stop()
+	def acceptToken(self, token, core):
+		log.info("inst", token + " reached stop instrution: ", self)
+		core.tokenCreator.stopToken(token)
