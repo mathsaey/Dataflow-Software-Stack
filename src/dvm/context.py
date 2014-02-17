@@ -90,8 +90,8 @@ class Context(object):
 # creators without concurrency issues.
 ##
 class ContextCreator(object):
-	def __init__(self, prefix):
-		self.prefix = prefix
+	def __init__(self, core):
+		self.prefix = core.prefix
 		self.current = 0
 		self.free = []
 		self.lock = multiprocessing.Lock()

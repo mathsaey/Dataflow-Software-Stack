@@ -39,8 +39,14 @@
 # decent load balance accross these cores.
 ##
 
-import instructions
+import log
+import instruction
 import multiprocessing
+
+from context import ContextCreator
+from scheduler import Scheduler
+from dispatcher import TokenDispatcher
+from contextMatcher import ContextMatcher
 
 # ------------- #
 # Runtime Class #
@@ -55,99 +61,85 @@ import multiprocessing
 # instruction memory.
 ##
 class Core(object):
-	def __init__(self):
+	##
+	# Initialize a core.
+	#
+	# \param logLock
+	#		The lock of the log module of the parent process.
+	# \param prefix
+	#		The prefix of this core, this prefix should be unique 
+	#		and it should match the index of this core in the collection
+	#		of all the cores.
+	# \param instructions
+	#		A reference to the static instruction memory.
+	##
+	def __init__(self, logLock = None, prefix = None, instructions = None):
 		super(Core, self).__init__()
+		log.setLock(logLock)
+
+		log.info("core", "Initializing core: " + prefix)
+
+		## Instruction memory
+		self.instructions   = instructions
+		## Identifier of this core. (integer)
+		self.prefix         = prefix
+		## See if this core is running.
 		self.active         = False
-		self.instructions   = None
-		self.contextCreator = None
+		## References to the other active cores.
+		self.cores          = None
 
-		self.dispatcher = TokenDispatcher(self)
-		self.scheduler  = Scheduler(self)
-		self.matcher    = ContextMatcher(self)
+		## Context creator for this core
+		self.contextCreator = ContextCreator(self)
+		## Token dispatcher for this core
+		self.dispatcher     = TokenDispatcher(self)
+		## Scheduler for this core
+		self.scheduler      = Scheduler(self)
+		## Context matcher for this core
+		self.matcher        = ContextMatcher(self)
+		## Token "inbox" of this core
+		self.tokens         = multiprocessing.Queue()
+
+	##
+	# Update the core with references
+	# to the other cores.
+	##
+	def link(self, cores):
+		self.cores = cores
+
+	##
+	# Add a token to the token queue.
+	##
+	def accept(self, token):
+		self.tokens.put(token)
+
+	## 
+	# Main run loop of the core.
+	# Keeps on serving tokens, which are in turn
+	# processed by the token dispatcher until a stop
+	# token is encountered, at which point the dispatcher
+	# will stop this core.
+	##
+	def run(self):
+		log.info("core", "(" + self.prefix + ") Starting run loop")
+		while self.active:
+			t = self.tokens.get()
+			self.dispatcher.processToken(t)
+		log.info("core", "(" + self.prefix + ") Terminated")
 
 
+def start(cores = 1):
 
-class RuntimeObject(object):
+	logLock = log.getLock()
+	coreList = []
 
-	def __init__(self, core):
-		super(RuntimeObject, self).__init__()
-		self.core = core
+	for i in xrange(0, cores):
+		coreList[i] = Core(
+			instructions = instruction.__INSTRUCTIONS__,
+			logLock = logLock,
+			prefix = i
+			)
 
-# ---------------- #
-# Token Dispatcher #
-# ---------------- #
-
-class TokenDispatcher(RuntimeObject):
-
-	def processToken(self, token):
-		inst = token.tag.inst
-		if inst < 0:
-			self.addInstruction(inst, token)
-		else:
-			self.addToContext(token)
-
-	def process(self, obj):
-		self.processToken(obj)
-
-# --------- #
-# Scheduler #
-# --------- #
-
-class Scheduler(RuntimeObject):
-	def processInstruction(self, pair):
-		inst = self.instructionMemory.get(pair[0])
-		inst.run = self
-		inst.execute(pair[1])
-
-	def process(self, obj):
-		self.processInstruction(obj)
-
-# -------- #
-# Run Loop #
-# -------- #
-
-def runProc(runtimeObj):
-	runtimeObj.runLoop()
-
-__TOKENS__ = []
-
-def addToken(token):
-	__TOKENS__.append(token)
-
-def run():
-
-	t = TokenDispatcher()
-	c = ContextMatcher()
-	s = Scheduler()
-
-	lock = multiprocessing.Lock()
-	tQ = t.messages
-	cQ = c.messages
-	sQ = s.messages
-
-	t.addData(instructionMemory = instructions.__INSTRUCTIONS__,
-				 schedulerQueue = sQ, contextQueue = cQ, tokenQueue = tQ, logLock = lock)
-	c.addData(instructionMemory = instructions.__INSTRUCTIONS__,
-				 schedulerQueue = sQ, contextQueue = cQ, tokenQueue = tQ, logLock = lock)
-	s.addData(instructionMemory = instructions.__INSTRUCTIONS__,
-				 schedulerQueue = sQ, contextQueue = cQ, tokenQueue = tQ, logLock = lock)
-
-	for token in __TOKENS__:
-		t.addToken(token)
-
-	tProc = multiprocessing.Process(target = runProc, args = (t,), name = "TokenDispatcher")
-	cProc = multiprocessing.Process(target = runProc, args = (c,), name = "Context Matcher")
-	sProc = multiprocessing.Process(target = runProc, args = (s,), name = "Scheduler")
-
-	print "[RUN]", "starting processes..."
-
-	tProc.start()
-	cProc.start()
-	sProc.start()
-
-	tProc.join()
-	cProc.join()
-	sProc.join()
-
-	print "[RUN]", "runtime has finished..."
-
+	for core in coreList:
+		core.link(coreList)
+		p = multiprocessing.Process(target = core.run(), name = core.prefix)
+		p.start()

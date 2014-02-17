@@ -96,10 +96,10 @@ def _log(level, channel, message):
 		print msg
 
 ## Log a debug severity message
-def logDebg(channel, message): _log(0, channel, message)
+def debg(channel, message): _log(0, channel, message)
 ## Log an information message
-def logInfo(channel, message): _log(1, channel, message)
+def info(channel, message): _log(1, channel, message)
 ## Log a warning message
-def logWarn(channel, message): _log(2, channel, message)
+def warn(channel, message): _log(2, channel, message)
 ## Log an error message
-def logErr(channel, message):  _log(3, channel, message)
+def err(channel, message):  _log(3, channel, message)

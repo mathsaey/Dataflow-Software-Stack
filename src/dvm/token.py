@@ -65,13 +65,15 @@ class AbstractTag(object):
 # (instruction and port) of a token as well as it's context.
 ##
 class Tag(object):
-	def __init__(self, inst, port, cont):
+	def __init__(self, core, inst, port, cont):
 		super(Tag, self).__init__()
 		self.cont = cont
+		self.core = core
 		self.port = port
 		self.inst = inst
 
 	def __str__(self):
+		core = str(self.core) + " | "
 		inst = str(self.inst) + " | "
 		port = str(self.port) + " | "
 		return inst + port + str(self.cont)
