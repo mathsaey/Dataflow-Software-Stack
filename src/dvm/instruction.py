@@ -39,56 +39,10 @@ add<type>Instruction(args)
 import tokens
 import context
 
-# ------------------ #
-# Instruction Memory #
-# ------------------ #
-
-class InstructionMemory(object):
-
-	def __init__(self):
-		super(InstructionMemory, self).__init__()
-		self.memory = {}
-		self.strKey = -1
-		self.trlKey = 0
-
-	def getInstruction(self, key):
-		return self.memory[key]
-
-	def reserveSTRSlot(self):
-		key = self.strKey
-		self.strKey -= 1
-		return key
-
-	def reserveTLRSlot(self):
-		key = self.trlKey
-		self.trlKey += 1
-		return key
-
-	def addInstruction(self, inst):
-		key = None
-
-		if inst.isSTR():
-			key = self.reserveSTRSlot()
-		elif inst.isTLR():
-			key = self.reserveTLRSlot()
-		else:
-			print "INS", "Memory received invalid instruction", inst
-
-		self.memory.update({key : inst})
-		inst.setMemory(key, self)
-		return key
-
-	def get(self, key):
-		return self.memory[key]
-
-	def reset(self):
-		self.__init__()
 
 # -------------------- #
 # Instruction creation #
 # -------------------- #
-
-__INSTRUCTIONS__ = InstructionMemory()
 
 def getInstruction(key):
 	return __INSTRUCTIONS__.get(key)
