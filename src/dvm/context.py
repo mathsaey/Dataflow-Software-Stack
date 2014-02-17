@@ -55,7 +55,6 @@ from math import sqrt, floor
 class Context(object):
 	def __init__(self, prefix, key):
 		super(Context,self).__init__()
-		self.key = key
 		self.prefix = prefix
 		self.hash = self.hashPair(prefix, key)
 
@@ -103,7 +102,6 @@ class Context(object):
 			b = h - sqrtFloorSq - sqrtFloor
 
 		return (a,b)
-
 
 ##
 # Context creator
