@@ -36,6 +36,8 @@
 ##
 
 import multiprocessing
+from math import sqrt, floor
+
 
 ##
 # DVM Context
@@ -53,6 +55,8 @@ import multiprocessing
 class Context(object):
 	def __init__(self, prefix, key):
 		super(Context,self).__init__()
+		self.key = key
+		self.prefix = prefix
 		self.hash = self.hashPair(prefix, key)
 
 	def __str__(self):
@@ -68,14 +72,38 @@ class Context(object):
 	# Generate a unique, integral identifier
 	# for a pair of non-negative integers.
 	#
-	# Based on: http://szudzik.com/ElegantPairing.pdf
-	# courtesy of: http://stackoverflow.com/a/13871379
+	# \see http://szudzik.com/ElegantPairing.pdf
+	# \see http://stackoverflow.com/a/13871379
 	##
 	def hashPair(self, a, b):
 		if a >= b:
 			return a ** 2 + a + b 
 		else:
 			return b ** 2 + a
+
+	##
+	# Unhashes the hash.
+	#
+	# \return a (prefix, key) pair
+	# \see slide 8 of http://szudzik.com/ElegantPairing.pdf
+	##
+	def unhashPair(self):
+		h = self.hash
+		a = None
+		b = None
+
+		sqrtFloor   = floor(sqrt(h))
+		sqrtFloorSq = sqrtFloor ** 2
+
+		if (h - sqrtFloorSq) < sqrtFloor:
+			a = h - sqrtFloorSq
+			b = sqrtFloor
+		else:
+			a = sqrtFloor
+			b = h - sqrtFloorSq - sqrtFloor
+
+		return (a,b)
+
 
 ##
 # Context creator
