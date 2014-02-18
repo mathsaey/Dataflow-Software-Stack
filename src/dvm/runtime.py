@@ -98,8 +98,6 @@ class Core(object):
 		self.scheduler      = Scheduler(self)
 		## Context matcher for this core
 		self.matcher        = ContextMatcher(self)
-		## Token "inbox" of this core
-		self.tokens         = multiprocessing.Queue()
 
 	##
 	# Update the core with references
@@ -107,12 +105,6 @@ class Core(object):
 	##
 	def link(self, cores):
 		self.cores = cores
-
-	##
-	# Add a token to the token queue.
-	##
-	def accept(self, token):
-		self.tokens.put(token)
 
 	## 
 	# Main run loop of the core.
@@ -124,10 +116,8 @@ class Core(object):
 	def run(self):
 		log.info("core", "(" + str(self.prefix) + ") Starting run loop")
 		while self.active:
-			t = self.tokens.get()
-			self.dispatcher.processToken(t)
+			self.dispatcher.cycle()
 		log.info("core", "(" + str(self.prefix) + ") Terminated")
-
 
 ##
 # Initialize the cores, and start program execution.

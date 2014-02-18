@@ -69,7 +69,7 @@ class AbstractTag(object):
 # * A dynamic part, it's core and context, which are dynamically assigned at runtime.
 ##
 class Tag(object):
-	def __init__(self, inst, port, core, cont):
+	def __init__(self, inst, port, cont):
 		super(Tag, self).__init__()
 		self.cont = cont
 		self.port = port

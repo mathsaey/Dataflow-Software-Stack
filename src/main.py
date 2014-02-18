@@ -40,3 +40,32 @@ def tmp(node):
 
 if1parser.parseFile(loc)
 compiler.dot.runDot(path="../igr.dot", skipCompound = True)
+
+## TEST CODE ##
+
+
+# def tOP(a,b):
+# 	return a + b
+
+# # function
+# fStart = addSink()
+# body = addOperationInstruction(tOP, 2)
+# fEnd = addContextRestore()
+
+# addDestination(fStart, 0, body, 0)
+# addDestination(fStart, 1, body, 1)
+# addDestination(body, 0, fEnd, 0)
+
+# # call
+# ret = addSink()
+# call = addContextChange(ret)
+# pEnd = addStopInstruction()
+
+# bindCall(call, fStart, fEnd)
+# addDestination(ret, 0, pEnd, 0)
+
+# addLiteral(call, 0, "top")
+# addLiteral(call, 1, "kek")
+
+# run()
+

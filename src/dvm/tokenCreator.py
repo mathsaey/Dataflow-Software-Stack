@@ -32,7 +32,6 @@
 # This module defines the token creator.
 ##
 
-import log
 import token
 import multiprocessing
 
@@ -52,7 +51,10 @@ class TokenCreator(object):
 		self.restoreMap = {}
 
 	## Create a simple token, with a known destination.
-	def simpleToken(self, datum, toInst, toPort, context): pass
+	def simpleToken(self, datum, toInst, toPort, context):
+		tag = token.Tag(toInst, toPort, context)
+		tok = token.Token(datum, tag)
+		self.core.dispatcher.add(tok)
 
 	## 
 	# Change the context of a token.
@@ -76,7 +78,21 @@ class TokenCreator(object):
 	#
 	# \see restoreContext
 	##
-	def changeContext(self, token, inst, toInst, retInst): pass
+	def changeContext(self, token, inst, toInst, retInst):
+		cont = token.tag.cont
+		key  = (inst, cont)
+		new  = None
+
+		if key not in self.contextMap:
+			new = self.core.contextCreator.get()
+			self.contextMap.update({key : new})
+			self.restoreMap.update({new : (cont, retInst)})
+		else:
+			new = self.contextMap[key]
+
+		token.tag.cont = new
+		token.tag.inst = toInst
+		self.core.dispatcher.add(token)
 
 	##
 	# Restore the old context of a token.
@@ -84,9 +100,12 @@ class TokenCreator(object):
 	# In order to do this, we simply look up the previous context 
 	# and the return instruction that are bound to this context.
 	##
-	def restoreContext(self, token): pass
-		# log.info("tokenCreator", "Restoring: " + token)
-		# pair = self.restoreMap[token.tag.cont]
-		# return pair
+	def restoreContext(self, token):
+		cont = token.tag.cont
+		pair = self.restoreMap[cont]
+
+		token.tag.cont = pair[0]
+		token.tag.inst = pair[1]
+		self.core.dispatcher.add(token)
 
 

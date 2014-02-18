@@ -34,6 +34,8 @@
 # handle received tokens.
 ##
 
+import multiprocessing
+
 ##
 # Token Dispatcher.
 #
@@ -45,6 +47,7 @@ class TokenDispatcher(object):
 	def __init__(self, core):
 		super(TokenDispatcher, self).__init__()
 		self.core = core
+		self.tokens = multiprocessing.Queue()
 
 	##
 	# See if the token comes from the same prefix.
@@ -90,3 +93,10 @@ class TokenDispatcher(object):
 			self.addInstruction(inst, token)
 		else:
 			self.addToContext(token)
+
+	def add(self, token):
+		self.tokens.put(token)
+
+	def cycle(self):
+		t = self.tokens.get()
+		self.processToken(t)
