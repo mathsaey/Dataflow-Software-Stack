@@ -135,7 +135,7 @@ class StaticInstruction(AbstractInstruction):
 class OperationInstruction(StaticInstruction):
 	def needsMatcher(self): return True
 
-	def __init__(self, inputs, operation):
+	def __init__(self, operation, inputs):
 		super(OperationInstruction, self).__init__()
 		self.operation = operation
 		self.inputs    = inputs

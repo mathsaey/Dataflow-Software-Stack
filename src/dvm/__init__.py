@@ -24,51 +24,123 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import instructions
+##
+# \file dvm/__init__.py
+# \namespace dvm
+# \brief Dataflow Virtual Machine
+# 
+# This is the core of DVM. It defines the underlying instructions,
+# tokens, and execution model
+#
+# The top level namespace of DVM declares some convenience functions
+# to easily create the program.
+##
+
+import instruction
 import runtime
-import tokens
+import memory
 
-from instructions 	import addOperationInstruction, addSink, addStopInstruction, addContextChange, addContextRestore
-from runtime 		import run
+##
+# Create an instruction and add it to memory.
+# 
+# \param constructor
+#		The instruction constructor
+# \param argLst
+#		The arguments to pass to the constructor.
+#		The exact sructure of this list depends on the
+#		instruction type.
+#
+# \return 
+#		The key of the newly added instruction.
+##
+def _addInstruction(constructor, argLst = []):
+	inst = constructor(argLst)
+	return memory.add(inst)
 
-def addLiteral(inst, port, value):
-	t = tokens.createLiteral(inst, port, value)
-	runtime.addToken(t)
+## 
+# Add an operation instruction.
+#
+# \param op
+#		The operation of this instruction.
+# \param inputs
+#		The amount of inputs this instruction
+#		will accept.
+#
+# \return
+#		The key of the operation instruction.
+##
+def addOperationInstruction(op, inputs):
+	return _addInstruction(
+		instruction.OperationInstruction,
+		[op, inputs])
 
-def bindCall(inst, func, funcRet):
-	inst = instructions.getInstruction(inst)
-	inst.bind(func, funcRet)
+##
+# Add a sink instruction.
+#
+# \return
+#		The key of the sink instruction.
+##
+def addSink():
+	return _addInstruction(instruction.Sink)
 
+##
+# Add a context change instruction.
+#
+# \param destSink
+#		The destination of the token after
+#		the context change.
+# \param retSink
+#		The destination of the token
+#		after the context restore.
+#
+# \return 
+#		The key of the context change instruction.
+##
+def addContextChange(destSink, retSink):
+	return _addInstruction(
+		instruction.ContextChange,
+		[destSink, retSink])
+
+##
+# Add a context restore instruction.
+#
+# \return 
+#		The key of the context restore instruction.
+##
+def addContextRestore():
+	return _addInstruction(instruction.ContextRestore)
+
+##
+# Add a stop instruction.
+#
+# \return
+#		The key of the stop instruction.
+##
+def addStopInstruction():
+	return _addInstruction(instruction.StopInstruction)
+
+##
+# Add a destination to a given instruction.
+#
+# This only works on instruction::OperationInstruction 
+# and on instruction::Sink
+#
+# \param srcKey
+#		The key of the from instruction.
+# \param scrPort
+#		The index of the from port.
+# \param dstKey
+#		The key of the destination instruction.
+# \param dstPort
+#		The index of the destination port.
+##
 def addDestination(srcKey, srcPort, dstKey, dstPort):
-	inst = instructions.getInstruction(srcKey)
+	inst = memory.get(srcKey)
 	inst.addDestination(srcPort, dstKey, dstPort)
 
-
-## TEST CODE ##
-
-
-def tOP(a,b):
-	return a + b
-
-# function
-fStart = addSink()
-body = addOperationInstruction(tOP, 2)
-fEnd = addContextRestore()
-
-addDestination(fStart, 0, body, 0)
-addDestination(fStart, 1, body, 1)
-addDestination(body, 0, fEnd, 0)
-
-# call
-ret = addSink()
-call = addContextChange(ret)
-pEnd = addStopInstruction()
-
-bindCall(call, fStart, fEnd)
-addDestination(ret, 0, pEnd, 0)
-
-addLiteral(call, 0, "top")
-addLiteral(call, 1, "kek")
-
-run()
-
+##
+# Start program execution
+#
+# \see runtime::start()
+##
+def start(cores = 1): runtime.start(cores)

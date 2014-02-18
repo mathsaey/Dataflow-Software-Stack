@@ -129,6 +129,12 @@ class Core(object):
 		log.info("core", "(" + str(self.prefix) + ") Terminated")
 
 
+##
+# Initialize the cores, and start program execution.
+#
+# \param cores
+#		The amount of cores to create.
+##
 def start(cores = 1):
 
 	logLock = log.getLock()

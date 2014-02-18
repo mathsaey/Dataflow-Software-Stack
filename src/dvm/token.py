@@ -85,6 +85,7 @@ class Tag(object):
 
 ##
 # Special Tag
+#
 # Represents a tag that has to be treated 
 # differently by the runtime, examples include
 # the stop tag, which indicates that the program has to
@@ -96,6 +97,7 @@ class STag(AbstractTag):
 
 ##
 # Stop Tag
+#
 # Signals the end of program execution.
 ##
 class StopTag(STag):

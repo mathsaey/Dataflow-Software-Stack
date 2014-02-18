@@ -59,7 +59,7 @@ class TokenCreator(object):
 	# This will bind the context of this token to a 
 	# certain return instruction.
 	#
-	# The runtime may decide to calculate the send these tokens
+	# The runtime may decide to send these tokens
 	# to a different runtime core.
 	#
 	# Multiple tokens that are sent from the same instruction with the same 
