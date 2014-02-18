@@ -90,7 +90,7 @@ class TokenDispatcher(object):
 	def processToken(self, token):
 		inst = token.tag.inst
 		if inst < 0:
-			self.addInstruction(inst, token)
+			self.core.scheduler.processInstruction(inst, token)
 		else:
 			self.addToContext(token)
 

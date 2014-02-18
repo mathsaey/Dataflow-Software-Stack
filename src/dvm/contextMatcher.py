@@ -111,7 +111,7 @@ class ContextMatcher(object):
 	def executeKey(self, key):
 		arr = self.tokens[key]
 		del self.tokens[key]
-		self.core.addInstruction(key[0], arr)
+		self.core.scheduler.processInstruction(key[0], arr)
 
 	## 
 	# Add a token to the matcher

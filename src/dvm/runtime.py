@@ -40,7 +40,7 @@
 ##
 
 import log
-import instruction
+import memory
 import multiprocessing
 
 from context import ContextCreator
@@ -74,17 +74,17 @@ class Core(object):
 	# \param instructions
 	#		A reference to the static instruction memory.
 	##
-	def __init__(self, logLock = None, prefix = None, instructions = None):
+	def __init__(self, logLock = None, prefix = None, memory = None):
 		super(Core, self).__init__()
 		log.setLock(logLock)
 		log.info("core", "Initializing core: " + str(prefix))
 
 		## Instruction memory
-		self.instructions   = instructions
+		self.memory         = memory
 		## Identifier of this core. (integer)
 		self.prefix         = prefix
 		## See if this core is running.
-		self.active         = False
+		self.active         = True
 		## References to the other active cores.
 		self.cores          = None
 
@@ -125,17 +125,21 @@ class Core(object):
 # \param cores
 #		The amount of cores to create.
 ##
-def start(cores = 1):
+def start(cores = 1, tokens = []):
 
 	logLock = log.getLock()
 	coreList = [None] * cores
 
 	for i in xrange(0, cores):
 		coreList[i] = Core(
-			instructions = instruction.__INSTRUCTIONS__,
+			memory  = memory.memory(),
 			logLock = logLock,
-			prefix = i
+			prefix  = i
 			)
+
+	## DEBUG
+	for t in tokens:
+		coreList[0].dispatcher.add(t)
 
 	for core in coreList:
 		core.link(coreList)

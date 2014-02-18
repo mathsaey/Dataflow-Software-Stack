@@ -28,44 +28,50 @@
 This module serves as a top level file to access the other modules
 """
 
-import if1parser
-import compiler.dot
+# import if1parser
+# import compiler.dot
 
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+# #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
+# loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
+# #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 
-def tmp(node):
-	print node
+# def tmp(node):
+# 	print node
 
-if1parser.parseFile(loc)
-compiler.dot.runDot(path="../igr.dot", skipCompound = True)
+# if1parser.parseFile(loc)
+# compiler.dot.runDot(path="../igr.dot", skipCompound = True)
 
 ## TEST CODE ##
 
+import dvm 
+import dvm.token
+import dvm.runtime
 
-# def tOP(a,b):
-# 	return a + b
+def tOP(a,b):
+	return a + b
 
 # # function
-# fStart = addSink()
-# body = addOperationInstruction(tOP, 2)
-# fEnd = addContextRestore()
+fStart = dvm.addSink()
+body = dvm.addOperationInstruction(tOP, 2)
+fEnd = dvm.addContextRestore()
 
-# addDestination(fStart, 0, body, 0)
-# addDestination(fStart, 1, body, 1)
-# addDestination(body, 0, fEnd, 0)
+dvm.addDestination(fStart, 0, body, 0)
+dvm.addDestination(fStart, 1, body, 1)
+dvm.addDestination(body, 0, fEnd, 0)
 
-# # call
-# ret = addSink()
-# call = addContextChange(ret)
-# pEnd = addStopInstruction()
+# call
+ret = dvm.addSink()
+call = dvm.addContextChange(fStart, ret)
+pEnd = dvm.addStopInstruction()
 
-# bindCall(call, fStart, fEnd)
-# addDestination(ret, 0, pEnd, 0)
+dvm.addDestination(ret, 0, pEnd, 0)
 
-# addLiteral(call, 0, "top")
-# addLiteral(call, 1, "kek")
+tag1 = dvm.token.Tag(call, 0, -1)
+tag2 = dvm.token.Tag(call, 1, -1)
+token1 = dvm.token.Token("top", tag1)
+token2 = dvm.token.Token("kek", tag2)
 
-# run()
+dvm.runtime.start(tokens = [token1, token2])
 
+# message queue toevoegen aan core lijst ipv core referenties
+# fix bugs

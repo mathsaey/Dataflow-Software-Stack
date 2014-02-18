@@ -54,7 +54,7 @@ import memory
 #		The key of the newly added instruction.
 ##
 def _addInstruction(constructor, argLst = []):
-	inst = constructor(argLst)
+	inst = constructor(*argLst)
 	return memory.add(inst)
 
 ## 

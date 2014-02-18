@@ -44,7 +44,6 @@ class Scheduler(object):
 		super(Scheduler, self).__init__()
 		self.core = core
 		
-	def processInstruction(self, pair):
-		inst = self.instructionMemory.get(pair[0])
-		inst.run = self
-		inst.execute(pair[1])
+	def processInstruction(self, inst, args):
+		inst = self.core.memory.get(inst)
+		inst.execute(args, self.core)
