@@ -111,18 +111,21 @@ class StaticInstruction(AbstractInstruction):
 	##
 	# Send a datum to any destination of a given output port.
 	#
+	# \param datum
+	#		The piece of data to send.
+	# \param core
+	#		The currently active core.
 	# \param port
 	#		The port that we send outputs from.
-	# \param datum
-	#		The piece of data to send
 	# \param cont
 	#		The context of the output.
 	##
-	def sendDatum(self, core, port, datum, cont):
+	def sendDatum(self, datum, core, port, cont):
 		for dst in self.destinations[port]:
 			inst = dst[0]
 			port = dst[1]
-			core.tokenCreator.simpleToken(datum, inst, port, cont)
+			core.tokenCreator.simpleToken(
+				datum, inst, port, cont)
 
 # ---------- #
 # Operations #
@@ -150,7 +153,7 @@ class OperationInstruction(StaticInstruction):
 	def sendResults(self, results, core, cont):
 		for i in xrange(0, len(results)):
 			res = results[i]
-			self.sendDatum(core, i, res, cont)
+			self.sendDatum(res, core, i, cont)
 
 	def execute(self, tokens, core):
 		log.info("inst", self, "executing.")
@@ -174,7 +177,7 @@ class Sink(StaticInstruction):
 		port = token.tag.port
 		cont = token.tag.cont
 		datum = token.datum
-		self.sendDatum(core, port, datum, cont)
+		self.sendDatum(datum, core, port, cont)
 
 # -------------- #
 # Context Change #

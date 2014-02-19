@@ -65,27 +65,29 @@ class Core(object):
 	##
 	# Initialize a core.
 	#
-	# \param logLock
-	#		The lock of the log module of the parent process.
-	# \param prefix
-	#		The prefix of this core, this prefix should be unique 
-	#		and it should match the index of this core in the collection
+	# This method only initializes all the components of the
+	# core that are not dependent on multiprocessing elements.
+	#
+	# \param identifier
+	#		The identifier of this core, this identifier should be unique 
+	#		and it should match the identifier of this core in the collection
 	#		of all the cores.
 	# \param instructions
 	#		A reference to the static instruction memory.
 	##
-	def __init__(self, logLock = None, prefix = None, memory = None):
+	def __init__(self, identifier, memory):
 		super(Core, self).__init__()
-		log.setLock(logLock)
-		log.info("core", "Initializing core: " + str(prefix))
+		log.info("core", "Initializing core:", identifier)
 
 		## Instruction memory
 		self.memory         = memory
 		## Identifier of this core. (integer)
-		self.prefix         = prefix
+		self.identifier     = identifier
 		## See if this core is running.
 		self.active         = True
-		## References to the other active cores.
+		## Message Queue of this core
+		self.inbox          = None
+		## Message Queues of the other cores
 		self.cores          = None
 
 		## Context creator for this core
@@ -99,25 +101,50 @@ class Core(object):
 		## Context matcher for this core
 		self.matcher        = ContextMatcher(self)
 
+	## String representation of a core.
+	def __str__(self):
+		return "Core: " + str(self.identifier)
+
 	##
-	# Update the core with references
-	# to the other cores.
-	##
-	def link(self, cores):
-		self.cores = cores
+	# Add a token to the inbox of a core.
+	#
+	# \param token
+	#		The token to add.
+	# \param core
+	#		The core to add the token to.
+	#		The current core will be used if 
+	#		this argument is not added.
+	#
+	def add(self, token, core = None):
+		if core:
+			self.cores[core].put(token)
+		else: 
+			self.inbox.put(token)
 
 	## 
-	# Main run loop of the core.
-	# Keeps on serving tokens, which are in turn
-	# processed by the token dispatcher until a stop
-	# token is encountered, at which point the dispatcher
-	# will stop this core.
+	# Set up the multiprocessing elements
+	# of the core and start the runtime.
+	#
+	# \param inbox
+	#		The message queue of this corec.
+	# \param cores
+	#		A list of the message queues of the
+	#		other cores
+	# \param logLock
+	#		The lock of the logger.
 	##
-	def run(self):
-		log.info("core", "(" + str(self.prefix) + ") Starting run loop")
+	def start(self, inbox, cores, logLock):
+		log.setLock(logLock)
+		self.inbox = inbox
+		self.cores = cores
+
+		log.info("core", self, "Starting run loop")
+
 		while self.active:
-			self.dispatcher.cycle()
-		log.info("core", "(" + str(self.prefix) + ") Terminated")
+			t = self.inbox.get()
+			self.dispatcher.process(t)
+
+		log.info("core", self, "Terminated")
 
 ##
 # Initialize the cores, and start program execution.
@@ -126,22 +153,20 @@ class Core(object):
 #		The amount of cores to create.
 ##
 def start(cores = 1, tokens = []):
-
-	logLock = log.getLock()
-	coreList = [None] * cores
+	logLock  = log.getLock()
+	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
+	queues   = [multiprocessing.Queue()  for i in xrange(0, cores)]
 
 	for i in xrange(0, cores):
-		coreList[i] = Core(
-			memory  = memory.memory(),
-			logLock = logLock,
-			prefix  = i
-			)
+		core  = coreLst[i]
+		queue = queues[i]
 
-	## DEBUG
-	for t in tokens:
-		coreList[0].dispatcher.add(t)
-
-	for core in coreList:
-		core.link(coreList)
-		p = multiprocessing.Process(target = core.run(), name = core.prefix)
+		p = multiprocessing.Process(
+			target = core.start, 
+			args   = (queue, queues, logLock)) 
 		p.start()
+
+	#-- DEBUG --#
+	for t in tokens:
+		queues[0].put(t)
+

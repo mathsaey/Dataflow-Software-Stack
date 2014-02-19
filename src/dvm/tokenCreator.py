@@ -33,7 +33,6 @@
 ##
 
 import token
-import multiprocessing
 
 ##
 # DVM Token creator.
@@ -45,17 +44,18 @@ class TokenCreator(object):
 	def __init__(self, core):
 		super(TokenCreator, self).__init__()
 		self.core = core
-		self.lock = multiprocessing.Lock()
 
 		self.contextMap = {}
 		self.restoreMap = {}
 
-	## Create a simple token, with a known destination.
+	## 
+	# Create a simple token, with a known destination.
+	# The token will remain on the current core.
+	##
 	def simpleToken(self, datum, toInst, toPort, context):
-		tag = token.Tag(toInst, toPort, context)
+		tag = token.Tag(self.core.identifier, toInst, toPort, context)
 		tok = token.Token(datum, tag)
-		self.core.dispatcher.add(tok)
-
+ 		self.core.add(tok)
 	## 
 	# Change the context of a token.
 	# This will bind the context of this token to a 
@@ -92,7 +92,8 @@ class TokenCreator(object):
 
 		token.tag.cont = new
 		token.tag.inst = toInst
-		self.core.dispatcher.add(token)
+
+		self.core.add(token)
 
 	##
 	# Restore the old context of a token.
@@ -106,9 +107,9 @@ class TokenCreator(object):
 
 		token.tag.cont = pair[0]
 		token.tag.inst = pair[1]
-		self.core.dispatcher.add(token)
+		self.core.add(token)
 
 	def stopToken(self, tok):
 		tok.tag = token.StopTag()
-		self.core.dispatcher.add(tok)
+		self.core.add(tok)
 

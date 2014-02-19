@@ -66,12 +66,27 @@ pEnd = dvm.addStopInstruction()
 
 dvm.addDestination(ret, 0, pEnd, 0)
 
-tag1 = dvm.token.Tag(call, 0, -1)
-tag2 = dvm.token.Tag(call, 1, -1)
+
+test = dvm.addSink()
+dvm.addDestination(test, 0, call, 0)
+dvm.addDestination(test, 1, call, 1)
+
+
+tag1 = dvm.token.Tag(0, call, 0, -1)
+tag2 = dvm.token.Tag(0, call, 1, -1)
 token1 = dvm.token.Token("top", tag1)
 token2 = dvm.token.Token("kek", tag2)
 
-dvm.runtime.start(tokens = [token1, token2])
 
-# message queue toevoegen aan core lijst ipv core referenties
-# fix bugs
+
+# # # function
+# pEnd = dvm.addStopInstruction()
+# body = dvm.addSink()
+# dvm.addDestination(body, 0, pEnd, 0)
+
+# tag1 = dvm.token.Tag(0, body, 0, -1)
+# tag2 = dvm.token.Tag(0, body, 1, -1)
+# token1 = dvm.token.Token("top", tag1)
+# token2 = dvm.token.Token("kek", tag2)
+
+dvm.runtime.start(tokens = [token1, token2])

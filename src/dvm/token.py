@@ -69,16 +69,19 @@ class AbstractTag(object):
 # * A dynamic part, it's core and context, which are dynamically assigned at runtime.
 ##
 class Tag(object):
-	def __init__(self, inst, port, cont):
+	def __init__(self, core, inst, port, cont):
 		super(Tag, self).__init__()
+		self.core = core
 		self.cont = cont
 		self.port = port
 		self.inst = inst
 
 	def __str__(self):
-		inst = str(self.inst) + " | "
-		port = str(self.port) + " | "
-		return inst + port + str(self.cont)
+		core = "core " + str(self.core) + " | "
+		inst = "inst " + str(self.inst) + " | "
+		port = "port " + str(self.port) + " | "
+		cont = "cont " + str(self.cont) 
+		return core + inst + port + cont
 
 	def isSpecial(self): return False
 

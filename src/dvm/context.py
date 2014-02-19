@@ -35,9 +35,7 @@
 # to the same instruction (e.g. multiple instances of the same function).
 ##
 
-import multiprocessing
 from math import sqrt, floor
-
 
 ##
 # DVM Context
@@ -55,13 +53,10 @@ from math import sqrt, floor
 class Context(object):
 	def __init__(self, prefix, key):
 		super(Context,self).__init__()
-		self.prefix = prefix
 		self.hash = self.hashPair(prefix, key)
 
 	def __str__(self):
-		hash = str(self.hash)
-		pref = " (" + str(self.prefix) + ")"
-		return "Context: " + hash + pref
+		return "{" + str(self.hash) + "}"
 
 	def __eq__(self, other):
 		return self.hash == other.hash
@@ -119,22 +114,19 @@ class Context(object):
 ##
 class ContextCreator(object):
 	def __init__(self, core):
-		self.prefix = core.prefix
+		self.prefix = core.identifier
 		self.current = 0
 		self.free = []
-		self.lock = multiprocessing.Lock()
 
 	def get(self):
-		with self.lock:
-			if self.free:
-				res = self.free[0]
-				self.free = self.free[1:]
-				return res
-			else:
-				res = self.current
-				self.current += 1
-				return Context(self.prefix, res)
+		if self.free:
+			res = self.free[0]
+			self.free = self.free[1:]
+			return res
+		else:
+			res = self.current
+			self.current += 1
+			return Context(self.prefix, res)
 
 	def release(self, cont):
-		with self.lock:
-			self.free = [cont] + self.free
+		self.free = [cont] + self.free

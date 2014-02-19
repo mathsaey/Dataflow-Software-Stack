@@ -35,7 +35,6 @@
 ##
 
 import log
-import multiprocessing
 
 ##
 # Token Dispatcher.
@@ -48,7 +47,6 @@ class TokenDispatcher(object):
 	def __init__(self, core):
 		super(TokenDispatcher, self).__init__()
 		self.core = core
-		self.tokens = multiprocessing.Queue()
 
 	##
 	# See if the token comes from the same prefix.
@@ -75,30 +73,14 @@ class TokenDispatcher(object):
 		return tag.isSpecial()
 
 	##
-	# Add a token to a different core.
-	##
-	def sendToCore(self, token):
-		c = self.core.cores[token.tag.prefix]
-		c.accept(token)
-
-	##
 	# Send a stop token to every core in the system.
 	##
-	def sendStop(self, token):
-		for core in self.core.cores:
-			core.accept(token)
+	def sendStop(self, token): pass
 
-	def processToken(self, token):
+	def process(self, token):
 		log.info("disp", "Processing token:", token)
 		inst = token.tag.inst
 		if inst < 0:
 			self.core.scheduler.schedule(inst, token)
 		else:
 			self.core.matcher.add(token)
-
-	def add(self, token):
-		self.tokens.put(token)
-
-	def cycle(self):
-		t = self.tokens.get()
-		self.processToken(t)
