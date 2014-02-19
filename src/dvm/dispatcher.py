@@ -35,6 +35,7 @@
 ##
 
 import log
+import memory
 
 ##
 # Token Dispatcher.
@@ -49,18 +50,6 @@ class TokenDispatcher(object):
 		self.core = core
 
 	##
-	# See if the token comes from the same prefix.
-	#
-	# \param tag
-	#		The tag of the token to check.
-	# 
-	# \return
-	#		True if the token is from the same core.
-	##
-	def checkPrefix(self, tag):
-		return tag.core == self.core.prefix
-
-	##
 	# See if a given token is a special token.
 	#
 	# \param tag
@@ -72,15 +61,21 @@ class TokenDispatcher(object):
 	def checkSpecial(self, tag):
 		return tag.isSpecial()
 
-	##
-	# Send a stop token to every core in the system.
-	##
-	def sendStop(self, token): pass
+	def processSpecial(self, token):
+		self.core.stop(token.datum)
+
+	def processStandard(self, token):
+		inst = token.tag.inst
+		if memory.needsMatcher(inst):
+			self.core.matcher.add(token)
+		else:
+			self.core.scheduler.schedule(inst, token)
 
 	def process(self, token):
 		log.info("disp", "Processing token:", token)
-		inst = token.tag.inst
-		if inst < 0:
-			self.core.scheduler.schedule(inst, token)
+
+		tag = token.tag
+		if self.checkSpecial(tag):
+			self.processSpecial(token)
 		else:
-			self.core.matcher.add(token)
+			self.processStandard(token)

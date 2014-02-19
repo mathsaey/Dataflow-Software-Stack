@@ -105,6 +105,10 @@ class Core(object):
 	def __str__(self):
 		return "Core: " + str(self.identifier)
 
+	## See if 2 cores are equal
+	def __eq__(self, other):
+		return self.identifier == other.identifier
+
 	##
 	# Add a token to the inbox of a core.
 	#
@@ -144,7 +148,18 @@ class Core(object):
 			t = self.inbox.get()
 			self.dispatcher.process(t)
 
-		log.info("core", self, "Terminated")
+	##
+	# Stop the current core.
+	#
+	# \param value
+	#		The result that the program
+	#		returned.
+	##
+	def stop(self, value):
+		log.info("core", self, "Terminated with value:", value)
+		self.active = False
+		print  value
+		return value
 
 ##
 # Initialize the cores, and start program execution.

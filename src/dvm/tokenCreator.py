@@ -92,7 +92,6 @@ class TokenCreator(object):
 
 		token.tag.cont = new
 		token.tag.inst = toInst
-
 		self.core.add(token)
 
 	##
