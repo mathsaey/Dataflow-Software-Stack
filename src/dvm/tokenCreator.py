@@ -108,4 +108,7 @@ class TokenCreator(object):
 		token.tag.inst = pair[1]
 		self.core.dispatcher.add(token)
 
+	def stopToken(self, tok):
+		tok.tag = token.StopTag()
+		self.core.dispatcher.add(tok)
 

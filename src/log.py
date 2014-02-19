@@ -37,6 +37,7 @@
 # of using the standard library provided by python.
 ##
 
+import StringIO
 import multiprocessing
 
 ##
@@ -88,18 +89,27 @@ def getLock():
 # \param message
 #		The message to send.
 ##
-def _log(level, channel, message):
-	lvl = "[" + __severities__[level] + "]"
-	chn = "['" + channel + "']"
-	msg = lvl + chn + " " + message
+def _log(level, channel, *msgLst):
+	buffer = StringIO.StringIO()
+
+	buffer.write("[" + __severities__[level] + "]")
+	buffer.write("['" + channel + "']")
+	buffer.write("\t")
+
+	for el in msgLst:
+		buffer.write(str(el))
+		buffer.write(" ")
+
 	with __logLock__:
-		print msg
+		print buffer.getvalue()
+
+	buffer.close()
 
 ## Log a debug severity message
-def debg(channel, message): _log(0, channel, message)
+def debg(channel, *msgLst): _log(0, channel, *msgLst)
 ## Log an information message
-def info(channel, message): _log(1, channel, message)
+def info(channel, *msgLst): _log(1, channel, *msgLst)
 ## Log a warning message
-def warn(channel, message): _log(2, channel, message)
+def warn(channel, *msgLst): _log(2, channel, *msgLst)
 ## Log an error message
-def err(channel, message):  _log(3, channel, message)
+def err(channel, *msgLst):  _log(3, channel, *msgLst)

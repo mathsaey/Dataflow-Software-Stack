@@ -78,8 +78,7 @@ class Tag(object):
 	def __str__(self):
 		inst = str(self.inst) + " | "
 		port = str(self.port) + " | "
-		core = str(self.core) + " | "
-		return inst + port + core + str(self.cont)
+		return inst + port + str(self.cont)
 
 	def isSpecial(self): return False
 

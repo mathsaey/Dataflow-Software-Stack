@@ -34,6 +34,8 @@
 # to execute an instruction.
 ##
 
+import log
+
 ##
 # DVM Scheduler
 #
@@ -44,6 +46,7 @@ class Scheduler(object):
 		super(Scheduler, self).__init__()
 		self.core = core
 		
-	def processInstruction(self, inst, args):
+	def schedule(self, inst, args):
 		inst = self.core.memory.get(inst)
+		log.info("schd", "Scheduling: " + str(inst))
 		inst.execute(args, self.core)

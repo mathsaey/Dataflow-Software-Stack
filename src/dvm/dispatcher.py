@@ -34,6 +34,7 @@
 # handle received tokens.
 ##
 
+import log
 import multiprocessing
 
 ##
@@ -88,11 +89,12 @@ class TokenDispatcher(object):
 			core.accept(token)
 
 	def processToken(self, token):
+		log.info("disp", "Processing token:", token)
 		inst = token.tag.inst
 		if inst < 0:
-			self.core.scheduler.processInstruction(inst, token)
+			self.core.scheduler.schedule(inst, token)
 		else:
-			self.addToContext(token)
+			self.core.matcher.add(token)
 
 	def add(self, token):
 		self.tokens.put(token)

@@ -147,17 +147,17 @@ class OperationInstruction(StaticInstruction):
 	# destinations of the matching output port of the instruction.
 	# The length of results should be equal to the amount of output ports.
 	##
-	def sendResults(self, results, cont):
+	def sendResults(self, results, core, cont):
 		for i in xrange(0, len(results)):
 			res = results[i]
-			self.sendDatum(i, res, cont)
+			self.sendDatum(core, i, res, cont)
 
 	def execute(self, tokens, core):
-		log.info("inst", self + " executing.")
+		log.info("inst", self, "executing.")
 		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
-		self.sendResults([res], cont)		
+		self.sendResults([res], core, cont)		
 
 # ----- #
 # Sinks #
@@ -201,8 +201,8 @@ class ContextChange(AbstractInstruction):
 		self.destSink = destSink
 		self.contexts = {}
 
-	def acceptToken(self, token, core):
-		log.info("inst", self + " changing context of: " + token)
+	def execute(self, token, core):
+		log.info("inst", self, "changing context of:", token)
 
 		core.tokenCreator.changeContext(
 			token,
@@ -219,8 +219,8 @@ class ContextChange(AbstractInstruction):
 # e.g. returning from a function.
 ##
 class ContextRestore(AbstractInstruction):
-	def acceptToken(self, token, core):
-		log.info("inst", self + " restoring: " + token)
+	def execute(self, token, core):
+		log.info("inst", self, "restoring:", token)
 		core.tokenCreator.restoreContext(token)
 
 # ----------------- #
@@ -233,6 +233,6 @@ class ContextRestore(AbstractInstruction):
 ##
 class StopInstruction(AbstractInstruction):
 
-	def acceptToken(self, token, core):
-		log.info("inst", token + " reached stop instrution: ", self)
+	def execute(self, token, core):
+		log.info("inst", token, "reached stop instrution:", self)
 		core.tokenCreator.stopToken(token)
