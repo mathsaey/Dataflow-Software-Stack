@@ -126,7 +126,7 @@ class ContextMatcher(object):
 	#		the token to add.
 	##
 	def add(self, token):
-		log.info("match", "Adding token:", token)
+		log.info("mtch", "Adding token:", token)
 
 		tag  = token.tag                  
 		inst = tag.inst                   

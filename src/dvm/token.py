@@ -47,7 +47,7 @@ class Token(object):
 
 	def __str__(self):
 		tagString = "[" + str(self.tag) + "]"
-		dataString = "(" + str(self.datum) + ")"
+		dataString = "'" + str(self.datum) + "'"
 		return "<| " + dataString + " " + tagString + " |>"
 
 ##
