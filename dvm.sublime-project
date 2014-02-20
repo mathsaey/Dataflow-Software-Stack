@@ -5,7 +5,7 @@
 			"path": "./",
 			"name":"Root",
             "folder_exclude_patterns": 
-                ["src", "docpages", "obj", "documentation", 
+                ["src", "docpages", "obj", "documentation", "documentationPy",
                 "DataFlow Virtual Machine.xcodeproj", "prototypes"],
             "file_exclude_patterns":["dvm"]
         },{
@@ -27,7 +27,7 @@
             "name":"sublimeRepl",
             "selector":"source.python",
             "target": "run_existing_window_command",
-            "id": "repl_python3_run",
+            "id": "repl_pypy_run",
             "file": "config/Python/Main.sublime-menu"
         },{
             "name": "doxygen markdown",

@@ -4,6 +4,7 @@
 
 examples/s.out
 *.dot*
+*.pyc
 
 # Editor files #
 
