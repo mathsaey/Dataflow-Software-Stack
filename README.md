@@ -1,11 +1,8 @@
 # About
 
-This is the repository of the master thesis of Mathijs Saey at the Vrije Universiteit Brussel.
-The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.
-
-More info about the project can be found on the [documentation](http://mathsaey.github.io/DVM/) pages of this project.
-
-# Context
+This is the repository of the master's thesis of Mathijs Saey at the Vrije Universiteit Brussel.
+The goal of DVM is the creation of a dataflow virtual machine, along with a compiler that allows it to
+run IF1 programs.
 
 ## [Dataflow](http://en.wikipedia.org/wiki/Dataflow_architecture)
 
@@ -16,8 +13,8 @@ The idea behind dataflow is that instructions are executed when all of the data 
 
 Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph. 
 
-## Goal, revisited
+We use IF1 due to it's dataflow semantics. These semantics allow us to easily map IF1 to IGR, our own intermediate representation.
 
-> The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.
+# Getting Started.
 
-The goal of this project is the creation of a virtual machine that internally works according to the dataflow model. This VM will be able to parse IF1 files. Other languages could be added later, but IF1 was chosen for the goals of this project since it is already represents a dataflow graph.
+If you are interested in working with or using DVM, you should look at the [documentation](http://mathsaey.github.io/DVM/index.html). It contains the complete DVM documentation, a detailed IF1 overview and a guide to get DVM up and running. It also contains an overview of the tools that were used to run and create dvm.
