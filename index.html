@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0.0 (build 0)</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -41,6 +40,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,22 +83,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h1>Introduction</h1>
 <p>This is the main documentation page of the DataFlow Virtual Machine project. The main goal of this documentation is the explanation of the inner workings of DVM, it's components and some of the things it relies on. If you want to know more about DVM and what it tries to do, you should check out the <a href="md__r_e_a_d_m_e.html">readme</a>.</p>
+<h1>Getting started</h1>
+<p>Running dvm should be straightforward if you have the right tools installed. A guide on the command line usage of DVM will be found here once the project reaches that stage.</p>
+<p>Code should be manually loaded in the main file for the time being.</p>
+<h2>Software</h2>
+<p>Due to the academic nature of our work, we decided to write the code in python, favoring rapid development over speed. A <a href="https://github.com/mathsaey/DVM/tree/DVM%2B%2B">C++ version</a> of DVM is under construction, but the current focus lies on the rapid feature addition that python offers us. In order to compensate for this, we decided to use <a href="http://pypy.org/">pypy</a> to run our python code. As of writing, the code is compatible with pypy 2.2.1 and CPython 2.7.5.</p>
+<p>All in all, the following software was used:</p>
+<table class="doxtable">
+<tr>
+<th>Command </th><th>Version </th><th>Website </th><th>Use  </th></tr>
+<tr>
+<td><code>sisalc</code> </td><td>14.1.0 </td><td><a href="http://sourceforge.net/projects/sisal/">http://sourceforge.net/projects/sisal/</a> </td><td>Compile Sisal files to IF1 </td></tr>
+<tr>
+<td><code>python</code> </td><td>2.7.6 </td><td><a href="http://www.python.org/">http://www.python.org/</a> </td><td>Language of choice </td></tr>
+<tr>
+<td><code>pypy</code> </td><td>2.2.1 </td><td><a href="http://pypy.org/">http://pypy.org/</a> </td><td>Faster python execution </td></tr>
+</table>
+<p>In order to run DVM, you should at least have python 2.7 installed on your machine, pypy is preferred. You should also install sisalc to avoid writing IF1 code by hand.</p>
 <h1>Overall Structure</h1>
 <p>DVM is split up into a few components:</p>
 <ul>
 <li>The IF1 Parser</li>
 <li>IGR, the Intermediate Graph Representation</li>
-<li>The compiler, which transforms DVM and converts it to work with the runtime</li>
-<li>DVM, the actual Virtual Machine which serves as our runtime.</li>
+<li>The compiler, which transforms IGR and converts it to work with the runtime</li>
+<li>DVM, the actual execution engine.</li>
 </ul>
-<p>In order to save some time, only the DVM parts of the code were written in C++. The other parts of the code were written in python, which is embedded into DVM. This design choice also has the benefit of giving us the flexibility of having a high level language with limited access to the internals. This makes it possible to write parsers for various backends with relative ease.</p>
-<p>More information about the implementation of these components and their inner workings will be added once these make it out of the prototype branch.</p>
+<p>The first 3 components of this list are dependent on one another, and on DVM. DVM itself however, is not dependent on any of the other modules.</p>
+<p>Information about each of these modules can be found in their documentation.</p>
 <h1>Other Information</h1>
 <p>Check out the <a href="pages.html">related pages</a> section for some additional information about the project. Especially interesting is the <a href="md_doc__i_f1.html">IF1 overview</a>, which is the only online IF1 reference that I know off. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 28 2014 21:00:05 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 20 2014 15:08:53 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['warning',['warning',['../log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a8de9aef05fc85e519a0cfce33573f492',1,'log.hpp']]]
+  ['literal',['Literal',['../classigr_1_1literal_1_1_literal.html',1,'igr::literal']]],
+  ['literal_2epy',['literal.py',['../literal_8py.html',1,'']]],
+  ['log',['log',['../namespacelog.html',1,'']]],
+  ['log_2epy',['log.py',['../log_8py.html',1,'']]]
 ];

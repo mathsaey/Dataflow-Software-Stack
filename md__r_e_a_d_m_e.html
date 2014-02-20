@@ -24,7 +24,6 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0.0 (build 0)</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -41,6 +40,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -65,7 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,23 +81,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">About </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This is the repository of the master thesis of Mathijs Saey at the Vrije Universiteit Brussel. The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.</p>
-<p>More info about the project can be found on the <a href="http://mathsaey.github.io/DVM/">documentation</a> pages of this project.</p>
-<h1>Context</h1>
+<div class="textblock"><p>This is the repository of the master's thesis of Mathijs Saey at the Vrije Universiteit Brussel. The goal of DVM is the creation of a dataflow virtual machine, along with a compiler that allows it to run IF1 programs.</p>
 <h2><a href="http://en.wikipedia.org/wiki/Dataflow_architecture">Dataflow</a></h2>
 <p>The dataflow architecture is an architecture that differs from the von Neumann architecture seen in most mainstream programming languages these days. The idea behind dataflow is that instructions are executed when all of the data they depend on is available.</p>
 <h2>IF1 and <a href="http://en.wikipedia.org/wiki/SISAL">Sisal</a></h2>
 <p>Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph.</p>
-<h2>Goal, revisited</h2>
-<blockquote class="doxtable">
-<p>The goal of this project is the creation of a dataflow virtual machine that interprets the IF1 dataflow graph language.</p>
-<p></p>
-</blockquote>
-<p>The goal of this project is the creation of a virtual machine that internally works according to the dataflow model. This VM will be able to parse IF1 files. Other languages could be added later, but IF1 was chosen for the goals of this project since it is already represents a dataflow graph. </p>
+<p>We use IF1 due to it's dataflow semantics. These semantics allow us to easily map IF1 to IGR, our own intermediate representation.</p>
+<h1>Getting Started.</h1>
+<p>If you are interested in working with or using DVM, you should look at the <a href="http://mathsaey.github.io/DVM/index.html">documentation</a>. It contains the complete DVM documentation, a detailed IF1 overview and a guide to get DVM up and running. It also contains an overview of the tools that were used to run and create dvm. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 28 2014 21:00:05 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 20 2014 15:08:53 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
