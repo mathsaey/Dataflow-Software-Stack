@@ -36,8 +36,8 @@
  * dvm, as well as the build number.
  */
 
-#ifndef __DVM_VERSION_H__
-#define __DVM_VERSION_H__
+#ifndef __DVM_VERSION_HPP__
+#define __DVM_VERSION_HPP__
 
 #include <sstream>
 

@@ -43,8 +43,8 @@
  *  * writing to a log: \code{.cpp} LOG(log, level) << "message"; \endcode
  */
 
-#ifndef __DVM_LOG_H__
-#define __DVM_LOG_H__
+#ifndef __DVM_LOG_HPP__
+#define __DVM_LOG_HPP__
 
 // Configure boost log for dynamic linking
 #define BOOST_LOG_DYN_LINK

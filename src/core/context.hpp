@@ -62,8 +62,8 @@ typedef const unsigned int Context;
 class ContextCreator {
 private: 
 
-	const int _prefix; /**< The prefix of the generator */
-	int _key;          /**< The next key to use */
+	const unsigned int _prefix; /**< The prefix of the generator */
+	      unsigned int _key;    /**< The next key to use */
 
 	/**
 	 * Generate a unique, integral identifier
