@@ -29,19 +29,14 @@ COMPILE_INVOCATION = $(COMPILER) $(HEADER_PATHS) -std=c++11
 LINK_INVOCATION = $(COMPILER) $(LIB_PATHS) $(LIBS) 
 
 # Libraries (general)
-HEADER_PATHS = -I $(BOOST_HEADER_PATH) -I $(PYTHON_HEADER_PATH)
-LIB_PATHS =  -L $(BOOST_LIB_PATH) -L $(PYTHON_LIB_PATH)
-LIBS = -stdlib=libc++ $(BOOST_LIBS) $(PYTHON_LIB)
+HEADER_PATHS = -I $(BOOST_HEADER_PATH)
+LIB_PATHS =  -L $(BOOST_LIB_PATH)
+LIBS = -stdlib=libc++ $(BOOST_LIBS)
 
 # Boost
 BOOST_HEADER_PATH = /usr/local/include/boost/
 BOOST_LIB_PATH = /usr/local/include/
 BOOST_LIBS = -lboost_log-mt -lboost_thread-mt -lboost_system-mt
-
-# Python
-PYTHON_HEADER_PATH = /usr/include/python2.7/
-PYTHON_LIB_PATH = /usr/lib
-PYTHON_LIB = -lpython2.7
 
 # Documentation 
 PAGE_SCRIPT             = pages.sh
