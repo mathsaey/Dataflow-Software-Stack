@@ -3,9 +3,6 @@
 ###################
 
 examples/s.out
-obj/
-dvm
-
 *.dot*
 
 # Editor files #
