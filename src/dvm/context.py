@@ -104,29 +104,17 @@ class Context(object):
 # Context creator
 #
 # Allows the generation of new contexts.
-# For efficieny reasons, it's possible to return
-# old contexts to the creator, this allows us to reclycle
-# contexts instead of always creating new ones.
 #
-# A context creater also has a unique prefix.
+# A context creater has a unique prefix.
 # Having this prefix allows us to have multiple context 
-# creators without concurrency issues.
+# creators that generate unique contexts without synchronizing.
 ##
 class ContextCreator(object):
 	def __init__(self, core):
 		self.prefix = core.identifier
 		self.current = 0
-		self.free = []
 
 	def get(self):
-		if self.free:
-			res = self.free[0]
-			self.free = self.free[1:]
-			return res
-		else:
-			res = self.current
-			self.current += 1
-			return Context(self.prefix, res)
-
-	def release(self, cont):
-		self.free = [cont] + self.free
+		res = self.current
+		self.current += 1
+		return Context(self.prefix, res)
