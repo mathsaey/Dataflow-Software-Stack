@@ -26,15 +26,6 @@
  * THE SOFTWARE.
  */
 
-/**
- * \file main.cpp
- * \author Mathijs Saey
- *
- * \brief DVM entry point
- * 
- * This file contains the DVM entry point.
- */
-
 #include <iostream>
 
 #include "version.hpp"
