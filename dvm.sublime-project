@@ -33,7 +33,7 @@
             "name": "doxygen markdown",
             "selector":"text.html.markdown",
             "working_dir": "${project_path}",
-            "cmd": ["make", "docset"]
+            "cmd": ["make", "doc"]
         }
     ]
 }
