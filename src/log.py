@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file log.py
-# \namespace log
+# \package log
 # \brief DVM Logging
 # 
 # Shared logger. The logger is responsible for printing output to the user.
