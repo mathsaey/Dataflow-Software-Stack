@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/token.py
-# \namespace dvm.token
+# \package dvm.token
 # \brief DVM Tagged tokens
 # 
 # This module defines the various tokens that 

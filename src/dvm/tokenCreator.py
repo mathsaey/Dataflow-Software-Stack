@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/tokenCreator.py
-# \namespace dvm.tokenCreator
+# \package dvm.tokenCreator
 # \brief DVM token creator
 #
 # This module defines the token creator.

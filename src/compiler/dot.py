@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file compiler/dot.py
-# \namespace compiler.dot
+# \package compiler.dot
 # \brief IGR dot parser
 # 
 # This module can return a dot version of the graph.

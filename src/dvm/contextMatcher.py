@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/contextMatcher.py
-# \namespace dvm.contextMatcher
+# \package dvm.contextMatcher
 # \brief DVM context matcher
 # 
 # This module defines the DVM context matcher.

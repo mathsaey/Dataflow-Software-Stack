@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file igr/graph.py
-# \namespace igr.graph
+# \package igr.graph
 # \brief Complete program
 # 
 # This defines the complete program graph. All of the subgraphs

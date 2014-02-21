@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/type.py
-# \namespace if1parser.type
+# \package if1parser.type
 # \brief Type parser
 # 
 # Discover IF1 types.

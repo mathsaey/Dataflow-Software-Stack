@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/context.py
-# \namespace dvm.context
+# \package dvm.context
 # \brief DVM Contexts
 # 
 # This module defines contexts.

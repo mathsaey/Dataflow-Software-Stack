@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file compiler/__init__.py
-# \namespace compiler
+# \package compiler
 # \brief IGR Compiler
 # 
 # This module defines the compiler that 

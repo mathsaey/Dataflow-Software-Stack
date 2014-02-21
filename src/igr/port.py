@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file igr/port.py
-# \namespace igr.port
+# \package igr.port
 # \brief Port definitions
 #
 # Defines the various port types of IGR

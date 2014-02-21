@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/instruction.py
-# \namespace dvm.instruction
+# \package dvm.instruction
 # \brief DVM instruction definitions
 #
 # This module defines the various instruction types.

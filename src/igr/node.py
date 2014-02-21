@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file igr/node.py
-# \namespace igr.node
+# \package igr.node
 # \brief Node definitions
 # 
 # IGR node types. 

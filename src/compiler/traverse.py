@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file compiler/traverse.py
-# \namespace compiler.traverse
+# \package compiler.traverse
 # \brief IGR Traversals
 # 
 # This module defines the functions that allow us to

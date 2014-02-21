@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/scheduler.py
-# \namespace dvm.scheduler
+# \package dvm.scheduler
 # \brief DVM instruction scheduler
 #
 # This module defines the scheduler.

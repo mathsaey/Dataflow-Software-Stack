@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/graph.py
-# \namespace if1parser.graph
+# \package if1parser.graph
 # \brief Node parser
 # 
 # This module allows us to parse all of the 

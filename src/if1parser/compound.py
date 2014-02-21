@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/compound.py
-# \namespace if1parser.compound
+# \package if1parser.compound
 # \brief Compound node reference
 # 
 # This module maps the IF1 compound nodes to 

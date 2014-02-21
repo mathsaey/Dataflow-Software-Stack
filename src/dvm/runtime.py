@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/rumtime.py
-# \namespace dvm.runtime
+# \package dvm.runtime
 # \brief DVM runtime core
 # 
 # This module defines the runtime. 

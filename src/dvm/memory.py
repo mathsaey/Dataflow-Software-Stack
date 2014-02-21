@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/memory.py
-# \namespace dvm.memory
+# \package dvm.memory
 # \brief DVM instruction memory
 #
 # This module defines the instruction memory

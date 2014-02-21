@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/edge.py
-# \namespace if1parser.edge
+# \package if1parser.edge
 # \brief Parse edges and literalss
 # 
 # This module is responsible for parsing 

@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/environment.py
-# \namespace if1parser.environment
+# \package if1parser.environment
 # \brief Node lookup and scoping rules.
 # 
 # This module contains the "state" of the parser.

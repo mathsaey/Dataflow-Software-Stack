@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/__init__.py
-# \namespace dvm
+# \package dvm
 # \brief Dataflow Virtual Machine
 # 
 # This is the core of DVM. It defines the underlying instructions,

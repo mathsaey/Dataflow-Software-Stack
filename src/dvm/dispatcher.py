@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file dvm/dispatcher.py
-# \namespace dvm.dispatcher
+# \package dvm.dispatcher
 # \brief DVM token dispatcher
 #
 # This module defines the token dispatcher.

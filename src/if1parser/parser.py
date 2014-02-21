@@ -25,8 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/parser.py
-# \namespace if1parser.parser
+# \package if1parser.parser
 # \brief Main parser loop
 # 
 # This module is the main parser interface.
