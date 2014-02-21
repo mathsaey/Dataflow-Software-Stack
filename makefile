@@ -51,6 +51,7 @@ OUTPUT-DIR 	= obj/
 
 # Map in and output to paths
 SOURCE_FILES    = $(wildcard $(INPUT_DIR)*.cpp $(INPUT_DIR)**/*.cpp)
+HEADER_FILES    = $(wildcard $(INPUT_DIR)*.hpp $(INPUT_DIR)**/*.hpp)
 OBJECT_FILES    = $(foreach file, $(SOURCE_FILES), $(file:$(INPUT_DIR)%.cpp=$(OUTPUT-DIR)%.o))
 OBJECT_DIRS     = $(sort $(dir $(OBJECT_FILES)))
 
@@ -73,10 +74,10 @@ test: main
 	./dvm
 
 #Create object files
-compile: directory $(OBJECT_FILES)
+compile: directory $(OBJECT_FILES) $(HEADER_FILES)
 
 # Create the executable
-link: $(EXECUTABLE)
+link: $(EXECUTABLE) $(HEADER_FILES)
 
 #Create required directories
 directory:

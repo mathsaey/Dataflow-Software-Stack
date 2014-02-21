@@ -50,7 +50,7 @@
  * This is a simple wrapper around a context.
  * A context defines an unsigned int that does not change.
  */
-typedef const unsigned int Context;
+typedef unsigned int Context;
 
 /**
  * Generates contexts unique for a prefix.
@@ -74,11 +74,8 @@ private:
 	 */
 	Context hashPair(int a, int b);
 
-	/** Unimplemented default constructor */
 	ContextCreator() = delete;
-	/** Unimplemented copy constructor */
 	ContextCreator(const ContextCreator&) = delete;
-	/** Unimplemented assignment operator */
 	ContextCreator& operator= (const ContextCreator&) = delete;
 
 public:
@@ -91,12 +88,6 @@ public:
 	 */
 	explicit ContextCreator(int prefix):_prefix(prefix),_key(0){};
 
-	/**
-	 * Get the prefix of this creator.
-	 *
-	 * \return
-	 *		The prefix of this creator.
-	 */
 	const int getPrefix() {return _prefix;}
 
 	/**

@@ -1,4 +1,4 @@
-// main.cpp
+// tag.cpp
 // DVM
 // Mathijs Saey
 
@@ -26,23 +26,21 @@
  * THE SOFTWARE.
  */
 
-/**
- * \file main.cpp
- * \author Mathijs Saey
- *
- * \brief DVM entry point
- * 
- * This file contains the DVM entry point.
- */
+#include "tag.hpp"
 
-#include <iostream>
-
-#include "version.hpp"
-#include "log.hpp"
-#include "core/token.hpp"
-
-int main(int argc, char * argv[]) {
-	LOG_SETUP();
-
-	return 0;
+std::ostream& operator<< (std::ostream& cout, Tag tag) {
+	cout 
+		<< "core " << tag.getCore()    << " | "
+		<< "inst " << tag.getAddress() << " | "
+		<< "port " << tag.getPort()    << " | "
+		<< "cont " << tag.getContext();
+	return cout;
+}
+std::ostream& operator<< (std::ostream& cout, StopTag tag) {
+	cout << "<STOP>";
+	return cout;
+}
+std::ostream& operator<< (std::ostream& cout, AbstractTag tag) {
+	cout << "Tag";
+	return cout;
 }

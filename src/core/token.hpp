@@ -1,4 +1,4 @@
-// main.cpp
+// token.hpp
 // DVM
 // Mathijs Saey
 
@@ -27,22 +27,63 @@
  */
 
 /**
- * \file main.cpp
+ * \file core/token.hpp
  * \author Mathijs Saey
  *
- * \brief DVM entry point
+ * \brief DVM Tagged tokens
  * 
- * This file contains the DVM entry point.
+ * Declares Tokens
  */
 
+#ifndef __DVM_CORE_TOKEN_HPP__
+#define __DVM_CORE_TOKEN_HPP__
+
 #include <iostream>
+#include "tag.hpp"
 
-#include "version.hpp"
-#include "log.hpp"
-#include "core/token.hpp"
+/**
+ * DVM Token
+ *
+ * Tokens contain the program data travelling through the 
+ * instruction memory. A token consists of 2 parts,
+ * a datum which contains the actual data, and a tag,
+ * which contains the meta information about the token
+ * like it's destination.
+ */
+template < class DatumType > class Token {
 
-int main(int argc, char * argv[]) {
-	LOG_SETUP();
+private:
 
-	return 0;
+	AbstractTag * _tag;  /**< The tag of this token */
+	DatumType _datum;    /**< The datum that the token contains */
+
+	Token() = delete;
+	Token(const Token&) = delete;
+
+public:
+
+	/**
+	 * Create a new token.
+	 *
+	 * \param datum
+	 *		The datum of this token
+	 * \param tag
+	 *		The tag of this token
+	 */
+	Token(DatumType datum, AbstractTag * tag):_datum(datum),_tag(tag){};
+
+	DatumType getDatum() const {return _datum;}
+	AbstractTag getTag() const {return _tag;}
+};
+
+template < class DatumType > 
+std::ostream& operator<< (std::ostream& cout, Token<DatumType> token) {
+	cout 
+		<< "<| " 
+		<< "'" << token.getDatum() << "' "
+		<< "[" << token.getTag() << "]" 
+		<< " |>";
+	return cout;
 }
+
+#endif
