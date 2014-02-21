@@ -59,6 +59,7 @@ private:
 
 	Token() = delete;
 	Token(const Token&) = delete;
+	Token& operator= (const Token&) = delete;
 
 public:
 

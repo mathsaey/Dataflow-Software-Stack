@@ -43,6 +43,5 @@
 
 int main(int argc, char * argv[]) {
 	LOG_SETUP();
-
 	return 0;
 }

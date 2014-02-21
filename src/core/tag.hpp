@@ -73,6 +73,7 @@ private:
 
 	Tag() = delete;
 	Tag(const Tag&) = delete;
+	Tag& operator= (const Tag&) = delete;
 
 public:
 	/**
