@@ -1,0 +1,17 @@
+<map id="compiler.dot.runDot" name="compiler.dot.runDot">
+<area shape="rect" id="node2" href="$namespacecompiler_1_1dot.html#ab9fb1f388749ced3ba64ee867fae0920" title="Get the dot representation and write it to a file. " alt="" coords="192,153,344,178"/>
+<area shape="rect" id="node3" href="$namespacecompiler_1_1dot.html#aa1c58f873cee40263ac5a2c07fb617b5" title="Create the dot string. " alt="" coords="392,153,528,178"/>
+<area shape="rect" id="node4" href="$namespacecompiler_1_1dot.html#aa4eab18b90e883fddbf2b7367f654d7b" title="Write general dot information. " alt="" coords="596,54,756,79"/>
+<area shape="rect" id="node5" href="$namespacecompiler_1_1dot.html#ad156d481575b1064cfe3673afb0760c0" title="Write the information of a node to the buffer. " alt="" coords="613,103,739,129"/>
+<area shape="rect" id="node14" href="$namespacecompiler_1_1dot.html#aea31a1aceed8455ba7179e254a677d6c" title="Add the attributes of the subgraph. " alt="" coords="576,153,776,178"/>
+<area shape="rect" id="node15" href="$namespacecompiler_1_1dot.html#a1f5178873440863fffb6ae47c7202667" title="&quot;close&quot; the subgraph. " alt="" coords="579,202,773,227"/>
+<area shape="rect" id="node16" href="$namespacecompiler_1_1dot.html#a64ecb170a7342bba287d37909b9d47b2" title="Close the dot graph. " alt="" coords="599,251,753,277"/>
+<area shape="rect" id="node6" href="$namespacecompiler_1_1dot.html#ae92a24a3e20437518443308493826e39" title="Add the label of the node to the buffer. " alt="" coords="824,79,984,105"/>
+<area shape="rect" id="node12" href="$namespacecompiler_1_1dot.html#aecd94322f518eca095440e929ff869f0" title="Add all the outgoing edges of a node to the buffer. " alt="" coords="825,129,983,154"/>
+<area shape="rect" id="node7" href="$namespacecompiler_1_1dot.html#a7e29902b97989ad0da9f3d3c4055a0c4" title="Identifier of the node. " alt="" coords="1235,130,1413,155"/>
+<area shape="rect" id="node8" href="$namespacecompiler_1_1dot.html#a6df36fb8b1f135d7e646440e6adf39d1" title="Get the portlist for the inputs of a node. " alt="" coords="1036,54,1183,79"/>
+<area shape="rect" id="node11" href="$namespacecompiler_1_1dot.html#a6a1175fd47928bf210540e06854f884d" title="Get the portlist for the outputs of a node. " alt="" coords="1032,5,1187,30"/>
+<area shape="rect" id="node9" href="$namespacecompiler_1_1dot.html#acaa819ccaaa232d873ce172287bd857a" title="String representation of a port list. " alt="" coords="1261,30,1387,55"/>
+<area shape="rect" id="node10" href="$namespacecompiler_1_1dot.html#a2b165c8b0265f5f5d824b0bfc595588a" title="Get a representation for a port. " alt="" coords="1461,30,1616,55"/>
+<area shape="rect" id="node13" href="$namespacecompiler_1_1dot.html#a22d69d4cfb87904a0baa28982d59e7aa" title="Convert a connection to a string. " alt="" coords="1038,155,1181,181"/>
+</map>

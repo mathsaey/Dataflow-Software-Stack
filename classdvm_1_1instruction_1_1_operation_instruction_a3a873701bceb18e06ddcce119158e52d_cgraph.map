@@ -1,0 +1,4 @@
+<map id="dvm.instruction.OperationInstruction.sendResults" name="dvm.instruction.OperationInstruction.sendResults">
+<area shape="rect" id="node2" href="$classdvm_1_1instruction_1_1_static_instruction.html#a993ce2343d71635f06291471a8a8646e" title="Send a datum to any destination of a given output port. " alt="" coords="227,5,469,43"/>
+<area shape="rect" id="node3" href="$namespacelog.html#a8e3ea60d7c7d7695350241b29425b4f9" title="Log an information message. " alt="" coords="316,67,380,93"/>
+</map>

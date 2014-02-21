@@ -9,6 +9,7 @@ var searchData=
   ['igr',['igr',['../namespaceigr.html',1,'']]],
   ['literal',['literal',['../namespaceigr_1_1literal.html',1,'igr']]],
   ['node',['node',['../namespaceigr_1_1node.html',1,'igr']]],
+  ['operations',['operations',['../namespaceif1parser_1_1operations.html',1,'if1parser']]],
   ['parser',['parser',['../namespaceif1parser_1_1parser.html',1,'if1parser']]],
   ['port',['port',['../namespaceigr_1_1port.html',1,'igr']]],
   ['subgraph',['subgraph',['../namespaceigr_1_1subgraph.html',1,'igr']]],

@@ -1,0 +1,8 @@
+<map id="if1parser.type._Type" name="if1parser.type._Type">
+<area shape="rect" id="node2" href="$classif1parser_1_1type_1_1___basic_type.html" title="Represents one of the basic IF1 types. " alt="" coords="5,142,179,229"/>
+<area shape="rect" id="node3" href="$classif1parser_1_1type_1_1___combined_type.html" title="Wrapper around a combined type that contains multiple base types. " alt="" coords="203,135,404,235"/>
+<area shape="rect" id="node4" href="$classif1parser_1_1type_1_1___container_type.html" title="Wrapper around a container that contains a single base type (such as an array) " alt="" coords="430,135,628,235"/>
+<area shape="rect" id="node5" href="$classif1parser_1_1type_1_1___function_type.html" title="Wrapper around a function type. " alt="" coords="653,135,845,235"/>
+<area shape="rect" id="node6" href="$classif1parser_1_1type_1_1___pointer_type.html" title="Wrapper around a pointer to the first element of a combined type. " alt="" coords="870,129,1052,242"/>
+<area shape="rect" id="node7" href="$classif1parser_1_1type_1_1___unknown_type.html" title="Represents any possible type. " alt="" coords="1077,135,1273,235"/>
+</map>
