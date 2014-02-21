@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log',['Log',['../log_8hpp.html#a44d913b0bdecdedf36a6a4c10580ed76',1,'log.hpp']]]
+  ['context',['Context',['../context_8hpp.html#a5e9dd9188caa493602c75e7fc2907591',1,'context.hpp']]]
 ];
