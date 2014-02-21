@@ -33,8 +33,10 @@
 # handle received tokens.
 ##
 
-import log
 import memory
+
+import logging
+log = logging.getLogger(__name__)
 
 ##
 # Token Dispatcher.
@@ -71,7 +73,7 @@ class TokenDispatcher(object):
 			self.core.scheduler.schedule(inst, token)
 
 	def process(self, token):
-		log.info("disp", "Processing token:", token)
+		log.info("Processing token: %s", token)
 
 		tag = token.tag
 		if self.checkSpecial(tag):

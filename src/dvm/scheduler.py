@@ -33,7 +33,8 @@
 # to execute an instruction.
 ##
 
-import log
+import logging
+log = logging.getLogger(__name__)
 
 ##
 # DVM Scheduler
@@ -47,5 +48,5 @@ class Scheduler(object):
 		
 	def schedule(self, inst, args):
 		inst = self.core.memory.get(inst)
-		log.info("schd", "Scheduling: " + str(inst))
+		log.info("Scheduling: %s", inst)
 		inst.execute(args, self.core)

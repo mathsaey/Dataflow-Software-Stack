@@ -31,7 +31,8 @@
 # This module defines the DVM context matcher.
 ##
 
-import log
+import logging
+log = logging.getLogger(__name__)
 
 ##
 # DVM Context matcher.
@@ -125,7 +126,7 @@ class ContextMatcher(object):
 	#		the token to add.
 	##
 	def add(self, token):
-		log.info("mtch", "Adding token:", token)
+		log.info("Adding token: %s", token)
 
 		tag  = token.tag                  
 		inst = tag.inst                   

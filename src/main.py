@@ -43,6 +43,8 @@ This module serves as a top level file to access the other modules
 
 ## TEST CODE ##
 
+import log
+
 import dvm 
 import dvm.token
 import dvm.runtime

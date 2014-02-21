@@ -38,7 +38,6 @@
 # decent load balance accross these cores.
 ##
 
-import log
 import memory
 import multiprocessing
 
@@ -47,6 +46,9 @@ from scheduler import Scheduler
 from dispatcher import TokenDispatcher
 from tokenCreator import TokenCreator
 from contextMatcher import ContextMatcher
+
+import logging
+log = logging.getLogger(__name__)
 
 # ------------- #
 # Runtime Class #
@@ -76,7 +78,7 @@ class Core(object):
 	##
 	def __init__(self, identifier, memory):
 		super(Core, self).__init__()
-		log.info("core", "Initializing core:", identifier)
+		log.info("Initializing core: %s")
 
 		## Instruction memory
 		self.memory         = memory
@@ -136,12 +138,11 @@ class Core(object):
 	# \param logLock
 	#		The lock of the logger.
 	##
-	def start(self, inbox, cores, logLock):
-		log.setLock(logLock)
+	def start(self, inbox, cores):
 		self.inbox = inbox
 		self.cores = cores
 
-		log.info("core", self, "Starting run loop")
+		log.info("Core %s starting run loop", self)
 
 		while self.active:
 			t = self.inbox.get()
@@ -155,7 +156,7 @@ class Core(object):
 	#		returned.
 	##
 	def stop(self, value):
-		log.info("core", self, "Terminated with value:", value)
+		log.info("Core %s terminated with %s", self, value)
 		self.active = False
 		print  value
 		return value
@@ -167,7 +168,6 @@ class Core(object):
 #		The amount of cores to create.
 ##
 def start(cores = 1, tokens = []):
-	logLock  = log.getLock()
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
 	queues   = [multiprocessing.Queue()  for i in xrange(0, cores)]
 
@@ -177,7 +177,8 @@ def start(cores = 1, tokens = []):
 
 		p = multiprocessing.Process(
 			target = core.start, 
-			args   = (queue, queues, logLock)) 
+			name   = "C " + str(i),
+			args   = (queue, queues)) 
 		p.start()
 
 	#-- DEBUG --#

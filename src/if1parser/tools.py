@@ -33,7 +33,9 @@
 ##
 
 import sys
-import log
+
+import logging
+log = logging.getLogger(__name__)
 
 ##
 # Print a warning to stdout.
@@ -49,7 +51,7 @@ import log
 ##
 def warning(msg, line = "?"):
 	message = "line: " + str(line) + ": " + msg
-	log.logWarn("parser", message)
+	log.warning(message)
 
 ##
 # Print an error to stdout.
@@ -68,6 +70,5 @@ def warning(msg, line = "?"):
 ##
 def error(msg, line = "?"):
 	message = "line: " + str(line) + ": " + msg
-	log.logErr("parser", message)
-	log.logErr("dvm", "Aborting after parse error.")
+	log.error(message)
 	sys.exit()

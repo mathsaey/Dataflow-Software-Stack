@@ -31,7 +31,8 @@
 # This module defines the various instruction types.
 ##
 
-import log
+import logging
+log = logging.getLogger(__name__)
 
 # -------------------- #
 # Abstract Instruction #
@@ -155,7 +156,7 @@ class OperationInstruction(StaticInstruction):
 			self.sendDatum(res, core, i, cont)
 
 	def execute(self, tokens, core):
-		log.info("inst", self, "executing.")
+		log.info("executing %s", self)
 		lst = map(lambda x : x.datum, tokens)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
@@ -204,7 +205,7 @@ class ContextChange(AbstractInstruction):
 		self.contexts = {}
 
 	def execute(self, token, core):
-		log.info("inst", self, "changing context of:", token)
+		log.info("%s, changing context of: %s", self, token)
 
 		core.tokenCreator.changeContext(
 			token,
@@ -222,7 +223,7 @@ class ContextChange(AbstractInstruction):
 ##
 class ContextRestore(AbstractInstruction):
 	def execute(self, token, core):
-		log.info("inst", self, "restoring:", token)
+		log.info("%s, restoring: %s", self, token)
 		core.tokenCreator.restoreContext(token)
 
 # ----------------- #
@@ -236,5 +237,5 @@ class ContextRestore(AbstractInstruction):
 class StopInstruction(AbstractInstruction):
 
 	def execute(self, token, core):
-		log.info("inst", token, "reached stop instrution:", self)
+		log.info("%s reached stop instruction: %s", token, self)
 		core.tokenCreator.stopToken(token)

@@ -3,9 +3,9 @@
 ###################
 
 examples/s.out
-doxylog
 *.dot*
 *.pyc
+*.log
 
 # Editor files #
 
