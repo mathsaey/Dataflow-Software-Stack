@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package igr.literal
+# \package IGR.literal
 # \brief Literal definitions
 # 
 # IGR Literals

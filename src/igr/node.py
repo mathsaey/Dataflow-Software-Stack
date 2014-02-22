@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package igr.node
+# \package IGR.node
 # \brief Node definitions
 # 
 # IGR node types. 

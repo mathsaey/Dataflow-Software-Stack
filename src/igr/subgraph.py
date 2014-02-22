@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package igr.subgraph
+# \package IGR.subgraph
 # \brief SubGraph definitions
 # 
 # IGR subgraphs. 

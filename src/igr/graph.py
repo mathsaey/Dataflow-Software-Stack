@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package igr.graph
+# \package IGR.graph
 # \brief Complete program
 # 
 # This defines the complete program graph. All of the subgraphs

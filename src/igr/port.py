@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package igr.port
+# \package IGR.port
 # \brief Port definitions
 #
 # Defines the various port types of IGR

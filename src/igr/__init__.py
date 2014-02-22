@@ -26,7 +26,7 @@
 
 ##
 # \file igr/__init__.py
-# \package igr
+# \package IGR
 # \author Mathijs Saey
 # 
 # \brief DVM Intermediate Graph Representation
