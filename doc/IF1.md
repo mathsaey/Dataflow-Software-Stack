@@ -5,8 +5,13 @@
 This page serves as a basic introduction to the IF1 language.
 The information on this page is based on the paper: `IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)`
 
-On this page, we attempt to create a compact IF1 overview that can serve as a full reference to the language while still being complete.
-If you like to look at an example while browsing this page, check out [a sorting algorithm in IF1](\ref SortIF1), generated from [this sisal code](\ref SortSis).
+On this page, we attempt to create a compact yet complete overview of the language that should be enough to write an if1parser without any previous IF1 knowledge.
+
+A few IF1 and Sisal examples are present in the repository, a copy of these examples is also present in the documentation:
+* [Simple piece of Sisal/IF1 code](_Simple.html)
+* [Simple call in Sisal/IF1](_Call.html)
+* [Select compoud node in Sisal/IF1](_Select.html)
+* [Sorting algorithm in Sisal/IF1](_Sort.html)
 
 [TOC]
 
@@ -404,8 +409,23 @@ Label | Name
 
 **Unknown**
 
-\page SortSis Sorting algorithm in Sisal
-\include sort.sis
+\page Simple Simple piece of Sisal/IF1 code
+\include simple.sis
+\include simple.if1
+![Simple](../examples/simple.dot.png)
 
-\page SortIF1 Sorting algorithm in IF1
+\page Call Simple call in Sisal/IF1
+\include call.sis
+\include call.if1
+![Call](../examples/call.dot.png)
+
+\page Select Select compoud node in Sisal/IF1
+\include select.sis
+\include select.if1
+![Select](../examples/select.dot.png)
+
+\page Sort Sorting algorithm in Sisal/IF1
+\include sort.sis
 \include sort.if1
+![Sort](../examples/sort.dot.png)
+

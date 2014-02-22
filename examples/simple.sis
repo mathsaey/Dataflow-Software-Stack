@@ -1,0 +1,17 @@
+% simple.sis
+% Mathijs Saey
+% DVM examples
+
+% This file contains some 
+% extremly basic sisal code
+
+define Main
+
+function main(a, b, c, d : integer returns integer)
+	let 
+		ab := a + b;
+		cd := c + d
+	in 
+		ab + cd 
+	end let
+end function

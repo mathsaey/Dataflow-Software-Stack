@@ -25,22 +25,12 @@ There are 2 general flavors of dataflow, static and dynamic dataflow. In static 
 
 An example of such a dataflow graph can be found below, this graph was generated from the following sisal (more on that later) code:
 
-~~~~~~~~~~~
-define Main
+\include simple.sis
 
-function main(a, b, c, d : integer returns integer)
-	let 
-		ab := a + b;
-		cd := c + d
-	in 
-		ab + cd 
-	end let
-end function
-~~~~~~~~~~~
 
 As we can seem this program simply takes 4 inputs, and adds all of these together. The generated dataflow graph shows us that both of the additions could be carried out in parallel.
 
-![A simple dataflow graph](../res/staticSimple.png)
+![A simple dataflow graph](../examples/simple.dot.png)
 
 Dynamic dataflow is slightly more tricky, having the entire program in memory causes some issues when dealing with multiple simultaneous calls to the same function or loops. Furthermore, a program graph is not a great internal representation even though it's arguably easier to understand for a human.
 
@@ -53,6 +43,8 @@ People looking for a detailed explanation about dynamic dataflow should consider
 Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph. 
 
 Since DVM is focused on the execution of dataflow programs, and not in it's compilation, we use IF1 as the primary input language of DVM. Internally, we still have our own compiler that converts IF1 into our own intermediate representation (::IGR)
+
+More information about IF1 along with some sisal and IF1 code samples can be found in the [IF1 overview](md_doc__i_f1.html). 
 
 
 # Getting started
