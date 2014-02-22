@@ -1,6 +1,6 @@
 # memory.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.memory
+# \package DVM.memory
 # \brief DVM instruction memory
 #
 # This module defines the instruction memory

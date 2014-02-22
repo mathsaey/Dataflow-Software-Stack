@@ -1,13 +1,63 @@
-# MainPage
+<!-- Written by Mathijs Saey at the VUB, all rights reserved -->
 
-# Introduction
+[TOC]
 
-This is the main documentation page of the DataFlow Virtual Machine project. The main goal of this documentation is the explanation of the inner workings of DVM, it's components and some of the things it relies on.
-If you want to know more about DVM and what it tries to do, you should check out the [readme](md__r_e_a_d_m_e.html).
+# Introduction {#Introduction}
+
+This is the main documentation of DVM, the Dataflow Virtual Machine, created by Mathijs Saey for his thesis at the VUB.
+
+These pages serve a number of purposes:
+* [Provide a basic overview about DVM.](#About)
+* [Provide a high-level overview of the code base.](#Structure)
+* [Collect the documentation about the DVM code base](annotated.html)
+* [Collect all the necessary information to get DVM up and running](#Starting)
+* [Collect references and examples that are come in handy for working on DVM.](pages.html)
+
+# About DVM {#About}
+
+The goal of DVM is to create a highly parallel virtual machine. In order to do this, we use the [dataflow architecture.](http://en.wikipedia.org/wiki/Dataflow_architecture) 
+
+## Dataflow {#Dataflow}
+
+In short, the general idea behind dataflow is that an instruction in the program is executed once it's inputs are ready. This property allows us to exploit the implicit parallelism of programs.
+
+There are 2 general flavors of dataflow, static and dynamic dataflow. In static dataflow, the program is represented as a graph, and data travels along the edges of this graph. 
+
+An example of such a dataflow graph can be found below, this graph was generated from the following sisal (more on that later) code:
+
+~~~~~~~~~~~
+define Main
+
+function main(a, b, c, d : integer returns integer)
+	let 
+		ab := a + b;
+		cd := c + d
+	in 
+		ab + cd 
+	end let
+end function
+~~~~~~~~~~~
+
+As we can seem this program simply takes 4 inputs, and adds all of these together. The generated dataflow graph shows us that both of the additions could be carried out in parallel.
+
+![A simple dataflow graph](../res/staticSimple.png)
+
+Dynamic dataflow is slightly more tricky, having the entire program in memory causes some issues when dealing with multiple simultaneous calls to the same function or loops. Furthermore, a program graph is not a great internal representation even though it's arguably easier to understand for a human.
+
+Dynamic dataflow works with a static instruction memory instead of a program graph. An instruction in this memory performs roughly the same task as a node in the dataflow graph. The main difference with static dataflow is that program data does not follow predefined edges, instead, all the data travels through the program wrapped in a *tagged token*. Such a token contains not only the actual data being sent, but also the destination of this data and the *context* of this data. Adding this context to program data is what allows the dynamic dataflow model to have multiple simultaneous invocations of the same function.
+
+People looking for a detailed explanation about dynamic dataflow should consider reading: `Executing a Program on the MIT Tagged-Token Dataflow Architecture` (Arvind and RISHIYUR R.S., 1990).
+
+## [Sisal](http://en.wikipedia.org/wiki/SISAL) and IF1 {#IF1}
+
+Sisal (Streams and Iteration in a Single Assignment Language) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph. 
+
+Since DVM is focused on the execution of dataflow programs, and not in it's compilation, we use IF1 as the primary input language of DVM. Internally, we still have our own compiler that converts IF1 into our own intermediate representation (::IGR)
+
 
 # Getting started
 
-Running dvm should be straightforward if you have the right tools installed. A guide on the command line usage of DVM will be found here once the project reaches that stage.
+Running DVM should be straightforward if you have the right tools installed. A guide on the command line usage of DVM will be found here once the project reaches that stage.
 
 Code should be manually loaded in the main file for the time being.
 

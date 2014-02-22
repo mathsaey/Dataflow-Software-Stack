@@ -1,6 +1,6 @@
 # dispatcher.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.scheduler
+# \package DVM.scheduler
 # \brief DVM instruction scheduler
 #
 # This module defines the scheduler.

@@ -1,6 +1,6 @@
 # instructions.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.instruction
+# \package DVM.instruction
 # \brief DVM instruction definitions
 #
 # This module defines the various instruction types.

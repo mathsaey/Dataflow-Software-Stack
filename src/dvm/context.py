@@ -1,6 +1,6 @@
 # context.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.context
+# \package DVM.context
 # \brief DVM Contexts
 # 
 # This module defines contexts.

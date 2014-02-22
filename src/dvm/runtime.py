@@ -1,6 +1,6 @@
 # runtime.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.runtime
+# \package DVM.runtime
 # \brief DVM runtime core
 # 
 # This module defines the runtime. 

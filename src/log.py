@@ -1,6 +1,6 @@
 # log.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -35,4 +35,4 @@
 import logging
 
 FORMAT_STR = "[%(levelname)5s][%(module)14s:%(lineno)3d][%(processName)3s] %(message)s"
-logging.basicConfig(format = FORMAT_STR, level=logging.DEBUG)
+logging.basicConfig(format = FORMAT_STR, level = logging.DEBUG)

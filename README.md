@@ -17,4 +17,4 @@ We use IF1 due to it's dataflow semantics. These semantics allow us to easily ma
 
 # Getting Started.
 
-If you are interested in working with or using DVM, you should look at the [documentation](http://mathsaey.github.io/DVM/index.html). It contains the complete DVM documentation, a detailed IF1 overview and a guide to get DVM up and running. It also contains an overview of the tools that were used to run and create dvm.
+If you are interested in working with or using DVM, you should look at the [documentation](http://mathsaey.github.io/DVM/index.html). It contains the complete DVM documentation, a detailed IF1 overview and a guide to get DVM up and running. It also contains an overview of the tools that were used to run and create DVM.

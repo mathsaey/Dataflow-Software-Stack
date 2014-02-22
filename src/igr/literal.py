@@ -1,6 +1,6 @@
 # literal.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #

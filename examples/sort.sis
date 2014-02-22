@@ -1,6 +1,6 @@
 % sort.sis
 % Mathijs Saey
-% dvm examples
+% DVM examples
 
 % This file contains an implementation of a combined sorting algorithm in sisal.
 % The algorithm will sort using quicksort until the remaining array to sort has

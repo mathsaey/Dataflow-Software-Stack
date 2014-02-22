@@ -1,6 +1,6 @@
 # __init__.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm
+# \package DVM
 # \brief Dataflow Virtual Machine
 # 
 # This is the core of DVM. It defines the underlying instructions,

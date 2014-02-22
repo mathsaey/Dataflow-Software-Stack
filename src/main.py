@@ -1,6 +1,6 @@
 # main.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -27,68 +27,52 @@
 """
 This module serves as a top level file to access the other modules
 """
+import log
+import if1parser
+import compiler.dot
 
-# import if1parser
-# import compiler.dot
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
-# #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-# loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-# #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-
-# def tmp(node):
-# 	print node
-
-# if1parser.parseFile(loc)
-# compiler.dot.runDot(path="../igr.dot", skipCompound = True)
+if1parser.parseFile(loc)
+compiler.dot.runDot(path="../igr.dot", skipCompound = True)
 
 ## TEST CODE ##
 
-import log
-
-import dvm 
-import dvm.token
-import dvm.runtime
+import DVM 
+import DVM.token
+import DVM.runtime
 
 def tOP(a,b):
 	return a + b
 
 # # function
-fStart = dvm.addSink()
-body = dvm.addOperationInstruction(tOP, 2)
-fEnd = dvm.addContextRestore()
+fStart = DVM.addSink()
+body = DVM.addOperationInstruction(tOP, 2)
+fEnd = DVM.addContextRestore()
 
-dvm.addDestination(fStart, 0, body, 0)
-dvm.addDestination(fStart, 1, body, 1)
-dvm.addDestination(body, 0, fEnd, 0)
+DVM.addDestination(fStart, 0, body, 0)
+DVM.addDestination(fStart, 1, body, 1)
+DVM.addDestination(body, 0, fEnd, 0)
 
 # call
-ret = dvm.addSink()
-call = dvm.addContextChange(fStart, ret)
-pEnd = dvm.addStopInstruction()
+ret = DVM.addSink()
+call = DVM.addContextChange(fStart, ret)
+pEnd = DVM.addStopInstruction()
 
-dvm.addDestination(ret, 0, pEnd, 0)
-
-
-test = dvm.addSink()
-dvm.addDestination(test, 0, call, 0)
-dvm.addDestination(test, 1, call, 1)
+DVM.addDestination(ret, 0, pEnd, 0)
 
 
-tag1 = dvm.token.Tag(0, call, 0, -1)
-tag2 = dvm.token.Tag(0, call, 1, -1)
-token1 = dvm.token.Token("top", tag1)
-token2 = dvm.token.Token("kek", tag2)
+test = DVM.addSink()
+DVM.addDestination(test, 0, call, 0)
+DVM.addDestination(test, 1, call, 1)
 
 
+tag1 = DVM.token.Tag(0, call, 0, -1)
+tag2 = DVM.token.Tag(0, call, 1, -1)
+token1 = DVM.token.Token("top", tag1)
+token2 = DVM.token.Token("kek", tag2)
 
-# # # function
-# pEnd = dvm.addStopInstruction()
-# body = dvm.addSink()
-# dvm.addDestination(body, 0, pEnd, 0)
-
-# tag1 = dvm.token.Tag(0, body, 0, -1)
-# tag2 = dvm.token.Tag(0, body, 1, -1)
-# token1 = dvm.token.Token("top", tag1)
-# token2 = dvm.token.Token("kek", tag2)
-
-dvm.runtime.start(tokens = [token1, token2])
+DVM.runtime.start(tokens = [token1, token2])

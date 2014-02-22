@@ -1,6 +1,6 @@
 # tokenCreator.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.tokenCreator
+# \package DVM.tokenCreator
 # \brief DVM token creator
 #
 # This module defines the token creator.

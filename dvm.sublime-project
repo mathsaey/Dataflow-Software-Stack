@@ -7,7 +7,7 @@
             "folder_exclude_patterns": 
                 ["src", "docpages", "obj", "documentation", "documentationPy",
                 "DataFlow Virtual Machine.xcodeproj", "prototypes"],
-            "file_exclude_patterns":["dvm"]
+            "file_exclude_patterns":["DVM"]
         },{
         	"path": "./src",
         	"name": "Source"

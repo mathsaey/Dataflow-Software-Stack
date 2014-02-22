@@ -1,6 +1,6 @@
 # contextMatcher.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.contextMatcher
+# \package DVM.contextMatcher
 # \brief DVM context matcher
 # 
 # This module defines the DVM context matcher.

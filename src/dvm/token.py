@@ -1,6 +1,6 @@
 # token.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.token
+# \package DVM.token
 # \brief DVM Tagged tokens
 # 
 # This module defines the various tokens that 

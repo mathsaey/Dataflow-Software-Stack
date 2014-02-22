@@ -1,6 +1,6 @@
 # dispatcher.py
 # Mathijs Saey
-# dvm
+# DVM
 
 # The MIT License (MIT)
 #
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm.dispatcher
+# \package DVM.dispatcher
 # \brief DVM token dispatcher
 #
 # This module defines the token dispatcher.
