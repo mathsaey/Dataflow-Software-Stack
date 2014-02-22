@@ -217,6 +217,10 @@ def dotToFile(path, skipCompound = True):
 #		These options should be passed as a list of strings.
 # \param skipCompound 
 #		True if you do not want to display the compound nodes.
+#
+# \bug 
+#	Running dot does not produce output when running with pypy.
+#	Runs fine on python
 ##
 def runDot(
 	dotpath = "dot",
