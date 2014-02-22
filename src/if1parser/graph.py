@@ -37,7 +37,7 @@ import operations
 import compound
 import type
 
-import igr
+import IGR
 
 # --------- #
 # Constants #
@@ -75,14 +75,14 @@ def parseSubGraph(arr, ctr):
 	inputs  = len(sig.args.list)
 	outputs = len(sig.res.list)
 
-	graph = igr.createSubGraph(name, inputs, outputs)
+	graph = IGR.createSubGraph(name, inputs, outputs)
 
 	environment.popScope()
 	environment.scope(graph)
 
 ## Parse a subgraph of a compound node.
 def parseCompoundSubGraph(arr, ctr):
-	graph = igr.createCompoundSubGraph()
+	graph = IGR.createCompoundSubGraph()
 
 	environment.popScope()
 	environment.addSubGraph(graph)
@@ -104,10 +104,10 @@ def parseGraph(arr, ctr):
 
 def parseStandardNode(opCode):
 	operation = operations.getFunction(opCode)
-	return igr.createOperationNode(environment.getSubGraph(), operation)
+	return IGR.createOperationNode(environment.getSubGraph(), operation)
 
 def parseCallNode():
-	return igr.createCallNode(environment.getSubGraph())
+	return IGR.createCallNode(environment.getSubGraph())
 
 def parseNode(arr, ctr): 
 	label  = int(arr[_n_label_idx])
@@ -163,7 +163,7 @@ def parseCompoundEnd(arr, ctr):
 	# Create the compound node
 	compType = arr[_ce_code_idx]
 	const = compound.getCompound(compType, ctr)
-	node = igr.createCompoundNode(
+	node = IGR.createCompoundNode(
 		const, 
 		environment.getSubGraph(), 
 		resGraphs)

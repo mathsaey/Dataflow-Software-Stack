@@ -32,7 +32,7 @@
 # traverse the IGR graph.
 ##
 
-import igr
+import IGR
 
 ##
 # Traverse all the nodes in the program.
@@ -67,7 +67,7 @@ def traverseAll(
 	skipCompound,
 	compoundStart,
 	compoundStop,
-	subGraphs = igr.getSubGraphs()
+	subGraphs = IGR.getSubGraphs()
 	):
 
 	def traverseSubGraph(subGraph, nodeProc):

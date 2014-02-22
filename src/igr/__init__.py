@@ -25,7 +25,6 @@
 # THE SOFTWARE.
 
 ##
-# \file igr/__init__.py
 # \package IGR
 # \author Mathijs Saey
 # 

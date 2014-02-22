@@ -32,22 +32,22 @@
 # their IGR counterparts.
 ##
 
-import igr.node
+import IGR.node
 import tools
 
 ## Various IGR compound nodes.
 __COMPOUNDS__ = {
-	0  : igr.node.ForallCNode,
-	1  : igr.node.SelectCNode,
-	2  : igr.node.TagCaseCNode,
-	3  : igr.node.LoopACNode,
-	4  : igr.node.LoopBCNode,
-	5  : igr.node.IfThenElseCNode,
-	6  : igr.node.IterateCNode,
-	7  : igr.node.WhileLoopCNode,
-	8  : igr.node.RepeatLoopCNode,
-	9  : igr.node.SeqForallCNode,
-	10 : igr.node.UReduceCNode
+	0  : IGR.node.ForallCNode,
+	1  : IGR.node.SelectCNode,
+	2  : IGR.node.TagCaseCNode,
+	3  : IGR.node.LoopACNode,
+	4  : IGR.node.LoopBCNode,
+	5  : IGR.node.IfThenElseCNode,
+	6  : IGR.node.IterateCNode,
+	7  : IGR.node.WhileLoopCNode,
+	8  : IGR.node.RepeatLoopCNode,
+	9  : IGR.node.SeqForallCNode,
+	10 : IGR.node.UReduceCNode
 }
 
 def getCompound(label, ctr = "?"):

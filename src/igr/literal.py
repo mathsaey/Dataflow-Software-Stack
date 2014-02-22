@@ -38,7 +38,7 @@
 # Examples include constants in arithmetic expressions,
 # function names, strings, ...
 # 
-# Every literal has a value and a target, which is an igr::port::InputPort.
+# Every literal has a value and a target, which is an IGR::port::InputPort.
 ##
 class Literal(object):
 	

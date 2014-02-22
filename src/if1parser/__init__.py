@@ -25,7 +25,6 @@
 # THE SOFTWARE.
 
 ##
-# \file if1parser/__init__.py
 # \package if1parser
 # \author Mathijs Saey
 # 

@@ -33,7 +33,7 @@
 # the IGR.
 ##
 
-import igr
+import IGR
 
 import environment
 import tools
@@ -69,7 +69,7 @@ def parseEdge(arr, ctr):
 	srcNode  = environment.getNode(srcLabel)
 	dstNode  = environment.getNode(dstLabel)
 
-	igr.connect(srcNode, srcPort, dstNode, dstPort)
+	IGR.connect(srcNode, srcPort, dstNode, dstPort)
 
 # -------------- #
 # Literal Parser #
@@ -107,4 +107,4 @@ def parseLiteral(arr, ctr):
 	typ     = type.getType(typeKey)
 	val     = _parseLitStr(string, typ, ctr)
 
-	igr.addLiteral(val, node, port)
+	IGR.addLiteral(val, node, port)
