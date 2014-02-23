@@ -5,7 +5,7 @@
 This page serves as a basic introduction to the IF1 language.
 The information on this page is based on the paper: `IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)`
 
-On this page, we attempt to create a compact yet complete overview of the language that should be enough to write an if1parser without any previous IF1 knowledge.
+On this page, we attempt to create a compact yet complete overview of the language that should be enough to write an if1 parser without any previous IF1 knowledge.
 
 A few IF1 and Sisal examples are present in the repository, a copy of these examples is also present in the documentation:
 * [Simple piece of Sisal/IF1 code](_Simple.html)
@@ -23,6 +23,7 @@ IF1 represents directed, acyclic graphs, these graphs have a few components.
     * a node can have an arbitrary amount of in -and outputs.
     * IF1 defines over 50 nodes, that is, "native" operations.
     * The in -and output of a node happens through **ports**, which are numbered indicators of in and output locations
+    * Port indexing starts from 1
     * Not every node has a predefined amount of ports.
 * Edges represent data paths between nodes.
     * Edges carry **type information**
@@ -30,7 +31,7 @@ IF1 represents directed, acyclic graphs, these graphs have a few components.
         * Can describe user-defined types and built-in types.
     * A special edge exists to describe literal constants.
         * Don't contain a source port
-        * Contain the text of a literal as a string.
+        * Contain the value of a literal as a string.
 * Graph boundaries surround groups of nodes and edges.
 
 # IF1 Instructions {#Form}
@@ -49,7 +50,7 @@ G         | local function graph        | `G type_reference "name" `
 X         | global function graph       | `X type_reference "name" `
 I         | imported function           | `I type_reference "name" `
 N         | simple node                 | `N label operation `
-{         | start compound node         | `{ `
+{         | start compound node         | `{ Compound label operation`
 }         | end compound node           | `} label operation association_list_length association_list_element_1 association_list_element_2 ...`
 
 
@@ -75,10 +76,10 @@ With that being said, we can look at the type definitions:
     T label type_code arg_1 arg_2
 
 * Label can be used to refer to the type later on.
-* The type code can be considers to be an argument that indicates what type of type we are dealing with, based on this information, the basic_type is used as another argument to construct the actual type.
-* The exact use of the other codes depends on the type_code.
+* The type code can be considered to be an argument that indicates what type of type we are dealing with. This code can be seen as a constructor for that type.
+* The exact use of the other codes depends on the type_code. They can be seen as the arguments to a type constructor.
 
-To clarify this, let's look at a  basic sisal types. In this case, the boolean.
+To clarify this, let's look at a  basic sisal type. In this case, the boolean.
 
 `T 1 1 0    %na=Boolean`
 
@@ -103,7 +104,7 @@ Code | Type     | Argument 1 | Argument 2
 8    | Tuple        | Type              | Next in tuple
 9    | Union        | First Tag         | ` none `
 
-In the following section, the different types are described.
+In the following sections, the different types are described.
 
 #### Basic types
 
