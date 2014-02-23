@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.token
+# \package core.token
 # \brief DVM Tagged tokens
 # 
 # This module defines the various tokens that 

@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.contextMatcher
+# \package core.contextMatcher
 # \brief DVM context matcher
 # 
 # This module defines the DVM context matcher.

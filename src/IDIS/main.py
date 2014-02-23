@@ -1,6 +1,6 @@
 # main.py
 # Mathijs Saey
-# DVM
+# IDIS
 
 # The MIT License (MIT)
 #
@@ -24,39 +24,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import log
-import DVM 
-import DVM.token
-import DVM.runtime
+"""
+This module serves as a top level file to access the other modules
+"""
+import if1parser
+import compiler.dot
 
-def tOP(a,b):
-	return a + b
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
-# # function
-fStart = DVM.addSink()
-body = DVM.addOperationInstruction(tOP, 2)
-fEnd = DVM.addContextRestore()
-
-DVM.addDestination(fStart, 0, body, 0)
-DVM.addDestination(fStart, 1, body, 1)
-DVM.addDestination(body, 0, fEnd, 0)
-
-# call
-ret = DVM.addSink()
-call = DVM.addContextChange(fStart, ret)
-pEnd = DVM.addStopInstruction()
-
-DVM.addDestination(ret, 0, pEnd, 0)
-
-
-test = DVM.addSink()
-DVM.addDestination(test, 0, call, 0)
-DVM.addDestination(test, 1, call, 1)
-
-
-tag1 = DVM.token.Tag(0, call, 0, -1)
-tag2 = DVM.token.Tag(0, call, 1, -1)
-token1 = DVM.token.Token("top", tag1)
-token2 = DVM.token.Token("kek", tag2)
-
-DVM.runtime.start(tokens = [token1, token2])
+if1parser.parseFile(loc)
+compiler.dot.runDot(path="../igr.dot", skipCompound = True)

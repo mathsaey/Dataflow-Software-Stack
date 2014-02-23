@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM
+# \package core
 # \brief Dataflow Virtual Machine
 # 
 # This is the core of DVM. It defines the underlying instructions,

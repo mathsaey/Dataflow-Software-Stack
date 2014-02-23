@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.instruction
+# \package core.instruction
 # \brief DVM instruction definitions
 #
 # This module defines the various instruction types.

@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.context
+# \package core.context
 # \brief DVM Contexts
 # 
 # This module defines contexts.

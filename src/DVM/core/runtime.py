@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.runtime
+# \package core.runtime
 # \brief DVM runtime core
 # 
 # This module defines the runtime. 

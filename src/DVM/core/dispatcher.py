@@ -25,28 +25,58 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.scheduler
-# \brief DVM instruction scheduler
+# \package core.dispatcher
+# \brief DVM token dispatcher
 #
-# This module defines the scheduler.
-# The scheduler is responsible for deciding when and how
-# to execute an instruction.
+# This module defines the token dispatcher.
+# The token dispatcher is responsible for deciding how to
+# handle received tokens.
 ##
+
+import memory
 
 import logging
 log = logging.getLogger(__name__)
 
 ##
-# DVM Scheduler
+# Token Dispatcher.
 #
-# Decides when and how to execute an instruction.
+# The token dispatcher is responsible
+# for processing the incoming tokens and deciding how
+# to handle them.
 ##
-class Scheduler(object):
+class TokenDispatcher(object):
 	def __init__(self, core):
-		super(Scheduler, self).__init__()
+		super(TokenDispatcher, self).__init__()
 		self.core = core
-		
-	def schedule(self, inst, args):
-		inst = self.core.memory.get(inst)
-		log.info("Scheduling: %s", inst)
-		inst.execute(args, self.core)
+
+	##
+	# See if a given token is a special token.
+	#
+	# \param tag
+	#		The tag of the token to check.
+	# 
+	# \return
+	#		True if the token is special
+	##	
+	def checkSpecial(self, tag):
+		return tag.isSpecial()
+
+	def processSpecial(self, token):
+		self.core.stop(token.datum)
+
+	def processStandard(self, token):
+		inst = token.tag.inst
+		if memory.needsMatcher(inst):
+			self.core.matcher.add(token)
+		else:
+			self.core.scheduler.schedule(inst, token)
+
+	def process(self, token):
+		log.info("Processing token: %s", token)
+
+		tag = token.tag
+		if self.checkSpecial(tag):
+			self.processSpecial(token)
+		else:
+			self.processStandard(token)

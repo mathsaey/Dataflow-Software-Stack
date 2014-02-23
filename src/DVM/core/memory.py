@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.memory
+# \package core.memory
 # \brief DVM instruction memory
 #
 # This module defines the instruction memory

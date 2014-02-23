@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DVM.tokenCreator
+# \package core.tokenCreator
 # \brief DVM token creator
 #
 # This module defines the token creator.
