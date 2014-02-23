@@ -7,12 +7,13 @@ var searchData=
   ['reduce',['Reduce',['../namespaceif1parser_1_1operations.html#ab6a01eb36001d0054b3b93a1079f3d91',1,'if1parser::operations']]],
   ['repeatloopcnode',['RepeatLoopCNode',['../class_i_g_r_1_1node_1_1_repeat_loop_c_node.html',1,'IGR::node']]],
   ['res',['res',['../classif1parser_1_1type_1_1___function_type.html#a8b5ff3f4061083eac5a38df2b096b400',1,'if1parser::type::_FunctionType']]],
-  ['reservematcherslot',['reserveMatcherSlot',['../class_d_v_m_1_1memory_1_1_instruction_memory.html#abfa086f3d4f2a474084c25fb9b81578b',1,'DVM::memory::InstructionMemory']]],
-  ['reservestandardslot',['reserveStandardSlot',['../class_d_v_m_1_1memory_1_1_instruction_memory.html#a1f8b52704df9bdd12d90eed370e8ac19',1,'DVM::memory::InstructionMemory']]],
-  ['reset',['reset',['../namespace_d_v_m_1_1memory.html#a9f3a62726dc28e889c6ae75da00647c2',1,'DVM::memory']]],
-  ['restorecontext',['restoreContext',['../class_d_v_m_1_1token_creator_1_1_token_creator.html#ac29703a0d4bb60caaac979faa4ab7015',1,'DVM::tokenCreator::TokenCreator']]],
-  ['restoremap',['restoreMap',['../class_d_v_m_1_1token_creator_1_1_token_creator.html#a59f844ddc6f08bde0c129933cefdbb60',1,'DVM::tokenCreator::TokenCreator']]],
-  ['ret',['ret',['../namespacemain.html#a5681d6c5c06a386f185a446d1320c103',1,'main']]],
-  ['retnsink',['retnSink',['../class_d_v_m_1_1instruction_1_1_context_change.html#af91c5f7234c6b70087a48e5900f0fb85',1,'DVM::instruction::ContextChange']]],
-  ['rundot',['runDot',['../namespacecompiler_1_1dot.html#ab8d86a047857d932d4a46bced06e74ba',1,'compiler::dot']]]
+  ['reservematcherslot',['reserveMatcherSlot',['../classcore_1_1memory_1_1_instruction_memory.html#aeb8de7103791921191c8b0ca0cbfdee8',1,'core::memory::InstructionMemory']]],
+  ['reservestandardslot',['reserveStandardSlot',['../classcore_1_1memory_1_1_instruction_memory.html#a92ade01747ad87f2278c2d277d0624f2',1,'core::memory::InstructionMemory']]],
+  ['reset',['reset',['../namespacecore_1_1memory.html#a1765945bfc16abcf7ecf4b56c4d5d1ee',1,'core::memory']]],
+  ['restorecontext',['restoreContext',['../classcore_1_1token_creator_1_1_token_creator.html#ae9ee1f333586314900f7c802ca984cf6',1,'core::tokenCreator::TokenCreator']]],
+  ['restoremap',['restoreMap',['../classcore_1_1token_creator_1_1_token_creator.html#abd6fde0a66238ec75a2c929acd2eee66',1,'core::tokenCreator::TokenCreator']]],
+  ['ret',['ret',['../namespacedvm.html#a774cb3477ef1029daa203ddce1354b95',1,'dvm']]],
+  ['retnsink',['retnSink',['../classcore_1_1instruction_1_1_context_change.html#a6213f85f71514131906b37e1201d1976',1,'core::instruction::ContextChange']]],
+  ['rundot',['runDot',['../namespacecompiler_1_1dot.html#ab8d86a047857d932d4a46bced06e74ba',1,'compiler::dot']]],
+  ['runtime_2epy',['runtime.py',['../runtime_8py.html',1,'']]]
 ];

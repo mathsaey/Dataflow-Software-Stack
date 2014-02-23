@@ -2,10 +2,2081 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>md__Users_mathsaey_Documents_Vub_Thesis_Repo_doc_IF1</Name>
+      <Name>addOperationInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>aa0358e6c4cd7ce27b25dfa19c7d1f97f</Anchor>
+    <Abstract>Add an operation instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addSink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a0a9167ffe1bc3f7d778cda3c1c77d334</Anchor>
+    <Abstract>Add a sink instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addContextChange</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>ade0cb4a02aac6b081a9f3c7108e74b14</Anchor>
+    <Abstract>Add a context change instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addContextRestore</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>ad150c9d50bdacb978da6423a3316abc4</Anchor>
+    <Abstract>Add a context restore instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addStopInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a803785af4adb84dbc665cba281df8aab</Anchor>
+    <Abstract>Add a stop instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a56fc7e50cda38141e414895f6b118357</Anchor>
+    <Abstract>Add a destination to a given instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>start</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>ad86476e99dd74e173d5949a6c486a03b</Anchor>
+    <Abstract>Start program execution. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser.html</Path>
+    <Anchor>a0dd29707e7f3446442354f71fd89ea03</Anchor>
+    <Abstract>Parses an IF1 file. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getSubGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a97236270f5dbabe7399b907178a00d28</Anchor>
+    <Abstract>Get a list of all the non-compound subgraphs in the program. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a95a9c96f7f63e643560fae0437e73417</Anchor>
+    <Abstract>Get a subgraph by name. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createGeneralSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>aa5e01d9c08014a16c7515ccda09fce12</Anchor>
+    <Abstract>Create a new subgraph. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a8d809c5810700d1e88c378e40b949784</Anchor>
+    <Abstract>Create a subgraph and add it to the program graph. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createCompoundSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a4f10b5e5d7d19146b2afb083a7248662</Anchor>
+    <Abstract>Create a subgraph for a compound node. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a27668aa4e23763aa37d853a2e13b4279</Anchor>
+    <Abstract>Create a node, add it to it&amp;#39;s subgraph and return it. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createOperationNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>aa19a1174fd67a1b35805b32137b3d8be</Anchor>
+    <Abstract>Create an operation node. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createCompoundNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>adb4e4303c598be7439365c74b9c3e052</Anchor>
+    <Abstract>Create a Compound node. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createCallNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>ac8c72c16f2bdae91e9604815dfe7d648</Anchor>
+    <Abstract>Create a call node. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a7d8963d3f7d865bd914daf40e70e4f6b</Anchor>
+    <Abstract>Add a literal to a port. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>connect</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a8d4b1dd299b3c727df94aef20c4c31a4</Anchor>
+    <Abstract>Connect 2 ports with an implicit edge. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::contextMatcher</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1context_matcher.html</Path>
+    <Anchor>a0cd8cef399df55ab3a62938e4b491da1</Anchor>
+    <DeclaredIn>contextMatcher.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::dispatcher</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1dispatcher.html</Path>
+    <Anchor>ad2e1a103f7b3f1652567c1747b150ddd</Anchor>
+    <DeclaredIn>dispatcher.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::instruction</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1instruction.html</Path>
+    <Anchor>acb7b0d0df307af5dbac16a6358ec591a</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>memory</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a50fc28a667ac098318aea1a1c98b4706</Anchor>
+    <Abstract>Get a reference to the instruction memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a1765945bfc16abcf7ecf4b56c4d5d1ee</Anchor>
+    <Abstract>Delete all the contents of the instruction memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>adcd75eabf1c237556ef1c8fc10702036</Anchor>
+    <Abstract>Get an instruction from the main memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>add</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
+    <Abstract>Add an instruction to the main memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>needsMatcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
+    <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__MEMORY__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a5b84f450c78cc01448f3e4ec8747c54f</Anchor>
+    <Abstract>Main instance of the instruction memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>start</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
+    <Abstract>Initialize the cores, and start program execution. </Abstract>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::scheduler</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1scheduler.html</Path>
+    <Anchor>a5ea400a0ded1ee3859e42a606c92507d</Anchor>
+    <DeclaredIn>scheduler.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tOP</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a4d5944f0d3b1a109b96fda406c04ded2</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fStart</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a38dab487e4bd6cb087b02f6acdeb57d7</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>body</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a66be8896b9a46ebecb591c4c283048ef</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fEnd</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a343a8de6502c996aa501f9cfd3dcec4f</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ret</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a774cb3477ef1029daa203ddce1354b95</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>call</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>ad88e2d02eb7028506fb84fca583630f8</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>pEnd</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a6af7202fb24ecdb8a9aaaae8a7d0cb4f</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>test</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a27e7c88e9f703c772a9137f0a69fabf9</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tag1</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>abc25460201325482af95747a9ab0132f</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tag2</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a1c3a37478828036ae2e788b221d06d02</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>token1</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a72ec68891acaa2906203c9626c210c11</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>token2</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>af775af6df819ae313ef142a423efbeb4</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FORMAT_STR</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>log</Scope>
+    </TokenIdentifier>
+    <Path>namespacelog.html</Path>
+    <Anchor>a036cd3135c3f1fcb5838e49ffb839312</Anchor>
+    <DeclaredIn>log.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>aea31a1aceed8455ba7179e254a677d6c</Anchor>
+    <Abstract>Add the attributes of the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a1f5178873440863fffb6ae47c7202667</Anchor>
+    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a51ed90df39d19a01c3a04bd2c40b8260</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a6ece59f004db7752481092f330c0af23</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>portString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a2b165c8b0265f5f5d824b0bfc595588a</Anchor>
+    <Abstract>Get a representation for a port. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ports</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>acaa819ccaaa232d873ce172287bd857a</Anchor>
+    <Abstract>String representation of a port list. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a6df36fb8b1f135d7e646440e6adf39d1</Anchor>
+    <Abstract>Get the portlist for the inputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>outputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a6a1175fd47928bf210540e06854f884d</Anchor>
+    <Abstract>Get the portlist for the outputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a7e29902b97989ad0da9f3d3c4055a0c4</Anchor>
+    <Abstract>Identifier of the node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>edgeStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a22d69d4cfb87904a0baa28982d59e7aa</Anchor>
+    <Abstract>Convert a connection to a string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLabel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>ae92a24a3e20437518443308493826e39</Anchor>
+    <Abstract>Add the label of the node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>aecd94322f518eca095440e929ff869f0</Anchor>
+    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>node</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>ad156d481575b1064cfe3673afb0760c0</Anchor>
+    <Abstract>Write the information of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>aa4eab18b90e883fddbf2b7367f654d7b</Anchor>
+    <Abstract>Write general dot information. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>a64ecb170a7342bba287d37909b9d47b2</Anchor>
+    <Abstract>Close the dot graph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>aa1c58f873cee40263ac5a2c07fb617b5</Anchor>
+    <Abstract>Create the dot string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotToFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>ab9fb1f388749ced3ba64ee867fae0920</Anchor>
+    <Abstract>Get the dot representation and write it to a file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>runDot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1dot.html</Path>
+    <Anchor>ab8d86a047857d932d4a46bced06e74ba</Anchor>
+    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>traverseAll</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>compiler::traverse</Scope>
+    </TokenIdentifier>
+    <Path>namespacecompiler_1_1traverse.html</Path>
+    <Anchor>a8e26de5b58a3972dc0f7a780f64889d4</Anchor>
+    <Abstract>Traverse all the nodes in the program. </Abstract>
+    <DeclaredIn>traverse.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loc</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>idis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceidis.html</Path>
+    <Anchor>a1bfb9c13f2d1de258fd1d08450789e83</Anchor>
+    <DeclaredIn>idis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getCompound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::compound</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1compound.html</Path>
+    <Anchor>aeb157d176f455da7d556512644237672</Anchor>
+    <DeclaredIn>compound.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__COMPOUNDS__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::compound</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1compound.html</Path>
+    <Anchor>a797383d1cc69393e996bfa86123543dd</Anchor>
+    <Abstract>Various IGR compound nodes. </Abstract>
+    <DeclaredIn>compound.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseEdge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>a9559e91a84e4c6938465015a28a21088</Anchor>
+    <Abstract>Parse an IF1 edge. </Abstract>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>a92dd2e5c05f3f871cac4da1b86c65cb6</Anchor>
+    <Abstract>Parse an IF1 literal. </Abstract>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_e_src_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>ab6b3aaa40dd8fb6a7adf486d13705243</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_e_srcp_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>a83d543868b4f99126b14f64585e9732a</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_e_dst_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>aa6c6a32f02ebca3a0633dab3f983c7e6</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_e_dstp_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>a21f5f5678370a692dff3d9c4721f6cb5</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_e_type_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>a821687d199f138ebb8dac888c619e1ed</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_l_dst_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>a30fe16c898b3258f53558f639fecca4e</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_l_dstp_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>af2f1987f8c469e0d9f82a4ad8da414bc</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_l_type_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>af50ab08adf9e8b6061c436b80d1c804c</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_l_str_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1edge.html</Path>
+    <Anchor>ae8e040d876e3208b5bfcc1b3daf0e936</Anchor>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>scope</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>ac3d3b545f999512679672bf888eba1b0</Anchor>
+    <Abstract>Create a new scope and push it on top of the stack. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>scopeCompound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a9c6dbe85da553aec7e1c56c5e8541dd3</Anchor>
+    <Abstract>Create a new compound scope and push it on top of the stack. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>popScope</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a55892a8042f043de0dc88bfc69c32043</Anchor>
+    <Abstract>Remove the current scope. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a96c29b707f105852877f2f57124309d1</Anchor>
+    <Abstract>Get the node with label in the current scope. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a85356c8a9cdc471a3629c9ef96a30f15</Anchor>
+    <Abstract>Add node with label to the current scope. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a14455ac1a0ea0244fba8ab51ca665784</Anchor>
+    <Abstract>Get the subgraph of the current scope. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a73edb1959ff472959bc7c95925c0f2f8</Anchor>
+    <Abstract>Add a subgraph to the compound scope. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getSubGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a265a80560eda3b9fca53f37793882e6e</Anchor>
+    <Abstract>Get the subgraphs. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isCompound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a0c850780cfb126dd8744cedbe3bf876d</Anchor>
+    <Abstract>Are we currently in a compound node? </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>enterComp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>aff6442e36aba86f0088dc3161abe3719</Anchor>
+    <Abstract>Enter a compound node. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>exitComp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>ae609458a57295c6f7730d4dc0f590b77</Anchor>
+    <Abstract>Exit a compound node. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__STACK__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a1a50b4e04442e44e141d765e027c574f</Anchor>
+    <Abstract>A stack with the global scope at the bottom, and the current scope at the top. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__COMP_LEVEL__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1environment.html</Path>
+    <Anchor>a15eaacefeb3026ee420764029bb3c20a</Anchor>
+    <Abstract>Keeps track of the level of depth w.r.t. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a89697113e8095d64609a253f171b2851</Anchor>
+    <Abstract>Parse a standard subgraph. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseCompoundSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a2bee103d1fa968453a1d358d694b77e0</Anchor>
+    <Abstract>Parse a subgraph of a compound node. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>ad0dd06cbdd5630636069753749ed2e60</Anchor>
+    <Abstract>Determine which kind of subgraph we are dealing with. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseStandardNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a67609389c413bfdbea665961eb32bc16</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseCallNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a661541c897b5679a2077bf843490961d</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>afdae404d604ba2636d4c389e6ff8668d</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseCompoundStart</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a3f57a04f39830c78e2e9665f522331eb</Anchor>
+    <Abstract>Parse the start of a compound node. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseCompoundEnd</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>aa1ed9df2e48b842d14243331bc05c241</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_n_label_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a7e73359ee93180378314c3b299dd14c4</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_n_code_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a906640d9aecb1ce3e14554ec29069a71</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_g_type_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>ae5482e02919eec68e9e680cc08a868dd</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_g_name_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a062ee6fa47cb357e918520fece8a5e04</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_cs_label_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a94743786d3c66b28007ea43d4f6f4a4c</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_cs_code_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a24bbd50e994940f70a4c29dfc93db18e</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_ce_label_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a6bde8f50ac658d818c6cd23f0282f3f1</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_ce_code_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>ad907dda66bf0bd8db91183c0d24f3672</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_ce_len_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>af0ce01c375d65354b9acafa93ef37643</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_ce_lis_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1graph.html</Path>
+    <Anchor>a6a1bf066ca410342d67b499e3c407e90</Anchor>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>a713a1927c51880060d46b2110891a75f</Anchor>
+    <Abstract>Add a subgraph to the program. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>bindName</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>a7daf14d676e6a93810df093fd0d5b48f</Anchor>
+    <Abstract>Add a subgraph to a given name. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getSubGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>aa4418c1b490408678b76c17154170b86</Anchor>
+    <Abstract>Get a list of all the non-compound subgraphs in the program. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>a8bfa02a943148ecfacbcd0afedca711a</Anchor>
+    <Abstract>Get a subgraph by name. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__SUBGRAPHS__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>afe7eab2a94fd262b1bb8810624eb3c1e</Anchor>
+    <Abstract>All of the functions in the program. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__FUNCTION_NAMES__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>a4102493c000554f42f6cf848de690e03</Anchor>
+    <Abstract>The function names, combined with the subgraph they map to. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>NoOp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a0a741f5ea0fe86ba990ee67ce8bd1bcb</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ALimL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a54e7205e016afe2a144d7f9583698680</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Not</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae421cef52091b1ec94118207b122c317</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Mod</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a6ca160c1fdd1edea3b853a3a6f933dfd</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Minus</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a67e4399d762b61ea393eaf50da4247b8</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Exp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>acd9a03fdb53ef23f94592905772bb488</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Max</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a4bf04cfca42c0ca750ac8e4c1b10f277</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Min</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>af90be32e7a800fece7ce921be0d0fdf8</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ASize</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a29aeda132ee6058909704d96618a4860</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Less</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae793f0e8600830d62ce48b34ef51bdab</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Div</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>aa875f15466b60b45cc2ac88535d89077</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Equal</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a5c212fea2d21a12db083f7ec71657574</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>NotEqual</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a60771d40f7f84b7d8f95d6c8c033300d</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>LessEqual</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a4d440c4a2f7b16992462ca41befb1726</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Neg</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>af5ae794043de1268093a4f473f9cfce2</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ARemL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a089e78ebe3d22477c95dafcb7c5e9d27</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ALimH</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a26f12a54e30f261de7a60bcb2b2c0640</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Bool</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a7621d450c56bf15c3fa86ef5e3ba7e9d</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Abs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>afd6d38e93f49593892b1918c8cf319a9</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Floor</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a2733796bfbc83ad9fac5f7168c55319b</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Double</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a786a08aed3755a37eb13a6495906f67f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AIsEmpty</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a6a3278b9f18b5daa9336938b005021ef</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RangeGenerate</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>adfaf63c92d6b98419afcccfd3158c9f3</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Single</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a5a37a940ed5c78b65f25946ed718a2a2</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Char</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae5805baffac4ac50930bf8436965bee2</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AAddL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a5d1f3b41925fe06da825367b8630f158</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AElement</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a69836b47ebefaba5d5755fc72c6d715f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ARemH</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a20e486027b4d99bc62d876cfbfc0be6b</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AAddH</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a68cb94ab4e47ac4570ea74065ddbb28a</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ABuild</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>af2e49d9294b093fc51db3f10584c4622</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BindArguments</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a27629531b19f89f4d2239c0e7dcdde20</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RedLeft</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>afa2d69b23dbaee2b0ca06e3212d1b8d0</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RedRight</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a11b8d867d7e206b7edd5c45f4b580354</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RedTree</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>aaa3c85b3fc9d0602ec52f58206cda3d6</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Reduce</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ab6a01eb36001d0054b3b93a1079f3d91</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ASetL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a9b6bcc6612db1edd6076c1d6439f8d4f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AScatter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a1ecb49bc18d1a603ada3d4533b31372a</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ACatenate</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a490893fcb6b9630196878e45d97e27d8</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AFill</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a94a6655d43c17f6953c7d0a726ac2cbd</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AGather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae34b8f131ecf51725b2e2f88c25ae749</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AReplace</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a3d6d3474c2eb773eee8fd25d56381135</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FirstValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a006d2db23dfc996d213614492fb19026</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FinalValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ac231db0d9ad4fbb9cb66677d99d73a5e</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Int</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ab92b04b2aafa97719e3210922c43139f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Plus</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a57038e09dabd93fe6fd8bc75165d4276</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Times</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>abcf1d769cfe15b26ad78e0247cc9a0e5</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getFunction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a2cad5d3c47b1b055e87bd5b1417794db</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_functions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ac5b586c12f40d91b5cc12bda2d0c6bba</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>skipLine</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::parser</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1parser.html</Path>
+    <Anchor>a2d4a84452234eb18b18bf7734f82310d</Anchor>
+    <Abstract>Skip a line #. </Abstract>
+    <DeclaredIn>parser.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseLine</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::parser</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1parser.html</Path>
+    <Anchor>abc99e0a3cd70f9aac6ea3878e52bdfde</Anchor>
+    <Abstract>Parse a single if1 line. </Abstract>
+    <DeclaredIn>parser.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::parser</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1parser.html</Path>
+    <Anchor>aeccd6ca9f1a71f3d78943ecbba250907</Anchor>
+    <Abstract>Parse a complete IF1 string. </Abstract>
+    <DeclaredIn>parser.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::parser</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1parser.html</Path>
+    <Anchor>ae59b6559232a12495c5a8fc0f9c317cb</Anchor>
+    <Abstract>Parses an IF1 file. </Abstract>
+    <DeclaredIn>parser.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__FUNCTIONS__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::parser</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1parser.html</Path>
+    <Anchor>acee573307f5a5a1c1257f0d46cdce19f</Anchor>
+    <Abstract>Parser values and the function to call when they are encountered. </Abstract>
+    <DeclaredIn>parser.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>warning</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::tools</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1tools.html</Path>
+    <Anchor>afbb6fe73c05c31cda4a0912d0029f382</Anchor>
+    <Abstract>Print a warning to stdout. </Abstract>
+    <DeclaredIn>tools.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>error</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::tools</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1tools.html</Path>
+    <Anchor>a1fb18a2807bc9956f256b59f78d87fbb</Anchor>
+    <Abstract>Print an error to stdout. </Abstract>
+    <DeclaredIn>tools.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::tools</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1tools.html</Path>
+    <Anchor>add8fde1a9f281aa426d604259e768c17</Anchor>
+    <DeclaredIn>tools.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getType</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>a51af0e361088d1735780e23103356f0e</Anchor>
+    <Abstract>Get a type from the pool. </Abstract>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseType</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>a1b9267adf04db75b47456ffaac018aea</Anchor>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_label_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>a4a7cc7bc7b5528d85f1a3122ccf9dcc7</Anchor>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_code_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>aeb636e369af183cef6823f366fdb2fbd</Anchor>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_arg_1_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>af0ad0c9eee89a1228642ca980610a541</Anchor>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_arg_2_idx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>a062cb0c83b6a76bec5f37147b1b3c9c4</Anchor>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_type_codes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>a9f51012fcb99a6061d1d3c80d6132bdd</Anchor>
+    <Abstract>The function that is needed to parse a given idx. </Abstract>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_basic_types</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>ad14723757fb16b37b92cc78718733c46</Anchor>
+    <Abstract>Basic type codes and the python types to match them. </Abstract>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_pool</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::type</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1type.html</Path>
+    <Anchor>a8a687832cbe47829e270c26fd9b5e014</Anchor>
+    <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::node</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1node.html</Path>
+    <Anchor>a1b8f36b680be632f7fc70930d43afd67</Anchor>
+    <Abstract>Generate unique id. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__KEY__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR::node</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1node.html</Path>
+    <Anchor>abcfb5be08585b7403aaeab935b645d44</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>md_doc_IF1</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
-    <Path>md___users_mathsaey__documents__vub__thesis__repo_doc__i_f1.html</Path>
+    <Path>md_doc__i_f1.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -307,12 +2378,12 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM</Name>
+      <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
+    <Path>namespacecore.html</Path>
     <Abstract>Dataflow Virtual Machine. </Abstract>
   </Token>
   <Token>
@@ -320,10 +2391,10 @@
       <Name>addOperationInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>a59a12b450e4749c042ab449e5b69ee9b</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>aa0358e6c4cd7ce27b25dfa19c7d1f97f</Anchor>
     <Abstract>Add an operation instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
@@ -332,10 +2403,10 @@
       <Name>addSink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>a62dede6f4b3e20fc6ccd330eb9a6cf96</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>a0a9167ffe1bc3f7d778cda3c1c77d334</Anchor>
     <Abstract>Add a sink instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
@@ -344,10 +2415,10 @@
       <Name>addContextChange</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>a9e976db0d56166a451adf23cfcc59e1c</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>ade0cb4a02aac6b081a9f3c7108e74b14</Anchor>
     <Abstract>Add a context change instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
@@ -356,10 +2427,10 @@
       <Name>addContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>af852f7da26b4029715ada695fc090afd</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>ad150c9d50bdacb978da6423a3316abc4</Anchor>
     <Abstract>Add a context restore instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
@@ -368,10 +2439,10 @@
       <Name>addStopInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>a68d19fcd4008f726f8d1107564893a9a</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>a803785af4adb84dbc665cba281df8aab</Anchor>
     <Abstract>Add a stop instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
@@ -380,10 +2451,10 @@
       <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>a9eb72a2ffbf51243eb43f94c15985e0a</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>a56fc7e50cda38141e414895f6b118357</Anchor>
     <Abstract>Add a destination to a given instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
@@ -392,31 +2463,31 @@
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM</Scope>
+      <Scope>core</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m.html</Path>
-    <Anchor>a9151c56c4056f821b1cf06eb369a8b80</Anchor>
+    <Path>namespacecore.html</Path>
+    <Anchor>ad86476e99dd74e173d5949a6c486a03b</Anchor>
     <Abstract>Start program execution. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::context</Name>
+      <Name>core::context</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::context</Scope>
+      <Scope>core::context</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1context.html</Path>
+    <Path>namespacecore_1_1context.html</Path>
     <Abstract>DVM Contexts. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::context::Context</Name>
+      <Name>core::context::Context</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
+    <Path>classcore_1_1context_1_1_context.html</Path>
     <Abstract>DVM Context. </Abstract>
   </Token>
   <Token>
@@ -424,10 +2495,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>acda7f3deeecb7d4f1cb1208179b540b0</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>aa00755cdcb09fe82178c8fa8ad8ee6e4</Anchor>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
   <Token>
@@ -435,10 +2506,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>a56d70407184c5be2c58512de825bf8ad</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>ab787fc52c9b425cbf793763950710689</Anchor>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
   <Token>
@@ -446,10 +2517,10 @@
       <Name>__eq__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>a90b8580a6ad29bfe17354f49a5cc32ac</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>ae88ac6bb47bad0347c07ba0af1e1cafa</Anchor>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
   <Token>
@@ -457,10 +2528,10 @@
       <Name>__hash__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>a9606a141f3be4937b527ee1a9f2b4a1d</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>a2302bfe6bd5aa1aa0fa31a88b947403e</Anchor>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
   <Token>
@@ -468,10 +2539,10 @@
       <Name>hashPair</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>a5ea02a35cda7ebc1b18dad6ea23b8369</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>ae51b14b3a342550aca63b51295d0ed41</Anchor>
     <Abstract>Generate a unique, integral identifier for a pair of non-negative integers. </Abstract>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
@@ -480,10 +2551,10 @@
       <Name>unhashPair</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>a27ebb4d3b811976ecfe736117829bb3b</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>a9a244d4869346fc5e178932c5c343901</Anchor>
     <Abstract>Unhashes the hash. </Abstract>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
@@ -492,19 +2563,19 @@
       <Name>hash</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.context.Context</Scope>
+      <Scope>core.context.Context</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context.html</Path>
-    <Anchor>acc3a360954b2391c5b036188c4dcdbb5</Anchor>
+    <Path>classcore_1_1context_1_1_context.html</Path>
+    <Anchor>a397854106f13a8c74cd34b86b67257f7</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::context::ContextCreator</Name>
+      <Name>core::context::ContextCreator</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.context.ContextCreator</Scope>
+      <Scope>core.context.ContextCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context_creator.html</Path>
+    <Path>classcore_1_1context_1_1_context_creator.html</Path>
     <Abstract>Context creator. </Abstract>
   </Token>
   <Token>
@@ -512,10 +2583,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.ContextCreator</Scope>
+      <Scope>core.context.ContextCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context_creator.html</Path>
-    <Anchor>a558a5ed9fb9b6d65e6dbf98a62366025</Anchor>
+    <Path>classcore_1_1context_1_1_context_creator.html</Path>
+    <Anchor>acbfd5b6f1c014eeb3688b266f0a4e086</Anchor>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
   <Token>
@@ -523,10 +2594,10 @@
       <Name>get</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.context.ContextCreator</Scope>
+      <Scope>core.context.ContextCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context_creator.html</Path>
-    <Anchor>a539c034e2c8f5aebab0c7ad53597953e</Anchor>
+    <Path>classcore_1_1context_1_1_context_creator.html</Path>
+    <Anchor>aaee11a8561c03ae27303a03886cb2602</Anchor>
     <DeclaredIn>context.py</DeclaredIn>
   </Token>
   <Token>
@@ -534,29 +2605,29 @@
       <Name>prefix</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.context.ContextCreator</Scope>
+      <Scope>core.context.ContextCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context_creator.html</Path>
-    <Anchor>ad50a366316acf9ac979e340d1f670d22</Anchor>
+    <Path>classcore_1_1context_1_1_context_creator.html</Path>
+    <Anchor>ae04cb283ad9a8e639f70b06865a9dd83</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>current</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.context.ContextCreator</Scope>
+      <Scope>core.context.ContextCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_1_1_context_creator.html</Path>
-    <Anchor>a0ac8c2cab7628bfa5bf6c5429880b5ba</Anchor>
+    <Path>classcore_1_1context_1_1_context_creator.html</Path>
+    <Anchor>ab819bd36118d0441374ebdf11b3b228e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::contextMatcher</Name>
+      <Name>core::contextMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::contextMatcher</Scope>
+      <Scope>core::contextMatcher</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1context_matcher.html</Path>
+    <Path>namespacecore_1_1context_matcher.html</Path>
     <Abstract>DVM context matcher. </Abstract>
   </Token>
   <Token>
@@ -564,20 +2635,20 @@
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM::contextMatcher</Scope>
+      <Scope>core::contextMatcher</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1context_matcher.html</Path>
-    <Anchor>ab38cf0c0dffbcde7e3d1fb79133bc1ab</Anchor>
+    <Path>namespacecore_1_1context_matcher.html</Path>
+    <Anchor>a0cd8cef399df55ab3a62938e4b491da1</Anchor>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::contextMatcher::ContextMatcher</Name>
+      <Name>core::contextMatcher::ContextMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
     <Abstract>DVM Context matcher. </Abstract>
   </Token>
   <Token>
@@ -585,10 +2656,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>afc386813988401c46e3f4afffc487ea5</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
     <Abstract>Initialize a context matcher. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
@@ -597,10 +2668,10 @@
       <Name>checkKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a4534eddaafdc727dbaf1e4a87fb65e01</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a9e6d1dde230adb9e29d0c0fd3d3ad250</Anchor>
     <Abstract>See if a given key is already a part of the tokens we are matching. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
@@ -609,10 +2680,10 @@
       <Name>updateKeyArr</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>adaacbfd816113b95853e9d0d47ab0624</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a040a3c5584f1f369233e330dfbd36937</Anchor>
     <Abstract>Update the token array for a key This method assumes that there is an array for the given key...</Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
@@ -621,10 +2692,10 @@
       <Name>isKeyReady</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a0b1ebbe3cdc27ccf1b6921ba0adaaf14</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>aea471414c34c2081f396227dfeebfc8b</Anchor>
     <Abstract>See if all the input tokens are present for a given key. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
@@ -633,10 +2704,10 @@
       <Name>executeKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a2e72e44ab6ed806a037ec9dd82a15bd7</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a06d0216c7e4c4ffc499f394769a67ccb</Anchor>
     <Abstract>Add the tokens for key to the scheduler. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
@@ -645,10 +2716,10 @@
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a2e02048afb15ea2be2d5b060dc10e57f</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a898844014caa85d4f0c1ceb99237e80d</Anchor>
     <Abstract>Add a token to the matcher. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
@@ -657,10 +2728,10 @@
       <Name>tokens</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a2d237f8580752a406bd6e2970a05de57</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a8e5a39e53adfd4c5c0dfd08a42a6ad7b</Anchor>
     <Abstract>Dictionary that contains the tokens for all the keys. </Abstract>
   </Token>
   <Token>
@@ -668,20 +2739,20 @@
       <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.contextMatcher.ContextMatcher</Scope>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a3efd433e7b930b68c4adc08f0bae28dc</Anchor>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a8c187035839a8d512720904c08624566</Anchor>
     <Abstract>Reference to the DVM::Core. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::dispatcher</Name>
+      <Name>core::dispatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::dispatcher</Scope>
+      <Scope>core::dispatcher</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1dispatcher.html</Path>
+    <Path>namespacecore_1_1dispatcher.html</Path>
     <Abstract>DVM token dispatcher. </Abstract>
   </Token>
   <Token>
@@ -689,20 +2760,20 @@
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM::dispatcher</Scope>
+      <Scope>core::dispatcher</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1dispatcher.html</Path>
-    <Anchor>aaeaa09fd310d9799661cdd9ae393b988</Anchor>
+    <Path>namespacecore_1_1dispatcher.html</Path>
+    <Anchor>ad2e1a103f7b3f1652567c1747b150ddd</Anchor>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::dispatcher::TokenDispatcher</Name>
+      <Name>core::dispatcher::TokenDispatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
     <Abstract>Token Dispatcher. </Abstract>
   </Token>
   <Token>
@@ -710,10 +2781,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>a991db1f4c1c6805e23b903de461eda71</Anchor>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Anchor>aa30c96ec3aa980af5ff5c42c22ef61d7</Anchor>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -721,10 +2792,10 @@
       <Name>checkSpecial</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>aff1d7ff065eca33e3cbd0917622d8b90</Anchor>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Anchor>a7c5f88838461ebc5c2f4e6ae6f12f48a</Anchor>
     <Abstract>See if a given token is a special token. </Abstract>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
@@ -733,10 +2804,10 @@
       <Name>processSpecial</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>a4ceacd6eaa091a054cdc9c49ae042636</Anchor>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Anchor>a14ba14bb62cff7967ae8417e7938e016</Anchor>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -744,10 +2815,10 @@
       <Name>processStandard</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>af2a215fbfb4ef9edcb1adf30bac969bc</Anchor>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Anchor>a2f14155d26e17d4ab14dbf1dbf821623</Anchor>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -755,10 +2826,10 @@
       <Name>process</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>a0dca015dd4ff41458fbca64c547b3837</Anchor>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Anchor>aea9d3ed1662329987b9a886c8e2b5466</Anchor>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -766,19 +2837,19 @@
       <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.dispatcher.TokenDispatcher</Scope>
+      <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>abc9b840118638425c99ec185b9807576</Anchor>
+    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
+    <Anchor>ab368168c9cf6744c450129aa3182ded2</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction</Name>
+      <Name>core::instruction</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::instruction</Scope>
+      <Scope>core::instruction</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1instruction.html</Path>
+    <Path>namespacecore_1_1instruction.html</Path>
     <Abstract>DVM instruction definitions. </Abstract>
   </Token>
   <Token>
@@ -786,20 +2857,20 @@
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM::instruction</Scope>
+      <Scope>core::instruction</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1instruction.html</Path>
-    <Anchor>a1d560bf40141ab7f46dfc787bb495f7e</Anchor>
+    <Path>namespacecore_1_1instruction.html</Path>
+    <Anchor>acb7b0d0df307af5dbac16a6358ec591a</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::AbstractInstruction</Name>
+      <Name>core::instruction::AbstractInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
     <Abstract>General DVM instruction. </Abstract>
   </Token>
   <Token>
@@ -807,10 +2878,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a24d8a8beb745da6e2db56b10d037aeed</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>aae732b6ec590dac0cddc3426fa96658a</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -818,10 +2889,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -830,10 +2901,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -842,10 +2913,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>acd49db21f229dfa64c388b169ddaa8ae</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
     <Abstract>Execute an instruction with a given input and a core. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -854,10 +2925,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a12034217185a8141ef9c021b2f5158b1</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -866,19 +2937,19 @@
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::StaticInstruction</Name>
+      <Name>core::instruction::StaticInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
     <Abstract>A static instruction will always send it&amp;#39;s output to the same instructions. </Abstract>
   </Token>
   <Token>
@@ -886,10 +2957,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a4e9ce3c84c7df5c3cf8e5d26a633613f</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a8910598506429ab84a1cc667de97bcae</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -897,10 +2968,10 @@
       <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a88114699a56338db21bb3dca155a49ae</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
     <Abstract>Add a destination to this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -909,10 +2980,10 @@
       <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a24fabe79f3d59e3840347173d6e2b751</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
     <Abstract>Send a datum to any destination of a given output port. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -921,10 +2992,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -933,10 +3004,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -945,10 +3016,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>acd49db21f229dfa64c388b169ddaa8ae</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
     <Abstract>Execute an instruction with a given input and a core. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -957,10 +3028,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a12034217185a8141ef9c021b2f5158b1</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -969,29 +3040,29 @@
       <Name>destinations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>ab637b6104aa58719eeb19c4f837b143b</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::OperationInstruction</Name>
+      <Name>core::instruction::OperationInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Abstract>An operation instruction defines a single operation on all of it&amp;#39;s inputs. </Abstract>
   </Token>
   <Token>
@@ -999,10 +3070,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a84c7caa2f3105892e89b8a4d952964b6</Anchor>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1010,10 +3081,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a8d3f3be923f94d1d728e9afb77847ec2</Anchor>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>af3c0e2b92be32e49dfbca6307833dfa7</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1021,10 +3092,10 @@
       <Name>sendResults</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a3a0a9ac262036a357c8cb2340f686b98</Anchor>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a01795f99a948bc57c713a8700ef89353</Anchor>
     <Abstract>Send results to the relevant destinations. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1033,10 +3104,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a15f4da7965b783fffe2237ab21b1f7a9</Anchor>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a8abe301191403572cbad6ad631081f0a</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1044,10 +3115,10 @@
       <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a88114699a56338db21bb3dca155a49ae</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
     <Abstract>Add a destination to this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1056,10 +3127,10 @@
       <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a24fabe79f3d59e3840347173d6e2b751</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
     <Abstract>Send a datum to any destination of a given output port. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1068,10 +3139,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1080,10 +3151,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1092,49 +3163,49 @@
       <Name>operation</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a27824b467c6c9f8050f2fb3f69fe1dad</Anchor>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a80fc6d22e7a4cca9d863d874cce28379</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.OperationInstruction</Scope>
+      <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>ab9cbfd0a7077e9f033f08ba134c1419d</Anchor>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a439f00978854df97a819c8d7b19e6138</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>destinations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>ab637b6104aa58719eeb19c4f837b143b</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::Sink</Name>
+      <Name>core::instruction::Sink</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.Sink</Scope>
+      <Scope>core.instruction.Sink</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_sink.html</Path>
+    <Path>classcore_1_1instruction_1_1_sink.html</Path>
     <Abstract>Sink instruction. </Abstract>
   </Token>
   <Token>
@@ -1142,10 +3213,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.Sink</Scope>
+      <Scope>core.instruction.Sink</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_sink.html</Path>
-    <Anchor>aea981d8ff46c9b043756b104b70937a8</Anchor>
+    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+    <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1153,10 +3224,10 @@
       <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a88114699a56338db21bb3dca155a49ae</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
     <Abstract>Add a destination to this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1165,10 +3236,10 @@
       <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a24fabe79f3d59e3840347173d6e2b751</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
     <Abstract>Send a datum to any destination of a given output port. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1177,10 +3248,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1189,10 +3260,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1201,10 +3272,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a12034217185a8141ef9c021b2f5158b1</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1213,29 +3284,29 @@
       <Name>destinations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.StaticInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>ab637b6104aa58719eeb19c4f837b143b</Anchor>
+    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
+    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::ContextChange</Name>
+      <Name>core::instruction::ContextChange</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.ContextChange</Scope>
+      <Scope>core.instruction.ContextChange</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_change.html</Path>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
     <Abstract>Represents a context change in the program. </Abstract>
   </Token>
   <Token>
@@ -1243,10 +3314,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.ContextChange</Scope>
+      <Scope>core.instruction.ContextChange</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_change.html</Path>
-    <Anchor>a0796af5201409f24288f0f8d236ee1f7</Anchor>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a23525affdb05a164623a520998048ab4</Anchor>
     <Abstract>Initialize a context change instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1255,10 +3326,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.ContextChange</Scope>
+      <Scope>core.instruction.ContextChange</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_change.html</Path>
-    <Anchor>ab197ccb7b942c0553c92b30050b95613</Anchor>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a5c61748c4ea33e916f5a3c57b0a04ae2</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1266,10 +3337,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1278,10 +3349,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1290,10 +3361,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a12034217185a8141ef9c021b2f5158b1</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1302,49 +3373,49 @@
       <Name>retnSink</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.ContextChange</Scope>
+      <Scope>core.instruction.ContextChange</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_change.html</Path>
-    <Anchor>af91c5f7234c6b70087a48e5900f0fb85</Anchor>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a6213f85f71514131906b37e1201d1976</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>destSink</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.ContextChange</Scope>
+      <Scope>core.instruction.ContextChange</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_change.html</Path>
-    <Anchor>af9cb5db3eb3844ad1fd20f48e0ffa5bf</Anchor>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a8c3d69bd61884b15c178e10b938d61fb</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>contexts</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.ContextChange</Scope>
+      <Scope>core.instruction.ContextChange</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_change.html</Path>
-    <Anchor>aa2aa635c2c4c4441dbf12da2f11e2726</Anchor>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a0f3e68192d500a3ed4d8915dafee9adf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::ContextRestore</Name>
+      <Name>core::instruction::ContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.ContextRestore</Scope>
+      <Scope>core.instruction.ContextRestore</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_restore.html</Path>
+    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
     <Abstract>Represents the restoration of context. </Abstract>
   </Token>
   <Token>
@@ -1352,10 +3423,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.ContextRestore</Scope>
+      <Scope>core.instruction.ContextRestore</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_context_restore.html</Path>
-    <Anchor>afc37a0504db31886f1a86d0ea2d6d7f0</Anchor>
+    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+    <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1363,10 +3434,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1375,10 +3446,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1387,10 +3458,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a12034217185a8141ef9c021b2f5158b1</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1399,19 +3470,19 @@
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::instruction::StopInstruction</Name>
+      <Name>core::instruction::StopInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.instruction.StopInstruction</Scope>
+      <Scope>core.instruction.StopInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_stop_instruction.html</Path>
+    <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
     <Abstract>Represents the end of the program. </Abstract>
   </Token>
   <Token>
@@ -1419,10 +3490,10 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.StopInstruction</Scope>
+      <Scope>core.instruction.StopInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_stop_instruction.html</Path>
-    <Anchor>a147d7c03bb2b7d4f7f06e3d8ccde4797</Anchor>
+    <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
+    <Anchor>a321e1aca9cfeaacd1fc07d7eac890e83</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -1430,10 +3501,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a056c468768ee25e2c77c99e16e31826e</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1442,10 +3513,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a9dbaecb044fae06aea3adbf8973a0ae0</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1454,10 +3525,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a12034217185a8141ef9c021b2f5158b1</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -1466,19 +3537,19 @@
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.AbstractInstruction</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ae6591da4e4bed825e3087802295f5963</Anchor>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::memory</Name>
+      <Name>core::memory</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
+    <Path>namespacecore_1_1memory.html</Path>
     <Abstract>DVM instruction memory. </Abstract>
   </Token>
   <Token>
@@ -1486,10 +3557,10 @@
       <Name>memory</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
-    <Anchor>a0c06ff1a6f0bd776e56be80c327a4922</Anchor>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a50fc28a667ac098318aea1a1c98b4706</Anchor>
     <Abstract>Get a reference to the instruction memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1498,10 +3569,10 @@
       <Name>reset</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
-    <Anchor>a9f3a62726dc28e889c6ae75da00647c2</Anchor>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a1765945bfc16abcf7ecf4b56c4d5d1ee</Anchor>
     <Abstract>Delete all the contents of the instruction memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1510,10 +3581,10 @@
       <Name>get</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
-    <Anchor>a906782da1939fe52152742e7499d275e</Anchor>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>adcd75eabf1c237556ef1c8fc10702036</Anchor>
     <Abstract>Get an instruction from the main memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1522,10 +3593,10 @@
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
-    <Anchor>a4612823038a8ba5d6ca8c500ddb916e1</Anchor>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
     <Abstract>Add an instruction to the main memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1534,10 +3605,10 @@
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
-    <Anchor>ad80e134213050198e7aaf09d8d4f8605</Anchor>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
     <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1546,21 +3617,21 @@
       <Name>__MEMORY__</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM::memory</Scope>
+      <Scope>core::memory</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1memory.html</Path>
-    <Anchor>a08057f7ce70640c079ca78a48bc80efc</Anchor>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a5b84f450c78cc01448f3e4ec8747c54f</Anchor>
     <Abstract>Main instance of the instruction memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::memory::InstructionMemory</Name>
+      <Name>core::memory::InstructionMemory</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
     <Abstract>The Instruction memory stores all of the instructions in the program. </Abstract>
   </Token>
   <Token>
@@ -1568,10 +3639,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a6014472c4650594387be8fe37234d585</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>a8f22fa3395b472a1156813e40234b4a3</Anchor>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
@@ -1579,10 +3650,10 @@
       <Name>getInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a238dcee501aee77844148a59c7eef40f</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>a2fc4da432d20b96fca09634e3e72564c</Anchor>
     <Abstract>Get a single instruction from memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1591,10 +3662,10 @@
       <Name>reserveStandardSlot</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a1f8b52704df9bdd12d90eed370e8ac19</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>a92ade01747ad87f2278c2d277d0624f2</Anchor>
     <Abstract>Reserve a slot for an instruction that does not require any context matching. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1603,10 +3674,10 @@
       <Name>reserveMatcherSlot</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>abfa086f3d4f2a474084c25fb9b81578b</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>aeb8de7103791921191c8b0ca0cbfdee8</Anchor>
     <Abstract>Reserve a slot for an instruction that requires context matching. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1615,10 +3686,10 @@
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>af9d6b031e5520077353992cc8730f06e</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>a5b9011b58141e7c5820fbd1626b5cfc6</Anchor>
     <Abstract>Add an instruction to the memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1627,10 +3698,10 @@
       <Name>get</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a97bb7c4b3a30b7866f257c664bf217df</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>a047af687ab2c0eff932921536d372ee5</Anchor>
     <Abstract>Get an instruction from memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
@@ -1639,39 +3710,39 @@
       <Name>memory</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>ae32946ef144e77a4715475304ecb7192</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>acab6a9aa37ed255cb29c3c7a17066f87</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>matcherKey</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a01d48c49eb336df26f1439674a60210e</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>a415c04364758b0cc3c5a95d4e00ff55e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>standardKey</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.memory.InstructionMemory</Scope>
+      <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a1959fa4382d14cade91969d8f8eed939</Anchor>
+    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
+    <Anchor>af52627e37b9705a4be07242e4844384f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::runtime</Name>
+      <Name>core::runtime</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::runtime</Scope>
+      <Scope>core::runtime</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1runtime.html</Path>
+    <Path>namespacecore_1_1runtime.html</Path>
     <Abstract>DVM runtime core. </Abstract>
   </Token>
   <Token>
@@ -1679,10 +3750,10 @@
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>DVM::runtime</Scope>
+      <Scope>core::runtime</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1runtime.html</Path>
-    <Anchor>ac97abf5d744555649570d865918db4c8</Anchor>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
     <Abstract>Initialize the cores, and start program execution. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1691,20 +3762,20 @@
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM::runtime</Scope>
+      <Scope>core::runtime</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1runtime.html</Path>
-    <Anchor>a3870ce867624ad722e3b49bccd350e3f</Anchor>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::runtime::Core</Name>
+      <Name>core::runtime::Core</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
     <Abstract>Runtime core. </Abstract>
   </Token>
   <Token>
@@ -1712,10 +3783,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a30169c7ea58301c1200227ea5eb87f3a</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a416d30561a502284b0a28dbfcb4a4783</Anchor>
     <Abstract>Initialize a core. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1724,10 +3795,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a7b41e3f41f30d5438d0bf387119f40dd</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>ae748c9fd32214e858f8e0b54330c5bac</Anchor>
     <Abstract>String representation of a core. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1736,10 +3807,10 @@
       <Name>__eq__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a66046a01fd91b2bc9ef02e79dc255db2</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a3f4bf085471d8c1c0ee22fe81641cd08</Anchor>
     <Abstract>See if 2 cores are equal. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1748,10 +3819,10 @@
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a20c79cf10db2ebaee72077e186632b36</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>ad51c3e0d80dfb4b84389014432ba8c58</Anchor>
     <Abstract>Add a token to the inbox of a core. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1760,10 +3831,10 @@
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>ac847e25a9031f48ba3198f40245f11e8</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>ad1c6da697790371c9dbd223aab9690bc</Anchor>
     <Abstract>Set up the multiprocessing elements of the core and start the runtime. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1772,10 +3843,10 @@
       <Name>stop</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>ac46824c90a92939d271db64b7df3e56a</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a8fac04766062ea999c54c68f974badfa</Anchor>
     <Abstract>Stop the current core. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
@@ -1784,10 +3855,10 @@
       <Name>memory</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a14f65f90ec77765816cee8b2c45b7804</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a46680112981cfdfabb154f9041e3f0f6</Anchor>
     <Abstract>Instruction memory. </Abstract>
   </Token>
   <Token>
@@ -1795,10 +3866,10 @@
       <Name>identifier</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a49d6a62eddeb7b03af45cd419243e466</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>afa23bc7ed2ad6b4e77b0857ac73d0e91</Anchor>
     <Abstract>Identifier of this core. </Abstract>
   </Token>
   <Token>
@@ -1806,10 +3877,10 @@
       <Name>active</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>ac2ab9553f0c787c1c74cb7075402a40e</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a4e2ec1436045d4e89011202f44382521</Anchor>
     <Abstract>See if this core is running. </Abstract>
   </Token>
   <Token>
@@ -1817,10 +3888,10 @@
       <Name>inbox</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>ae49ae70a0e86e127f623a5f17971dd96</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
     <Abstract>Message Queue of this core. </Abstract>
   </Token>
   <Token>
@@ -1828,10 +3899,10 @@
       <Name>cores</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a9556b72140a88cb55baa1c8a658e8a52</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a90a51e4b4297931c50cfd3c12ba4d517</Anchor>
     <Abstract>Message Queues of the other cores. </Abstract>
   </Token>
   <Token>
@@ -1839,10 +3910,10 @@
       <Name>contextCreator</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a42b85146ebf6146d752eda078bbc3c5b</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>af063d02573dfb186742531c844fd8f95</Anchor>
     <Abstract>Context creator for this core. </Abstract>
   </Token>
   <Token>
@@ -1850,10 +3921,10 @@
       <Name>tokenCreator</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>ae56d640382f7abc5b59914279d04e5e1</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>ae8c7893d3330ff05188d87aa7f792d2b</Anchor>
     <Abstract>Token creator for this core. </Abstract>
   </Token>
   <Token>
@@ -1861,10 +3932,10 @@
       <Name>dispatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a3636c8fbebcfb99c5ff66aeb31bd2e4d</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a068f6f9ef6dd9b1dac8c59dc8c3e9e6f</Anchor>
     <Abstract>Token dispatcher for this core. </Abstract>
   </Token>
   <Token>
@@ -1872,10 +3943,10 @@
       <Name>scheduler</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>af6d628efcca4146ec56f743aa37e6bb7</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a7e5b0c28dae815f8a259cb7db70eb6e7</Anchor>
     <Abstract>Scheduler for this core. </Abstract>
   </Token>
   <Token>
@@ -1883,20 +3954,20 @@
       <Name>matcher</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.runtime.Core</Scope>
+      <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1runtime_1_1_core.html</Path>
-    <Anchor>a79ef487c7faa8f216b81c6f421c75544</Anchor>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>af4759bad6aa35362a6efd93487c974d1</Anchor>
     <Abstract>Context matcher for this core. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::scheduler</Name>
+      <Name>core::scheduler</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::scheduler</Scope>
+      <Scope>core::scheduler</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1scheduler.html</Path>
+    <Path>namespacecore_1_1scheduler.html</Path>
     <Abstract>DVM instruction scheduler. </Abstract>
   </Token>
   <Token>
@@ -1904,20 +3975,20 @@
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM::scheduler</Scope>
+      <Scope>core::scheduler</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1scheduler.html</Path>
-    <Anchor>a0f278094b7deb61fe12c67d060fb2e3e</Anchor>
+    <Path>namespacecore_1_1scheduler.html</Path>
+    <Anchor>a5ea400a0ded1ee3859e42a606c92507d</Anchor>
     <DeclaredIn>scheduler.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::scheduler::Scheduler</Name>
+      <Name>core::scheduler::Scheduler</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.scheduler.Scheduler</Scope>
+      <Scope>core.scheduler.Scheduler</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1scheduler_1_1_scheduler.html</Path>
+    <Path>classcore_1_1scheduler_1_1_scheduler.html</Path>
     <Abstract>DVM Scheduler. </Abstract>
   </Token>
   <Token>
@@ -1925,10 +3996,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.scheduler.Scheduler</Scope>
+      <Scope>core.scheduler.Scheduler</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1scheduler_1_1_scheduler.html</Path>
-    <Anchor>aa80916222a1e01ae8a20bf7445cfb44b</Anchor>
+    <Path>classcore_1_1scheduler_1_1_scheduler.html</Path>
+    <Anchor>a5157d9e27a945a7b5036f89e6bc0535b</Anchor>
     <DeclaredIn>scheduler.py</DeclaredIn>
   </Token>
   <Token>
@@ -1936,10 +4007,10 @@
       <Name>schedule</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.scheduler.Scheduler</Scope>
+      <Scope>core.scheduler.Scheduler</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1scheduler_1_1_scheduler.html</Path>
-    <Anchor>a2e48eb8d42415e1b70f7cee301e0544b</Anchor>
+    <Path>classcore_1_1scheduler_1_1_scheduler.html</Path>
+    <Anchor>a87b47093624481748a7d185c9527ae52</Anchor>
     <DeclaredIn>scheduler.py</DeclaredIn>
   </Token>
   <Token>
@@ -1947,29 +4018,29 @@
       <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.scheduler.Scheduler</Scope>
+      <Scope>core.scheduler.Scheduler</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1scheduler_1_1_scheduler.html</Path>
-    <Anchor>acc9343cc90789b23d5f5c3fc3bc6aac6</Anchor>
+    <Path>classcore_1_1scheduler_1_1_scheduler.html</Path>
+    <Anchor>a2c366d24dc034bfd15a6ea44af35ce7e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::token</Name>
+      <Name>core::token</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::token</Scope>
+      <Scope>core::token</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1token.html</Path>
+    <Path>namespacecore_1_1token.html</Path>
     <Abstract>DVM Tagged tokens. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::token::Token</Name>
+      <Name>core::token::Token</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.token.Token</Scope>
+      <Scope>core.token.Token</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_token.html</Path>
+    <Path>classcore_1_1token_1_1_token.html</Path>
     <Abstract>Represents a DVM token. </Abstract>
   </Token>
   <Token>
@@ -1977,10 +4048,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.Token</Scope>
+      <Scope>core.token.Token</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_token.html</Path>
-    <Anchor>ada613b46108197cc1a5b1aa2bb35127c</Anchor>
+    <Path>classcore_1_1token_1_1_token.html</Path>
+    <Anchor>a266d13c3ecfbafc4dde0a46d3a8936e7</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -1988,10 +4059,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.Token</Scope>
+      <Scope>core.token.Token</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_token.html</Path>
-    <Anchor>a1d53bdec6928a6382cb43180437699e0</Anchor>
+    <Path>classcore_1_1token_1_1_token.html</Path>
+    <Anchor>a6b079e8a875eab3d8791b81d7b002b74</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -1999,29 +4070,29 @@
       <Name>datum</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.token.Token</Scope>
+      <Scope>core.token.Token</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_token.html</Path>
-    <Anchor>a63b1e4e2abdf9781c67a8d6e5e380c49</Anchor>
+    <Path>classcore_1_1token_1_1_token.html</Path>
+    <Anchor>ad7d1d5e1160b13f8c06cf99eb33868ab</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>tag</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.token.Token</Scope>
+      <Scope>core.token.Token</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_token.html</Path>
-    <Anchor>a03d6d86bf8b1e5544912af43312a9de6</Anchor>
+    <Path>classcore_1_1token_1_1_token.html</Path>
+    <Anchor>abd4543cdd23c84a91085f7b7927b74e5</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::token::AbstractTag</Name>
+      <Name>core::token::AbstractTag</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.token.AbstractTag</Scope>
+      <Scope>core.token.AbstractTag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_abstract_tag.html</Path>
+    <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
     <Abstract>Represents a tag. </Abstract>
   </Token>
   <Token>
@@ -2029,20 +4100,20 @@
       <Name>isSpecial</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.AbstractTag</Scope>
+      <Scope>core.token.AbstractTag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_abstract_tag.html</Path>
-    <Anchor>a6231be7488327d2c874b681d86d43ae5</Anchor>
+    <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
+    <Anchor>a45727b7c8006cfbeff640316403305b5</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::token::Tag</Name>
+      <Name>core::token::Tag</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
     <Abstract>Standard tag. </Abstract>
   </Token>
   <Token>
@@ -2050,10 +4121,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>a3da86a22f34a087e15604de2586500b5</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>aa5769c1f47cfc3ae74a3553247ab9d99</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -2061,10 +4132,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>a02802d0d0aec881eaee8388e01c48500</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>a2218733abfa5d6df7a31de2585f70676</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -2072,10 +4143,10 @@
       <Name>isSpecial</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>ac7ff75c9ac2930c238d9a27395b403be</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>ae8c8ac606602af970c01308c79f47515</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -2083,49 +4154,49 @@
       <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>a4868022ad3b9701850a4b61b1b6f4438</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>a64b66df1c4d8f4cd44ddc1cf4e72034f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>cont</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>a5b629fffcf3da4f381646465eb677b55</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>aa795f56c33f2d4889874f92895ac5554</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>port</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>afd536a73edc187bcf81a3fb63e18d3da</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>a2792a4e18abe954a2af3b784ea58f478</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>inst</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.token.Tag</Scope>
+      <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_tag.html</Path>
-    <Anchor>ac54a9a1b8fe0c7e2ece4ba65139b8600</Anchor>
+    <Path>classcore_1_1token_1_1_tag.html</Path>
+    <Anchor>ac13dace193894359e5d79420f8685fe8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::token::STag</Name>
+      <Name>core::token::STag</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.token.STag</Scope>
+      <Scope>core.token.STag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_s_tag.html</Path>
+    <Path>classcore_1_1token_1_1_s_tag.html</Path>
     <Abstract>Special Tag. </Abstract>
   </Token>
   <Token>
@@ -2133,10 +4204,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.STag</Scope>
+      <Scope>core.token.STag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a46dba1091fffdc99465599f3d0356a18</Anchor>
+    <Path>classcore_1_1token_1_1_s_tag.html</Path>
+    <Anchor>a9be819fbbe6e162c96553d5d572b7fc4</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -2144,20 +4215,20 @@
       <Name>isSpecial</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.STag</Scope>
+      <Scope>core.token.STag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a453eb54abd0e87bfd4597a2d5eac9946</Anchor>
+    <Path>classcore_1_1token_1_1_s_tag.html</Path>
+    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::token::StopTag</Name>
+      <Name>core::token::StopTag</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.token.StopTag</Scope>
+      <Scope>core.token.StopTag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_stop_tag.html</Path>
+    <Path>classcore_1_1token_1_1_stop_tag.html</Path>
     <Abstract>Stop Tag. </Abstract>
   </Token>
   <Token>
@@ -2165,10 +4236,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.StopTag</Scope>
+      <Scope>core.token.StopTag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_stop_tag.html</Path>
-    <Anchor>aa4c566e0d93882246188f9eaac1864b9</Anchor>
+    <Path>classcore_1_1token_1_1_stop_tag.html</Path>
+    <Anchor>a3b0fc00ec9b2831e855d9eb3aa5b5aa3</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -2176,30 +4247,30 @@
       <Name>isSpecial</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.token.STag</Scope>
+      <Scope>core.token.STag</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a453eb54abd0e87bfd4597a2d5eac9946</Anchor>
+    <Path>classcore_1_1token_1_1_s_tag.html</Path>
+    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::tokenCreator</Name>
+      <Name>core::tokenCreator</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>DVM::tokenCreator</Scope>
+      <Scope>core::tokenCreator</Scope>
     </TokenIdentifier>
-    <Path>namespace_d_v_m_1_1token_creator.html</Path>
+    <Path>namespacecore_1_1token_creator.html</Path>
     <Abstract>DVM token creator. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>DVM::tokenCreator::TokenCreator</Name>
+      <Name>core::tokenCreator::TokenCreator</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
     <Abstract>DVM Token creator. </Abstract>
   </Token>
   <Token>
@@ -2207,10 +4278,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>afc66c7fc9fbf6aba21bc2d59af0b35d1</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>abf795842433cb150ff2cd58f42d019ad</Anchor>
     <DeclaredIn>tokenCreator.py</DeclaredIn>
   </Token>
   <Token>
@@ -2218,10 +4289,10 @@
       <Name>simpleToken</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a940b097858cd5780a7481ed0a968c54f</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a17cafd58974a9fdd79834817a012c602</Anchor>
     <Abstract>Create a simple token, with a known destination. </Abstract>
     <DeclaredIn>tokenCreator.py</DeclaredIn>
   </Token>
@@ -2230,10 +4301,10 @@
       <Name>changeContext</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a97ac7c6afdb44b12b71ca1c929769ede</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>ac53d82a6f9d74687751b24c733000ca4</Anchor>
     <Abstract>Change the context of a token. </Abstract>
     <DeclaredIn>tokenCreator.py</DeclaredIn>
   </Token>
@@ -2242,10 +4313,10 @@
       <Name>restoreContext</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>ac29703a0d4bb60caaac979faa4ab7015</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>ae9ee1f333586314900f7c802ca984cf6</Anchor>
     <Abstract>Restore the old context of a token. </Abstract>
     <DeclaredIn>tokenCreator.py</DeclaredIn>
   </Token>
@@ -2254,10 +4325,10 @@
       <Name>stopToken</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a28c52e46e9409f4dd39640c763eb810c</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a7ddc78b04b447b0102525e13786c2d70</Anchor>
     <DeclaredIn>tokenCreator.py</DeclaredIn>
   </Token>
   <Token>
@@ -2265,30 +4336,191 @@
       <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>af59fb647b5eca7d5942daf591fa2f81e</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a62a05bacf3c7343a4dfdde2b1db95a57</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>contextMap</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a6735ee1f838e0168c9b34d8c23ffd0dc</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>aedeba572df87c091e34f2e8234d03d16</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>restoreMap</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>DVM.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
     </TokenIdentifier>
-    <Path>class_d_v_m_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a59f844ddc6f08bde0c129933cefdbb60</Anchor>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>abd6fde0a66238ec75a2c929acd2eee66</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tOP</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a4d5944f0d3b1a109b96fda406c04ded2</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fStart</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a38dab487e4bd6cb087b02f6acdeb57d7</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>body</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a66be8896b9a46ebecb591c4c283048ef</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fEnd</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a343a8de6502c996aa501f9cfd3dcec4f</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ret</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a774cb3477ef1029daa203ddce1354b95</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>call</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>ad88e2d02eb7028506fb84fca583630f8</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>pEnd</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a6af7202fb24ecdb8a9aaaae8a7d0cb4f</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>test</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a27e7c88e9f703c772a9137f0a69fabf9</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tag1</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>abc25460201325482af95747a9ab0132f</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tag2</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a1c3a37478828036ae2e788b221d06d02</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>token1</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a72ec68891acaa2906203c9626c210c11</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>token2</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>af775af6df819ae313ef142a423efbeb4</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>idis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>idis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceidis.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loc</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>idis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceidis.html</Path>
+    <Anchor>a1bfb9c13f2d1de258fd1d08450789e83</Anchor>
+    <DeclaredIn>idis.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7704,157 +9936,5 @@
     <Path>namespacelog.html</Path>
     <Anchor>a036cd3135c3f1fcb5838e49ffb839312</Anchor>
     <DeclaredIn>log.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>main</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tOP</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a3ec94634e25f32efeb970e66254f9479</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>loc</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a731094b13d0ac50aaa697944524ff057</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>fStart</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>aae67b8940388c37b490f7fbc2130b751</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>body</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a8b6728a24db747863d891ffeec4efa36</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>fEnd</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a9526dedee1a82f805cfa83e6d2339528</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ret</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a5681d6c5c06a386f185a446d1320c103</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>call</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>adcfdf392fef7f1707b569fae18c58e77</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>pEnd</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>af2c93e87c5ce3d17f5d61085a50a1c9d</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>test</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a1aeb3e8635efe08faa4665c60f285eb4</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tag1</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>aee051e9831ad544f375644bfd7099ef2</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tag2</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a98ef02516cc0170e4cfe25cfa1c28470</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>token1</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>acbef378ab77573dda1ff9cfa08c04976</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>token2</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>main</Scope>
-    </TokenIdentifier>
-    <Path>namespacemain.html</Path>
-    <Anchor>a412d657f6af28faa09d631366a80dbda</Anchor>
-    <DeclaredIn>main.py</DeclaredIn>
   </Token>
 </Tokens>

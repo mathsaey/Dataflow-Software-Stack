@@ -9,10 +9,11 @@ var indexSectionsWithContent =
 {
   0: "_abcdefghiklmnoprstuvw",
   1: "_acfilnoprstuw",
-  2: "cdilm",
-  3: "_abcdefghilmnoprstuw",
-  4: "_abcdefghiklmnoprstv",
-  5: "bist"
+  2: "cdil",
+  3: "_cdegilmnoprst",
+  4: "_abcdefghilmnoprstuw",
+  5: "_abcdefghiklmnoprstv",
+  6: "bist"
 };
 
 var indexSectionNames =
@@ -20,9 +21,10 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "namespaces",
-  3: "functions",
-  4: "variables",
-  5: "pages"
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "pages"
 };
 
 function convertToId(search)

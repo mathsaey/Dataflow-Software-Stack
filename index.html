@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">2b859ff</span>
+   &#160;<span id="projectnumber">11363af</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,12 +96,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="textblock"><h1><a class="anchor" id="Introduction"></a>
 Introduction</h1>
-<p>This is the main documentation of <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a>, the Dataflow Virtual Machine, created by Mathijs Saey for his thesis at the VUB.</p>
+<p>This is the main documentation of DVM, the Dataflow Virtual Machine, created by Mathijs Saey for his thesis at the VUB.</p>
 <p>These pages serve a number of purposes:</p>
 <ul>
 <li><a href="#About">Provide a basic overview about DVM.</a></li>
 <li><a href="#Structure">Provide a high-level overview of the code base.</a></li>
-<li><a href="annotated.html">Collect the documentation about the DVM code base</a></li>
+<li><a href="files.html">Collect the documentation about the DVM code base</a></li>
 <li><a href="#Starting">Collect all the necessary information to get DVM up and running</a></li>
 <li><a href="pages.html">Collect references and examples that can come in handy while working on DVM.</a></li>
 </ul>
@@ -108,7 +109,7 @@ Introduction</h1>
 <p>Finally, the main repository of this project can be found <a href="https://github.com/mathsaey/DVM">on github</a>.</p>
 <h1><a class="anchor" id="About"></a>
 About DVM</h1>
-<p>The goal of <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> is to create a highly parallel virtual machine. This machine will use the <a href="http://en.wikipedia.org/wiki/Dataflow_architecture">dataflow architecture</a> to achieve a high amount of concurrency.</p>
+<p>The goal of DVM is to create a highly parallel virtual machine. This machine will use the <a href="http://en.wikipedia.org/wiki/Dataflow_architecture">dataflow architecture</a> to achieve a high amount of concurrency.</p>
 <h2><a class="anchor" id="Dataflow"></a>
 Dataflow</h2>
 <div class="image">
@@ -134,16 +135,16 @@ Dataflow</h2>
 <h2><a class="anchor" id="IF1"></a>
 Sisal and IF1</h2>
 <p><a href="http://en.wikipedia.org/wiki/SISAL">Sisal</a> is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph.</p>
-<p>The focus of <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> lies on the optimization and execution of dataflow programs, and not on the language or compiler design. For this reason, we decided to use IF1 as the primary input language of <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a>. Using <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> in combination with <a href="http://sourceforge.net/projects/sisal/">sisalc</a> offers us a good language for writing dataflow program, along with a compiler that removes the complexity of the language for us.</p>
+<p>The focus of DVM lies on the optimization and execution of dataflow programs, and not on the language or compiler design. For this reason, we decided to use IF1 as the primary input language of DVM. Using DVM in combination with <a href="http://sourceforge.net/projects/sisal/">sisalc</a> offers us a good language for writing dataflow program, along with a compiler that removes the complexity of the language for us.</p>
 <p>More information about IF1 along with some sisal and IF1 code samples can be found in the <a href="md_doc__i_f1.html">IF1 overview</a>.</p>
 <h2><a class="anchor" id="General"></a>
 In General</h2>
-<p>To recap, <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> is a virtual machine that attempts to achieve high levels of parallelism. In order to do this, <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> utilizes a dynamic dataflow architecture. <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> uses IF1 as an input language, as generated by sisalc, the Sisal compiler.</p>
+<p>To recap, DVM is a virtual machine that attempts to achieve high levels of parallelism. In order to do this, DVM utilizes a dynamic dataflow architecture. DVM uses IF1 as an input language, as generated by sisalc, the Sisal compiler.</p>
 <h1><a class="anchor" id="Start"></a>
 Getting started</h1>
-<p>Running <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> is quite trivial at the moment. All you need is a working <a href="http://www.python.org/">python</a> interpreter. We recommend using <a href="http://pypy.org/">pypy</a> if you want to benchmark <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> or test it for speed. However, wherever possible, compatibility is maintained with CPython, the default python interpreter.</p>
+<p>Running DVM is quite trivial at the moment. All you need is a working <a href="http://www.python.org/">python</a> interpreter. We recommend using <a href="http://pypy.org/">pypy</a> if you want to benchmark DVM or test it for speed. However, wherever possible, compatibility is maintained with CPython, the default python interpreter.</p>
 <p>You need to install <a href="http://sourceforge.net/projects/sisal/">sisalc</a>, the sisal C compiler if you want to produce your own IF1 files from sisal source code.</p>
-<p>For the time being, input files are manually added in the source code. A decent way to invoke <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> from the command line is planned for the future.</p>
+<p>For the time being, input files are manually added in the source code. A decent way to invoke DVM from the command line is planned for the future.</p>
 <p>The sites of all these tools and the used versions can be found below:</p>
 <table class="doxtable">
 <tr>
@@ -158,21 +159,21 @@ Getting started</h1>
 <h2><a class="anchor" id="Performance"></a>
 On Python and speed</h2>
 <p>Running a virtual machine on an interpreted language seems like a pretty bad idea. Python performance is pretty slow, even with the speedup that using pypy nets us. So why did we opt to use python instead of going for a fast language, such as C++?</p>
-<p>The use of python can be explained by a number of reasons. First of all, using python significantly speeds up development time, which is important in a project with a limited amount of time. Secondly, rapid prototyping and testing multiple approaches to a single problem is quite important due to the academic nature of our work. Initially, we only wanted to use python for a prototyping stage, but time constraints led us to using python as our primary language. A <a href="https://github.com/mathsaey/DVM/tree/DVM%2B%2B">C++ version</a> of <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> is in the works, but no progress should be expected anytime soon, or even at all.</p>
+<p>The use of python can be explained by a number of reasons. First of all, using python significantly speeds up development time, which is important in a project with a limited amount of time. Secondly, rapid prototyping and testing multiple approaches to a single problem is quite important due to the academic nature of our work. Initially, we only wanted to use python for a prototyping stage, but time constraints led us to using python as our primary language. A <a href="https://github.com/mathsaey/DVM/tree/DVM%2B%2B">C++ version</a> of DVM is in the works, but no progress should be expected anytime soon, or even at all.</p>
 <h1><a class="anchor" id="Structure"></a>
 Overall Structure</h1>
-<p><a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> is split up into a few components:</p>
+<p>DVM is split up into a few components:</p>
 <ul>
 <li><a class="el" href="namespaceif1parser.html">The IF1 Parser</a></li>
 <li><a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a>, the Intermediate Graph Representation</li>
 <li>The <a class="el" href="namespacecompiler.html" title="IGR Compiler. ">compiler</a>, which transforms <a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a> and converts it to work with the runtime</li>
-<li><a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a>, the actual execution engine.</li>
+<li>DVM, the actual execution engine.</li>
 </ul>
-<p>The first 3 components of this list are dependent on one another, and on <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a>. <a class="el" href="namespace_d_v_m.html" title="Dataflow Virtual Machine. ">DVM</a> itself however, is not dependent on any of the other modules. </p>
+<p>The first 3 components of this list are dependent on one another, and on DVM. DVM itself however, is not dependent on any of the other modules. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 23 2014 12:08:17 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 23 2014 15:05:12 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

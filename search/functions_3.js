@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['changecontext',['changeContext',['../class_d_v_m_1_1token_creator_1_1_token_creator.html#a97ac7c6afdb44b12b71ca1c929769ede',1,'DVM::tokenCreator::TokenCreator']]],
+  ['changecontext',['changeContext',['../classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4',1,'core::tokenCreator::TokenCreator']]],
   ['char',['Char',['../namespaceif1parser_1_1operations.html#ae5805baffac4ac50930bf8436965bee2',1,'if1parser::operations']]],
-  ['checkkey',['checkKey',['../class_d_v_m_1_1context_matcher_1_1_context_matcher.html#a4534eddaafdc727dbaf1e4a87fb65e01',1,'DVM::contextMatcher::ContextMatcher']]],
-  ['checkspecial',['checkSpecial',['../class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html#aff1d7ff065eca33e3cbd0917622d8b90',1,'DVM::dispatcher::TokenDispatcher']]],
+  ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
+  ['checkspecial',['checkSpecial',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a7c5f88838461ebc5c2f4e6ae6f12f48a',1,'core::dispatcher::TokenDispatcher']]],
   ['compoundfooter',['compoundFooter',['../namespacecompiler_1_1dot.html#a6ece59f004db7752481092f330c0af23',1,'compiler::dot']]],
   ['compoundheader',['compoundHeader',['../namespacecompiler_1_1dot.html#a51ed90df39d19a01c3a04bd2c40b8260',1,'compiler::dot']]],
   ['connect',['connect',['../namespace_i_g_r.html#a8d4b1dd299b3c727df94aef20c4c31a4',1,'IGR']]],

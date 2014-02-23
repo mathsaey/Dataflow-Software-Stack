@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['call',['call',['../namespacemain.html#adcfdf392fef7f1707b569fae18c58e77',1,'main']]],
-  ['cont',['cont',['../class_d_v_m_1_1token_1_1_tag.html#a5b629fffcf3da4f381646465eb677b55',1,'DVM::token::Tag']]],
+  ['call',['call',['../namespacedvm.html#ad88e2d02eb7028506fb84fca583630f8',1,'dvm']]],
+  ['cont',['cont',['../classcore_1_1token_1_1_tag.html#aa795f56c33f2d4889874f92895ac5554',1,'core::token::Tag']]],
   ['container',['container',['../classif1parser_1_1type_1_1___container_type.html#a525df096e0ebaca223c5474ee31bab45',1,'if1parser::type::_ContainerType']]],
-  ['contextcreator',['contextCreator',['../class_d_v_m_1_1runtime_1_1_core.html#a42b85146ebf6146d752eda078bbc3c5b',1,'DVM::runtime::Core']]],
-  ['contextmap',['contextMap',['../class_d_v_m_1_1token_creator_1_1_token_creator.html#a6735ee1f838e0168c9b34d8c23ffd0dc',1,'DVM::tokenCreator::TokenCreator']]],
-  ['contexts',['contexts',['../class_d_v_m_1_1instruction_1_1_context_change.html#aa2aa635c2c4c4441dbf12da2f11e2726',1,'DVM::instruction::ContextChange']]],
-  ['core',['core',['../class_d_v_m_1_1context_matcher_1_1_context_matcher.html#a3efd433e7b930b68c4adc08f0bae28dc',1,'DVM.contextMatcher.ContextMatcher.core()'],['../class_d_v_m_1_1dispatcher_1_1_token_dispatcher.html#abc9b840118638425c99ec185b9807576',1,'DVM.dispatcher.TokenDispatcher.core()'],['../class_d_v_m_1_1scheduler_1_1_scheduler.html#acc9343cc90789b23d5f5c3fc3bc6aac6',1,'DVM.scheduler.Scheduler.core()'],['../class_d_v_m_1_1token_1_1_tag.html#a4868022ad3b9701850a4b61b1b6f4438',1,'DVM.token.Tag.core()'],['../class_d_v_m_1_1token_creator_1_1_token_creator.html#af59fb647b5eca7d5942daf591fa2f81e',1,'DVM.tokenCreator.TokenCreator.core()']]],
-  ['cores',['cores',['../class_d_v_m_1_1runtime_1_1_core.html#a9556b72140a88cb55baa1c8a658e8a52',1,'DVM::runtime::Core']]],
-  ['current',['current',['../class_d_v_m_1_1context_1_1_context_creator.html#a0ac8c2cab7628bfa5bf6c5429880b5ba',1,'DVM::context::ContextCreator']]]
+  ['contextcreator',['contextCreator',['../classcore_1_1runtime_1_1_core.html#af063d02573dfb186742531c844fd8f95',1,'core::runtime::Core']]],
+  ['contextmap',['contextMap',['../classcore_1_1token_creator_1_1_token_creator.html#aedeba572df87c091e34f2e8234d03d16',1,'core::tokenCreator::TokenCreator']]],
+  ['contexts',['contexts',['../classcore_1_1instruction_1_1_context_change.html#a0f3e68192d500a3ed4d8915dafee9adf',1,'core::instruction::ContextChange']]],
+  ['core',['core',['../classcore_1_1context_matcher_1_1_context_matcher.html#a8c187035839a8d512720904c08624566',1,'core.contextMatcher.ContextMatcher.core()'],['../classcore_1_1dispatcher_1_1_token_dispatcher.html#ab368168c9cf6744c450129aa3182ded2',1,'core.dispatcher.TokenDispatcher.core()'],['../classcore_1_1scheduler_1_1_scheduler.html#a2c366d24dc034bfd15a6ea44af35ce7e',1,'core.scheduler.Scheduler.core()'],['../classcore_1_1token_1_1_tag.html#a64b66df1c4d8f4cd44ddc1cf4e72034f',1,'core.token.Tag.core()'],['../classcore_1_1token_creator_1_1_token_creator.html#a62a05bacf3c7343a4dfdde2b1db95a57',1,'core.tokenCreator.TokenCreator.core()']]],
+  ['cores',['cores',['../classcore_1_1runtime_1_1_core.html#a90a51e4b4297931c50cfd3c12ba4d517',1,'core::runtime::Core']]],
+  ['current',['current',['../classcore_1_1context_1_1_context_creator.html#ab819bd36118d0441374ebdf11b3b228e',1,'core::context::ContextCreator']]]
 ];

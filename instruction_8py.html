@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>DVM: dvm/instruction.py File Reference</title>
+<title>DVM: DVM/core/instruction.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,6 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
+   &#160;<span id="projectnumber">11363af</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -40,7 +41,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -82,13 +82,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_e80f72f7d8c36fe8e45c8a285035c25b.html">dvm</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_08a020ca69cd2ad288187546d2390a59.html">DVM</a></li><li class="navelem"><a class="el" href="dir_e9ef3b199152cfdf691c0652c0ff02ad.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">instruction.py File Reference</div>  </div>
 </div><!--header-->
@@ -96,38 +97,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_abstract_instruction.html">dvm.instruction.AbstractInstruction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">General DVM instruction.  <a href="classdvm_1_1instruction_1_1_abstract_instruction.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html">core.instruction.AbstractInstruction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">General DVM instruction.  <a href="classcore_1_1instruction_1_1_abstract_instruction.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_static_instruction.html">dvm.instruction.StaticInstruction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A static instruction will always send it's output to the same instructions.  <a href="classdvm_1_1instruction_1_1_static_instruction.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_static_instruction.html">core.instruction.StaticInstruction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A static instruction will always send it's output to the same instructions.  <a href="classcore_1_1instruction_1_1_static_instruction.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_operation_instruction.html">dvm.instruction.OperationInstruction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operation instruction defines a single operation on all of it's inputs.  <a href="classdvm_1_1instruction_1_1_operation_instruction.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html">core.instruction.OperationInstruction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operation instruction defines a single operation on all of it's inputs.  <a href="classcore_1_1instruction_1_1_operation_instruction.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_sink.html">dvm.instruction.Sink</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdvm_1_1instruction_1_1_sink.html" title="Sink instruction. ">Sink</a> instruction.  <a href="classdvm_1_1instruction_1_1_sink.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_sink.html">core.instruction.Sink</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcore_1_1instruction_1_1_sink.html" title="Sink instruction. ">Sink</a> instruction.  <a href="classcore_1_1instruction_1_1_sink.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_context_change.html">dvm.instruction.ContextChange</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a context change in the program.  <a href="classdvm_1_1instruction_1_1_context_change.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_context_change.html">core.instruction.ContextChange</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a context change in the program.  <a href="classcore_1_1instruction_1_1_context_change.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_context_restore.html">dvm.instruction.ContextRestore</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the restoration of context.  <a href="classdvm_1_1instruction_1_1_context_restore.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_context_restore.html">core.instruction.ContextRestore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the restoration of context.  <a href="classcore_1_1instruction_1_1_context_restore.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdvm_1_1instruction_1_1_stop_instruction.html">dvm.instruction.StopInstruction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the end of the program.  <a href="classdvm_1_1instruction_1_1_stop_instruction.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_stop_instruction.html">core.instruction.StopInstruction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the end of the program.  <a href="classcore_1_1instruction_1_1_stop_instruction.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacedvm_1_1instruction"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedvm_1_1instruction.html">dvm.instruction</a></td></tr>
-<tr class="memdesc:namespacedvm_1_1instruction"><td class="mdescLeft">&#160;</td><td class="mdescRight">DVM instruction definitions. <br/></td></tr>
+<tr class="memitem:namespacecore_1_1instruction"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1instruction.html">core.instruction</a></td></tr>
+<tr class="memdesc:namespacecore_1_1instruction"><td class="mdescLeft">&#160;</td><td class="mdescRight">DVM instruction definitions. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:acb7b0d0df307af5dbac16a6358ec591a"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1instruction.html#acb7b0d0df307af5dbac16a6358ec591a">core.instruction.log</a> = logging.getLogger(__name__)</td></tr>
+<tr class="separator:acb7b0d0df307af5dbac16a6358ec591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 21 2014 03:43:27 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 23 2014 15:05:11 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
