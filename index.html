@@ -115,9 +115,6 @@ Dataflow</h2>
 <div class="image">
 <img src="../res/simpleStatic.png"  style="float: right"/>
 </div>
- <div class="image">
-<img src="../res/simpleStatic.png"  alt="Caption text"/>
-</div>
 <p>In short, the general idea behind <a href="http://en.wikipedia.org/wiki/Dataflow_architecture">dataflow</a> is that an instruction in the program is executed once it's inputs are ready. This property allows us to exploit the implicit parallelism of programs.</p>
 <p>There are 2 general flavors of dataflow, static and dynamic. In static dataflow, the program is represented as a graph, and data travels along the edges of this graph. Each node of the graph represents an operation on this data.</p>
 <p>A visual representation of such a dataflow graph can be seen right of this section. This graph was generated from the following Sisal code.</p>
@@ -165,18 +162,21 @@ On Python and speed</h2>
 <p>The use of python can be explained by a number of reasons. First of all, using python significantly speeds up development time, which is important in a project with a limited amount of time. Secondly, rapid prototyping and testing multiple approaches to a single problem is quite important due to the academic nature of our work. Initially, we only wanted to use python for a prototyping stage, but time constraints led us to using python as our primary language. A <a href="https://github.com/mathsaey/DVM/tree/DVM%2B%2B">C++ version</a> of DVM is in the works, but no progress should be expected anytime soon, or even at all.</p>
 <h1><a class="anchor" id="Structure"></a>
 Overall Structure</h1>
-<p>DVM is split up into a few components:</p>
+<p>DVM is split up into 2 components:</p>
 <ul>
+<li>IDIS, the IF1 to DIS (DVM instruction set) compiler<ul>
 <li><a class="el" href="namespaceif1parser.html">The IF1 Parser</a></li>
 <li><a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a>, the Intermediate Graph Representation</li>
 <li>The <a class="el" href="namespacecompiler.html" title="IGR Compiler. ">compiler</a>, which transforms <a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a> and converts it to work with the runtime</li>
+</ul>
+</li>
 <li>DVM, the actual execution engine.</li>
 </ul>
-<p>The first 3 components of this list are dependent on one another, and on DVM. DVM itself however, is not dependent on any of the other modules. </p>
+<p>IDIS requires access to DVM in order to work correctly. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 23 2014 15:11:55 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 23 2014 15:15:07 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
