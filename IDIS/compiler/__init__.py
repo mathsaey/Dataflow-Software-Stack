@@ -1,6 +1,6 @@
-# literal.py
+# __init__.py
 # Mathijs Saey
-# DVM
+# IDIS
 
 # The MIT License (MIT)
 #
@@ -12,10 +12,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-#
+# 
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-#
+# 
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -25,35 +25,26 @@
 # THE SOFTWARE.
 
 ##
-# \package IGR.literal
-# \brief Literal definitions
+# \package compiler
+# \brief IGR Compiler
 # 
-# IGR Literals
-##
-
-##
-# Literal
+# This module defines the compiler that 
+# converts IGR into instructions and tokens 
+# that can be used by DVM. 
 #
-# Literals are values inherent to the program.
-# Examples include constants in arithmetic expressions,
-# function names, strings, ...
-# 
-# Every literal has a value and a target, which is an IGR::port::InputPort.
+# The compiler also performs a few passes on IGR before
+# doing so in order to simplify and optimize the produced dataflow.
+#
+# \todo
+#		* Remove all literals
+#			* Add as an implicit part of instruction
+#			* If all are literals, execute and add as literal to next
+#			* Cascade from here
+#			* Literal calls should execute the entire function with input
+#		* Break down compound nodes.
+#			* Collection of standard operations
+#			* Express in terms of small amount of instructions
+#		* Compile to DVM 
 ##
-class Literal(object):
-	
-	##
-	# Create a new literal.
-	#
-	# \param value
-	#		The value of the literal
-	# \param destination
-	#		The destination of the literal value
-	##
-	def __init__(self, value, destination):
-		super(Literal, self).__init__()
-		self.value = value
-		self.destination = destination
 
-	## See if this is a port (mainly for traversal)
-	def isPort(self): return False
+from dot import runDot, dotToFile

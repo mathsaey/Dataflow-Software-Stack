@@ -24,23 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-This module serves as a top level file to access the other modules
-"""
 import log
-import if1parser
-import compiler.dot
-
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
-
-if1parser.parseFile(loc)
-compiler.dot.runDot(path="../igr.dot", skipCompound = True)
-
-## TEST CODE ##
-
 import DVM 
 import DVM.token
 import DVM.runtime

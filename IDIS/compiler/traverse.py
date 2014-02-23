@@ -1,6 +1,6 @@
 # traverse.py
 # Mathijs Saey
-# DVM
+# IDIS
 
 # The MIT License (MIT)
 #

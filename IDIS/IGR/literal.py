@@ -1,6 +1,6 @@
-# __init__.py
+# literal.py
 # Mathijs Saey
-# DVM
+# IDIS
 
 # The MIT License (MIT)
 #
@@ -25,27 +25,35 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser
-# \author Mathijs Saey
+# \package IGR.literal
+# \brief Literal definitions
 # 
-# \brief DVM IF1 Parser.
-#
-# This module parses [IF1](\ref IF1) files and converts them to 
-# IGR, our own, internal graph representation.
-#
-#
-# \todo 
-#		The type module and the operations module should be adjusted
-# 		once we roll out our own instruction and data set.
+# IGR Literals
 ##
 
-import parser
-
 ##
-# Parses an IF1 file.
+# Literal
 #
-# \param loc
-#		The location of the file.
+# Literals are values inherent to the program.
+# Examples include constants in arithmetic expressions,
+# function names, strings, ...
+# 
+# Every literal has a value and a target, which is an IGR::port::InputPort.
 ##
-def parseFile(loc):
-	parser.parseFile(loc)
+class Literal(object):
+	
+	##
+	# Create a new literal.
+	#
+	# \param value
+	#		The value of the literal
+	# \param destination
+	#		The destination of the literal value
+	##
+	def __init__(self, value, destination):
+		super(Literal, self).__init__()
+		self.value = value
+		self.destination = destination
+
+	## See if this is a port (mainly for traversal)
+	def isPort(self): return False

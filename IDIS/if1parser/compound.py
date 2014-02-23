@@ -1,6 +1,6 @@
-# __init__.py
+# operations.py
 # Mathijs Saey
-# DVM
+# IDIS
 
 # The MIT License (MIT)
 #
@@ -25,26 +25,36 @@
 # THE SOFTWARE.
 
 ##
-# \package compiler
-# \brief IGR Compiler
+# \package if1parser.compound
+# \brief Compound node reference
 # 
-# This module defines the compiler that 
-# converts IGR into instructions and tokens 
-# that can be used by DVM. 
-#
-# The compiler also performs a few passes on IGR before
-# doing so in order to simplify and optimize the produced dataflow.
-#
-# \todo
-#		* Remove all literals
-#			* Add as an implicit part of instruction
-#			* If all are literals, execute and add as literal to next
-#			* Cascade from here
-#			* Literal calls should execute the entire function with input
-#		* Break down compound nodes.
-#			* Collection of standard operations
-#			* Express in terms of small amount of instructions
-#		* Compile to DVM 
+# This module maps the IF1 compound nodes to 
+# their IGR counterparts.
 ##
 
-from dot import runDot, dotToFile
+import IGR.node
+import tools
+
+## Various IGR compound nodes.
+__COMPOUNDS__ = {
+	0  : IGR.node.ForallCNode,
+	1  : IGR.node.SelectCNode,
+	2  : IGR.node.TagCaseCNode,
+	3  : IGR.node.LoopACNode,
+	4  : IGR.node.LoopBCNode,
+	5  : IGR.node.IfThenElseCNode,
+	6  : IGR.node.IterateCNode,
+	7  : IGR.node.WhileLoopCNode,
+	8  : IGR.node.RepeatLoopCNode,
+	9  : IGR.node.SeqForallCNode,
+	10 : IGR.node.UReduceCNode
+}
+
+def getCompound(label, ctr = "?"):
+	key = int(label)
+	try:
+		constructor = __COMPOUNDS__[key]
+	except KeyError:
+		tools.error("Cannot find compound node with label: " + label, ctr)
+	else: 
+		return constructor

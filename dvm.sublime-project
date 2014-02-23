@@ -5,12 +5,15 @@
 			"path": "./",
 			"name":"Root",
             "folder_exclude_patterns": 
-                ["src", "docpages", "obj", "documentation", "documentationPy",
+                ["DVM", "IDIS", "docpages", "obj", "documentation", "documentationPy",
                 "DataFlow Virtual Machine.xcodeproj", "prototypes"],
             "file_exclude_patterns":["DVM"]
         },{
-        	"path": "./src",
-        	"name": "Source"
+        	"path": "./DVM",
+        	"name": "DVM"
+        },{
+            "path": "./IDIS",
+            "name": "IDIS"
         },{
             "path": "./docpages",
             "name": "Documentation"
@@ -24,7 +27,13 @@
             "working_dir": "${project_path}",
             "cmd": ["make"]
         },{
-            "name":"sublimeRepl",
+            "name":"sublimeReplCPy",
+            "selector":"source.python",
+            "target": "run_existing_window_command",
+            "id": "repl_python_run",
+            "file": "config/Python/Main.sublime-menu"
+        },{
+            "name":"sublimeReplPyPy",
             "selector":"source.python",
             "target": "run_existing_window_command",
             "id": "repl_pypy_run",
