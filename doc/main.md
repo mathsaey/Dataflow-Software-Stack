@@ -9,7 +9,7 @@ This is the main documentation of DVM, the Dataflow Virtual Machine, created by 
 These pages serve a number of purposes:
 * [Provide a basic overview about DVM.](#About)
 * [Provide a high-level overview of the code base.](#Structure)
-* [Collect the documentation about the DVM code base](annotated.html)
+* [Collect the documentation about the DVM code base](files.html)
 * [Collect all the necessary information to get DVM up and running](#Starting)
 * [Collect references and examples that can come in handy while working on DVM.](pages.html)
 
