@@ -10,7 +10,7 @@ These pages serve a number of purposes:
 * [Provide a basic overview about DVM.](#About)
 * [Provide a high-level overview of the code base.](#Structure)
 * [Collect the documentation about the DVM code base](files.html)
-* [Collect all the necessary information to get DVM up and running](#Starting)
+* [Collect all the necessary information to get DVM up and running](#Start)
 * [Collect references and examples that can come in handy while working on DVM.](pages.html)
 
 It should be noted that the version string next to the project name in the header of any page of this documentation corresponds to a commit hash. This hash can be used to find the exact codebase that was used to generate the docs.
