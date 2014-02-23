@@ -1,0 +1,4 @@
+<map id="DVM.instruction.OperationInstruction" name="DVM.instruction.OperationInstruction">
+<area shape="rect" id="node2" href="$class_d_v_m_1_1instruction_1_1_static_instruction.html" title="A static instruction will always send it&#39;s output to the same instructions. " alt="" coords="5,195,219,295"/>
+<area shape="rect" id="node3" href="$class_d_v_m_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="28,6,196,146"/>
+</map>
