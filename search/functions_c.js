@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['needsmatcher',['needsMatcher',['../classdvm_1_1instruction_1_1_abstract_instruction.html#ad622b495c431658bef42f0a9b9778674',1,'dvm.instruction.AbstractInstruction.needsMatcher()'],['../classdvm_1_1instruction_1_1_operation_instruction.html#a735f25b8c3674ecb408b35ec7bbb0798',1,'dvm.instruction.OperationInstruction.needsMatcher()'],['../namespacedvm_1_1memory.html#aae240e1a45decaa89947497faf0175da',1,'dvm.memory.needsMatcher()']]],
+  ['needsmatcher',['needsMatcher',['../class_d_v_m_1_1instruction_1_1_abstract_instruction.html#a12034217185a8141ef9c021b2f5158b1',1,'DVM.instruction.AbstractInstruction.needsMatcher()'],['../class_d_v_m_1_1instruction_1_1_operation_instruction.html#a84c7caa2f3105892e89b8a4d952964b6',1,'DVM.instruction.OperationInstruction.needsMatcher()'],['../namespace_d_v_m_1_1memory.html#ad80e134213050198e7aaf09d8d4f8605',1,'DVM.memory.needsMatcher()']]],
   ['neg',['Neg',['../namespaceif1parser_1_1operations.html#af5ae794043de1268093a4f473f9cfce2',1,'if1parser::operations']]],
   ['node',['node',['../namespacecompiler_1_1dot.html#ad156d481575b1064cfe3673afb0760c0',1,'compiler::dot']]],
   ['nodeidentifier',['nodeIdentifier',['../namespacecompiler_1_1dot.html#a7e29902b97989ad0da9f3d3c4055a0c4',1,'compiler::dot']]],

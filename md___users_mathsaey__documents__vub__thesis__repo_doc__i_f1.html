@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">e53995c</span>
+   &#160;<span id="projectnumber">2b859ff</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -98,7 +98,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="textblock"><h1>IF1 Quick Reference</h1>
 <p>This page serves as a basic introduction to the IF1 language. The information on this page is based on the paper: <code>IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)</code></p>
-<p>On this page, we attempt to create a compact IF1 overview that can serve as a full reference to the language while still being complete. If you like to look at an example while browsing this page, check out <a class="el" href="_sort_i_f1.html">a sorting algorithm in IF1</a>, generated from <a class="el" href="_sort_sis.html">this sisal code</a>.</p>
+<p>On this page, we attempt to create a compact yet complete overview of the language that should be enough to write an if1 parser without any previous IF1 knowledge.</p>
+<p>A few IF1 and Sisal examples are present in the repository, a copy of these examples is also present in the documentation:</p>
+<ul>
+<li><a href="_Simple.html">Simple piece of Sisal/IF1 code</a></li>
+<li><a href="_Call.html">Simple call in Sisal/IF1</a></li>
+<li><a href="_Select.html">Select compoud node in Sisal/IF1</a></li>
+<li><a href="_Sort.html">Sorting algorithm in Sisal/IF1</a></li>
+</ul>
 <h1><a class="anchor" id="Concepts"></a>
 IF1 Concepts</h1>
 <p>IF1 represents directed, acyclic graphs, these graphs have a few components.</p>
@@ -107,6 +114,7 @@ IF1 Concepts</h1>
 <li>a node can have an arbitrary amount of in -and outputs.</li>
 <li>IF1 defines over 50 nodes, that is, "native" operations.</li>
 <li>The in -and output of a node happens through <b>ports</b>, which are numbered indicators of in and output locations</li>
+<li>Port indexing starts from 1</li>
 <li>Not every node has a predefined amount of ports.</li>
 </ul>
 </li>
@@ -118,7 +126,7 @@ IF1 Concepts</h1>
 </li>
 <li>A special edge exists to describe literal constants.<ul>
 <li>Don't contain a source port</li>
-<li>Contain the text of a literal as a string.</li>
+<li>Contain the value of a literal as a string.</li>
 </ul>
 </li>
 </ul>
@@ -149,7 +157,7 @@ IF1 Instructions</h1>
 <tr>
 <td>N </td><td>simple node </td><td><code>N label operation</code> </td></tr>
 <tr>
-<td>{ </td><td>start compound node </td><td><code>{</code> </td></tr>
+<td>{ </td><td>start compound node </td><td><code>{ Compound label operation</code> </td></tr>
 <tr>
 <td>} </td><td>end compound node </td><td><code>} label operation association_list_length association_list_element_1 association_list_element_2 ...</code> </td></tr>
 </table>
@@ -172,10 +180,10 @@ Labels and Types</h2>
 <pre class="fragment">T label type_code arg_1 arg_2
 </pre><ul>
 <li>Label can be used to refer to the type later on.</li>
-<li>The type code can be considers to be an argument that indicates what type of type we are dealing with, based on this information, the basic_type is used as another argument to construct the actual type.</li>
-<li>The exact use of the other codes depends on the type_code.</li>
+<li>The type code can be considered to be an argument that indicates what type of type we are dealing with. This code can be seen as a constructor for that type.</li>
+<li>The exact use of the other codes depends on the type_code. They can be seen as the arguments to a type constructor.</li>
 </ul>
-<p>To clarify this, let's look at a basic sisal types. In this case, the boolean.</p>
+<p>To clarify this, let's look at a basic sisal type. In this case, the boolean.</p>
 <p><code>T 1 1 0 na=Boolean</code></p>
 <ul>
 <li>T implies that we are declaring a type</li>
@@ -209,7 +217,7 @@ Labels and Types</h2>
 <tr>
 <td>9 </td><td>Union </td><td>First Tag </td><td><code>none</code> </td></tr>
 </table>
-<p>In the following section, the different types are described.</p>
+<p>In the following sections, the different types are described.</p>
 <h4>Basic types</h4>
 <p>As the example in the parent section indicates, basic types simply indicate a standard type, the argument is simply a code that tells us which type we are dealing with. A table with the basic types and their code can be found below.</p>
 <table class="doxtable">
@@ -649,7 +657,7 @@ Compound Nodes</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 21 2014 04:03:05 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 23 2014 12:08:16 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sorting_20algorithm_20in_20if1',['Sorting algorithm in IF1',['../_sort_i_f1.html',1,'']]],
-  ['sorting_20algorithm_20in_20sisal',['Sorting algorithm in Sisal',['../_sort_sis.html',1,'']]]
+  ['if1',['IF1',['../md___users_mathsaey__documents__vub__thesis__repo_doc__i_f1.html',1,'']]]
 ];

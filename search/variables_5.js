@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['entry',['entry',['../classigr_1_1subgraph_1_1_sub_graph.html#aa243e6567fdfaa2d56088b605232467e',1,'igr::subgraph::SubGraph']]],
-  ['exit',['exit',['../classigr_1_1subgraph_1_1_sub_graph.html#af9249b58f99c892aa3e3c5abc0efd639',1,'igr::subgraph::SubGraph']]]
+  ['entry',['entry',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a6cd3a7a8983e07fa6c05b3332608703b',1,'IGR::subgraph::SubGraph']]],
+  ['exit',['exit',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a41d47337d37d6469a1b2a11ee9595913',1,'IGR::subgraph::SubGraph']]]
 ];

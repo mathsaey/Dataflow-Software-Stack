@@ -6,9 +6,9 @@
      <key>CFBundleName</key>
      <string>DVM</string>
      <key>CFBundleIdentifier</key>
-     <string>edu.vub.soft.dvm</string>
+     <string>edu.vub.soft.DVM</string>
      <key>CFBundleVersion</key>
-     <string>e53995c</string>
+     <string>2b859ff</string>
      <key>DocSetFeedName</key>
      <string>DVM</string>
      <key>DocSetPublisherIdentifier</key>
