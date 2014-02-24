@@ -36,23 +36,23 @@
 # The Instruction memory stores all of the 
 # instructions in the program.
 #
-# An instruction memory is divided into parts.
-# each of these parts stores instructions with 
+# An instruction memory is divided into chuncks.
+# each of these chuncks stores instructions with 
 # certain properties. The exact properties are
 # determined by the outside world.
 ##
 class InstructionMemory(object):
 
-	def __init__(self, parts):
+	def __init__(self, chuncks):
 		super(InstructionMemory, self).__init__()
-		self.memory = [[] for i in xrange(0, parts)]
+		self.memory = [[] for i in xrange(0, chuncks)]
 
 	##
 	# Add an instruction to the memory.
 	##
-	def add(self, inst, idx):
-		key = (idx, len(self.memory[idx]))
-		lst = self.memory[idx]
+	def add(self, inst, chunck):
+		key = (chunck, len(self.memory[chunck]))
+		lst = self.memory[chunck]
 		lst.append(inst)
 		inst.setKey(key)
 		return key
@@ -88,9 +88,14 @@ def get(key): return memory().get(key)
 #		True if the instruction needs to be matched.
 def needsMatcher(key): return key[0] is 0
 
-## Add an instruction to the main memory
+## 
+# Add an instruction to the main memory.
+#
+# This function has to determine the chunck
+# of memory that the instruction will use.
+##
 def add(inst): 
-	idx = None
-	if inst.needsMatcher(): idx = 0
-	else: idx = 1
-	return memory().add(inst, idx)
+	chunck = None
+	if inst.needsMatcher(): chunck = 0
+	else: chunck = 1
+	return memory().add(inst, chunck)
