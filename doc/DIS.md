@@ -21,7 +21,7 @@ A DIS file contains 3 types of statements:
 	* Instruction definitionss
 	* Links between instructions.
 
-Besides these, DIS can contain comment lines. A comment line is a line that starts with `$`. Furthermore, anything noted after a statement is also silently ignored. This means that this data can be effectively considered as a comment. For convenience, it is still recommend to put a `$` in front of any intended comment.
+Besides these, DIS can contain comments, a comment is started by using `$`
 
 The following sections detail the exact nature of the other statements.
 
@@ -45,12 +45,12 @@ Where LINK is a keyword while from is the address (chunk, instruction, port) of 
 
 A port address is represented with the following syntax:
 
-    [<chunk> <instruction> <port>]
+    <chunk> <instruction> <port>
 
 
 Thus a link from port 0 of instruction 3 in chunk 0 to port 0 of instruction 1 in chunk 1 would look like this:
 
-    LINK [0 3 0] [0 1 0]
+    LINK 0 3 0 0 1 0
 
 Links can occur anywhere in the file, and transcend chunk boundaries. 
 
@@ -88,11 +88,11 @@ A context change instruction takes to arguments, the address to a sink, which wi
 
 Such an address is similar to a link address:
 
-    [<chunk> <instruction>]
+    <chunk> <instruction>
 
 Thus a context change instruction is added in the following manner:
 
-    INST 2 1 [0 4] [0 3]
+    INST 2 1 0 4 0 3
 
 
 #### Context Restore
