@@ -3252,6 +3252,11 @@
                   <Path>_d_v_m_2core_2____init_____8py.html</Path>
                   <Anchor>ad86476e99dd74e173d5949a6c486a03b</Anchor>
                  </Node>
+                 <Node>
+                  <Name>addData</Name>
+                  <Path>_d_v_m_2core_2____init_____8py.html</Path>
+                  <Anchor>a1d75a7ff0a5d7d0ad350455a21bceef2</Anchor>
+                 </Node>
                 </Subnodes>
                </Node>
                <Node>
@@ -3912,11 +3917,6 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>init</Name>
-                  <Path>runtime_8py.html</Path>
-                  <Anchor>ae6a83596afb6c922fa34b6b874eb8ba3</Anchor>
-                 </Node>
-                 <Node>
                   <Name>start</Name>
                   <Path>runtime_8py.html</Path>
                   <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
@@ -3930,11 +3930,6 @@
                   <Name>log</Name>
                   <Path>runtime_8py.html</Path>
                   <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>__processes__</Name>
-                  <Path>runtime_8py.html</Path>
-                  <Anchor>a8dde17aaacc422f189e75f33a5fd7713</Anchor>
                  </Node>
                  <Node>
                   <Name>__cores__</Name>
@@ -4178,6 +4173,18 @@
              <Node>
               <Name>dvm.py</Name>
               <Path>dvm_8py.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>argParser</Name>
+                <Path>dvm_8py.html</Path>
+                <Anchor>aa067e7021475dc71ccd9019423b3a7c5</Anchor>
+               </Node>
+               <Node>
+                <Name>args</Name>
+                <Path>dvm_8py.html</Path>
+                <Anchor>a0df66969824d161dbff839bc07aa2d19</Anchor>
+               </Node>
+              </Subnodes>
              </Node>
              <Node>
               <Name>log.py</Name>

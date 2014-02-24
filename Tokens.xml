@@ -81,7 +81,19 @@
     </TokenIdentifier>
     <Path>namespacecore.html</Path>
     <Anchor>ad86476e99dd74e173d5949a6c486a03b</Anchor>
-    <Abstract>Start program execution. </Abstract>
+    <Abstract>Start the execution cores. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addData</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a1d75a7ff0a5d7d0ad350455a21bceef2</Anchor>
+    <Abstract>Add an external token containing data. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -335,17 +347,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>init</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core::runtime</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>ae6a83596afb6c922fa34b6b874eb8ba3</Anchor>
-    <DeclaredIn>runtime.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -375,17 +376,6 @@
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
     <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
-    <DeclaredIn>runtime.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__processes__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core::runtime</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a8dde17aaacc422f189e75f33a5fd7713</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -420,6 +410,28 @@
     <Path>namespacecore_1_1scheduler.html</Path>
     <Anchor>a5ea400a0ded1ee3859e42a606c92507d</Anchor>
     <DeclaredIn>scheduler.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>argParser</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>aa067e7021475dc71ccd9019423b3a7c5</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>args</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a0df66969824d161dbff839bc07aa2d19</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2595,7 +2607,19 @@
     </TokenIdentifier>
     <Path>namespacecore.html</Path>
     <Anchor>ad86476e99dd74e173d5949a6c486a03b</Anchor>
-    <Abstract>Start program execution. </Abstract>
+    <Abstract>Start the execution cores. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addData</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a1d75a7ff0a5d7d0ad350455a21bceef2</Anchor>
+    <Abstract>Add an external token containing data. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -3820,17 +3844,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>init</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core::runtime</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>ae6a83596afb6c922fa34b6b874eb8ba3</Anchor>
-    <DeclaredIn>runtime.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3860,17 +3873,6 @@
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
     <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
-    <DeclaredIn>runtime.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__processes__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core::runtime</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a8dde17aaacc422f189e75f33a5fd7713</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -4559,6 +4561,28 @@
       <Scope>dvm</Scope>
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>argParser</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>aa067e7021475dc71ccd9019423b3a7c5</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>args</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a0df66969824d161dbff839bc07aa2d19</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>

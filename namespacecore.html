@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">83517b8</span>
+   &#160;<span id="projectnumber">765d4b7</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -144,8 +144,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a56fc7e50cda38141e414895f6b118357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a destination to a given instruction.  <a href="#a56fc7e50cda38141e414895f6b118357">More...</a><br/></td></tr>
 <tr class="separator:a56fc7e50cda38141e414895f6b118357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad86476e99dd74e173d5949a6c486a03b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#ad86476e99dd74e173d5949a6c486a03b">start</a></td></tr>
-<tr class="memdesc:ad86476e99dd74e173d5949a6c486a03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start program execution.  <a href="#ad86476e99dd74e173d5949a6c486a03b">More...</a><br/></td></tr>
+<tr class="memdesc:ad86476e99dd74e173d5949a6c486a03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the execution cores.  <a href="#ad86476e99dd74e173d5949a6c486a03b">More...</a><br/></td></tr>
 <tr class="separator:ad86476e99dd74e173d5949a6c486a03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d75a7ff0a5d7d0ad350455a21bceef2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#a1d75a7ff0a5d7d0ad350455a21bceef2">addData</a></td></tr>
+<tr class="memdesc:a1d75a7ff0a5d7d0ad350455a21bceef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an external token containing data.  <a href="#a1d75a7ff0a5d7d0ad350455a21bceef2">More...</a><br/></td></tr>
+<tr class="separator:a1d75a7ff0a5d7d0ad350455a21bceef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dataflow Virtual Machine. </p>
@@ -342,15 +345,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Start program execution. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacecore_1_1runtime.html#a7b2f8d99c507dcb53e31bf8296b8bd69">runtime::start()</a> </dd></dl>
+<p>Start the execution cores. </p>
+<dl class="section see"><dt>See Also</dt><dd>runtime::init() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d75a7ff0a5d7d0ad350455a21bceef2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.addData </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add an external token containing data. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespacecore_1_1runtime.html#a4fe3e65a2c62930486886a5095446389">runtime::addData()</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 24 2014 23:22:56 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 25 2014 00:38:01 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

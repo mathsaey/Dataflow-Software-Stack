@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['init',['init',['../namespacecore_1_1runtime.html#ae6a83596afb6c922fa34b6b874eb8ba3',1,'core::runtime']]],
   ['inputlist',['inputList',['../namespacecompiler_1_1dot.html#a6df36fb8b1f135d7e646440e6adf39d1',1,'compiler::dot']]],
   ['int',['Int',['../namespaceif1parser_1_1operations.html#ab92b04b2aafa97719e3210922c43139f',1,'if1parser::operations']]],
   ['iscall',['isCall',['../class_i_g_r_1_1node_1_1_node.html#afc491e4689de870cd1df991e3e2f9bad',1,'IGR.node.Node.isCall()'],['../class_i_g_r_1_1node_1_1_call_node.html#a7cb449ad9469a45007c9a3806c7d1575',1,'IGR.node.CallNode.isCall()']]],
