@@ -29,6 +29,8 @@ import core
 import core.token
 import core.runtime
 
+log.setup()
+
 def tOP(a,b):
 	return a + b
 
@@ -59,4 +61,15 @@ tag2 = core.token.Tag(0, call, 1, -1)
 token1 = core.token.Token("top", tag1)
 token2 = core.token.Token("kek", tag2)
 
-core.runtime.start(tokens = [token1, token2])
+
+print str(core.memory.memory())
+#core.runtime.start(tokens = [token1, token2])
+
+
+##
+# \todo
+#		Figure out a way to deal with literals
+# \todo
+#		Stop instruction that can contain tokens until
+#		it receives a signal (handle on meta level)
+##

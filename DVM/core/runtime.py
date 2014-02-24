@@ -78,7 +78,7 @@ class Core(object):
 	##
 	def __init__(self, identifier, memory):
 		super(Core, self).__init__()
-		log.info("Initializing core: %s")
+		log.info("Initializing core: %d", identifier)
 
 		## Instruction memory
 		self.memory         = memory
@@ -161,13 +161,10 @@ class Core(object):
 		print  value
 		return value
 
-##
-# Initialize the cores, and start program execution.
-#
-# \param cores
-#		The amount of cores to create.
-##
-def start(cores = 1, tokens = []):
+__ProcLst__ = []
+
+def initCores(cores = 1):
+	procLst  = [None] * cores
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
 	queues   = [multiprocessing.Queue()  for i in xrange(0, cores)]
 
@@ -179,9 +176,10 @@ def start(cores = 1, tokens = []):
 			target = core.start, 
 			name   = "C " + str(i),
 			args   = (queue, queues)) 
-		p.start()
+		procLst[i] = p
+	
+	global __ProcLst__
+	__ProcLst__ = procLst
 
-	#-- DEBUG --#
-	for t in tokens:
-		queues[0].put(t)
-
+def startCores():
+	for p in __ProcLst__: p.start()

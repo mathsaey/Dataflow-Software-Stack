@@ -22,7 +22,7 @@ Finally, the main repository of this project can be found [on github](https://gi
 The goal of DVM is to create a highly parallel virtual machine. This machine will use the [dataflow architecture](http://en.wikipedia.org/wiki/Dataflow_architecture) to achieve a high amount of concurrency.
 
 ## Dataflow {#Dataflow}
-<img style="float: right" src="../res/simpleStatic.png" />
+<img style="float: right" src="../res/simpleStatic.png"/>
 
 In short, the general idea behind [dataflow](http://en.wikipedia.org/wiki/Dataflow_architecture) is that an instruction in the program is executed once it's inputs are ready. This property allows us to exploit the implicit parallelism of programs.
 
@@ -90,11 +90,12 @@ The use of python can be explained by a number of reasons. First of all, using p
 
 # Overall Structure {#Structure}
 
-DVM is split up into a few components:
+DVM is split up into 2 components:
 
-* [The IF1 Parser](\ref if1parser)
-* IGR, the Intermediate Graph Representation
-* The ::compiler, which transforms IGR and converts it to work with the runtime
+* IDIS, the IF1 to DIS (DVM instruction set) compiler
+	* [The IF1 Parser](\ref if1parser)
+	* IGR, the Intermediate Graph Representation
+	* The ::compiler, which transforms IGR and converts it to work with the runtime
 * DVM, the actual execution engine.
 
-The first 3 components of this list are dependent on one another, and on DVM. DVM itself however, is not dependent on any of the other modules.
+IDIS requires access to DVM in order to work correctly.

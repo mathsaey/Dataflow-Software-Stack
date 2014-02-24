@@ -103,3 +103,16 @@ class STag(AbstractTag):
 ##
 class StopTag(STag):
 	def __str__(self): return "<STOP>"
+
+##
+# External Tag
+#
+# Used to add external input to the 
+# system.
+#
+# This external data is always sent to
+# the main function, which has a predefined 
+# location in the instruction memory.
+##
+class ExternalTag(STag):
+	def __str__(self): return "<EXTERNAL>"

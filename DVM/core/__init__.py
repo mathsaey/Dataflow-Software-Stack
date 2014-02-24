@@ -28,11 +28,11 @@
 # \package core
 # \brief Dataflow Virtual Machine
 # 
-# This is the core of DVM. It defines the underlying instructions,
-# tokens, and execution model
+# This is the core of DVM. It contains the code that is necessary
+# to execute the program in instruction memory.
 #
-# The top level namespace of DVM declares some convenience functions
-# to easily create the program.
+# This top level namespace also declares some convenience functions
+# to control the instruction memory and runtime.
 ##
 
 import instruction

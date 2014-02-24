@@ -13,18 +13,18 @@ $ "main function"
 INST 2 1 [0 4] [0 3] $ A call to a function.
 INST 3 0             $ A sink that leads to the program exit point.
 
-DEST [0 0 0] [0 2 0] $ Accept input from entry point
-DEST [0 0 1] [0 2 1] $ Accept input from entry point
-DEST [0 3 0] [0 1 0] $ Send return value to program exit
+LINK [0 0 0] [0 2 0] $ Accept input from entry point
+LINK [0 0 1] [0 2 1] $ Accept input from entry point
+LINK [0 3 0] [0 1 0] $ Send return value to program exit
 
 $ function
 INST 4 0 $ Entry sink of the function
 INST 5 2 $ Function return 
 
-DEST [0 4 0] [1 0 0] $ Send input to operation
-DEST [0 4 1] [1 0 1] $ Send input to operation
-DEST [1 0 0] [0 5 0] $ Send output to return
+LINK [0 4 0] [1 0 0] $ Send input to operation
+LINK [0 4 1] [1 0 1] $ Send input to operation
+LINK [1 0 0] [0 5 0] $ Send output to return
 
 CHUNCK 1
 $ Instructions that need the matcher
-INST 0 3 1 { _ | 1 }
+INST 0 3 1 2
