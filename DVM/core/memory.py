@@ -35,49 +35,25 @@
 ##
 # The Instruction memory stores all of the 
 # instructions in the program.
+#
+# An instruction memory is divided into parts.
+# each of these parts stores instructions with 
+# certain properties. The exact properties are
+# determined by the outside world.
 ##
 class InstructionMemory(object):
 
-	def __init__(self):
+	def __init__(self, parts):
 		super(InstructionMemory, self).__init__()
-		self.memory = {}
-		self.matcherKey = 0
-		self.standardKey = -1
-
-	## Get a single instruction from memory
-	def getInstruction(self, key):
-		return self.memory[key]
-
-	## 
-	# Reserve a slot for an instruction that does
-	# not require any context matching.
-	##
-	def reserveStandardSlot(self):
-		key = self.standardKey
-		self.standardKey -= 1
-		return key
-
-	##
-	# Reserve a slot for an instruction that
-	# requires context matching.
-	##
-	def reserveMatcherSlot(self):
-		key = self.matcherKey
-		self.matcherKey += 1
-		return key
+		self.memory = [[] for i in xrange(0, parts)]
 
 	##
 	# Add an instruction to the memory.
 	##
-	def add(self, inst):
-		key = None
-
-		if inst.needsMatcher():
-			key = self.reserveMatcherSlot()
-		else:
-			key = self.reserveStandardSlot()
-
-		self.memory.update({key : inst})
+	def add(self, inst, idx):
+		key = (idx, len(self.memory[idx]))
+		lst = self.memory[idx]
+		lst.append(inst)
 		inst.setKey(key)
 		return key
 
@@ -85,10 +61,10 @@ class InstructionMemory(object):
 	# Get an instruction from memory.
 	##
 	def get(self, key):
-		return self.memory[key]
+		return self.memory[key[0]][key[1]]
 
 ## Main instance of the instruction memory
-__MEMORY__ = InstructionMemory()
+__MEMORY__ = InstructionMemory(2)
 
 ## Get a reference to the instruction memory
 def memory(): return __MEMORY__
@@ -101,9 +77,6 @@ def reset():
 ## Get an instruction from the main memory
 def get(key): return memory().get(key)
 
-## Add an instruction to the main memory
-def add(inst): return memory().add(inst)
-
 ## 
 # See if an instruction needs to pass the matcher
 # Instructions that require a context manager are stored
@@ -113,4 +86,11 @@ def add(inst): return memory().add(inst)
 #		The key of the instruction 
 # \return 
 #		True if the instruction needs to be matched.
-def needsMatcher(key): return key >= 0
+def needsMatcher(key): return key[0] is 0
+
+## Add an instruction to the main memory
+def add(inst): 
+	idx = None
+	if inst.needsMatcher(): idx = 0
+	else: idx = 1
+	return memory().add(inst, idx)
