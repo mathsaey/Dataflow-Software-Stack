@@ -27,12 +27,33 @@
 import log
 import core 
 import core.token
+import core.memory
 import core.runtime
 
 log.setup()
 
+import read
+
+read.parseFile("../examples/simple.dis")
+print str(core.memory.memory())
+
+core.memory.reset()
+
+
 def tOP(a,b):
 	return a + b
+
+# entry point
+entry = core.addSink()
+exit = core.addSink()
+
+# call
+ret = core.addSink()
+call = core.addContextChange(fStart, ret)
+pEnd = core.addStopInstruction()
+
+core.addDestination(ret, 0, pEnd, 0)
+
 
 # # function
 fStart = core.addSink()
@@ -43,26 +64,20 @@ core.addDestination(fStart, 0, body, 0)
 core.addDestination(fStart, 1, body, 1)
 core.addDestination(body, 0, fEnd, 0)
 
-# call
-ret = core.addSink()
-call = core.addContextChange(fStart, ret)
-pEnd = core.addStopInstruction()
-
-core.addDestination(ret, 0, pEnd, 0)
 
 
 test = core.addSink()
 core.addDestination(test, 0, call, 0)
 core.addDestination(test, 1, call, 1)
-
-
-tag1 = core.token.Tag(0, call, 0, -1)
-tag2 = core.token.Tag(0, call, 1, -1)
-token1 = core.token.Token("top", tag1)
-token2 = core.token.Token("kek", tag2)
-
-
 print str(core.memory.memory())
+
+
+# tag1 = core.token.Tag(0, call, 0, -1)
+# tag2 = core.token.Tag(0, call, 1, -1)
+# token1 = core.token.Token("top", tag1)
+# token2 = core.token.Token("kek", tag2)
+
+
 #core.runtime.start(tokens = [token1, token2])
 
 

@@ -52,7 +52,7 @@ Thus a link from port 0 of instruction 3 in chunk 0 to port 0 of instruction 1 i
 
     LINK 0 3 0 0 1 0
 
-Links can occur anywhere in the file, and transcend chunk boundaries. 
+Links can occur anywhere in the file, and transcend chunk boundaries. However, a link should never precede the declaration of it's destination.
 
 ## Instructions {#Instructions}
 
@@ -84,7 +84,9 @@ Sinks are mainly used to have a static point in the program that can catch input
 
 A Context change instruction changes the context of a token. Look into the [documentation](\ref core::instruction::ContextChange) for further information.
 
-A context change instruction takes to arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored.
+A context change instruction takes 2 arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored. Thus a context change will look like this:
+
+    INST <idx> <type> <address> <address>
 
 Such an address is similar to a link address:
 
@@ -103,7 +105,13 @@ A context restore takes no arguments.
 
 #### Operation Instruction
 
-An operation instruction represents an operation on the data of a set of tokens. It takes an opcode, which represents the operation it performs, a number detailing the amount of inputs it should receive.
+An operation instruction represents an operation on the data of a set of tokens. It takes an opcode, which represents the operation it performs, and a number detailing the amount of inputs it should receive. It ends up looking like this:
+
+    INST <idx> 3 <opCode> <inputs>
+
+Example:
+
+    INST 0 3 1 2
 
 # Additional constraints {#Constraints}
 

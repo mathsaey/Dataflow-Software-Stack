@@ -102,7 +102,7 @@ def memory(): return __MEMORY__
 ## Delete all the contents of the instruction memory.
 def reset(): 
 	global __MEMORY__ 
-	__MEMORY__= InstructionMemory()
+	__MEMORY__= InstructionMemory(2)
 
 ## Get an instruction from the main memory
 def get(key): return memory().get(key)
