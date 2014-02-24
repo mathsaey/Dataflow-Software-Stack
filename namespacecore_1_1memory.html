@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">747aacc</span>
+   &#160;<span id="projectnumber">ebab182</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -115,16 +115,16 @@ Functions</h2></td></tr>
 <tr class="memitem:adcd75eabf1c237556ef1c8fc10702036"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1memory.html#adcd75eabf1c237556ef1c8fc10702036">get</a></td></tr>
 <tr class="memdesc:adcd75eabf1c237556ef1c8fc10702036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an instruction from the main memory.  <a href="#adcd75eabf1c237556ef1c8fc10702036">More...</a><br/></td></tr>
 <tr class="separator:adcd75eabf1c237556ef1c8fc10702036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adadafaa74f91e37b9c0d0f7bb51988f2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a></td></tr>
-<tr class="memdesc:adadafaa74f91e37b9c0d0f7bb51988f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an instruction to the main memory.  <a href="#adadafaa74f91e37b9c0d0f7bb51988f2">More...</a><br/></td></tr>
-<tr class="separator:adadafaa74f91e37b9c0d0f7bb51988f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b68327efca6249f5bde090d43374d7e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1memory.html#a8b68327efca6249f5bde090d43374d7e">needsMatcher</a></td></tr>
 <tr class="memdesc:a8b68327efca6249f5bde090d43374d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if an instruction needs to pass the matcher Instructions that require a context manager are stored in a separate part of the memory, so checking the key suffices.  <a href="#a8b68327efca6249f5bde090d43374d7e">More...</a><br/></td></tr>
 <tr class="separator:a8b68327efca6249f5bde090d43374d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadafaa74f91e37b9c0d0f7bb51988f2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a></td></tr>
+<tr class="memdesc:adadafaa74f91e37b9c0d0f7bb51988f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an instruction to the main memory.  <a href="#adadafaa74f91e37b9c0d0f7bb51988f2">More...</a><br/></td></tr>
+<tr class="separator:adadafaa74f91e37b9c0d0f7bb51988f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a5b84f450c78cc01448f3e4ec8747c54f"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1memory.html#a5b84f450c78cc01448f3e4ec8747c54f">__MEMORY__</a> = <a class="el" href="classcore_1_1memory_1_1_instruction_memory.html">InstructionMemory</a>()</td></tr>
+<tr class="memitem:a5b84f450c78cc01448f3e4ec8747c54f"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1memory.html#a5b84f450c78cc01448f3e4ec8747c54f">__MEMORY__</a> = <a class="el" href="classcore_1_1memory_1_1_instruction_memory.html">InstructionMemory</a>(2)</td></tr>
 <tr class="memdesc:a5b84f450c78cc01448f3e4ec8747c54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main instance of the instruction memory.  <a href="#a5b84f450c78cc01448f3e4ec8747c54f">More...</a><br/></td></tr>
 <tr class="separator:a5b84f450c78cc01448f3e4ec8747c54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -184,24 +184,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adadafaa74f91e37b9c0d0f7bb51988f2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def core.memory.add </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>inst</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add an instruction to the main memory. </p>
-
-</div>
-</div>
 <a class="anchor" id="a8b68327efca6249f5bde090d43374d7e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -227,13 +209,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adadafaa74f91e37b9c0d0f7bb51988f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.memory.add </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>inst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add an instruction to the main memory. </p>
+<p>This function has to determine the chunck of memory that the instruction will use. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a5b84f450c78cc01448f3e4ec8747c54f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tuple core.memory.__MEMORY__ = <a class="el" href="classcore_1_1memory_1_1_instruction_memory.html">InstructionMemory</a>()</td>
+          <td class="memname">tuple core.memory.__MEMORY__ = <a class="el" href="classcore_1_1memory_1_1_instruction_memory.html">InstructionMemory</a>(2)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -245,7 +246,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 23 2014 15:15:07 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 24 2014 18:51:57 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

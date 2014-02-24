@@ -25,12 +25,12 @@
           <Path>index.html</Path>
           <Anchor>IF1</Anchor>
          </Node>
-         <Node>
-          <Name>In General</Name>
-          <Path>index.html</Path>
-          <Anchor>General</Anchor>
-         </Node>
         </Subnodes>
+       </Node>
+       <Node>
+        <Name>General</Name>
+        <Path>index.html</Path>
+        <Anchor>General</Anchor>
        </Node>
        <Node>
         <Name>Getting started</Name>
@@ -48,6 +48,51 @@
         <Name>Overall Structure</Name>
         <Path>index.html</Path>
         <Anchor>Structure</Anchor>
+       </Node>
+       <Node>
+        <Name>DIS</Name>
+        <Path>md_doc__d_i_s.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>General</Name>
+          <Path>md_doc__d_i_s.html</Path>
+          <Anchor>General</Anchor>
+          <Subnodes>
+           <Node>
+            <Name>The Instruction Memory.</Name>
+            <Path>md_doc__d_i_s.html</Path>
+            <Anchor>Memory</Anchor>
+           </Node>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>DIS file layout</Name>
+          <Path>md_doc__d_i_s.html</Path>
+          <Anchor>Layout</Anchor>
+          <Subnodes>
+           <Node>
+            <Name>Chunks</Name>
+            <Path>md_doc__d_i_s.html</Path>
+            <Anchor>Chunks</Anchor>
+           </Node>
+           <Node>
+            <Name>Links</Name>
+            <Path>md_doc__d_i_s.html</Path>
+            <Anchor>Links</Anchor>
+           </Node>
+           <Node>
+            <Name>Instructions</Name>
+            <Path>md_doc__d_i_s.html</Path>
+            <Anchor>Instructions</Anchor>
+           </Node>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>Additional constraints</Name>
+          <Path>md_doc__d_i_s.html</Path>
+          <Anchor>Constraints</Anchor>
+         </Node>
+        </Subnodes>
        </Node>
        <Node>
         <Name>IF1</Name>
@@ -678,19 +723,9 @@
                   <Anchor>a8f22fa3395b472a1156813e40234b4a3</Anchor>
                  </Node>
                  <Node>
-                  <Name>getInstruction</Name>
+                  <Name>__str__</Name>
                   <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                  <Anchor>a2fc4da432d20b96fca09634e3e72564c</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reserveStandardSlot</Name>
-                  <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                  <Anchor>a92ade01747ad87f2278c2d277d0624f2</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reserveMatcherSlot</Name>
-                  <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                  <Anchor>aeb8de7103791921191c8b0ca0cbfdee8</Anchor>
+                  <Anchor>aacf2e2bcf33a79017dbf5ebad1e10d2c</Anchor>
                  </Node>
                  <Node>
                   <Name>add</Name>
@@ -706,16 +741,6 @@
                   <Name>memory</Name>
                   <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
                   <Anchor>acab6a9aa37ed255cb29c3c7a17066f87</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>matcherKey</Name>
-                  <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                  <Anchor>a415c04364758b0cc3c5a95d4e00ff55e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>standardKey</Name>
-                  <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                  <Anchor>af52627e37b9705a4be07242e4844384f</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -950,6 +975,22 @@
                  <Node>
                   <Name>isSpecial</Name>
                   <Path>classcore_1_1token_1_1_stop_tag.html</Path>
+                  <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>ExternalTag</Name>
+                <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__str__</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>ac4ddcd9d456eada95e173ac6b98c2114</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>isSpecial</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
                   <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
                  </Node>
                 </Subnodes>
@@ -2956,6 +2997,10 @@
                 <Path>classcore_1_1token_1_1_s_tag.html</Path>
                 <Subnodes>
                  <Node>
+                  <Name>core.token.ExternalTag</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                 </Node>
+                 <Node>
                   <Name>core.token.StopTag</Name>
                   <Path>classcore_1_1token_1_1_stop_tag.html</Path>
                  </Node>
@@ -3711,19 +3756,9 @@
                     <Anchor>a8f22fa3395b472a1156813e40234b4a3</Anchor>
                    </Node>
                    <Node>
-                    <Name>getInstruction</Name>
+                    <Name>__str__</Name>
                     <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                    <Anchor>a2fc4da432d20b96fca09634e3e72564c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reserveStandardSlot</Name>
-                    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                    <Anchor>a92ade01747ad87f2278c2d277d0624f2</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reserveMatcherSlot</Name>
-                    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                    <Anchor>aeb8de7103791921191c8b0ca0cbfdee8</Anchor>
+                    <Anchor>aacf2e2bcf33a79017dbf5ebad1e10d2c</Anchor>
                    </Node>
                    <Node>
                     <Name>add</Name>
@@ -3739,16 +3774,6 @@
                     <Name>memory</Name>
                     <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
                     <Anchor>acab6a9aa37ed255cb29c3c7a17066f87</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>matcherKey</Name>
-                    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                    <Anchor>a415c04364758b0cc3c5a95d4e00ff55e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>standardKey</Name>
-                    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                    <Anchor>af52627e37b9705a4be07242e4844384f</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -3768,14 +3793,14 @@
                   <Anchor>adcd75eabf1c237556ef1c8fc10702036</Anchor>
                  </Node>
                  <Node>
-                  <Name>add</Name>
-                  <Path>memory_8py.html</Path>
-                  <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>needsMatcher</Name>
                   <Path>memory_8py.html</Path>
                   <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>add</Name>
+                  <Path>memory_8py.html</Path>
+                  <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
                  </Node>
                  <Node>
                   <Name>__MEMORY__</Name>
@@ -3875,14 +3900,24 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>start</Name>
+                  <Name>initCores</Name>
                   <Path>runtime_8py.html</Path>
-                  <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
+                  <Anchor>afdf57a6f4205a15c50582f8aa446d302</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>startCores</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>a37bc053a818d063564703aeae1074dbd</Anchor>
                  </Node>
                  <Node>
                   <Name>log</Name>
                   <Path>runtime_8py.html</Path>
                   <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__ProcLst__</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>a36a9fff3c19b32cb91a2057ae3ea2ac5</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -4032,6 +4067,22 @@
                    </Node>
                   </Subnodes>
                  </Node>
+                 <Node>
+                  <Name>ExternalTag</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__str__</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>ac4ddcd9d456eada95e173ac6b98c2114</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>isSpecial</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
                 </Subnodes>
                </Node>
                <Node>
@@ -4158,6 +4209,11 @@
               <Name>log.py</Name>
               <Path>log_8py.html</Path>
               <Subnodes>
+               <Node>
+                <Name>setup</Name>
+                <Path>log_8py.html</Path>
+                <Anchor>a196018fc1fcbd935ae8f906cf7623bf3</Anchor>
+               </Node>
                <Node>
                 <Name>FORMAT_STR</Name>
                 <Path>log_8py.html</Path>

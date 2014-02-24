@@ -7,8 +7,6 @@ var searchData=
   ['reduce',['Reduce',['../namespaceif1parser_1_1operations.html#ab6a01eb36001d0054b3b93a1079f3d91',1,'if1parser::operations']]],
   ['repeatloopcnode',['RepeatLoopCNode',['../class_i_g_r_1_1node_1_1_repeat_loop_c_node.html',1,'IGR::node']]],
   ['res',['res',['../classif1parser_1_1type_1_1___function_type.html#a8b5ff3f4061083eac5a38df2b096b400',1,'if1parser::type::_FunctionType']]],
-  ['reservematcherslot',['reserveMatcherSlot',['../classcore_1_1memory_1_1_instruction_memory.html#aeb8de7103791921191c8b0ca0cbfdee8',1,'core::memory::InstructionMemory']]],
-  ['reservestandardslot',['reserveStandardSlot',['../classcore_1_1memory_1_1_instruction_memory.html#a92ade01747ad87f2278c2d277d0624f2',1,'core::memory::InstructionMemory']]],
   ['reset',['reset',['../namespacecore_1_1memory.html#a1765945bfc16abcf7ecf4b56c4d5d1ee',1,'core::memory']]],
   ['restorecontext',['restoreContext',['../classcore_1_1token_creator_1_1_token_creator.html#ae9ee1f333586314900f7c802ca984cf6',1,'core::tokenCreator::TokenCreator']]],
   ['restoremap',['restoreMap',['../classcore_1_1token_creator_1_1_token_creator.html#abd6fde0a66238ec75a2c929acd2eee66',1,'core::tokenCreator::TokenCreator']]],

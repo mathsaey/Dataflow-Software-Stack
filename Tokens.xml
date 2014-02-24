@@ -299,18 +299,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>add</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core::memory</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1memory.html</Path>
-    <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
-    <Abstract>Add an instruction to the main memory. </Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -319,6 +307,18 @@
     <Path>namespacecore_1_1memory.html</Path>
     <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
     <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>add</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
+    <Abstract>Add an instruction to the main memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
@@ -335,14 +335,24 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>start</Name>
+      <Name>initCores</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
-    <Abstract>Initialize the cores, and start program execution. </Abstract>
+    <Anchor>afdf57a6f4205a15c50582f8aa446d302</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>startCores</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a37bc053a818d063564703aeae1074dbd</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -354,6 +364,17 @@
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
     <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__ProcLst__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a36a9fff3c19b32cb91a2057ae3ea2ac5</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -501,6 +522,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>setup</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>log</Scope>
+    </TokenIdentifier>
+    <Path>namespacelog.html</Path>
+    <Anchor>a196018fc1fcbd935ae8f906cf7623bf3</Anchor>
+    <Abstract>Set up the root logger. </Abstract>
+    <DeclaredIn>log.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>FORMAT_STR</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -508,6 +541,7 @@
     </TokenIdentifier>
     <Path>namespacelog.html</Path>
     <Anchor>a036cd3135c3f1fcb5838e49ffb839312</Anchor>
+    <Abstract>String for formatting log records. </Abstract>
     <DeclaredIn>log.py</DeclaredIn>
   </Token>
   <Token>
@@ -2073,6 +2107,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>md_doc_DIS</Name>
+      <APILanguage>markdown</APILanguage>
+    </TokenIdentifier>
+    <Path>md_doc__d_i_s.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>md_doc_IF1</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
@@ -3590,18 +3631,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>add</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core::memory</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1memory.html</Path>
-    <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
-    <Abstract>Add an instruction to the main memory. </Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>needsMatcher</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3610,6 +3639,18 @@
     <Path>namespacecore_1_1memory.html</Path>
     <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
     <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>add</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
+    <Abstract>Add an instruction to the main memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
@@ -3643,42 +3684,19 @@
     </TokenIdentifier>
     <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
     <Anchor>a8f22fa3395b472a1156813e40234b4a3</Anchor>
+    <Abstract>Initialize the memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>getInstruction</Name>
+      <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>core.memory.InstructionMemory</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a2fc4da432d20b96fca09634e3e72564c</Anchor>
-    <Abstract>Get a single instruction from memory. </Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reserveStandardSlot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.memory.InstructionMemory</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a92ade01747ad87f2278c2d277d0624f2</Anchor>
-    <Abstract>Reserve a slot for an instruction that does not require any context matching. </Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reserveMatcherSlot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.memory.InstructionMemory</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>aeb8de7103791921191c8b0ca0cbfdee8</Anchor>
-    <Abstract>Reserve a slot for an instruction that requires context matching. </Abstract>
+    <Anchor>aacf2e2bcf33a79017dbf5ebad1e10d2c</Anchor>
+    <Abstract>Print the contents of the instruction memory. </Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
@@ -3717,26 +3735,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>matcherKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.memory.InstructionMemory</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>a415c04364758b0cc3c5a95d4e00ff55e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>standardKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.memory.InstructionMemory</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>af52627e37b9705a4be07242e4844384f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>core::runtime</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -3747,14 +3745,24 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>start</Name>
+      <Name>initCores</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
-    <Abstract>Initialize the cores, and start program execution. </Abstract>
+    <Anchor>afdf57a6f4205a15c50582f8aa446d302</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>startCores</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a37bc053a818d063564703aeae1074dbd</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -3766,6 +3774,17 @@
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
     <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__ProcLst__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a36a9fff3c19b32cb91a2057ae3ea2ac5</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -4240,6 +4259,38 @@
     </TokenIdentifier>
     <Path>classcore_1_1token_1_1_stop_tag.html</Path>
     <Anchor>a3b0fc00ec9b2831e855d9eb3aa5b5aa3</Anchor>
+    <DeclaredIn>token.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isSpecial</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.token.STag</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_1_1_s_tag.html</Path>
+    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
+    <DeclaredIn>token.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::token::ExternalTag</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.token.ExternalTag</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+    <Abstract>External Tag. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.token.ExternalTag</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+    <Anchor>ac4ddcd9d456eada95e173ac6b98c2114</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -9928,6 +9979,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>setup</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>log</Scope>
+    </TokenIdentifier>
+    <Path>namespacelog.html</Path>
+    <Anchor>a196018fc1fcbd935ae8f906cf7623bf3</Anchor>
+    <Abstract>Set up the root logger. </Abstract>
+    <DeclaredIn>log.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>FORMAT_STR</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -9935,6 +9998,7 @@
     </TokenIdentifier>
     <Path>namespacelog.html</Path>
     <Anchor>a036cd3135c3f1fcb5838e49ffb839312</Anchor>
+    <Abstract>String for formatting log records. </Abstract>
     <DeclaredIn>log.py</DeclaredIn>
   </Token>
 </Tokens>

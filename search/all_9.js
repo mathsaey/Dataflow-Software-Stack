@@ -14,6 +14,7 @@ var searchData=
   ['ifthenelsecnode',['IfThenElseCNode',['../class_i_g_r_1_1node_1_1_if_then_else_c_node.html',1,'IGR::node']]],
   ['igr',['IGR',['../namespace_i_g_r.html',1,'']]],
   ['inbox',['inbox',['../classcore_1_1runtime_1_1_core.html#a0da35aef8039255d37eec8bd2e3ab2dd',1,'core::runtime::Core']]],
+  ['initcores',['initCores',['../namespacecore_1_1runtime.html#afdf57a6f4205a15c50582f8aa446d302',1,'core::runtime']]],
   ['inputlist',['inputList',['../namespacecompiler_1_1dot.html#a6df36fb8b1f135d7e646440e6adf39d1',1,'compiler::dot']]],
   ['inputport',['InputPort',['../class_i_g_r_1_1port_1_1_input_port.html',1,'IGR::port']]],
   ['inputports',['inputPorts',['../class_i_g_r_1_1node_1_1_node.html#ad43e8fb88ce8b2bad8655f1d2e263553',1,'IGR.node.Node.inputPorts()'],['../class_i_g_r_1_1node_1_1_sub_graph_entry_node.html#a9428f4be6c8b8ba5ec3fcf6409509239',1,'IGR.node.SubGraphEntryNode.inputPorts()']]],

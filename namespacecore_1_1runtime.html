@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">747aacc</span>
+   &#160;<span id="projectnumber">ebab182</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -106,51 +106,51 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7b2f8d99c507dcb53e31bf8296b8bd69"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1runtime.html#a7b2f8d99c507dcb53e31bf8296b8bd69">start</a></td></tr>
-<tr class="memdesc:a7b2f8d99c507dcb53e31bf8296b8bd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the cores, and start program execution.  <a href="#a7b2f8d99c507dcb53e31bf8296b8bd69">More...</a><br/></td></tr>
-<tr class="separator:a7b2f8d99c507dcb53e31bf8296b8bd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf57a6f4205a15c50582f8aa446d302"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1runtime.html#afdf57a6f4205a15c50582f8aa446d302">initCores</a></td></tr>
+<tr class="separator:afdf57a6f4205a15c50582f8aa446d302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37bc053a818d063564703aeae1074dbd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1runtime.html#a37bc053a818d063564703aeae1074dbd">startCores</a></td></tr>
+<tr class="separator:a37bc053a818d063564703aeae1074dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ad0f367bed031f8b4f82413776061fb30"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1runtime.html#ad0f367bed031f8b4f82413776061fb30">log</a> = logging.getLogger(__name__)</td></tr>
 <tr class="separator:ad0f367bed031f8b4f82413776061fb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a9fff3c19b32cb91a2057ae3ea2ac5"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1runtime.html#a36a9fff3c19b32cb91a2057ae3ea2ac5">__ProcLst__</a> = []</td></tr>
+<tr class="separator:a36a9fff3c19b32cb91a2057ae3ea2ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DVM runtime core. </p>
 <p>This module defines the runtime. The runtime is responsible for dispatching tokens, matching tokens by their contexts and for scheduling instructions that are ready to execute.</p>
 <p>Multiple runtime "cores" are active at any given time, depending on the system. It is the responsibility of the runtime to find a decent load balance accross these cores. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a7b2f8d99c507dcb53e31bf8296b8bd69"></a>
+<a class="anchor" id="afdf57a6f4205a15c50582f8aa446d302"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def core.runtime.start </td>
+          <td class="memname">def core.runtime.initCores </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cores</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>cores</em> = <code>1</code></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>tokens</em> = <code>[]</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize the cores, and start program execution. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cores</td><td>The amount of cores to create. </td></tr>
-  </table>
-  </dd>
-</dl>
+</div>
+</div>
+<a class="anchor" id="a37bc053a818d063564703aeae1074dbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.runtime.startCores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -167,10 +167,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a36a9fff3c19b32cb91a2057ae3ea2ac5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list core.runtime.__ProcLst__ = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 23 2014 15:15:07 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 24 2014 18:51:57 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

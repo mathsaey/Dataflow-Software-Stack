@@ -5,6 +5,7 @@ var searchData=
   ['destination',['destination',['../class_i_g_r_1_1literal_1_1_literal.html#a841f4181b6843835f46f0073003bd878',1,'IGR::literal::Literal']]],
   ['destinations',['destinations',['../classcore_1_1instruction_1_1_static_instruction.html#aca75a92404220de078cd6b6404c476f8',1,'core::instruction::StaticInstruction']]],
   ['destsink',['destSink',['../classcore_1_1instruction_1_1_context_change.html#a8c3d69bd61884b15c178e10b938d61fb',1,'core::instruction::ContextChange']]],
+  ['dis_2emd',['DIS.md',['../_d_i_s_8md.html',1,'']]],
   ['dispatcher',['dispatcher',['../classcore_1_1runtime_1_1_core.html#a068f6f9ef6dd9b1dac8c59dc8c3e9e6f',1,'core::runtime::Core']]],
   ['dispatcher_2epy',['dispatcher.py',['../dispatcher_8py.html',1,'']]],
   ['div',['Div',['../namespaceif1parser_1_1operations.html#aa875f15466b60b45cc2ac88535d89077',1,'if1parser::operations']]],
@@ -14,5 +15,6 @@ var searchData=
   ['dottofile',['dotToFile',['../namespacecompiler_1_1dot.html#ab9fb1f388749ced3ba64ee867fae0920',1,'compiler::dot']]],
   ['double',['Double',['../namespaceif1parser_1_1operations.html#a786a08aed3755a37eb13a6495906f67f',1,'if1parser::operations']]],
   ['dvm',['dvm',['../namespacedvm.html',1,'']]],
-  ['dvm_2epy',['dvm.py',['../dvm_8py.html',1,'']]]
+  ['dvm_2epy',['dvm.py',['../dvm_8py.html',1,'']]],
+  ['dis',['DIS',['../md_doc__d_i_s.html',1,'']]]
 ];
