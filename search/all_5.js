@@ -11,5 +11,6 @@ var searchData=
   ['executekey',['executeKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a06d0216c7e4c4ffc499f394769a67ccb',1,'core::contextMatcher::ContextMatcher']]],
   ['exit',['exit',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a41d47337d37d6469a1b2a11ee9595913',1,'IGR::subgraph::SubGraph']]],
   ['exitcomp',['exitComp',['../namespaceif1parser_1_1environment.html#ae609458a57295c6f7730d4dc0f590b77',1,'if1parser::environment']]],
-  ['exp',['Exp',['../namespaceif1parser_1_1operations.html#acd9a03fdb53ef23f94592905772bb488',1,'if1parser::operations']]]
+  ['exp',['Exp',['../namespaceif1parser_1_1operations.html#acd9a03fdb53ef23f94592905772bb488',1,'if1parser::operations']]],
+  ['externaltag',['ExternalTag',['../classcore_1_1token_1_1_external_tag.html',1,'core::token']]]
 ];

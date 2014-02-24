@@ -953,6 +953,47 @@
                 </Subnodes>
                </Node>
                <Node>
+                <Name>ExternalTag</Name>
+                <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>aa50ae3a351c92bf42a6951088e0ca5a6</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__str__</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>a2218733abfa5d6df7a31de2585f70676</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>isStop</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>a72379c4ea74fcb10ee88d2e384652e12</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>core</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>a64b66df1c4d8f4cd44ddc1cf4e72034f</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>cont</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>aa795f56c33f2d4889874f92895ac5554</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>port</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>a2792a4e18abe954a2af3b784ea58f478</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>inst</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Anchor>ac13dace193894359e5d79420f8685fe8</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
                 <Name>StopTag</Name>
                 <Path>classcore_1_1token_1_1_stop_tag.html</Path>
                 <Subnodes>
@@ -2976,6 +3017,12 @@
              <Node>
               <Name>core.token.Tag</Name>
               <Path>classcore_1_1token_1_1_tag.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>core.token.ExternalTag</Name>
+                <Path>classcore_1_1token_1_1_external_tag.html</Path>
+               </Node>
+              </Subnodes>
              </Node>
              <Node>
               <Name>core.token.Token</Name>
@@ -4011,6 +4058,47 @@
                    <Node>
                     <Name>inst</Name>
                     <Path>classcore_1_1token_1_1_tag.html</Path>
+                    <Anchor>ac13dace193894359e5d79420f8685fe8</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>ExternalTag</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>aa50ae3a351c92bf42a6951088e0ca5a6</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>__str__</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>a2218733abfa5d6df7a31de2585f70676</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>isStop</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>a72379c4ea74fcb10ee88d2e384652e12</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>core</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>a64b66df1c4d8f4cd44ddc1cf4e72034f</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>cont</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>aa795f56c33f2d4889874f92895ac5554</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>port</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                    <Anchor>a2792a4e18abe954a2af3b784ea58f478</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>inst</Name>
+                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
                     <Anchor>ac13dace193894359e5d79420f8685fe8</Anchor>
                    </Node>
                   </Subnodes>

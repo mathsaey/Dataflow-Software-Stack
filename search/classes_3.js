@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['forallcnode',['ForallCNode',['../class_i_g_r_1_1node_1_1_forall_c_node.html',1,'IGR::node']]]
+  ['externaltag',['ExternalTag',['../classcore_1_1token_1_1_external_tag.html',1,'core::token']]]
 ];
