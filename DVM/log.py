@@ -38,5 +38,5 @@ import logging
 FORMAT_STR = "[%(levelname)5s][%(module)14s:%(lineno)3d][%(processName)3s] %(message)s"
 
 ## Set up the root logger.
-def setup():
-	logging.basicConfig(format = FORMAT_STR, level = logging.DEBUG)
+def setup(lvl = logging.WARNING):
+	logging.basicConfig(format = FORMAT_STR, level = lvl)

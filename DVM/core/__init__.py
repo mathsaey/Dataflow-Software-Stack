@@ -138,8 +138,15 @@ def addDestination(srcKey, srcPort, dstKey, dstPort):
 	inst.addDestination(srcPort, dstKey, dstPort)
 
 ##
-# Start program execution
+# Start the execution cores.
 #
-# \see runtime::start()
+# \see runtime::init()
 ##
 def start(cores = 1): runtime.start(cores)
+
+##
+# Add an external token containing data.
+#
+# \see runtime::addData()
+##
+def addData(data): runtime.addData(data)

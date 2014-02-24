@@ -22,7 +22,7 @@ Finally, the main repository of this project can be found [on github](https://gi
 The goal of DVM is to create a highly parallel virtual machine. This machine will use the [dataflow architecture](http://en.wikipedia.org/wiki/Dataflow_architecture) to achieve a high amount of concurrency.
 
 ## Dataflow {#Dataflow}
-<img style="float: right" src="../res/simpleStatic.png"/>
+<img style="float: right" src="simpleStatic.png"/>
 
 In short, the general idea behind [dataflow](http://en.wikipedia.org/wiki/Dataflow_architecture) is that an instruction in the program is executed once it's inputs are ready. This property allows us to exploit the implicit parallelism of programs.
 

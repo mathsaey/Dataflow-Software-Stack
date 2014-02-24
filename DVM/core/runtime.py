@@ -156,32 +156,23 @@ class Core(object):
 		print  value
 		return value
 
-__processes__ = []
 __cores__ = []
 __port__ = 0
 
-def init(cores = 1):
-	procLst  = [None] * cores
+def start(cores = 1):
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
 	queues   = [coreLst[i].inbox  for i in xrange(0, cores)]
 
-	for i in xrange(0, cores):
-		core  = coreLst[i]
+	for core in coreLst:
 		core.link(queues)
 
 		p = multiprocessing.Process(
 			target = core.start, 
-			name   = "C " + str(i))
-
-		procLst[i] = p
+			name   = "C " + str(core.identifier))
+		p.start()
 	
-	global __processes__
 	global __cores__
-	__processes__ = procLst
 	__cores__ = coreLst
-
-def start():
-	for p in __processes__: p.start()
 
 def addData(datum): 
 	global __port__
