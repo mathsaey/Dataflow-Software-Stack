@@ -85,6 +85,16 @@ class Tag(object):
 	def isStop(self): return False
 
 ##
+# External Tag
+#
+# Represent a token with data from the user.
+# Internally, this is just a token with a predetermined
+# destination.
+##
+class ExternalTag(Tag):
+	def __init__(self, port):
+		super(ExternalTag, self).__init__(0, (0,0), port, -1)
+##
 # Stop Tag
 #
 # Signals the end of program execution.

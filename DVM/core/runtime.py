@@ -185,7 +185,7 @@ def start():
 
 def addData(datum): 
 	global __port__
-	tag = token.Tag(0, (0, 0), __port__, -1)
+	tag = token.ExternalTag(__port__)
 	tok = token.Token(datum, tag)
 	__cores__[0].add(tok)
 	__port__ += 1
