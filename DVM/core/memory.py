@@ -32,6 +32,8 @@
 # the instruction memory stores all the instructions in the program.
 ##
 
+import StringIO
+
 ##
 # The Instruction memory stores all of the 
 # instructions in the program.
@@ -43,9 +45,37 @@
 ##
 class InstructionMemory(object):
 
+	##
+	# Initialize the memory.
+	#
+	# \param chuncks
+	#		The amount of chuncks this memory contains.
+	##
 	def __init__(self, chuncks):
 		super(InstructionMemory, self).__init__()
 		self.memory = [[] for i in xrange(0, chuncks)]
+
+	##
+	# Print the contents of the instruction memory.
+	# Mainly used for debugging purposes.
+	##
+	def __str__(self):
+		buffer = StringIO.StringIO()
+		buffer.write("<<< Instruction Memory >>>\n")
+		buffer.write("==========================\n")
+
+		for mem in self.memory:
+			buffer.write("Starting chunk...\n")
+			for inst in mem:
+				buffer.write(str(inst))
+				buffer.write("\n")
+			buffer.write("End of chunk...\n\n")
+
+		buffer.write("==========================\n")
+		buffer.write("<<< Instruction Memory >>>\n")
+		res = buffer.getvalue()
+		buffer.close()
+		return res
 
 	##
 	# Add an instruction to the memory.
@@ -96,6 +126,6 @@ def needsMatcher(key): return key[0] is 0
 ##
 def add(inst): 
 	chunck = None
-	if inst.needsMatcher(): chunck = 0
-	else: chunck = 1
+	if inst.needsMatcher(): chunck = 1
+	else: chunck = 0
 	return memory().add(inst, chunck)
