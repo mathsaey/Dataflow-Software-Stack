@@ -10,8 +10,12 @@ var searchData=
   ['createcallnode',['createCallNode',['../namespace_i_g_r.html#ac8c72c16f2bdae91e9604815dfe7d648',1,'IGR']]],
   ['createcompoundnode',['createCompoundNode',['../namespace_i_g_r.html#adb4e4303c598be7439365c74b9c3e052',1,'IGR']]],
   ['createcompoundsubgraph',['createCompoundSubGraph',['../namespace_i_g_r.html#a4f10b5e5d7d19146b2afb083a7248662',1,'IGR']]],
+  ['createcontextchange',['createContextChange',['../namespaceread.html#a781d4f0b3d1d7c56d5fd02bb3ecb47c3',1,'read']]],
+  ['createcontextrestore',['createContextRestore',['../namespaceread.html#a492fa7ea038cfe45fa32a71e85d25c27',1,'read']]],
   ['creategeneralsubgraph',['createGeneralSubGraph',['../namespace_i_g_r.html#aa5e01d9c08014a16c7515ccda09fce12',1,'IGR']]],
   ['createnode',['createNode',['../namespace_i_g_r.html#a27668aa4e23763aa37d853a2e13b4279',1,'IGR']]],
+  ['createoperation',['createOperation',['../namespaceread.html#a54792d77f1b24a49d36ef7f44721a581',1,'read']]],
   ['createoperationnode',['createOperationNode',['../namespace_i_g_r.html#aa19a1174fd67a1b35805b32137b3d8be',1,'IGR']]],
+  ['createsink',['createSink',['../namespaceread.html#a7b8d23d7bcbb7065fdcced37d5c7b461',1,'read']]],
   ['createsubgraph',['createSubGraph',['../namespace_i_g_r.html#a8d809c5810700d1e88c378e40b949784',1,'IGR']]]
 ];

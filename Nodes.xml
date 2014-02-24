@@ -2919,6 +2919,10 @@
             <Name>log</Name>
             <Path>namespacelog.html</Path>
            </Node>
+           <Node>
+            <Name>read</Name>
+            <Path>namespaceread.html</Path>
+           </Node>
           </Subnodes>
          </Node>
          <Node>
@@ -4147,68 +4151,6 @@
              <Node>
               <Name>dvm.py</Name>
               <Path>dvm_8py.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>tOP</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a4d5944f0d3b1a109b96fda406c04ded2</Anchor>
-               </Node>
-               <Node>
-                <Name>fStart</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a38dab487e4bd6cb087b02f6acdeb57d7</Anchor>
-               </Node>
-               <Node>
-                <Name>body</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a66be8896b9a46ebecb591c4c283048ef</Anchor>
-               </Node>
-               <Node>
-                <Name>fEnd</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a343a8de6502c996aa501f9cfd3dcec4f</Anchor>
-               </Node>
-               <Node>
-                <Name>ret</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a774cb3477ef1029daa203ddce1354b95</Anchor>
-               </Node>
-               <Node>
-                <Name>call</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>ad88e2d02eb7028506fb84fca583630f8</Anchor>
-               </Node>
-               <Node>
-                <Name>pEnd</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a6af7202fb24ecdb8a9aaaae8a7d0cb4f</Anchor>
-               </Node>
-               <Node>
-                <Name>test</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a27e7c88e9f703c772a9137f0a69fabf9</Anchor>
-               </Node>
-               <Node>
-                <Name>tag1</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>abc25460201325482af95747a9ab0132f</Anchor>
-               </Node>
-               <Node>
-                <Name>tag2</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a1c3a37478828036ae2e788b221d06d02</Anchor>
-               </Node>
-               <Node>
-                <Name>token1</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>a72ec68891acaa2906203c9626c210c11</Anchor>
-               </Node>
-               <Node>
-                <Name>token2</Name>
-                <Path>dvm_8py.html</Path>
-                <Anchor>af775af6df819ae313ef142a423efbeb4</Anchor>
-               </Node>
-              </Subnodes>
              </Node>
              <Node>
               <Name>log.py</Name>
@@ -4223,6 +4165,87 @@
                 <Name>FORMAT_STR</Name>
                 <Path>log_8py.html</Path>
                 <Anchor>a036cd3135c3f1fcb5838e49ffb839312</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>read.py</Name>
+              <Path>read_8py.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>createSink</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
+               </Node>
+               <Node>
+                <Name>createContextChange</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a781d4f0b3d1d7c56d5fd02bb3ecb47c3</Anchor>
+               </Node>
+               <Node>
+                <Name>createContextRestore</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a492fa7ea038cfe45fa32a71e85d25c27</Anchor>
+               </Node>
+               <Node>
+                <Name>tOP</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a9dc557350f0993eb6f6760c21964a8ac</Anchor>
+               </Node>
+               <Node>
+                <Name>createOperation</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a54792d77f1b24a49d36ef7f44721a581</Anchor>
+               </Node>
+               <Node>
+                <Name>parseInst</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a4f4c9dc2cb35f7e50c14018124d47ade</Anchor>
+               </Node>
+               <Node>
+                <Name>parseChunck</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>afe352258100027bf4343c6e9c325e2fb</Anchor>
+               </Node>
+               <Node>
+                <Name>parseLink</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a354881061ece79f80981fa712f5e76ba</Anchor>
+               </Node>
+               <Node>
+                <Name>parseStmt</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a91cfb6be2061e65052e54532550e8993</Anchor>
+               </Node>
+               <Node>
+                <Name>parse</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a87ff76bbd5ab3c200bb0532c04afee95</Anchor>
+               </Node>
+               <Node>
+                <Name>parseFile</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a7a509eb1427f532b75af3834c23e833e</Anchor>
+               </Node>
+               <Node>
+                <Name>log</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a1e69d2d56b67ae274d1d7f2f11633359</Anchor>
+               </Node>
+               <Node>
+                <Name>chunck</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a80817caed15c340dec99fc3f3f491383</Anchor>
+               </Node>
+               <Node>
+                <Name>instructions</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a8fabca7c8ec80f893e52c546adfb7a34</Anchor>
+               </Node>
+               <Node>
+                <Name>functions</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a08937222a213e2af5ca289687b490b71</Anchor>
                </Node>
               </Subnodes>
              </Node>

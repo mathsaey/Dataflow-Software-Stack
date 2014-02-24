@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">34cdc83</span>
+   &#160;<span id="projectnumber">94ce788</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -110,7 +110,7 @@ DIS file layout</h1>
 <li>Instruction definitionss</li>
 <li>Links between instructions.</li>
 </ul>
-<p>Besides these, DIS can contain comment lines. A comment line is a line that starts with <code>$</code>. Furthermore, anything noted after a statement is also silently ignored. This means that this data can be effectively considered as a comment. For convenience, it is still recommend to put a <code>$</code> in front of any intended comment.</p>
+<p>Besides these, DIS can contain comments, a comment is started by using <code>$</code></p>
 <p>The following sections detail the exact nature of the other statements.</p>
 <h2><a class="anchor" id="Chunks"></a>
 Chunks</h2>
@@ -124,10 +124,10 @@ Links</h2>
 <pre class="fragment">LINK &lt;from&gt; &lt;to&gt;
 </pre><p>Where LINK is a keyword while from is the address (chunk, instruction, port) of the port on the source node while to is the address of the port on the to node.</p>
 <p>A port address is represented with the following syntax: </p>
-<pre class="fragment">[&lt;chunk&gt; &lt;instruction&gt; &lt;port&gt;]
+<pre class="fragment">&lt;chunk&gt; &lt;instruction&gt; &lt;port&gt;
 </pre><p>Thus a link from port 0 of instruction 3 in chunk 0 to port 0 of instruction 1 in chunk 1 would look like this: </p>
-<pre class="fragment">LINK [0 3 0] [0 1 0]
-</pre><p>Links can occur anywhere in the file, and transcend chunk boundaries.</p>
+<pre class="fragment">LINK 0 3 0 0 1 0
+</pre><p>Links can occur anywhere in the file, and transcend chunk boundaries. However, a link should never precede the declaration of it's destination.</p>
 <h2><a class="anchor" id="Instructions"></a>
 Instructions</h2>
 <p>An instruction in DIS looks like this: </p>
@@ -152,17 +152,21 @@ Instructions</h2>
 <p>Sinks are mainly used to have a static point in the program that can catch input (such as the start of a function). A sink takes no arguments, since it's behavior is defined by it's destinations, which are added through links. There is one exception to this rule, which can be found in the <a href="#Constraints">constraints</a> section.</p>
 <h4>ContextChange</h4>
 <p>A Context change instruction changes the context of a token. Look into the <a class="el" href="classcore_1_1instruction_1_1_context_change.html">documentation</a> for further information.</p>
-<p>A context change instruction takes to arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored.</p>
-<p>Such an address is similar to a link address: </p>
-<pre class="fragment">[&lt;chunk&gt; &lt;instruction&gt;]
+<p>A context change instruction takes 2 arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored. Thus a context change will look like this: </p>
+<pre class="fragment">INST &lt;idx&gt; &lt;type&gt; &lt;address&gt; &lt;address&gt;
+</pre><p>Such an address is similar to a link address: </p>
+<pre class="fragment">&lt;chunk&gt; &lt;instruction&gt;
 </pre><p>Thus a context change instruction is added in the following manner: </p>
-<pre class="fragment">INST 2 1 [0 4] [0 3]
+<pre class="fragment">INST 2 1 0 4 0 3
 </pre><h4>Context Restore</h4>
 <p>A context Restore finds the return instruction of a token based on it's context and sends it to that location. It can be compared to a return from a call. Once again, we refer to the <a class="el" href="classcore_1_1instruction_1_1_context_restore.html">documentation</a> for additional information.</p>
 <p>A context restore takes no arguments.</p>
 <h4>Operation Instruction</h4>
-<p>An operation instruction represents an operation on the data of a set of tokens. It takes an opcode, which represents the operation it performs, a number detailing the amount of inputs it should receive.</p>
-<h1><a class="anchor" id="Constraints"></a>
+<p>An operation instruction represents an operation on the data of a set of tokens. It takes an opcode, which represents the operation it performs, and a number detailing the amount of inputs it should receive. It ends up looking like this: </p>
+<pre class="fragment">INST &lt;idx&gt; 3 &lt;opCode&gt; &lt;inputs&gt;
+</pre><p>Example: </p>
+<pre class="fragment">INST 0 3 1 2
+</pre><h1><a class="anchor" id="Constraints"></a>
 Additional constraints</h1>
 <p>In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are achieved by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.</p>
 <p>The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0. Both of these points should be sink instructions, which **take one additional argument*, namely the amount of inputs/outputs the accept/return. These are used by the runtime to determine if the program requires additional input and if it has stopped. We declare these instructions in the following way:</p>
@@ -192,28 +196,29 @@ An Example</h1>
 <div class="line">INST 1 0 1 $ Program exit  point, a special sink</div>
 <div class="line"></div>
 <div class="line">$ <span class="stringliteral">&quot;main function&quot;</span></div>
-<div class="line">INST 2 1 [0 4] [0 3] $ A <a class="code" href="namespacedvm.html#ad88e2d02eb7028506fb84fca583630f8">call</a> to a <span class="keyword">function</span>.</div>
-<div class="line">INST 3 0             $ A sink that leads to the program exit point.</div>
+<div class="line">INST 2 1 0 4 0 3 $ A call to a <span class="keyword">function</span>.</div>
+<div class="line">INST 3 0         $ A sink that leads to the program exit point.</div>
 <div class="line"></div>
-<div class="line">LINK [0 0 0] [0 2 0] $ Accept input from entry point</div>
-<div class="line">LINK [0 0 1] [0 2 1] $ Accept input from entry point</div>
-<div class="line">LINK [0 3 0] [0 1 0] $ Send <span class="keywordflow">return</span> value to program exit</div>
+<div class="line">LINK 0 0 0 0 2 0 $ Accept input from entry point</div>
+<div class="line">LINK 0 0 1 0 2 1 $ Accept input from entry point</div>
+<div class="line">LINK 0 3 0 0 1 0 $ Send <span class="keywordflow">return</span> value to program exit</div>
 <div class="line"></div>
 <div class="line">$ <span class="keyword">function</span></div>
 <div class="line">INST 4 0 $ Entry sink of the <span class="keyword">function</span></div>
 <div class="line">INST 5 2 $ Function <span class="keywordflow">return</span> </div>
 <div class="line"></div>
-<div class="line">LINK [0 4 0] [1 0 0] $ Send input to operation</div>
-<div class="line">LINK [0 4 1] [1 0 1] $ Send input to operation</div>
-<div class="line">LINK [1 0 0] [0 5 0] $ Send output to <span class="keywordflow">return</span></div>
+<div class="line">LINK 0 4 0 1 0 0 $ Send input to operation</div>
+<div class="line">LINK 0 4 1 1 0 1 $ Send input to operation</div>
 <div class="line"></div>
 <div class="line">CHUNCK 1</div>
 <div class="line">$ Instructions that need the matcher</div>
 <div class="line">INST 0 3 1 2</div>
+<div class="line"></div>
+<div class="line">LINK 1 0 0 0 5 0 $ Send output to <span class="keywordflow">return</span></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 24 2014 19:45:52 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 24 2014 20:57:46 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
