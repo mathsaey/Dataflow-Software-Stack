@@ -335,24 +335,35 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>initCores</Name>
+      <Name>init</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>afdf57a6f4205a15c50582f8aa446d302</Anchor>
+    <Anchor>ae6a83596afb6c922fa34b6b874eb8ba3</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>startCores</Name>
+      <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a37bc053a818d063564703aeae1074dbd</Anchor>
+    <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addData</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a4fe3e65a2c62930486886a5095446389</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -368,13 +379,35 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>__ProcLst__</Name>
+      <Name>__processes__</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a36a9fff3c19b32cb91a2057ae3ea2ac5</Anchor>
+    <Anchor>a8dde17aaacc422f189e75f33a5fd7713</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__cores__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a25b6674940b07aa06df405848dd9df5c</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__port__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>aa752c279cf56ec5a6ea35d0e09a7253a</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -422,6 +455,18 @@
     <Path>namespaceread.html</Path>
     <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
     <Abstract>Create a sink. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createStop</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a30ddba6e3e6fcb02f5fb4f4bc4840772</Anchor>
+    <Abstract>Create a stop instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -2872,25 +2917,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>checkSpecial</Name>
+      <Name>processStop</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>core.dispatcher.TokenDispatcher</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>a7c5f88838461ebc5c2f4e6ae6f12f48a</Anchor>
-    <Abstract>See if a given token is a special token. </Abstract>
-    <DeclaredIn>dispatcher.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>processSpecial</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.dispatcher.TokenDispatcher</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
-    <Anchor>a14ba14bb62cff7967ae8417e7938e016</Anchor>
+    <Anchor>a6e46961e9f9745e13947edf1852cf547</Anchor>
     <DeclaredIn>dispatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -3787,24 +3820,35 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>initCores</Name>
+      <Name>init</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>afdf57a6f4205a15c50582f8aa446d302</Anchor>
+    <Anchor>ae6a83596afb6c922fa34b6b874eb8ba3</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>startCores</Name>
+      <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a37bc053a818d063564703aeae1074dbd</Anchor>
+    <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addData</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a4fe3e65a2c62930486886a5095446389</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -3820,13 +3864,35 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>__ProcLst__</Name>
+      <Name>__processes__</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core::runtime</Scope>
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
-    <Anchor>a36a9fff3c19b32cb91a2057ae3ea2ac5</Anchor>
+    <Anchor>a8dde17aaacc422f189e75f33a5fd7713</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__cores__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a25b6674940b07aa06df405848dd9df5c</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__port__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>aa752c279cf56ec5a6ea35d0e09a7253a</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -3889,6 +3955,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>link</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.runtime.Core</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a63d6568fc4cdb08a8012c15329f05d81</Anchor>
+    <Abstract>Add a reference to the message queues of the other cores. </Abstract>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3896,7 +3974,7 @@
     </TokenIdentifier>
     <Path>classcore_1_1runtime_1_1_core.html</Path>
     <Anchor>ad1c6da697790371c9dbd223aab9690bc</Anchor>
-    <Abstract>Set up the multiprocessing elements of the core and start the runtime. </Abstract>
+    <Abstract>Start the runtime. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -3946,17 +4024,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>inbox</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.runtime.Core</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1runtime_1_1_core.html</Path>
-    <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
-    <Abstract>Message Queue of this core. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>cores</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -3965,6 +4032,17 @@
     <Path>classcore_1_1runtime_1_1_core.html</Path>
     <Anchor>a90a51e4b4297931c50cfd3c12ba4d517</Anchor>
     <Abstract>Message Queues of the other cores. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inbox</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.runtime.Core</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
+    <Abstract>Message Queue of this core. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4158,13 +4236,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>isSpecial</Name>
+      <Name>isStop</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>core.token.AbstractTag</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
-    <Anchor>a45727b7c8006cfbeff640316403305b5</Anchor>
+    <Anchor>a6158f92338a9f11ab436b5ac5dd83778</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -4201,13 +4279,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>isSpecial</Name>
+      <Name>isStop</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>core.token.Tag</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1token_1_1_tag.html</Path>
-    <Anchor>ae8c8ac606602af970c01308c79f47515</Anchor>
+    <Anchor>a72379c4ea74fcb10ee88d2e384652e12</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -4252,38 +4330,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::token::STag</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.token.STag</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-    <Abstract>Special Tag. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.token.STag</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a9be819fbbe6e162c96553d5d572b7fc4</Anchor>
-    <DeclaredIn>token.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>isSpecial</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.token.STag</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
-    <DeclaredIn>token.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>core::token::StopTag</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -4305,45 +4351,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>isSpecial</Name>
+      <Name>isStop</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.token.STag</Scope>
+      <Scope>core.token.StopTag</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
-    <DeclaredIn>token.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>core::token::ExternalTag</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.token.ExternalTag</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_external_tag.html</Path>
-    <Abstract>External Tag. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.token.ExternalTag</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_external_tag.html</Path>
-    <Anchor>ac4ddcd9d456eada95e173ac6b98c2114</Anchor>
-    <DeclaredIn>token.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>isSpecial</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.token.STag</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
+    <Path>classcore_1_1token_1_1_stop_tag.html</Path>
+    <Anchor>af761160324be7c1aa7a605dc18efb301</Anchor>
     <DeclaredIn>token.py</DeclaredIn>
   </Token>
   <Token>
@@ -9931,6 +9945,18 @@
     <Path>namespaceread.html</Path>
     <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
     <Abstract>Create a sink. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createStop</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a30ddba6e3e6fcb02f5fb4f4bc4840772</Anchor>
+    <Abstract>Create a stop instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

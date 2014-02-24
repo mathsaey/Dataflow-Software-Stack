@@ -3,7 +3,6 @@ var searchData=
   ['changecontext',['changeContext',['../classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4',1,'core::tokenCreator::TokenCreator']]],
   ['char',['Char',['../namespaceif1parser_1_1operations.html#ae5805baffac4ac50930bf8436965bee2',1,'if1parser::operations']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
-  ['checkspecial',['checkSpecial',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a7c5f88838461ebc5c2f4e6ae6f12f48a',1,'core::dispatcher::TokenDispatcher']]],
   ['compoundfooter',['compoundFooter',['../namespacecompiler_1_1dot.html#a6ece59f004db7752481092f330c0af23',1,'compiler::dot']]],
   ['compoundheader',['compoundHeader',['../namespacecompiler_1_1dot.html#a51ed90df39d19a01c3a04bd2c40b8260',1,'compiler::dot']]],
   ['connect',['connect',['../namespace_i_g_r.html#a8d4b1dd299b3c727df94aef20c4c31a4',1,'IGR']]],
@@ -17,5 +16,6 @@ var searchData=
   ['createoperation',['createOperation',['../namespaceread.html#a54792d77f1b24a49d36ef7f44721a581',1,'read']]],
   ['createoperationnode',['createOperationNode',['../namespace_i_g_r.html#aa19a1174fd67a1b35805b32137b3d8be',1,'IGR']]],
   ['createsink',['createSink',['../namespaceread.html#a7b8d23d7bcbb7065fdcced37d5c7b461',1,'read']]],
+  ['createstop',['createStop',['../namespaceread.html#a30ddba6e3e6fcb02f5fb4f4bc4840772',1,'read']]],
   ['createsubgraph',['createSubGraph',['../namespace_i_g_r.html#a8d809c5810700d1e88c378e40b949784',1,'IGR']]]
 ];

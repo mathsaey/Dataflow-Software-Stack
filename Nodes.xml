@@ -88,9 +88,9 @@
           </Subnodes>
          </Node>
          <Node>
-          <Name>Additional constraints</Name>
+          <Name>Entry and Exit point</Name>
           <Path>md_doc__d_i_s.html</Path>
-          <Anchor>Constraints</Anchor>
+          <Anchor>Entry</Anchor>
          </Node>
          <Node>
           <Name>An Example</Name>
@@ -368,14 +368,9 @@
                   <Anchor>aa30c96ec3aa980af5ff5c42c22ef61d7</Anchor>
                  </Node>
                  <Node>
-                  <Name>checkSpecial</Name>
+                  <Name>processStop</Name>
                   <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
-                  <Anchor>a7c5f88838461ebc5c2f4e6ae6f12f48a</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>processSpecial</Name>
-                  <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
-                  <Anchor>a14ba14bb62cff7967ae8417e7938e016</Anchor>
+                  <Anchor>a6e46961e9f9745e13947edf1852cf547</Anchor>
                  </Node>
                  <Node>
                   <Name>processStandard</Name>
@@ -780,6 +775,11 @@
                   <Anchor>ad51c3e0d80dfb4b84389014432ba8c58</Anchor>
                  </Node>
                  <Node>
+                  <Name>link</Name>
+                  <Path>classcore_1_1runtime_1_1_core.html</Path>
+                  <Anchor>a63d6568fc4cdb08a8012c15329f05d81</Anchor>
+                 </Node>
+                 <Node>
                   <Name>start</Name>
                   <Path>classcore_1_1runtime_1_1_core.html</Path>
                   <Anchor>ad1c6da697790371c9dbd223aab9690bc</Anchor>
@@ -805,14 +805,14 @@
                   <Anchor>a4e2ec1436045d4e89011202f44382521</Anchor>
                  </Node>
                  <Node>
-                  <Name>inbox</Name>
-                  <Path>classcore_1_1runtime_1_1_core.html</Path>
-                  <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
-                 </Node>
-                 <Node>
                   <Name>cores</Name>
                   <Path>classcore_1_1runtime_1_1_core.html</Path>
                   <Anchor>a90a51e4b4297931c50cfd3c12ba4d517</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>inbox</Name>
+                  <Path>classcore_1_1runtime_1_1_core.html</Path>
+                  <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
                  </Node>
                  <Node>
                   <Name>contextCreator</Name>
@@ -905,9 +905,9 @@
                 <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>isSpecial</Name>
+                  <Name>isStop</Name>
                   <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
-                  <Anchor>a45727b7c8006cfbeff640316403305b5</Anchor>
+                  <Anchor>a6158f92338a9f11ab436b5ac5dd83778</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -926,9 +926,9 @@
                   <Anchor>a2218733abfa5d6df7a31de2585f70676</Anchor>
                  </Node>
                  <Node>
-                  <Name>isSpecial</Name>
+                  <Name>isStop</Name>
                   <Path>classcore_1_1token_1_1_tag.html</Path>
-                  <Anchor>ae8c8ac606602af970c01308c79f47515</Anchor>
+                  <Anchor>a72379c4ea74fcb10ee88d2e384652e12</Anchor>
                  </Node>
                  <Node>
                   <Name>core</Name>
@@ -953,22 +953,6 @@
                 </Subnodes>
                </Node>
                <Node>
-                <Name>STag</Name>
-                <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                  <Anchor>a9be819fbbe6e162c96553d5d572b7fc4</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>isSpecial</Name>
-                  <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                  <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
                 <Name>StopTag</Name>
                 <Path>classcore_1_1token_1_1_stop_tag.html</Path>
                 <Subnodes>
@@ -978,25 +962,9 @@
                   <Anchor>a3b0fc00ec9b2831e855d9eb3aa5b5aa3</Anchor>
                  </Node>
                  <Node>
-                  <Name>isSpecial</Name>
+                  <Name>isStop</Name>
                   <Path>classcore_1_1token_1_1_stop_tag.html</Path>
-                  <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>ExternalTag</Name>
-                <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                  <Anchor>ac4ddcd9d456eada95e173ac6b98c2114</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>isSpecial</Name>
-                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                  <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
+                  <Anchor>af761160324be7c1aa7a605dc18efb301</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -3000,22 +2968,10 @@
              <Node>
               <Name>core.token.AbstractTag</Name>
               <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>core.token.STag</Name>
-                <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>core.token.ExternalTag</Name>
-                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                 </Node>
-                 <Node>
-                  <Name>core.token.StopTag</Name>
-                  <Path>classcore_1_1token_1_1_stop_tag.html</Path>
-                 </Node>
-                </Subnodes>
-               </Node>
-              </Subnodes>
+             </Node>
+             <Node>
+              <Name>core.token.StopTag</Name>
+              <Path>classcore_1_1token_1_1_stop_tag.html</Path>
              </Node>
              <Node>
               <Name>core.token.Tag</Name>
@@ -3395,14 +3351,9 @@
                     <Anchor>aa30c96ec3aa980af5ff5c42c22ef61d7</Anchor>
                    </Node>
                    <Node>
-                    <Name>checkSpecial</Name>
+                    <Name>processStop</Name>
                     <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
-                    <Anchor>a7c5f88838461ebc5c2f4e6ae6f12f48a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>processSpecial</Name>
-                    <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
-                    <Anchor>a14ba14bb62cff7967ae8417e7938e016</Anchor>
+                    <Anchor>a6e46961e9f9745e13947edf1852cf547</Anchor>
                    </Node>
                    <Node>
                     <Name>processStandard</Name>
@@ -3847,6 +3798,11 @@
                     <Anchor>ad51c3e0d80dfb4b84389014432ba8c58</Anchor>
                    </Node>
                    <Node>
+                    <Name>link</Name>
+                    <Path>classcore_1_1runtime_1_1_core.html</Path>
+                    <Anchor>a63d6568fc4cdb08a8012c15329f05d81</Anchor>
+                   </Node>
+                   <Node>
                     <Name>start</Name>
                     <Path>classcore_1_1runtime_1_1_core.html</Path>
                     <Anchor>ad1c6da697790371c9dbd223aab9690bc</Anchor>
@@ -3872,14 +3828,14 @@
                     <Anchor>a4e2ec1436045d4e89011202f44382521</Anchor>
                    </Node>
                    <Node>
-                    <Name>inbox</Name>
-                    <Path>classcore_1_1runtime_1_1_core.html</Path>
-                    <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
-                   </Node>
-                   <Node>
                     <Name>cores</Name>
                     <Path>classcore_1_1runtime_1_1_core.html</Path>
                     <Anchor>a90a51e4b4297931c50cfd3c12ba4d517</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>inbox</Name>
+                    <Path>classcore_1_1runtime_1_1_core.html</Path>
+                    <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
                    </Node>
                    <Node>
                     <Name>contextCreator</Name>
@@ -3909,14 +3865,19 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>initCores</Name>
+                  <Name>init</Name>
                   <Path>runtime_8py.html</Path>
-                  <Anchor>afdf57a6f4205a15c50582f8aa446d302</Anchor>
+                  <Anchor>ae6a83596afb6c922fa34b6b874eb8ba3</Anchor>
                  </Node>
                  <Node>
-                  <Name>startCores</Name>
+                  <Name>start</Name>
                   <Path>runtime_8py.html</Path>
-                  <Anchor>a37bc053a818d063564703aeae1074dbd</Anchor>
+                  <Anchor>a7b2f8d99c507dcb53e31bf8296b8bd69</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>addData</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>a4fe3e65a2c62930486886a5095446389</Anchor>
                  </Node>
                  <Node>
                   <Name>log</Name>
@@ -3924,9 +3885,19 @@
                   <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
                  </Node>
                  <Node>
-                  <Name>__ProcLst__</Name>
+                  <Name>__processes__</Name>
                   <Path>runtime_8py.html</Path>
-                  <Anchor>a36a9fff3c19b32cb91a2057ae3ea2ac5</Anchor>
+                  <Anchor>a8dde17aaacc422f189e75f33a5fd7713</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__cores__</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>a25b6674940b07aa06df405848dd9df5c</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__port__</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>aa752c279cf56ec5a6ea35d0e09a7253a</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -3997,9 +3968,9 @@
                   <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>isSpecial</Name>
+                    <Name>isStop</Name>
                     <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
-                    <Anchor>a45727b7c8006cfbeff640316403305b5</Anchor>
+                    <Anchor>a6158f92338a9f11ab436b5ac5dd83778</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -4018,9 +3989,9 @@
                     <Anchor>a2218733abfa5d6df7a31de2585f70676</Anchor>
                    </Node>
                    <Node>
-                    <Name>isSpecial</Name>
+                    <Name>isStop</Name>
                     <Path>classcore_1_1token_1_1_tag.html</Path>
-                    <Anchor>ae8c8ac606602af970c01308c79f47515</Anchor>
+                    <Anchor>a72379c4ea74fcb10ee88d2e384652e12</Anchor>
                    </Node>
                    <Node>
                     <Name>core</Name>
@@ -4045,22 +4016,6 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>STag</Name>
-                  <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                    <Anchor>a9be819fbbe6e162c96553d5d572b7fc4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>isSpecial</Name>
-                    <Path>classcore_1_1token_1_1_s_tag.html</Path>
-                    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
                   <Name>StopTag</Name>
                   <Path>classcore_1_1token_1_1_stop_tag.html</Path>
                   <Subnodes>
@@ -4070,25 +4025,9 @@
                     <Anchor>a3b0fc00ec9b2831e855d9eb3aa5b5aa3</Anchor>
                    </Node>
                    <Node>
-                    <Name>isSpecial</Name>
+                    <Name>isStop</Name>
                     <Path>classcore_1_1token_1_1_stop_tag.html</Path>
-                    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>ExternalTag</Name>
-                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                    <Anchor>ac4ddcd9d456eada95e173ac6b98c2114</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>isSpecial</Name>
-                    <Path>classcore_1_1token_1_1_external_tag.html</Path>
-                    <Anchor>a3a2d96a4d67780203de1575c6ca1fe10</Anchor>
+                    <Anchor>af761160324be7c1aa7a605dc18efb301</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -4176,6 +4115,11 @@
                 <Name>createSink</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
+               </Node>
+               <Node>
+                <Name>createStop</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a30ddba6e3e6fcb02f5fb4f4bc4840772</Anchor>
                </Node>
                <Node>
                 <Name>createContextChange</Name>

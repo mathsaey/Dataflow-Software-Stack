@@ -24,6 +24,6 @@ var searchData=
   ['ports',['ports',['../namespacecompiler_1_1dot.html#acaa819ccaaa232d873ce172287bd857a',1,'compiler::dot']]],
   ['portstring',['portString',['../namespacecompiler_1_1dot.html#a2b165c8b0265f5f5d824b0bfc595588a',1,'compiler::dot']]],
   ['process',['process',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#aea9d3ed1662329987b9a886c8e2b5466',1,'core::dispatcher::TokenDispatcher']]],
-  ['processspecial',['processSpecial',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a14ba14bb62cff7967ae8417e7938e016',1,'core::dispatcher::TokenDispatcher']]],
-  ['processstandard',['processStandard',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a2f14155d26e17d4ab14dbf1dbf821623',1,'core::dispatcher::TokenDispatcher']]]
+  ['processstandard',['processStandard',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a2f14155d26e17d4ab14dbf1dbf821623',1,'core::dispatcher::TokenDispatcher']]],
+  ['processstop',['processStop',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a6e46961e9f9745e13947edf1852cf547',1,'core::dispatcher::TokenDispatcher']]]
 ];
