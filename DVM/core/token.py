@@ -85,34 +85,10 @@ class Tag(object):
 	def isSpecial(self): return False
 
 ##
-# Special Tag
-#
-# Represents a tag that has to be treated 
-# differently by the runtime, examples include
-# the stop tag, which indicates that the program has to
-# terminate upon receiving the token containing this tag.
-##
-class STag(AbstractTag):
-	def __str__(self): return "<STag>"
-	def isSpecial(self): return True
-
-##
 # Stop Tag
 #
 # Signals the end of program execution.
 ##
-class StopTag(STag):
+class StopTag(object):
 	def __str__(self): return "<STOP>"
-
-##
-# External Tag
-#
-# Used to add external input to the 
-# system.
-#
-# This external data is always sent to
-# the main function, which has a predefined 
-# location in the instruction memory.
-##
-class ExternalTag(STag):
-	def __str__(self): return "<EXTERNAL>"
+	def isStop(self): return True

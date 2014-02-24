@@ -50,19 +50,7 @@ class TokenDispatcher(object):
 		super(TokenDispatcher, self).__init__()
 		self.core = core
 
-	##
-	# See if a given token is a special token.
-	#
-	# \param tag
-	#		The tag of the token to check.
-	# 
-	# \return
-	#		True if the token is special
-	##	
-	def checkSpecial(self, tag):
-		return tag.isSpecial()
-
-	def processSpecial(self, token):
+	def processStop(self, token):
 		self.core.stop(token.datum)
 
 	def processStandard(self, token):
@@ -76,7 +64,7 @@ class TokenDispatcher(object):
 		log.info("Processing token: %s", token)
 
 		tag = token.tag
-		if self.checkSpecial(tag):
-			self.processSpecial(token)
+		if tag.isStop():
+			self.processStop(token)
 		else:
 			self.processStandard(token)
