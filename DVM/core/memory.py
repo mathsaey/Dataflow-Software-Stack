@@ -116,7 +116,7 @@ def get(key): return memory().get(key)
 #		The key of the instruction 
 # \return 
 #		True if the instruction needs to be matched.
-def needsMatcher(key): return key[0] is 0
+def needsMatcher(key): return key[0] is 1
 
 ## 
 # Add an instruction to the main memory.

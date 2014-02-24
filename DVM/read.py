@@ -36,12 +36,17 @@ import core
 
 import logging
 log = logging.getLogger(__name__)
+log.setLevel(logging.WARNING)
 
 chunck = None
 
 ## Create a sink.
 def createSink(arr):
 	return core.addSink()
+
+## Create a stop instruction
+def createStop(arr):
+	return core.addStopInstruction()
 
 def createContextChange(arr):
 	dstChnk = int(arr[3])
@@ -66,7 +71,7 @@ def createOperation(arr):
 instructions = {
 	'SI' : createSink,
 	'PB' : createSink,
-	'PE' : createSink,
+	'PE' : createStop,
 	'CC' : createContextChange,
 	'CR' : createContextRestore,
 	'OP' : createOperation

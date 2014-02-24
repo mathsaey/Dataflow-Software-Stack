@@ -55,7 +55,7 @@ class Token(object):
 # a token.
 ##
 class AbstractTag(object):
-	def isSpecial(self):
+	def isStop(self):
 		raise NotImplementedError("Abstract method")
 
 ##
@@ -82,7 +82,7 @@ class Tag(object):
 		cont = "cont " + str(self.cont) 
 		return core + inst + port + cont
 
-	def isSpecial(self): return False
+	def isStop(self): return False
 
 ##
 # Stop Tag

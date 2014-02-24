@@ -38,6 +38,7 @@
 # decent load balance accross these cores.
 ##
 
+import token
 import memory
 import multiprocessing
 
@@ -86,11 +87,11 @@ class Core(object):
 		self.identifier     = identifier
 		## See if this core is running.
 		self.active         = True
-		## Message Queue of this core
-		self.inbox          = None
 		## Message Queues of the other cores
 		self.cores          = None
 
+		## Message Queue of this core
+		self.inbox          = multiprocessing.Queue()
 		## Context creator for this core
 		self.contextCreator = ContextCreator(self)
 		## Token creator for this core
@@ -126,24 +127,18 @@ class Core(object):
 		else: 
 			self.inbox.put(token)
 
-	## 
-	# Set up the multiprocessing elements
-	# of the core and start the runtime.
-	#
-	# \param inbox
-	#		The message queue of this corec.
-	# \param cores
-	#		A list of the message queues of the
-	#		other cores
-	# \param logLock
-	#		The lock of the logger.
 	##
-	def start(self, inbox, cores):
-		self.inbox = inbox
+	# Add a reference to the message
+	# queues of the other cores.
+	##
+	def link(self, cores):
 		self.cores = cores
 
+	## 
+	# Start the runtime
+	##
+	def start(self):
 		log.info("Core %s starting run loop", self)
-
 		while self.active:
 			t = self.inbox.get()
 			self.dispatcher.process(t)
@@ -161,25 +156,36 @@ class Core(object):
 		print  value
 		return value
 
-__ProcLst__ = []
+__processes__ = []
+__cores__ = []
+__port__ = 0
 
-def initCores(cores = 1):
+def init(cores = 1):
 	procLst  = [None] * cores
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
-	queues   = [multiprocessing.Queue()  for i in xrange(0, cores)]
+	queues   = [coreLst[i].inbox  for i in xrange(0, cores)]
 
 	for i in xrange(0, cores):
 		core  = coreLst[i]
-		queue = queues[i]
+		core.link(queues)
 
 		p = multiprocessing.Process(
 			target = core.start, 
-			name   = "C " + str(i),
-			args   = (queue, queues)) 
+			name   = "C " + str(i))
+
 		procLst[i] = p
 	
-	global __ProcLst__
-	__ProcLst__ = procLst
+	global __processes__
+	global __cores__
+	__processes__ = procLst
+	__cores__ = coreLst
 
-def startCores():
-	for p in __ProcLst__: p.start()
+def start():
+	for p in __processes__: p.start()
+
+def addData(datum): 
+	global __port__
+	tag = token.Tag(0, (0, 0), __port__, -1)
+	tok = token.Token(datum, tag)
+	__cores__[0].add(tok)
+	__port__ += 1

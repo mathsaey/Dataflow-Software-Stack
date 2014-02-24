@@ -232,7 +232,8 @@ class ContextRestore(AbstractInstruction):
 
 ##
 # Represents the end of the program.
-# Any input of this instruction is 
+# Any input of this instruction is considered to be
+# the result of the program.
 ##
 class StopInstruction(AbstractInstruction):
 
