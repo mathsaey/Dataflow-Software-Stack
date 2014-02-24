@@ -120,7 +120,7 @@ exit point:
     INST 1 0 <outputs>
     
 
-# An example
+# An Example {#Example}
 
 The example below presents the DIS code for a program that simply calls a function which adds both of it's inputs. It is roughly equivalent to the following pseudo code.
 
