@@ -58,16 +58,18 @@ def tOP(a,b):
 	return a + b
 
 def createOperation(arr):
-	opCode = int(arr[3])
+	#opCode = int(arr[3])
 	inputs = int(arr[4])
 
 	return core.addOperationInstruction(tOP, inputs)
-	
+
 instructions = {
-	'0' : createSink,
-	'1' : createContextChange,
-	'2' : createContextRestore,
-	'3' : createOperation
+	'SI' : createSink,
+	'PB' : createSink,
+	'PE' : createSink,
+	'CC' : createContextChange,
+	'CR' : createContextRestore,
+	'OP' : createOperation
 }
 
 ##
@@ -75,9 +77,9 @@ instructions = {
 # Verify that it ended up in the correct chunck.
 ##
 def parseInst(arr):
-	code = arr[2]
+	code = arr[1]
 	key = instructions[code](arr)
-	if key != (chunck, int(arr[1])):
+	if key != (chunck, int(arr[2])):
 		log.critical("Instruction %s added to memory with incorrect key %s", arr, key)
 
 ##
@@ -123,8 +125,9 @@ functions = {
 # the statement should not contain
 # any comments.
 ##
-def parseStmt(line):
-	arr = line.split()
+def parseStmt(stmt):
+	log.debug("Reading statement: '%s'", stmt)
+	arr = stmt.split()
 	key = arr[0]
 	functions[key](arr)
 
