@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">765d4b7</span>
+   &#160;<span id="projectnumber">06b1f07</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -149,6 +149,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a1d75a7ff0a5d7d0ad350455a21bceef2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#a1d75a7ff0a5d7d0ad350455a21bceef2">addData</a></td></tr>
 <tr class="memdesc:a1d75a7ff0a5d7d0ad350455a21bceef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an external token containing data.  <a href="#a1d75a7ff0a5d7d0ad350455a21bceef2">More...</a><br/></td></tr>
 <tr class="separator:a1d75a7ff0a5d7d0ad350455a21bceef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc1dc1509b580b630738c1c61fa619b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#aacc1dc1509b580b630738c1c61fa619b">getIn</a></td></tr>
+<tr class="memdesc:aacc1dc1509b580b630738c1c61fa619b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the amount of input the runtime requires.  <a href="#aacc1dc1509b580b630738c1c61fa619b">More...</a><br/></td></tr>
+<tr class="separator:aacc1dc1509b580b630738c1c61fa619b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a7b5be7fa0e4857117508b808dc889"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#a64a7b5be7fa0e4857117508b808dc889">setIn</a></td></tr>
+<tr class="memdesc:a64a7b5be7fa0e4857117508b808dc889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the amount of inputs that the runtime expects.  <a href="#a64a7b5be7fa0e4857117508b808dc889">More...</a><br/></td></tr>
+<tr class="separator:a64a7b5be7fa0e4857117508b808dc889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89956e4c036740132c8cba32795c5d61"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#a89956e4c036740132c8cba32795c5d61">getPort</a></td></tr>
+<tr class="memdesc:a89956e4c036740132c8cba32795c5d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the current port of the runtime.  <a href="#a89956e4c036740132c8cba32795c5d61">More...</a><br/></td></tr>
+<tr class="separator:a89956e4c036740132c8cba32795c5d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e050d23df9ad6e1acb5df7006fa45b3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#a9e050d23df9ad6e1acb5df7006fa45b3">hasIn</a></td></tr>
+<tr class="memdesc:a9e050d23df9ad6e1acb5df7006fa45b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if the runtime expects additional input.  <a href="#a9e050d23df9ad6e1acb5df7006fa45b3">More...</a><br/></td></tr>
+<tr class="separator:a9e050d23df9ad6e1acb5df7006fa45b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dataflow Virtual Machine. </p>
@@ -369,10 +381,80 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aacc1dc1509b580b630738c1c61fa619b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.getIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the amount of input the runtime requires. </p>
+
+</div>
+</div>
+<a class="anchor" id="a64a7b5be7fa0e4857117508b808dc889"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.setIn </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the amount of inputs that the runtime expects. </p>
+
+</div>
+</div>
+<a class="anchor" id="a89956e4c036740132c8cba32795c5d61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.getPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check the current port of the runtime. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e050d23df9ad6e1acb5df7006fa45b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.hasIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>See if the runtime expects additional input. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the runtime has received all the required data. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 25 2014 00:38:01 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 25 2014 01:27:54 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['data',['data',['../namespacedvm.html#a75bba702496098cfa1b0ad9effc158a4',1,'dvm']]],
   ['datum',['datum',['../classcore_1_1token_1_1_token.html#ad7d1d5e1160b13f8c06cf99eb33868ab',1,'core::token::Token']]],
   ['dest',['dest',['../classif1parser_1_1type_1_1___pointer_type.html#a7da5d544db4fb0ab8cc02d884bf868ac',1,'if1parser::type::_PointerType']]],
   ['destination',['destination',['../class_i_g_r_1_1literal_1_1_literal.html#a841f4181b6843835f46f0073003bd878',1,'IGR::literal::Literal']]],

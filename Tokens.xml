@@ -98,6 +98,54 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>aacc1dc1509b580b630738c1c61fa619b</Anchor>
+    <Abstract>Return the amount of input the runtime requires. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a64a7b5be7fa0e4857117508b808dc889</Anchor>
+    <Abstract>Set the amount of inputs that the runtime expects. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
+    <Abstract>Check the current port of the runtime. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hasIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a9e050d23df9ad6e1acb5df7006fa45b3</Anchor>
+    <Abstract>See if the runtime expects additional input. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>parseFile</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -402,6 +450,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>__in__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a878cd578c09376445089f77a7de165c2</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -431,6 +490,17 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>a0df66969824d161dbff839bc07aa2d19</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>data</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a75bba702496098cfa1b0ad9effc158a4</Anchor>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -479,6 +549,17 @@
     <Path>namespaceread.html</Path>
     <Anchor>a30ddba6e3e6fcb02f5fb4f4bc4840772</Anchor>
     <Abstract>Create a stop instruction. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createStart</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>ab7a5fd94b4a8dbcbff3be11dfd6d13f1</Anchor>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -2624,6 +2705,54 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>aacc1dc1509b580b630738c1c61fa619b</Anchor>
+    <Abstract>Return the amount of input the runtime requires. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a64a7b5be7fa0e4857117508b808dc889</Anchor>
+    <Abstract>Set the amount of inputs that the runtime expects. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
+    <Abstract>Check the current port of the runtime. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hasIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a9e050d23df9ad6e1acb5df7006fa45b3</Anchor>
+    <Abstract>See if the runtime expects additional input. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>core::context</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -3899,6 +4028,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>__in__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>a878cd578c09376445089f77a7de165c2</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>core::runtime::Core</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -4582,6 +4722,17 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>a0df66969824d161dbff839bc07aa2d19</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>data</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a75bba702496098cfa1b0ad9effc158a4</Anchor>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -10064,6 +10215,17 @@
     <Path>namespaceread.html</Path>
     <Anchor>a30ddba6e3e6fcb02f5fb4f4bc4840772</Anchor>
     <Abstract>Create a stop instruction. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createStart</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>ab7a5fd94b4a8dbcbff3be11dfd6d13f1</Anchor>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

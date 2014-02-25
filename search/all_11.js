@@ -13,6 +13,7 @@ var searchData=
   ['senddatum',['sendDatum',['../classcore_1_1instruction_1_1_static_instruction.html#a60d5ee618b60b7883145196a9b156fbc',1,'core::instruction::StaticInstruction']]],
   ['sendresults',['sendResults',['../classcore_1_1instruction_1_1_operation_instruction.html#a01795f99a948bc57c713a8700ef89353',1,'core::instruction::OperationInstruction']]],
   ['seqforallcnode',['SeqForallCNode',['../class_i_g_r_1_1node_1_1_seq_forall_c_node.html',1,'IGR::node']]],
+  ['setin',['setIn',['../namespacecore.html#a64a7b5be7fa0e4857117508b808dc889',1,'core']]],
   ['setkey',['setKey',['../classcore_1_1instruction_1_1_abstract_instruction.html#ac51b309847a681f30924519582fa29af',1,'core::instruction::AbstractInstruction']]],
   ['setup',['setup',['../namespacelog.html#a196018fc1fcbd935ae8f906cf7623bf3',1,'log']]],
   ['simple_20piece_20of_20sisal_2fif1_20code',['Simple piece of Sisal/IF1 code',['../_simple.html',1,'']]],
