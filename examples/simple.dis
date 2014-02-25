@@ -11,7 +11,7 @@ INST PE 1 1 $ Program exit  point
 
 $ "main function"
 INST CC 2 0 4 0 3 $ A call to a function.
-INST SI 3          $ A sink that leads to the program exit point.
+INST SI 3         $ A sink that leads to the program exit point.
 
 LINK 0 0 0 0 2 0 $ Accept input from entry point
 LINK 0 0 1 0 2 1 $ Accept input from entry point
