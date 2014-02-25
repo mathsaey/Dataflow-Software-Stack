@@ -48,6 +48,10 @@ def createSink(arr):
 def createStop(arr):
 	return core.addStopInstruction()
 
+def createStart(arr):
+	core.setIn(int(arr[3]))
+	return createSink(arr)
+
 def createContextChange(arr):
 	dstChnk = int(arr[3])
 	dstInst = int(arr[4])
@@ -70,7 +74,7 @@ def createOperation(arr):
 
 instructions = {
 	'SI' : createSink,
-	'PB' : createSink,
+	'PB' : createStart,
 	'PE' : createStop,
 	'CC' : createContextChange,
 	'CR' : createContextRestore,

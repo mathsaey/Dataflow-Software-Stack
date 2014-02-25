@@ -150,3 +150,33 @@ def start(cores = 1): runtime.start(cores)
 # \see runtime::addData()
 ##
 def addData(data): runtime.addData(data)
+
+##
+# Return the amount of input the
+# runtime requires.
+##
+def getIn():
+	return runtime.__in__
+
+##
+# Set the amount of inputs that the 
+# runtime expects.
+##
+def setIn(i):
+	runtime.__in__ = i
+
+##
+# Check the current port of the runtime.
+##
+def getPort():
+	return runtime.__port__
+
+##
+# See if the runtime expects additional input.
+#
+# \return
+# 		True if the runtime has received all the
+#		required data.
+##
+def hasIn(): 
+	return getPort() >= getIn()

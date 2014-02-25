@@ -158,6 +158,7 @@ class Core(object):
 
 __cores__ = []
 __port__ = 0
+__in__ = None
 
 def start(cores = 1):
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
