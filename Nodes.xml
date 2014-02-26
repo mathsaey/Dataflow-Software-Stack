@@ -192,6 +192,84 @@
          <Node>
           <Name>All</Name>
           <Path>namespacemembers.html</Path>
+          <Subnodes>
+           <Node>
+            <Name>_</Name>
+            <Path>namespacemembers.html</Path>
+           </Node>
+           <Node>
+            <Name>a</Name>
+            <Path>namespacemembers_a.html</Path>
+           </Node>
+           <Node>
+            <Name>b</Name>
+            <Path>namespacemembers_b.html</Path>
+           </Node>
+           <Node>
+            <Name>c</Name>
+            <Path>namespacemembers_c.html</Path>
+           </Node>
+           <Node>
+            <Name>d</Name>
+            <Path>namespacemembers_d.html</Path>
+           </Node>
+           <Node>
+            <Name>e</Name>
+            <Path>namespacemembers_e.html</Path>
+           </Node>
+           <Node>
+            <Name>f</Name>
+            <Path>namespacemembers_f.html</Path>
+           </Node>
+           <Node>
+            <Name>g</Name>
+            <Path>namespacemembers_g.html</Path>
+           </Node>
+           <Node>
+            <Name>h</Name>
+            <Path>namespacemembers_h.html</Path>
+           </Node>
+           <Node>
+            <Name>i</Name>
+            <Path>namespacemembers_i.html</Path>
+           </Node>
+           <Node>
+            <Name>l</Name>
+            <Path>namespacemembers_l.html</Path>
+           </Node>
+           <Node>
+            <Name>m</Name>
+            <Path>namespacemembers_m.html</Path>
+           </Node>
+           <Node>
+            <Name>n</Name>
+            <Path>namespacemembers_n.html</Path>
+           </Node>
+           <Node>
+            <Name>o</Name>
+            <Path>namespacemembers_o.html</Path>
+           </Node>
+           <Node>
+            <Name>p</Name>
+            <Path>namespacemembers_p.html</Path>
+           </Node>
+           <Node>
+            <Name>r</Name>
+            <Path>namespacemembers_r.html</Path>
+           </Node>
+           <Node>
+            <Name>s</Name>
+            <Path>namespacemembers_s.html</Path>
+           </Node>
+           <Node>
+            <Name>t</Name>
+            <Path>namespacemembers_t.html</Path>
+           </Node>
+           <Node>
+            <Name>w</Name>
+            <Path>namespacemembers_w.html</Path>
+           </Node>
+          </Subnodes>
          </Node>
          <Node>
           <Name>Functions</Name>
@@ -2929,6 +3007,20 @@
             <Path>namespacelog.html</Path>
            </Node>
            <Node>
+            <Name>native</Name>
+            <Path>namespacenative.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>operations</Name>
+              <Path>namespacenative_1_1operations.html</Path>
+             </Node>
+             <Node>
+              <Name>types</Name>
+              <Path>namespacenative_1_1types.html</Path>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>read</Name>
             <Path>namespaceread.html</Path>
            </Node>
@@ -4196,6 +4288,93 @@
               </Subnodes>
              </Node>
              <Node>
+              <Name>native</Name>
+              <Path>dir_e6817393d9c38dca04a887755effa7e0.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>__init__.py</Name>
+                <Path>_d_v_m_2native_2____init_____8py.html</Path>
+               </Node>
+               <Node>
+                <Name>operations.py</Name>
+                <Path>_d_v_m_2native_2operations_8py.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>dvm_noOp</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>a738eb93c0b3c8fb1030687bfbaab8853</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvm_isVoid</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>a33d84bff0cdc877fbff5abd30a83837e</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvm_equals</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>aae2271e53c8e61fe0a591d5e450c5c8d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvm_and</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>aca87dceb444baa7b55f3172809b494f9</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvm_or</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>a872bd7fa4f4d0527dc55d51ac60df32d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvm_add</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>ab66054472a8e4fd9a2952dc8115b8bdd</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>operations</Name>
+                  <Path>_d_v_m_2native_2operations_8py.html</Path>
+                  <Anchor>a2fd74e97db2052980a521f59bfc12042</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>types.py</Name>
+                <Path>types_8py.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>dvmVoid</Name>
+                  <Path>types_8py.html</Path>
+                  <Anchor>a5b1d16174ac736956f4ad7c8f866b162</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvmBool</Name>
+                  <Path>types_8py.html</Path>
+                  <Anchor>ada0e6c7a0f017d5c5311b4d160c6ff19</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvmInt</Name>
+                  <Path>types_8py.html</Path>
+                  <Anchor>a10fba1b9c9e35613ac354ac2152f7518</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvmFloat</Name>
+                  <Path>types_8py.html</Path>
+                  <Anchor>a065f894b967868cf9b6edef8c6dbcf74</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvmString</Name>
+                  <Path>types_8py.html</Path>
+                  <Anchor>ad090f46dedb7c562f9bfc9704fdc0f79</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dvmArray</Name>
+                  <Path>types_8py.html</Path>
+                  <Anchor>a44cb50a6d4a50dfc6112f7895eaf5516</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>dvm.py</Name>
               <Path>dvm_8py.html</Path>
               <Subnodes>
@@ -4260,11 +4439,6 @@
                 <Name>createContextRestore</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a492fa7ea038cfe45fa32a71e85d25c27</Anchor>
-               </Node>
-               <Node>
-                <Name>tOP</Name>
-                <Path>read_8py.html</Path>
-                <Anchor>a9dc557350f0993eb6f6760c21964a8ac</Anchor>
                </Node>
                <Node>
                 <Name>createOperation</Name>
@@ -4769,246 +4943,246 @@
                </Node>
                <Node>
                 <Name>operations.py</Name>
-                <Path>operations_8py.html</Path>
+                <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                 <Subnodes>
                  <Node>
                   <Name>NoOp</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a0a741f5ea0fe86ba990ee67ce8bd1bcb</Anchor>
                  </Node>
                  <Node>
                   <Name>ALimL</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a54e7205e016afe2a144d7f9583698680</Anchor>
                  </Node>
                  <Node>
                   <Name>Not</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ae421cef52091b1ec94118207b122c317</Anchor>
                  </Node>
                  <Node>
                   <Name>Mod</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a6ca160c1fdd1edea3b853a3a6f933dfd</Anchor>
                  </Node>
                  <Node>
                   <Name>Minus</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a67e4399d762b61ea393eaf50da4247b8</Anchor>
                  </Node>
                  <Node>
                   <Name>Exp</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>acd9a03fdb53ef23f94592905772bb488</Anchor>
                  </Node>
                  <Node>
                   <Name>Max</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a4bf04cfca42c0ca750ac8e4c1b10f277</Anchor>
                  </Node>
                  <Node>
                   <Name>Min</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>af90be32e7a800fece7ce921be0d0fdf8</Anchor>
                  </Node>
                  <Node>
                   <Name>ASize</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a29aeda132ee6058909704d96618a4860</Anchor>
                  </Node>
                  <Node>
                   <Name>Less</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ae793f0e8600830d62ce48b34ef51bdab</Anchor>
                  </Node>
                  <Node>
                   <Name>Div</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>aa875f15466b60b45cc2ac88535d89077</Anchor>
                  </Node>
                  <Node>
                   <Name>Equal</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a5c212fea2d21a12db083f7ec71657574</Anchor>
                  </Node>
                  <Node>
                   <Name>NotEqual</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a60771d40f7f84b7d8f95d6c8c033300d</Anchor>
                  </Node>
                  <Node>
                   <Name>LessEqual</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a4d440c4a2f7b16992462ca41befb1726</Anchor>
                  </Node>
                  <Node>
                   <Name>Neg</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>af5ae794043de1268093a4f473f9cfce2</Anchor>
                  </Node>
                  <Node>
                   <Name>ARemL</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a089e78ebe3d22477c95dafcb7c5e9d27</Anchor>
                  </Node>
                  <Node>
                   <Name>ALimH</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a26f12a54e30f261de7a60bcb2b2c0640</Anchor>
                  </Node>
                  <Node>
                   <Name>Bool</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a7621d450c56bf15c3fa86ef5e3ba7e9d</Anchor>
                  </Node>
                  <Node>
                   <Name>Abs</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>afd6d38e93f49593892b1918c8cf319a9</Anchor>
                  </Node>
                  <Node>
                   <Name>Floor</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a2733796bfbc83ad9fac5f7168c55319b</Anchor>
                  </Node>
                  <Node>
                   <Name>Double</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a786a08aed3755a37eb13a6495906f67f</Anchor>
                  </Node>
                  <Node>
                   <Name>AIsEmpty</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a6a3278b9f18b5daa9336938b005021ef</Anchor>
                  </Node>
                  <Node>
                   <Name>RangeGenerate</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>adfaf63c92d6b98419afcccfd3158c9f3</Anchor>
                  </Node>
                  <Node>
                   <Name>Single</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a5a37a940ed5c78b65f25946ed718a2a2</Anchor>
                  </Node>
                  <Node>
                   <Name>Char</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ae5805baffac4ac50930bf8436965bee2</Anchor>
                  </Node>
                  <Node>
                   <Name>AAddL</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a5d1f3b41925fe06da825367b8630f158</Anchor>
                  </Node>
                  <Node>
                   <Name>AElement</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a69836b47ebefaba5d5755fc72c6d715f</Anchor>
                  </Node>
                  <Node>
                   <Name>ARemH</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a20e486027b4d99bc62d876cfbfc0be6b</Anchor>
                  </Node>
                  <Node>
                   <Name>AAddH</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a68cb94ab4e47ac4570ea74065ddbb28a</Anchor>
                  </Node>
                  <Node>
                   <Name>ABuild</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>af2e49d9294b093fc51db3f10584c4622</Anchor>
                  </Node>
                  <Node>
                   <Name>BindArguments</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a27629531b19f89f4d2239c0e7dcdde20</Anchor>
                  </Node>
                  <Node>
                   <Name>RedLeft</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>afa2d69b23dbaee2b0ca06e3212d1b8d0</Anchor>
                  </Node>
                  <Node>
                   <Name>RedRight</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a11b8d867d7e206b7edd5c45f4b580354</Anchor>
                  </Node>
                  <Node>
                   <Name>RedTree</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>aaa3c85b3fc9d0602ec52f58206cda3d6</Anchor>
                  </Node>
                  <Node>
                   <Name>Reduce</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ab6a01eb36001d0054b3b93a1079f3d91</Anchor>
                  </Node>
                  <Node>
                   <Name>ASetL</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a9b6bcc6612db1edd6076c1d6439f8d4f</Anchor>
                  </Node>
                  <Node>
                   <Name>AScatter</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a1ecb49bc18d1a603ada3d4533b31372a</Anchor>
                  </Node>
                  <Node>
                   <Name>ACatenate</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a490893fcb6b9630196878e45d97e27d8</Anchor>
                  </Node>
                  <Node>
                   <Name>AFill</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a94a6655d43c17f6953c7d0a726ac2cbd</Anchor>
                  </Node>
                  <Node>
                   <Name>AGather</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ae34b8f131ecf51725b2e2f88c25ae749</Anchor>
                  </Node>
                  <Node>
                   <Name>AReplace</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a3d6d3474c2eb773eee8fd25d56381135</Anchor>
                  </Node>
                  <Node>
                   <Name>FirstValue</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a006d2db23dfc996d213614492fb19026</Anchor>
                  </Node>
                  <Node>
                   <Name>FinalValue</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ac231db0d9ad4fbb9cb66677d99d73a5e</Anchor>
                  </Node>
                  <Node>
                   <Name>Int</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ab92b04b2aafa97719e3210922c43139f</Anchor>
                  </Node>
                  <Node>
                   <Name>Plus</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a57038e09dabd93fe6fd8bc75165d4276</Anchor>
                  </Node>
                  <Node>
                   <Name>Times</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>abcf1d769cfe15b26ad78e0247cc9a0e5</Anchor>
                  </Node>
                  <Node>
                   <Name>getFunction</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>a2cad5d3c47b1b055e87bd5b1417794db</Anchor>
                  </Node>
                  <Node>
                   <Name>_functions</Name>
-                  <Path>operations_8py.html</Path>
+                  <Path>_i_d_i_s_2if1parser_2operations_8py.html</Path>
                   <Anchor>ac5b586c12f40d91b5cc12bda2d0c6bba</Anchor>
                  </Node>
                 </Subnodes>

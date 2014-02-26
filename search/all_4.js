@@ -17,5 +17,17 @@ var searchData=
   ['double',['Double',['../namespaceif1parser_1_1operations.html#a786a08aed3755a37eb13a6495906f67f',1,'if1parser::operations']]],
   ['dvm',['dvm',['../namespacedvm.html',1,'']]],
   ['dvm_2epy',['dvm.py',['../dvm_8py.html',1,'']]],
+  ['dvm_5fadd',['dvm_add',['../namespacenative_1_1operations.html#ab66054472a8e4fd9a2952dc8115b8bdd',1,'native::operations']]],
+  ['dvm_5fand',['dvm_and',['../namespacenative_1_1operations.html#aca87dceb444baa7b55f3172809b494f9',1,'native::operations']]],
+  ['dvm_5fequals',['dvm_equals',['../namespacenative_1_1operations.html#aae2271e53c8e61fe0a591d5e450c5c8d',1,'native::operations']]],
+  ['dvm_5fisvoid',['dvm_isVoid',['../namespacenative_1_1operations.html#a33d84bff0cdc877fbff5abd30a83837e',1,'native::operations']]],
+  ['dvm_5fnoop',['dvm_noOp',['../namespacenative_1_1operations.html#a738eb93c0b3c8fb1030687bfbaab8853',1,'native::operations']]],
+  ['dvm_5for',['dvm_or',['../namespacenative_1_1operations.html#a872bd7fa4f4d0527dc55d51ac60df32d',1,'native::operations']]],
+  ['dvmarray',['dvmArray',['../namespacenative_1_1types.html#a44cb50a6d4a50dfc6112f7895eaf5516',1,'native::types']]],
+  ['dvmbool',['dvmBool',['../namespacenative_1_1types.html#ada0e6c7a0f017d5c5311b4d160c6ff19',1,'native::types']]],
+  ['dvmfloat',['dvmFloat',['../namespacenative_1_1types.html#a065f894b967868cf9b6edef8c6dbcf74',1,'native::types']]],
+  ['dvmint',['dvmInt',['../namespacenative_1_1types.html#a10fba1b9c9e35613ac354ac2152f7518',1,'native::types']]],
+  ['dvmstring',['dvmString',['../namespacenative_1_1types.html#ad090f46dedb7c562f9bfc9704fdc0f79',1,'native::types']]],
+  ['dvmvoid',['dvmVoid',['../namespacenative_1_1types.html#a5b1d16174ac736956f4ad7c8f866b162',1,'native::types']]],
   ['dis',['DIS',['../md_doc__d_i_s.html',1,'']]]
 ];
