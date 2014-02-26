@@ -33,6 +33,7 @@
 ##
 
 import core
+import native.operations
 
 import logging
 log = logging.getLogger(__name__)
@@ -63,14 +64,12 @@ def createContextChange(arr):
 def createContextRestore(arr):
 	return core.addContextRestore()
 
-def tOP(a,b):
-	return a + b
-
 def createOperation(arr):
-	#opCode = int(arr[3])
+	opCode = int(arr[3])
 	inputs = int(arr[4])
+	op = native.operations.operations[opCode]
 
-	return core.addOperationInstruction(tOP, inputs)
+	return core.addOperationInstruction(op, inputs)
 
 instructions = {
 	'SI' : createSink,

@@ -36,16 +36,16 @@ import argparse
 # ---------------------- #
 
 argParser = argparse.ArgumentParser(description = "The Dataflow Virtual Machine.")
-#argParser.add_argument("path", help = "The path to the DIS file you want to run")
-#argParser.add_argument("-i", "--input", action = 'append', help = "A value to pass to the program")
-#argParser.add_argument("-c", "--cores", type = int, default = 1, help = "The number of cores to use")
-#argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
+argParser.add_argument("path", help = "The path to the DIS file you want to run")
+argParser.add_argument("-i", "--input", action = 'append', help = "A value to pass to the program")
+argParser.add_argument("-c", "--cores", type = int, default = 1, help = "The number of cores to use")
+argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
 args = argParser.parse_args()
 
-args.logLevel = 0
-args.path = "../examples/simple.dis"
-args.cores = 1
-args.input = [1]
+# args.logLevel = 0
+# args.path = "../examples/simple.dis"
+# args.cores = 1
+# args.input = [1]
 
 # -------------------- #
 # Starting the program #
@@ -54,7 +54,6 @@ args.input = [1]
 log.setup(args.logLevel)
 read.parseFile(args.path)
 core.start(args.cores)
-
 
 if args.input:
 	for data in args.input:
