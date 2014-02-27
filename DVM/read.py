@@ -33,7 +33,7 @@
 ##
 
 import core
-import native.operations
+import natives
 
 import logging
 log = logging.getLogger(__name__)
@@ -74,7 +74,7 @@ def createContextRestore(arr):
 def createOperation(arr):
 	opCode = int(arr[3])
 	inputs = int(arr[4])
-	op = native.operations.operations[opCode]
+	op = natives.operations[opCode]
 
 	return core.addOperationInstruction(op, inputs)
 

@@ -26,6 +26,6 @@ LINK 0 4 1 1 0 1 $ Send input to operation
 
 CHUNCK 1
 $ Instructions that need the matcher
-INST OP 0 1 2
+INST OP 0 14 2
 
 LINK 1 0 0 0 5 0 $ Send output to return
