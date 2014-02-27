@@ -32,6 +32,23 @@
 # that DVM defines.
 ##
 
+# ------------- #
+# Type Creation #
+# ------------- #
+
+## Return the DVM void type.
+def dvmVoid(): return None
+## Create a DVM Boolean
+def dvmBool(x): return bool(x)
+## Create a DVM Integer
+def dvmInt(x): return int(x)
+## Create a DVM Float
+def dvmFloat(x): return float(x)
+## create a DVM String
+def dvmString(x): return str(x)
+## Create a DVM Array
+def dvmArray(*x): return list(x)
+
 # ----------------- #
 # General Operators #
 # ----------------- #
@@ -79,6 +96,14 @@ def dvm_and(l, r): return l and r
 # \return A boolean
 ##
 def dvm_or(l,r): return l or r
+
+##
+# Negation
+#
+# \param x a boolean
+# \return the negate boolean
+##
+def dvm_not(x): return not x
 
 # ----------------- #
 # Numeric Operators #
