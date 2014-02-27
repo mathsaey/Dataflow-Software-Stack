@@ -300,6 +300,27 @@ def dvm_str_append(l, r): return l + r
 # ---------------- #
 
 ##
+# See if an array is empty.
+#
+# \param arr the array
+# \return True if the array is empty
+##
+def dvm_arr_isEmpty(arr): return arr == []
+
+##
+# Get the length of an array.
+#
+# \param arr An array
+# \return the length of the array.
+##
+def dvm_arr_length(arr): return len(arr)
+
+##
+# Create an empty array
+##
+def dvm_arr_empty(): return []
+
+##
 # Create an array filled with an element
 #
 # \param length the length of the array
@@ -380,12 +401,119 @@ def dvm_arr_replace(arr, idx, *el):
 	res[idx:len(el) + 1] = el
 	return res
 
+##
+# Array concatenation.
+#
+# \param l,r arrays.
+# \return concatenation of l and r.
+##
+def dvm_arr_catenate(l, r):
+	return l + r
+
+##
+# Add an element to the start of an array.
+#
+# \param arr An array
+# \param el The element to add.
+# \return 
+#		a copy of arr with el 
+#		added in front.
+##
+def dvm_arr_add_front(arr, el):
+	return [el] + arr
+
+##
+# Add an element to the back of an array.
+#
+# \param arr An array
+# \param el The element to add.
+# \return 
+#		a copy of arr with el 
+#		added to the back.
+##
+def dvm_arr_add_back(arr, el):
+	return arr + [el]
+
+##
+# Get a subset of an array
+#
+# \param arr An array
+# \param start The idx to start at.
+# \param stop The idx to stop at.
+# \return 
+#		An array containing the elements of 
+#		arr between start and stop.
+##
+def dvm_arr_sub(arr, start, stop):
+	return arr[start:stop]
+
 ## 
 # Contains references to all
 # the operations.
+#
+# Index | Operation
+# ------| ---------
+#   00  | dvm_Void()
+#   01  | dvm_Bool()
+#   02  | dvm_Int()
+#   03  | dvm_Float()
+#   04  | dvm_String()
+#   05  | dvm_Array()
+#   06  | dvm_noOp()
+#   07  | dvm_isVoid()
+#   08  | dvm_equals()
+#   09  | dvm_notEqual()
+#   10  | dvm_and()
+#   11  | dvm_or()
+#   12  | dvm_xor()
+#   13  | dvm_not()
+#   14  | dvm_add()
+#   15  | dvm_sub()
+#   16  | dvm_mul()
+#   17  | dvm_div()
+#   18  | dvm_floor()
+#   19  | dvm_ceil()
+#   20  | dvm_min()
+#   21  | dvm_max()
+#   22  | dvm_less()
+#   23  | dvm_more()
+#   24  | dvm_less_eq()
+#   25  | dvm_more_eq()
+#   26  | dvm_str_contains()
+#   27  | dvm_str_find()
+#   28  | dvm_str_upper()
+#   29  | dvm_str_lower()
+#   30  | dvm_str_sub()
+#   31  | dvm_str_reverse()
+#   32  | dvm_str_append()
+#   33  | dvm_arr_isEmpty()
+#   34  | dvm_arr_length()
+#   35  | dvm_arr_empty()
+#   36  | dvm_arr_create()
+#   37  | dvm_arr_get()
+#   38  | dvm_arr_set()
+#   39  | dvm_arr_insert()
+#   40  | dvm_arr_replace()
+#   41  | dvm_arr_catenate()
+#   42  | dvm_arr_add_front()
+#   43  | dvm_arr_add_back()
+#   44  | dvm_arr_sub()
+#
 ##
-operations = [
-	dvm_noOp, # 0
-	dvm_add   # 1
-]
+operations = [ 
+	dvm_Void, dvm_Bool, dvm_Int, dvm_Float, dvm_String, dvm_Array,
 
+	dvm_noOp, dvm_isVoid, dvm_equals, dvm_notEqual,
+
+    dvm_and, dvm_or, dvm_xor, dvm_not,
+
+    dvm_add, dvm_sub, dvm_mul, dvm_div, dvm_floor, dvm_ceil,
+    dvm_min, dvm_max, dvm_less, dvm_more, dvm_less_eq, dvm_more_eq,
+
+    dvm_str_contains, dvm_str_find, dvm_str_upper, dvm_str_lower,
+    dvm_str_sub, dvm_str_reverse, dvm_str_append,
+	
+	dvm_arr_isEmpty, dvm_arr_length, dvm_arr_empty, dvm_arr_create,
+	dvm_arr_get, dvm_arr_set, dvm_arr_insert, dvm_arr_replace,
+	dvm_arr_catenate, dvm_arr_add_front, dvm_arr_add_back, dvm_arr_sub 
+]
