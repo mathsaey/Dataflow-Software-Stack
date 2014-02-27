@@ -48,11 +48,17 @@ def createSink(arr):
 ## Create a stop instruction
 def createStop(arr):
 	return core.addStopInstruction()
-
+##
+# Create a start instruction.
+#
+# Creates a sink and adds the amount
+# of incoming elements to the runtime.
+##
 def createStart(arr):
 	core.setIn(int(arr[3]))
 	return createSink(arr)
 
+## Create a context change instruction.
 def createContextChange(arr):
 	dstChnk = int(arr[3])
 	dstInst = int(arr[4])
@@ -64,6 +70,7 @@ def createContextChange(arr):
 def createContextRestore(arr):
 	return core.addContextRestore()
 
+## Create an operation
 def createOperation(arr):
 	opCode = int(arr[3])
 	inputs = int(arr[4])
@@ -71,6 +78,10 @@ def createOperation(arr):
 
 	return core.addOperationInstruction(op, inputs)
 
+## 
+# Defines the operation codes 
+# and the functions to create them.
+##
 instructions = {
 	'SI' : createSink,
 	'PB' : createStart,
