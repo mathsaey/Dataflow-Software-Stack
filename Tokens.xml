@@ -529,687 +529,555 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_Void</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0347dd8cdda0fb96d131fad5e32ec064</Anchor>
+    <Abstract>Return the DVM void type. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Bool</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a24c16658ab2058e0230063b97ee8de09</Anchor>
+    <Abstract>Create a DVM Boolean. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Int</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a4e61c994835b8759410a798acbbd8a1e</Anchor>
+    <Abstract>Create a DVM Integer. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Float</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ac4513da155bca2064f5e63b8ae9a667f</Anchor>
+    <Abstract>Create a DVM Float. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_String</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>af04b34115cdd45ae74ef9eafa0d0dac9</Anchor>
+    <Abstract>create a DVM String </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Array</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aed55008480d45b53b15b2725fdb29735</Anchor>
+    <Abstract>Create a DVM Array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm_noOp</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a738eb93c0b3c8fb1030687bfbaab8853</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>afb0270ed66574a9cc50b2b27bdbaf85c</Anchor>
     <Abstract>Do nothing. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_isVoid</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a33d84bff0cdc877fbff5abd30a83837e</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a241533cdc1e8aabdc5d4914b84659c24</Anchor>
     <Abstract>See if the element is void. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_equals</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>aae2271e53c8e61fe0a591d5e450c5c8d</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a598a792f4f27f5f303db9bd1fe54b8cf</Anchor>
     <Abstract>Check if 2 elements are equal. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_notEqual</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a02ebd57a3d4c03dc22899c81d710cebf</Anchor>
+    <Abstract>Check if 2 elements are not equal. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_and</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>aca87dceb444baa7b55f3172809b494f9</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ad9af42003b8677c6e6ecfe3545dcfabc</Anchor>
     <Abstract>Logical and. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_or</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a872bd7fa4f4d0527dc55d51ac60df32d</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a487ae9e928c22ec16df1269cde8f6083</Anchor>
     <Abstract>Logical Or. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_xor</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ac379fbaba75e081ea9b8a715c711353b</Anchor>
+    <Abstract>Logical xor. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_not</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a1934feed6f04c3d65363f4bdab42248b</Anchor>
+    <Abstract>Negation. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>ab66054472a8e4fd9a2952dc8115b8bdd</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a02049f1feebcffefe7962b4fb083d6c7</Anchor>
     <Abstract>Addition. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_sub</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ab456d991b7ede8c8d839657265d4bf9e</Anchor>
+    <Abstract>Subtraction. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_mul</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0963bf8d2e39650c9beb004640ed4032</Anchor>
+    <Abstract>Multiplication. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_div</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>adaa5098622415dfccbf95a6fef897c6e</Anchor>
+    <Abstract>Subtraction. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_floor</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a1984781826a8f1c4e277cade7609fd2d</Anchor>
+    <Abstract>Round down. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_ceil</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0d6c1c7fbb5d0de60bdc4d73c2c3c57e</Anchor>
+    <Abstract>Round up. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_min</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>af35b6b8d5fd0d2f374885917968a5af9</Anchor>
+    <Abstract>Maximum. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_max</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>abb4478539499c3865ea8ab4c637c1357</Anchor>
+    <Abstract>Minimum. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_less</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a47b86188716c4b89474a9f61e9723f6b</Anchor>
+    <Abstract>Smaller than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_more</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ad363436b9b598e2e6e50e8a4642fcdd5</Anchor>
+    <Abstract>Greater than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_less_eq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a52843e68814acab8de57cb3c7fadc938</Anchor>
+    <Abstract>Smaller or equal than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_more_eq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a21ba0876b51613717ae31897f182568f</Anchor>
+    <Abstract>Greatar or equal than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_contains</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a8e157c1a2fe878bb396c1f31060fa46f</Anchor>
+    <Abstract>See if a string contains a value. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_find</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a477140509fd9d05fff6c6dde1e47b67c</Anchor>
+    <Abstract>Return the idx of x in str. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_upper</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ae974ce37d8ff02e6365a0693f40d2211</Anchor>
+    <Abstract>Conver a string to upper case. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_lower</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a762f15e633aeee7cd254d69b1ea8539d</Anchor>
+    <Abstract>Conver a string to lower case. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_sub</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a25c53d60625c55a721f63a819d1544c2</Anchor>
+    <Abstract>Get a substring. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_reverse</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aff52c3d475d1684b651e3c5a94516368</Anchor>
+    <Abstract>Reverse a string. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_append</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a2b6809008cdd1dd601f5d74f9693e37f</Anchor>
+    <Abstract>Append 2 strings. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_isEmpty</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a078294ea31372ab0dbcc2386c3c5cf5f</Anchor>
+    <Abstract>See if an array is empty. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_length</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ab4d313f7f69e1a0f25ccc1f70386979d</Anchor>
+    <Abstract>Get the length of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_empty</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>acf26b1de8845f072eb27dd89f2f163c2</Anchor>
+    <Abstract>Create an empty array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_create</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a222b597973b736d6e3421d68e99db250</Anchor>
+    <Abstract>Create an array filled with an element. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_get</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ae6df364d41ad69e2557253b7cc6570ba</Anchor>
+    <Abstract>Get an element from the array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_set</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ae9f4dbd73cbc45700efc9fceff0c8d15</Anchor>
+    <Abstract>Create a new array with a different element at idx. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_insert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>af1035915155c3d811f71d5b0fe21b92e</Anchor>
+    <Abstract>Insert elements into an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_replace</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a44c4b28857e9355a4ede1ec6eea380c4</Anchor>
+    <Abstract>Replace elements in an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_catenate</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aabc798c93f8ca42270e94fb7a91c6a1f</Anchor>
+    <Abstract>Array concatenation. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_add_front</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aecd072979a8a6929ca0228990e24bfaa</Anchor>
+    <Abstract>Add an element to the start of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_add_back</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a1386b2f1dd931140e6e316a8d1cf304f</Anchor>
+    <Abstract>Add an element to the back of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_sub</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a220fa9b2fdd9f0c3abe88fbd13cf3c5d</Anchor>
+    <Abstract>Get a subset of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>operations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a2fd74e97db2052980a521f59bfc12042</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a383a6f9aabdd6be9b5861b9cf2d15101</Anchor>
     <Abstract>Contains references to all the operations. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>NoOp</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a0a741f5ea0fe86ba990ee67ce8bd1bcb</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ALimL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a54e7205e016afe2a144d7f9583698680</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Not</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ae421cef52091b1ec94118207b122c317</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Mod</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a6ca160c1fdd1edea3b853a3a6f933dfd</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Minus</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a67e4399d762b61ea393eaf50da4247b8</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Exp</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>acd9a03fdb53ef23f94592905772bb488</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Max</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a4bf04cfca42c0ca750ac8e4c1b10f277</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Min</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>af90be32e7a800fece7ce921be0d0fdf8</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ASize</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a29aeda132ee6058909704d96618a4860</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Less</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ae793f0e8600830d62ce48b34ef51bdab</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Div</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>aa875f15466b60b45cc2ac88535d89077</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Equal</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a5c212fea2d21a12db083f7ec71657574</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>NotEqual</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a60771d40f7f84b7d8f95d6c8c033300d</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>LessEqual</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a4d440c4a2f7b16992462ca41befb1726</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Neg</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>af5ae794043de1268093a4f473f9cfce2</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ARemL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a089e78ebe3d22477c95dafcb7c5e9d27</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ALimH</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a26f12a54e30f261de7a60bcb2b2c0640</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Bool</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a7621d450c56bf15c3fa86ef5e3ba7e9d</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Abs</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>afd6d38e93f49593892b1918c8cf319a9</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Floor</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a2733796bfbc83ad9fac5f7168c55319b</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Double</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a786a08aed3755a37eb13a6495906f67f</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AIsEmpty</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a6a3278b9f18b5daa9336938b005021ef</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>RangeGenerate</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>adfaf63c92d6b98419afcccfd3158c9f3</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Single</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a5a37a940ed5c78b65f25946ed718a2a2</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Char</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ae5805baffac4ac50930bf8436965bee2</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AAddL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a5d1f3b41925fe06da825367b8630f158</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AElement</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a69836b47ebefaba5d5755fc72c6d715f</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ARemH</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a20e486027b4d99bc62d876cfbfc0be6b</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AAddH</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a68cb94ab4e47ac4570ea74065ddbb28a</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ABuild</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>af2e49d9294b093fc51db3f10584c4622</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>BindArguments</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a27629531b19f89f4d2239c0e7dcdde20</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>RedLeft</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>afa2d69b23dbaee2b0ca06e3212d1b8d0</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>RedRight</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a11b8d867d7e206b7edd5c45f4b580354</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>RedTree</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>aaa3c85b3fc9d0602ec52f58206cda3d6</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Reduce</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ab6a01eb36001d0054b3b93a1079f3d91</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ASetL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a9b6bcc6612db1edd6076c1d6439f8d4f</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AScatter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a1ecb49bc18d1a603ada3d4533b31372a</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ACatenate</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a490893fcb6b9630196878e45d97e27d8</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AFill</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a94a6655d43c17f6953c7d0a726ac2cbd</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AGather</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ae34b8f131ecf51725b2e2f88c25ae749</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>AReplace</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a3d6d3474c2eb773eee8fd25d56381135</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>FirstValue</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a006d2db23dfc996d213614492fb19026</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>FinalValue</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ac231db0d9ad4fbb9cb66677d99d73a5e</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Int</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ab92b04b2aafa97719e3210922c43139f</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Plus</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a57038e09dabd93fe6fd8bc75165d4276</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Times</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>abcf1d769cfe15b26ad78e0247cc9a0e5</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getFunction</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>a2cad5d3c47b1b055e87bd5b1417794db</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>_functions</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>if1parser::operations</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1operations.html</Path>
-    <Anchor>ac5b586c12f40d91b5cc12bda2d0c6bba</Anchor>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmVoid</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a5b1d16174ac736956f4ad7c8f866b162</Anchor>
-    <Abstract>Return the DVM void type. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmBool</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>ada0e6c7a0f017d5c5311b4d160c6ff19</Anchor>
-    <Abstract>Create a DVM Boolean. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmInt</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a10fba1b9c9e35613ac354ac2152f7518</Anchor>
-    <Abstract>Create a DVM Integer. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmFloat</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a065f894b967868cf9b6edef8c6dbcf74</Anchor>
-    <Abstract>Create a DVM Float. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmString</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>ad090f46dedb7c562f9bfc9704fdc0f79</Anchor>
-    <Abstract>create a DVM String </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmArray</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a44cb50a6d4a50dfc6112f7895eaf5516</Anchor>
-    <Abstract>Create a DVM Array. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1244,6 +1112,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>ab7a5fd94b4a8dbcbff3be11dfd6d13f1</Anchor>
+    <Abstract>Create a start instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -1255,6 +1124,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a781d4f0b3d1d7c56d5fd02bb3ecb47c3</Anchor>
+    <Abstract>Create a context change instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -1278,6 +1148,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a54792d77f1b24a49d36ef7f44721a581</Anchor>
+    <Abstract>Create an operation. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -1383,6 +1254,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a8fabca7c8ec80f893e52c546adfb7a34</Anchor>
+    <Abstract>Defines the operation codes and the functions to create them. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -2209,6 +2081,534 @@
     <Anchor>a4102493c000554f42f6cf848de690e03</Anchor>
     <Abstract>The function names, combined with the subgraph they map to. </Abstract>
     <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>NoOp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a0a741f5ea0fe86ba990ee67ce8bd1bcb</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ALimL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a54e7205e016afe2a144d7f9583698680</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Not</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae421cef52091b1ec94118207b122c317</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Mod</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a6ca160c1fdd1edea3b853a3a6f933dfd</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Minus</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a67e4399d762b61ea393eaf50da4247b8</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Exp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>acd9a03fdb53ef23f94592905772bb488</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Max</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a4bf04cfca42c0ca750ac8e4c1b10f277</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Min</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>af90be32e7a800fece7ce921be0d0fdf8</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ASize</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a29aeda132ee6058909704d96618a4860</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Less</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae793f0e8600830d62ce48b34ef51bdab</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Div</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>aa875f15466b60b45cc2ac88535d89077</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Equal</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a5c212fea2d21a12db083f7ec71657574</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>NotEqual</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a60771d40f7f84b7d8f95d6c8c033300d</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>LessEqual</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a4d440c4a2f7b16992462ca41befb1726</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Neg</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>af5ae794043de1268093a4f473f9cfce2</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ARemL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a089e78ebe3d22477c95dafcb7c5e9d27</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ALimH</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a26f12a54e30f261de7a60bcb2b2c0640</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Bool</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a7621d450c56bf15c3fa86ef5e3ba7e9d</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Abs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>afd6d38e93f49593892b1918c8cf319a9</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Floor</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a2733796bfbc83ad9fac5f7168c55319b</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Double</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a786a08aed3755a37eb13a6495906f67f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AIsEmpty</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a6a3278b9f18b5daa9336938b005021ef</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RangeGenerate</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>adfaf63c92d6b98419afcccfd3158c9f3</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Single</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a5a37a940ed5c78b65f25946ed718a2a2</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Char</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae5805baffac4ac50930bf8436965bee2</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AAddL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a5d1f3b41925fe06da825367b8630f158</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AElement</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a69836b47ebefaba5d5755fc72c6d715f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ARemH</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a20e486027b4d99bc62d876cfbfc0be6b</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AAddH</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a68cb94ab4e47ac4570ea74065ddbb28a</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ABuild</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>af2e49d9294b093fc51db3f10584c4622</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BindArguments</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a27629531b19f89f4d2239c0e7dcdde20</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RedLeft</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>afa2d69b23dbaee2b0ca06e3212d1b8d0</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RedRight</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a11b8d867d7e206b7edd5c45f4b580354</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RedTree</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>aaa3c85b3fc9d0602ec52f58206cda3d6</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Reduce</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ab6a01eb36001d0054b3b93a1079f3d91</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ASetL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a9b6bcc6612db1edd6076c1d6439f8d4f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AScatter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a1ecb49bc18d1a603ada3d4533b31372a</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ACatenate</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a490893fcb6b9630196878e45d97e27d8</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AFill</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a94a6655d43c17f6953c7d0a726ac2cbd</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AGather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ae34b8f131ecf51725b2e2f88c25ae749</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AReplace</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a3d6d3474c2eb773eee8fd25d56381135</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FirstValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a006d2db23dfc996d213614492fb19026</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FinalValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ac231db0d9ad4fbb9cb66677d99d73a5e</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Int</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ab92b04b2aafa97719e3210922c43139f</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Plus</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a57038e09dabd93fe6fd8bc75165d4276</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Times</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>abcf1d769cfe15b26ad78e0247cc9a0e5</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getFunction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>a2cad5d3c47b1b055e87bd5b1417794db</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>_functions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>if1parser::operations</Scope>
+    </TokenIdentifier>
+    <Path>namespaceif1parser_1_1operations.html</Path>
+    <Anchor>ac5b586c12f40d91b5cc12bda2d0c6bba</Anchor>
+    <DeclaredIn>operations.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10330,189 +10730,565 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>native</Name>
+      <Name>natives</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>native</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative.html</Path>
-    <Abstract>DVM Natives. </Abstract>
+    <Path>namespacenatives.html</Path>
+    <Abstract>DVM Native Operations. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>native::operations</Name>
+      <Name>dvm_Void</Name>
       <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>native::operations</Scope>
+      <Type>func</Type>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Abstract>DVM Native Operations. </Abstract>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0347dd8cdda0fb96d131fad5e32ec064</Anchor>
+    <Abstract>Return the DVM void type. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Bool</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a24c16658ab2058e0230063b97ee8de09</Anchor>
+    <Abstract>Create a DVM Boolean. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Int</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a4e61c994835b8759410a798acbbd8a1e</Anchor>
+    <Abstract>Create a DVM Integer. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Float</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ac4513da155bca2064f5e63b8ae9a667f</Anchor>
+    <Abstract>Create a DVM Float. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_String</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>af04b34115cdd45ae74ef9eafa0d0dac9</Anchor>
+    <Abstract>create a DVM String </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_Array</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aed55008480d45b53b15b2725fdb29735</Anchor>
+    <Abstract>Create a DVM Array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_noOp</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a738eb93c0b3c8fb1030687bfbaab8853</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>afb0270ed66574a9cc50b2b27bdbaf85c</Anchor>
     <Abstract>Do nothing. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_isVoid</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a33d84bff0cdc877fbff5abd30a83837e</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a241533cdc1e8aabdc5d4914b84659c24</Anchor>
     <Abstract>See if the element is void. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_equals</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>aae2271e53c8e61fe0a591d5e450c5c8d</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a598a792f4f27f5f303db9bd1fe54b8cf</Anchor>
     <Abstract>Check if 2 elements are equal. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_notEqual</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a02ebd57a3d4c03dc22899c81d710cebf</Anchor>
+    <Abstract>Check if 2 elements are not equal. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_and</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>aca87dceb444baa7b55f3172809b494f9</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ad9af42003b8677c6e6ecfe3545dcfabc</Anchor>
     <Abstract>Logical and. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_or</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a872bd7fa4f4d0527dc55d51ac60df32d</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a487ae9e928c22ec16df1269cde8f6083</Anchor>
     <Abstract>Logical Or. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_xor</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ac379fbaba75e081ea9b8a715c711353b</Anchor>
+    <Abstract>Logical xor. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_not</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a1934feed6f04c3d65363f4bdab42248b</Anchor>
+    <Abstract>Negation. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>dvm_add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>ab66054472a8e4fd9a2952dc8115b8bdd</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a02049f1feebcffefe7962b4fb083d6c7</Anchor>
     <Abstract>Addition. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_sub</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ab456d991b7ede8c8d839657265d4bf9e</Anchor>
+    <Abstract>Subtraction. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_mul</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0963bf8d2e39650c9beb004640ed4032</Anchor>
+    <Abstract>Multiplication. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_div</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>adaa5098622415dfccbf95a6fef897c6e</Anchor>
+    <Abstract>Subtraction. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_floor</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a1984781826a8f1c4e277cade7609fd2d</Anchor>
+    <Abstract>Round down. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_ceil</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0d6c1c7fbb5d0de60bdc4d73c2c3c57e</Anchor>
+    <Abstract>Round up. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_min</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>af35b6b8d5fd0d2f374885917968a5af9</Anchor>
+    <Abstract>Maximum. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_max</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>abb4478539499c3865ea8ab4c637c1357</Anchor>
+    <Abstract>Minimum. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_less</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a47b86188716c4b89474a9f61e9723f6b</Anchor>
+    <Abstract>Smaller than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_more</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ad363436b9b598e2e6e50e8a4642fcdd5</Anchor>
+    <Abstract>Greater than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_less_eq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a52843e68814acab8de57cb3c7fadc938</Anchor>
+    <Abstract>Smaller or equal than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_more_eq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a21ba0876b51613717ae31897f182568f</Anchor>
+    <Abstract>Greatar or equal than. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_contains</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a8e157c1a2fe878bb396c1f31060fa46f</Anchor>
+    <Abstract>See if a string contains a value. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_find</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a477140509fd9d05fff6c6dde1e47b67c</Anchor>
+    <Abstract>Return the idx of x in str. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_upper</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ae974ce37d8ff02e6365a0693f40d2211</Anchor>
+    <Abstract>Conver a string to upper case. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_lower</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a762f15e633aeee7cd254d69b1ea8539d</Anchor>
+    <Abstract>Conver a string to lower case. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_sub</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a25c53d60625c55a721f63a819d1544c2</Anchor>
+    <Abstract>Get a substring. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_reverse</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aff52c3d475d1684b651e3c5a94516368</Anchor>
+    <Abstract>Reverse a string. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_str_append</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a2b6809008cdd1dd601f5d74f9693e37f</Anchor>
+    <Abstract>Append 2 strings. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_isEmpty</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a078294ea31372ab0dbcc2386c3c5cf5f</Anchor>
+    <Abstract>See if an array is empty. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_length</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ab4d313f7f69e1a0f25ccc1f70386979d</Anchor>
+    <Abstract>Get the length of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_empty</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>acf26b1de8845f072eb27dd89f2f163c2</Anchor>
+    <Abstract>Create an empty array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_create</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a222b597973b736d6e3421d68e99db250</Anchor>
+    <Abstract>Create an array filled with an element. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_get</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ae6df364d41ad69e2557253b7cc6570ba</Anchor>
+    <Abstract>Get an element from the array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_set</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ae9f4dbd73cbc45700efc9fceff0c8d15</Anchor>
+    <Abstract>Create a new array with a different element at idx. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_insert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>af1035915155c3d811f71d5b0fe21b92e</Anchor>
+    <Abstract>Insert elements into an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_replace</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a44c4b28857e9355a4ede1ec6eea380c4</Anchor>
+    <Abstract>Replace elements in an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_catenate</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aabc798c93f8ca42270e94fb7a91c6a1f</Anchor>
+    <Abstract>Array concatenation. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_add_front</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>aecd072979a8a6929ca0228990e24bfaa</Anchor>
+    <Abstract>Add an element to the start of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_add_back</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a1386b2f1dd931140e6e316a8d1cf304f</Anchor>
+    <Abstract>Add an element to the back of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_sub</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a220fa9b2fdd9f0c3abe88fbd13cf3c5d</Anchor>
+    <Abstract>Get a subset of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>operations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>native::operations</Scope>
+      <Scope>natives</Scope>
     </TokenIdentifier>
-    <Path>namespacenative_1_1operations.html</Path>
-    <Anchor>a2fd74e97db2052980a521f59bfc12042</Anchor>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a383a6f9aabdd6be9b5861b9cf2d15101</Anchor>
     <Abstract>Contains references to all the operations. </Abstract>
-    <DeclaredIn>operations.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>native::types</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Abstract>DVM native types. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmVoid</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a5b1d16174ac736956f4ad7c8f866b162</Anchor>
-    <Abstract>Return the DVM void type. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmBool</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>ada0e6c7a0f017d5c5311b4d160c6ff19</Anchor>
-    <Abstract>Create a DVM Boolean. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmInt</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a10fba1b9c9e35613ac354ac2152f7518</Anchor>
-    <Abstract>Create a DVM Integer. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmFloat</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a065f894b967868cf9b6edef8c6dbcf74</Anchor>
-    <Abstract>Create a DVM Float. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmString</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>ad090f46dedb7c562f9bfc9704fdc0f79</Anchor>
-    <Abstract>create a DVM String </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dvmArray</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>native::types</Scope>
-    </TokenIdentifier>
-    <Path>namespacenative_1_1types.html</Path>
-    <Anchor>a44cb50a6d4a50dfc6112f7895eaf5516</Anchor>
-    <Abstract>Create a DVM Array. </Abstract>
-    <DeclaredIn>types.py</DeclaredIn>
+    <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10557,6 +11333,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>ab7a5fd94b4a8dbcbff3be11dfd6d13f1</Anchor>
+    <Abstract>Create a start instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -10568,6 +11345,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a781d4f0b3d1d7c56d5fd02bb3ecb47c3</Anchor>
+    <Abstract>Create a context change instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -10591,6 +11369,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a54792d77f1b24a49d36ef7f44721a581</Anchor>
+    <Abstract>Create an operation. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -10696,6 +11475,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a8fabca7c8ec80f893e52c546adfb7a34</Anchor>
+    <Abstract>Defines the operation codes and the functions to create them. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
