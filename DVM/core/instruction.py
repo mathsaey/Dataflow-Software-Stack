@@ -203,6 +203,13 @@ class ContextChange(AbstractInstruction):
 		self.retnSink = returnSink
 		self.destSink = destSink
 		self.contexts = {}
+		self.literals = {}
+
+	def addLiteral(self, idx, lit):
+		self.literals.update({idx : lit})
+
+	def getLiterals(self):
+		return self.literals
 
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)

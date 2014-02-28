@@ -55,6 +55,14 @@ class TokenCreator(object):
 		tag = token.Tag(self.core.identifier, toInst, toPort, context)
 		tok = token.Token(datum, tag)
  		self.core.add(tok)
+
+ 	def createNewContext(self): pass
+ 	def sendToOldContext(self, token, key, dest):
+ 		cont = self.contextMap[key]
+ 		token.tag.cont = cont
+ 		token.tag.inst = dest
+ 		self.core.add(token)
+
 	## 
 	# Change the context of a token.
 	# This will bind the context of this token to a 
@@ -107,6 +115,13 @@ class TokenCreator(object):
 		token.tag.inst = pair[1]
 		self.core.add(token)
 
+	##
+	# Create a stop token.
+	#
+	# \param tok
+	#		The token to convert to
+	#		a stop token.
+	##
 	def stopToken(self, tok):
 		tok.tag = token.StopTag()
 		self.core.add(tok)
