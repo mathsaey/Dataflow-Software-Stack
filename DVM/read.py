@@ -99,7 +99,8 @@ def parseInst(arr):
 	code = arr[1]
 	key = instructions[code](arr)
 	if key != (chunck, int(arr[2])):
-		log.critical("Instruction %s added to memory with incorrect key %s", arr, key)
+		log.error("Instruction %s added to memory with incorrect key %s", arr, key)
+	else: log.info("Added instruction with key %s", key)
 
 ##
 # Parse a chunck declaration.
@@ -110,6 +111,8 @@ def parseInst(arr):
 def parseChunck(arr):
 	global chunck
 	chunck = int(arr[1])
+
+	log.info("Starting chunck: %d", chunck)
 
 ##
 # Parse a link statement.
@@ -127,6 +130,9 @@ def parseLink(arr):
 	dstChnk = int(arr[4])
 	dstInst = int(arr[5])
 	dstPort = int(arr[6])
+
+	log.info("Adding link from: c %d i %d p %d to: c %d i %d p %d", 
+		srcChnk, srcInst, srcPort, dstChnk, dstInst, dstPort)
 
 	core.addDestination(
 		(srcChnk, srcInst), srcPort, 
