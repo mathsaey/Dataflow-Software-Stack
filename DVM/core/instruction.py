@@ -214,11 +214,7 @@ class ContextChange(AbstractInstruction):
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)
 
-		core.tokenCreator.changeContext(
-			token,
-			self,
-			self.destSink,
-			self.retnSink)
+		core.tokenCreator.changeContext(token, self)
 
 # --------------- #
 # Context Restore #
@@ -243,7 +239,6 @@ class ContextRestore(AbstractInstruction):
 # the result of the program.
 ##
 class StopInstruction(AbstractInstruction):
-
 	def execute(self, token, core):
 		log.info("%s reached stop instruction: %s", token, self)
 		core.tokenCreator.stopToken(token)

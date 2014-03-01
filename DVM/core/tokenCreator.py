@@ -56,7 +56,54 @@ class TokenCreator(object):
 		tok = token.Token(datum, tag)
  		self.core.add(tok)
 
- 	def createNewContext(self): pass
+ 	##
+ 	# Create a new context for a token.
+ 	# And send it. This should only be called
+ 	# if we have not sent any token for this context.
+ 	#
+ 	# This method will also send any literals that belong
+ 	# to the call node.
+ 	#
+ 	# \param token
+ 	#		The token to modify and send.
+ 	# \param inst
+ 	#		The instruction that started the context change.
+ 	# \param dest
+ 	#		The new destination of the token.
+ 	##
+ 	def createNewContext(self, token, inst, dest):
+ 		core = token.tag.core
+ 		cont = token.tag.cont
+ 		key  = (inst, cont)
+
+ 		new = self.core.contextCreator.get()
+		self.contextMap.update({key : new})
+		self.restoreMap.update({new : (cont, inst.retnSink)})
+
+		# Add the value
+		token.tag.cont = new
+		token.tag.inst = dest
+		self.core.add(token)
+
+		# Add the literals of the call
+		for key in inst.getLiterals():
+			val = inst.getLiterals()[key]
+			tag = token.Tag(core, inst, key, cont)
+			tok = token.Token(val, tag)
+			self.core.add(tok)
+
+ 	##
+ 	# Change the context of a token.
+ 	# Only use this if the context has already
+ 	# been created.
+ 	#
+ 	# \param token 
+ 	#		The token to send.
+ 	# \param key
+ 	#		The instruction, context pair of the token.
+ 	# \param dest
+	#		The destination of the token.
+ 	##
  	def sendToOldContext(self, token, key, dest):
  		cont = self.contextMap[key]
  		token.tag.cont = cont
@@ -77,29 +124,21 @@ class TokenCreator(object):
 	# \param token
 	#		The token to modify. The destination port of this token
 	#		will remain unchanged.
-	# \param toInst
-	#		The instruction that will be the new destination of this
-	#		token.
-	# \param retInst
-	#		The return instruction that will be bound to the new context.
+	# \param inst
+	#		The instruction that called the contextchange.
+	#		this has to be a contextChange instruction.
 	#
 	# \see restoreContext
 	##
-	def changeContext(self, token, inst, toInst, retInst):
+	def changeContext(self, token, inst):
+		dest = inst.destSink
 		cont = token.tag.cont
 		key  = (inst, cont)
-		new  = None
 
 		if key not in self.contextMap:
-			new = self.core.contextCreator.get()
-			self.contextMap.update({key : new})
-			self.restoreMap.update({new : (cont, retInst)})
+			self.createNewContext(token, inst, dest)
 		else:
-			new = self.contextMap[key]
-
-		token.tag.cont = new
-		token.tag.inst = toInst
-		self.core.add(token)
+			self.sendToOldContext(token, key, dest)
 
 	##
 	# Restore the old context of a token.
