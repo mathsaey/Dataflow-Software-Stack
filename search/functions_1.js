@@ -11,7 +11,7 @@ var searchData=
   ['addcontextrestore',['addContextRestore',['../namespacecore.html#ad150c9d50bdacb978da6423a3316abc4',1,'core']]],
   ['adddata',['addData',['../namespacecore.html#a1d75a7ff0a5d7d0ad350455a21bceef2',1,'core.addData()'],['../namespacecore_1_1runtime.html#a4fe3e65a2c62930486886a5095446389',1,'core.runtime.addData()']]],
   ['adddestination',['addDestination',['../classcore_1_1instruction_1_1_static_instruction.html#a97a63c9bf04b2aa65f961d3a5c82f016',1,'core.instruction.StaticInstruction.addDestination()'],['../namespacecore.html#a56fc7e50cda38141e414895f6b118357',1,'core.addDestination()']]],
-  ['addliteral',['addLiteral',['../namespace_i_g_r.html#a7d8963d3f7d865bd914daf40e70e4f6b',1,'IGR']]],
+  ['addliteral',['addLiteral',['../classcore_1_1instruction_1_1_operation_instruction.html#ad3c13340b0993252d64253e3a7d46bb7',1,'core.instruction.OperationInstruction.addLiteral()'],['../classcore_1_1instruction_1_1_context_change.html#a51e68dd7f4ff44e260ddff4bc7a0252d',1,'core.instruction.ContextChange.addLiteral()'],['../namespace_i_g_r.html#a7d8963d3f7d865bd914daf40e70e4f6b',1,'IGR.addLiteral()']]],
   ['addnode',['addNode',['../classif1parser_1_1environment_1_1_scope.html#a463490a0763f3457b00c7752b6cdcd5d',1,'if1parser.environment.Scope.addNode()'],['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a7b7dc2bc9f285fc6cd293ceeccd32a70',1,'IGR.subgraph.SubGraph.addNode()'],['../namespaceif1parser_1_1environment.html#a85356c8a9cdc471a3629c9ef96a30f15',1,'if1parser.environment.addNode()']]],
   ['addoperationinstruction',['addOperationInstruction',['../namespacecore.html#aa0358e6c4cd7ce27b25dfa19c7d1f97f',1,'core']]],
   ['addsink',['addSink',['../namespacecore.html#a0a9167ffe1bc3f7d778cda3c1c77d334',1,'core']]],

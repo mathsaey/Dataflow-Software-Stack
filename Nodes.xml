@@ -575,6 +575,16 @@
                   <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
                  </Node>
                  <Node>
+                  <Name>addLiteral</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>ad3c13340b0993252d64253e3a7d46bb7</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>createArgLst</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>aa29f0cabaef83cc2e1545fd8f19041e8</Anchor>
+                 </Node>
+                 <Node>
                   <Name>sendResults</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>a01795f99a948bc57c713a8700ef89353</Anchor>
@@ -613,6 +623,16 @@
                   <Name>inputs</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>a439f00978854df97a819c8d7b19e6138</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>argLst</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a414e1b4d8f01ab96a7313634a487c8bb</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>idxLst</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a4b0ec2213005f75886b90c21c00e6d91</Anchor>
                  </Node>
                  <Node>
                   <Name>destinations</Name>
@@ -682,6 +702,16 @@
                   <Anchor>a23525affdb05a164623a520998048ab4</Anchor>
                  </Node>
                  <Node>
+                  <Name>addLiteral</Name>
+                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                  <Anchor>a51e68dd7f4ff44e260ddff4bc7a0252d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>getLiterals</Name>
+                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                  <Anchor>af3070a9a3aff15d79e64889185c1462d</Anchor>
+                 </Node>
+                 <Node>
                   <Name>execute</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                   <Anchor>a5c61748c4ea33e916f5a3c57b0a04ae2</Anchor>
@@ -715,6 +745,11 @@
                   <Name>contexts</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                   <Anchor>a0f3e68192d500a3ed4d8915dafee9adf</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>literals</Name>
+                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                  <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
@@ -1106,6 +1141,16 @@
                   <Name>simpleToken</Name>
                   <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
                   <Anchor>a17cafd58974a9fdd79834817a012c602</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>createNewContext</Name>
+                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+                  <Anchor>a1f735ff6e672f56b5481f5ff9a35a4c1</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sendToOldContext</Name>
+                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+                  <Anchor>a6bc2d079feb518a714d05942fab09eb4</Anchor>
                  </Node>
                  <Node>
                   <Name>changeContext</Name>
@@ -3261,6 +3306,92 @@
            <Node>
             <Name>All</Name>
             <Path>functions.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>_</Name>
+              <Path>functions.html</Path>
+             </Node>
+             <Node>
+              <Name>a</Name>
+              <Path>functions_a.html</Path>
+             </Node>
+             <Node>
+              <Name>b</Name>
+              <Path>functions_b.html</Path>
+             </Node>
+             <Node>
+              <Name>c</Name>
+              <Path>functions_c.html</Path>
+             </Node>
+             <Node>
+              <Name>d</Name>
+              <Path>functions_d.html</Path>
+             </Node>
+             <Node>
+              <Name>e</Name>
+              <Path>functions_e.html</Path>
+             </Node>
+             <Node>
+              <Name>f</Name>
+              <Path>functions_f.html</Path>
+             </Node>
+             <Node>
+              <Name>g</Name>
+              <Path>functions_g.html</Path>
+             </Node>
+             <Node>
+              <Name>h</Name>
+              <Path>functions_h.html</Path>
+             </Node>
+             <Node>
+              <Name>i</Name>
+              <Path>functions_i.html</Path>
+             </Node>
+             <Node>
+              <Name>k</Name>
+              <Path>functions_k.html</Path>
+             </Node>
+             <Node>
+              <Name>l</Name>
+              <Path>functions_l.html</Path>
+             </Node>
+             <Node>
+              <Name>m</Name>
+              <Path>functions_m.html</Path>
+             </Node>
+             <Node>
+              <Name>n</Name>
+              <Path>functions_n.html</Path>
+             </Node>
+             <Node>
+              <Name>o</Name>
+              <Path>functions_o.html</Path>
+             </Node>
+             <Node>
+              <Name>p</Name>
+              <Path>functions_p.html</Path>
+             </Node>
+             <Node>
+              <Name>r</Name>
+              <Path>functions_r.html</Path>
+             </Node>
+             <Node>
+              <Name>s</Name>
+              <Path>functions_s.html</Path>
+             </Node>
+             <Node>
+              <Name>t</Name>
+              <Path>functions_t.html</Path>
+             </Node>
+             <Node>
+              <Name>u</Name>
+              <Path>functions_u.html</Path>
+             </Node>
+             <Node>
+              <Name>v</Name>
+              <Path>functions_v.html</Path>
+             </Node>
+            </Subnodes>
            </Node>
            <Node>
             <Name>Functions</Name>
@@ -3639,6 +3770,16 @@
                     <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
                    </Node>
                    <Node>
+                    <Name>addLiteral</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>ad3c13340b0993252d64253e3a7d46bb7</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createArgLst</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>aa29f0cabaef83cc2e1545fd8f19041e8</Anchor>
+                   </Node>
+                   <Node>
                     <Name>sendResults</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>a01795f99a948bc57c713a8700ef89353</Anchor>
@@ -3677,6 +3818,16 @@
                     <Name>inputs</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>a439f00978854df97a819c8d7b19e6138</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>argLst</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a414e1b4d8f01ab96a7313634a487c8bb</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>idxLst</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a4b0ec2213005f75886b90c21c00e6d91</Anchor>
                    </Node>
                    <Node>
                     <Name>destinations</Name>
@@ -3746,6 +3897,16 @@
                     <Anchor>a23525affdb05a164623a520998048ab4</Anchor>
                    </Node>
                    <Node>
+                    <Name>addLiteral</Name>
+                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                    <Anchor>a51e68dd7f4ff44e260ddff4bc7a0252d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getLiterals</Name>
+                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                    <Anchor>af3070a9a3aff15d79e64889185c1462d</Anchor>
+                   </Node>
+                   <Node>
                     <Name>execute</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                     <Anchor>a5c61748c4ea33e916f5a3c57b0a04ae2</Anchor>
@@ -3779,6 +3940,11 @@
                     <Name>contexts</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                     <Anchor>a0f3e68192d500a3ed4d8915dafee9adf</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>literals</Name>
+                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                    <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
@@ -4242,6 +4408,16 @@
                     <Anchor>a17cafd58974a9fdd79834817a012c602</Anchor>
                    </Node>
                    <Node>
+                    <Name>createNewContext</Name>
+                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+                    <Anchor>a1f735ff6e672f56b5481f5ff9a35a4c1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>sendToOldContext</Name>
+                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+                    <Anchor>a6bc2d079feb518a714d05942fab09eb4</Anchor>
+                   </Node>
+                   <Node>
                     <Name>changeContext</Name>
                     <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
                     <Anchor>ac53d82a6f9d74687751b24c733000ca4</Anchor>
@@ -4554,6 +4730,11 @@
               <Name>read.py</Name>
               <Path>read_8py.html</Path>
               <Subnodes>
+               <Node>
+                <Name>parseLit</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+               </Node>
                <Node>
                 <Name>createSink</Name>
                 <Path>read_8py.html</Path>

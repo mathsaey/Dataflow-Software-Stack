@@ -1081,6 +1081,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>parseLit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+    <Abstract>Parse a literal string. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>createSink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3903,6 +3915,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>ad3c13340b0993252d64253e3a7d46bb7</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createArgLst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>aa29f0cabaef83cc2e1545fd8f19041e8</Anchor>
+    <Abstract>Merge the literals with the arguments. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>sendResults</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3991,6 +4027,26 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Anchor>a439f00978854df97a819c8d7b19e6138</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>argLst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a414e1b4d8f01ab96a7313634a487c8bb</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>idxLst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a4b0ec2213005f75886b90c21c00e6d91</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4137,6 +4193,28 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.ContextChange</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a51e68dd7f4ff44e260ddff4bc7a0252d</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getLiterals</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.ContextChange</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>af3070a9a3aff15d79e64889185c1462d</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -4211,6 +4289,16 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
     <Anchor>a0f3e68192d500a3ed4d8915dafee9adf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>literals</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.ContextChange</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5175,6 +5263,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>createNewContext</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a1f735ff6e672f56b5481f5ff9a35a4c1</Anchor>
+    <Abstract>Create a new context for a token. </Abstract>
+    <DeclaredIn>tokenCreator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendToOldContext</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a6bc2d079feb518a714d05942fab09eb4</Anchor>
+    <Abstract>Change the context of a token. </Abstract>
+    <DeclaredIn>tokenCreator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>changeContext</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -5206,6 +5318,7 @@
     </TokenIdentifier>
     <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
     <Anchor>a7ddc78b04b447b0102525e13786c2d70</Anchor>
+    <Abstract>Create a stop token. </Abstract>
     <DeclaredIn>tokenCreator.py</DeclaredIn>
   </Token>
   <Token>
@@ -11299,6 +11412,18 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Abstract>DIS parser. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseLit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+    <Abstract>Parse a literal string. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>

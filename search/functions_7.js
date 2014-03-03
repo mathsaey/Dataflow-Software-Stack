@@ -7,6 +7,7 @@ var searchData=
   ['getin',['getIn',['../namespacecore.html#aacc1dc1509b580b630738c1c61fa619b',1,'core']]],
   ['getinputport',['getInputPort',['../class_i_g_r_1_1node_1_1_node.html#ac027c6e51dd93ee101de90af78e15010',1,'IGR.node.Node.getInputPort()'],['../class_i_g_r_1_1node_1_1_sub_graph_entry_node.html#abdd19659f5434a7dcb5912bfb657f00b',1,'IGR.node.SubGraphEntryNode.getInputPort()'],['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a170892e23acc2d46aaeea576d6fb73e7',1,'IGR.subgraph.SubGraph.getInputPort()']]],
   ['getkey',['getKey',['../namespace_i_g_r_1_1node.html#a1b8f36b680be632f7fc70930d43afd67',1,'IGR::node']]],
+  ['getliterals',['getLiterals',['../classcore_1_1instruction_1_1_context_change.html#af3070a9a3aff15d79e64889185c1462d',1,'core::instruction::ContextChange']]],
   ['getnode',['getNode',['../classif1parser_1_1environment_1_1_scope.html#a0016f7558247f74920fe0ec2d17a3154',1,'if1parser.environment.Scope.getNode()'],['../namespaceif1parser_1_1environment.html#a96c29b707f105852877f2f57124309d1',1,'if1parser.environment.getNode()']]],
   ['getoutputport',['getOutputPort',['../class_i_g_r_1_1node_1_1_node.html#a388eaacd1a1b23b7acdb5374a82eb877',1,'IGR.node.Node.getOutputPort()'],['../class_i_g_r_1_1node_1_1_sub_graph_exit_node.html#aca620c5d04bd61225a91c8edf6e92fdd',1,'IGR.node.SubGraphExitNode.getOutputPort()'],['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a37d513f191b30020bd7efc54996cee5f',1,'IGR.subgraph.SubGraph.getOutputPort()']]],
   ['getport',['getPort',['../namespacecore.html#a89956e4c036740132c8cba32795c5d61',1,'core']]],

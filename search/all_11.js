@@ -12,6 +12,7 @@ var searchData=
   ['selectcnode',['SelectCNode',['../class_i_g_r_1_1node_1_1_select_c_node.html',1,'IGR::node']]],
   ['senddatum',['sendDatum',['../classcore_1_1instruction_1_1_static_instruction.html#a60d5ee618b60b7883145196a9b156fbc',1,'core::instruction::StaticInstruction']]],
   ['sendresults',['sendResults',['../classcore_1_1instruction_1_1_operation_instruction.html#a01795f99a948bc57c713a8700ef89353',1,'core::instruction::OperationInstruction']]],
+  ['sendtooldcontext',['sendToOldContext',['../classcore_1_1token_creator_1_1_token_creator.html#a6bc2d079feb518a714d05942fab09eb4',1,'core::tokenCreator::TokenCreator']]],
   ['seqforallcnode',['SeqForallCNode',['../class_i_g_r_1_1node_1_1_seq_forall_c_node.html',1,'IGR::node']]],
   ['setin',['setIn',['../namespacecore.html#a64a7b5be7fa0e4857117508b808dc889',1,'core']]],
   ['setkey',['setKey',['../classcore_1_1instruction_1_1_abstract_instruction.html#ac51b309847a681f30924519582fa29af',1,'core::instruction::AbstractInstruction']]],
