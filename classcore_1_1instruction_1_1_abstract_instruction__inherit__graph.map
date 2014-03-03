@@ -3,6 +3,6 @@
 <area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_context_restore.html" title="Represents the restoration of context. " alt="" coords="190,235,351,322"/>
 <area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_static_instruction.html" title="A static instruction will always send it&#39;s output to the same instructions. " alt="" coords="375,229,584,329"/>
 <area shape="rect" id="node7" href="$classcore_1_1instruction_1_1_stop_instruction.html" title="Represents the end of the program. " alt="" coords="610,242,813,315"/>
-<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="302,411,476,605"/>
-<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="500,471,641,545"/>
+<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="302,411,476,618"/>
+<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="500,478,641,551"/>
 </map>

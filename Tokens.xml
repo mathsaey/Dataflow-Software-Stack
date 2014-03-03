@@ -74,6 +74,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>ad9b2e735c8964c4efc36149e3863f873</Anchor>
+    <Abstract>Add a literal to a given instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1094,13 +1106,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>parseLit</Name>
+      <Name>evalLit</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>read</Scope>
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
-    <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+    <Anchor>a08aeed13e7f3aa8263fd491abb48b6be</Anchor>
     <Abstract>Parse a literal string. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
@@ -1198,6 +1210,17 @@
     <Path>namespaceread.html</Path>
     <Anchor>afe352258100027bf4343c6e9c325e2fb</Anchor>
     <Abstract>Parse a chunck declaration. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseLit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -3251,6 +3274,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>ad9b2e735c8964c4efc36149e3863f873</Anchor>
+    <Abstract>Add a literal to a given instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>start</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -4060,6 +4095,16 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Anchor>a4b0ec2213005f75886b90c21c00e6d91</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hasLit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a42864c031d933b97c4368c9c73897010</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -11442,13 +11487,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>parseLit</Name>
+      <Name>evalLit</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>read</Scope>
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
-    <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+    <Anchor>a08aeed13e7f3aa8263fd491abb48b6be</Anchor>
     <Abstract>Parse a literal string. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
@@ -11546,6 +11591,17 @@
     <Path>namespaceread.html</Path>
     <Anchor>afe352258100027bf4343c6e9c325e2fb</Anchor>
     <Abstract>Parse a chunck declaration. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseLit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

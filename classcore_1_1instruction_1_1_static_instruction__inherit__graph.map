@@ -1,5 +1,5 @@
 <map id="core.instruction.StaticInstruction" name="core.instruction.StaticInstruction">
-<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="5,345,179,538"/>
-<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="203,405,344,478"/>
+<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="5,345,179,551"/>
+<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="203,411,344,485"/>
 <area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="100,6,264,146"/>
 </map>
