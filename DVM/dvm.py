@@ -27,29 +27,57 @@
 # THE SOFTWARE.
 
 import log
+import sys
 import core
 import read
+import signal
 import argparse
+
+##
+# \package dvm
+# \brief DVM Main file
+#
+# This module contains the entry point for DVM. It contains the
+# UI code, as well as the command line parser and exit handling.
+#
+# In short it bundles all the components of DVM together and it 
+# allows the user to interact with these components.
+#
+# \todo
+#		Stop instruction that can contain tokens until
+#		it receives a signal (handle on meta level)
+##
+
+# --------------- #
+# Signal Handlers #
+# --------------- #
+
+## Handle an exit signal.
+def handle_exit(signal, frame):
+	sys.exit(1)
+
+## Bind handle_exit to sigint.
+signal.signal(signal.SIGINT, handle_exit)
 
 # ---------------------- #
 # Command line arguments #
 # ---------------------- #
 
 argParser = argparse.ArgumentParser(description = "The Dataflow Virtual Machine.")
-#argParser.add_argument("path", help = "The path to the DIS file you want to run")
-#argParser.add_argument("-i", "--input", action = 'append', help = "A value to pass to the program")
-#argParser.add_argument("-c", "--cores", type = int, default = 1, help = "The number of cores to use")
-#argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
+argParser.add_argument("path", help = "The path to the DIS file you want to run")
+argParser.add_argument("-i", "--input", action = 'append', help = "A value to pass to the program")
+argParser.add_argument("-c", "--cores", type = int, default = 1, help = "The number of cores to use")
+argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
 args = argParser.parse_args()
 
-args.logLevel = 0
-args.path = "../examples/simple.dis"
-args.cores = 1
-args.input = [1,2]
+#args.logLevel = 0
+#args.path = "../examples/simple.dis"
+#args.cores = 1
+#args.input = [1,2]
 
-# -------------------- #
-# Starting the program #
-# -------------------- #
+# ------------ #
+# Program Flow #
+# ------------ #
 
 log.setup(args.logLevel)
 read.parseFile(args.path)
@@ -57,18 +85,10 @@ core.start(args.cores)
 
 if args.input:
 	for data in args.input:
-		core.addData(int(data))
+		data = read.parseLit(data)
+		core.addData(data)
 
 while not core.hasIn():
-	data = input("Please enter your data for port {}: ".format(core.getPort()))
-	core.addData(int(data))
-
-##
-# \todo
-#		Figure out a way to deal with literals
-# \todo
-#		Parse input instead of just using ints
-# \todo
-#		Stop instruction that can contain tokens until
-#		it receives a signal (handle on meta level)
-##
+	data = raw_input("Please enter your data for port {}: ".format(core.getPort()))
+	data = read.parseLit(data)
+	core.addData(data)
