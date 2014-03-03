@@ -41,6 +41,10 @@ log.setLevel(logging.WARNING)
 
 chunck = None
 
+## Parse a literal string.
+def parseLit(str):
+	return eval(str)
+
 ## Create a sink.
 def createSink(arr):
 	return core.addSink()

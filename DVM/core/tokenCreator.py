@@ -164,4 +164,3 @@ class TokenCreator(object):
 	def stopToken(self, tok):
 		tok.tag = token.StopTag()
 		self.core.add(tok)
-

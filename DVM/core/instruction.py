@@ -142,6 +142,31 @@ class OperationInstruction(StaticInstruction):
 		super(OperationInstruction, self).__init__()
 		self.operation = operation
 		self.inputs    = inputs
+		self.argLst    = [None] * inputs
+		self.idxLst    = [i for i in xrange(0, inputs)]
+
+	##
+	# Add a literal to the operation.
+	# An instruction should never accept only
+	# literals.
+	##
+	def addLiteral(self, port, val):
+		self.argLst[port] = val
+		self.idxLst.remove(port)
+
+	##
+	# Merge the literals with the
+	# arguments.
+	##
+	def createArgLst(self, args):
+		res = list(self.argLst)
+		idx = 0
+
+		for el in args:
+			res[idx] = el
+			idx += 1
+
+		return res
 
 	##
 	# Send results to the relevant destinations.
@@ -158,6 +183,7 @@ class OperationInstruction(StaticInstruction):
 	def execute(self, tokens, core):
 		log.info("executing %s", self)
 		lst = map(lambda x : x.datum, tokens)
+		res = self.createArgLst(lst)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
 		self.sendResults([res], core, cont)		
