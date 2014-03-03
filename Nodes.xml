@@ -4458,6 +4458,11 @@
               <Path>dvm_8py.html</Path>
               <Subnodes>
                <Node>
+                <Name>handle_exit</Name>
+                <Path>dvm_8py.html</Path>
+                <Anchor>a2e32617d77431cc90e14996cd05d3bcd</Anchor>
+               </Node>
+               <Node>
                 <Name>argParser</Name>
                 <Path>dvm_8py.html</Path>
                 <Anchor>aa067e7021475dc71ccd9019423b3a7c5</Anchor>
@@ -4470,7 +4475,7 @@
                <Node>
                 <Name>data</Name>
                 <Path>dvm_8py.html</Path>
-                <Anchor>a75bba702496098cfa1b0ad9effc158a4</Anchor>
+                <Anchor>ab12ff8b46e7c77add9ddc198e2a6fbb5</Anchor>
                </Node>
               </Subnodes>
              </Node>
