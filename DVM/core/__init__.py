@@ -138,6 +138,16 @@ def addDestination(srcKey, srcPort, dstKey, dstPort):
 	inst.addDestination(srcPort, dstKey, dstPort)
 
 ##
+# Add a literal to a given instruction.
+#
+# This only works on instruction::OperationInstruction
+# and on instruction:ContextChangeInstruction
+##
+def addLiteral(key, port, val):
+	inst = memory.get(key)
+	inst.addLiteral(port, val)
+
+##
 # Start the execution cores.
 #
 # \see runtime::init()

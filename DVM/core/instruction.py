@@ -144,6 +144,11 @@ class OperationInstruction(StaticInstruction):
 		self.inputs    = inputs
 		self.argLst    = [None] * inputs
 		self.idxLst    = [i for i in xrange(0, inputs)]
+		self.hasLit    = False
+
+	def __str__(self):
+		res = super(OperationInstruction, self).__str__()
+		return res + " " + str(self.argLst)
 
 	##
 	# Add a literal to the operation.
@@ -153,12 +158,16 @@ class OperationInstruction(StaticInstruction):
 	def addLiteral(self, port, val):
 		self.argLst[port] = val
 		self.idxLst.remove(port)
+		self.inputs -= 1
+		self.hasLit = True
 
 	##
 	# Merge the literals with the
 	# arguments.
 	##
 	def createArgLst(self, args):
+		if not self.hasLit: return args
+		
 		res = list(self.argLst)
 		idx = 0
 
@@ -183,7 +192,7 @@ class OperationInstruction(StaticInstruction):
 	def execute(self, tokens, core):
 		log.info("executing %s", self)
 		lst = map(lambda x : x.datum, tokens)
-		res = self.createArgLst(lst)
+		lst = self.createArgLst(lst)
 		res = self.operation(*lst)
 		cont = tokens[0].tag.cont
 		self.sendResults([res], core, cont)		
@@ -231,8 +240,13 @@ class ContextChange(AbstractInstruction):
 		self.contexts = {}
 		self.literals = {}
 
-	def addLiteral(self, idx, lit):
-		self.literals.update({idx : lit})
+	def __str__(self):
+		res = super(ContextChange, self).__str__()
+		return res + " " + str(self.literals)
+
+
+	def addLiteral(self, port, val):
+		self.literals.update({port : val})
 
 	def getLiterals(self):
 		return self.literals

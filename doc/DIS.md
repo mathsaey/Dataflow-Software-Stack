@@ -16,10 +16,11 @@ The instructions that don't need to be matched are located in chunk 0, while tho
 
 # DIS file layout {#Layout}
 
-A DIS file contains 3 types of statements, seperated by newlines.
-	* Chunck declarations
-	* Instruction definitionss
-	* Links between instructions.
+A DIS file contains 4 types of statements, seperated by newlines.
+	* [Chunck declarations](#Chunks)
+	* [Instruction definitions](#Instructions)
+	* [Links between instructions](#Links)
+    * [Literals of instructions](#Literals)
 
 Besides these, DIS can contain comments, a comment is started by using `$`
 
@@ -110,7 +111,7 @@ Example:
 
     INST OP 0 1 2
 
-# Entry and Exit point {#Entry}
+#### Entry and Exit point
 
 In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are added by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.
 
@@ -124,18 +125,38 @@ exit point:
 
     INST PE 0 <outputs>
     
+## Literals {#Literals}
+
+Some instructions can take some arguments that are known in advance. Examples are additions where one of the elements is already known or function calls with a few predefined arguments. It's important to know that every instruction needs at least one unknown attribute, an attribute which is not a literal. Any instruction that only accepts literals should be precomputed.
+
+A literal is defined with the following statement:
+
+    LITR <instruction> <port> <value>
+
+Where instruction is the index of an instruction, which is located in the current chunck. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way.
+
+    LITR 0 1 "A literal string"
+
+Literals can only be added to operation and context change instructions. The following table defines the various types that can be defined as literals.
+
+Type    | Example  
+--------|---------
+Bool    | True
+Number  | 1298
+String  | "Hello World"
+Array   | [21, "test"]
 
 # An Example {#Example}
 
-The example below presents the DIS code for a program that simply calls a function which adds both of it's inputs. It is roughly equivalent to the following pseudo code.
+The example below presents the DIS code for a program that contains most of the available DIS functionality while still remaining simple.
 
 ~~~~
-function add(x, y):
-	return x + y
+function add(x, y, z):
+	return x + y + z + 5
 end function
 
 function Main(x, y):
-	return add(x,y)
+	return add(x, y, 4)
 end function
 ~~~~
 

@@ -42,7 +42,7 @@ log.setLevel(logging.WARNING)
 chunck = None
 
 ## Parse a literal string.
-def parseLit(str):
+def evalLit(str):
 	return eval(str)
 
 ## Create a sink.
@@ -99,7 +99,7 @@ instructions = {
 # Parse an instruction declaration.
 # Verify that it ended up in the correct chunck.
 ##
-def parseInst(arr):
+def parseInst(arr, stmt):
 	code = arr[1]
 	key = instructions[code](arr)
 	if key != (chunck, int(arr[2])):
@@ -112,11 +112,23 @@ def parseInst(arr):
 # A chunck declaration has the form:
 # `CHUNCK <idx>`
 ##
-def parseChunck(arr):
+def parseChunck(arr, stmt):
 	global chunck
 	chunck = int(arr[1])
 
 	log.info("Starting chunck: %d", chunck)
+
+def parseLit(arr, stmt):
+	inst = int(arr[1])
+	port = int(arr[2])
+
+	lit = stmt[stmt.find(arr[3]):]
+	lit = evalLit(lit)
+
+	log.info("Adding Literal: '%s' to c %d i %d p %d", 
+		lit, chunck, inst, port)
+
+	core.addLiteral((chunck, inst), port, lit)
 
 ##
 # Parse a link statement.
@@ -126,7 +138,7 @@ def parseChunck(arr):
 # to have the form:
 # `<chunk> <instruction> <port>`
 ##
-def parseLink(arr):
+def parseLink(arr, stmt):
 	srcChnk = int(arr[1])
 	srcInst = int(arr[2])
 	srcPort = int(arr[3])
@@ -147,6 +159,7 @@ functions = {
 	'CHUNCK' : parseChunck,
 	'INST'   : parseInst,
 	'LINK'   : parseLink,
+	'LITR'   : parseLit
 }
 
 ## 
@@ -158,7 +171,7 @@ def parseStmt(stmt):
 	log.debug("Reading statement: '%s'", stmt)
 	arr = stmt.split()
 	key = arr[0]
-	functions[key](arr)
+	functions[key](arr, stmt)
 
 ## 
 # Parse a dis string
@@ -168,6 +181,7 @@ def parse(str):
 		stmt = line.split('$')[0]
 		if len(stmt) is not 0:
 			parseStmt(stmt)
+	log.info("Finished parsing, instruction memory: %s", core.memory.memory())
 
 ## Read the file at loc and parse it.
 def parseFile(loc):

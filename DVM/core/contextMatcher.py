@@ -111,6 +111,7 @@ class ContextMatcher(object):
 	# Add the tokens for key to the scheduler.
 	##
 	def executeKey(self, key):
+		log.info("Executing key: %s", key)
 		arr = self.tokens[key]
 		del self.tokens[key]
 		self.core.scheduler.schedule(key[0], arr)

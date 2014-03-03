@@ -64,16 +64,16 @@ class TokenCreator(object):
  	# This method will also send any literals that belong
  	# to the call node.
  	#
- 	# \param token
+ 	# \param tok
  	#		The token to modify and send.
  	# \param inst
  	#		The instruction that started the context change.
  	# \param dest
  	#		The new destination of the token.
  	##
- 	def createNewContext(self, token, inst, dest):
- 		core = token.tag.core
- 		cont = token.tag.cont
+ 	def createNewContext(self, tok, inst, dest):
+ 		core = tok.tag.core
+ 		cont = tok.tag.cont
  		key  = (inst, cont)
 
  		new = self.core.contextCreator.get()
@@ -81,14 +81,14 @@ class TokenCreator(object):
 		self.restoreMap.update({new : (cont, inst.retnSink)})
 
 		# Add the value
-		token.tag.cont = new
-		token.tag.inst = dest
-		self.core.add(token)
+		tok.tag.cont = new
+		tok.tag.inst = dest
+		self.core.add(tok)
 
 		# Add the literals of the call
 		for key in inst.getLiterals():
 			val = inst.getLiterals()[key]
-			tag = token.Tag(core, inst, key, cont)
+			tag = token.Tag(core, dest, key, new)
 			tok = token.Token(val, tag)
 			self.core.add(tok)
 
