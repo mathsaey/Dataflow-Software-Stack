@@ -74,7 +74,7 @@ class Core(object):
 	#		The identifier of this core, this identifier should be unique 
 	#		and it should match the identifier of this core in the collection
 	#		of all the cores.
-	# \param instructions
+	# \param memory
 	#		A reference to the static instruction memory.
 	##
 	def __init__(self, identifier, memory):

@@ -126,7 +126,7 @@ def addStopInstruction():
 #
 # \param srcKey
 #		The key of the from instruction.
-# \param scrPort
+# \param srcPort
 #		The index of the from port.
 # \param dstKey
 #		The key of the destination instruction.

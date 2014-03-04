@@ -146,10 +146,6 @@ class OperationInstruction(StaticInstruction):
 		self.idxLst    = [i for i in xrange(0, inputs)]
 		self.hasLit    = False
 
-	def __str__(self):
-		res = super(OperationInstruction, self).__str__()
-		return res + " " + str(self.argLst)
-
 	##
 	# Add a literal to the operation.
 	# An instruction should never accept only
@@ -239,11 +235,6 @@ class ContextChange(AbstractInstruction):
 		self.destSink = destSink
 		self.contexts = {}
 		self.literals = {}
-
-	def __str__(self):
-		res = super(ContextChange, self).__str__()
-		return res + " " + str(self.literals)
-
 
 	def addLiteral(self, port, val):
 		self.literals.update({port : val})
