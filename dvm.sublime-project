@@ -12,8 +12,8 @@
         	"path": "./DVM",
         	"name": "DVM"
         },{
-            "path": "./IDIS",
-            "name": "IDIS"
+            "path": "./compiler",
+            "name": "compiler"
         },{
             "path": "./docpages",
             "name": "Documentation"
