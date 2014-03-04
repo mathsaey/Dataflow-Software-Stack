@@ -1,6 +1,6 @@
-# tools.py
+# log.py
 # Mathijs Saey
-# DISc
+# DVM
 
 # The MIT License (MIT)
 #
@@ -12,10 +12,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -25,50 +25,18 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser.tools
-# \brief Parser Frontend
-#
-# This module contains a few tools that 
-# are used when parsing if1
+# \package log
+# \brief DISc logging setup
+# 
+# This module is responsible for the global set-up
+# of the DISc logger, such as formatting and global filters.
 ##
-
-import sys
 
 import logging
-log = logging.getLogger(__name__)
 
-##
-# Print a warning to stdout.
-#
-# \param msg
-#		The message to print
-# \param line
-#		The line where the warning was encountered
-#		"?" is used if no line is provided.
-#
-# \todo Make this pass an error to the host application
-#		when this runs embedded
-##
-def warning(msg, line = "?"):
-	message = "line: " + str(line) + ": " + msg
-	log.warning(message)
+## String for formatting log records
+FORMAT_STR = "[%(levelname)5s][%(module)14s:%(lineno)3d][%(processName)3s] %(message)s"
 
-##
-# Print an error to stdout.
-# Quits the application after printing.
-# You should only use this if correct execution is impossible.
-# use warning() in other cases.
-#
-# \param msg
-#		The message to print
-# \param line
-#		The line where the warning was encountered
-#		"?" is used if no line is provided.
-#
-# \todo Make this pass an error to the host application
-#		when this runs embedded
-##
-def error(msg, line = "?"):
-	message = "line: " + str(line) + ": " + msg
-	log.error(message)
-	sys.exit()
+## Set up the root logger.
+def setup(lvl):
+	logging.basicConfig(format = FORMAT_STR, level = lvl)

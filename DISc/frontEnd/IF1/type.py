@@ -31,11 +31,10 @@
 # Discover IF1 types.
 # For an introduction on how types are represented in
 # IF1, check out the [IF1 reference](md_doc__i_f1.html#types)
-#
-# \todo Change this to express IF1 types in relation to DVM types
 ##
 
-import tools
+import logging
+log = logging.getLogger(__name__)
 
 # -------------------- #
 # Forward declarations #
@@ -225,7 +224,7 @@ def parseType(arr, ctr):
 	try:
 		func = _type_codes[funcKey]
 	except KeyError:
-		tools.warning("Unknown type code: " + str(funcKey) + " encountered.", ctr)
+		log.warning("Line %d, Unknown type code %s encountered.", ctr, funcKey)
 		_pool.addType(arr, _UnknownType())
 	else:
 		func(arr)

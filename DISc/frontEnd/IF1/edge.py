@@ -33,10 +33,12 @@
 # the IGR.
 ##
 
+import logging
+log = logging.getLogger(__name__)
+
 import IGR
 
 import environment
-import tools
 import type
 
 # --------- #
@@ -82,8 +84,7 @@ def _parseBasicLit(str, typ, ctr):
 	elif typ.type is bool:
 		return str is "T"
 	else:
-		err = "Unsupported literal, " + str + " encountered."
-		tools.error(err,ctr)
+		log.error("Line %d, Unsupported literal, %s encountered.", ctr, str)
 
 ## Parse a literal string.
 def _parseLitStr(str, typ, ctr):
@@ -93,8 +94,7 @@ def _parseLitStr(str, typ, ctr):
 	elif isinstance(typ, type._FunctionType):
 		return string
 	else:
-		err = "Unsupported literal, " + str + " encountered."
-		tools.error(err,ctr) 
+		log.error("Line %d, Unsupported literal, %s encountered.", ctr, str)
 
 ## Parse an IF1 literal
 def parseLiteral(arr, ctr):

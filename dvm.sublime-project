@@ -12,8 +12,8 @@
         	"path": "./DVM",
         	"name": "DVM"
         },{
-            "path": "./compiler",
-            "name": "compiler"
+            "path": "./DISc",
+            "name": "DISc"
         },{
             "path": "./docpages",
             "name": "Documentation"
@@ -35,7 +35,8 @@
             "name":"sublimeRepl",
             "selector":"source.python",
             "target": "run_existing_window_command",
-            "id": "repl_pypy_run",
+            "id": "repl_python_run",
+            //"id": "repl_pypy_run",
             "file": "config/Python/Main.sublime-menu"
         }
     ]

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # main.py
 # Mathijs Saey
 # DISc
@@ -27,7 +29,7 @@
 """
 This module serves as a top level file to access the other modules
 """
-import if1parser
+import frontEnd
 import compiler.dot
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
@@ -35,5 +37,9 @@ import compiler.dot
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
-if1parser.parseFile(loc)
+import log
+log.setup(0)
+
+frontEnd.set('IF1')
+frontEnd.fromFile(loc)
 compiler.dot.runDot(path="../igr.dot", skipCompound = True)

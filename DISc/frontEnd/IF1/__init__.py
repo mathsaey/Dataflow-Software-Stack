@@ -25,27 +25,78 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser
+# \package IF1
 # \author Mathijs Saey
 # 
-# \brief DVM IF1 Parser.
+# \brief DISc IF1 Parser.
 #
-# This module parses [IF1](\ref IF1) files and converts them to 
-# IGR, our own, internal graph representation.
-#
-#
-# \todo 
-#		The type module and the operations module should be adjusted
-# 		once we roll out our own instruction and data set.
+# This module parses [IF1](\ref IF1) files and converts them to IGR.
 ##
 
-import parser
+import type
+import edge
+import graph
+
+import logging
+log = logging.getLogger(__name__)
+
+# ------ #
+# Parser #
+# ------ #
+
+## Skip a line #
+def skipLine(str, ctr): pass
 
 ##
-# Parses an IF1 file.
-#
-# \param loc
-#		The location of the file.
+# Parser values and the function to call when
+# they are encountered
 ##
-def parseFile(loc):
-	parser.parseFile(loc)
+__FUNCTIONS__ = {
+	'C' : skipLine,
+	'T' : type.parseType,
+	'E' : edge.parseEdge,
+	'L' : edge.parseLiteral,
+	'N' : graph.parseNode,
+	'G' : graph.parseGraph,
+	'X' : graph.parseGraph,
+	'{' : graph.parseCompoundStart,
+	'}' : graph.parseCompoundEnd
+}
+
+##
+# Parse a single if1 line.
+#
+# \param line
+#		The string of the line to parse
+# \param ctr
+#		The line number of the current line,
+#		used for error handling.
+##
+def parseLine(line, ctr = "?"):
+	arr = line.split()
+	key = line[0]
+	try:
+		func = __FUNCTIONS__[key]
+	except KeyError:
+		log.warning("Line %d, Unrecognized line type: %s", ctr, key)
+	except Exception, e:
+		log.error("Line %d, Exception %s while parsing: '%s'". ctr, e, line)
+	else:
+		func(arr, ctr)
+
+##
+# Parse a complete IF1 string.
+# This function simply splits the file 
+# based on the newlines and passes each
+# line to parseLine()
+#
+# \param str
+#		The string
+##
+def fromString(str):
+	ctr = 1
+	lines = str.split("\n")
+	for line in lines:
+		if len(line) is not 0:
+			parseLine(line, ctr)
+			ctr += 1
