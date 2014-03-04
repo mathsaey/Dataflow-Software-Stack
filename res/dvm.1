@@ -1,0 +1,30 @@
+.\" DVM Man Page
+.\" Copyright (c) 2013, 2014 Mathijs Saey
+.\" All Rights Reserved
+.TH DVM 1 "4 March 2014" VUB dvm
+
+.SH NAME
+DVM \-\- The Dataflow Virtual Machine
+
+.SH SYNOPSIS
+dvm [-c cores][-i input][-ll logLevel] path
+
+.SH DESCRIPTION
+Runs the DIS file specified by path on the dataflow based virtual machine. The VM will accept input until it's main function has received all of it's data. And terminate once the main function received enough results.
+
+.SH OPTIONS
+
+.HP 
+-c cores, --cores cores
+.br
+Determine the amount of cores that DVM will use to execute the program. This is set to the amount of logical cores in your system by default.
+
+.HP
+-i input, --input input
+.br
+Pass input to the Virtual machine. By default, DVM will keep on asking for input until it has received as many inputs as the main function needs. This argument can be added to send an argument to main before DVM asks for it. This option can be repeated to send multiple inputs to DVM.
+
+.HP
+-ll logLevel, --logLevel
+.br
+Determine the loglevel of DVM, usefull to find bugs. Logging is disabled by default.

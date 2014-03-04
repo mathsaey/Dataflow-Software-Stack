@@ -1,0 +1,33 @@
+.\" DISc Man Page
+.\" Copyright (c) 2013, 2014 Mathijs Saey
+.\" All Rights Reserved
+.TH DISc 1 "4 March 2014" VUB DISc
+
+.SH NAME
+DISc \-\- The DIS Compiler
+
+.SH SYNOPSIS
+disc [-i input][-d path][-o output][-f frontEnd][-ll logLevel] path
+
+.SH DESCRIPTION
+Compile the input file specified by path to it's DIS representation.
+
+.SH OPTIONS
+
+.HP
+-d path, --dvm path
+.br
+Specify the path that dvm is located at. DISc needs to utilize dvm in order to compile
+sources. This option is not needed if DVM is part of your path.
+
+.HP
+-f frontEnd, --frontEnd frontEnd
+.br
+Specify the front end to use for the compiler. The front end should match the
+name of a package in the frontends source directory which will be used to convert
+the input to the compiler's intermediate form. IF1 is used by default.
+
+.HP
+-ll logLevel, --logLevel
+.br
+Determine the loglevel of DVM, usefull to find bugs. Logging is disabled by default.

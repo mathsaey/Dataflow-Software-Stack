@@ -40,6 +40,12 @@
 			<key>name</key>
 			<string>support.class.dis</string>
 		</dict>
+		<dict>
+			<key>match</key>
+			<string> void|bool|int|float|string|array|noOp|isVoid|equals|notEq|and|or|xor|not|add|sub|mul|div|floor|ceil|min|max|less|more|lessEq|moreEq|strContains|strFind|strUpper|strLower|strSub|strRev|strApp|arrEmpty|arrLen|arrEmpty|arrCreate|arrGet|arrSet|arrIns|arrRepl|arrCat|arrFrnt|arrBck|arrSub</string>
+			<key>name</key>
+			<string>support.function.dis</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.dis</string>

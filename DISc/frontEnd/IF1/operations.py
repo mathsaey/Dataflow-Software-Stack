@@ -24,187 +24,69 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-"""
-IF1 node functions
+##
+# \package frontEnd.IF1.operations
+# \brief IF1 operations
+#
+# This module defines the IF1 operations in terms of
+# DIS operations.
+#
+# \todo 
+#	Check ordering of arguments in DIS and IF1. 
+#	Check comptability in general 		
+##
 
-This module defines python equivalents of the if1 native nodes.
-
-When requesting the function for a given key, this module will return a
-(function, inputs, outputs) tuple.
-
-functions can be requested with the getFunction function.
-"""
-
-import math
-import tools
-import functools
-
-# -------------------- #
-# Function Definitions #
-# -------------------- #
-
-def NoOp(*args):                return args
-def ALimL(arr):                 return 0
-def Not(x):                     return not x
-def Mod(l,r):                   return l % r
-def Minus(l,r):                 return l - r
-def Exp(l, r):                  return l ** r
-def Max(l,r):                   return max(l,r)
-def Min(l,r):                   return min(l,r)
-def ASize(arr):                 return len(arr)
-def Less(l,r):                  return l < r
-def Div(l, r):                  return l / r
-def Equal(l, r):                return l == r
-def NotEqual(l, r):             return l != r
-def LessEqual(l,r):             return l <= r
-def Neg(arith):                 return - arith
-def ARemL(arr):                 return arr[1:]
-def ALimH(arr):                 return len(arr)
-def Bool(int):                  return bool(int)
-def Abs(arith):                 return abs(arith)
-def Floor(int):                 return math.floor(int)
-def Double(int):                return int + 0.0
-def AIsEmpty(arr):              return arr == []
-def RangeGenerate(l, h):        return range(l,h)
-def Single(val):                return float(val)
-def Char(int):                  return str(unichr(int))
-def AAddL(arr, el):             return [el] + arr
-def AElement(arr, idx):         return arr[idx]
-def ARemH(arr):                 return arr[:len(arr) - 1]
-def AAddH(arr, el):             return arr[:] + [el]
-def ABuild(bound, *elements):   return list(elements)
-def BindArguments(func, *args): return functools.partial(func, args)
-
-def RedLeft(func, acc, mult, filt): 
-	print "TODO: see if foldl is still needed with compound nodes"
-def RedRight(func, acc, mult, filt): 
-	print "TODO: see if foldl is still needed with compound nodes"
-def RedTree(func, acc, mult, filt): 
-	print "TODO: see if foldl is still needed with compound nodes"
-def Reduce(func, acc, mult, filt): 
-	print "TODO: see if foldl is still needed with compound nodes"
-
-def ASetL(arr, idx): 				
-	print "ASetL not supported in IF1 subset..."
-def AScatter(arr): 					
-	print "TODO: see if ASCatter is still needed with compound nodes"
-
-
-def ACatenate(arr, *arrs):
-	res = arr[:]
-	for el in arrs:
-		res += el
-	return res
-
-def AFill(l, h, *el):
-	if h > l:
-		return list(el) * (h - l)
-	else: 
-		return []
-
-def AGather(l, arr, filter = None):
-	res = []
-	filt = filter
-	if filt is None:
-		filt = [True] * len(arr)
-
-	for idx in xrange(0,len(arr)):
-		el = arr[idx]
-		b = filt[idx]
-		if b:
-			res += el
-	return res
-
-def AReplace(arr, idx, *args):
-	end = idx + len(args)
-	res = arr[:]
-	res[idx:end] = args
-	return res
-
-def FirstValue(mult, filter = None):
-	filt = filter
-	if filt is None:
-		filt = [True] * len(mult)
-
-	for idx in xrange(0,len(mult)):
-		if filt[idx]:
-			return mult[idx]
-
-def FinalValue(mult, filter = None):
-	filt = filter
-	mult.reverse()
-	if filt is None:
-		filt = [True] * len(mult)
-
-	for idx in xrange(0,len(mult)):
-		if filt[idx]:
-			return mult[idx]
-
-def Int(x):
-	if isinstance(x, float):
-		x += 0.5
-	return int(x)
-
-def Plus(l,r):
-	if isinstance(l, bool):
-		return l or r
-	else:
-		return l + r
-
-def Times(l,r):
-	if isinstance(l, bool):
-		return l and r
-	else:
-		return l * r
+import logging
+log = logging.getLogger(__name__)
 
 # ---------------- #
 # Function Mapping #
 # ---------------- #
 
 _functions = {
-	100 : AAddH,
-	101 : AAddL,
+	100 : 'arrBck',
+	101 : 'arrFrnt',
 #	102 : AAdjust,
-	103 : ABuild,
-	104 : ACatenate,
-	105 : AElement,
-	106 : AFill,
-	107 : AGather,
-	108 : AIsEmpty,
-	109 : ALimH,
-	110 : ALimL,
-	111 : ARemH,
-	112 : ARemL,
-	113 : AReplace,
-	114 : AScatter,
-	115 : ASetL,
-	116 : ASize,
-	117 : Abs,
-	118 : BindArguments,
-	119 : Bool,
+	#103 : ABuild,
+	#104 : ACatenate,
+	#105 : AElement,
+	#106 : AFill,
+	#107 : AGather,
+	#108 : AIsEmpty,
+	#109 : ALimH,
+	#110 : ALimL,
+	#111 : ARemH,
+	#112 : ARemL,
+	113 : 'arrRepl',
+	#114 : AScatter,
+#	115 : ASetL,
+	116 : 'arrLen',
+	#117 : Abs,
+#	118 : BindArguments,
+	119 : 'bool',
 #	120 : Call,
-	121 : Char,
-	122 : Div,
-	123 : Double,
-	124 : Equal,
-	125 : Exp,
-	126 : FirstValue,
-	127 : FinalValue,
-	128 : Floor,
-	129 : Int,
+	121 : 'string',
+	122 : 'div',
+	123 : 'float',
+	124 : 'equal',
+	#125 : Exp,
+#	126 : FirstValue,
+#	127 : FinalValue,
+	128 : 'floor',
+	129 : 'int',
 #	130 : IsError,
-	131 : Less,
-	132 : LessEqual,
-	133 : Max,
-	134 : Min,
-	135 : Minus,
-	136 : Mod,
-	137 : Neg,
-	138 : NoOp,
-	139 : Not,
-	140 : NotEqual,
-	141 : Plus,
-	142 : RangeGenerate,
+	131 : 'less',
+	132 : 'lessEq',
+	133 : 'max',
+	134 : 'min',
+	135 : 'sub',
+	#136 : Mod,
+	137 : 'neg',
+	138 : 'noOp',
+	139 : 'not',
+	140 : 'notEq',
+	141 : 'add',
+#	142 : RangeGenerate,
 #	143 : RBuild,
 #	144 : RElements,
 #	145 : RReplace,
@@ -213,8 +95,8 @@ _functions = {
 #	148 : RedTree,
 #	149 : Reduce,
 #	150 : RestValues,
-	151 : Single,
-	152 : Times,
+	151 : 'float',
+	152 : 'mul',
 #	153 : Trunc,
 #	154 : PrefixSize,
 #	155 : Error,
@@ -260,7 +142,7 @@ def getFunction(label, ctr = "?"):
 	try:
 		func = _functions[key]
 	except KeyError:
-		tools.warning("Cannot find function with label: " + label + " NoOp will be used instead.", ctr)
-		return NoOp
+		log.error("Line %d, Undefined function code encountered: %d, using NoOp", ctr, label)
+		return 'noOp'
 	else: 
 		return func

@@ -132,6 +132,14 @@ def dvm_not(x): return not x
 # Numeric Operators #
 # ----------------- #
 
+## 
+# Negation
+#
+# \param x a number
+# \return negated x
+##
+def dvm_neg(x): return - x
+
 ##
 # Addition.
 #
@@ -469,6 +477,7 @@ operations = {
 	'xor'         : dvm_xor,
 	'not'         : dvm_not,
 
+	'neg'         : dvm_neg,
 	'add'         : dvm_add,
 	'sub'         : dvm_sub,
 	'mul'         : dvm_mul,

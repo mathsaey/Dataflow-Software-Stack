@@ -200,7 +200,7 @@ class OperationNode(Node):
 
 	def __str__(self):
 		key = str(self.key)
-		opname = self.operation.__name__
+		opname = self.operation
 		return "OpN '" + key + "' " + opname 
 
 ##
