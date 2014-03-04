@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['natives',['natives',['../namespacenatives.html',1,'']]]
+  ['log',['log',['../namespacelog.html',1,'']]]
 ];

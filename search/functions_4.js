@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['div',['Div',['../namespaceif1parser_1_1operations.html#aa875f15466b60b45cc2ac88535d89077',1,'if1parser::operations']]],
   ['dotfooter',['dotFooter',['../namespacecompiler_1_1dot.html#a64ecb170a7342bba287d37909b9d47b2',1,'compiler::dot']]],
   ['dotheader',['dotHeader',['../namespacecompiler_1_1dot.html#aa4eab18b90e883fddbf2b7367f654d7b',1,'compiler::dot']]],
   ['dottofile',['dotToFile',['../namespacecompiler_1_1dot.html#ab9fb1f388749ced3ba64ee867fae0920',1,'compiler::dot']]],
-  ['double',['Double',['../namespaceif1parser_1_1operations.html#a786a08aed3755a37eb13a6495906f67f',1,'if1parser::operations']]],
   ['dvm_5fadd',['dvm_add',['../namespacenatives.html#a02049f1feebcffefe7962b4fb083d6c7',1,'natives']]],
   ['dvm_5fand',['dvm_and',['../namespacenatives.html#ad9af42003b8677c6e6ecfe3545dcfabc',1,'natives']]],
   ['dvm_5farr_5fadd_5fback',['dvm_arr_add_back',['../namespacenatives.html#a1386b2f1dd931140e6e316a8d1cf304f',1,'natives']]],
@@ -35,6 +33,7 @@ var searchData=
   ['dvm_5fmore',['dvm_more',['../namespacenatives.html#ad363436b9b598e2e6e50e8a4642fcdd5',1,'natives']]],
   ['dvm_5fmore_5feq',['dvm_more_eq',['../namespacenatives.html#a21ba0876b51613717ae31897f182568f',1,'natives']]],
   ['dvm_5fmul',['dvm_mul',['../namespacenatives.html#a0963bf8d2e39650c9beb004640ed4032',1,'natives']]],
+  ['dvm_5fneg',['dvm_neg',['../namespacenatives.html#a833d2b610bb87309d5f921a66b65349c',1,'natives']]],
   ['dvm_5fnoop',['dvm_noOp',['../namespacenatives.html#afb0270ed66574a9cc50b2b27bdbaf85c',1,'natives']]],
   ['dvm_5fnot',['dvm_not',['../namespacenatives.html#a1934feed6f04c3d65363f4bdab42248b',1,'natives']]],
   ['dvm_5fnotequal',['dvm_notEqual',['../namespacenatives.html#a02ebd57a3d4c03dc22899c81d710cebf',1,'natives']]],

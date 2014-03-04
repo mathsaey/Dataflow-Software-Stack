@@ -1,7 +1,6 @@
 var searchData=
 [
   ['changecontext',['changeContext',['../classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4',1,'core::tokenCreator::TokenCreator']]],
-  ['char',['Char',['../namespaceif1parser_1_1operations.html#ae5805baffac4ac50930bf8436965bee2',1,'if1parser::operations']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
   ['compoundfooter',['compoundFooter',['../namespacecompiler_1_1dot.html#a6ece59f004db7752481092f330c0af23',1,'compiler::dot']]],
   ['compoundheader',['compoundHeader',['../namespacecompiler_1_1dot.html#a51ed90df39d19a01c3a04bd2c40b8260',1,'compiler::dot']]],

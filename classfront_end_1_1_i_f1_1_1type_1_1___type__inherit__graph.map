@@ -1,0 +1,8 @@
+<map id="frontEnd.IF1.type._Type" name="frontEnd.IF1.type._Type">
+<area shape="rect" id="node2" href="$classfront_end_1_1_i_f1_1_1type_1_1___basic_type.html" title="Represents one of the basic IF1 types. " alt="" coords="4,142,131,242"/>
+<area shape="rect" id="node3" href="$classfront_end_1_1_i_f1_1_1type_1_1___combined_type.html" title="Wrapper around a combined type that contains multiple base types. " alt="" coords="155,135,281,249"/>
+<area shape="rect" id="node4" href="$classfront_end_1_1_i_f1_1_1type_1_1___container_type.html" title="Wrapper around a container that contains a single base type (such as an array) " alt="" coords="306,135,432,249"/>
+<area shape="rect" id="node5" href="$classfront_end_1_1_i_f1_1_1type_1_1___function_type.html" title="Wrapper around a function type. " alt="" coords="456,135,583,249"/>
+<area shape="rect" id="node6" href="$classfront_end_1_1_i_f1_1_1type_1_1___pointer_type.html" title="Wrapper around a pointer to the first element of a combined type. " alt="" coords="607,129,733,255"/>
+<area shape="rect" id="node7" href="$classfront_end_1_1_i_f1_1_1type_1_1___unknown_type.html" title="Represents any possible type. " alt="" coords="758,135,884,249"/>
+</map>

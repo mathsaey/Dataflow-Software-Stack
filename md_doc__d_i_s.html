@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">13a4bea</span>
+   &#160;<span id="projectnumber">2468cad</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 </li>
 <li class="level1"><a href="#Example">An Example</a></li>
+<li class="level1"><a href="#Operations">Appendix: Operations</a></li>
 </ul>
 </div>
 <div class="textblock"><h1><a class="anchor" id="General"></a>
@@ -166,7 +167,8 @@ Instructions</h2>
 <pre class="fragment">INST OP &lt;idx&gt; &lt;opCode&gt; &lt;inputs&gt;
 </pre><p>Example: </p>
 <pre class="fragment">INST OP 0 1 2
-</pre><h4>Entry and Exit point</h4>
+</pre><p>The opCodes can be found in the <a href="#Operations">appendix</a></p>
+<h4>Entry and Exit point</h4>
 <p>In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are added by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.</p>
 <p>The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0. These points are added through the program begin and program end points. Both of these take one additional argument, which represents the amount of tokens the program accepts/returns.</p>
 <p>entry point: </p>
@@ -227,26 +229,122 @@ An Example</h1>
 <div class="line">INST SI 4 $ Entry sink of the <span class="keyword">function</span></div>
 <div class="line">INST CR 5 $ Function <span class="keywordflow">return</span> </div>
 <div class="line"></div>
-<div class="line">$ Send input to <a class="code" href="namespacenatives.html#a383a6f9aabdd6be9b5861b9cf2d15101">operations</a></div>
+<div class="line">$ Send input to <a class="code" href="namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5">operations</a></div>
 <div class="line">LINK 0 4 0 1 0 0</div>
 <div class="line">LINK 0 4 1 1 0 1</div>
 <div class="line">LINK 0 4 2 1 1 1 </div>
 <div class="line"></div>
 <div class="line">CHUNCK 1</div>
-<div class="line">$ Sum <a class="code" href="namespacenatives.html#a383a6f9aabdd6be9b5861b9cf2d15101">operations</a> with 2 inputs</div>
-<div class="line">INST OP 0 14 2</div>
-<div class="line">INST OP 1 14 2</div>
-<div class="line">INST OP 2 14 2</div>
+<div class="line">$ Sum <a class="code" href="namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5">operations</a> with 2 inputs</div>
+<div class="line">INST OP 0 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
+<div class="line">INST OP 1 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
+<div class="line">INST OP 2 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
 <div class="line"></div>
 <div class="line">LITR 2 1 5 $ Adding a 5 as one of the inputs</div>
 <div class="line"></div>
 <div class="line">LINK 1 0 0 1 1 0 $ Link x + y to (x + y) + z</div>
 <div class="line">LINK 1 1 0 1 2 0 $ Link x + y + z to (x + y + z) + 5</div>
 <div class="line">LINK 1 2 0 0 5 0 $ Link result to <span class="keywordflow">return</span></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h1><a class="anchor" id="Operations"></a>
+Appendix: Operations</h1>
+<table class="doxtable">
+<tr>
+<th>opCode </th><th>Operation  </th></tr>
+<tr>
+<td>void </td><td><a class="el" href="namespacenatives.html#a0347dd8cdda0fb96d131fad5e32ec064" title="Return the DVM void type. ">natives::dvm_Void</a> </td></tr>
+<tr>
+<td>bool </td><td><a class="el" href="namespacenatives.html#a24c16658ab2058e0230063b97ee8de09" title="Create a DVM Boolean. ">natives::dvm_Bool</a> </td></tr>
+<tr>
+<td>int </td><td><a class="el" href="namespacenatives.html#a4e61c994835b8759410a798acbbd8a1e" title="Create a DVM Integer. ">natives::dvm_Int</a> </td></tr>
+<tr>
+<td>float </td><td><a class="el" href="namespacenatives.html#ac4513da155bca2064f5e63b8ae9a667f" title="Create a DVM Float. ">natives::dvm_Float</a> </td></tr>
+<tr>
+<td>string </td><td><a class="el" href="namespacenatives.html#af04b34115cdd45ae74ef9eafa0d0dac9" title="create a DVM String ">natives::dvm_String</a> </td></tr>
+<tr>
+<td>array </td><td><a class="el" href="namespacenatives.html#aed55008480d45b53b15b2725fdb29735" title="Create a DVM Array. ">natives::dvm_Array</a> </td></tr>
+<tr>
+<td>noOp </td><td><a class="el" href="namespacenatives.html#afb0270ed66574a9cc50b2b27bdbaf85c" title="Do nothing. ">natives::dvm_noOp</a> </td></tr>
+<tr>
+<td>isVoid </td><td><a class="el" href="namespacenatives.html#a241533cdc1e8aabdc5d4914b84659c24" title="See if the element is void. ">natives::dvm_isVoid</a> </td></tr>
+<tr>
+<td>equals </td><td><a class="el" href="namespacenatives.html#a598a792f4f27f5f303db9bd1fe54b8cf" title="Check if 2 elements are equal. ">natives::dvm_equals</a> </td></tr>
+<tr>
+<td>notEq </td><td><a class="el" href="namespacenatives.html#a02ebd57a3d4c03dc22899c81d710cebf" title="Check if 2 elements are not equal. ">natives::dvm_notEqual</a> </td></tr>
+<tr>
+<td>and </td><td><a class="el" href="namespacenatives.html#ad9af42003b8677c6e6ecfe3545dcfabc" title="Logical and. ">natives::dvm_and</a> </td></tr>
+<tr>
+<td>or </td><td><a class="el" href="namespacenatives.html#a487ae9e928c22ec16df1269cde8f6083" title="Logical Or. ">natives::dvm_or</a> </td></tr>
+<tr>
+<td>xor </td><td><a class="el" href="namespacenatives.html#ac379fbaba75e081ea9b8a715c711353b" title="Logical xor. ">natives::dvm_xor</a> </td></tr>
+<tr>
+<td>not </td><td><a class="el" href="namespacenatives.html#a1934feed6f04c3d65363f4bdab42248b" title="Negation. ">natives::dvm_not</a> </td></tr>
+<tr>
+<td>add </td><td><a class="el" href="namespacenatives.html#a02049f1feebcffefe7962b4fb083d6c7" title="Addition. ">natives::dvm_add</a> </td></tr>
+<tr>
+<td>sub </td><td><a class="el" href="namespacenatives.html#ab456d991b7ede8c8d839657265d4bf9e" title="Subtraction. ">natives::dvm_sub</a> </td></tr>
+<tr>
+<td>mul </td><td><a class="el" href="namespacenatives.html#a0963bf8d2e39650c9beb004640ed4032" title="Multiplication. ">natives::dvm_mul</a> </td></tr>
+<tr>
+<td>div </td><td><a class="el" href="namespacenatives.html#adaa5098622415dfccbf95a6fef897c6e" title="Subtraction. ">natives::dvm_div</a> </td></tr>
+<tr>
+<td>floor </td><td><a class="el" href="namespacenatives.html#a1984781826a8f1c4e277cade7609fd2d" title="Round down. ">natives::dvm_floor</a> </td></tr>
+<tr>
+<td>ceil </td><td><a class="el" href="namespacenatives.html#a0d6c1c7fbb5d0de60bdc4d73c2c3c57e" title="Round up. ">natives::dvm_ceil</a> </td></tr>
+<tr>
+<td>min </td><td><a class="el" href="namespacenatives.html#af35b6b8d5fd0d2f374885917968a5af9" title="Maximum. ">natives::dvm_min</a> </td></tr>
+<tr>
+<td>max </td><td><a class="el" href="namespacenatives.html#abb4478539499c3865ea8ab4c637c1357" title="Minimum. ">natives::dvm_max</a> </td></tr>
+<tr>
+<td>less </td><td><a class="el" href="namespacenatives.html#a47b86188716c4b89474a9f61e9723f6b" title="Smaller than. ">natives::dvm_less</a> </td></tr>
+<tr>
+<td>more </td><td><a class="el" href="namespacenatives.html#ad363436b9b598e2e6e50e8a4642fcdd5" title="Greater than. ">natives::dvm_more</a> </td></tr>
+<tr>
+<td>lessEq </td><td><a class="el" href="namespacenatives.html#a52843e68814acab8de57cb3c7fadc938" title="Smaller or equal than. ">natives::dvm_less_eq</a> </td></tr>
+<tr>
+<td>moreEq </td><td><a class="el" href="namespacenatives.html#a21ba0876b51613717ae31897f182568f" title="Greatar or equal than. ">natives::dvm_more_eq</a> </td></tr>
+<tr>
+<td>strContains </td><td><a class="el" href="namespacenatives.html#a8e157c1a2fe878bb396c1f31060fa46f" title="See if a string contains a value. ">natives::dvm_str_contains</a> </td></tr>
+<tr>
+<td>strFind </td><td><a class="el" href="namespacenatives.html#a477140509fd9d05fff6c6dde1e47b67c" title="Return the idx of x in str. ">natives::dvm_str_find</a> </td></tr>
+<tr>
+<td>strUpper </td><td><a class="el" href="namespacenatives.html#ae974ce37d8ff02e6365a0693f40d2211" title="Conver a string to upper case. ">natives::dvm_str_upper</a> </td></tr>
+<tr>
+<td>strLower </td><td><a class="el" href="namespacenatives.html#a762f15e633aeee7cd254d69b1ea8539d" title="Conver a string to lower case. ">natives::dvm_str_lower</a> </td></tr>
+<tr>
+<td>strSub </td><td><a class="el" href="namespacenatives.html#a25c53d60625c55a721f63a819d1544c2" title="Get a substring. ">natives::dvm_str_sub</a> </td></tr>
+<tr>
+<td>strRev </td><td><a class="el" href="namespacenatives.html#aff52c3d475d1684b651e3c5a94516368" title="Reverse a string. ">natives::dvm_str_reverse</a> </td></tr>
+<tr>
+<td>strApp </td><td><a class="el" href="namespacenatives.html#a2b6809008cdd1dd601f5d74f9693e37f" title="Append 2 strings. ">natives::dvm_str_append</a> </td></tr>
+<tr>
+<td>arrEmpty </td><td><a class="el" href="namespacenatives.html#a078294ea31372ab0dbcc2386c3c5cf5f" title="See if an array is empty. ">natives::dvm_arr_isEmpty</a> </td></tr>
+<tr>
+<td>arrLen </td><td><a class="el" href="namespacenatives.html#ab4d313f7f69e1a0f25ccc1f70386979d" title="Get the length of an array. ">natives::dvm_arr_length</a> </td></tr>
+<tr>
+<td>arrEmpty </td><td><a class="el" href="namespacenatives.html#acf26b1de8845f072eb27dd89f2f163c2" title="Create an empty array. ">natives::dvm_arr_empty</a> </td></tr>
+<tr>
+<td>arrCreate </td><td><a class="el" href="namespacenatives.html#a222b597973b736d6e3421d68e99db250" title="Create an array filled with an element. ">natives::dvm_arr_create</a> </td></tr>
+<tr>
+<td>arrGet </td><td><a class="el" href="namespacenatives.html#ae6df364d41ad69e2557253b7cc6570ba" title="Get an element from the array. ">natives::dvm_arr_get</a> </td></tr>
+<tr>
+<td>arrSet </td><td><a class="el" href="namespacenatives.html#ae9f4dbd73cbc45700efc9fceff0c8d15" title="Create a new array with a different element at idx. ">natives::dvm_arr_set</a> </td></tr>
+<tr>
+<td>arrIns </td><td><a class="el" href="namespacenatives.html#af1035915155c3d811f71d5b0fe21b92e" title="Insert elements into an array. ">natives::dvm_arr_insert</a> </td></tr>
+<tr>
+<td>arrRepl </td><td><a class="el" href="namespacenatives.html#a44c4b28857e9355a4ede1ec6eea380c4" title="Replace elements in an array. ">natives::dvm_arr_replace</a> </td></tr>
+<tr>
+<td>arrCat </td><td><a class="el" href="namespacenatives.html#aabc798c93f8ca42270e94fb7a91c6a1f" title="Array concatenation. ">natives::dvm_arr_catenate</a> </td></tr>
+<tr>
+<td>arrFrnt </td><td><a class="el" href="namespacenatives.html#aecd072979a8a6929ca0228990e24bfaa" title="Add an element to the start of an array. ">natives::dvm_arr_add_front</a> </td></tr>
+<tr>
+<td>arrBck </td><td><a class="el" href="namespacenatives.html#a1386b2f1dd931140e6e316a8d1cf304f" title="Add an element to the back of an array. ">natives::dvm_arr_add_back</a> </td></tr>
+<tr>
+<td>arrSub </td><td><a class="el" href="namespacenatives.html#a220fa9b2fdd9f0c3abe88fbd13cf3c5d" title="Get a subset of an array. ">natives::dvm_arr_sub</a> </td></tr>
+</table>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 3 2014 23:22:01 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 4 2014 21:06:22 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
