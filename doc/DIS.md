@@ -111,6 +111,9 @@ Example:
 
     INST OP 0 1 2
 
+
+The opCodes can be found in the [appendix](#Operations)
+
 #### Entry and Exit point
 
 In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are added by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.
@@ -161,3 +164,53 @@ end function
 ~~~~
 
 \include simple.dis
+
+# Appendix: Operations {#Operations}
+
+opCode      | Operation
+------------|-----------
+void        | natives::dvm_Void
+bool        | natives::dvm_Bool
+int         | natives::dvm_Int
+float       | natives::dvm_Float
+string      | natives::dvm_String
+array       | natives::dvm_Array
+noOp        | natives::dvm_noOp
+isVoid      | natives::dvm_isVoid
+equals      | natives::dvm_equals
+notEq       | natives::dvm_notEqual
+and         | natives::dvm_and
+or          | natives::dvm_or
+xor         | natives::dvm_xor
+not         | natives::dvm_not
+add         | natives::dvm_add
+sub         | natives::dvm_sub
+mul         | natives::dvm_mul
+div         | natives::dvm_div
+floor       | natives::dvm_floor
+ceil        | natives::dvm_ceil
+min         | natives::dvm_min
+max         | natives::dvm_max
+less        | natives::dvm_less
+more        | natives::dvm_more
+lessEq      | natives::dvm_less_eq
+moreEq      | natives::dvm_more_eq
+strContains | natives::dvm_str_contains
+strFind     | natives::dvm_str_find
+strUpper    | natives::dvm_str_upper
+strLower    | natives::dvm_str_lower
+strSub      | natives::dvm_str_sub
+strRev      | natives::dvm_str_reverse
+strApp      | natives::dvm_str_append
+arrEmpty    | natives::dvm_arr_isEmpty
+arrLen      | natives::dvm_arr_length
+arrEmpty    | natives::dvm_arr_empty
+arrCreate   | natives::dvm_arr_create
+arrGet      | natives::dvm_arr_get
+arrSet      | natives::dvm_arr_set
+arrIns      | natives::dvm_arr_insert
+arrRepl     | natives::dvm_arr_replace
+arrCat      | natives::dvm_arr_catenate
+arrFrnt     | natives::dvm_arr_add_front
+arrBck      | natives::dvm_arr_add_back
+arrSub      | natives::dvm_arr_sub
