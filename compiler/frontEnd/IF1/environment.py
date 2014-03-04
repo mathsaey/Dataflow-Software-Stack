@@ -1,6 +1,6 @@
 # environment.py
 # Mathijs Saey
-# IDIS
+# DISc
 
 # The MIT License (MIT)
 #
