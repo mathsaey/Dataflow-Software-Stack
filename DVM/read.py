@@ -76,7 +76,7 @@ def createContextRestore(arr):
 
 ## Create an operation
 def createOperation(arr):
-	opCode = int(arr[3])
+	opCode = arr[3]
 	inputs = int(arr[4])
 	op = natives.operations[opCode]
 

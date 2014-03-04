@@ -29,9 +29,9 @@ LINK 0 4 2 1 1 1
 
 CHUNCK 1
 $ Sum operations with 2 inputs
-INST OP 0 14 2
-INST OP 1 14 2
-INST OP 2 14 2
+INST OP 0 add 2
+INST OP 1 add 2
+INST OP 2 add 2
 
 LITR 2 1 5 $ Adding a 5 as one of the inputs
 

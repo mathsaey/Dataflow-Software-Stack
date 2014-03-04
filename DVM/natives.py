@@ -450,70 +450,56 @@ def dvm_arr_sub(arr, start, stop):
 ## 
 # Contains references to all
 # the operations.
-#
-# Index | Operation
-# ------| ---------
-#   00  | dvm_Void()
-#   01  | dvm_Bool()
-#   02  | dvm_Int()
-#   03  | dvm_Float()
-#   04  | dvm_String()
-#   05  | dvm_Array()
-#   06  | dvm_noOp()
-#   07  | dvm_isVoid()
-#   08  | dvm_equals()
-#   09  | dvm_notEqual()
-#   10  | dvm_and()
-#   11  | dvm_or()
-#   12  | dvm_xor()
-#   13  | dvm_not()
-#   14  | dvm_add()
-#   15  | dvm_sub()
-#   16  | dvm_mul()
-#   17  | dvm_div()
-#   18  | dvm_floor()
-#   19  | dvm_ceil()
-#   20  | dvm_min()
-#   21  | dvm_max()
-#   22  | dvm_less()
-#   23  | dvm_more()
-#   24  | dvm_less_eq()
-#   25  | dvm_more_eq()
-#   26  | dvm_str_contains()
-#   27  | dvm_str_find()
-#   28  | dvm_str_upper()
-#   29  | dvm_str_lower()
-#   30  | dvm_str_sub()
-#   31  | dvm_str_reverse()
-#   32  | dvm_str_append()
-#   33  | dvm_arr_isEmpty()
-#   34  | dvm_arr_length()
-#   35  | dvm_arr_empty()
-#   36  | dvm_arr_create()
-#   37  | dvm_arr_get()
-#   38  | dvm_arr_set()
-#   39  | dvm_arr_insert()
-#   40  | dvm_arr_replace()
-#   41  | dvm_arr_catenate()
-#   42  | dvm_arr_add_front()
-#   43  | dvm_arr_add_back()
-#   44  | dvm_arr_sub()
-#
 ##
-operations = [ 
-	dvm_Void, dvm_Bool, dvm_Int, dvm_Float, dvm_String, dvm_Array,
+operations = { 
+	'void'        : dvm_Void,
+	'bool'        : dvm_Bool,
+	'int'         : dvm_Int,
+	'float'       : dvm_Float,
+	'string'      : dvm_String,
+	'array'       : dvm_Array,
 
-	dvm_noOp, dvm_isVoid, dvm_equals, dvm_notEqual,
+	'noOp'        : dvm_noOp,
+	'isVoid'      : dvm_isVoid,
+	'equals'      : dvm_equals,
+	'notEq'       : dvm_notEqual,
 
-    dvm_and, dvm_or, dvm_xor, dvm_not,
+	'and'         : dvm_and,
+	'or'          : dvm_or,
+	'xor'         : dvm_xor,
+	'not'         : dvm_not,
 
-    dvm_add, dvm_sub, dvm_mul, dvm_div, dvm_floor, dvm_ceil,
-    dvm_min, dvm_max, dvm_less, dvm_more, dvm_less_eq, dvm_more_eq,
+	'add'         : dvm_add,
+	'sub'         : dvm_sub,
+	'mul'         : dvm_mul,
+	'div'         : dvm_div,
+	'floor'       : dvm_floor,
+	'ceil'        : dvm_ceil,
+	'min'         : dvm_min,
+	'max'         : dvm_max,
+	'less'        : dvm_less,
+	'more'        : dvm_more,
+	'lessEq'      : dvm_less_eq,
+	'moreEq'      : dvm_more_eq,
 
-    dvm_str_contains, dvm_str_find, dvm_str_upper, dvm_str_lower,
-    dvm_str_sub, dvm_str_reverse, dvm_str_append,
-	
-	dvm_arr_isEmpty, dvm_arr_length, dvm_arr_empty, dvm_arr_create,
-	dvm_arr_get, dvm_arr_set, dvm_arr_insert, dvm_arr_replace,
-	dvm_arr_catenate, dvm_arr_add_front, dvm_arr_add_back, dvm_arr_sub 
-]
+	'strContains' : dvm_str_contains,
+	'strFind'     : dvm_str_find,
+	'strUpper'    : dvm_str_upper,
+	'strLower'    : dvm_str_lower,
+	'strSub'      : dvm_str_sub,
+	'strRev'      : dvm_str_reverse,
+	'strApp'      : dvm_str_append,
+
+	'arrEmpty'    : dvm_arr_isEmpty,
+	'arrLen'      : dvm_arr_length,
+	'arrEmpty'    : dvm_arr_empty,
+	'arrCreate'   : dvm_arr_create,
+	'arrGet'      : dvm_arr_get,
+	'arrSet'      : dvm_arr_set,
+	'arrIns'      : dvm_arr_insert,
+	'arrRepl'     : dvm_arr_replace,
+	'arrCat'      : dvm_arr_catenate,
+	'arrFrnt'     : dvm_arr_add_front,
+	'arrBck'      : dvm_arr_add_back,
+	'arrSub'      : dvm_arr_sub 
+}
