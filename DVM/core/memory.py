@@ -38,8 +38,8 @@ import StringIO
 # The Instruction memory stores all of the 
 # instructions in the program.
 #
-# An instruction memory is divided into chuncks.
-# each of these chuncks stores instructions with 
+# An instruction memory is divided into chunks.
+# each of these chunks stores instructions with 
 # certain properties. The exact properties are
 # determined by the outside world.
 ##
@@ -48,12 +48,12 @@ class InstructionMemory(object):
 	##
 	# Initialize the memory.
 	#
-	# \param chuncks
-	#		The amount of chuncks this memory contains.
+	# \param chunks
+	#		The amount of chunks this memory contains.
 	##
-	def __init__(self, chuncks):
+	def __init__(self, chunks):
 		super(InstructionMemory, self).__init__()
-		self.memory = [[] for i in xrange(0, chuncks)]
+		self.memory = [[] for i in xrange(0, chunks)]
 
 	##
 	# Print the contents of the instruction memory.
@@ -80,9 +80,9 @@ class InstructionMemory(object):
 	##
 	# Add an instruction to the memory.
 	##
-	def add(self, inst, chunck):
-		key = (chunck, len(self.memory[chunck]))
-		lst = self.memory[chunck]
+	def add(self, inst, chunk):
+		key = (chunk, len(self.memory[chunk]))
+		lst = self.memory[chunk]
 		lst.append(inst)
 		inst.setKey(key)
 		return key
@@ -121,11 +121,11 @@ def needsMatcher(key): return key[0] is 1
 ## 
 # Add an instruction to the main memory.
 #
-# This function has to determine the chunck
+# This function has to determine the chunk
 # of memory that the instruction will use.
 ##
 def add(inst): 
-	chunck = None
-	if inst.needsMatcher(): chunck = 1
-	else: chunck = 0
-	return memory().add(inst, chunck)
+	chunk = None
+	if inst.needsMatcher(): chunk = 1
+	else: chunk = 0
+	return memory().add(inst, chunk)

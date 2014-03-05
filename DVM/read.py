@@ -39,7 +39,7 @@ import logging
 log = logging.getLogger(__name__)
 log.setLevel(logging.WARNING)
 
-chunck = None
+chunk = None
 
 ## Parse a literal string.
 def evalLit(str):
@@ -97,26 +97,26 @@ instructions = {
 
 ##
 # Parse an instruction declaration.
-# Verify that it ended up in the correct chunck.
+# Verify that it ended up in the correct chunk.
 ##
 def parseInst(arr, stmt):
 	code = arr[1]
 	key = instructions[code](arr)
-	if key != (chunck, int(arr[2])):
+	if key != (chunk, int(arr[2])):
 		log.error("Instruction %s added to memory with incorrect key %s", arr, key)
 	else: log.info("Added instruction with key %s", key)
 
 ##
-# Parse a chunck declaration.
+# Parse a chunk declaration.
 #
-# A chunck declaration has the form:
-# `CHUNCK <idx>`
+# A chunk declaration has the form:
+# `CHUNK <idx>`
 ##
-def parseChunck(arr, stmt):
-	global chunck
-	chunck = int(arr[1])
+def parseChunk(arr, stmt):
+	global chunk
+	chunk = int(arr[1])
 
-	log.info("Starting chunck: %d", chunck)
+	log.info("Starting chunk: %d", chunk)
 
 def parseLit(arr, stmt):
 	inst = int(arr[1])
@@ -126,9 +126,9 @@ def parseLit(arr, stmt):
 	lit = evalLit(lit)
 
 	log.info("Adding Literal: '%s' to c %d i %d p %d", 
-		lit, chunck, inst, port)
+		lit, chunk, inst, port)
 
-	core.addLiteral((chunck, inst), port, lit)
+	core.addLiteral((chunk, inst), port, lit)
 
 ##
 # Parse a link statement.
@@ -156,34 +156,26 @@ def parseLink(arr, stmt):
 
 ## Functions to parse the various statements.
 functions = {
-	'CHUNCK' : parseChunck,
+	'CHUNK' : parseChunk,
 	'INST'   : parseInst,
 	'LINK'   : parseLink,
 	'LITR'   : parseLit
 }
 
-## 
-# Parse a single DIS statement,
-# the statement should not contain
-# any comments.
-##
-def parseStmt(stmt):
-	log.debug("Reading statement: '%s'", stmt)
-	arr = stmt.split()
-	key = arr[0]
-	functions[key](arr, stmt)
+## Parse a single DIS line.
+def parseLine(line):
+	stmt = line.split('$')[0]
+	stmt = stmt.strip()
+	if len(stmt) is not 0:
+		log.debug("Reading statement: '%s'", stmt)
+		arr = stmt.split()
+		key = arr[0]
+		functions[key](arr, stmt)
 
 ## 
 # Parse a dis string
 ##
 def parse(str):
 	for line in str.split('\n'):
-		stmt = line.split('$')[0]
-		if len(stmt) is not 0:
-			parseStmt(stmt)
+		parseLine(line)
 	log.info("Finished parsing, instruction memory: %s", core.memory.memory())
-
-## Read the file at loc and parse it.
-def parseFile(loc):
-	file = open(loc, 'r')
-	parse(file.read())

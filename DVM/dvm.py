@@ -47,6 +47,7 @@ import core
 import read
 import signal
 import argparse
+import fileinput
 import multiprocessing
 
 # --------------- #
@@ -65,7 +66,7 @@ signal.signal(signal.SIGINT, handle_exit)
 # ---------------------- #
 
 argParser = argparse.ArgumentParser(description = "The Dataflow Virtual Machine.")
-argParser.add_argument("path", help = "The path to the DIS file you want to run")
+argParser.add_argument("path", help = "The path to the DIS file you want to run, - to use stdin")
 argParser.add_argument("-i", "--input", action = 'append', help = "A value to pass to the program")
 argParser.add_argument("-c", "--cores", type = int, default = multiprocessing.cpu_count(), help = "The number of cores to use")
 argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
@@ -81,7 +82,10 @@ args.cores = 1
 # ------------ #
 
 log.setup(args.logLevel)
-read.parseFile(args.path)
+
+for line in fileinput.input(args.path):
+	read.parseLine(line)
+
 core.start(args.cores)
 
 if args.input:

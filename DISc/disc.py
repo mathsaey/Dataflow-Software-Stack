@@ -45,22 +45,15 @@ import compiler.dot
 # Command line arguments #
 # ---------------------- #
 
-argParser = argparse.ArgumentParser(description = "The DIS Compiler")
-argParser.add_argument("path", help = "The path to the file you want to compile.")
-
-argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
-argParser.add_argument("-o", "--output", help = "The location of the output file")
-argParser.add_argument("-f", "--frontEnd", type = str, default = 'IF1', help = "The frontEnd to use.")
-argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
-
-args = argParser.parse_args()
-
-args.logLevel = 0
-args.path = "../examples/simple.dis"
-args.cores = 1
-args.input = ["1","2"]
-
-
+# argParser = argparse.ArgumentParser(description = "The DIS Compiler")
+# argParser.add_argument("path", help = "The path to the file you want to compile.")
+# 
+# argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
+# argParser.add_argument("-o", "--output", help = "The location of the output file")
+# argParser.add_argument("-f", "--frontEnd", type = str, default = 'IF1', help = "The frontEnd to use.")
+# argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
+# 
+# args = argParser.parse_args()
 
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"

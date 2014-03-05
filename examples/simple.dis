@@ -2,7 +2,7 @@ $ simple.dis
 $ Mathijs Saey
 $ A simple DIS Example
 
-CHUNCK 0
+CHUNK 0
 $ Instructions without a matcher
 
 $ Program entry and exit point
@@ -27,7 +27,7 @@ LINK 0 4 0 1 0 0
 LINK 0 4 1 1 0 1
 LINK 0 4 2 1 1 1 
 
-CHUNCK 1
+CHUNK 1
 $ Sum operations with 2 inputs
 INST OP 0 add 2
 INST OP 1 add 2

@@ -37,6 +37,9 @@ import traverse
 import StringIO
 import subprocess
 
+import logging
+log = logging.getLogger(__name__)
+
 # --------- #
 # Subgraphs #
 # --------- #
@@ -238,4 +241,9 @@ def runDot(
 	if output: output = "-o" + output
 	else: output = "-O"
 
-	subprocess.check_call([dotpath, format, path, output] + other)
+	try:
+		subprocess.check_call([dotpath, format, path, output] + other)
+	except subprocess.CalledProcessError, e:
+		log.error("Dot returned with exit code %d", e.returncode)
+	except OSError:
+		log.error("Dot executable not found")

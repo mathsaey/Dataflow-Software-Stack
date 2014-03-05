@@ -17,7 +17,7 @@ The instructions that don't need to be matched are located in chunk 0, while tho
 # DIS file layout {#Layout}
 
 A DIS file contains 4 types of statements, seperated by newlines.
-	* [Chunck declarations](#Chunks)
+	* [Chunk declarations](#Chunks)
 	* [Instruction definitions](#Instructions)
 	* [Links between instructions](#Links)
     * [Literals of instructions](#Literals)
@@ -30,7 +30,7 @@ The following sections detail the exact nature of the other statements.
 
 Like the instruction memory, a DIS file is divided in chunks. A chunk simply contains all the instructions present in this chunk. A new chunk is started with the following statement:
 
-    CHUNCK <idx>
+    CHUNK <idx>
 
 Where chunk is a keyword while idx is the index of the chunk. A chunk ends when a new chunk begins or when the file ends. It is not possible to nest chunks.
 
@@ -136,7 +136,7 @@ A literal is defined with the following statement:
 
     LITR <instruction> <port> <value>
 
-Where instruction is the index of an instruction, which is located in the current chunck. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way.
+Where instruction is the index of an instruction, which is located in the current chunk. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way.
 
     LITR 0 1 "A literal string"
 
