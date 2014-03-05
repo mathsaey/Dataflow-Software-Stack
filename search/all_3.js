@@ -3,7 +3,7 @@ var searchData=
   ['callnode',['CallNode',['../class_i_g_r_1_1node_1_1_call_node.html',1,'IGR::node']]],
   ['changecontext',['changeContext',['../classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4',1,'core::tokenCreator::TokenCreator']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
-  ['chunck',['chunck',['../namespaceread.html#a80817caed15c340dec99fc3f3f491383',1,'read']]],
+  ['chunk',['chunk',['../namespaceread.html#aa64d6b999bc20e4cd80f35ece2aee2fe',1,'read']]],
   ['compiler',['compiler',['../namespacecompiler.html',1,'']]],
   ['compound_2epy',['compound.py',['../compound_8py.html',1,'']]],
   ['compoundfooter',['compoundFooter',['../namespacecompiler_1_1dot.html#a6ece59f004db7752481092f330c0af23',1,'compiler::dot']]],

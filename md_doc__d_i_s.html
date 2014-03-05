@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">2468cad</span>
+   &#160;<span id="projectnumber">be4422f</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -107,7 +107,7 @@ The Instruction Memory.</h2>
 DIS file layout</h1>
 <p>A DIS file contains 4 types of statements, seperated by newlines.</p>
 <ul>
-<li><a href="#Chunks">Chunck declarations</a></li>
+<li><a href="#Chunks">Chunk declarations</a></li>
 <li><a href="#Instructions">Instruction definitions</a></li>
 <li><a href="#Links">Links between instructions</a></li>
 <li><a href="#Literals">Literals of instructions</a></li>
@@ -117,7 +117,7 @@ DIS file layout</h1>
 <h2><a class="anchor" id="Chunks"></a>
 Chunks</h2>
 <p>Like the instruction memory, a DIS file is divided in chunks. A chunk simply contains all the instructions present in this chunk. A new chunk is started with the following statement: </p>
-<pre class="fragment">CHUNCK &lt;idx&gt;
+<pre class="fragment">CHUNK &lt;idx&gt;
 </pre><p>Where chunk is a keyword while idx is the index of the chunk. A chunk ends when a new chunk begins or when the file ends. It is not possible to nest chunks.</p>
 <h2><a class="anchor" id="Links"></a>
 Links</h2>
@@ -180,7 +180,7 @@ Literals</h2>
 <p>Some instructions can take some arguments that are known in advance. Examples are additions where one of the elements is already known or function calls with a few predefined arguments. It's important to know that every instruction needs at least one unknown attribute, an attribute which is not a literal. Any instruction that only accepts literals should be precomputed.</p>
 <p>A literal is defined with the following statement: </p>
 <pre class="fragment">LITR &lt;instruction&gt; &lt;port&gt; &lt;value&gt;
-</pre><p>Where instruction is the index of an instruction, which is located in the current chunck. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way. </p>
+</pre><p>Where instruction is the index of an instruction, which is located in the current chunk. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way. </p>
 <pre class="fragment">LITR 0 1 "A literal string"
 </pre><p>Literals can only be added to operation and context change instructions. The following table defines the various types that can be defined as literals.</p>
 <table class="doxtable">
@@ -209,7 +209,7 @@ An Example</h1>
 <div class="line">$ Mathijs Saey</div>
 <div class="line">$ A simple DIS Example</div>
 <div class="line"></div>
-<div class="line">CHUNCK 0</div>
+<div class="line">CHUNK 0</div>
 <div class="line">$ Instructions without a matcher</div>
 <div class="line"></div>
 <div class="line">$ Program entry and exit point</div>
@@ -234,7 +234,7 @@ An Example</h1>
 <div class="line">LINK 0 4 1 1 0 1</div>
 <div class="line">LINK 0 4 2 1 1 1 </div>
 <div class="line"></div>
-<div class="line">CHUNCK 1</div>
+<div class="line">CHUNK 1</div>
 <div class="line">$ Sum <a class="code" href="namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5">operations</a> with 2 inputs</div>
 <div class="line">INST OP 0 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
 <div class="line">INST OP 1 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
@@ -344,7 +344,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 4 2014 21:06:22 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 5 2014 16:41:56 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
