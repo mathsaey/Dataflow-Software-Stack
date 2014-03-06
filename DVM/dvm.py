@@ -81,18 +81,30 @@ args.cores = 1
 # Program Flow #
 # ------------ #
 
+# Set up logging.
 log.setup(args.logLevel)
 
+# Parse the input files/stdin.
 for line in fileinput.input(args.path):
 	read.parseLine(line)
 
+# Abort if we need extra input while 
+# stdin is already bound to a pipe.
+if args.path == "-":
+	if core.getIn() != len(args.input):
+		print "Missing input, aborting..."
+		sys.exit(2)
+
+# Start the cores.
 core.start(args.cores)
 
+# Add command line arguments to runtime.
 if args.input:
 	for data in args.input:
 		data = read.evalLit(data)
 		core.addData(data)
 
+# Collect any data that we still need.
 while not core.hasIn():
 	data = raw_input("Please enter your data for port {}: ".format(core.getPort()))
 	data = read.evalLit(data)
