@@ -1,7 +1,7 @@
 .\" DVM Man Page
 .\" Copyright (c) 2013, 2014 Mathijs Saey
 .\" All Rights Reserved
-.TH DVM 1 "4 March 2014" VUB dvm
+.TH DVM 1 "6 March 2014" VUB dvm
 
 .SH NAME
 DVM \-\- The Dataflow Virtual Machine
@@ -11,6 +11,8 @@ dvm [-c cores][-i input][-ll logLevel] path
 
 .SH DESCRIPTION
 Runs the DIS file specified by path on the dataflow based virtual machine. The VM will accept input until it's main function has received all of it's data. And terminate once the main function received enough results.
+
+If - is provided as path, dvm will read the DIS file from stdin. In this case, all the inputs of the main function should be provided through the command line.
 
 .SH OPTIONS
 
