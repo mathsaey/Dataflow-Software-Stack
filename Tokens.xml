@@ -239,6 +239,50 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>flushBuffer</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>ad05d7f0addb69a530c70da3d2134e8c0</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>startChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>a4095f0f2e8c582f0105ba527c2e7de8e</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>buffer</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>adc8c1e8494ad2081277e8c04c56a296e</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>ac6078ee689cccc0a5ccae2f8fa51c9a5</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>loc</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -257,6 +301,17 @@
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
     <Anchor>aa3f94e445b385305aec08fcdb27d4838</Anchor>
+    <DeclaredIn>compound.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::compound</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
+    <Anchor>abaa9da02d033230b48a6264a16136aa4</Anchor>
     <DeclaredIn>compound.py</DeclaredIn>
   </Token>
   <Token>
@@ -535,6 +590,17 @@
     <Path>namespacefront_end_1_1_i_f1_1_1environment.html</Path>
     <Anchor>ae2e7f9e7868d0f79239cbf22ff2fe837</Anchor>
     <Abstract>Exit a compound node. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1environment.html</Path>
+    <Anchor>aba754eedd62e71b9a7fab064b9b5bd25</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -980,6 +1046,17 @@
     <Path>namespacefront_end_1_1_i_f1_1_1type.html</Path>
     <Anchor>ab4efb09663f0b4c2caf57fb4c0469a2d</Anchor>
     <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::Sisal</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_sisal.html</Path>
+    <Anchor>a07d185fe199f22e2471104b3d2c81189</Anchor>
+    <DeclaredIn>Sisal.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1635,6 +1712,30 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>ab12ff8b46e7c77add9ddc198e2a6fbb5</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseOutput</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>ab8e096f66f5f0da001430b9d3c397895</Anchor>
+    <Abstract>Parse the result that DVM returns. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a957ece81194e852aa567436ede5e61a4</Anchor>
+    <Abstract>Run DVM on a dis string, with inputs, and return the results. </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -4982,6 +5083,121 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Abstract>dis writer </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>flushBuffer</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>ad05d7f0addb69a530c70da3d2134e8c0</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>startChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>a4095f0f2e8c582f0105ba527c2e7de8e</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>buffer</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>adc8c1e8494ad2081277e8c04c56a296e</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>ac6078ee689cccc0a5ccae2f8fa51c9a5</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis::DISLink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>dis.DISLink</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s_link.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>dis.DISLink</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s_link.html</Path>
+    <Anchor>a952e36f3ad81b1b5909ae8f53ef441b9</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis::DIS</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s.html</Path>
+    <Anchor>a27610d3e872288629a52c805752365b7</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>add</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s.html</Path>
+    <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>memory</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s.html</Path>
+    <Anchor>ad1f4540cecd1520befe3581150219cad</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>DISc</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -5030,6 +5246,30 @@
     <Path>namespacedvm.html</Path>
     <Anchor>a2e32617d77431cc90e14996cd05d3bcd</Anchor>
     <Abstract>Handle an exit signal. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseOutput</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>ab8e096f66f5f0da001430b9d3c397895</Anchor>
+    <Abstract>Parse the result that DVM returns. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespacedvm.html</Path>
+    <Anchor>a957ece81194e852aa567436ede5e61a4</Anchor>
+    <Abstract>Run DVM on a dis string, with inputs, and return the results. </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -5229,6 +5469,17 @@
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
     <Anchor>aa3f94e445b385305aec08fcdb27d4838</Anchor>
+    <DeclaredIn>compound.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::compound</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
+    <Anchor>abaa9da02d033230b48a6264a16136aa4</Anchor>
     <DeclaredIn>compound.py</DeclaredIn>
   </Token>
   <Token>
@@ -5525,6 +5776,17 @@
     <Path>namespacefront_end_1_1_i_f1_1_1environment.html</Path>
     <Anchor>ae2e7f9e7868d0f79239cbf22ff2fe837</Anchor>
     <Abstract>Exit a compound node. </Abstract>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::environment</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1environment.html</Path>
+    <Anchor>aba754eedd62e71b9a7fab064b9b5bd25</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -6413,6 +6675,26 @@
     <Path>classfront_end_1_1_i_f1_1_1type_1_1___type_pool.html</Path>
     <Anchor>a4d5a0129db96272a7f275276bcacf887</Anchor>
     <DeclaredIn>type.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>frontEnd::Sisal</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>frontEnd::Sisal</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_sisal.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::Sisal</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_sisal.html</Path>
+    <Anchor>a07d185fe199f22e2471104b3d2c81189</Anchor>
+    <DeclaredIn>Sisal.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10878,5 +11160,15 @@
     <Anchor>a08937222a213e2af5ca289687b490b71</Anchor>
     <Abstract>Functions to parse the various statements. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Sisal</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>Sisal</Scope>
+    </TokenIdentifier>
+    <Path>namespace_sisal.html</Path>
+    <Abstract>DISc Sisal FrontEnd. </Abstract>
   </Token>
 </Tokens>

@@ -8,6 +8,7 @@ var searchData=
   ['restorecontext',['restoreContext',['../classcore_1_1token_creator_1_1_token_creator.html#ae9ee1f333586314900f7c802ca984cf6',1,'core::tokenCreator::TokenCreator']]],
   ['restoremap',['restoreMap',['../classcore_1_1token_creator_1_1_token_creator.html#abd6fde0a66238ec75a2c929acd2eee66',1,'core::tokenCreator::TokenCreator']]],
   ['retnsink',['retnSink',['../classcore_1_1instruction_1_1_context_change.html#a6213f85f71514131906b37e1201d1976',1,'core::instruction::ContextChange']]],
+  ['run',['run',['../namespacedvm.html#a957ece81194e852aa567436ede5e61a4',1,'dvm']]],
   ['rundot',['runDot',['../namespacecompiler_1_1dot.html#ab8d86a047857d932d4a46bced06e74ba',1,'compiler::dot']]],
   ['runtime_2epy',['runtime.py',['../runtime_8py.html',1,'']]]
 ];
