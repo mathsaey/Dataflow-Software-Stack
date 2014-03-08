@@ -63,7 +63,7 @@ def parseOutput(str):
 # \return
 #		The output returned by dvm, as a python object.
 ##
-def runDVM(dvmPath = "dvm", inputs = [], dis = None, cores = 1, logLevel = 50):
+def run(dvmPath = "dvm", inputs = [], dis = None, cores = 1, logLevel = 50):
 	args = [dvmPath, "-", "-c", str(cores), "-ll", str(logLevel)]
 
 	for e in inputs:

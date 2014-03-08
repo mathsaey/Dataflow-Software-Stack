@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# main.py
+# disc.py
 # Mathijs Saey
 # DISc
 
