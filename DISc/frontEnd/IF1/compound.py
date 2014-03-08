@@ -33,7 +33,9 @@
 ##
 
 import IGR.node
-import tools
+
+import logging
+log = logging.getLogger(__name__)
 
 ## Various IGR compound nodes.
 __COMPOUNDS__ = {
@@ -55,6 +57,6 @@ def getCompound(label, ctr = "?"):
 	try:
 		constructor = __COMPOUNDS__[key]
 	except KeyError:
-		tools.error("Cannot find compound node with label: " + label, ctr)
+		log.error("Line %d: Cannot find compound node with label: %s", ctr, label)
 	else: 
 		return constructor

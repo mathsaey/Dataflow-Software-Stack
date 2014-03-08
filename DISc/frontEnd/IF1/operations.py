@@ -142,7 +142,7 @@ def getFunction(label, ctr = "?"):
 	try:
 		func = _functions[key]
 	except KeyError:
-		log.error("Line %d, Undefined function code encountered: %d, using NoOp", ctr, label)
+		log.error("Line %s, Undefined function code encountered: %d, using NoOp", ctr, label)
 		return 'noOp'
 	else: 
 		return func

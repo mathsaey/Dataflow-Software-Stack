@@ -33,7 +33,8 @@
 # and the scopes they are in. 
 ##
 
-import tools
+import logging
+log = logging.getLogger(__name__)
 
 # ----- #
 # Frame #
@@ -76,7 +77,7 @@ class Scope(object):
 		else:
 			# This situation can occur in IF1 (might be a bug)
 			# so fill the list with none until the length is ok.
-			tools.warning("Non-sequential node label added!")
+			log.warning("Non-sequential node label added!")
 			padding = [None for i in xrange(0, label - len(self.nodes))]
 			self.nodes += padding
 			self.addNode(label, node)
