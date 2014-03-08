@@ -1,8 +1,0 @@
-<map id="dvm.instruction.AbstractInstruction" name="dvm.instruction.AbstractInstruction">
-<area shape="rect" id="node2" href="$classdvm_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="4,195,211,309"/>
-<area shape="rect" id="node3" href="$classdvm_1_1instruction_1_1_context_restore.html" title="Represents the restoration of context. " alt="" coords="236,215,443,289"/>
-<area shape="rect" id="node4" href="$classdvm_1_1instruction_1_1_static_instruction.html" title="A static instruction will always send it&#39;s output to the same instructions. " alt="" coords="467,202,676,302"/>
-<area shape="rect" id="node7" href="$classdvm_1_1instruction_1_1_stop_instruction.html" title="Represents the end of the program. " alt="" coords="701,215,904,289"/>
-<area shape="rect" id="node5" href="$classdvm_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="395,358,567,498"/>
-<area shape="rect" id="node6" href="$classdvm_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="592,391,732,465"/>
-</map>

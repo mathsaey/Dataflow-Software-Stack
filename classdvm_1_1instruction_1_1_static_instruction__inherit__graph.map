@@ -1,5 +1,0 @@
-<map id="dvm.instruction.StaticInstruction" name="dvm.instruction.StaticInstruction">
-<area shape="rect" id="node3" href="$classdvm_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="4,345,176,485"/>
-<area shape="rect" id="node4" href="$classdvm_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="202,378,341,451"/>
-<area shape="rect" id="node2" href="$classdvm_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="100,6,263,146"/>
-</map>

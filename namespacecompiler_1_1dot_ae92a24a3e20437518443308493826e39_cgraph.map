@@ -1,7 +1,0 @@
-<map id="compiler.dot.nodeLabel" name="compiler.dot.nodeLabel">
-<area shape="rect" id="node2" href="$namespacecompiler_1_1dot.html#a7e29902b97989ad0da9f3d3c4055a0c4" title="Identifier of the node. " alt="" coords="214,5,392,30"/>
-<area shape="rect" id="node3" href="$namespacecompiler_1_1dot.html#a6df36fb8b1f135d7e646440e6adf39d1" title="Get the portlist for the inputs of a node. " alt="" coords="229,54,376,79"/>
-<area shape="rect" id="node6" href="$namespacecompiler_1_1dot.html#a6a1175fd47928bf210540e06854f884d" title="Get the portlist for the outputs of a node. " alt="" coords="225,103,380,129"/>
-<area shape="rect" id="node4" href="$namespacecompiler_1_1dot.html#acaa819ccaaa232d873ce172287bd857a" title="String representation of a port list. " alt="" coords="441,79,567,105"/>
-<area shape="rect" id="node5" href="$namespacecompiler_1_1dot.html#a2b165c8b0265f5f5d824b0bfc595588a" title="Get a representation for a port. " alt="" coords="616,79,771,105"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classigr_1_1node_1_1_node.html" title="Standard node. " alt="" coords="5,103,110,129"/>
-<area shape="rect" id="node2" href="$classigr_1_1node_1_1_call_node.html" title="Call node. " alt="" coords="192,5,320,30"/>
-<area shape="rect" id="node3" href="$classigr_1_1node_1_1_compound_node.html" title="Compound node. " alt="" coords="171,54,341,79"/>
-<area shape="rect" id="node5" href="$classigr_1_1node_1_1_operation_node.html" title="Operation node. " alt="" coords="175,103,337,129"/>
-<area shape="rect" id="node6" href="$classigr_1_1node_1_1_sub_graph_entry_node.html" title="Entry point of a subgraph. " alt="" coords="158,153,354,178"/>
-<area shape="rect" id="node7" href="$classigr_1_1node_1_1_sub_graph_exit_node.html" title="Exit point of a subgraph. " alt="" coords="162,202,350,227"/>
-<area shape="rect" id="node4" href="$classigr_1_1node_1_1_forall_c_node.html" title="igr.node.ForallCNode" alt="" coords="404,54,551,79"/>
-</map>

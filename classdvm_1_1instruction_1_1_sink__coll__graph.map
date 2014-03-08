@@ -1,4 +1,0 @@
-<map id="dvm.instruction.Sink" name="dvm.instruction.Sink">
-<area shape="rect" id="node2" href="$classdvm_1_1instruction_1_1_static_instruction.html" title="A static instruction will always send it&#39;s output to the same instructions. " alt="" coords="5,195,213,295"/>
-<area shape="rect" id="node3" href="$classdvm_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="28,6,191,146"/>
-</map>

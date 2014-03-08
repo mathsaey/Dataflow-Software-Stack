@@ -1,4 +1,0 @@
-<map id="dvm.runtime.Core.start" name="dvm.runtime.Core.start">
-<area shape="rect" id="node2" href="$namespacelog.html#a19a02b14ef0cf914f9b37cc089b271d4" title="Update the lock, this should happen after creating a new process. " alt="" coords="212,5,300,30"/>
-<area shape="rect" id="node3" href="$namespacelog.html#a8e3ea60d7c7d7695350241b29425b4f9" title="Log an information message. " alt="" coords="224,54,288,79"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classdvm_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="6,73,170,111"/>
-<area shape="rect" id="node2" href="$classdvm_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="220,5,428,30"/>
-<area shape="rect" id="node3" href="$classdvm_1_1instruction_1_1_context_restore.html" title="Represents the restoration of context. " alt="" coords="220,54,428,79"/>
-<area shape="rect" id="node4" href="$classdvm_1_1instruction_1_1_static_instruction.html" title="A static instruction will always send it&#39;s output to the same instructions. " alt="" coords="219,103,429,129"/>
-<area shape="rect" id="node7" href="$classdvm_1_1instruction_1_1_stop_instruction.html" title="Represents the end of the program. " alt="" coords="222,153,426,178"/>
-<area shape="rect" id="node5" href="$classdvm_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="477,69,651,107"/>
-<area shape="rect" id="node6" href="$classdvm_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="494,131,634,157"/>
-</map>
