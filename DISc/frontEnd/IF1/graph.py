@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser.graph
+# \package frontEnd.IF1.graph
 # \brief Node parser
 # 
 # This module allows us to parse all of the 

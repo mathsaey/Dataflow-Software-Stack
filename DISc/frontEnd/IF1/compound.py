@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser.compound
+# \package frontEnd.IF1.compound
 # \brief Compound node reference
 # 
 # This module maps the IF1 compound nodes to 

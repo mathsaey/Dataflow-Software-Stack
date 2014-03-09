@@ -5,7 +5,7 @@
 			"path": "./",
 			"name":"Root",
             "folder_exclude_patterns": 
-                ["DVM", "IDIS", "docpages", "obj", "documentation", "documentationPy",
+                ["DVM", "DISc", "docpages", "obj", "documentation", "documentationPy",
                 "DataFlow Virtual Machine.xcodeproj", "prototypes"],
             "file_exclude_patterns":["DVM"]
         },{

@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dis
+# \package backEnd.DVM.dis
 # \brief dis writer
 #
 # This module contains an API that allows us to write

@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package backend
+# \package backEnd
 # \brief DISc backend Selector
 # 
 # This module serves as an interface to any backend that the user may choose.

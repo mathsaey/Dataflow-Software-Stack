@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package dvm
+# \package backEnd.DVM.dvm
 # \brief dvm interface
 #
 # This module provides a few convenient shorthands

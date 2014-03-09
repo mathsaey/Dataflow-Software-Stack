@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser.edge
+# \package frontEnd.IF1.edge
 # \brief Parse edges and literalss
 # 
 # This module is responsible for parsing 

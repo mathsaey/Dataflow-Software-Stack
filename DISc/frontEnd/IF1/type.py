@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser.type
+# \package frontEnd.IF1.type
 # \brief Type parser
 # 
 # Discover IF1 types.

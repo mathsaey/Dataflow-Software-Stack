@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package IF1
+# \package frontEnd.IF1
 # \author Mathijs Saey
 # 
 # \brief DISc IF1 Parser.

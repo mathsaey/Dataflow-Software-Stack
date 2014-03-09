@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package frontend
+# \package frontEnd
 # \brief DISc Frontend Selector
 # 
 # This module serves as an interface to any frontend that the user may choose.

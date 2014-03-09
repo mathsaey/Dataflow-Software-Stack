@@ -29,7 +29,7 @@ import tempfile
 import IF1
 
 ##
-# \package Sisal
+# \package frontEnd.Sisal
 # \author Mathijs Saey
 # 
 # \brief DISc Sisal FrontEnd.

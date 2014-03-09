@@ -27,7 +27,7 @@
 # THE SOFTWARE.
 
 ##
-# \package DISc
+# \package disc
 # \brief DISc Main file
 #
 # This module contains the entry point for DISc. It contains the

@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package traversals.literals
+# \package backEnd.DVM.literals
 # \brief IGR Literal removal
 # 
 # This module defines a few traversals

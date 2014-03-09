@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package if1parser.environment
+# \package frontEnd.IF1.environment
 # \brief Node lookup and scoping rules.
 # 
 # This module contains the "state" of the parser.
