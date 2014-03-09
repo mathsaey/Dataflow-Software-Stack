@@ -27,7 +27,6 @@ var searchData=
   ['sorting_20algorithm_20in_20sisal_2fif1',['Sorting algorithm in Sisal/IF1',['../_sort.html',1,'']]],
   ['source',['source',['../class_i_g_r_1_1port_1_1_input_port.html#a32060995859836d7c1575aa65c280ad6',1,'IGR::port::InputPort']]],
   ['start',['start',['../classcore_1_1runtime_1_1_core.html#ad1c6da697790371c9dbd223aab9690bc',1,'core.runtime.Core.start()'],['../namespacecore.html#ad86476e99dd74e173d5949a6c486a03b',1,'core.start()'],['../namespacecore_1_1runtime.html#a7b2f8d99c507dcb53e31bf8296b8bd69',1,'core.runtime.start()']]],
-  ['startchunk',['startChunk',['../namespacedis.html#a4095f0f2e8c582f0105ba527c2e7de8e',1,'dis']]],
   ['staticinstruction',['StaticInstruction',['../classcore_1_1instruction_1_1_static_instruction.html',1,'core::instruction']]],
   ['stop',['stop',['../classcore_1_1runtime_1_1_core.html#a8fac04766062ea999c54c68f974badfa',1,'core::runtime::Core']]],
   ['stopinstruction',['StopInstruction',['../classcore_1_1instruction_1_1_stop_instruction.html',1,'core::instruction']]],

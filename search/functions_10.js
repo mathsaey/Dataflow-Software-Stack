@@ -13,7 +13,6 @@ var searchData=
   ['simpletoken',['simpleToken',['../classcore_1_1token_creator_1_1_token_creator.html#a17cafd58974a9fdd79834817a012c602',1,'core::tokenCreator::TokenCreator']]],
   ['skipline',['skipLine',['../namespacefront_end_1_1_i_f1.html#a6298bf62d1e5ea5855c45dda1c48b3c2',1,'frontEnd::IF1']]],
   ['start',['start',['../classcore_1_1runtime_1_1_core.html#ad1c6da697790371c9dbd223aab9690bc',1,'core.runtime.Core.start()'],['../namespacecore.html#ad86476e99dd74e173d5949a6c486a03b',1,'core.start()'],['../namespacecore_1_1runtime.html#a7b2f8d99c507dcb53e31bf8296b8bd69',1,'core.runtime.start()']]],
-  ['startchunk',['startChunk',['../namespacedis.html#a4095f0f2e8c582f0105ba527c2e7de8e',1,'dis']]],
   ['stop',['stop',['../classcore_1_1runtime_1_1_core.html#a8fac04766062ea999c54c68f974badfa',1,'core::runtime::Core']]],
   ['stoptoken',['stopToken',['../classcore_1_1token_creator_1_1_token_creator.html#a7ddc78b04b447b0102525e13786c2d70',1,'core::tokenCreator::TokenCreator']]],
   ['subgraphfooter',['subGraphFooter',['../namespacecompiler_1_1dot.html#a1f5178873440863fffb6ae47c7202667',1,'compiler::dot']]],

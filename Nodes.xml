@@ -1199,17 +1199,6 @@
             <Path>namespacedis.html</Path>
             <Subnodes>
              <Node>
-              <Name>DISLink</Name>
-              <Path>classdis_1_1_d_i_s_link.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>__init__</Name>
-                <Path>classdis_1_1_d_i_s_link.html</Path>
-                <Anchor>a952e36f3ad81b1b5909ae8f53ef441b9</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
               <Name>DIS</Name>
               <Path>classdis_1_1_d_i_s.html</Path>
               <Subnodes>
@@ -1219,9 +1208,19 @@
                 <Anchor>a27610d3e872288629a52c805752365b7</Anchor>
                </Node>
                <Node>
+                <Name>addPredefined</Name>
+                <Path>classdis_1_1_d_i_s.html</Path>
+                <Anchor>ab885b5614aecfd5e583edbc5d92869a4</Anchor>
+               </Node>
+               <Node>
                 <Name>add</Name>
                 <Path>classdis_1_1_d_i_s.html</Path>
                 <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
+               </Node>
+               <Node>
+                <Name>__repr__</Name>
+                <Path>classdis_1_1_d_i_s.html</Path>
+                <Anchor>a72806dbf5289ae979eba0ee704d72c7e</Anchor>
                </Node>
                <Node>
                 <Name>memory</Name>
@@ -1619,6 +1618,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -1657,6 +1666,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1705,6 +1719,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getOutputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                   <Anchor>a388eaacd1a1b23b7acdb5374a82eb877</Anchor>
@@ -1738,6 +1762,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1781,6 +1810,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -1814,6 +1853,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1850,6 +1894,16 @@
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                   <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
                  </Node>
                  <Node>
                   <Name>getInputPort</Name>
@@ -1895,6 +1949,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1943,6 +2002,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -1981,6 +2050,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2024,6 +2098,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2062,6 +2146,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2100,6 +2189,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2138,6 +2237,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2176,6 +2280,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2214,6 +2328,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2252,6 +2371,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2290,6 +2419,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2328,6 +2462,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2366,6 +2510,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2404,6 +2553,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2442,6 +2601,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2480,6 +2644,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2518,6 +2692,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2556,6 +2735,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2594,6 +2783,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2632,6 +2826,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2670,6 +2874,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2708,6 +2917,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2746,6 +2965,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2784,6 +3008,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2822,6 +3056,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2860,6 +3099,16 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
+                  <Name>bind</Name>
+                  <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
+                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
+                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2898,6 +3147,11 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dis</Name>
+                  <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
+                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -3250,10 +3504,6 @@
              <Node>
               <Name>dis.DIS</Name>
               <Path>classdis_1_1_d_i_s.html</Path>
-             </Node>
-             <Node>
-              <Name>dis.DISLink</Name>
-              <Path>classdis_1_1_d_i_s_link.html</Path>
              </Node>
              <Node>
               <Name>frontEnd.IF1.environment.CompoundScope</Name>
@@ -4571,6 +4821,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -4609,6 +4869,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -4657,6 +4922,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getOutputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                     <Anchor>a388eaacd1a1b23b7acdb5374a82eb877</Anchor>
@@ -4690,6 +4965,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -4733,6 +5013,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -4766,6 +5056,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -4802,6 +5097,16 @@
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                     <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputPort</Name>
@@ -4847,6 +5152,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -4895,6 +5205,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -4933,6 +5253,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -4976,6 +5301,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5014,6 +5349,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5052,6 +5392,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5090,6 +5440,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5128,6 +5483,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5166,6 +5531,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5204,6 +5574,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5242,6 +5622,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5280,6 +5665,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5318,6 +5713,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5356,6 +5756,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5394,6 +5804,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5432,6 +5847,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5470,6 +5895,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5508,6 +5938,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5546,6 +5986,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5584,6 +6029,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5622,6 +6077,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5660,6 +6120,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5698,6 +6168,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5736,6 +6211,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5774,6 +6259,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5812,6 +6302,16 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
+                    <Name>bind</Name>
+                    <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
+                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
+                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5850,6 +6350,11 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>dis</Name>
+                    <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
+                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -6098,17 +6603,6 @@
               <Path>dis_8py.html</Path>
               <Subnodes>
                <Node>
-                <Name>DISLink</Name>
-                <Path>classdis_1_1_d_i_s_link.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__init__</Name>
-                  <Path>classdis_1_1_d_i_s_link.html</Path>
-                  <Anchor>a952e36f3ad81b1b5909ae8f53ef441b9</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
                 <Name>DIS</Name>
                 <Path>classdis_1_1_d_i_s.html</Path>
                 <Subnodes>
@@ -6118,9 +6612,19 @@
                   <Anchor>a27610d3e872288629a52c805752365b7</Anchor>
                  </Node>
                  <Node>
+                  <Name>addPredefined</Name>
+                  <Path>classdis_1_1_d_i_s.html</Path>
+                  <Anchor>ab885b5614aecfd5e583edbc5d92869a4</Anchor>
+                 </Node>
+                 <Node>
                   <Name>add</Name>
                   <Path>classdis_1_1_d_i_s.html</Path>
                   <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__repr__</Name>
+                  <Path>classdis_1_1_d_i_s.html</Path>
+                  <Anchor>a72806dbf5289ae979eba0ee704d72c7e</Anchor>
                  </Node>
                  <Node>
                   <Name>memory</Name>
@@ -6130,24 +6634,29 @@
                 </Subnodes>
                </Node>
                <Node>
-                <Name>flushBuffer</Name>
+                <Name>createLink</Name>
                 <Path>dis_8py.html</Path>
-                <Anchor>ad05d7f0addb69a530c70da3d2134e8c0</Anchor>
+                <Anchor>a8754982922e5d2d86d7de97e2c5ef56c</Anchor>
                </Node>
                <Node>
-                <Name>startChunk</Name>
+                <Name>createLiteral</Name>
                 <Path>dis_8py.html</Path>
-                <Anchor>a4095f0f2e8c582f0105ba527c2e7de8e</Anchor>
+                <Anchor>a53ee9ae90563c6d185c7d09e547878a2</Anchor>
                </Node>
                <Node>
-                <Name>buffer</Name>
+                <Name>createInstruction</Name>
                 <Path>dis_8py.html</Path>
-                <Anchor>adc8c1e8494ad2081277e8c04c56a296e</Anchor>
+                <Anchor>a9c74faf13d88f8573a78c80b87a8c4d8</Anchor>
                </Node>
                <Node>
-                <Name>chunk</Name>
+                <Name>createChunk</Name>
                 <Path>dis_8py.html</Path>
-                <Anchor>ac6078ee689cccc0a5ccae2f8fa51c9a5</Anchor>
+                <Anchor>a04b15ed481cfac10622df65dcf61c066</Anchor>
+               </Node>
+               <Node>
+                <Name>DVM_CHUNKS</Name>
+                <Path>dis_8py.html</Path>
+                <Anchor>a55ce6d7a84e53919269f6c654a796363</Anchor>
                </Node>
               </Subnodes>
              </Node>

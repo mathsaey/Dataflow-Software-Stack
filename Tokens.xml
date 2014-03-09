@@ -239,46 +239,57 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>flushBuffer</Name>
+      <Name>createLink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>dis</Scope>
     </TokenIdentifier>
     <Path>namespacedis.html</Path>
-    <Anchor>ad05d7f0addb69a530c70da3d2134e8c0</Anchor>
+    <Anchor>a8754982922e5d2d86d7de97e2c5ef56c</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>startChunk</Name>
+      <Name>createLiteral</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>dis</Scope>
     </TokenIdentifier>
     <Path>namespacedis.html</Path>
-    <Anchor>a4095f0f2e8c582f0105ba527c2e7de8e</Anchor>
+    <Anchor>a53ee9ae90563c6d185c7d09e547878a2</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>buffer</Name>
+      <Name>createInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>a9c74faf13d88f8573a78c80b87a8c4d8</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>a04b15ed481cfac10622df65dcf61c066</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>DVM_CHUNKS</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>dis</Scope>
     </TokenIdentifier>
     <Path>namespacedis.html</Path>
-    <Anchor>adc8c1e8494ad2081277e8c04c56a296e</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>chunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>ac6078ee689cccc0a5ccae2f8fa51c9a5</Anchor>
+    <Anchor>a55ce6d7a84e53919269f6c654a796363</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -5093,66 +5104,57 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>flushBuffer</Name>
+      <Name>createLink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>dis</Scope>
     </TokenIdentifier>
     <Path>namespacedis.html</Path>
-    <Anchor>ad05d7f0addb69a530c70da3d2134e8c0</Anchor>
+    <Anchor>a8754982922e5d2d86d7de97e2c5ef56c</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>startChunk</Name>
+      <Name>createLiteral</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>dis</Scope>
     </TokenIdentifier>
     <Path>namespacedis.html</Path>
-    <Anchor>a4095f0f2e8c582f0105ba527c2e7de8e</Anchor>
+    <Anchor>a53ee9ae90563c6d185c7d09e547878a2</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>buffer</Name>
+      <Name>createInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>a9c74faf13d88f8573a78c80b87a8c4d8</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dis</Scope>
+    </TokenIdentifier>
+    <Path>namespacedis.html</Path>
+    <Anchor>a04b15ed481cfac10622df65dcf61c066</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>DVM_CHUNKS</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>dis</Scope>
     </TokenIdentifier>
     <Path>namespacedis.html</Path>
-    <Anchor>adc8c1e8494ad2081277e8c04c56a296e</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>chunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>ac6078ee689cccc0a5ccae2f8fa51c9a5</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis::DISLink</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>dis.DISLink</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s_link.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__init__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>dis.DISLink</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s_link.html</Path>
-    <Anchor>a952e36f3ad81b1b5909ae8f53ef441b9</Anchor>
+    <Anchor>a55ce6d7a84e53919269f6c654a796363</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -5177,6 +5179,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addPredefined</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s.html</Path>
+    <Anchor>ab885b5614aecfd5e583edbc5d92869a4</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -5184,6 +5197,17 @@
     </TokenIdentifier>
     <Path>classdis_1_1_d_i_s.html</Path>
     <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__repr__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classdis_1_1_d_i_s.html</Path>
+    <Anchor>a72806dbf5289ae979eba0ee704d72c7e</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -7122,6 +7146,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7211,6 +7259,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7309,6 +7367,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getOutputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7384,6 +7466,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7472,6 +7564,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7550,6 +7666,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7618,6 +7744,30 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
     <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
@@ -7724,6 +7874,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7820,6 +7980,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7910,6 +8094,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7994,6 +8188,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8081,6 +8299,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8156,6 +8384,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8243,6 +8495,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8318,6 +8580,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8405,6 +8691,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8480,6 +8776,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8567,6 +8887,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8642,6 +8972,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8729,6 +9083,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8804,6 +9168,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8891,6 +9279,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8966,6 +9364,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9053,6 +9475,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9128,6 +9560,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9215,6 +9671,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9290,6 +9756,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9377,6 +9867,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9452,6 +9952,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9539,6 +10063,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9614,6 +10148,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9701,6 +10259,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9776,6 +10344,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
+    <Abstract>Bind this node to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
+    <Abstract>Reset the link to a DIS instruction. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9863,6 +10455,16 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
