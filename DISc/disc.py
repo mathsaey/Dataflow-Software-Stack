@@ -56,10 +56,10 @@ import compiler.dot
 # args = argParser.parse_args()
 
 
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
 import log
 log.setup(0)
