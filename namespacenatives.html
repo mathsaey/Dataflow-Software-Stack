@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">dbd58ed</span>
+   &#160;<span id="projectnumber">51da7ba</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -113,6 +113,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aed55008480d45b53b15b2725fdb29735"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenatives.html#aed55008480d45b53b15b2725fdb29735">dvm_Array</a></td></tr>
 <tr class="memdesc:aed55008480d45b53b15b2725fdb29735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a DVM Array.  <a href="#aed55008480d45b53b15b2725fdb29735">More...</a><br/></td></tr>
 <tr class="separator:aed55008480d45b53b15b2725fdb29735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3709427de8b87be49d3ffcd3f41cb8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenatives.html#a6b3709427de8b87be49d3ffcd3f41cb8">dvm_tuple</a></td></tr>
+<tr class="memdesc:a6b3709427de8b87be49d3ffcd3f41cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a DVM Tuple.  <a href="#a6b3709427de8b87be49d3ffcd3f41cb8">More...</a><br/></td></tr>
+<tr class="separator:a6b3709427de8b87be49d3ffcd3f41cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb0270ed66574a9cc50b2b27bdbaf85c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenatives.html#afb0270ed66574a9cc50b2b27bdbaf85c">dvm_noOp</a></td></tr>
 <tr class="memdesc:afb0270ed66574a9cc50b2b27bdbaf85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do nothing.  <a href="#afb0270ed66574a9cc50b2b27bdbaf85c">More...</a><br/></td></tr>
 <tr class="separator:afb0270ed66574a9cc50b2b27bdbaf85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,6 +236,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a220fa9b2fdd9f0c3abe88fbd13cf3c5d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenatives.html#a220fa9b2fdd9f0c3abe88fbd13cf3c5d">dvm_arr_sub</a></td></tr>
 <tr class="memdesc:a220fa9b2fdd9f0c3abe88fbd13cf3c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a subset of an array.  <a href="#a220fa9b2fdd9f0c3abe88fbd13cf3c5d">More...</a><br/></td></tr>
 <tr class="separator:a220fa9b2fdd9f0c3abe88fbd13cf3c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c427a29c131341dd518e43090dfea94"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenatives.html#a9c427a29c131341dd518e43090dfea94">dvm_tup_get</a></td></tr>
+<tr class="memdesc:a9c427a29c131341dd518e43090dfea94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access an element of a tuple.  <a href="#a9c427a29c131341dd518e43090dfea94">More...</a><br/></td></tr>
+<tr class="separator:a9c427a29c131341dd518e43090dfea94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -349,6 +355,25 @@ Variables</h2></td></tr>
 
 <p>Create a DVM Array. </p>
 <p>DVM arrays are indexed starting from 0. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6b3709427de8b87be49d3ffcd3f41cb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def natives.dvm_tuple </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a DVM Tuple. </p>
+<p>DVM Tuples are indexed start from 0 </p>
 
 </div>
 </div>
@@ -1601,6 +1626,42 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9c427a29c131341dd518e43090dfea94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def natives.dvm_tup_get </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Access an element of a tuple. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tup</td><td>A tuple </td></tr>
+    <tr><td class="paramname">idx</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The element found at idx in the tuple. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="afec9c8802e439b4aa0e432c18411a5f5"></a>
 <div class="memitem">
@@ -1619,7 +1680,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 9 2014 01:26:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 9 2014 22:47:17 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

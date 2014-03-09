@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">dbd58ed</span>
+   &#160;<span id="projectnumber">51da7ba</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -98,12 +98,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a2e32617d77431cc90e14996cd05d3bcd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedvm.html#a2e32617d77431cc90e14996cd05d3bcd">handle_exit</a></td></tr>
 <tr class="memdesc:a2e32617d77431cc90e14996cd05d3bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an exit signal.  <a href="#a2e32617d77431cc90e14996cd05d3bcd">More...</a><br/></td></tr>
 <tr class="separator:a2e32617d77431cc90e14996cd05d3bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e096f66f5f0da001430b9d3c397895"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedvm.html#ab8e096f66f5f0da001430b9d3c397895">parseOutput</a></td></tr>
-<tr class="memdesc:ab8e096f66f5f0da001430b9d3c397895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the result that DVM returns.  <a href="#ab8e096f66f5f0da001430b9d3c397895">More...</a><br/></td></tr>
-<tr class="separator:ab8e096f66f5f0da001430b9d3c397895"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957ece81194e852aa567436ede5e61a4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedvm.html#a957ece81194e852aa567436ede5e61a4">run</a></td></tr>
-<tr class="memdesc:a957ece81194e852aa567436ede5e61a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run DVM on a dis string, with inputs, and return the results.  <a href="#a957ece81194e852aa567436ede5e61a4">More...</a><br/></td></tr>
-<tr class="separator:a957ece81194e852aa567436ede5e61a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -117,11 +111,9 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DVM Main file. </p>
-<p>dvm interface</p>
 <p>This module contains the entry point for DVM. It contains the UI code, as well as the command line parser and exit handling.</p>
 <p>In short it bundles all the components of DVM together and it allows the user to interact with these components.</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Stop instruction that can contain tokens until it receives a signal (handle on meta level) </dd></dl>
-<p>This module provides a few convenient shorthands for calling DVM. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a2e32617d77431cc90e14996cd05d3bcd"></a>
 <div class="memitem">
@@ -148,88 +140,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Handle an exit signal. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab8e096f66f5f0da001430b9d3c397895"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def dvm.parseOutput </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parse the result that DVM returns. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td>The result, in string form. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The python version of the result. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a957ece81194e852aa567436ede5e61a4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def dvm.run </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dvmPath</em> = <code>&quot;dvm&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>inputs</em> = <code>[]</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dis</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cores</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>logLevel</em> = <code>50</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Run DVM on a dis string, with inputs, and return the results. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dvmPath</td><td>The path to dvm, if dvm is not in your system PATH </td></tr>
-    <tr><td class="paramname">inputs</td><td>The list of inputs to pass to dvm </td></tr>
-    <tr><td class="paramname">dis</td><td>A string containing the dis representation of the code to execute. </td></tr>
-    <tr><td class="paramname">cores</td><td>The amount of cores to use when running dvm. </td></tr>
-    <tr><td class="paramname">logLevel</td><td>The loglevel to pass to DVM (useful for debugging)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The output returned by dvm, as a python object. </dd></dl>
 
 </div>
 </div>
@@ -275,7 +185,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 9 2014 01:26:24 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 9 2014 22:47:17 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

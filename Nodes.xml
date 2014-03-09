@@ -187,10 +187,6 @@
         <Path>todo.html</Path>
        </Node>
        <Node>
-        <Name>Bug List</Name>
-        <Path>bug.html</Path>
-       </Node>
-       <Node>
         <Name>Package Functions</Name>
         <Path>namespacemembers.html</Path>
         <Subnodes>
@@ -291,16 +287,59 @@
           <Path>annotated.html</Path>
           <Subnodes>
            <Node>
-            <Name>compiler</Name>
-            <Path>namespacecompiler.html</Path>
+            <Name>backEnd</Name>
+            <Path>namespaceback_end.html</Path>
             <Subnodes>
              <Node>
-              <Name>dot</Name>
-              <Path>namespacecompiler_1_1dot.html</Path>
-             </Node>
-             <Node>
-              <Name>traverse</Name>
-              <Path>namespacecompiler_1_1traverse.html</Path>
+              <Name>DVM</Name>
+              <Path>namespaceback_end_1_1_d_v_m.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>dis</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>DIS</Name>
+                  <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a862f60046204a6dc3182efc1bc660285</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addPredefined</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a96491fe3e55e7086c30365066487eb92</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>add</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a3f4a6fc1203b5147632136faa9445715</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>__repr__</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>abdcb364c7cca5bce4cf6a217fa6514d2</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>memory</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a5718ecd0dd2ae03bee5e23889512877f</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>dvm</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+               </Node>
+               <Node>
+                <Name>literals</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+               </Node>
+              </Subnodes>
              </Node>
             </Subnodes>
            </Node>
@@ -511,57 +550,6 @@
                 </Subnodes>
                </Node>
                <Node>
-                <Name>StaticInstruction</Name>
-                <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__init__</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>a8910598506429ab84a1cc667de97bcae</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>setKey</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>execute</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>destinations</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>key</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
                 <Name>OperationInstruction</Name>
                 <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                 <Subnodes>
@@ -576,6 +564,16 @@
                   <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
                  </Node>
                  <Node>
+                  <Name>addDestination</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a27477e05a6e6dbf16939a4532e73b597</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sendDatum</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a14b34a4fdc90cc814c131496e996621b</Anchor>
+                 </Node>
+                 <Node>
                   <Name>addLiteral</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>ad3c13340b0993252d64253e3a7d46bb7</Anchor>
@@ -586,24 +584,9 @@
                   <Anchor>aa29f0cabaef83cc2e1545fd8f19041e8</Anchor>
                  </Node>
                  <Node>
-                  <Name>sendResults</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a01795f99a948bc57c713a8700ef89353</Anchor>
-                 </Node>
-                 <Node>
                   <Name>execute</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>a8abe301191403572cbad6ad631081f0a</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
                  </Node>
                  <Node>
                   <Name>setKey</Name>
@@ -614,6 +597,11 @@
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a0ffa039eaaca02bac84191551983f93d</Anchor>
                  </Node>
                  <Node>
                   <Name>operation</Name>
@@ -641,11 +629,6 @@
                   <Anchor>a42864c031d933b97c4368c9c73897010</Anchor>
                  </Node>
                  <Node>
-                  <Name>destinations</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
-                 </Node>
-                 <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
@@ -657,19 +640,24 @@
                 <Path>classcore_1_1instruction_1_1_sink.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>execute</Name>
+                  <Name>__init__</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
+                  <Anchor>a015f4ff2df95bd364bc31e0358e3dff2</Anchor>
                  </Node>
                  <Node>
                   <Name>addDestination</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
+                  <Anchor>a9545071b3712fea67400ae47e07e2c28</Anchor>
                  </Node>
                  <Node>
                   <Name>sendDatum</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
+                  <Anchor>aedb57639f9f4a1c3adbea004fbd87958</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>execute</Name>
+                  <Path>classcore_1_1instruction_1_1_sink.html</Path>
+                  <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
                  </Node>
                  <Node>
                   <Name>setKey</Name>
@@ -689,7 +677,7 @@
                  <Node>
                   <Name>destinations</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
+                  <Anchor>a02113388d825011118e5981d57bf960e</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
@@ -1195,57 +1183,12 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>dis</Name>
-            <Path>namespacedis.html</Path>
-            <Subnodes>
-             <Node>
-              <Name>DIS</Name>
-              <Path>classdis_1_1_d_i_s.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>__init__</Name>
-                <Path>classdis_1_1_d_i_s.html</Path>
-                <Anchor>a27610d3e872288629a52c805752365b7</Anchor>
-               </Node>
-               <Node>
-                <Name>addPredefined</Name>
-                <Path>classdis_1_1_d_i_s.html</Path>
-                <Anchor>ab885b5614aecfd5e583edbc5d92869a4</Anchor>
-               </Node>
-               <Node>
-                <Name>add</Name>
-                <Path>classdis_1_1_d_i_s.html</Path>
-                <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
-               </Node>
-               <Node>
-                <Name>__repr__</Name>
-                <Path>classdis_1_1_d_i_s.html</Path>
-                <Anchor>a72806dbf5289ae979eba0ee704d72c7e</Anchor>
-               </Node>
-               <Node>
-                <Name>memory</Name>
-                <Path>classdis_1_1_d_i_s.html</Path>
-                <Anchor>ad1f4540cecd1520befe3581150219cad</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
-            <Name>DISc</Name>
-            <Path>namespace_d_i_sc.html</Path>
-           </Node>
-           <Node>
             <Name>disc</Name>
             <Path>namespacedisc.html</Path>
            </Node>
            <Node>
             <Name>dvm</Name>
             <Path>namespacedvm.html</Path>
-           </Node>
-           <Node>
-            <Name>frontend</Name>
-            <Path>namespacefrontend.html</Path>
            </Node>
            <Node>
             <Name>frontEnd</Name>
@@ -1530,39 +1473,13 @@
             </Subnodes>
            </Node>
            <Node>
-            <Name>IF1</Name>
-            <Path>namespace_i_f1.html</Path>
-           </Node>
-           <Node>
-            <Name>if1parser</Name>
-            <Path>namespaceif1parser.html</Path>
-            <Subnodes>
-             <Node>
-              <Name>compound</Name>
-              <Path>namespaceif1parser_1_1compound.html</Path>
-             </Node>
-             <Node>
-              <Name>edge</Name>
-              <Path>namespaceif1parser_1_1edge.html</Path>
-             </Node>
-             <Node>
-              <Name>environment</Name>
-              <Path>namespaceif1parser_1_1environment.html</Path>
-             </Node>
-             <Node>
-              <Name>graph</Name>
-              <Path>namespaceif1parser_1_1graph.html</Path>
-             </Node>
-             <Node>
-              <Name>type</Name>
-              <Path>namespaceif1parser_1_1type.html</Path>
-             </Node>
-            </Subnodes>
-           </Node>
-           <Node>
             <Name>IGR</Name>
             <Path>namespace_i_g_r.html</Path>
             <Subnodes>
+             <Node>
+              <Name>dot</Name>
+              <Path>namespace_i_g_r_1_1dot.html</Path>
+             </Node>
              <Node>
               <Name>graph</Name>
               <Path>namespace_i_g_r_1_1graph.html</Path>
@@ -1618,16 +1535,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -1666,11 +1573,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1719,16 +1621,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getOutputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                   <Anchor>a388eaacd1a1b23b7acdb5374a82eb877</Anchor>
@@ -1762,11 +1654,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1810,16 +1697,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -1853,11 +1730,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -1894,16 +1766,6 @@
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                   <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
                  </Node>
                  <Node>
                   <Name>getInputPort</Name>
@@ -1949,11 +1811,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2002,16 +1859,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2050,11 +1897,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2098,16 +1940,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2146,11 +1978,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2189,16 +2016,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2237,11 +2054,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2280,16 +2092,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2328,11 +2130,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2371,16 +2168,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2419,11 +2206,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2462,16 +2244,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2510,11 +2282,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2553,16 +2320,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2601,11 +2358,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2644,16 +2396,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2692,11 +2434,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2735,16 +2472,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2783,11 +2510,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2826,16 +2548,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2874,11 +2586,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -2917,16 +2624,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2965,11 +2662,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -3008,16 +2700,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -3056,11 +2738,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -3099,16 +2776,6 @@
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                  </Node>
                  <Node>
-                  <Name>bind</Name>
-                  <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
-                  <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
-                  <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                 </Node>
-                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -3147,11 +2814,6 @@
                   <Name>key</Name>
                   <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                   <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dis</Name>
-                  <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
-                  <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                  </Node>
                  <Node>
                   <Name>inputs</Name>
@@ -3383,6 +3045,10 @@
                </Node>
               </Subnodes>
              </Node>
+             <Node>
+              <Name>traverse</Name>
+              <Path>namespace_i_g_r_1_1traverse.html</Path>
+             </Node>
             </Subnodes>
            </Node>
            <Node>
@@ -3396,10 +3062,6 @@
            <Node>
             <Name>read</Name>
             <Path>namespaceread.html</Path>
-           </Node>
-           <Node>
-            <Name>Sisal</Name>
-            <Path>namespace_sisal.html</Path>
            </Node>
           </Subnodes>
          </Node>
@@ -3415,6 +3077,10 @@
             <Name>object</Name>
             <Path></Path>
             <Subnodes>
+             <Node>
+              <Name>backEnd.DVM.dis.DIS</Name>
+              <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+             </Node>
              <Node>
               <Name>core.context.Context</Name>
               <Path>classcore_1_1context_1_1_context.html</Path>
@@ -3444,18 +3110,12 @@
                 <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
                </Node>
                <Node>
-                <Name>core.instruction.StaticInstruction</Name>
-                <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>core.instruction.OperationInstruction</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                 </Node>
-                 <Node>
-                  <Name>core.instruction.Sink</Name>
-                  <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                 </Node>
-                </Subnodes>
+                <Name>core.instruction.OperationInstruction</Name>
+                <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.Sink</Name>
+                <Path>classcore_1_1instruction_1_1_sink.html</Path>
                </Node>
                <Node>
                 <Name>core.instruction.StopInstruction</Name>
@@ -3500,10 +3160,6 @@
              <Node>
               <Name>core.tokenCreator.TokenCreator</Name>
               <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-             </Node>
-             <Node>
-              <Name>dis.DIS</Name>
-              <Path>classdis_1_1_d_i_s.html</Path>
              </Node>
              <Node>
               <Name>frontEnd.IF1.environment.CompoundScope</Name>
@@ -3764,122 +3420,166 @@
             <Path>dir_84a0cb7a864995218ce8e5be498f17b8.html</Path>
             <Subnodes>
              <Node>
-              <Name>compiler</Name>
-              <Path>dir_4fd5495173633101d0acf59d6400076c.html</Path>
+              <Name>backEnd</Name>
+              <Path>dir_902fe10bc0e33234954ac365e577752f.html</Path>
               <Subnodes>
                <Node>
-                <Name>__init__.py</Name>
-                <Path>_d_i_sc_2compiler_2____init_____8py.html</Path>
-               </Node>
-               <Node>
-                <Name>dot.py</Name>
-                <Path>dot_8py.html</Path>
+                <Name>DVM</Name>
+                <Path>dir_e78c6867454df38989e2523c88912741.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>subGraphHeader</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>aea31a1aceed8455ba7179e254a677d6c</Anchor>
+                  <Name>__init__.py</Name>
+                  <Path>_d_i_sc_2back_end_2_d_v_m_2____init_____8py.html</Path>
                  </Node>
                  <Node>
-                  <Name>subGraphFooter</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a1f5178873440863fffb6ae47c7202667</Anchor>
+                  <Name>dis.py</Name>
+                  <Path>dis_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>DIS</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Subnodes>
+                     <Node>
+                      <Name>__init__</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a862f60046204a6dc3182efc1bc660285</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addPredefined</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a96491fe3e55e7086c30365066487eb92</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>add</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a3f4a6fc1203b5147632136faa9445715</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>__repr__</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>abdcb364c7cca5bce4cf6a217fa6514d2</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>memory</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a5718ecd0dd2ae03bee5e23889512877f</Anchor>
+                     </Node>
+                    </Subnodes>
+                   </Node>
+                   <Node>
+                    <Name>createLink</Name>
+                    <Path>dis_8py.html</Path>
+                    <Anchor>abd4da19657e02a55927f2479fd1fc4bf</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createLiteral</Name>
+                    <Path>dis_8py.html</Path>
+                    <Anchor>a5bd8cc014e09436563319444734d28c4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createInstruction</Name>
+                    <Path>dis_8py.html</Path>
+                    <Anchor>a1bb2a201b018c8c28ffba4256245210a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createChunk</Name>
+                    <Path>dis_8py.html</Path>
+                    <Anchor>ad5c8bcaf3fcb3dea28cbe8558db89667</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>DVM_CHUNKS</Name>
+                    <Path>dis_8py.html</Path>
+                    <Anchor>a6d420beb3004da764486ac5f6234451b</Anchor>
+                   </Node>
+                  </Subnodes>
                  </Node>
                  <Node>
-                  <Name>compoundHeader</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a51ed90df39d19a01c3a04bd2c40b8260</Anchor>
+                  <Name>dvm.py</Name>
+                  <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>run</Name>
+                    <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
+                    <Anchor>a4c5f5cb49eb78f3d7590b7d2d07115dd</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>log</Name>
+                    <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
+                    <Anchor>ad7747e30f6792420939e7cb9f942d0f1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>path</Name>
+                    <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
+                    <Anchor>a962c0895671f5ed5463d5b0c17d8a471</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>cores</Name>
+                    <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
+                    <Anchor>a2f3589e96060b2ba8b7881f6517c28f4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>logLevel</Name>
+                    <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
+                    <Anchor>ae31b46dd72807e5a67434feb14bda152</Anchor>
+                   </Node>
+                  </Subnodes>
                  </Node>
                  <Node>
-                  <Name>compoundFooter</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a6ece59f004db7752481092f330c0af23</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>portString</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a2b165c8b0265f5f5d824b0bfc595588a</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>ports</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>acaa819ccaaa232d873ce172287bd857a</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>inputList</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a6df36fb8b1f135d7e646440e6adf39d1</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>outputList</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a6a1175fd47928bf210540e06854f884d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>nodeIdentifier</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a7e29902b97989ad0da9f3d3c4055a0c4</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>edgeStr</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a22d69d4cfb87904a0baa28982d59e7aa</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>nodeLabel</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>ae92a24a3e20437518443308493826e39</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>nodeLinks</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>aecd94322f518eca095440e929ff869f0</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>node</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>ad156d481575b1064cfe3673afb0760c0</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dotHeader</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>aa4eab18b90e883fddbf2b7367f654d7b</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dotFooter</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>a64ecb170a7342bba287d37909b9d47b2</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>getDot</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>aa1c58f873cee40263ac5a2c07fb617b5</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>dotToFile</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>ab9fb1f388749ced3ba64ee867fae0920</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>runDot</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>ab8d86a047857d932d4a46bced06e74ba</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>log</Name>
-                  <Path>dot_8py.html</Path>
-                  <Anchor>adb6f951642eea49a163ed8d57732e911</Anchor>
+                  <Name>literals.py</Name>
+                  <Path>literals_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>isLiteral</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a502b93aec6ea128eea879ba1ade42a1a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getInputs</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getValue</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>af3f1c6df1cac8584b86c763d825d8e43</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>transformNode</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a726f37313ce3b3d4bd2f31fd6c6f5c5b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>deleteNode</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>removeOperationLiterals</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+                   </Node>
+                  </Subnodes>
                  </Node>
                 </Subnodes>
                </Node>
                <Node>
-                <Name>traverse.py</Name>
-                <Path>traverse_8py.html</Path>
+                <Name>__init__.py</Name>
+                <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>traverseAll</Name>
-                  <Path>traverse_8py.html</Path>
-                  <Anchor>a8e26de5b58a3972dc0f7a780f64889d4</Anchor>
+                  <Name>set</Name>
+                  <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
+                  <Anchor>a8fb37509b863bbe85fce88efe04582db</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>log</Name>
+                  <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
+                  <Anchor>a41d4b4095b3d47b58a718fed9939d0b4</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>backend</Name>
+                  <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
+                  <Anchor>a660fca84b9adcb4d5ea328e1de41e36c</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -4735,6 +4435,107 @@
                 </Subnodes>
                </Node>
                <Node>
+                <Name>dot.py</Name>
+                <Path>dot_8py.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>subGraphHeader</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a4bd3bade93d0c9cc2639909fcd69df67</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>subGraphFooter</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a5baab6aaadcf5140cfbb898db02b05b8</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>compoundHeader</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>ae5e8d3e2913028ae98733ddcf020e92e</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>compoundFooter</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>ac646de3e1d3a4805bbfd4e57a4c2e1cb</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>portString</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a5a22fe85fa8282dad19c1b89d9321197</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>ports</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>ab79b8194b24dd32372e38dc81ba38699</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>inputList</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a48a74ea4c04164cae3ea5629cfc36f17</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>outputList</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a5a68597ca34591a3d97d7282bfe67872</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>nodeIdentifier</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a852920d8b1f41945a0507ac7e54e9ab4</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>edgeStr</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a2f144e23d21de41e8dd391dfc6aac7b5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>nodeLabel</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a0ed7e0a8b80f6b70852adf99cd161b0e</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>nodeLinks</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a4bf8bc67240f948ad26dc3ccff87cafc</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>node</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a2fa4fdf242aff219099986af386e1751</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dotHeader</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a7ce9fa8e72127cc7889c1a94afff20fa</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dotFooter</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>aaa36857df44a7aaf9eeb95b5966c40a0</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>getDot</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>ad2dcf03200a33c5368bc5ac31bf518e5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dotToFile</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>aa15087bf161d5c705a29e7ab84d9fdf9</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>dot</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>a849825adcd89144f89c2e7fa6a826052</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>log</Name>
+                  <Path>dot_8py.html</Path>
+                  <Anchor>ab3de22a8cb6b97c5257cb23f3078fd74</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
                 <Name>graph.py</Name>
                 <Path>_i_g_r_2graph_8py.html</Path>
                 <Subnodes>
@@ -4821,16 +4622,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -4869,11 +4660,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -4922,16 +4708,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getOutputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                     <Anchor>a388eaacd1a1b23b7acdb5374a82eb877</Anchor>
@@ -4965,11 +4741,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5013,16 +4784,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5056,11 +4817,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5097,16 +4853,6 @@
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                     <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputPort</Name>
@@ -5152,11 +4898,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5205,16 +4946,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5253,11 +4984,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5301,16 +5027,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5349,11 +5065,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5392,16 +5103,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5440,11 +5141,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_forall_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5483,16 +5179,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5531,11 +5217,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_select_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5574,16 +5255,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5622,11 +5293,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_tag_case_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5665,16 +5331,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5713,11 +5369,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_loop_a_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5756,16 +5407,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5804,11 +5445,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_loop_b_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5847,16 +5483,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5895,11 +5521,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_if_then_else_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -5938,16 +5559,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5986,11 +5597,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_iterate_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -6029,16 +5635,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -6077,11 +5673,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_while_loop_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -6120,16 +5711,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -6168,11 +5749,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_repeat_loop_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -6211,16 +5787,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -6259,11 +5825,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_seq_forall_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -6302,16 +5863,6 @@
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
                    </Node>
                    <Node>
-                    <Name>bind</Name>
-                    <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
-                    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>reset</Name>
-                    <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
-                    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-                   </Node>
-                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -6350,11 +5901,6 @@
                     <Name>key</Name>
                     <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
                     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>dis</Name>
-                    <Path>class_i_g_r_1_1node_1_1_u_reduce_c_node.html</Path>
-                    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
                    </Node>
                    <Node>
                     <Name>inputs</Name>
@@ -6596,67 +6142,16 @@
                  </Node>
                 </Subnodes>
                </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>dis.py</Name>
-              <Path>dis_8py.html</Path>
-              <Subnodes>
                <Node>
-                <Name>DIS</Name>
-                <Path>classdis_1_1_d_i_s.html</Path>
+                <Name>traverse.py</Name>
+                <Path>traverse_8py.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>__init__</Name>
-                  <Path>classdis_1_1_d_i_s.html</Path>
-                  <Anchor>a27610d3e872288629a52c805752365b7</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addPredefined</Name>
-                  <Path>classdis_1_1_d_i_s.html</Path>
-                  <Anchor>ab885b5614aecfd5e583edbc5d92869a4</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>add</Name>
-                  <Path>classdis_1_1_d_i_s.html</Path>
-                  <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>__repr__</Name>
-                  <Path>classdis_1_1_d_i_s.html</Path>
-                  <Anchor>a72806dbf5289ae979eba0ee704d72c7e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>memory</Name>
-                  <Path>classdis_1_1_d_i_s.html</Path>
-                  <Anchor>ad1f4540cecd1520befe3581150219cad</Anchor>
+                  <Name>traverse</Name>
+                  <Path>traverse_8py.html</Path>
+                  <Anchor>adc3bc5eee2649d3470326bb52ab80759</Anchor>
                  </Node>
                 </Subnodes>
-               </Node>
-               <Node>
-                <Name>createLink</Name>
-                <Path>dis_8py.html</Path>
-                <Anchor>a8754982922e5d2d86d7de97e2c5ef56c</Anchor>
-               </Node>
-               <Node>
-                <Name>createLiteral</Name>
-                <Path>dis_8py.html</Path>
-                <Anchor>a53ee9ae90563c6d185c7d09e547878a2</Anchor>
-               </Node>
-               <Node>
-                <Name>createInstruction</Name>
-                <Path>dis_8py.html</Path>
-                <Anchor>a9c74faf13d88f8573a78c80b87a8c4d8</Anchor>
-               </Node>
-               <Node>
-                <Name>createChunk</Name>
-                <Path>dis_8py.html</Path>
-                <Anchor>a04b15ed481cfac10622df65dcf61c066</Anchor>
-               </Node>
-               <Node>
-                <Name>DVM_CHUNKS</Name>
-                <Path>dis_8py.html</Path>
-                <Anchor>a55ce6d7a84e53919269f6c654a796363</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -6668,22 +6163,6 @@
                 <Name>loc</Name>
                 <Path>disc_8py.html</Path>
                 <Anchor>a514324055e0953215c42fb956b979201</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>dvm.py</Name>
-              <Path>_d_i_sc_2dvm_8py.html</Path>
-              <Subnodes>
-               <Node>
-                <Name>parseOutput</Name>
-                <Path>_d_i_sc_2dvm_8py.html</Path>
-                <Anchor>ab8e096f66f5f0da001430b9d3c397895</Anchor>
-               </Node>
-               <Node>
-                <Name>run</Name>
-                <Path>_d_i_sc_2dvm_8py.html</Path>
-                <Anchor>a957ece81194e852aa567436ede5e61a4</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -6997,57 +6476,6 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>StaticInstruction</Name>
-                  <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>__init__</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>a8910598506429ab84a1cc667de97bcae</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setKey</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>execute</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>destinations</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>key</Name>
-                    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
                   <Name>OperationInstruction</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Subnodes>
@@ -7062,6 +6490,16 @@
                     <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
                    </Node>
                    <Node>
+                    <Name>addDestination</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a27477e05a6e6dbf16939a4532e73b597</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>sendDatum</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a14b34a4fdc90cc814c131496e996621b</Anchor>
+                   </Node>
+                   <Node>
                     <Name>addLiteral</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>ad3c13340b0993252d64253e3a7d46bb7</Anchor>
@@ -7072,24 +6510,9 @@
                     <Anchor>aa29f0cabaef83cc2e1545fd8f19041e8</Anchor>
                    </Node>
                    <Node>
-                    <Name>sendResults</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a01795f99a948bc57c713a8700ef89353</Anchor>
-                   </Node>
-                   <Node>
                     <Name>execute</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>a8abe301191403572cbad6ad631081f0a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
                    </Node>
                    <Node>
                     <Name>setKey</Name>
@@ -7100,6 +6523,11 @@
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a0ffa039eaaca02bac84191551983f93d</Anchor>
                    </Node>
                    <Node>
                     <Name>operation</Name>
@@ -7127,11 +6555,6 @@
                     <Anchor>a42864c031d933b97c4368c9c73897010</Anchor>
                    </Node>
                    <Node>
-                    <Name>destinations</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
-                   </Node>
-                   <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
@@ -7143,19 +6566,24 @@
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>execute</Name>
+                    <Name>__init__</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
+                    <Anchor>a015f4ff2df95bd364bc31e0358e3dff2</Anchor>
                    </Node>
                    <Node>
                     <Name>addDestination</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
+                    <Anchor>a9545071b3712fea67400ae47e07e2c28</Anchor>
                    </Node>
                    <Node>
                     <Name>sendDatum</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
+                    <Anchor>aedb57639f9f4a1c3adbea004fbd87958</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>execute</Name>
+                    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+                    <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
                    </Node>
                    <Node>
                     <Name>setKey</Name>
@@ -7175,7 +6603,7 @@
                    <Node>
                     <Name>destinations</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
+                    <Anchor>a02113388d825011118e5981d57bf960e</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
@@ -7827,6 +7255,11 @@
                 <Anchor>aed55008480d45b53b15b2725fdb29735</Anchor>
                </Node>
                <Node>
+                <Name>dvm_tuple</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>a6b3709427de8b87be49d3ffcd3f41cb8</Anchor>
+               </Node>
+               <Node>
                 <Name>dvm_noOp</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>afb0270ed66574a9cc50b2b27bdbaf85c</Anchor>
@@ -8025,6 +7458,11 @@
                 <Name>dvm_arr_sub</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>a220fa9b2fdd9f0c3abe88fbd13cf3c5d</Anchor>
+               </Node>
+               <Node>
+                <Name>dvm_tup_get</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
                </Node>
                <Node>
                 <Name>operations</Name>

@@ -2,250 +2,13 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>subGraphHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aea31a1aceed8455ba7179e254a677d6c</Anchor>
-    <Abstract>Add the attributes of the subgraph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>subGraphFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a1f5178873440863fffb6ae47c7202667</Anchor>
-    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compoundHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a51ed90df39d19a01c3a04bd2c40b8260</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compoundFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a6ece59f004db7752481092f330c0af23</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>portString</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a2b165c8b0265f5f5d824b0bfc595588a</Anchor>
-    <Abstract>Get a representation for a port. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ports</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>acaa819ccaaa232d873ce172287bd857a</Anchor>
-    <Abstract>String representation of a port list. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>inputList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a6df36fb8b1f135d7e646440e6adf39d1</Anchor>
-    <Abstract>Get the portlist for the inputs of a node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outputList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a6a1175fd47928bf210540e06854f884d</Anchor>
-    <Abstract>Get the portlist for the outputs of a node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeIdentifier</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a7e29902b97989ad0da9f3d3c4055a0c4</Anchor>
-    <Abstract>Identifier of the node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>edgeStr</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a22d69d4cfb87904a0baa28982d59e7aa</Anchor>
-    <Abstract>Convert a connection to a string. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeLabel</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ae92a24a3e20437518443308493826e39</Anchor>
-    <Abstract>Add the label of the node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeLinks</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aecd94322f518eca095440e929ff869f0</Anchor>
-    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>node</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ad156d481575b1064cfe3673afb0760c0</Anchor>
-    <Abstract>Write the information of a node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aa4eab18b90e883fddbf2b7367f654d7b</Anchor>
-    <Abstract>Write general dot information. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a64ecb170a7342bba287d37909b9d47b2</Anchor>
-    <Abstract>Close the dot graph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getDot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aa1c58f873cee40263ac5a2c07fb617b5</Anchor>
-    <Abstract>Create the dot string. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotToFile</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ab9fb1f388749ced3ba64ee867fae0920</Anchor>
-    <Abstract>Get the dot representation and write it to a file. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>runDot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ab8d86a047857d932d4a46bced06e74ba</Anchor>
-    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>log</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>adb6f951642eea49a163ed8d57732e911</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>traverseAll</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::traverse</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1traverse.html</Path>
-    <Anchor>a8e26de5b58a3972dc0f7a780f64889d4</Anchor>
-    <Abstract>Traverse all the nodes in the program. </Abstract>
-    <DeclaredIn>traverse.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>createLink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>dis</Scope>
+      <Scope>backEnd::DVM::dis</Scope>
     </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a8754982922e5d2d86d7de97e2c5ef56c</Anchor>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>abd4da19657e02a55927f2479fd1fc4bf</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -253,10 +16,10 @@
       <Name>createLiteral</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>dis</Scope>
+      <Scope>backEnd::DVM::dis</Scope>
     </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a53ee9ae90563c6d185c7d09e547878a2</Anchor>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>a5bd8cc014e09436563319444734d28c4</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -264,10 +27,10 @@
       <Name>createInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>dis</Scope>
+      <Scope>backEnd::DVM::dis</Scope>
     </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a9c74faf13d88f8573a78c80b87a8c4d8</Anchor>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>a1bb2a201b018c8c28ffba4256245210a</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -275,10 +38,10 @@
       <Name>createChunk</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>dis</Scope>
+      <Scope>backEnd::DVM::dis</Scope>
     </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a04b15ed481cfac10622df65dcf61c066</Anchor>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>ad5c8bcaf3fcb3dea28cbe8558db89667</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -286,11 +49,77 @@
       <Name>DVM_CHUNKS</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>dis</Scope>
+      <Scope>backEnd::DVM::dis</Scope>
     </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a55ce6d7a84e53919269f6c654a796363</Anchor>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>a6d420beb3004da764486ac5f6234451b</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a502b93aec6ea128eea879ba1ade42a1a</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getInputs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>af3f1c6df1cac8584b86c763d825d8e43</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>transformNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a726f37313ce3b3d4bd2f31fd6c6f5c5b</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeOperationLiterals</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1071,6 +900,231 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>subGraphHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a4bd3bade93d0c9cc2639909fcd69df67</Anchor>
+    <Abstract>Add the attributes of the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5baab6aaadcf5140cfbb898db02b05b8</Anchor>
+    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ae5e8d3e2913028ae98733ddcf020e92e</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ac646de3e1d3a4805bbfd4e57a4c2e1cb</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>portString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5a22fe85fa8282dad19c1b89d9321197</Anchor>
+    <Abstract>Get a representation for a port. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ports</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ab79b8194b24dd32372e38dc81ba38699</Anchor>
+    <Abstract>String representation of a port list. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a48a74ea4c04164cae3ea5629cfc36f17</Anchor>
+    <Abstract>Get the portlist for the inputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>outputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5a68597ca34591a3d97d7282bfe67872</Anchor>
+    <Abstract>Get the portlist for the outputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a852920d8b1f41945a0507ac7e54e9ab4</Anchor>
+    <Abstract>Identifier of the node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>edgeStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a2f144e23d21de41e8dd391dfc6aac7b5</Anchor>
+    <Abstract>Convert a connection to a string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLabel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a0ed7e0a8b80f6b70852adf99cd161b0e</Anchor>
+    <Abstract>Add the label of the node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a4bf8bc67240f948ad26dc3ccff87cafc</Anchor>
+    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>node</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a2fa4fdf242aff219099986af386e1751</Anchor>
+    <Abstract>Write the information of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a7ce9fa8e72127cc7889c1a94afff20fa</Anchor>
+    <Abstract>Write general dot information. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>aaa36857df44a7aaf9eeb95b5966c40a0</Anchor>
+    <Abstract>Close the dot graph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ad2dcf03200a33c5368bc5ac31bf518e5</Anchor>
+    <Abstract>Create the dot string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotToFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>aa15087bf161d5c705a29e7ab84d9fdf9</Anchor>
+    <Abstract>Get the dot representation and write it to a file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a849825adcd89144f89c2e7fa6a826052</Anchor>
+    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ab3de22a8cb6b97c5257cb23f3078fd74</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getKey</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1091,6 +1145,18 @@
     <Path>namespace_i_g_r_1_1node.html</Path>
     <Anchor>abcfb5be08585b7403aaeab935b645d44</Anchor>
     <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>traverse</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::traverse</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1traverse.html</Path>
+    <Anchor>adc3bc5eee2649d3470326bb52ab80759</Anchor>
+    <Abstract>Traverse all the nodes in the program. </Abstract>
+    <DeclaredIn>traverse.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1246,6 +1312,40 @@
     <Path>namespacecore.html</Path>
     <Anchor>a9e050d23df9ad6e1acb5df7006fa45b3</Anchor>
     <Abstract>See if the runtime expects additional input. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>a8fb37509b863bbe85fce88efe04582db</Anchor>
+    <Abstract>Select a backend to use. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>a41d4b4095b3d47b58a718fed9939d0b4</Anchor>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>backend</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>a660fca84b9adcb4d5ea328e1de41e36c</Anchor>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -1727,26 +1827,61 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>parseOutput</Name>
+      <Name>run</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>dvm</Scope>
+      <Scope>backEnd::DVM::dvm</Scope>
     </TokenIdentifier>
-    <Path>namespacedvm.html</Path>
-    <Anchor>ab8e096f66f5f0da001430b9d3c397895</Anchor>
-    <Abstract>Parse the result that DVM returns. </Abstract>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>a4c5f5cb49eb78f3d7590b7d2d07115dd</Anchor>
+    <Abstract>Run DVM on a dis string, with inputs, and return the results. </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>run</Name>
+      <Name>log</Name>
       <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dvm</Scope>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
     </TokenIdentifier>
-    <Path>namespacedvm.html</Path>
-    <Anchor>a957ece81194e852aa567436ede5e61a4</Anchor>
-    <Abstract>Run DVM on a dis string, with inputs, and return the results. </Abstract>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>ad7747e30f6792420939e7cb9f942d0f1</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>path</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>a962c0895671f5ed5463d5b0c17d8a471</Anchor>
+    <Abstract>Default dvm path. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>cores</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>a2f3589e96060b2ba8b7881f6517c28f4</Anchor>
+    <Abstract>Default amount of cores to use. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>logLevel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>ae31b46dd72807e5a67434feb14bda152</Anchor>
+    <Abstract>Default loglevel to use. </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -1855,6 +1990,18 @@
     <Path>namespacenatives.html</Path>
     <Anchor>aed55008480d45b53b15b2725fdb29735</Anchor>
     <Abstract>Create a DVM Array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_tuple</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a6b3709427de8b87be49d3ffcd3f41cb8</Anchor>
+    <Abstract>Create a DVM Tuple. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
@@ -2339,6 +2486,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_tup_get</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
+    <Abstract>Access an element of a tuple. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>operations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -2601,277 +2760,330 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bug</Name>
-      <APILanguage>unknown</APILanguage>
-    </TokenIdentifier>
-    <Path>bug.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compiler</Name>
+      <Name>backEnd</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>compiler</Scope>
+      <Scope>backEnd</Scope>
     </TokenIdentifier>
-    <Path>namespacecompiler.html</Path>
-    <Abstract>IGR Compiler. </Abstract>
+    <Path>namespaceback_end.html</Path>
+    <Abstract>DISc backend Selector. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>compiler::dot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Abstract>IGR dot parser. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>subGraphHeader</Name>
+      <Name>set</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>compiler::dot</Scope>
+      <Scope>backEnd</Scope>
     </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aea31a1aceed8455ba7179e254a677d6c</Anchor>
-    <Abstract>Add the attributes of the subgraph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>subGraphFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a1f5178873440863fffb6ae47c7202667</Anchor>
-    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compoundHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a51ed90df39d19a01c3a04bd2c40b8260</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compoundFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a6ece59f004db7752481092f330c0af23</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>portString</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a2b165c8b0265f5f5d824b0bfc595588a</Anchor>
-    <Abstract>Get a representation for a port. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ports</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>acaa819ccaaa232d873ce172287bd857a</Anchor>
-    <Abstract>String representation of a port list. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>inputList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a6df36fb8b1f135d7e646440e6adf39d1</Anchor>
-    <Abstract>Get the portlist for the inputs of a node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outputList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a6a1175fd47928bf210540e06854f884d</Anchor>
-    <Abstract>Get the portlist for the outputs of a node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeIdentifier</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a7e29902b97989ad0da9f3d3c4055a0c4</Anchor>
-    <Abstract>Identifier of the node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>edgeStr</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a22d69d4cfb87904a0baa28982d59e7aa</Anchor>
-    <Abstract>Convert a connection to a string. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeLabel</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ae92a24a3e20437518443308493826e39</Anchor>
-    <Abstract>Add the label of the node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeLinks</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aecd94322f518eca095440e929ff869f0</Anchor>
-    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>node</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ad156d481575b1064cfe3673afb0760c0</Anchor>
-    <Abstract>Write the information of a node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aa4eab18b90e883fddbf2b7367f654d7b</Anchor>
-    <Abstract>Write general dot information. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>a64ecb170a7342bba287d37909b9d47b2</Anchor>
-    <Abstract>Close the dot graph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getDot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>aa1c58f873cee40263ac5a2c07fb617b5</Anchor>
-    <Abstract>Create the dot string. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotToFile</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ab9fb1f388749ced3ba64ee867fae0920</Anchor>
-    <Abstract>Get the dot representation and write it to a file. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>runDot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>compiler::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>ab8d86a047857d932d4a46bced06e74ba</Anchor>
-    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>a8fb37509b863bbe85fce88efe04582db</Anchor>
+    <Abstract>Select a backend to use. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>compiler::dot</Scope>
+      <Scope>backEnd</Scope>
     </TokenIdentifier>
-    <Path>namespacecompiler_1_1dot.html</Path>
-    <Anchor>adb6f951642eea49a163ed8d57732e911</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>a41d4b4095b3d47b58a718fed9939d0b4</Anchor>
+    <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>compiler::traverse</Name>
+      <Name>backend</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>a660fca84b9adcb4d5ea328e1de41e36c</Anchor>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>backEnd::DVM</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>compiler::traverse</Scope>
+      <Scope>backEnd::DVM</Scope>
     </TokenIdentifier>
-    <Path>namespacecompiler_1_1traverse.html</Path>
-    <Abstract>IGR Traversals. </Abstract>
+    <Path>namespaceback_end_1_1_d_v_m.html</Path>
+    <Abstract>DVM Backend. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>traverseAll</Name>
+      <Name>backEnd::DVM::dis</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>backEnd::DVM::dis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Abstract>dis writer </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createLink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
-      <Scope>compiler::traverse</Scope>
+      <Scope>backEnd::DVM::dis</Scope>
     </TokenIdentifier>
-    <Path>namespacecompiler_1_1traverse.html</Path>
-    <Anchor>a8e26de5b58a3972dc0f7a780f64889d4</Anchor>
-    <Abstract>Traverse all the nodes in the program. </Abstract>
-    <DeclaredIn>traverse.py</DeclaredIn>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>abd4da19657e02a55927f2479fd1fc4bf</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::dis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>a5bd8cc014e09436563319444734d28c4</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::dis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>a1bb2a201b018c8c28ffba4256245210a</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::dis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>ad5c8bcaf3fcb3dea28cbe8558db89667</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>DVM_CHUNKS</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dis</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
+    <Anchor>a6d420beb3004da764486ac5f6234451b</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>backEnd::DVM::dis::DIS</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a862f60046204a6dc3182efc1bc660285</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addPredefined</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a96491fe3e55e7086c30365066487eb92</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>add</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a3f4a6fc1203b5147632136faa9445715</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__repr__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>abdcb364c7cca5bce4cf6a217fa6514d2</Anchor>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>memory</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a5718ecd0dd2ae03bee5e23889512877f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>backEnd::DVM::dvm</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Abstract>dvm interface </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>a4c5f5cb49eb78f3d7590b7d2d07115dd</Anchor>
+    <Abstract>Run DVM on a dis string, with inputs, and return the results. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>ad7747e30f6792420939e7cb9f942d0f1</Anchor>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>path</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>a962c0895671f5ed5463d5b0c17d8a471</Anchor>
+    <Abstract>Default dvm path. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>cores</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>a2f3589e96060b2ba8b7881f6517c28f4</Anchor>
+    <Abstract>Default amount of cores to use. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>logLevel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::dvm</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+    <Anchor>ae31b46dd72807e5a67434feb14bda152</Anchor>
+    <Abstract>Default loglevel to use. </Abstract>
+    <DeclaredIn>dvm.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>backEnd::DVM::literals</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Abstract>IGR Literal removal. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a502b93aec6ea128eea879ba1ade42a1a</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getInputs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>af3f1c6df1cac8584b86c763d825d8e43</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>transformNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a726f37313ce3b3d4bd2f31fd6c6f5c5b</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeOperationLiterals</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3501,119 +3713,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::instruction::StaticInstruction</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Abstract>A static instruction will always send it&amp;#39;s output to the same instructions. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__init__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a8910598506429ab84a1cc667de97bcae</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
-    <Abstract>Add a destination to this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
-    <Abstract>Send a datum to any destination of a given output port. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-    <Abstract>Set the instruction address. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-    <Abstract>Return a string representation of this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>execute</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
-    <Abstract>Execute an instruction with a given input and a core. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>destinations</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>core::instruction::OperationInstruction</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -3646,6 +3745,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a27477e05a6e6dbf16939a4532e73b597</Anchor>
+    <Abstract>Add a destination to this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a14b34a4fdc90cc814c131496e996621b</Anchor>
+    <Abstract>Send a datum to all of the destinations. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addLiteral</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3670,18 +3793,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>sendResults</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.OperationInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a01795f99a948bc57c713a8700ef89353</Anchor>
-    <Abstract>Send results to the relevant destinations. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3689,30 +3800,6 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Anchor>a8abe301191403572cbad6ad631081f0a</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
-    <Abstract>Add a destination to this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
-    <Abstract>Send a datum to any destination of a given output port. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -3738,6 +3825,16 @@
     <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.OperationInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+    <Anchor>a0ffa039eaaca02bac84191551983f93d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3791,16 +3888,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>destinations</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -3821,13 +3908,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>execute</Name>
+      <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>core.instruction.Sink</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-    <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
+    <Anchor>a015f4ff2df95bd364bc31e0358e3dff2</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -3835,10 +3922,10 @@
       <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.Sink</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a97a63c9bf04b2aa65f961d3a5c82f016</Anchor>
+    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+    <Anchor>a9545071b3712fea67400ae47e07e2c28</Anchor>
     <Abstract>Add a destination to this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -3847,11 +3934,22 @@
       <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.Sink</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>a60d5ee618b60b7883145196a9b156fbc</Anchor>
+    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+    <Anchor>aedb57639f9f4a1c3adbea004fbd87958</Anchor>
     <Abstract>Send a datum to any destination of a given output port. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Sink</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+    <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -3895,10 +3993,10 @@
       <Name>destinations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.StaticInstruction</Scope>
+      <Scope>core.instruction.Sink</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_static_instruction.html</Path>
-    <Anchor>aca75a92404220de078cd6b6404c476f8</Anchor>
+    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+    <Anchor>a02113388d825011118e5981d57bf960e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5094,150 +5192,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Abstract>dis writer </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>createLink</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a8754982922e5d2d86d7de97e2c5ef56c</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>createLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a53ee9ae90563c6d185c7d09e547878a2</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>createInstruction</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a9c74faf13d88f8573a78c80b87a8c4d8</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>createChunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a04b15ed481cfac10622df65dcf61c066</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>DVM_CHUNKS</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>dis</Scope>
-    </TokenIdentifier>
-    <Path>namespacedis.html</Path>
-    <Anchor>a55ce6d7a84e53919269f6c654a796363</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis::DIS</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>dis.DIS</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__init__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>dis.DIS</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s.html</Path>
-    <Anchor>a27610d3e872288629a52c805752365b7</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addPredefined</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>dis.DIS</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s.html</Path>
-    <Anchor>ab885b5614aecfd5e583edbc5d92869a4</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>add</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>dis.DIS</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s.html</Path>
-    <Anchor>a55562567c76e23d7c4d67b312e87f0e0</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__repr__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>dis.DIS</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s.html</Path>
-    <Anchor>a72806dbf5289ae979eba0ee704d72c7e</Anchor>
-    <DeclaredIn>dis.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>memory</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>dis.DIS</Scope>
-    </TokenIdentifier>
-    <Path>classdis_1_1_d_i_s.html</Path>
-    <Anchor>ad1f4540cecd1520befe3581150219cad</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>DISc</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>DISc</Scope>
-    </TokenIdentifier>
-    <Path>namespace_d_i_sc.html</Path>
-    <Abstract>DISc Main file. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>disc</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
       <Scope>disc</Scope>
     </TokenIdentifier>
     <Path>namespacedisc.html</Path>
+    <Abstract>DISc Main file. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5270,30 +5231,6 @@
     <Path>namespacedvm.html</Path>
     <Anchor>a2e32617d77431cc90e14996cd05d3bcd</Anchor>
     <Abstract>Handle an exit signal. </Abstract>
-    <DeclaredIn>dvm.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseOutput</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dvm</Scope>
-    </TokenIdentifier>
-    <Path>namespacedvm.html</Path>
-    <Anchor>ab8e096f66f5f0da001430b9d3c397895</Anchor>
-    <Abstract>Parse the result that DVM returns. </Abstract>
-    <DeclaredIn>dvm.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>run</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dvm</Scope>
-    </TokenIdentifier>
-    <Path>namespacedvm.html</Path>
-    <Anchor>a957ece81194e852aa567436ede5e61a4</Anchor>
-    <Abstract>Run DVM on a dis string, with inputs, and return the results. </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -5332,22 +5269,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>frontend</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>frontend</Scope>
-    </TokenIdentifier>
-    <Path>namespacefrontend.html</Path>
-    <Abstract>DISc Frontend Selector. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>frontEnd</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
       <Scope>frontEnd</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end.html</Path>
+    <Abstract>DISc Frontend Selector. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5415,6 +5343,7 @@
       <Scope>frontEnd::IF1</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1.html</Path>
+    <Abstract>DISc IF1 Parser. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5483,6 +5412,7 @@
       <Scope>frontEnd::IF1::compound</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
+    <Abstract>Compound node reference. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5526,6 +5456,7 @@
       <Scope>frontEnd::IF1::edge</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
+    <Abstract>Parse edges and literalss. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5669,6 +5600,7 @@
       <Scope>frontEnd::IF1::environment</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1environment.html</Path>
+    <Abstract>Node lookup and scoping rules. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5956,6 +5888,7 @@
       <Scope>frontEnd::IF1::graph</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1graph.html</Path>
+    <Abstract>Node parser. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6210,6 +6143,7 @@
       <Scope>frontEnd::IF1::type</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1type.html</Path>
+    <Abstract>Type parser. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6708,6 +6642,7 @@
       <Scope>frontEnd::Sisal</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_sisal.html</Path>
+    <Abstract>DISc Sisal FrontEnd. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6719,75 +6654,6 @@
     <Path>namespacefront_end_1_1_sisal.html</Path>
     <Anchor>a07d185fe199f22e2471104b3d2c81189</Anchor>
     <DeclaredIn>Sisal.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>IF1</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>IF1</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_f1.html</Path>
-    <Abstract>DISc IF1 Parser. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>if1parser</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>if1parser</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>if1parser::compound</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>if1parser::compound</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1compound.html</Path>
-    <Abstract>Compound node reference. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>if1parser::edge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>if1parser::edge</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1edge.html</Path>
-    <Abstract>Parse edges and literalss. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>if1parser::environment</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>if1parser::environment</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1environment.html</Path>
-    <Abstract>Node lookup and scoping rules. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>if1parser::graph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>if1parser::graph</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1graph.html</Path>
-    <Abstract>Node parser. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>if1parser::type</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>if1parser::type</Scope>
-    </TokenIdentifier>
-    <Path>namespaceif1parser_1_1type.html</Path>
-    <Abstract>Type parser. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6930,6 +6796,241 @@
     <Anchor>a8d4b1dd299b3c727df94aef20c4c31a4</Anchor>
     <Abstract>Connect 2 ports with an implicit edge. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>IGR::dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Abstract>IGR dot parser. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a4bd3bade93d0c9cc2639909fcd69df67</Anchor>
+    <Abstract>Add the attributes of the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5baab6aaadcf5140cfbb898db02b05b8</Anchor>
+    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ae5e8d3e2913028ae98733ddcf020e92e</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ac646de3e1d3a4805bbfd4e57a4c2e1cb</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>portString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5a22fe85fa8282dad19c1b89d9321197</Anchor>
+    <Abstract>Get a representation for a port. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ports</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ab79b8194b24dd32372e38dc81ba38699</Anchor>
+    <Abstract>String representation of a port list. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a48a74ea4c04164cae3ea5629cfc36f17</Anchor>
+    <Abstract>Get the portlist for the inputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>outputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5a68597ca34591a3d97d7282bfe67872</Anchor>
+    <Abstract>Get the portlist for the outputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a852920d8b1f41945a0507ac7e54e9ab4</Anchor>
+    <Abstract>Identifier of the node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>edgeStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a2f144e23d21de41e8dd391dfc6aac7b5</Anchor>
+    <Abstract>Convert a connection to a string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLabel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a0ed7e0a8b80f6b70852adf99cd161b0e</Anchor>
+    <Abstract>Add the label of the node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a4bf8bc67240f948ad26dc3ccff87cafc</Anchor>
+    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>node</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a2fa4fdf242aff219099986af386e1751</Anchor>
+    <Abstract>Write the information of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a7ce9fa8e72127cc7889c1a94afff20fa</Anchor>
+    <Abstract>Write general dot information. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>aaa36857df44a7aaf9eeb95b5966c40a0</Anchor>
+    <Abstract>Close the dot graph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ad2dcf03200a33c5368bc5ac31bf518e5</Anchor>
+    <Abstract>Create the dot string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotToFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>aa15087bf161d5c705a29e7ab84d9fdf9</Anchor>
+    <Abstract>Get the dot representation and write it to a file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a849825adcd89144f89c2e7fa6a826052</Anchor>
+    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ab3de22a8cb6b97c5257cb23f3078fd74</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7146,30 +7247,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7259,16 +7336,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7367,30 +7434,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getOutputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7466,16 +7509,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7564,30 +7597,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -7666,16 +7675,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7744,30 +7743,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
     <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
@@ -7874,16 +7849,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7980,30 +7945,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8094,16 +8035,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>inputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -8188,30 +8119,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8299,16 +8206,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8384,30 +8281,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8495,16 +8368,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8580,30 +8443,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8691,16 +8530,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8776,30 +8605,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8887,16 +8692,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8972,30 +8767,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9083,16 +8854,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9168,30 +8929,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9279,16 +9016,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9364,30 +9091,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9475,16 +9178,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9560,30 +9253,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9671,16 +9340,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9756,30 +9415,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -9867,16 +9502,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9952,30 +9577,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -10063,16 +9664,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10148,30 +9739,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -10259,16 +9826,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10344,30 +9901,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>bind</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a45ca31b2ad560d2e029b75ffafddbe3d</Anchor>
-    <Abstract>Bind this node to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>adaa0a0c9d940c8338eff971b2dfd0bc2</Anchor>
-    <Abstract>Reset the link to a DIS instruction. </Abstract>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -10455,16 +9988,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
     <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dis</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>a2cd934bda9ac49b3a18325871854bdaf</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10946,6 +10469,28 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>IGR::traverse</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>IGR::traverse</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1traverse.html</Path>
+    <Abstract>IGR Traversals. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>traverse</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::traverse</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1traverse.html</Path>
+    <Anchor>adc3bc5eee2649d3470326bb52ab80759</Anchor>
+    <Abstract>Traverse all the nodes in the program. </Abstract>
+    <DeclaredIn>traverse.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -11058,6 +10603,18 @@
     <Path>namespacenatives.html</Path>
     <Anchor>aed55008480d45b53b15b2725fdb29735</Anchor>
     <Abstract>Create a DVM Array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_tuple</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a6b3709427de8b87be49d3ffcd3f41cb8</Anchor>
+    <Abstract>Create a DVM Tuple. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
@@ -11542,6 +11099,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_tup_get</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
+    <Abstract>Access an element of a tuple. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>operations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -11762,15 +11331,5 @@
     <Anchor>a08937222a213e2af5ca289687b490b71</Anchor>
     <Abstract>Functions to parse the various statements. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>Sisal</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>Sisal</Scope>
-    </TokenIdentifier>
-    <Path>namespace_sisal.html</Path>
-    <Abstract>DISc Sisal FrontEnd. </Abstract>
   </Token>
 </Tokens>

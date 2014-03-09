@@ -5,7 +5,6 @@ var searchData=
   ['selectcnode',['SelectCNode',['../class_i_g_r_1_1node_1_1_select_c_node.html',1,'IGR::node']]],
   ['seqforallcnode',['SeqForallCNode',['../class_i_g_r_1_1node_1_1_seq_forall_c_node.html',1,'IGR::node']]],
   ['sink',['Sink',['../classcore_1_1instruction_1_1_sink.html',1,'core::instruction']]],
-  ['staticinstruction',['StaticInstruction',['../classcore_1_1instruction_1_1_static_instruction.html',1,'core::instruction']]],
   ['stopinstruction',['StopInstruction',['../classcore_1_1instruction_1_1_stop_instruction.html',1,'core::instruction']]],
   ['stoptag',['StopTag',['../classcore_1_1token_1_1_stop_tag.html',1,'core::token']]],
   ['subgraph',['SubGraph',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html',1,'IGR::subgraph']]],

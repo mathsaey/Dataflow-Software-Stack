@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['dotfooter',['dotFooter',['../namespacecompiler_1_1dot.html#a64ecb170a7342bba287d37909b9d47b2',1,'compiler::dot']]],
-  ['dotheader',['dotHeader',['../namespacecompiler_1_1dot.html#aa4eab18b90e883fddbf2b7367f654d7b',1,'compiler::dot']]],
-  ['dottofile',['dotToFile',['../namespacecompiler_1_1dot.html#ab9fb1f388749ced3ba64ee867fae0920',1,'compiler::dot']]],
+  ['deletenode',['deleteNode',['../namespaceback_end_1_1_d_v_m_1_1literals.html#aeccc2a181d4ca275701e9ece1fd160e4',1,'backEnd::DVM::literals']]],
+  ['dot',['dot',['../namespace_i_g_r_1_1dot.html#a849825adcd89144f89c2e7fa6a826052',1,'IGR::dot']]],
+  ['dotfooter',['dotFooter',['../namespace_i_g_r_1_1dot.html#aaa36857df44a7aaf9eeb95b5966c40a0',1,'IGR::dot']]],
+  ['dotheader',['dotHeader',['../namespace_i_g_r_1_1dot.html#a7ce9fa8e72127cc7889c1a94afff20fa',1,'IGR::dot']]],
+  ['dottofile',['dotToFile',['../namespace_i_g_r_1_1dot.html#aa15087bf161d5c705a29e7ab84d9fdf9',1,'IGR::dot']]],
   ['dvm_5fadd',['dvm_add',['../namespacenatives.html#a02049f1feebcffefe7962b4fb083d6c7',1,'natives']]],
   ['dvm_5fand',['dvm_and',['../namespacenatives.html#ad9af42003b8677c6e6ecfe3545dcfabc',1,'natives']]],
   ['dvm_5farr_5fadd_5fback',['dvm_arr_add_back',['../namespacenatives.html#a1386b2f1dd931140e6e316a8d1cf304f',1,'natives']]],
@@ -47,6 +49,8 @@ var searchData=
   ['dvm_5fstr_5fupper',['dvm_str_upper',['../namespacenatives.html#ae974ce37d8ff02e6365a0693f40d2211',1,'natives']]],
   ['dvm_5fstring',['dvm_String',['../namespacenatives.html#af04b34115cdd45ae74ef9eafa0d0dac9',1,'natives']]],
   ['dvm_5fsub',['dvm_sub',['../namespacenatives.html#ab456d991b7ede8c8d839657265d4bf9e',1,'natives']]],
+  ['dvm_5ftup_5fget',['dvm_tup_get',['../namespacenatives.html#a9c427a29c131341dd518e43090dfea94',1,'natives']]],
+  ['dvm_5ftuple',['dvm_tuple',['../namespacenatives.html#a6b3709427de8b87be49d3ffcd3f41cb8',1,'natives']]],
   ['dvm_5fvoid',['dvm_Void',['../namespacenatives.html#a0347dd8cdda0fb96d131fad5e32ec064',1,'natives']]],
   ['dvm_5fxor',['dvm_xor',['../namespacenatives.html#ac379fbaba75e081ea9b8a715c711353b',1,'natives']]]
 ];

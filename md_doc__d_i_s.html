@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">dbd58ed</span>
+   &#160;<span id="projectnumber">51da7ba</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -170,11 +170,11 @@ Instructions</h2>
 </pre><p>The opCodes can be found in the <a href="#Operations">appendix</a></p>
 <h4>Entry and Exit point</h4>
 <p>In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are added by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.</p>
-<p>The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0. These points are added through the program begin and program end points. Both of these take one additional argument, which represents the amount of tokens the program accepts/returns.</p>
+<p>The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0. These points are added through the program begin and program end points. The program entry point should also defined the amount of inputs the program accepts.</p>
 <p>entry point: </p>
 <pre class="fragment">INST PB 0 &lt;inputs&gt;
 </pre><p>exit point: </p>
-<pre class="fragment">INST PE 0 &lt;outputs&gt;
+<pre class="fragment">INST PE 0
 </pre><h2><a class="anchor" id="Literals"></a>
 Literals</h2>
 <p>Some instructions can take some arguments that are known in advance. Examples are additions where one of the elements is already known or function calls with a few predefined arguments. It's important to know that every instruction needs at least one unknown attribute, an attribute which is not a literal. Any instruction that only accepts literals should be precomputed.</p>
@@ -344,7 +344,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 9 2014 01:26:24 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 9 2014 22:47:17 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

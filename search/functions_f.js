@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['reset',['reset',['../class_i_g_r_1_1node_1_1_node.html#adaa0a0c9d940c8338eff971b2dfd0bc2',1,'IGR.node.Node.reset()'],['../namespacecore_1_1memory.html#a1765945bfc16abcf7ecf4b56c4d5d1ee',1,'core.memory.reset()']]],
+  ['removeoperationliterals',['removeOperationLiterals',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a12430b741030fa8bd4efb49fa613fe2f',1,'backEnd::DVM::literals']]],
+  ['reset',['reset',['../namespacecore_1_1memory.html#a1765945bfc16abcf7ecf4b56c4d5d1ee',1,'core::memory']]],
   ['restorecontext',['restoreContext',['../classcore_1_1token_creator_1_1_token_creator.html#ae9ee1f333586314900f7c802ca984cf6',1,'core::tokenCreator::TokenCreator']]],
-  ['run',['run',['../namespacedvm.html#a957ece81194e852aa567436ede5e61a4',1,'dvm']]],
-  ['rundot',['runDot',['../namespacecompiler_1_1dot.html#ab8d86a047857d932d4a46bced06e74ba',1,'compiler::dot']]]
+  ['run',['run',['../namespaceback_end_1_1_d_v_m_1_1dvm.html#a4c5f5cb49eb78f3d7590b7d2d07115dd',1,'backEnd::DVM::dvm']]]
 ];

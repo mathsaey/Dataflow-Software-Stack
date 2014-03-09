@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">dbd58ed</span>
+   &#160;<span id="projectnumber">51da7ba</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> </div>  </div>
+<div class="title">IF1 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
@@ -97,10 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> Quick Reference</h1>
-<p>This page serves as a basic introduction to the <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> language. The information on this page is based on the paper: <code><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)</code></p>
-<p>On this page, we attempt to create a compact yet complete overview of the language that should be enough to write an if1 parser without any previous <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> knowledge.</p>
-<p>A few <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> and <a class="el" href="namespace_sisal.html" title="DISc Sisal FrontEnd. ">Sisal</a> examples are present in the repository, a copy of these examples is also present in the documentation:</p>
+<div class="textblock"><h1>IF1 Quick Reference</h1>
+<p>This page serves as a basic introduction to the IF1 language. The information on this page is based on the paper: <code>IF1 - An Intermediate Form for Applicative Languages. (Stephen Skedzielewski 1985)</code></p>
+<p>On this page, we attempt to create a compact yet complete overview of the language that should be enough to write an if1 parser without any previous IF1 knowledge.</p>
+<p>A few IF1 and Sisal examples are present in the repository, a copy of these examples is also present in the documentation:</p>
 <ul>
 <li><a href="_Simple.html">Simple piece of Sisal/IF1 code</a></li>
 <li><a href="_Call.html">Simple call in Sisal/IF1</a></li>
@@ -109,11 +109,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h1><a class="anchor" id="Concepts"></a>
 IF1 Concepts</h1>
-<p><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> represents directed, acyclic graphs, these graphs have a few components.</p>
+<p>IF1 represents directed, acyclic graphs, these graphs have a few components.</p>
 <ul>
-<li><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> nodes are operations.<ul>
+<li>IF1 nodes are operations.<ul>
 <li>a node can have an arbitrary amount of in -and outputs.</li>
-<li><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> defines over 50 nodes, that is, "native" operations.</li>
+<li>IF1 defines over 50 nodes, that is, "native" operations.</li>
 <li>The in -and output of a node happens through <b>ports</b>, which are numbered indicators of in and output locations</li>
 <li>Port indexing starts from 1</li>
 <li>Not every node has a predefined amount of ports.</li>
@@ -136,7 +136,7 @@ IF1 Concepts</h1>
 </ul>
 <h1><a class="anchor" id="Form"></a>
 IF1 Instructions</h1>
-<p><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> instructions are delimited by newlines. The first character after a newline determines the type of instruction the line represents, the rest of the line consists of a number of whitespace separated fields, the amount of which depends on that specific instruction. Any extra text listed after the fields is considered to be a comment, so are lines that start with C. For more information about comments, look into <a href="#Comments">appendix A</a>.</p>
+<p>IF1 instructions are delimited by newlines. The first character after a newline determines the type of instruction the line represents, the rest of the line consists of a number of whitespace separated fields, the amount of which depends on that specific instruction. Any extra text listed after the fields is considered to be a comment, so are lines that start with C. For more information about comments, look into <a href="#Comments">appendix A</a>.</p>
 <p>The following table lists the different instructions types.</p>
 <table class="doxtable">
 <tr>
@@ -164,7 +164,7 @@ IF1 Instructions</h1>
 </table>
 <p>The semantics of these instructions are explained below, explanation about <em>labels</em> and <em>types</em> are presented in the <a href="#types">labels and types</a> section.</p>
 <ul>
-<li>Simple nodes simply contain a label and an identifier, this identifier represents a native <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> instruction.</li>
+<li>Simple nodes simply contain a label and an identifier, this identifier represents a native IF1 instruction.</li>
 <li>Compound nodes contain subgraphs and represent more complex operations, such as a for loop.</li>
 <li>The compound node contains a few subgraphs that represent parts of the compound node, such as the initialization and the condition check, the association list shows which subgraphs represent which action.</li>
 <li>Graph boundaries represent a function and simply contain the type (check out the function type) and name of this function.</li>
@@ -175,7 +175,7 @@ IF1 Instructions</h1>
 </ul>
 <h2><a class="anchor" id="types"></a>
 Labels and Types</h2>
-<p><a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> instructions commonly contain a type identifier, the purpose of this section is to explain <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> type definitions, any defined type is referred to by it's <em>label</em>.</p>
+<p>IF1 instructions commonly contain a type identifier, the purpose of this section is to explain IF1 type definitions, any defined type is referred to by it's <em>label</em>.</p>
 <p>Labels are represented by integers, and are used to identify nodes and types. Nodes and types do not share labels, that is, a node and a type may have the same integer as label without being related in any way. Type labels share a global scope, while Node labels only have to be unique within their enclosing graph. It's also worth noting that a missing or unknown type is referred to by using the label 0.</p>
 <p>With that being said, we can look at the type definitions: </p>
 <pre class="fragment">T label type_code arg_1 arg_2
@@ -252,7 +252,7 @@ Labels and Types</h2>
 <p>In terms of higher level languages, the function type simple declares the function's signature, without the name.</p>
 <h1><a class="anchor" id="Comments"></a>
 Appendix A: Comments</h1>
-<p>2 main types of comments exist in <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a>, stamps and pragmas, stamps are comments that occupy an entire line that starts with <code>C$</code>, pragmas are comments that are added after the fields of a line.</p>
+<p>2 main types of comments exist in IF1, stamps and pragmas, stamps are comments that occupy an entire line that starts with <code>C$</code>, pragmas are comments that are added after the fields of a line.</p>
 <h2><a class="anchor" id="Stamps"></a>
 Stamps</h2>
 <p>Stamps are used to mark some processing that has been done to a file, a few stamp type exists. A stamp line has the following syntax: <code>C$ stamp_type info</code>. The following table provides an overview of the different stamp types.</p>
@@ -331,7 +331,7 @@ Appendix B: Literal Definitions</h1>
 </table>
 <h1><a class="anchor" id="Nodes"></a>
 Appendix C: Nodes</h1>
-<p>The next section desribes both the simple and compound nodes that <a class="el" href="namespace_i_f1.html" title="DISc IF1 Parser. ">IF1</a> predefines, a few datatype conventions should be established for this.</p>
+<p>The next section desribes both the simple and compound nodes that IF1 predefines, a few datatype conventions should be established for this.</p>
 <ul>
 <li><em>arith</em> types correspond to any numeric type</li>
 <li><em>algeb</em> types correspond to arith types and booleans</li>
@@ -578,7 +578,7 @@ Compound Nodes</h2>
 </table>
 <h3>Select</h3>
 <ul>
-<li>Goal: The select node represents a multiway selection. <a class="el" href="namespace_sisal.html" title="DISc Sisal FrontEnd. ">Sisal</a> only supports a 2 way selection, but this compound node could be used to implement different constructs such as a switch too.</li>
+<li>Goal: The select node represents a multiway selection. Sisal only supports a 2 way selection, but this compound node could be used to implement different constructs such as a switch too.</li>
 <li>Subnodes:<ul>
 <li>1 predicate node that returns a number between 0 and n - 1, n being the amount of subnodes.</li>
 <li>Every other node is a path that can be followed depending on the result of the predicate.</li>
@@ -658,7 +658,7 @@ Compound Nodes</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 9 2014 01:26:24 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 9 2014 22:47:17 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
