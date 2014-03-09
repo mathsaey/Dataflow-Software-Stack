@@ -33,24 +33,26 @@
 # This python module contains the DVM intermediate form, called 
 # Intermediate Graph Representation (IGR).
 #
-# This form is produced by the parser and is the target of some
-# optimizations. 
+# The general idea behind IGR is that it doesn't know anything about the
+# outside world. It is only a graph representation that can be modified by
+# both the front and the backend. However, IGR should not depend on either
+# the front or backend, instead, IGR should be rich enough to work with 
+# a variety of front and backends.
 # 
 # This module should be considerd a stable frontend of the module,
 # external modules (such as parsers) should only use these functions
 # to create and modify the IGR.
 #
-# \todo 
-#		General structure should remain the same
-#		Operation lifting will be different with own
-#		instructions.
-#		Various new node types to make compounds work on a low level
+# This module also exports 2 functions, dot::dot() and traverse::traverse()
 ##
 
 import node
 import graph
 import literal
 import subgraph
+
+from dot import dot
+from traverse import traverse
 
 # ----- #
 # Graph #

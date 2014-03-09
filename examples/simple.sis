@@ -9,7 +9,7 @@ define Main
 
 function main(a, b, c, d : integer returns integer)
 	let 
-		ab := a + b;
+		ab := 2 + 3;
 		cd := c + d
 	in 
 		ab + cd 

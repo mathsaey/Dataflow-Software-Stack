@@ -37,9 +37,10 @@
 # allows the user to interact with these components.
 ##
 
-import argparse
 import frontEnd
-import compiler.dot
+import backEnd
+import IGR
+import log
 
 # ---------------------- #
 # Command line arguments #
@@ -56,14 +57,19 @@ import compiler.dot
 # args = argParser.parse_args()
 
 
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
 
-import log
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
+
 log.setup(0)
 
-frontEnd.set('IF1')
+frontEnd.set('Sisal')
+backEnd.set('DVM')
 frontEnd.fromFile(loc)
-compiler.dot.runDot(path="../igr.dot", skipCompound = True)
+
+IGR.dot(path="../igrPre.dot", skipCompound = True)
+#traversals.literals.removeOperationLiterals()
+#traversals.dot.runDot(path="../igrPost.dot", skipCompound = True)

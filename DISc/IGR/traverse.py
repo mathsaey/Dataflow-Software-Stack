@@ -25,14 +25,15 @@
 # THE SOFTWARE.
 
 ##
-# \package compiler.traverse
+# \package IGR.traverse
 # \brief IGR Traversals
 # 
-# This module defines the functions that allow us to
-# traverse the IGR graph.
+# This module defines the various functions
+# that allow us to traverse and transform the 
+# IGR graph.
 ##
 
-import IGR
+import graph
 
 ##
 # Traverse all the nodes in the program.
@@ -60,14 +61,14 @@ import IGR
 # \param subGraphs
 #		The subgraphs to traverse. Parses the entire program by default.
 ##
-def traverseAll(
+def traverse(
  	nodeProc, 
 	subGraphStart,
 	subGraphStop, 
 	skipCompound,
 	compoundStart,
 	compoundStop,
-	subGraphs = IGR.getSubGraphs()
+	subGraphs = graph.getSubGraphs()
 	):
 
 	def traverseSubGraph(subGraph, nodeProc):
@@ -80,7 +81,7 @@ def traverseAll(
 	def checkCompound(node):
 		if (not skipCompound) and (node.isCompound()):
 			compoundStart(node)
-			traverseAll(
+			traverse(
 				nodeProc,
 				subGraphStart,
 				subGraphStop,

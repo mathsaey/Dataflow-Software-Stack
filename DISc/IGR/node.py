@@ -80,7 +80,6 @@ class Node(object):
 		super(Node, self).__init__()
 		self.subGraph    = subGraph
 		self.key         = getKey()
-		self.dis         = None
 		self.inputs      = inputs
 		self.outputs     = outputs
 		self.inputPorts  = [port.InputPort(self, i) for i in xrange(0,inputs)]
@@ -92,18 +91,6 @@ class Node(object):
 	def __str__(self):
 		name = self.__class__.__name__
 		return name + " " + "'" + str(self.key) + "'"
-
-	##
-	# Bind this node to a DIS instruction.
-	##
-	def bind(self, dis):
-		self.dis = dis
-
-	##
-	# Reset the link to a DIS instruction.
-	##
-	def reset(self):
-		self.dis = None
 
 	##
 	# Gets an input port. Create it if it doesn't exist yet.

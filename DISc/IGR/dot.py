@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package compiler.dot
+# \package IGR.dot
 # \brief IGR dot parser
 # 
 # This module can return a dot version of the graph.
@@ -171,7 +171,7 @@ def getDot(skipCompound):
 	buffer = StringIO.StringIO()
 	dotHeader(buffer)
 
-	traverse.traverseAll(
+	traverse.traverse(
 		lambda nd: node(buffer, nd),
 		lambda sg: subGraphHeader(buffer, sg),
 		lambda sg: subGraphFooter(buffer, sg),
@@ -220,12 +220,8 @@ def dotToFile(path, skipCompound = True):
 #		These options should be passed as a list of strings.
 # \param skipCompound 
 #		True if you do not want to display the compound nodes.
-#
-# \bug 
-#	Running dot does not produce output when running with pypy.
-#	Runs fine on python
 ##
-def runDot(
+def dot(
 	dotpath = "dot",
 	path = "igr.dot", 
 	format = "png", 

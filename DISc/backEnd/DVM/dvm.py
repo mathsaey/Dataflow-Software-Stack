@@ -34,16 +34,17 @@
 
 import subprocess
 
-##
-# Parse the result that DVM returns.
-#
-# \param str
-#		The result, in string form.
-# \return
-#		The python version of the result.
-##
-def parseOutput(str):
-	return eval(str)
+import logging
+log = logging.getLogger(__name__)
+
+## Default dvm path.
+path = 'dvm'
+
+## Default amount of cores to use.
+cores = 1
+
+## Default loglevel to use.
+logLevel = 50
 
 ##
 # Run DVM on a dis string, with inputs,
@@ -63,7 +64,7 @@ def parseOutput(str):
 # \return
 #		The output returned by dvm, as a python object.
 ##
-def run(dvmPath = "dvm", inputs = [], dis = None, cores = 1, logLevel = 50):
+def run(dvmPath = path, inputs = [], dis = None, cores = cores, logLevel = logLevel):
 	args = [dvmPath, "-", "-c", str(cores), "-ll", str(logLevel)]
 
 	for e in inputs:
@@ -72,4 +73,8 @@ def run(dvmPath = "dvm", inputs = [], dis = None, cores = 1, logLevel = 50):
 
 	dvm = subprocess.Popen(args, stdout=subprocess.PIPE,stdin=subprocess.PIPE)
 	res = dvm.communicate(dis)
-	return parseOutput(res[0])
+	ret = dvm.returncode
+
+	if ret:
+		log.error("DVM returned non-zero return code %d", ret)
+	return res[0].strip()

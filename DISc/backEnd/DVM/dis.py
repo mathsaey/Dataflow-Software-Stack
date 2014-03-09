@@ -61,11 +61,11 @@ class DIS(object):
 	def __init__(self, inputs, outputs):
 		super(DIS, self).__init__()
 		self.memory = [[] for i in xrange(0, DVM_CHUNKS)]
-		self.addPredefined(inputs, outputs)
+		self.addPredefined(inputs)
 
-	def addPredefined(self, inputs, outputs):
+	def addPredefined(self, inputs):
 		start = createInstruction('PB', 0, [inputs], "Entry point")
-		stop  = createInstruction('PE', 1, [outputs], "Exit point")
+		stop  = createInstruction('PE', 1, [], "Exit point")
 		self.add(start, 0)
 		self.add(stop, 0)
 
