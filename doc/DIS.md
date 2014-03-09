@@ -118,7 +118,7 @@ The opCodes can be found in the [appendix](#Operations)
 
 In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are added by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.
 
-The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0.  These points are added through the program begin and program end points. Both of these take one additional argument, which represents the amount of tokens the program accepts/returns.
+The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0.  These points are added through the program begin and program end points. The program entry point should also defined the amount of inputs the program accepts.
 
 entry point: 
 
@@ -126,7 +126,7 @@ entry point:
 
 exit point:
 
-    INST PE 0 <outputs>
+    INST PE 0
     
 ## Literals {#Literals}
 

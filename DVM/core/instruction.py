@@ -76,20 +76,106 @@ class AbstractInstruction(object):
 	def needsMatcher(self): return False
 
 
-# ------------------ #
-# Static Instruction #
-# ------------------ #
+# ---------- #
+# Operations #
+# ---------- #
 
 ##
-# A static instruction will always send it's 
-# output to the same instructions.
-#
-# A static instruction can have multiple output ports.
-# Furthermore, multiple destinations can exist for a single port.
+# An operation instruction defines a single operation
+# on all of it's inputs.
 ##
-class StaticInstruction(AbstractInstruction):
+class OperationInstruction(AbstractInstruction):
+	def needsMatcher(self): return True
+
+	def __init__(self, operation, inputs):
+		super(OperationInstruction, self).__init__()
+		self.destinations = []
+		self.operation    = operation
+		self.inputs       = inputs
+		self.argLst       = [None] * inputs
+		self.idxLst       = [i for i in xrange(0, inputs)]
+		self.hasLit       = False
+
+	##
+	# Add a destination to this instruction.
+	#
+	# \param inst
+	#		The instruction to send the output to.
+	# \param _ 
+	#		This is an argument that is used to define the 
+	#		output port, when this method is called on a sink.
+	#		It is ignored for operationInstructions.
+	# \param port
+	#		The port to send the output to.
+	##
+	def addDestination(self, _, inst, port):
+		self.destinations.append((inst, port))
+
+	##
+	# Send a datum to all of the destinations.
+	#
+	# \param datum
+	#		The datum to send
+	# \param core
+	#		The core to utilise
+	# \param cont
+	#		The context of the token that will be created.
+	##
+	def sendDatum(self, datum, core, cont):
+		for dst in self.destinations:
+			inst = dst[0]
+			port = dst[1]
+			core.tokenCreator.simpleToken(
+				datum, inst, port, cont)
+
+	##
+	# Add a literal to the operation.
+	# An instruction should never accept only
+	# literals.
+	##
+	def addLiteral(self, port, val):
+		self.argLst[port] = val
+		self.idxLst.remove(port)
+		self.inputs -= 1
+		self.hasLit = True
+
+	##
+	# Merge the literals with the
+	# arguments.
+	##
+	def createArgLst(self, args):
+		if not self.hasLit: return args
+		
+		res = list(self.argLst)
+		idx = 0
+
+		for el in args:
+			res[idx] = el
+			idx += 1
+
+		return res
+
+	def execute(self, tokens, core):
+		log.info("executing %s", self)
+		lst = map(lambda x : x.datum, tokens)
+		lst = self.createArgLst(lst)
+		res = self.operation(*lst)
+		cont = tokens[0].tag.cont
+		self.sendDatum(res, core, cont)		
+
+# ----- #
+# Sinks #
+# ----- #
+
+##
+# Sink instruction.
+#
+# A sink is an instruction that only serves
+# to forward any input it receives to it's destinations.
+##
+class Sink(AbstractInstruction):
 	def __init__(self):
-		super(StaticInstruction, self).__init__()
+		super(Sink, self).__init__()
 		self.destinations = {}
 
 	##
@@ -127,83 +213,7 @@ class StaticInstruction(AbstractInstruction):
 			core.tokenCreator.simpleToken(
 				datum, inst, port, cont)
 
-# ---------- #
-# Operations #
-# ---------- #
 
-##
-# An operation instruction defines a single operation
-# on all of it's inputs.
-##
-class OperationInstruction(StaticInstruction):
-	def needsMatcher(self): return True
-
-	def __init__(self, operation, inputs):
-		super(OperationInstruction, self).__init__()
-		self.operation = operation
-		self.inputs    = inputs
-		self.argLst    = [None] * inputs
-		self.idxLst    = [i for i in xrange(0, inputs)]
-		self.hasLit    = False
-
-	##
-	# Add a literal to the operation.
-	# An instruction should never accept only
-	# literals.
-	##
-	def addLiteral(self, port, val):
-		self.argLst[port] = val
-		self.idxLst.remove(port)
-		self.inputs -= 1
-		self.hasLit = True
-
-	##
-	# Merge the literals with the
-	# arguments.
-	##
-	def createArgLst(self, args):
-		if not self.hasLit: return args
-		
-		res = list(self.argLst)
-		idx = 0
-
-		for el in args:
-			res[idx] = el
-			idx += 1
-
-		return res
-
-	##
-	# Send results to the relevant destinations.
-	#
-	# Simply forwards any element in the list to all the
-	# destinations of the matching output port of the instruction.
-	# The length of results should be equal to the amount of output ports.
-	##
-	def sendResults(self, results, core, cont):
-		for i in xrange(0, len(results)):
-			res = results[i]
-			self.sendDatum(res, core, i, cont)
-
-	def execute(self, tokens, core):
-		log.info("executing %s", self)
-		lst = map(lambda x : x.datum, tokens)
-		lst = self.createArgLst(lst)
-		res = self.operation(*lst)
-		cont = tokens[0].tag.cont
-		self.sendResults([res], core, cont)		
-
-# ----- #
-# Sinks #
-# ----- #
-
-##
-# Sink instruction.
-#
-# A sink is an instruction that only serves
-# to forward any input it receives to it's destinations.
-##
-class Sink(StaticInstruction):
 	def execute(self, token, core):
 		port = token.tag.port
 		cont = token.tag.cont
