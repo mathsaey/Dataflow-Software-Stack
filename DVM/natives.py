@@ -57,6 +57,13 @@ def dvm_String(x): return str(x)
 ##
 def dvm_Array(*x): return list(x)
 
+##
+# Create a DVM Tuple
+# 
+# DVM Tuples are indexed start from 0
+##
+def dvm_tuple(*x): return tuple(x)
+
 # ----------------- #
 # General Operators #
 # ----------------- #
@@ -455,6 +462,21 @@ def dvm_arr_add_back(arr, el):
 def dvm_arr_sub(arr, start, stop):
 	return arr[start:stop]
 
+
+# ---------------- #
+# Tuple Operations #
+# ---------------- #
+
+## 
+# Access an element of a tuple.
+#
+# \param tup A tuple
+# \param idx An integer
+# \return The element found at idx in the tuple.
+##
+def dvm_tup_get(tup, idx):
+	return tup[idx]
+
 ## 
 # Contains references to all
 # the operations.
@@ -466,6 +488,7 @@ operations = {
 	'float'       : dvm_Float,
 	'string'      : dvm_String,
 	'array'       : dvm_Array,
+	'tuple'       : dvm_tuple,
 
 	'noOp'        : dvm_noOp,
 	'isVoid'      : dvm_isVoid,
@@ -510,5 +533,7 @@ operations = {
 	'arrCat'      : dvm_arr_catenate,
 	'arrFrnt'     : dvm_arr_add_front,
 	'arrBck'      : dvm_arr_add_back,
-	'arrSub'      : dvm_arr_sub 
+	'arrSub'      : dvm_arr_sub,
+
+	'tupGet'      : dvm_tup_get
 }
