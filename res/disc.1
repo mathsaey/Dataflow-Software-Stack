@@ -25,7 +25,8 @@ sources. This option is not needed if DVM is part of your path.
 .br
 Specify the front end to use for the compiler. The front end should match the
 name of a package in the frontends source directory which will be used to convert
-the input to the compiler's intermediate form. IF1 is used by default.
+the input to the compiler's intermediate form. The frontend to use will be derived
+from the extention of the input if no frontEnd is specified.
 
 .HP
 -ll logLevel, --logLevel
