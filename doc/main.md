@@ -92,11 +92,8 @@ The use of python can be explained by a number of reasons. First of all, using p
 
 DVM is split up into 2 components:
 
-* DISc, A collection of [DIS](md_doc__d_i_s.html) Compilers.
-	* Contains a collection of frontends, which allow various languages to target [DIS](md_doc__d_i_s.html). The frontends only need to be able to convert their source languages to IGR. 
-		* [The IF1 Parser](\ref if1parser)
-	* IGR, the Intermediate Graph Representation
-	* The ::compiler, which transforms IGR into [DIS](md_doc__d_i_s.html).
-* DVM, the actual execution engine.
-
-IDIS requires access to DVM in order to work correctly.
+* DVM, the actual execution engine. Which accepts [DIS](md_doc__d_i_s.html) as input.
+* DISc, A DIS Compiler built on IGR. This is based on 3 foundations:
+	* IGR, the Intermediate Graph Representation, a flexible, graph-based representation that is the foundation of our compiler.
+	* An easily extensible set of front-ends that parse a source language and turn it into IGR.
+	* An extensible set of back-ends that apply a few transformations to IGR, before mapping it to DIS.
