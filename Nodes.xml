@@ -6160,9 +6160,24 @@
               <Path>disc_8py.html</Path>
               <Subnodes>
                <Node>
+                <Name>argParser</Name>
+                <Path>disc_8py.html</Path>
+                <Anchor>a5dfcf8d99fe7c0a94c95ecaa54f8ad33</Anchor>
+               </Node>
+               <Node>
+                <Name>args</Name>
+                <Path>disc_8py.html</Path>
+                <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
+               </Node>
+               <Node>
                 <Name>loc</Name>
                 <Path>disc_8py.html</Path>
                 <Anchor>a514324055e0953215c42fb956b979201</Anchor>
+               </Node>
+               <Node>
+                <Name>frontEnds</Name>
+                <Path>disc_8py.html</Path>
+                <Anchor>a01640a56051d07e0d0a8093edb175fa0</Anchor>
                </Node>
               </Subnodes>
              </Node>

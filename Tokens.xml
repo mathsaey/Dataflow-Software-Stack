@@ -123,6 +123,28 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>argParser</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a5dfcf8d99fe7c0a94c95ecaa54f8ad33</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>args</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>loc</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -130,6 +152,17 @@
     </TokenIdentifier>
     <Path>namespacedisc.html</Path>
     <Anchor>a514324055e0953215c42fb956b979201</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>frontEnds</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a01640a56051d07e0d0a8093edb175fa0</Anchor>
     <DeclaredIn>disc.py</DeclaredIn>
   </Token>
   <Token>
@@ -5202,6 +5235,28 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>argParser</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a5dfcf8d99fe7c0a94c95ecaa54f8ad33</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>args</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>loc</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -5209,6 +5264,17 @@
     </TokenIdentifier>
     <Path>namespacedisc.html</Path>
     <Anchor>a514324055e0953215c42fb956b979201</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>frontEnds</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a01640a56051d07e0d0a8093edb175fa0</Anchor>
     <DeclaredIn>disc.py</DeclaredIn>
   </Token>
   <Token>
