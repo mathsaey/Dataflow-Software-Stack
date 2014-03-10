@@ -10,7 +10,7 @@ On this page, we attempt to create a compact yet complete overview of the langua
 A few IF1 and Sisal examples are present in the repository, a copy of these examples is also present in the documentation:
 * [Simple piece of Sisal/IF1 code](_Simple.html)
 * [Simple call in Sisal/IF1](_Call.html)
-* [Select compoud node in Sisal/IF1](_Select.html)
+* [Select compound node in Sisal/IF1](_Select.html)
 * [Sorting algorithm in Sisal/IF1](_Sort.html)
 
 [TOC]
@@ -420,7 +420,7 @@ Label | Name
 \include call.if1
 ![Call](../examples/call.dot.png)
 
-\page Select Select compoud node in Sisal/IF1
+\page Select Select compound node in Sisal/IF1
 \include select.sis
 \include select.if1
 ![Select](../examples/select.dot.png)
