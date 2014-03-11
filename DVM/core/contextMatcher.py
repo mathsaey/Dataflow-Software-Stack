@@ -74,9 +74,9 @@ class ContextMatcher(object):
 	def checkKey(self, key):
 		if key not in self.tokens:
 			inst = self.core.memory.get(key[0])
-			inputs = inst.inputs
-			arr = [None] * inputs
-			self.tokens.update({key : arr})
+			arr = [None] * inst.totalinputs
+			inp = inst.realInputs
+			self.tokens.update({key : [arr, 0, inp]})
 
 	##
 	# Update the token array for a key
@@ -91,9 +91,10 @@ class ContextMatcher(object):
 	#		The token we want to add.
 	##
 	def updateKeyArr(self, key, port, token):
-		arr = self.tokens[key]
-		arr[port] = token
-	
+		pair = self.tokens[key]
+		pair[0][port] = token
+		pair[1] += 1
+
 	##
 	# See if all the input tokens are present
 	# for a given key.
@@ -105,14 +106,15 @@ class ContextMatcher(object):
 	#		True if all the input tokens are present for key.
 	##
 	def isKeyReady(self, key):
-		return self.tokens[key].count(None) == 0
+		pair = self.tokens[key]
+		return pair[1] == pair[2]
 
 	##
 	# Add the tokens for key to the scheduler.
 	##
 	def executeKey(self, key):
 		log.info("Executing key: %s", key)
-		arr = self.tokens[key]
+		arr = self.tokens[key][0]
 		del self.tokens[key]
 		self.core.scheduler.schedule(key[0], arr)
 

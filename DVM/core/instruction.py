@@ -90,11 +90,10 @@ class OperationInstruction(AbstractInstruction):
 	def __init__(self, operation, inputs):
 		super(OperationInstruction, self).__init__()
 		self.destinations = []
+		self.totalinputs  = inputs
+		self.realInputs   = inputs
 		self.operation    = operation
-		self.inputs       = inputs
-		self.argLst       = [None] * inputs
-		self.idxLst       = [i for i in xrange(0, inputs)]
-		self.hasLit       = False
+		self.litLst       = [None] * inputs
 
 	##
 	# Add a destination to this instruction.
@@ -134,33 +133,32 @@ class OperationInstruction(AbstractInstruction):
 	# literals.
 	##
 	def addLiteral(self, port, val):
-		self.argLst[port] = val
-		self.idxLst.remove(port)
-		self.inputs -= 1
-		self.hasLit = True
+		self.litLst[port] = val
+		self.realInputs -= 1
 
 	##
-	# Merge the literals with the
-	# arguments.
+	# Replace all empty places in the 
+	# argument list by literals, extract
+	# the datum from tokens and get the context
+	# from one of the tokens.
 	##
 	def createArgLst(self, args):
-		if not self.hasLit: return args
-		
-		res = list(self.argLst)
-		idx = 0
+		cont = None
 
-		for el in args:
-			res[idx] = el
-			idx += 1
+		for i in xrange(0, len(args)):
+			el = args[i]
+			if el:
+				cont = el.tag.cont
+				args[i] = el.datum
+			else: 
+				args[i] = self.litLst[i]
 
-		return res
+		return (cont, args)
 
 	def execute(self, tokens, core):
 		log.info("executing %s", self)
-		lst = map(lambda x : x.datum, tokens)
-		lst = self.createArgLst(lst)
+		cont, lst = self.createArgLst(tokens)
 		res = self.operation(*lst)
-		cont = tokens[0].tag.cont
 		self.sendDatum(res, core, cont)		
 
 # ----- #
