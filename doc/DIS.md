@@ -163,7 +163,7 @@ function Main(x, y):
 end function
 ~~~~
 
-\include simple.dis
+\include example.dis
 
 # Appendix: Operations {#Operations}
 
