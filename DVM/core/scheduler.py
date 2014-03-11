@@ -47,6 +47,9 @@ class Scheduler(object):
 		self.core = core
 		
 	def schedule(self, inst, args):
-		inst = self.core.memory.get(inst)
-		log.info("Scheduling: %s", inst)
-		inst.execute(args, self.core)
+		try:
+			inst = self.core.memory.get(inst)
+			log.info("Scheduling: %s", inst)
+			inst.execute(args, self.core)
+		except KeyError:
+			log.error("Encountered token with faulty destination!")
