@@ -82,4 +82,4 @@ def convertAll(subGraphs = IGR.getSubGraphs()):
 	mainCall = prog.addInstruction(0, 'CC', [mainKey[0], mainKey[1], 0, 1])
 	prog.linkStart(mainCall)
 
-	print prog.generate()
+	return prog.generate()

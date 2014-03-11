@@ -50,7 +50,7 @@ import os
 
 argParser = argparse.ArgumentParser(description = "The DIS Compiler")
 
-# argParser.add_argument("path", help = "The path to the file you want to compile.")
+argParser.add_argument("path", help = "The path to the file you want to compile.")
 argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
 argParser.add_argument("-o", "--output", help = "The location of the output file")
 argParser.add_argument("-f", "--frontEnd", type = str, help = "The frontEnd to use.")
@@ -64,42 +64,41 @@ args = argParser.parse_args()
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
 
-args.path = loc
-args.logLevel = 0
+# args.path = loc
+# args.logLevel = 0
 
 # ------------- #
 # Program Setup #
 # ------------- #
 
+# General 
+
 log.setup(args.logLevel)
-
 fileName, fileExtension = os.path.splitext(args.path)
-
 
 frontEnds = {
 	'.sis' : 'Sisal',
 	'.if1' : 'IF1'
 }
 
+# Frontend
+
 if args.frontEnd:
 	frontEnd.set(args.frontEnd)
 else:
 	frontEnd.set(frontEnds[fileExtension])
 
+frontEnd.fromFile(args.path)
+
+# Backend
+
 backEnd.set('DVM')
 
-# --------------- #
-# Run the Program #
-# --------------- #
+if not args.output: 
+	args.output = '%s.dis' % fileName
 
-frontEnd.fromFile(loc)
+backEnd.toFile(args.output)
 
-#IGR.dot(path="../igrPre.dot", skipCompound = True)
-
-import backEnd.DVM.convertAll
-import backEnd.DVM.literals
-backEnd.DVM.literals.removeOperationLiterals()
-print backEnd.DVM.convertAll.convertAll()
-#IGR.dot(path="../igrPost.dot", skipCompound = True)
+#IGR.dot(path="../igr.dot", skipCompound = True)

@@ -34,8 +34,10 @@
 ##
 
 import literals
+import convertAll
 
 def generate():
 	# Traversals
 	literals.removeOperationLiterals()
-	
+
+	return convertAll.convertAll()

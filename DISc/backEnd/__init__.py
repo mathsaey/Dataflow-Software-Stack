@@ -58,6 +58,15 @@ def set(name):
 ##
 def generate():
 	if backend:
-		backend.generate()
+		return backend.generate()
 	else:
 		log.error("No backend specified...")
+
+##
+# Write the generated output
+# to a file.
+##
+def toFile(path):
+	file = open(path, 'w')
+	file.write(generate())
+	file.close()
