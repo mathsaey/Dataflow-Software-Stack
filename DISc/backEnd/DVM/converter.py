@@ -44,16 +44,51 @@ import IGR.node
 ##
 nodes = {}
 
-## Add the DIS version of an operation to a DIS object
-def convertOpNode(dis, node):
-	key = dis.addInstruction(1, 'OP', [node.operation, node.inputs])
+def linkNode(node, key):
 	nodes.update({node.key : key})
+
+def getKey(node):
+	return nodes[node.key]
+
+def reset():
+	nodes.clear()
+
+def addLinks(dis, node):
+	fromKey = getKey(node)
+	for port in node.outputPorts:
+		fromPort = port.idx
+
+		for port in port.targets:
+			toKey = getKey(port.node)
+			toPort = port.idx
+
+			dis.addLink(fromKey, fromPort, toKey, toPort)
+
+def addLiterals(dis, node):
+	key = getKey(node)
+
+	for port in node.inputPorts:
+		if port.acceptsLiteral():
+			dis.addLiteral(key, port.idx, port.source.value)
+
+def convertGeneralNode(dis, node, chunk, type, args):
+	key = dis.addInstruction(chunk, type, args)
+	linkNode(node, key)
 	return key
 
-def convertSGEntryNode(dis, node): pass
+## Add the DIS version of an operation to a DIS object
+def convertOpNode(dis, node): 
+	return convertGeneralNode(dis, node, 1, 'OP', [node.operation, node.inputs])
+
+def convertSGEntryNode(dis, node):
+	return convertGeneralNode(dis, node, 0, 'SI', [])
+
+def convertSGExitNode(dis, node): 
+	return convertGeneralNode(dis, node, 0, 'CR', [])
 
 converters = {
 	IGR.node.SubGraphEntryNode : convertSGEntryNode,
+	IGR.node.SubGraphExitNode  : convertSGExitNode,
 	IGR.node.OperationNode     : convertOpNode
 }
 

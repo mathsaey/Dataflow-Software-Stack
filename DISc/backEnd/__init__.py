@@ -51,3 +51,13 @@ def set(name):
 		backend = importlib.import_module('.%s' % name, __name__)
 	except ImportError:
 		log.error("Backend '%s' not found.", name)
+
+## 
+# Ask the backend to
+# Generate the output language.
+##
+def generate():
+	if backend:
+		backend.generate()
+	else:
+		log.error("No backend specified...")

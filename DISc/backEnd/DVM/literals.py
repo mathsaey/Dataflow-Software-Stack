@@ -36,7 +36,7 @@
 import dvm
 import dis
 import IGR
-import nodeConverter
+import converter
 
 ## See if an operationNode contains only literals
 def isLiteralOpN(node):
@@ -62,7 +62,7 @@ def getValue(node):
 
 	# Create the program
 	prog = dis.DIS(node.inputs)
-	key = nodeConverter.convertOpNode(prog, node)
+	key = converter.convertOpNode(prog, node)
 	prog.linkStart(key)
 	prog.linkStop(key)
 
@@ -102,3 +102,4 @@ def removeOperationLiterals():
 		lambda x: None,
 		lambda x: None
 		)
+	converter.reset()

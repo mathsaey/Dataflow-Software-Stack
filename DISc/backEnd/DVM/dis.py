@@ -64,6 +64,7 @@ class DIS(object):
 		self.keys = [0 for i in xrange(0, DVM_CHUNKS)]
 
 		self.addPredefined(inputs)
+		self.chunks = DVM_CHUNKS
 		self.inputs = inputs
 
 	## Add the standard statements to DIS.

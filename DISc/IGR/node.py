@@ -159,9 +159,9 @@ class Node(object):
 ##
 class SubGraphEntryNode(Node): 
 
-	def __init__(self, subGraph, outputs = 0):
+	def __init__(self, subGraph, outputs):
 		super(SubGraphEntryNode, self).__init__(subGraph, 0, outputs)
-		self.inputPorts = None
+		self.inputPorts = []
 
 	def getInputPort(self, idx): return None
 	def hasPrevious(self): return False
@@ -176,9 +176,9 @@ class SubGraphEntryNode(Node):
 ##
 class SubGraphExitNode(Node): 
 
-	def __init__(self, subGraph, inputs = 0):
+	def __init__(self, subGraph, inputs):
 		super(SubGraphExitNode, self).__init__(subGraph, inputs, 0)
-		self.OutputPorts = None
+		self.outputPorts = []
 
 	def hasNext(self): return False
 	def getOutputPort(self, idx): return None

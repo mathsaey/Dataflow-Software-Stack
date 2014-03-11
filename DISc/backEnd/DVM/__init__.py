@@ -32,3 +32,10 @@
 #
 # This module contains the backend to compile IGR to DVM.
 ##
+
+import literals
+
+def generate():
+	# Traversals
+	literals.removeOperationLiterals()
+	

@@ -37,39 +37,69 @@
 # allows the user to interact with these components.
 ##
 
+import argparse
 import frontEnd
 import backEnd
 import IGR
 import log
+import os
 
 # ---------------------- #
 # Command line arguments #
 # ---------------------- #
 
-# argParser = argparse.ArgumentParser(description = "The DIS Compiler")
-# argParser.add_argument("path", help = "The path to the file you want to compile.")
-# 
-# argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
-# argParser.add_argument("-o", "--output", help = "The location of the output file")
-# argParser.add_argument("-f", "--frontEnd", type = str, default = 'IF1', help = "The frontEnd to use.")
-# argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
-# 
-# args = argParser.parse_args()
+argParser = argparse.ArgumentParser(description = "The DIS Compiler")
 
+# argParser.add_argument("path", help = "The path to the file you want to compile.")
+argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
+argParser.add_argument("-o", "--output", help = "The location of the output file")
+argParser.add_argument("-f", "--frontEnd", type = str, help = "The frontEnd to use.")
+argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
+
+args = argParser.parse_args()
+
+# DEBUG
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
-
 loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
 
-log.setup(0)
+args.path = loc
+args.logLevel = 0
 
-frontEnd.set('Sisal')
+# ------------- #
+# Program Setup #
+# ------------- #
+
+log.setup(args.logLevel)
+
+fileName, fileExtension = os.path.splitext(args.path)
+
+
+frontEnds = {
+	'.sis' : 'Sisal',
+	'.if1' : 'IF1'
+}
+
+if args.frontEnd:
+	frontEnd.set(args.frontEnd)
+else:
+	frontEnd.set(frontEnds[fileExtension])
+
 backEnd.set('DVM')
+
+# --------------- #
+# Run the Program #
+# --------------- #
+
 frontEnd.fromFile(loc)
 
-IGR.dot(path="../igrPre.dot", skipCompound = True)
-#traversals.literals.removeOperationLiterals()
-#traversals.dot.runDot(path="../igrPost.dot", skipCompound = True)
+#IGR.dot(path="../igrPre.dot", skipCompound = True)
+
+import backEnd.DVM.convertAll
+import backEnd.DVM.literals
+backEnd.DVM.literals.removeOperationLiterals()
+print backEnd.DVM.convertAll.convertAll()
+#IGR.dot(path="../igrPost.dot", skipCompound = True)
