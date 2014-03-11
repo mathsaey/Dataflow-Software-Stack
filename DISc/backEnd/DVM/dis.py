@@ -64,6 +64,7 @@ class DIS(object):
 		self.keys = [0 for i in xrange(0, DVM_CHUNKS)]
 
 		self.addPredefined(inputs)
+		self.inputs = inputs
 
 	## Add the standard statements to DIS.
 	def addPredefined(self, inputs):
@@ -71,6 +72,15 @@ class DIS(object):
 		self.addInstruction(0, 'PB', [inputs])
 		self.addInstruction(0, 'PE', [])
 		self.addNewline(0)
+
+	## Link every output of start to an instruction.
+	def linkStart(self, key):
+		for i in xrange(0, self.inputs):
+			self.addLink((0,0), i, key, i)
+
+	## Link the output of a node to stop.
+	def linkStop(self, key):
+		self.addLink(key, 0, (0,1), 0)
 
 	##
 	# Add a string to a chunk.

@@ -35,43 +35,66 @@
 
 import dvm
 import dis
-import traverse
-import IGR.node
+import IGR
+import nodeConverter
 
-
-def isLiteral(node):
+## See if an operationNode contains only literals
+def isLiteralOpN(node):
 	if isinstance(node, IGR.node.OperationNode):
 		for port in node.inputPorts:
 			if not port.acceptsLiteral():
 				return False
 		return True
 
+## Get all the inputs of a node (should only contain literals)
 def getInputs(node):
 	res = []
 	for port in node.inputPorts:
 		res.append(port.source.value)
 	return res
 
+## 
+# Use DVM to execute a single operation 
+# with it's literals as inputs.
+##
 def getValue(node):
 	inputs = getInputs(node)
+
+	# Create the program
 	prog = dis.DIS(node.inputs)
-	prog = repr(prog)
-	val = dvm.run(dis = prog, inputs = inputs)
+	key = nodeConverter.convertOpNode(prog, node)
+	prog.linkStart(key)
+	prog.linkStop(key)
+
+	# Run the program
+	str = prog.generate()
+	val = dvm.run(dis = str, inputs = inputs)
 	return val
 
+##
+# Add the result of executing
+# a node to all it's outputs.
+##
 def transformNode(node, value): 
 	for port in node.outputPorts:
 		for port in port.targets:
-			port.attach(value)
+			IGR.addLiteral(value, port.node, port.idx)
 
+## Delete the node from the program.
 def deleteNode(node):
 	sg = node.subGraph
 	sg.nodes.remove(node)
 
+## See if a node can be removed, do so if possible.
+def checkNode(node):
+	if isLiteralOpN(node):
+		val = getValue(node)
+		transformNode(node, val)
+		deleteNode(node)
+
+## Remove all operations that have predefined inputs.
 def removeOperationLiterals():
-
-
-	traverse.traverseAll(
+	IGR.traverse(
 		checkNode,
 		lambda x: None,
 		lambda x: None,
