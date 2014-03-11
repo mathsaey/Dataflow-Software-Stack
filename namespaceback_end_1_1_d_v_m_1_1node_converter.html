@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">2447164</span>
+   &#160;<span id="projectnumber">35a0e76</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -86,9 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">backEnd.DVM.nodeConverter Namespace Reference</div>  </div>
 </div><!--header-->
@@ -96,158 +93,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a> node converter.  
 <a href="#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a367016b3355647fa4b384162030ddcb5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1node_converter.html#a367016b3355647fa4b384162030ddcb5">convertOpNode</a></td></tr>
-<tr class="memdesc:a367016b3355647fa4b384162030ddcb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the DIS version of an operation to a DIS object.  <a href="#a367016b3355647fa4b384162030ddcb5">More...</a><br/></td></tr>
-<tr class="separator:a367016b3355647fa4b384162030ddcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a425158977d5cbe4230733efb9e0d6df0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1node_converter.html#a425158977d5cbe4230733efb9e0d6df0">convertSGEntryNode</a></td></tr>
-<tr class="separator:a425158977d5cbe4230733efb9e0d6df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000ddd30534549c493a12960c361099c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1node_converter.html#a000ddd30534549c493a12960c361099c">convertNode</a></td></tr>
-<tr class="memdesc:a000ddd30534549c493a12960c361099c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the DIS equivalent of a certain node to a DIS object.  <a href="#a000ddd30534549c493a12960c361099c">More...</a><br/></td></tr>
-<tr class="separator:a000ddd30534549c493a12960c361099c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:adedd208264be93cda3f80946d999f1bd"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1node_converter.html#adedd208264be93cda3f80946d999f1bd">nodes</a> = {}</td></tr>
-<tr class="memdesc:adedd208264be93cda3f80946d999f1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the keys that nodes have received.  <a href="#adedd208264be93cda3f80946d999f1bd">More...</a><br/></td></tr>
-<tr class="separator:adedd208264be93cda3f80946d999f1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50bb0b786d9e87988ad4cf2fb76146fe"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1node_converter.html#a50bb0b786d9e87988ad4cf2fb76146fe">converters</a></td></tr>
-<tr class="separator:a50bb0b786d9e87988ad4cf2fb76146fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a> node converter. </p>
 <p>This module can convert the various <a class="el" href="namespace_i_g_r.html" title="DVM Intermediate Graph Representation. ">IGR</a> node types into an equivalent DIS statement. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a367016b3355647fa4b384162030ddcb5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def backEnd.DVM.nodeConverter.convertOpNode </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>node</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add the DIS version of an operation to a DIS object. </p>
-
-</div>
-</div>
-<a class="anchor" id="a425158977d5cbe4230733efb9e0d6df0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def backEnd.DVM.nodeConverter.convertSGEntryNode </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>node</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a000ddd30534549c493a12960c361099c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def backEnd.DVM.nodeConverter.convertNode </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>node</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add the DIS equivalent of a certain node to a DIS object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dis</td><td>A DIS instance that will contain the DIS version of the node. </td></tr>
-    <tr><td class="paramname">node</td><td>The node to convert.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The key of the node in DIS. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="adedd208264be93cda3f80946d999f1bd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">dictionary backEnd.DVM.nodeConverter.nodes = {}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Store the keys that nodes have received. </p>
-<p>Stored with the node key as key and the (chunk, inst) tuple as value. </p>
-
-</div>
-</div>
-<a class="anchor" id="a50bb0b786d9e87988ad4cf2fb76146fe"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">dictionary backEnd.DVM.nodeConverter.converters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceback_end_1_1_d_v_m_1_1node_converter.html">    1</a></span>&#160;= {</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_sub_graph_entry_node.html">IGR.node.SubGraphEntryNode</a> : convertSGEntryNode,</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_operation_node.html">IGR.node.OperationNode</a>     : convertOpNode</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;}</div>
-<div class="ttc" id="class_i_g_r_1_1node_1_1_sub_graph_entry_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_sub_graph_entry_node.html">IGR.node.SubGraphEntryNode</a></div><div class="ttdoc">Entry point of a subgraph. </div><div class="ttdef"><b>Definition:</b> node.py:160</div></div>
-<div class="ttc" id="class_i_g_r_1_1node_1_1_operation_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_operation_node.html">IGR.node.OperationNode</a></div><div class="ttdoc">Operation node. </div><div class="ttdef"><b>Definition:</b> node.py:197</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 11 2014 01:48:28 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 11 2014 04:34:04 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -295,6 +295,18 @@
               <Path>namespaceback_end_1_1_d_v_m.html</Path>
               <Subnodes>
                <Node>
+                <Name>convertAll</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
+               </Node>
+               <Node>
+                <Name>converter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+               </Node>
+               <Node>
+                <Name>nodeConverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1node_converter.html</Path>
+               </Node>
+               <Node>
                 <Name>dis</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
                 <Subnodes>
@@ -378,6 +390,11 @@
                     <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
                    </Node>
                    <Node>
+                    <Name>chunks</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>ac022615797c0e2e46c63acb664a66c22</Anchor>
+                   </Node>
+                   <Node>
                     <Name>inputs</Name>
                     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                     <Anchor>aa28d52be6d6442ade0934827328b4ffa</Anchor>
@@ -393,10 +410,6 @@
                <Node>
                 <Name>literals</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-               </Node>
-               <Node>
-                <Name>nodeConverter</Name>
-                <Path>namespaceback_end_1_1_d_v_m_1_1node_converter.html</Path>
                </Node>
               </Subnodes>
              </Node>
@@ -663,29 +676,24 @@
                   <Anchor>a0ffa039eaaca02bac84191551983f93d</Anchor>
                  </Node>
                  <Node>
+                  <Name>totalinputs</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a96dd2e7341bbcc906326cd71502f9f7c</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>realInputs</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>ac0b0bf32c9d265b39f2ab00ad57b9b20</Anchor>
+                 </Node>
+                 <Node>
                   <Name>operation</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>a80fc6d22e7a4cca9d863d874cce28379</Anchor>
                  </Node>
                  <Node>
-                  <Name>inputs</Name>
+                  <Name>litLst</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a439f00978854df97a819c8d7b19e6138</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>argLst</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a414e1b4d8f01ab96a7313634a487c8bb</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>idxLst</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a4b0ec2213005f75886b90c21c00e6d91</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>hasLit</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a42864c031d933b97c4368c9c73897010</Anchor>
+                  <Anchor>afefec2bba5b1fec590259ce5ebe9d427</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
@@ -1776,9 +1784,9 @@
                   <Anchor>afc491e4689de870cd1df991e3e2f9bad</Anchor>
                  </Node>
                  <Node>
-                  <Name>OutputPorts</Name>
+                  <Name>outputPorts</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                  <Anchor>a7320eddc88279af2dc0d10a2dc4eb9ac</Anchor>
+                  <Anchor>a8656925728ec6add985bcdf907c1a095</Anchor>
                  </Node>
                  <Node>
                   <Name>subGraph</Name>
@@ -1804,11 +1812,6 @@
                   <Name>inputPorts</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                   <Anchor>ad43e8fb88ce8b2bad8655f1d2e263553</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>outputPorts</Name>
-                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                  <Anchor>ab54e1c3fd0dd9b6009dd0ae2f01e17a2</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -3489,6 +3492,90 @@
                  <Node>
                   <Name>__init__.py</Name>
                   <Path>_d_i_sc_2back_end_2_d_v_m_2____init_____8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>generate</Name>
+                    <Path>_d_i_sc_2back_end_2_d_v_m_2____init_____8py.html</Path>
+                    <Anchor>a68bd8d37ac500599c6b04b1b7accb105</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>convertAll.py</Name>
+                  <Path>convert_all_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>convertAll</Name>
+                    <Path>convert_all_8py.html</Path>
+                    <Anchor>a6ae96668340d9aeeca57c399d5f04efb</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>converter.py</Name>
+                  <Path>converter_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>linkNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a2e4e6371ef09e05b5f284f876e4ba3c1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>getKey</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a54d3a43fded0ec0eb18bc767c389efcf</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>reset</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ae8eb273a78baff6ecfdec645d6c50726</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addLinks</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a0df95be7f79f91da0ce23cdf964a1501</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addLiterals</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a8ed0970535287cacc773ccba19831bbb</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertGeneralNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a4437fbfc3a6d2c63e13dc180614d6dfa</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertOpNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ad7559cb47d74295d76b88eb2b36b6008</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertSGEntryNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a66c5b9cc40f86031474bb809d5818974</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertSGExitNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ad57e55c5e53fcbd355092e5945e4a4af</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a9604a3ceb794d161dd1a7fb9670fe305</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>nodes</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a82d0fdbecdd17e64ba9aba3f199811cc</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>converters</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a9018c3fa81a6f9aa2ee43de6b88c96ef</Anchor>
+                   </Node>
+                  </Subnodes>
                  </Node>
                  <Node>
                   <Name>dis.py</Name>
@@ -3572,6 +3659,11 @@
                       <Name>keys</Name>
                       <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                       <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>chunks</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>ac022615797c0e2e46c63acb664a66c22</Anchor>
                      </Node>
                      <Node>
                       <Name>inputs</Name>
@@ -3659,37 +3751,6 @@
                    </Node>
                   </Subnodes>
                  </Node>
-                 <Node>
-                  <Name>nodeConverter.py</Name>
-                  <Path>node_converter_8py.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>convertOpNode</Name>
-                    <Path>node_converter_8py.html</Path>
-                    <Anchor>a367016b3355647fa4b384162030ddcb5</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertSGEntryNode</Name>
-                    <Path>node_converter_8py.html</Path>
-                    <Anchor>a425158977d5cbe4230733efb9e0d6df0</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertNode</Name>
-                    <Path>node_converter_8py.html</Path>
-                    <Anchor>a000ddd30534549c493a12960c361099c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>nodes</Name>
-                    <Path>node_converter_8py.html</Path>
-                    <Anchor>adedd208264be93cda3f80946d999f1bd</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>converters</Name>
-                    <Path>node_converter_8py.html</Path>
-                    <Anchor>a50bb0b786d9e87988ad4cf2fb76146fe</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
                 </Subnodes>
                </Node>
                <Node>
@@ -3700,6 +3761,16 @@
                   <Name>set</Name>
                   <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
                   <Anchor>a8fb37509b863bbe85fce88efe04582db</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>generate</Name>
+                  <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
+                  <Anchor>a9589064ec133f0081ed11326ad32f416</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>toFile</Name>
+                  <Path>_d_i_sc_2back_end_2____init_____8py.html</Path>
+                  <Anchor>a44451e0ddf2b012f220c1f61a7b32970</Anchor>
                  </Node>
                  <Node>
                   <Name>log</Name>
@@ -4934,9 +5005,9 @@
                     <Anchor>afc491e4689de870cd1df991e3e2f9bad</Anchor>
                    </Node>
                    <Node>
-                    <Name>OutputPorts</Name>
+                    <Name>outputPorts</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                    <Anchor>a7320eddc88279af2dc0d10a2dc4eb9ac</Anchor>
+                    <Anchor>a8656925728ec6add985bcdf907c1a095</Anchor>
                    </Node>
                    <Node>
                     <Name>subGraph</Name>
@@ -4962,11 +5033,6 @@
                     <Name>inputPorts</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                     <Anchor>ad43e8fb88ce8b2bad8655f1d2e263553</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>outputPorts</Name>
-                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
-                    <Anchor>ab54e1c3fd0dd9b6009dd0ae2f01e17a2</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -6300,11 +6366,6 @@
                 <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
                </Node>
                <Node>
-                <Name>loc</Name>
-                <Path>disc_8py.html</Path>
-                <Anchor>a514324055e0953215c42fb956b979201</Anchor>
-               </Node>
-               <Node>
                 <Name>frontEnds</Name>
                 <Path>disc_8py.html</Path>
                 <Anchor>a01640a56051d07e0d0a8093edb175fa0</Anchor>
@@ -6675,29 +6736,24 @@
                     <Anchor>a0ffa039eaaca02bac84191551983f93d</Anchor>
                    </Node>
                    <Node>
+                    <Name>totalinputs</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a96dd2e7341bbcc906326cd71502f9f7c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>realInputs</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>ac0b0bf32c9d265b39f2ab00ad57b9b20</Anchor>
+                   </Node>
+                   <Node>
                     <Name>operation</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>a80fc6d22e7a4cca9d863d874cce28379</Anchor>
                    </Node>
                    <Node>
-                    <Name>inputs</Name>
+                    <Name>litLst</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a439f00978854df97a819c8d7b19e6138</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>argLst</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a414e1b4d8f01ab96a7313634a487c8bb</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>idxLst</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a4b0ec2213005f75886b90c21c00e6d91</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>hasLit</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a42864c031d933b97c4368c9c73897010</Anchor>
+                    <Anchor>afefec2bba5b1fec590259ce5ebe9d427</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>

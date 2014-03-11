@@ -7,6 +7,6 @@ var searchData=
   ['operations_2epy',['operations.py',['../operations_8py.html',1,'']]],
   ['outputlist',['outputList',['../namespace_i_g_r_1_1dot.html#a5a68597ca34591a3d97d7282bfe67872',1,'IGR::dot']]],
   ['outputport',['OutputPort',['../class_i_g_r_1_1port_1_1_output_port.html',1,'IGR::port']]],
-  ['outputports',['outputPorts',['../class_i_g_r_1_1node_1_1_node.html#ab54e1c3fd0dd9b6009dd0ae2f01e17a2',1,'IGR.node.Node.outputPorts()'],['../class_i_g_r_1_1node_1_1_sub_graph_exit_node.html#a7320eddc88279af2dc0d10a2dc4eb9ac',1,'IGR.node.SubGraphExitNode.OutputPorts()']]],
+  ['outputports',['outputPorts',['../class_i_g_r_1_1node_1_1_node.html#ab54e1c3fd0dd9b6009dd0ae2f01e17a2',1,'IGR.node.Node.outputPorts()'],['../class_i_g_r_1_1node_1_1_sub_graph_exit_node.html#a8656925728ec6add985bcdf907c1a095',1,'IGR.node.SubGraphExitNode.outputPorts()']]],
   ['outputs',['outputs',['../class_i_g_r_1_1node_1_1_node.html#a7443d56423d81f6a56885efd59cfc2be',1,'IGR::node::Node']]]
 ];
