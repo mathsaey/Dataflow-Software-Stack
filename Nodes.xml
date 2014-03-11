@@ -313,19 +313,74 @@
                     <Anchor>a96491fe3e55e7086c30365066487eb92</Anchor>
                    </Node>
                    <Node>
-                    <Name>add</Name>
+                    <Name>linkStart</Name>
                     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
-                    <Anchor>a3f4a6fc1203b5147632136faa9445715</Anchor>
+                    <Anchor>a92c53a51b8b03bea91376e0b2605ad17</Anchor>
                    </Node>
                    <Node>
-                    <Name>__repr__</Name>
+                    <Name>linkStop</Name>
                     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
-                    <Anchor>abdcb364c7cca5bce4cf6a217fa6514d2</Anchor>
+                    <Anchor>a80cae4c1b193875e478106adbcae4aae</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addString</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a8e51346ffd8a35a3072fbf65eae1b957</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addKeyedString</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a41511d80aa6940c1b96ea506c7b067b5</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addNewline</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a6dd762f03a343c6393cf60b83a6c3bac</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addCommentLine</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>ad226f9e812f573a107caf3f8cbe3da6a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createChunk</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a056c431f3b3d9106dec012dcb5a9aa9a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addInstruction</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a4e4a5f530a2d598524a5af059d3f7198</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addLiteral</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a0775112115a89da49f2e4b869e420d07</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addLink</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a030e96fff54e2520575f0d64fc997d0d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>generate</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a77d955e98843c250cf2134fb77fe0bac</Anchor>
                    </Node>
                    <Node>
                     <Name>memory</Name>
                     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                     <Anchor>a5718ecd0dd2ae03bee5e23889512877f</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>keys</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>inputs</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>aa28d52be6d6442ade0934827328b4ffa</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -338,6 +393,10 @@
                <Node>
                 <Name>literals</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+               </Node>
+               <Node>
+                <Name>nodeConverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1node_converter.html</Path>
                </Node>
               </Subnodes>
              </Node>
@@ -3450,41 +3509,76 @@
                       <Anchor>a96491fe3e55e7086c30365066487eb92</Anchor>
                      </Node>
                      <Node>
-                      <Name>add</Name>
+                      <Name>linkStart</Name>
                       <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
-                      <Anchor>a3f4a6fc1203b5147632136faa9445715</Anchor>
+                      <Anchor>a92c53a51b8b03bea91376e0b2605ad17</Anchor>
                      </Node>
                      <Node>
-                      <Name>__repr__</Name>
+                      <Name>linkStop</Name>
                       <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
-                      <Anchor>abdcb364c7cca5bce4cf6a217fa6514d2</Anchor>
+                      <Anchor>a80cae4c1b193875e478106adbcae4aae</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addString</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a8e51346ffd8a35a3072fbf65eae1b957</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addKeyedString</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a41511d80aa6940c1b96ea506c7b067b5</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addNewline</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a6dd762f03a343c6393cf60b83a6c3bac</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addCommentLine</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>ad226f9e812f573a107caf3f8cbe3da6a</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>createChunk</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a056c431f3b3d9106dec012dcb5a9aa9a</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addInstruction</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a4e4a5f530a2d598524a5af059d3f7198</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addLiteral</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a0775112115a89da49f2e4b869e420d07</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>addLink</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a030e96fff54e2520575f0d64fc997d0d</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>generate</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a77d955e98843c250cf2134fb77fe0bac</Anchor>
                      </Node>
                      <Node>
                       <Name>memory</Name>
                       <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                       <Anchor>a5718ecd0dd2ae03bee5e23889512877f</Anchor>
                      </Node>
+                     <Node>
+                      <Name>keys</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>inputs</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>aa28d52be6d6442ade0934827328b4ffa</Anchor>
+                     </Node>
                     </Subnodes>
-                   </Node>
-                   <Node>
-                    <Name>createLink</Name>
-                    <Path>dis_8py.html</Path>
-                    <Anchor>abd4da19657e02a55927f2479fd1fc4bf</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>createLiteral</Name>
-                    <Path>dis_8py.html</Path>
-                    <Anchor>a5bd8cc014e09436563319444734d28c4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>createInstruction</Name>
-                    <Path>dis_8py.html</Path>
-                    <Anchor>a1bb2a201b018c8c28ffba4256245210a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>createChunk</Name>
-                    <Path>dis_8py.html</Path>
-                    <Anchor>ad5c8bcaf3fcb3dea28cbe8558db89667</Anchor>
                    </Node>
                    <Node>
                     <Name>DVM_CHUNKS</Name>
@@ -3529,9 +3623,9 @@
                   <Path>literals_8py.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>isLiteral</Name>
+                    <Name>isLiteralOpN</Name>
                     <Path>literals_8py.html</Path>
-                    <Anchor>a502b93aec6ea128eea879ba1ade42a1a</Anchor>
+                    <Anchor>a5f2694a345e48124517cad28d4de0f6d</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputs</Name>
@@ -3554,9 +3648,45 @@
                     <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
                    </Node>
                    <Node>
+                    <Name>checkNode</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
+                   </Node>
+                   <Node>
                     <Name>removeOperationLiterals</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>nodeConverter.py</Name>
+                  <Path>node_converter_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>convertOpNode</Name>
+                    <Path>node_converter_8py.html</Path>
+                    <Anchor>a367016b3355647fa4b384162030ddcb5</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertSGEntryNode</Name>
+                    <Path>node_converter_8py.html</Path>
+                    <Anchor>a425158977d5cbe4230733efb9e0d6df0</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertNode</Name>
+                    <Path>node_converter_8py.html</Path>
+                    <Anchor>a000ddd30534549c493a12960c361099c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>nodes</Name>
+                    <Path>node_converter_8py.html</Path>
+                    <Anchor>adedd208264be93cda3f80946d999f1bd</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>converters</Name>
+                    <Path>node_converter_8py.html</Path>
+                    <Anchor>a50bb0b786d9e87988ad4cf2fb76146fe</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>

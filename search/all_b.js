@@ -1,6 +1,8 @@
 var searchData=
 [
   ['link',['link',['../classcore_1_1runtime_1_1_core.html#a63d6568fc4cdb08a8012c15329f05d81',1,'core::runtime::Core']]],
+  ['linkstart',['linkStart',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a92c53a51b8b03bea91376e0b2605ad17',1,'backEnd::DVM::dis::DIS']]],
+  ['linkstop',['linkStop',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a80cae4c1b193875e478106adbcae4aae',1,'backEnd::DVM::dis::DIS']]],
   ['list',['list',['../classfront_end_1_1_i_f1_1_1type_1_1___unknown_type.html#ae46897e4c4298649373f4fb8ac3e7850',1,'frontEnd.IF1.type._UnknownType.list()'],['../classfront_end_1_1_i_f1_1_1type_1_1___combined_type.html#afde8b10eca648cdede714b74b4da12fe',1,'frontEnd.IF1.type._CombinedType.list()']]],
   ['literal',['Literal',['../class_i_g_r_1_1literal_1_1_literal.html',1,'IGR::literal']]],
   ['literal_2epy',['literal.py',['../literal_8py.html',1,'']]],
