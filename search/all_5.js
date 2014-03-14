@@ -10,5 +10,6 @@ var searchData=
   ['executekey',['executeKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a06d0216c7e4c4ffc499f394769a67ccb',1,'core::contextMatcher::ContextMatcher']]],
   ['exit',['exit',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a41d47337d37d6469a1b2a11ee9595913',1,'IGR::subgraph::SubGraph']]],
   ['exitcomp',['exitComp',['../namespacefront_end_1_1_i_f1_1_1environment.html#ae2e7f9e7868d0f79239cbf22ff2fe837',1,'frontEnd::IF1::environment']]],
+  ['extension',['extension',['../namespaceback_end_1_1_d_v_m.html#aed4956f53b8cee55d4d4f80430e51cd2',1,'backEnd::DVM']]],
   ['externaltag',['ExternalTag',['../classcore_1_1token_1_1_external_tag.html',1,'core::token']]]
 ];

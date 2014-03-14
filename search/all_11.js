@@ -16,7 +16,7 @@ var searchData=
   ['set',['set',['../namespaceback_end.html#a8fb37509b863bbe85fce88efe04582db',1,'backEnd.set()'],['../namespacefront_end.html#a9c7248fd78783fd6023b426b0df7f2cd',1,'frontEnd.set()']]],
   ['setin',['setIn',['../namespacecore.html#a64a7b5be7fa0e4857117508b808dc889',1,'core']]],
   ['setkey',['setKey',['../classcore_1_1instruction_1_1_abstract_instruction.html#ac51b309847a681f30924519582fa29af',1,'core::instruction::AbstractInstruction']]],
-  ['setup',['setup',['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log']]],
+  ['setup',['setUp',['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()'],['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()']]],
   ['simple_20piece_20of_20sisal_2fif1_20code',['Simple piece of Sisal/IF1 code',['../_simple.html',1,'']]],
   ['simpletoken',['simpleToken',['../classcore_1_1token_creator_1_1_token_creator.html#a17cafd58974a9fdd79834817a012c602',1,'core::tokenCreator::TokenCreator']]],
   ['sink',['Sink',['../classcore_1_1instruction_1_1_sink.html',1,'core::instruction']]],

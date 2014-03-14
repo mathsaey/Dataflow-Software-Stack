@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">35a0e76</span>
+   &#160;<span id="projectnumber">17c15e7</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -41,6 +41,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -106,6 +107,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8fb37509b863bbe85fce88efe04582db"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#a8fb37509b863bbe85fce88efe04582db">backEnd.set</a></td></tr>
 <tr class="memdesc:a8fb37509b863bbe85fce88efe04582db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a backend to use.  <a href="#a8fb37509b863bbe85fce88efe04582db">More...</a><br/></td></tr>
 <tr class="separator:a8fb37509b863bbe85fce88efe04582db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d5661bdafdf1cd91add6f3984f4bcd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd">backEnd.setUp</a></td></tr>
+<tr class="memdesc:ac3d5661bdafdf1cd91add6f3984f4bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the backend from the command line arguments.  <a href="#ac3d5661bdafdf1cd91add6f3984f4bcd">More...</a><br/></td></tr>
+<tr class="separator:ac3d5661bdafdf1cd91add6f3984f4bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9589064ec133f0081ed11326ad32f416"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#a9589064ec133f0081ed11326ad32f416">backEnd.generate</a></td></tr>
 <tr class="memdesc:a9589064ec133f0081ed11326ad32f416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the backend to Generate the output language.  <a href="#a9589064ec133f0081ed11326ad32f416">More...</a><br/></td></tr>
 <tr class="separator:a9589064ec133f0081ed11326ad32f416"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,13 +121,17 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a41d4b4095b3d47b58a718fed9939d0b4"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#a41d4b4095b3d47b58a718fed9939d0b4">backEnd.log</a> = logging.getLogger(__name__)</td></tr>
 <tr class="separator:a41d4b4095b3d47b58a718fed9939d0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a660fca84b9adcb4d5ea328e1de41e36c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#a660fca84b9adcb4d5ea328e1de41e36c">backEnd.backend</a> = None</td></tr>
-<tr class="separator:a660fca84b9adcb4d5ea328e1de41e36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d10f600544f99bf4f5e921093dd7da3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#a4d10f600544f99bf4f5e921093dd7da3">backEnd.backEnd</a> = None</td></tr>
+<tr class="memdesc:a4d10f600544f99bf4f5e921093dd7da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the current back end.  <a href="#a4d10f600544f99bf4f5e921093dd7da3">More...</a><br/></td></tr>
+<tr class="separator:a4d10f600544f99bf4f5e921093dd7da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f2c35790b2bf18a94e66a1a207223a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end.html#aa5f2c35790b2bf18a94e66a1a207223a">backEnd.path</a> = None</td></tr>
+<tr class="memdesc:aa5f2c35790b2bf18a94e66a1a207223a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the output file.  <a href="#aa5f2c35790b2bf18a94e66a1a207223a">More...</a><br/></td></tr>
+<tr class="separator:aa5f2c35790b2bf18a94e66a1a207223a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 11 2014 04:34:04 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 14 2014 20:52:15 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

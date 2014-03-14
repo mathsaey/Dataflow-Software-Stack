@@ -265,17 +265,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>frontEnds</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>disc</Scope>
-    </TokenIdentifier>
-    <Path>namespacedisc.html</Path>
-    <Anchor>a01640a56051d07e0d0a8093edb175fa0</Anchor>
-    <DeclaredIn>disc.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getCompound</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1470,6 +1459,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>setUp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>ac3d5661bdafdf1cd91add6f3984f4bcd</Anchor>
+    <Abstract>Set up the backend from the command line arguments. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>generate</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1505,13 +1506,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>backend</Name>
+      <Name>backEnd</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>backEnd</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end.html</Path>
-    <Anchor>a660fca84b9adcb4d5ea328e1de41e36c</Anchor>
+    <Anchor>a4d10f600544f99bf4f5e921093dd7da3</Anchor>
+    <Abstract>Store the current back end. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>path</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>aa5f2c35790b2bf18a94e66a1a207223a</Anchor>
+    <Abstract>Path to the output file. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -1523,6 +1537,29 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m.html</Path>
     <Anchor>a68bd8d37ac500599c6b04b1b7accb105</Anchor>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>extension</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m.html</Path>
+    <Anchor>aed4956f53b8cee55d4d4f80430e51cd2</Anchor>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setUp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end.html</Path>
+    <Anchor>a94d8f9060a7c31662ebc71efa876a61f</Anchor>
+    <Abstract>Set up the front end from the command line arguments. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -1581,6 +1618,19 @@
     </TokenIdentifier>
     <Path>namespacefront_end.html</Path>
     <Anchor>a22bc3d2d929d9c4953bcb0d40677cd59</Anchor>
+    <Abstract>Store the currently selected front end. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>frontEnds</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end.html</Path>
+    <Anchor>a068b54d48a0e2b790a07e3dee31ca034</Anchor>
+    <Abstract>Store the file extensions and the front ends they map to. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -2959,6 +3009,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>setUp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>ac3d5661bdafdf1cd91add6f3984f4bcd</Anchor>
+    <Abstract>Set up the backend from the command line arguments. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>generate</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2994,13 +3056,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>backend</Name>
+      <Name>backEnd</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>backEnd</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end.html</Path>
-    <Anchor>a660fca84b9adcb4d5ea328e1de41e36c</Anchor>
+    <Anchor>a4d10f600544f99bf4f5e921093dd7da3</Anchor>
+    <Abstract>Store the current back end. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>path</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end.html</Path>
+    <Anchor>aa5f2c35790b2bf18a94e66a1a207223a</Anchor>
+    <Abstract>Path to the output file. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -3022,6 +3097,17 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m.html</Path>
     <Anchor>a68bd8d37ac500599c6b04b1b7accb105</Anchor>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>extension</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m.html</Path>
+    <Anchor>aed4956f53b8cee55d4d4f80430e51cd2</Anchor>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -5720,17 +5806,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>frontEnds</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>disc</Scope>
-    </TokenIdentifier>
-    <Path>namespacedisc.html</Path>
-    <Anchor>a01640a56051d07e0d0a8093edb175fa0</Anchor>
-    <DeclaredIn>disc.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>dvm</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -5797,6 +5872,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>setUp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end.html</Path>
+    <Anchor>a94d8f9060a7c31662ebc71efa876a61f</Anchor>
+    <Abstract>Set up the front end from the command line arguments. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>set</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -5851,6 +5938,19 @@
     </TokenIdentifier>
     <Path>namespacefront_end.html</Path>
     <Anchor>a22bc3d2d929d9c4953bcb0d40677cd59</Anchor>
+    <Abstract>Store the currently selected front end. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>frontEnds</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end.html</Path>
+    <Anchor>a068b54d48a0e2b790a07e3dee31ca034</Anchor>
+    <Abstract>Store the file extensions and the front ends they map to. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
