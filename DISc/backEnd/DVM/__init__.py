@@ -36,6 +36,8 @@
 import literals
 import convertAll
 
+extension = 'dis'
+
 def generate():
 	# Traversals
 	literals.removeOperationLiterals()

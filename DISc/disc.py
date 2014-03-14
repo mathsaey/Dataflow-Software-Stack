@@ -40,7 +40,6 @@
 import argparse
 import frontEnd
 import backEnd
-import IGR
 import log
 import os
 
@@ -52,9 +51,12 @@ argParser = argparse.ArgumentParser(description = "The DIS Compiler")
 
 argParser.add_argument("path", help = "The path to the file you want to compile.")
 argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
+
 argParser.add_argument("-o", "--output", help = "The location of the output file")
+argParser.add_argument("-b", "--backEnd", default = 'DVM', help = "The backEnd to use.")
 argParser.add_argument("-f", "--frontEnd", type = str, help = "The frontEnd to use.")
-argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
+
+argParser.add_argument("-ll", "--logLevel", type = int, default = 30, help = "Specify the log level")
 
 args = argParser.parse_args()
 
@@ -73,32 +75,13 @@ args = argParser.parse_args()
 # Program Setup #
 # ------------- #
 
-# General 
-
 log.setup(args.logLevel)
 fileName, fileExtension = os.path.splitext(args.path)
 
-frontEnds = {
-	'.sis' : 'Sisal',
-	'.if1' : 'IF1'
-}
-
-# Frontend
-
-if args.frontEnd:
-	frontEnd.set(args.frontEnd)
-else:
-	frontEnd.set(frontEnds[fileExtension])
-
+frontEnd.setUp(fileExtension, args.frontEnd)
 frontEnd.fromFile(args.path)
 
-# Backend
-
-backEnd.set('DVM')
-
-if not args.output: 
-	args.output = '%s.dis' % fileName
-
-backEnd.toFile(args.output)
+backEnd.setUp(fileName, args.backEnd, args.output)
+backEnd.toFile()
 
 #IGR.dot(path="../igr.dot", skipCompound = True)

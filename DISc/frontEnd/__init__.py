@@ -38,7 +38,35 @@ import importlib
 import logging
 log = logging.getLogger(__name__)
 
+## 
+# Store the currently selected
+# front end.
+##
 frontEnd = None
+
+##
+# Store the file extensions 
+# and the front ends they map to.
+##
+frontEnds = {
+	'.sis' : 'Sisal',
+	'.if1' : 'IF1'
+}
+
+##
+# Set up the front end from the
+# command line arguments.
+#
+# \param extension
+#		The extension of the input file.
+# \param flagVal
+#		The value of the front end flag.
+##
+def setUp(extension, flagVal):
+	if flagVal:
+		set(flagVal)
+	else:
+		set(frontEnds[extension])
 
 ##
 # Select a frontend to use.

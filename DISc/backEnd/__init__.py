@@ -29,6 +29,11 @@
 # \brief DISc backend Selector
 # 
 # This module serves as an interface to any backend that the user may choose.
+#
+# A backend only needs to define 2 elements.
+# * A function generate(), that takes no inputs and that 
+#	returns a string version of the output language.
+# * An *extension* attribute that contains the file extension of the output language.
 ##
 
 import importlib
@@ -36,7 +41,11 @@ import importlib
 import logging
 log = logging.getLogger(__name__)
 
-backend = None
+## Store the current back end
+backEnd = None
+
+## Path to the output file.
+path = None
 
 ##
 # Select a backend to use.
@@ -46,19 +55,41 @@ backend = None
 #		backend package.
 ##
 def set(name):
-	global backend
+	global backEnd
 	try:
-		backend = importlib.import_module('.%s' % name, __name__)
+		backEnd = importlib.import_module('.%s' % name, __name__)
 	except ImportError:
 		log.error("Backend '%s' not found.", name)
+
+##
+# Set up the backend from the
+# command line arguments.
+#
+# \param fileName
+#		The name of the input file, without
+#		the extension.
+# \param backEndFlag
+#		The value passed to the backend flag.
+# \param outputFlag
+#		The value passed to the output flag.
+##
+def setUp(fileName, backEndFlag, outputFlag):
+	global path
+	set(backEndFlag)
+
+	if backEnd:
+		if outputFlag: path = outputFlag
+		else: path = '%s.%s' % (fileName, backEnd.extension)
+	else:
+		log.error("No backend specified...")
 
 ## 
 # Ask the backend to
 # Generate the output language.
 ##
 def generate():
-	if backend:
-		return backend.generate()
+	if backEnd:
+		return backEnd.generate()
 	else:
 		log.error("No backend specified...")
 
@@ -66,7 +97,11 @@ def generate():
 # Write the generated output
 # to a file.
 ##
-def toFile(path):
-	file = open(path, 'w')
-	file.write(generate())
-	file.close()
+def toFile():
+	if backEnd:
+		result = generate()
+		file = open(path, 'w')
+		file.write(result)
+		file.close()
+	else:
+		log.error("No backend specified...")
