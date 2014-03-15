@@ -203,10 +203,6 @@
               <Path>namespaceback_end_1_1_d_v_m.html</Path>
               <Subnodes>
                <Node>
-                <Name>convertAll</Name>
-                <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-               </Node>
-               <Node>
                 <Name>converter</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
                </Node>
@@ -221,6 +217,14 @@
                <Node>
                 <Name>dvm</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+               </Node>
+               <Node>
+                <Name>graphConverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+               </Node>
+               <Node>
+                <Name>graphconverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1graphconverter.html</Path>
                </Node>
                <Node>
                 <Name>literals</Name>
@@ -479,10 +483,6 @@
               <Path>namespaceback_end_1_1_d_v_m.html</Path>
               <Subnodes>
                <Node>
-                <Name>convertAll</Name>
-                <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-               </Node>
-               <Node>
                 <Name>converter</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
                </Node>
@@ -590,6 +590,14 @@
                <Node>
                 <Name>dvm</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
+               </Node>
+               <Node>
+                <Name>graphConverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+               </Node>
+               <Node>
+                <Name>graphconverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1graphconverter.html</Path>
                </Node>
                <Node>
                 <Name>literals</Name>
@@ -3690,17 +3698,6 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>convertAll.py</Name>
-                  <Path>convert_all_8py.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>convertGraph</Name>
-                    <Path>convert_all_8py.html</Path>
-                    <Anchor>a2048e4aac864dabbe96182d21687d5c1</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
                   <Name>converter.py</Name>
                   <Path>converter_8py.html</Path>
                   <Subnodes>
@@ -3905,18 +3902,39 @@
                   </Subnodes>
                  </Node>
                  <Node>
+                  <Name>graphConverter.py</Name>
+                  <Path>graph_converter_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>convert</Name>
+                    <Path>graph_converter_8py.html</Path>
+                    <Anchor>a0a3fcfd764a49a982ed45f73504a5739</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
                   <Name>literals.py</Name>
                   <Path>literals_8py.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>isLiteralOpN</Name>
+                    <Name>isLit</Name>
                     <Path>literals_8py.html</Path>
-                    <Anchor>a5f2694a345e48124517cad28d4de0f6d</Anchor>
+                    <Anchor>a10064c6577764ae437876bd2423b2853</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputs</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createOpStr</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a19fa65ddaf2a155ea11f9014071906ae</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>createCallStr</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a6ae8b7f1948b001f4a735e9ed2bdcdc1</Anchor>
                    </Node>
                    <Node>
                     <Name>getValue</Name>
@@ -3934,14 +3952,29 @@
                     <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
                    </Node>
                    <Node>
+                    <Name>deleteNodes</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+                   </Node>
+                   <Node>
                     <Name>checkNode</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
                    </Node>
                    <Node>
-                    <Name>removeOperationLiterals</Name>
+                    <Name>removeLiterals</Name>
                     <Path>literals_8py.html</Path>
-                    <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+                    <Anchor>af3c0fd54f4943ccedb7b37e19b3e160c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>log</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>ab9c5608761bcd7eaf527796233a9bdd1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>deleteList</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>

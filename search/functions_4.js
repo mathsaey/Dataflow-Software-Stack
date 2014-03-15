@@ -1,6 +1,7 @@
 var searchData=
 [
   ['deletenode',['deleteNode',['../namespaceback_end_1_1_d_v_m_1_1literals.html#aeccc2a181d4ca275701e9ece1fd160e4',1,'backEnd::DVM::literals']]],
+  ['deletenodes',['deleteNodes',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a63b15499ac1cea0c182788e406366d01',1,'backEnd::DVM::literals']]],
   ['dot',['dot',['../namespace_i_g_r_1_1dot.html#a849825adcd89144f89c2e7fa6a826052',1,'IGR::dot']]],
   ['dotfooter',['dotFooter',['../namespace_i_g_r_1_1dot.html#aaa36857df44a7aaf9eeb95b5966c40a0',1,'IGR::dot']]],
   ['dotheader',['dotHeader',['../namespace_i_g_r_1_1dot.html#a7ce9fa8e72127cc7889c1a94afff20fa',1,'IGR::dot']]],

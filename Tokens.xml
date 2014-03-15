@@ -2,17 +2,6 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>convertGraph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::convertAll</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-    <Anchor>a2048e4aac864dabbe96182d21687d5c1</Anchor>
-    <DeclaredIn>convertAll.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>linkNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -169,14 +158,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>isLiteralOpN</Name>
+      <Name>convert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::graphConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+    <Anchor>a0a3fcfd764a49a982ed45f73504a5739</Anchor>
+    <Abstract>Convert a collection of subGraphs to a DIS program. </Abstract>
+    <DeclaredIn>graphConverter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isLit</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a5f2694a345e48124517cad28d4de0f6d</Anchor>
-    <Abstract>See if an operationNode contains only literals. </Abstract>
+    <Anchor>a10064c6577764ae437876bd2423b2853</Anchor>
+    <Abstract>See if a node only contains literals. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -189,6 +190,30 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
     <Abstract>Get all the inputs of a node (should only contain literals) </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createOpStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a19fa65ddaf2a155ea11f9014071906ae</Anchor>
+    <Abstract>Create a DIS program to execute a single operation. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createCallStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a6ae8b7f1948b001f4a735e9ed2bdcdc1</Anchor>
+    <Abstract>Create a DIS program to execute a single function. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -224,7 +249,19 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-    <Abstract>Delete the node from the program. </Abstract>
+    <Abstract>Delete a node from the program. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNodes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+    <Abstract>Delete all the nodes in the delete list. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -241,14 +278,37 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>removeOperationLiterals</Name>
+      <Name>removeLiterals</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+    <Anchor>af3c0fd54f4943ccedb7b37e19b3e160c</Anchor>
     <Abstract>Remove all operations that have predefined inputs. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>ab9c5608761bcd7eaf527796233a9bdd1</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
+    <Abstract>Stores all the nodes that need to be deleted. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -2082,6 +2142,7 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>ab12ff8b46e7c77add9ddc198e2a6fbb5</Anchor>
+    <Abstract>args.logLevel = 0 args.path = &amp;quot;../examples/call.dis&amp;quot; </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -3144,27 +3205,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>backEnd::DVM::convertAll</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>backEnd::DVM::convertAll</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-    <Abstract>IGR converter. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertGraph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::convertAll</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-    <Anchor>a2048e4aac864dabbe96182d21687d5c1</Anchor>
-    <DeclaredIn>convertAll.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>backEnd::DVM::converter</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -3617,6 +3657,37 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>backEnd::DVM::graphconverter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>backEnd::DVM::graphconverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1graphconverter.html</Path>
+    <Abstract>IGR converter. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>backEnd::DVM::graphConverter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>backEnd::DVM::graphConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::graphConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+    <Anchor>a0a3fcfd764a49a982ed45f73504a5739</Anchor>
+    <Abstract>Convert a collection of subGraphs to a DIS program. </Abstract>
+    <DeclaredIn>graphConverter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>backEnd::DVM::literals</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -3627,14 +3698,14 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>isLiteralOpN</Name>
+      <Name>isLit</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a5f2694a345e48124517cad28d4de0f6d</Anchor>
-    <Abstract>See if an operationNode contains only literals. </Abstract>
+    <Anchor>a10064c6577764ae437876bd2423b2853</Anchor>
+    <Abstract>See if a node only contains literals. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3647,6 +3718,30 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
     <Abstract>Get all the inputs of a node (should only contain literals) </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createOpStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a19fa65ddaf2a155ea11f9014071906ae</Anchor>
+    <Abstract>Create a DIS program to execute a single operation. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createCallStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a6ae8b7f1948b001f4a735e9ed2bdcdc1</Anchor>
+    <Abstract>Create a DIS program to execute a single function. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3682,7 +3777,19 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-    <Abstract>Delete the node from the program. </Abstract>
+    <Abstract>Delete a node from the program. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNodes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+    <Abstract>Delete all the nodes in the delete list. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3699,14 +3806,37 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>removeOperationLiterals</Name>
+      <Name>removeLiterals</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a12430b741030fa8bd4efb49fa613fe2f</Anchor>
+    <Anchor>af3c0fd54f4943ccedb7b37e19b3e160c</Anchor>
     <Abstract>Remove all operations that have predefined inputs. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>ab9c5608761bcd7eaf527796233a9bdd1</Anchor>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
+    <Abstract>Stores all the nodes that need to be deleted. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -5911,6 +6041,7 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>ab12ff8b46e7c77add9ddc198e2a6fbb5</Anchor>
+    <Abstract>args.logLevel = 0 args.path = &amp;quot;../examples/call.dis&amp;quot; </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
