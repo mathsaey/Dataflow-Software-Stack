@@ -32,6 +32,7 @@
 # node types into an equivalent DIS statement.
 ##
 
+import IGR
 import IGR.node
 
 ##
@@ -55,6 +56,10 @@ def reset():
 
 def addLinks(dis, node):
 	fromKey = getKey(node)
+
+	if node.isCall(): 
+		fromKey = (fromKey[0], fromKey[1] - 1)
+
 	for port in node.outputPorts:
 		fromPort = port.idx
 
@@ -76,7 +81,6 @@ def convertGeneralNode(dis, node, chunk, type, args):
 	linkNode(node, key)
 	return key
 
-## Add the DIS version of an operation to a DIS object
 def convertOpNode(dis, node): 
 	return convertGeneralNode(dis, node, 1, 'OP', [node.operation, node.inputs])
 
@@ -86,10 +90,18 @@ def convertSGEntryNode(dis, node):
 def convertSGExitNode(dis, node): 
 	return convertGeneralNode(dis, node, 0, 'CR', [])
 
+def convertCallNode(dis, node):
+	dest = getKey(IGR.getSubGraph(node.function).entry)
+	ret  = dis.addInstruction(0, 'SI', [])
+	ins  = dis.addInstruction(0, 'CC', [dest[0], dest[1], ret[0], ret[1]])
+	linkNode(node, ins)
+	return ins
+
 converters = {
 	IGR.node.SubGraphEntryNode : convertSGEntryNode,
 	IGR.node.SubGraphExitNode  : convertSGExitNode,
-	IGR.node.OperationNode     : convertOpNode
+	IGR.node.OperationNode     : convertOpNode,
+	IGR.node.CallNode          : convertCallNode
 }
 
 ##

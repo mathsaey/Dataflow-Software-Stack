@@ -36,7 +36,7 @@ import IGR
 import dis
 import converter
 
-def convertAll(subGraphs = IGR.getSubGraphs()):
+def convertGraph(subGraphs = IGR.getSubGraphs()):
 	main = IGR.getSubGraph('main').entry
 	inputs = main.outputs
 	prog = dis.DIS(inputs)
@@ -66,6 +66,8 @@ def convertAll(subGraphs = IGR.getSubGraphs()):
 		for c in xrange(0, prog.chunks):
 			prog.addCommentLine("Leaving subgraph %s" % sg.name, c)
 			prog.addNewline(c)
+
+		del nodes[:]
 
 	def cmpStart(comp): pass
 	def cmpStop(comp): pass

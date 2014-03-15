@@ -42,4 +42,4 @@ def generate():
 	# Traversals
 	literals.removeOperationLiterals()
 
-	return convertAll.convertAll()
+	return convertAll.convertGraph()
