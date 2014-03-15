@@ -160,7 +160,7 @@ __cores__ = []
 __port__ = 0
 __in__ = None
 
-def start(cores = 1):
+def start(cores):
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
 	queues   = [coreLst[i].inbox  for i in xrange(0, cores)]
 

@@ -152,7 +152,7 @@ def addLiteral(key, port, val):
 #
 # \see runtime::init()
 ##
-def start(cores = 1): runtime.start(cores)
+def start(cores): runtime.start(cores)
 
 ##
 # Add an external token containing data.
@@ -160,6 +160,12 @@ def start(cores = 1): runtime.start(cores)
 # \see runtime::addData()
 ##
 def addData(data): runtime.addData(data)
+
+##
+# Check the current port of the runtime.
+##
+def getPort():
+	return runtime.__port__
 
 ##
 # Return the amount of input the
@@ -174,12 +180,6 @@ def getIn():
 ##
 def setIn(i):
 	runtime.__in__ = i
-
-##
-# Check the current port of the runtime.
-##
-def getPort():
-	return runtime.__port__
 
 ##
 # See if the runtime expects additional input.
