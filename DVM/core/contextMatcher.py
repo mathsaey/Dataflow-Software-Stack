@@ -96,7 +96,7 @@ class ContextMatcher(object):
 			pair[0][port] = token
 			pair[1] += 1
 		else:
-			log.error("Duplicate token received!")
+			log.warning("Duplicate token received!")
 
 	##
 	# See if all the input tokens are present
