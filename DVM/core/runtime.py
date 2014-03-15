@@ -181,3 +181,4 @@ def addData(datum):
 	tok = token.Token(datum, tag)
 	__cores__[0].add(tok)
 	__port__ += 1
+	log.info("Adding data to runtime: %s", tok)
