@@ -39,9 +39,16 @@ import IGR.node
 import converter
 import graphConverter
 
-
 import logging
 log = logging.getLogger(__name__)
+
+## 
+# Stores all the nodes that 
+# need to be deleted. 
+# The nodes are deleted separately
+# in order to not mess up the graph traversal.
+##
+deleteList = []
 
 ## See if a node only contains literals
 def isLit(node):
@@ -108,12 +115,18 @@ def deleteNode(node):
 	sg = node.subGraph
 	sg.nodes.remove(node)
 
+## Delete all the nodes in the delete list.
+def deleteNodes(subGraph):
+	for node in deleteList: 
+		deleteNode(node)
+	del deleteList[:]
+
 ## See if a node can be removed, do so if possible.
 def checkNode(node):
 	if isLit(node):
 		val = getValue(node)
 		transformNode(node, val)
-		deleteNode(node)
+		deleteList.append(node)
 		log.info("Reducing node '%s' to literal '%s'", node, val)
 
 ## Remove all operations that have predefined inputs.
@@ -121,7 +134,7 @@ def removeLiterals():
 	IGR.traverse(
 		checkNode,
 		lambda x: None,
-		lambda x: None,
+		deleteNodes,
 		False,
 		lambda x: None,
 		lambda x: None
