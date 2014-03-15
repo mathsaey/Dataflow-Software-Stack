@@ -92,8 +92,11 @@ class ContextMatcher(object):
 	##
 	def updateKeyArr(self, key, port, token):
 		pair = self.tokens[key]
-		pair[0][port] = token
-		pair[1] += 1
+		if not pair[0][port]:
+			pair[0][port] = token
+			pair[1] += 1
+		else:
+			log.error("Duplicate token received!")
 
 	##
 	# See if all the input tokens are present
