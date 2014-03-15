@@ -72,10 +72,10 @@ argParser.add_argument("-c", "--cores", type = int, default = multiprocessing.cp
 argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
 args = argParser.parse_args()
 
-#args.logLevel = 0
-#args.path = "../examples/simple.dis"
+##args.logLevel = 0
+#args.path = "../examples/call.dis"
 args.cores = 1
-#args.input = ["1","2"]
+#args.input = ["1","2", "3", "4"]
 
 # ------------ #
 # Program Flow #

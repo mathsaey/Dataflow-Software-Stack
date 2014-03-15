@@ -34,12 +34,10 @@
 ##
 
 import literals
-import convertAll
+import graphConverter
 
 extension = 'dis'
 
 def generate():
-	# Traversals
-	literals.removeOperationLiterals()
-
-	return convertAll.convertGraph()
+	literals.removeLiterals()
+	return graphConverter.convert()

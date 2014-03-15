@@ -9,7 +9,7 @@
 # Copyright (c) 2013, 2014 Mathijs Saey
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
+# of this software and associated documentat ion files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
@@ -49,26 +49,26 @@ import os
 
 argParser = argparse.ArgumentParser(description = "The DIS Compiler")
 
-argParser.add_argument("path", help = "The path to the file you want to compile.")
+#argParser.add_argument("path", help = "The path to the file you want to compile.")
 argParser.add_argument("-d", "--dvm", help = "The path to DVM.")
 
 argParser.add_argument("-o", "--output", help = "The location of the output file")
 argParser.add_argument("-b", "--backEnd", default = 'DVM', help = "The backEnd to use.")
 argParser.add_argument("-f", "--frontEnd", type = str, help = "The frontEnd to use.")
 
-argParser.add_argument("-ll", "--logLevel", type = int, default = 30, help = "Specify the log level")
+argParser.add_argument("-ll", "--logLevel", type = int, default = 0, help = "Specify the log level")
 
 args = argParser.parse_args()
 
 # DEBUG
 
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.if1"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.if1"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.sis"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
 
-# args.path = loc
+args.path = loc
 # args.logLevel = 0
 
 # ------------- #
@@ -83,5 +83,3 @@ frontEnd.fromFile(args.path)
 
 backEnd.setUp(fileName, args.backEnd, args.output)
 backEnd.toFile()
-
-#IGR.dot(path="../igr.dot", skipCompound = True)

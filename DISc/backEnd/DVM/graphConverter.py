@@ -1,4 +1,4 @@
-# convertAll.py
+# graphConverter.py
 # Mathijs Saey
 # DISc
 
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package backEnd.DVM.convertAll
+# \package backEnd.DVM.graphconverter
 # \brief IGR converter
 #
 # This module converts the entire graph
@@ -36,8 +36,19 @@ import IGR
 import dis
 import converter
 
-def convertGraph(subGraphs = IGR.getSubGraphs()):
-	main = IGR.getSubGraph('main').entry
+##
+# Convert a collection of subGraphs
+# to a DIS program.
+#
+# \param subGraphs
+#		A list of subgraphs to compile.
+# \param entryName
+#		The name of the entry point in the program.
+#		This subgraph will be linked to the entry and
+#		exit of the DVM program.
+##
+def convert(subGraphs = IGR.getSubGraphs(), entryName = 'main'):
+	main = IGR.getSubGraph(entryName).entry
 	inputs = main.outputs
 	prog = dis.DIS(inputs)
 	nodes = []
