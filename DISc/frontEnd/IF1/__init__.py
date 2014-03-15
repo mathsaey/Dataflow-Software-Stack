@@ -73,6 +73,7 @@ __FUNCTIONS__ = {
 #		used for error handling.
 ##
 def parseLine(line, ctr = "?"):
+	log.debug("Parsing line: %s", line)
 	arr = line.split()
 	key = line[0]
 	try:
