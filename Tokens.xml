@@ -2,13 +2,13 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>convertAll</Name>
+      <Name>convertGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::convertAll</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-    <Anchor>a6ae96668340d9aeeca57c399d5f04efb</Anchor>
+    <Anchor>a2048e4aac864dabbe96182d21687d5c1</Anchor>
     <DeclaredIn>convertAll.py</DeclaredIn>
   </Token>
   <Token>
@@ -86,7 +86,6 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>ad7559cb47d74295d76b88eb2b36b6008</Anchor>
-    <Abstract>Add the DIS version of an operation to a DIS object. </Abstract>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -109,6 +108,17 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>ad57e55c5e53fcbd355092e5945e4a4af</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertCallNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+    <Anchor>a4f4d290197b40fa629b15fa2f08a5972</Anchor>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -265,6 +275,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>loc</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a514324055e0953215c42fb956b979201</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getCompound</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -307,6 +328,17 @@
     <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
     <Anchor>aa597fb2db81faf8c1e12026d7e20518f</Anchor>
     <Abstract>Parse an IF1 edge. </Abstract>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseCallLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
+    <Anchor>abfc97be40e9fc8fbe8b082054d4a530f</Anchor>
     <DeclaredIn>edge.py</DeclaredIn>
   </Token>
   <Token>
@@ -1399,6 +1431,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
+    <Abstract>Check the current port of the runtime. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getIn</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1419,18 +1463,6 @@
     <Path>namespacecore.html</Path>
     <Anchor>a64a7b5be7fa0e4857117508b808dc889</Anchor>
     <Abstract>Set the amount of inputs that the runtime expects. </Abstract>
-    <DeclaredIn>__init__.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getPort</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore.html</Path>
-    <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
-    <Abstract>Check the current port of the runtime. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -3122,13 +3154,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>convertAll</Name>
+      <Name>convertGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::convertAll</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1convert_all.html</Path>
-    <Anchor>a6ae96668340d9aeeca57c399d5f04efb</Anchor>
+    <Anchor>a2048e4aac864dabbe96182d21687d5c1</Anchor>
     <DeclaredIn>convertAll.py</DeclaredIn>
   </Token>
   <Token>
@@ -3215,7 +3247,6 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>ad7559cb47d74295d76b88eb2b36b6008</Anchor>
-    <Abstract>Add the DIS version of an operation to a DIS object. </Abstract>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -3238,6 +3269,17 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>ad57e55c5e53fcbd355092e5945e4a4af</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertCallNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+    <Anchor>a4f4d290197b40fa629b15fa2f08a5972</Anchor>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -3797,6 +3839,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
+    <Abstract>Check the current port of the runtime. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getIn</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3817,18 +3871,6 @@
     <Path>namespacecore.html</Path>
     <Anchor>a64a7b5be7fa0e4857117508b808dc889</Anchor>
     <Abstract>Set the amount of inputs that the runtime expects. </Abstract>
-    <DeclaredIn>__init__.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getPort</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore.html</Path>
-    <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
-    <Abstract>Check the current port of the runtime. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -5806,6 +5848,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>loc</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>disc</Scope>
+    </TokenIdentifier>
+    <Path>namespacedisc.html</Path>
+    <Anchor>a514324055e0953215c42fb956b979201</Anchor>
+    <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -6086,6 +6139,17 @@
     <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
     <Anchor>aa597fb2db81faf8c1e12026d7e20518f</Anchor>
     <Abstract>Parse an IF1 edge. </Abstract>
+    <DeclaredIn>edge.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseCallLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::edge</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
+    <Anchor>abfc97be40e9fc8fbe8b082054d4a530f</Anchor>
     <DeclaredIn>edge.py</DeclaredIn>
   </Token>
   <Token>
@@ -8518,6 +8582,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.CallNode</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+    <Anchor>ab956b735b2a319b2c21c858366906a4c</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>bindFunction</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -8537,18 +8612,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
     <Anchor>a7cb449ad9469a45007c9a3806c7d1575</Anchor>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.Node</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
-    <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
-    <Abstract>Create a printable version of the node. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
