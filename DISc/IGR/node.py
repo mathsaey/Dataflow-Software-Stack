@@ -215,6 +215,10 @@ class CallNode(Node):
 		super(CallNode, self).__init__(subGraph)
 		self.function = None
 
+	def __str__(self):
+		func = str(self.function)
+		return "CallN '%d' %s" % (self.key, func)
+
 	##
 	# Binds the call node to a certain value.
 	# Can be a graph, a graph identifier or a name.
