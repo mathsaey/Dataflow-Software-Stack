@@ -88,7 +88,7 @@ public:
 	 */
 	explicit ContextCreator(int prefix):_prefix(prefix),_key(0){};
 
-	const int getPrefix() {return _prefix;}
+	const int getPrefix() const {return _prefix;}
 
 	/**
 	 * Create a new context.
