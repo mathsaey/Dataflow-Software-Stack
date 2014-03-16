@@ -49,12 +49,14 @@
  * a datum which contains the actual data, and a tag,
  * which contains the meta information about the token
  * like it's destination.
+ *
+ * \todo Switch to Boost.Variant
  */
 template < class DatumType > class Token {
 
 private:
 
-	AbstractTag * _tag;  /**< The tag of this token */
+	Tag * _tag;  /**< The tag of this token */
 	DatumType _datum;    /**< The datum that the token contains */
 
 	Token() = delete;
@@ -71,10 +73,10 @@ public:
 	 * \param tag
 	 *		The tag of this token
 	 */
-	Token(DatumType datum, AbstractTag * tag):_datum(datum),_tag(tag){};
+	Token(DatumType datum, Tag * tag):_datum(datum),_tag(tag){};
 
 	DatumType getDatum() const {return _datum;}
-	AbstractTag getTag() const {return _tag;}
+	Tag getTag() const {return _tag;}
 };
 
 template < class DatumType > 
