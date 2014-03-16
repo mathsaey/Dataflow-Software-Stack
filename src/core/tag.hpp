@@ -32,7 +32,7 @@
  *
  * \brief DVM Token tags
  * 
- * Declares the various Token tags.
+ * Declares Token tags.
  */
 
 #ifndef __DVM_CORE_TAG_HPP__
@@ -41,31 +41,18 @@
 #include "context.hpp"
 
 /**
- * DVM Abstract Tag
- *
- * A tag contains the meta information about a Token
- */
-class AbstractTag {};
-
-/**
- * Stop tag
- *
- * Signifies a token that is the result
- * of the entire program, thus ending the program.
- */
-class StopTag {};
-
-/**
- * Standard tag.
- * A standard tag contains the destination
- * (instruction and port) of a Token as well as it's context.
+ * DVM Tag.
+ * A Tag contains the meta information of a token.
+ * this information includes it's destination (instruction and port)
+ * of a Token as well as it's context and execution core.
  *
  * Conceptually, a tag has 2 parts:
  * * A static part, it's port and instruction which are part of the program
  * * A dynamic part, it's core and context, which are dynamically assigned at runtime.
  */
-class Tag: public AbstractTag {
+class Tag {
 private:
+	
 	Context _cont; /**< Current context of the token */
 	int     _core; /**< Core of the destination */
 	int     _inst; /**< Instruction address */
@@ -97,8 +84,6 @@ public:
 };
 
 std::ostream& operator<< (std::ostream& cout, Tag tag);
-std::ostream& operator<< (std::ostream& cout, StopTag tag);
-std::ostream& operator<< (std::ostream& cout, AbstractTag tag);
 
 #endif
 

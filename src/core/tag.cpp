@@ -36,11 +36,3 @@ std::ostream& operator<< (std::ostream& cout, Tag tag) {
 		<< "cont " << tag.getContext();
 	return cout;
 }
-std::ostream& operator<< (std::ostream& cout, StopTag tag) {
-	cout << "<STOP>";
-	return cout;
-}
-std::ostream& operator<< (std::ostream& cout, AbstractTag tag) {
-	cout << "Tag";
-	return cout;
-}
