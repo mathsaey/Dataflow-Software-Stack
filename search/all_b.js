@@ -7,6 +7,7 @@ var searchData=
   ['list',['list',['../classfront_end_1_1_i_f1_1_1type_1_1___unknown_type.html#ae46897e4c4298649373f4fb8ac3e7850',1,'frontEnd.IF1.type._UnknownType.list()'],['../classfront_end_1_1_i_f1_1_1type_1_1___combined_type.html#afde8b10eca648cdede714b74b4da12fe',1,'frontEnd.IF1.type._CombinedType.list()']]],
   ['literal',['Literal',['../class_i_g_r_1_1literal_1_1_literal.html',1,'IGR::literal']]],
   ['literal_2epy',['literal.py',['../literal_8py.html',1,'']]],
+  ['literalgraphs',['literalGraphs',['../namespaceback_end_1_1_d_v_m_1_1literals.html#aed6376dd2f6d8ac7e61c5b9ebf527917',1,'backEnd::DVM::literals']]],
   ['literals',['literals',['../classcore_1_1instruction_1_1_context_change.html#a8e806596b699c69c18c61e8397686422',1,'core::instruction::ContextChange']]],
   ['literals_2epy',['literals.py',['../literals_8py.html',1,'']]],
   ['litlst',['litLst',['../classcore_1_1instruction_1_1_operation_instruction.html#afefec2bba5b1fec590259ce5ebe9d427',1,'core::instruction::OperationInstruction']]],

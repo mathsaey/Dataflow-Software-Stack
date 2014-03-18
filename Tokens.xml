@@ -189,7 +189,7 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
-    <Abstract>Get all the inputs of a node (should only contain literals) </Abstract>
+    <Abstract>Get all the literal inputs of a node. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -213,19 +213,7 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a6ae8b7f1948b001f4a735e9ed2bdcdc1</Anchor>
-    <Abstract>Create a DIS program to execute a single function. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getValue</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>af3f1c6df1cac8584b86c763d825d8e43</Anchor>
-    <Abstract>Use DVM to execute a single operation with it&amp;#39;s literals as inputs. </Abstract>
+    <Abstract>Create a DIS program to execute a single function call. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -242,26 +230,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNode</Name>
+      <Name>propagateLit</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-    <Abstract>Delete a node from the program. </Abstract>
+    <Anchor>a1a5a92a73deeb22cac93310f9756a568</Anchor>
+    <Abstract>Calculate the value of a literal and propagate it to the next nodes. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNodes</Name>
+      <Name>checkCall</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
-    <Abstract>Delete all the nodes in the delete list. </Abstract>
+    <Anchor>abaa230ff06b7b7193890216d48dcec18</Anchor>
+    <Abstract>See if a call can be reduced to a constant. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -274,6 +262,42 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
     <Abstract>See if a node can be removed, do so if possible. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNodes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+    <Abstract>Clean up the nodes to be deleted. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+    <Abstract>See if the subgraph is trivial. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>exitSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a95251b583c30495bb9ad4596fc86253f</Anchor>
+    <Abstract>Perform the necessary actions after leaving a subgraph. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -309,6 +333,18 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
     <Abstract>Stores all the nodes that need to be deleted. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>literalGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aed6376dd2f6d8ac7e61c5b9ebf527917</Anchor>
+    <Abstract>Stores all the subgraphs that can be reduced to a literal. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3717,7 +3753,7 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a1a3c3c3603f3af45db8b7079b8a74327</Anchor>
-    <Abstract>Get all the inputs of a node (should only contain literals) </Abstract>
+    <Abstract>Get all the literal inputs of a node. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3741,19 +3777,7 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a6ae8b7f1948b001f4a735e9ed2bdcdc1</Anchor>
-    <Abstract>Create a DIS program to execute a single function. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getValue</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>af3f1c6df1cac8584b86c763d825d8e43</Anchor>
-    <Abstract>Use DVM to execute a single operation with it&amp;#39;s literals as inputs. </Abstract>
+    <Abstract>Create a DIS program to execute a single function call. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3770,26 +3794,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNode</Name>
+      <Name>propagateLit</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-    <Abstract>Delete a node from the program. </Abstract>
+    <Anchor>a1a5a92a73deeb22cac93310f9756a568</Anchor>
+    <Abstract>Calculate the value of a literal and propagate it to the next nodes. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNodes</Name>
+      <Name>checkCall</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
-    <Abstract>Delete all the nodes in the delete list. </Abstract>
+    <Anchor>abaa230ff06b7b7193890216d48dcec18</Anchor>
+    <Abstract>See if a call can be reduced to a constant. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3802,6 +3826,42 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
     <Abstract>See if a node can be removed, do so if possible. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNodes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+    <Abstract>Clean up the nodes to be deleted. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+    <Abstract>See if the subgraph is trivial. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>exitSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>a95251b583c30495bb9ad4596fc86253f</Anchor>
+    <Abstract>Perform the necessary actions after leaving a subgraph. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -3837,6 +3897,18 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
     <Abstract>Stores all the nodes that need to be deleted. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>literalGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aed6376dd2f6d8ac7e61c5b9ebf527917</Anchor>
+    <Abstract>Stores all the subgraphs that can be reduced to a literal. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>

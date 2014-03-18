@@ -1,6 +1,8 @@
 var searchData=
 [
   ['changecontext',['changeContext',['../classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4',1,'core::tokenCreator::TokenCreator']]],
+  ['checkcall',['checkCall',['../namespaceback_end_1_1_d_v_m_1_1literals.html#abaa230ff06b7b7193890216d48dcec18',1,'backEnd::DVM::literals']]],
+  ['checkgraph',['checkGraph',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a98756589a380f220c22befed86a29acc',1,'backEnd::DVM::literals']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
   ['checknode',['checkNode',['../namespaceback_end_1_1_d_v_m_1_1literals.html#ae72b1d4296d23cc05877a0ca6de97cda',1,'backEnd::DVM::literals']]],
   ['compoundfooter',['compoundFooter',['../namespace_i_g_r_1_1dot.html#ac646de3e1d3a4805bbfd4e57a4c2e1cb',1,'IGR::dot']]],

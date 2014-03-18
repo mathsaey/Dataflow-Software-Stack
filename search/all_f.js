@@ -28,5 +28,6 @@ var searchData=
   ['prefix',['prefix',['../classcore_1_1context_1_1_context_creator.html#ae04cb283ad9a8e639f70b06865a9dd83',1,'core::context::ContextCreator']]],
   ['process',['process',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#aea9d3ed1662329987b9a886c8e2b5466',1,'core::dispatcher::TokenDispatcher']]],
   ['processstandard',['processStandard',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a2f14155d26e17d4ab14dbf1dbf821623',1,'core::dispatcher::TokenDispatcher']]],
-  ['processstop',['processStop',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a6e46961e9f9745e13947edf1852cf547',1,'core::dispatcher::TokenDispatcher']]]
+  ['processstop',['processStop',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a6e46961e9f9745e13947edf1852cf547',1,'core::dispatcher::TokenDispatcher']]],
+  ['propagatelit',['propagateLit',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a1a5a92a73deeb22cac93310f9756a568',1,'backEnd::DVM::literals']]]
 ];

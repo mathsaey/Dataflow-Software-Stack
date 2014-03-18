@@ -3937,19 +3937,24 @@
                     <Anchor>a6ae8b7f1948b001f4a735e9ed2bdcdc1</Anchor>
                    </Node>
                    <Node>
-                    <Name>getValue</Name>
-                    <Path>literals_8py.html</Path>
-                    <Anchor>af3f1c6df1cac8584b86c763d825d8e43</Anchor>
-                   </Node>
-                   <Node>
                     <Name>transformNode</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>a726f37313ce3b3d4bd2f31fd6c6f5c5b</Anchor>
                    </Node>
                    <Node>
-                    <Name>deleteNode</Name>
+                    <Name>propagateLit</Name>
                     <Path>literals_8py.html</Path>
-                    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
+                    <Anchor>a1a5a92a73deeb22cac93310f9756a568</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>checkCall</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>abaa230ff06b7b7193890216d48dcec18</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>checkNode</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
                    </Node>
                    <Node>
                     <Name>deleteNodes</Name>
@@ -3957,9 +3962,14 @@
                     <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
                    </Node>
                    <Node>
-                    <Name>checkNode</Name>
+                    <Name>checkGraph</Name>
                     <Path>literals_8py.html</Path>
-                    <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
+                    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>exitSubGraph</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>a95251b583c30495bb9ad4596fc86253f</Anchor>
                    </Node>
                    <Node>
                     <Name>removeLiterals</Name>
@@ -3975,6 +3985,11 @@
                     <Name>deleteList</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>literalGraphs</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>aed6376dd2f6d8ac7e61c5b9ebf527917</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
