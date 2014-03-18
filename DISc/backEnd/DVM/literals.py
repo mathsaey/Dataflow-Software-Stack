@@ -50,6 +50,12 @@ log = logging.getLogger(__name__)
 ##
 deleteList = []
 
+##
+# Stores all the subgraphs
+# that can be reduced to a literal.
+##
+literalGraphs = {}
+
 ## See if a node only contains literals
 def isLit(node):
 	if not node.inputPorts: return False
@@ -58,7 +64,7 @@ def isLit(node):
 			return False
 	return True
 
-## Get all the inputs of a node (should only contain literals)
+## Get all the literal inputs of a node.
 def getInputs(node):
 	res = []
 	for port in node.inputPorts:
@@ -78,28 +84,10 @@ def createOpStr(node):
 
 ##
 # Create a DIS program to execute a
-# single function.
+# single function call.
 ##
 def createCallStr(node):
 	return graphConverter.convert(entryName = node.function)
-
-## 
-# Use DVM to execute a single operation 
-# with it's literals as inputs.
-##
-def getValue(node):
-	inputs = getInputs(node)
-
-	str = None
-	if isinstance(node, IGR.node.OperationNode):
-		str = createOpStr(node)
-	elif isinstance(node, IGR.node.CallNode):
-		str = createCallStr(node)
-	else: log.error("Found unknown literal node type %s", node)
-
-	# Run the program
-	val = dvm.run(dis = str, inputs = inputs)
-	return val
 
 ##
 # Add the result of executing
@@ -108,33 +96,75 @@ def getValue(node):
 def transformNode(node, value): 
 	for port in node.outputPorts:
 		for port in port.targets:
-			IGR.addLiteral(value, port.node, port.idx)
+			IGR.addLiteral(value, port.node, port.idx)	
 
-## Delete a node from the program.
-def deleteNode(node):
-	sg = node.subGraph
-	sg.nodes.remove(node)
+##
+# Calculate the value of a literal
+# and propagate it to the next nodes.
+##
+def propagateLit(node):
+	str = None
+	if isinstance(node, IGR.node.OperationNode):
+		str = createOpStr(node)
+	elif isinstance(node, IGR.node.CallNode):
+		str = createCallStr(node)
+	#else: return	
+	## \todo Do something about adding literal to subgraphExitNode
 
-## Delete all the nodes in the delete list.
-def deleteNodes(subGraph):
-	for node in deleteList: 
-		deleteNode(node)
-	del deleteList[:]
+	val = dvm.run(dis = str, inputs = getInputs(node))	
+	transformNode(node, val)	
+	deleteList.append(node)
+	log.info("Reducing node '%s' to literal '%s'", node, val)
+
+##
+# See if a call can be reduced to a 
+# constant. If possible, propagate.
+##
+def checkCall(node):
+	if node.function in literalGraphs:
+		val = literalGraphs[node.function]
+		transformNode(node, val)
+		deleteList.append(node)
+		log.info("Replacing call '%s' with constant '%s'", node, val)
 
 ## See if a node can be removed, do so if possible.
 def checkNode(node):
 	if isLit(node):
-		val = getValue(node)
-		transformNode(node, val)
-		deleteList.append(node)
-		log.info("Reducing node '%s' to literal '%s'", node, val)
+		propagateLit(node)
+	elif isinstance(node, IGR.node.CallNode):
+		checkCall(node)	
+
+## Clean up the nodes to be deleted.
+def deleteNodes(subGraph):
+	for node in deleteList: 
+		sg = node.subGraph
+		sg.nodes.remove(node)	
+	del deleteList[:]
+
+##
+# See if the subgraph is trivial.
+# Also delete all the nodes in the
+# delete list.
+##
+def checkGraph(subGraph):
+	if isLit(subGraph.exit):
+		val = getInputs(subGraph.exit)[0]
+		literalGraphs.update({subGraph.name : val})
+
+##
+# Perform the necessary actions
+# after leaving a subgraph.
+##
+def exitSubGraph(subGraph):
+	checkGraph(subGraph)
+	deleteNodes(subGraph)
 
 ## Remove all operations that have predefined inputs.
 def removeLiterals():
 	IGR.traverse(
 		checkNode,
 		lambda x: None,
-		deleteNodes,
+		exitSubGraph,
 		False,
 		lambda x: None,
 		lambda x: None
