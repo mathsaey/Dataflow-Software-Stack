@@ -39,6 +39,7 @@
 #define __DVM_CORE_TAG_HPP__
 
 #include "context.hpp"
+#include "instruction.hpp"
 
 /**
  * DVM Tag.
@@ -52,11 +53,12 @@
  */
 class Tag {
 private:
-	
-	Context _cont; /**< Current context of the token */
-	int     _core; /**< Core of the destination */
-	int     _inst; /**< Instruction address */
-	int     _port; /**< Input port */
+
+	Instruction * _inst; /**< Instruction address */
+	int           _port; /**< Input port */
+
+	Context       _cont; /**< Current context of the token */
+	int           _core; /**< Core of the destination */
 
 	Tag() = delete;
 	Tag(const Tag&) = delete;
@@ -69,18 +71,18 @@ public:
 	 * The attributes of thie constructor match the
 	 * ivars of this class.
 	 */
-	Tag(int core, int inst, int port, Context cont):
-		_cont(cont),_core(core),_inst(inst),_port(port){};
+	Tag(Instruction * inst, int port, Context cont, int core):
+		_inst(inst),_port(port),_cont(cont),_core(core){};
 
-	Context getContext() const {return _cont;} 
-	int     getAddress() const {return _inst;} 
-	int     getCore()    const {return _core;} 
-	int     getPort()    const {return _port;} 
+	Instruction * getAddress() const {return _inst;} 
+	Context       getContext() const {return _cont;} 
+	int           getCore()    const {return _core;} 
+	int           getPort()    const {return _port;} 
 
-	void setContext(Context cont) {_cont = cont;} 
-	void setAddress(int inst)     {_inst = inst;} 
-	void setCore(int core)        {_core = core;} 
-	void setPort(int port)        {_port = port;} 
+	void setAddress(Instruction * inst) {_inst = inst;} 
+	void setContext(Context cont)       {_cont = cont;} 
+	void setCore(int core)              {_core = core;} 
+	void setPort(int port)              {_port = port;} 
 };
 
 std::ostream& operator<< (std::ostream& cout, Tag tag);
