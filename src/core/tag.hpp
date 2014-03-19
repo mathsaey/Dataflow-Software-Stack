@@ -54,7 +54,7 @@
 class Tag {
 private:
 
-	Instruction * _inst; /**< Instruction address */
+	Instruction * _addr; /**< Instruction address */
 	int           _port; /**< Input port */
 
 	Context       _cont; /**< Current context of the token */
@@ -65,22 +65,22 @@ private:
 	Tag& operator= (const Tag&) = delete;
 
 public:
-	
+
 	/**
 	 * Create a new Tag.
 	 * 
 	 * The attributes of this constructor match the
 	 * ivars of this class.
 	 */
-	Tag(Instruction * inst, int port, Context cont, int core):
-		_inst(inst),_port(port),_cont(cont),_core(core){};
+	Tag(Instruction * addr, int port, Context cont, int core):
+		_addr(addr),_port(port),_cont(cont),_core(core){};
 
-	Instruction * getAddress() const {return _inst;} 
+	Instruction * getAddress() const {return _addr;} 
 	Context       getContext() const {return _cont;} 
 	int           getCore()    const {return _core;} 
 	int           getPort()    const {return _port;} 
 
-	void setAddress(Instruction * inst) {_inst = inst;} 
+	void setAddress(Instruction * inst) {_addr = inst;} 
 	void setContext(Context cont)       {_cont = cont;} 
 	void setCore(int core)              {_core = core;} 
 	void setPort(int port)              {_port = port;} 
