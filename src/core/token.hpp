@@ -41,6 +41,8 @@
 #include <iostream>
 #include "tag.hpp"
 
+#include "../natives.hpp"
+
 /**
  * DVM Token
  *
@@ -50,14 +52,13 @@
  * which contains the meta information about the token
  * like it's destination.
  *
- * \todo Switch to Boost.Variant
  */
-template < class DatumType > class Token {
+class Token {
 
 private:
 
-	Tag * _tag;  /**< The tag of this token */
-	DatumType _datum;    /**< The datum that the token contains */
+	Tag   _tag;  /**< The tag of this token */
+	Datum _datum;    /**< The datum that the token contains */
 
 	Token() = delete;
 	Token(const Token&) = delete;
@@ -73,14 +74,13 @@ public:
 	 * \param tag
 	 *		The tag of this token
 	 */
-	Token(DatumType datum, Tag * tag):_datum(datum),_tag(tag){};
+	Token(Datum datum, Tag tag):_datum(datum),_tag(tag){};
 
-	DatumType getDatum() const {return _datum;}
-	Tag getTag() const {return _tag;}
+	Datum getDatum() const {return _datum;}
+	Tag   getTag()   const {return _tag;}
 };
 
-template < class DatumType > 
-std::ostream& operator<< (std::ostream& cout, Token<DatumType> token) {
+std::ostream& operator<< (std::ostream& cout, Token token) {
 	cout 
 		<< "<| " 
 		<< "'" << token.getDatum() << "' "

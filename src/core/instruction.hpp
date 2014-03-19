@@ -1,4 +1,4 @@
-// natives.hpp
+// instruction.hpp
 // DVM
 // Mathijs Saey
 
@@ -26,31 +26,53 @@
  * THE SOFTWARE.
  */
 
-/**
- * \file natives.hpp
+ /**
+ * \file core/instruction.hpp
  * \author Mathijs Saey
  *
- * \brief DVM Natives
+ * \brief DVM Instructions
  * 
- * This module defines all of the native
- * DVM operations and types.
+ * Declares The various instruction types.
  */
 
-#ifndef __DVM_NATIVES_HPP__
-#define __DVM_NATIVES_HPP__
+#ifndef __DVM_CORE_INSTRUCTION_HPP__
+#define __DVM_CORE_INSTRUCTION_HPP__
 
-#include <string>
-#include <vector>
-#include <boost/variant.hpp>
+#include <list>
 
-typedef int dvm_int;
+class Token;
 
-typedef bool dvm_bool;
+class Instruction {
+private:
+	Instruction() = delete;
+	Instruction(const Instruction&) = delete;
+	Instruction& operator= (const Instruction&) = delete;
 
-typedef float dvm_float;
+public:
 
-typedef std::string dvm_string;
+	/**
+	 * Execute an instruction with a given
+	 * input and a core.
+	 * 
+	 * \param input
+	 *		A single token that serves as the input to the instruction.
+	 * \param core
+	 *		The core that we are executing on.
+	 */
+	virtual void execute(Token input, int core) =0;
 
-typedef boost::variant<dvm_int, dvm_bool, dvm_float, dvm_string> Datum;
+	/**
+	 * Execute an instruction with a given
+	 * input and a core.
+	 * 
+	 * \param input
+	 *		A tuple of tokens that serve as the input to the 
+	 *		instruction.
+	 * \param core
+	 *		The core that we are executing on.
+	 */
+	virtual void execute(std::list<Token> input, int core) =0;
+
+};
 
 #endif
