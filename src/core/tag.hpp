@@ -65,10 +65,11 @@ private:
 	Tag& operator= (const Tag&) = delete;
 
 public:
+	
 	/**
 	 * Create a new Tag.
 	 * 
-	 * The attributes of thie constructor match the
+	 * The attributes of this constructor match the
 	 * ivars of this class.
 	 */
 	Tag(Instruction * inst, int port, Context cont, int core):
