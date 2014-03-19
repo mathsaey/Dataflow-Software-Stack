@@ -108,12 +108,21 @@ def propagateLit(node):
 		str = createOpStr(node)
 	elif isinstance(node, IGR.node.CallNode):
 		str = createCallStr(node)
-	#else: return	
-	## \todo Do something about adding literal to subgraphExitNode
+	elif isinstance(node, IGR.node.SubGraphExitNode):
+		# The graph has become trivial, so remove
+		# the exit node which does not support literals.
+		deleteList.append(node) 
+		val = getInputs(node)[0]
+		literalGraphs.update({node.subGraph.name : val})
+		log.info("Reduced trivial graph: %s", node.subGraph)
+		return
+	else:
+		log.error("Literals added to unsupported node: %s", node)
+		return	
 
 	val = dvm.run(dis = str, inputs = getInputs(node))	
-	transformNode(node, val)	
-	deleteList.append(node)
+	deleteList.append(node) 
+	transformNode(node, val)
 	log.info("Reducing node '%s' to literal '%s'", node, val)
 
 ##
@@ -141,30 +150,12 @@ def deleteNodes(subGraph):
 		sg.nodes.remove(node)	
 	del deleteList[:]
 
-##
-# See if the subgraph is trivial.
-# Also delete all the nodes in the
-# delete list.
-##
-def checkGraph(subGraph):
-	if isLit(subGraph.exit):
-		val = getInputs(subGraph.exit)[0]
-		literalGraphs.update({subGraph.name : val})
-
-##
-# Perform the necessary actions
-# after leaving a subgraph.
-##
-def exitSubGraph(subGraph):
-	checkGraph(subGraph)
-	deleteNodes(subGraph)
-
 ## Remove all operations that have predefined inputs.
 def removeLiterals():
 	IGR.traverse(
 		checkNode,
 		lambda x: None,
-		exitSubGraph,
+		deleteNodes,
 		False,
 		lambda x: None,
 		lambda x: None
