@@ -3,6 +3,9 @@
 ###################
 
 examples/s.out
+obj/
+dvm
+
 *.dot*
 *.pyc
 *.log
