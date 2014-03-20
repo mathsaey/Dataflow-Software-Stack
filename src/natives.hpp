@@ -39,18 +39,33 @@
 #ifndef __DVM_NATIVES_HPP__
 #define __DVM_NATIVES_HPP__
 
+#include <tuple>
 #include <string>
 #include <vector>
 #include <boost/variant.hpp>
 
-typedef int dvm_int;
+/* ------------- *
+ * DVM Datatypes *
+ * ------------- */
 
-typedef bool dvm_bool;
+typedef int dvm_int;             /**< Represents a DVM integer. */
+typedef void dvm_void;           /**< Represents a DVM null.    */
+typedef bool dvm_bool;           /**< Represents a DVM boolean. */
+typedef float dvm_float;         /**< Represents a DVM float.   */
+typedef std::string dvm_string;  /**< Represents a DVM string.  */
+template<class dvm_type> using dvm_arr = std::vector<dvm_type>;        /**< Represents a DVM Array.*/
+template<class... dvm_types> using dvm_tup = std::tuple<dvm_types...>; /**< Represents a DVM Tuple.*/
 
-typedef float dvm_float;
+typedef boost::variant<dvm_int, dvm_void, dvm_bool, dvm_float, dvm_string> dvm_simple_types;
+typedef boost::variant<dvm_arr<dvm_simple_types>, dvm_tup<dvm_simple_types...>> dvm_compound_types;
+typedef dvm_simple_types Datum
 
-typedef std::string dvm_string;
+/* -------------- *
+ * DVM Operations *
+ * -------------- */
 
-typedef boost::variant<dvm_int, dvm_bool, dvm_float, dvm_string> Datum;
+/** Return the DVM void type. */
+dvm_void dvm_Void(){return;}
+
 
 #endif
