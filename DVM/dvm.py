@@ -35,10 +35,6 @@
 #
 # In short it bundles all the components of DVM together and it 
 # allows the user to interact with these components.
-#
-# \todo
-#		Stop instruction that can contain tokens until
-#		it receives a signal (handle on meta level)
 ##
 
 import log
