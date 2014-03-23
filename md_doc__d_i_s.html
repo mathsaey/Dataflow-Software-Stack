@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">9e92a62</span>
+   &#160;<span id="projectnumber">1542eb4</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -143,6 +143,8 @@ Instructions</h2>
 <tr>
 <td><a class="el" href="classcore_1_1instruction_1_1_sink.html">Sink</a> </td><td>SI </td><td><code>None</code> </td></tr>
 <tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_switch.html">Switch</a> </td><td>SW </td><td><code>&lt;dstList&gt;</code> </td></tr>
+<tr>
 <td><a class="el" href="classcore_1_1instruction_1_1_context_change.html">ContextChange</a> </td><td>CC </td><td><code>&lt;to&gt; &lt;return sink&gt;</code> </td></tr>
 <tr>
 <td><a class="el" href="classcore_1_1instruction_1_1_context_restore.html">ContextRestore</a> </td><td>CR </td><td><code>None</code> </td></tr>
@@ -152,6 +154,18 @@ Instructions</h2>
 <h4>Sinks</h4>
 <p>Sinks are the the simplest instruction that is available. A sink is a simple link between a from and to. It will send whatever input it receives on a port to the destination for that port.</p>
 <p>Sinks are mainly used to have a static point in the program that can catch input (such as the start of a function). A sink takes no arguments, since it's behavior is defined by it's destinations, which are added through links.</p>
+<h4>Switch</h4>
+<p>A Switch allows us to change the destination of a token depending on a condition. A switch stores all the tokens that it receives, until it's destination is determined. Once the destination is determined, all the stored tokens are sent to this destination. Further tokens that are received will also be sent to the same destination.</p>
+<p>The destination is determined by a token that arrives at port 0. This token carries an index, which corresponds to a destination in the <em>destination list</em> of the switch.</p>
+<p>A Switch only modifies the destination address of the tokens it receives, it does not touch the port. Sinks should be used when rederection is required.</p>
+<p>A Sink is declared in the following manner: </p>
+<pre class="fragment">INST SW &lt;idx&gt; &lt;destination list&gt;
+</pre><p>A destination list looks like this: </p>
+<pre class="fragment">&lt;chunk 0&gt; &lt;address 0&gt; &lt;chunk 1&gt; &lt;address 1&gt; ... &lt;chunk n&gt; &lt;address n&gt;
+</pre><p>Simply put, a destination list is a list of chunk, address pairs, their order determines the index that they are assigned to.</p>
+<p>For instance, in the following example: </p>
+<pre class="fragment">INST SW 0 0 22 1 5
+</pre><p>Index 0 would correspond to sending further tokens to instruction (0, 22), while index 1 would correspond to sending the tokens to instruction (1, 5).</p>
 <h4>ContextChange</h4>
 <p>A Context change instruction changes the context of a token. Look into the <a class="el" href="classcore_1_1instruction_1_1_context_change.html">documentation</a> for further information.</p>
 <p>A context change instruction takes 2 arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored. Thus a context change will look like this: </p>
@@ -206,9 +220,11 @@ An Example</h1>
 <div class="line">function Main(x, y):</div>
 <div class="line">    return <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a>(x, y, 4)</div>
 <div class="line">end function</div>
-</div><!-- fragment --><div class="fragment"><div class="line">$ simple.dis</div>
+</div><!-- fragment --><div class="fragment"><div class="line">$ example.dis</div>
 <div class="line">$ Mathijs Saey</div>
 <div class="line">$ A simple DIS Example</div>
+<div class="line"></div>
+<div class="line">$ TODO: Add a Switch example</div>
 <div class="line"></div>
 <div class="line">CHUNK 0</div>
 <div class="line">$ Instructions without a matcher</div>
@@ -221,7 +237,7 @@ An Example</h1>
 <div class="line">INST CC 2 0 4 0 3 $ A call to a <span class="keyword">function</span>.</div>
 <div class="line">INST SI 3         $ A sink that leads to the program exit point.</div>
 <div class="line"></div>
-<div class="line">LITR 2 2 4       $ Add literal to call</div>
+<div class="line">LITR 2 2 &lt;= 4       $ Add literal to call</div>
 <div class="line">LINK 0 0 0 0 2 0 $ Accept input from entry point</div>
 <div class="line">LINK 0 0 1 0 2 1 $ Accept input from entry point</div>
 <div class="line">LINK 0 3 0 0 1 0 $ Send <span class="keywordflow">return</span> value to program exit</div>
@@ -241,7 +257,7 @@ An Example</h1>
 <div class="line">INST OP 1 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
 <div class="line">INST OP 2 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
 <div class="line"></div>
-<div class="line">LITR 2 1 5 $ Adding a 5 as one of the inputs</div>
+<div class="line">LITR 2 1 &lt;= 5 $ Adding a 5 as one of the inputs</div>
 <div class="line"></div>
 <div class="line">LINK 1 0 0 1 1 0 $ Link x + y to (x + y) + z</div>
 <div class="line">LINK 1 1 0 1 2 0 $ Link x + y + z to (x + y + z) + 5</div>
@@ -345,7 +361,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 18:12:00 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 23 2014 19:00:23 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
