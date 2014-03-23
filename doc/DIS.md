@@ -69,6 +69,7 @@ The following table defines the possible instruction types, their type code and 
 Type | Code | Args 
 -----| -----|------
 [Sink](\ref core::instruction::Sink) | SI | `None`
+[Switch](\ref core::instruction::Switch) | SW | `<dstList>`
 [ContextChange](\ref core::instruction::ContextChange) | CC | `<to> <return sink>`
 [ContextRestore](\ref core::instruction::ContextRestore) | CR | `None`
 [OperationInstruction](\ref core::instruction::OperationInstruction) | OP | `<opCode> <inputs>`
@@ -78,6 +79,30 @@ Type | Code | Args
 Sinks are the the simplest instruction that is available. A sink is a simple link between a from and to. It will send whatever input it receives on a port to the destination for that port.
 
 Sinks are mainly used to have a static point in the program that can catch input (such as the start of a function). A sink takes no arguments, since it's behavior is defined by it's destinations, which are added through links.
+
+#### Switch
+
+A Switch allows us to change the destination of a token depending on a condition. A switch stores all the tokens that it receives, until it's destination is determined. Once the destination is determined, all the stored tokens are sent to this destination. Further tokens that are received will also be sent to the same destination.
+
+The destination is determined by a token that arrives at port 0. This token carries an index, which corresponds to a destination in the *destination list* of the switch.
+
+A Switch only modifies the destination address of the tokens it receives, it does not touch the port. Sinks should be used when rederection is required.
+
+A Sink is declared in the following manner:
+
+    INST SW <idx> <destination list>
+
+A destination list looks like this:
+
+    <chunk 0> <address 0> <chunk 1> <address 1> ... <chunk n> <address n>
+
+Simply put, a destination list is a list of chunk, address pairs, their order determines the index that they are assigned to. 
+
+For instance, in the following example:
+
+    INST SW 0 0 22 1 5
+
+Index 0 would correspond to sending further tokens to instruction (0, 22), while index 1 would correspond to sending the tokens to instruction (1, 5).
 
 #### ContextChange
 

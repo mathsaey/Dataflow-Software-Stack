@@ -287,8 +287,7 @@ class Switch(AbstractInstruction):
 			dst = self.getDst(token)
 			log.info("%s, switching to destination %s, for context %d", self, dst, cnt)
 			core.tokenCreator.setSwitch(self, cnt, dst)
-		else:
-			core.tokenCreator.switchToken(token, self)
+		core.tokenCreator.switchToken(token, self)
 
 # --------------- #
 # Context Restore #

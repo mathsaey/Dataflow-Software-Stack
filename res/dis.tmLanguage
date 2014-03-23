@@ -30,15 +30,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>LINK|CHUNK|INST|LITR</string>
+			<string>LINK|CHUNK|INST|LITR|&lt;=</string>
 			<key>name</key>
 			<string>keyword.operator.dis</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>OP|CC|CR|SI|SA|PB|PE</string>
+			<string>OP|CC|CR|SI|SA|PB|PE|SW|</string>
 			<key>name</key>
-			<string>support.class.dis</string>
+			<string>support.type.dis</string>
 		</dict>
 		<dict>
 			<key>match</key>

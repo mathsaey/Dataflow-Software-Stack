@@ -64,8 +64,8 @@ args = argParser.parse_args()
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.sis"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.sis"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.sis"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.sis"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
 
 args.path = loc
 # args.logLevel = 0

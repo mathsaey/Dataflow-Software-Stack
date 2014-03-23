@@ -1,6 +1,8 @@
-$ simple.dis
+$ example.dis
 $ Mathijs Saey
 $ A simple DIS Example
+
+$ TODO: Add a Switch example
 
 CHUNK 0
 $ Instructions without a matcher
@@ -13,7 +15,7 @@ $ "main function"
 INST CC 2 0 4 0 3 $ A call to a function.
 INST SI 3         $ A sink that leads to the program exit point.
 
-LITR 2 2 4       $ Add literal to call
+LITR 2 2 <= 4       $ Add literal to call
 LINK 0 0 0 0 2 0 $ Accept input from entry point
 LINK 0 0 1 0 2 1 $ Accept input from entry point
 LINK 0 3 0 0 1 0 $ Send return value to program exit
@@ -33,7 +35,7 @@ INST OP 0 add 2
 INST OP 1 add 2
 INST OP 2 add 2
 
-LITR 2 1 5 $ Adding a 5 as one of the inputs
+LITR 2 1 <= 5 $ Adding a 5 as one of the inputs
 
 LINK 1 0 0 1 1 0 $ Link x + y to (x + y) + z
 LINK 1 1 0 1 2 0 $ Link x + y + z to (x + y + z) + 5
