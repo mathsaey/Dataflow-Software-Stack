@@ -145,6 +145,13 @@ class TokenCreator(object):
 	# 
 	# In order to do this, we simply look up the previous context 
 	# and the return instruction that are bound to this context.
+	#
+	# This also deletes this context from the restoremap.
+	# This implies that every context can return only one value.
+	# \todo 
+	#	Look into possible use cases for multiple return values.
+	#	See if these are worth the drawback of the added synchronization
+	#	through the matcher. 
 	##
 	def restoreContext(self, token):
 		cont = token.tag.cont
