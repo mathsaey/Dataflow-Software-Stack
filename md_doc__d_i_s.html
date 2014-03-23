@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">781a326</span>
+   &#160;<span id="projectnumber">9e92a62</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -180,9 +180,9 @@ Instructions</h2>
 Literals</h2>
 <p>Some instructions can take some arguments that are known in advance. Examples are additions where one of the elements is already known or function calls with a few predefined arguments. It's important to know that every instruction needs at least one unknown attribute, an attribute which is not a literal. Any instruction that only accepts literals should be precomputed.</p>
 <p>A literal is defined with the following statement: </p>
-<pre class="fragment">LITR &lt;instruction&gt; &lt;port&gt; &lt;value&gt;
+<pre class="fragment">LITR &lt;instruction&gt; &lt;port&gt; &lt;= &lt;value&gt;
 </pre><p>Where instruction is the index of an instruction, which is located in the current chunk. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way. </p>
-<pre class="fragment">LITR 0 1 "A literal string"
+<pre class="fragment">LITR 0 1 &lt;= "A literal string"
 </pre><p>Literals can only be added to operation and context change instructions. The following table defines the various types that can be defined as literals.</p>
 <table class="doxtable">
 <tr>
@@ -345,7 +345,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 03:24:57 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 23 2014 18:12:00 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

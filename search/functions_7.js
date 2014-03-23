@@ -4,6 +4,7 @@ var searchData=
   ['get',['get',['../classcore_1_1context_1_1_context_creator.html#aaee11a8561c03ae27303a03886cb2602',1,'core.context.ContextCreator.get()'],['../classcore_1_1memory_1_1_instruction_memory.html#a047af687ab2c0eff932921536d372ee5',1,'core.memory.InstructionMemory.get()'],['../namespacecore_1_1memory.html#adcd75eabf1c237556ef1c8fc10702036',1,'core.memory.get()']]],
   ['getcompound',['getCompound',['../namespacefront_end_1_1_i_f1_1_1compound.html#aa3f94e445b385305aec08fcdb27d4838',1,'frontEnd::IF1::compound']]],
   ['getdot',['getDot',['../namespace_i_g_r_1_1dot.html#ad2dcf03200a33c5368bc5ac31bf518e5',1,'IGR::dot']]],
+  ['getdst',['getDst',['../classcore_1_1instruction_1_1_switch.html#af6d9158ac4e8d16a827253e88ba4e9bf',1,'core::instruction::Switch']]],
   ['getfunction',['getFunction',['../namespacefront_end_1_1_i_f1_1_1operations.html#a7adddda9015af7031ebfa41eb0b04af5',1,'frontEnd::IF1::operations']]],
   ['getin',['getIn',['../namespacecore.html#aacc1dc1509b580b630738c1c61fa619b',1,'core']]],
   ['getinputport',['getInputPort',['../class_i_g_r_1_1node_1_1_node.html#ac027c6e51dd93ee101de90af78e15010',1,'IGR.node.Node.getInputPort()'],['../class_i_g_r_1_1node_1_1_sub_graph_entry_node.html#abdd19659f5434a7dcb5912bfb657f00b',1,'IGR.node.SubGraphEntryNode.getInputPort()'],['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a170892e23acc2d46aaeea576d6fb73e7',1,'IGR.subgraph.SubGraph.getInputPort()']]],

@@ -31,5 +31,6 @@ var searchData=
   ['createsink',['createSink',['../namespaceread.html#a7b8d23d7bcbb7065fdcced37d5c7b461',1,'read']]],
   ['createstart',['createStart',['../namespaceread.html#ab7a5fd94b4a8dbcbff3be11dfd6d13f1',1,'read']]],
   ['createstop',['createStop',['../namespaceread.html#a30ddba6e3e6fcb02f5fb4f4bc4840772',1,'read']]],
-  ['createsubgraph',['createSubGraph',['../namespace_i_g_r.html#a8d809c5810700d1e88c378e40b949784',1,'IGR']]]
+  ['createsubgraph',['createSubGraph',['../namespace_i_g_r.html#a8d809c5810700d1e88c378e40b949784',1,'IGR']]],
+  ['createswitch',['createSwitch',['../namespaceread.html#a086b522d87f1782868a3b61d268be365',1,'read']]]
 ];

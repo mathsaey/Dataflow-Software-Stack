@@ -2,8 +2,8 @@ var searchData=
 [
   ['simple_20call_20in_20sisal_2fif1',['Simple call in Sisal/IF1',['../_call.html',1,'']]],
   ['schedule',['schedule',['../classcore_1_1scheduler_1_1_scheduler.html#a87b47093624481748a7d185c9527ae52',1,'core::scheduler::Scheduler']]],
-  ['scheduler',['Scheduler',['../classcore_1_1scheduler_1_1_scheduler.html',1,'core::scheduler']]],
   ['scheduler',['scheduler',['../classcore_1_1runtime_1_1_core.html#a7e5b0c28dae815f8a259cb7db70eb6e7',1,'core::runtime::Core']]],
+  ['scheduler',['Scheduler',['../classcore_1_1scheduler_1_1_scheduler.html',1,'core::scheduler']]],
   ['scheduler_2epy',['scheduler.py',['../scheduler_8py.html',1,'']]],
   ['scope',['Scope',['../classfront_end_1_1_i_f1_1_1environment_1_1_scope.html',1,'frontEnd::IF1::environment']]],
   ['scope',['scope',['../namespacefront_end_1_1_i_f1_1_1environment.html#aecee912bdfd884cb614c447fe9de0396',1,'frontEnd::IF1::environment']]],
@@ -16,7 +16,8 @@ var searchData=
   ['set',['set',['../namespaceback_end.html#a8fb37509b863bbe85fce88efe04582db',1,'backEnd.set()'],['../namespacefront_end.html#a9c7248fd78783fd6023b426b0df7f2cd',1,'frontEnd.set()']]],
   ['setin',['setIn',['../namespacecore.html#a64a7b5be7fa0e4857117508b808dc889',1,'core']]],
   ['setkey',['setKey',['../classcore_1_1instruction_1_1_abstract_instruction.html#ac51b309847a681f30924519582fa29af',1,'core::instruction::AbstractInstruction']]],
-  ['setup',['setup',['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()'],['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()']]],
+  ['setswitch',['setSwitch',['../classcore_1_1token_creator_1_1_token_creator.html#a9d696d566aae0d189a41e9975a3d029e',1,'core::tokenCreator::TokenCreator']]],
+  ['setup',['setUp',['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()'],['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()']]],
   ['simple_20piece_20of_20sisal_2fif1_20code',['Simple piece of Sisal/IF1 code',['../_simple.html',1,'']]],
   ['simpletoken',['simpleToken',['../classcore_1_1token_creator_1_1_token_creator.html#a17cafd58974a9fdd79834817a012c602',1,'core::tokenCreator::TokenCreator']]],
   ['sink',['Sink',['../classcore_1_1instruction_1_1_sink.html',1,'core::instruction']]],
@@ -36,5 +37,8 @@ var searchData=
   ['subgraphexitnode',['SubGraphExitNode',['../class_i_g_r_1_1node_1_1_sub_graph_exit_node.html',1,'IGR::node']]],
   ['subgraphfooter',['subGraphFooter',['../namespace_i_g_r_1_1dot.html#a5baab6aaadcf5140cfbb898db02b05b8',1,'IGR::dot']]],
   ['subgraphheader',['subGraphHeader',['../namespace_i_g_r_1_1dot.html#a4bd3bade93d0c9cc2639909fcd69df67',1,'IGR::dot']]],
-  ['subgraphs',['subGraphs',['../class_i_g_r_1_1node_1_1_compound_node.html#a5fef521bff3ecc08c64ece721bd9a422',1,'IGR::node::CompoundNode']]]
+  ['subgraphs',['subGraphs',['../class_i_g_r_1_1node_1_1_compound_node.html#a5fef521bff3ecc08c64ece721bd9a422',1,'IGR::node::CompoundNode']]],
+  ['switch',['Switch',['../classcore_1_1instruction_1_1_switch.html',1,'core::instruction']]],
+  ['switchmap',['switchMap',['../classcore_1_1token_creator_1_1_token_creator.html#a63fd0db8d3197f93a18d9d3deddb2e18',1,'core::tokenCreator::TokenCreator']]],
+  ['switchtoken',['switchToken',['../classcore_1_1token_creator_1_1_token_creator.html#ada40e396958217f3e8c0ca6cc32dc74c',1,'core::tokenCreator::TokenCreator']]]
 ];

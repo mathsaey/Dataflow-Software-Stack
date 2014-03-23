@@ -1419,6 +1419,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a0d21c6b4b8e5aa3fa35ec025d56ea2d9</Anchor>
+    <Abstract>Create a switch instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addContextChange</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2926,6 +2938,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>createSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a086b522d87f1782868a3b61d268be365</Anchor>
+    <Abstract>Create a switch instruction. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>parseInst</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2957,6 +2981,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+    <Abstract>Parse a literal declarations. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -3905,6 +3930,18 @@
     <Path>namespacecore.html</Path>
     <Anchor>a0a9167ffe1bc3f7d778cda3c1c77d334</Anchor>
     <Abstract>Add a sink instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a0d21c6b4b8e5aa3fa35ec025d56ea2d9</Anchor>
+    <Abstract>Create a switch instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -4899,16 +4936,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>contexts</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.ContextChange</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-    <Anchor>a0f3e68192d500a3ed4d8915dafee9adf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>literals</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -4916,6 +4943,105 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
     <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::Switch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.Switch</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_switch.html</Path>
+    <Abstract>Represents an instruction that will dynamically determine the destination of it&amp;#39;s tokens at runtime...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Switch</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_switch.html</Path>
+    <Anchor>abbb83a6185c97e00606b94fcada699fc</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Switch</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_switch.html</Path>
+    <Anchor>af6d9158ac4e8d16a827253e88ba4e9bf</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Switch</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_switch.html</Path>
+    <Anchor>aee8359ff4983994456d0c414256f17c2</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>needsMatcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+    <Abstract>See if an instruction requires context matching. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dstLst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Switch</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_switch.html</Path>
+    <Anchor>a47e2b6ade4960c07b616da3c9a3feba1</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5880,6 +6006,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>switchToken</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>ada40e396958217f3e8c0ca6cc32dc74c</Anchor>
+    <Abstract>Send a token to the destination of a SwitchInstruction. </Abstract>
+    <DeclaredIn>tokenCreator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a9d696d566aae0d189a41e9975a3d029e</Anchor>
+    <Abstract>Set the destination of tokens for a given (switch instruction, context) pair. </Abstract>
+    <DeclaredIn>tokenCreator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>createNewContext</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -5967,6 +6117,26 @@
     </TokenIdentifier>
     <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
     <Anchor>abd6fde0a66238ec75a2c929acd2eee66</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tokenStore</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>ae3fbfdffdd71cc02d60174f6fd5caf8b</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>switchMap</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenCreator.TokenCreator</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Anchor>a63fd0db8d3197f93a18d9d3deddb2e18</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -12043,6 +12213,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>createSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a086b522d87f1782868a3b61d268be365</Anchor>
+    <Abstract>Create a switch instruction. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>parseInst</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -12074,6 +12256,7 @@
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
     <Anchor>a5fc0d76c4ec00f5778d0baec95bf9d67</Anchor>
+    <Abstract>Parse a literal declarations. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

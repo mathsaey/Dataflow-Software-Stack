@@ -8,5 +8,6 @@ var searchData=
   ['destinations',['destinations',['../classcore_1_1instruction_1_1_operation_instruction.html#a0ffa039eaaca02bac84191551983f93d',1,'core.instruction.OperationInstruction.destinations()'],['../classcore_1_1instruction_1_1_sink.html#a02113388d825011118e5981d57bf960e',1,'core.instruction.Sink.destinations()']]],
   ['destsink',['destSink',['../classcore_1_1instruction_1_1_context_change.html#a8c3d69bd61884b15c178e10b938d61fb',1,'core::instruction::ContextChange']]],
   ['dispatcher',['dispatcher',['../classcore_1_1runtime_1_1_core.html#a068f6f9ef6dd9b1dac8c59dc8c3e9e6f',1,'core::runtime::Core']]],
+  ['dstlst',['dstLst',['../classcore_1_1instruction_1_1_switch.html#a47e2b6ade4960c07b616da3c9a3feba1',1,'core::instruction::Switch']]],
   ['dvm_5fchunks',['DVM_CHUNKS',['../namespaceback_end_1_1_d_v_m_1_1dis.html#a6d420beb3004da764486ac5f6234451b',1,'backEnd::DVM::dis']]]
 ];

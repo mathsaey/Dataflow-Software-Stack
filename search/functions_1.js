@@ -21,6 +21,7 @@ var searchData=
   ['addstopinstruction',['addStopInstruction',['../namespacecore.html#a803785af4adb84dbc665cba281df8aab',1,'core']]],
   ['addstring',['addString',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a8e51346ffd8a35a3072fbf65eae1b957',1,'backEnd::DVM::dis::DIS']]],
   ['addsubgraph',['addSubGraph',['../classfront_end_1_1_i_f1_1_1environment_1_1_compound_scope.html#a672b2cc6a42b43576a80afa5b59d2f57',1,'frontEnd.IF1.environment.CompoundScope.addSubGraph()'],['../namespacefront_end_1_1_i_f1_1_1environment.html#ad5fec7a4a795cd16a10ddb7449ad5bf2',1,'frontEnd.IF1.environment.addSubGraph()'],['../namespace_i_g_r_1_1graph.html#a713a1927c51880060d46b2110891a75f',1,'IGR.graph.addSubGraph()']]],
+  ['addswitch',['addSwitch',['../namespacecore.html#a0d21c6b4b8e5aa3fa35ec025d56ea2d9',1,'core']]],
   ['addtarget',['addTarget',['../class_i_g_r_1_1port_1_1_output_port.html#a6099aad27956c8063541e9a44ac6dd61',1,'IGR::port::OutputPort']]],
   ['addtype',['addType',['../classfront_end_1_1_i_f1_1_1type_1_1___type_pool.html#a17ed047ea2dc3407d7f6d9e5fb33fa1e',1,'frontEnd::IF1::type::_TypePool']]],
   ['attach',['attach',['../class_i_g_r_1_1port_1_1_input_port.html#a369193b3dcb94bbe685c5944737626cf',1,'IGR::port::InputPort']]]

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">781a326</span>
+   &#160;<span id="projectnumber">9e92a62</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -111,6 +111,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17cafd58974a9fdd79834817a012c602"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a17cafd58974a9fdd79834817a012c602">simpleToken</a></td></tr>
 <tr class="memdesc:a17cafd58974a9fdd79834817a012c602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a simple token, with a known destination.  <a href="#a17cafd58974a9fdd79834817a012c602">More...</a><br/></td></tr>
 <tr class="separator:a17cafd58974a9fdd79834817a012c602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada40e396958217f3e8c0ca6cc32dc74c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#ada40e396958217f3e8c0ca6cc32dc74c">switchToken</a></td></tr>
+<tr class="memdesc:ada40e396958217f3e8c0ca6cc32dc74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a token to the destination of a SwitchInstruction.  <a href="#ada40e396958217f3e8c0ca6cc32dc74c">More...</a><br/></td></tr>
+<tr class="separator:ada40e396958217f3e8c0ca6cc32dc74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d696d566aae0d189a41e9975a3d029e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a9d696d566aae0d189a41e9975a3d029e">setSwitch</a></td></tr>
+<tr class="memdesc:a9d696d566aae0d189a41e9975a3d029e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the destination of tokens for a given (switch instruction, context) pair.  <a href="#a9d696d566aae0d189a41e9975a3d029e">More...</a><br/></td></tr>
+<tr class="separator:a9d696d566aae0d189a41e9975a3d029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f735ff6e672f56b5481f5ff9a35a4c1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a1f735ff6e672f56b5481f5ff9a35a4c1">createNewContext</a></td></tr>
 <tr class="memdesc:a1f735ff6e672f56b5481f5ff9a35a4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new context for a token.  <a href="#a1f735ff6e672f56b5481f5ff9a35a4c1">More...</a><br/></td></tr>
 <tr class="separator:a1f735ff6e672f56b5481f5ff9a35a4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +141,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aedeba572df87c091e34f2e8234d03d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6fde0a66238ec75a2c929acd2eee66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#abd6fde0a66238ec75a2c929acd2eee66">restoreMap</a></td></tr>
 <tr class="separator:abd6fde0a66238ec75a2c929acd2eee66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3fbfdffdd71cc02d60174f6fd5caf8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#ae3fbfdffdd71cc02d60174f6fd5caf8b">tokenStore</a></td></tr>
+<tr class="separator:ae3fbfdffdd71cc02d60174f6fd5caf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63fd0db8d3197f93a18d9d3deddb2e18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a63fd0db8d3197f93a18d9d3deddb2e18">switchMap</a></td></tr>
+<tr class="separator:a63fd0db8d3197f93a18d9d3deddb2e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DVM Token creator. </p>
@@ -211,6 +221,97 @@ Public Attributes</h2></td></tr>
 
 <p>Create a simple token, with a known destination. </p>
 <p>The token will remain on the current core. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada40e396958217f3e8c0ca6cc32dc74c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.tokenCreator.TokenCreator.switchToken </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>inst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a token to the destination of a SwitchInstruction. </p>
+<p>Store the token if the destination is currently unknown. Only the instruction address of the token tag is modified.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>The token to switch </td></tr>
+    <tr><td class="paramname">inst</td><td>The instruction that sent the token. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9d696d566aae0d189a41e9975a3d029e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.tokenCreator.TokenCreator.setSwitch </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>inst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the destination of tokens for a given (switch instruction, context) pair. </p>
+<p>This will also release all the tokens that are stored for this context.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>The instruction that sent the switch. </td></tr>
+    <tr><td class="paramname">cont</td><td>The context that received the setSwitch </td></tr>
+    <tr><td class="paramname">dst</td><td>The destination of the tokens of the switch. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -383,9 +484,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Restore the old context of a token. </p>
-<p>In order to do this, we simply look up the previous context and the return instruction that are bound to this context.</p>
-<p>This also deletes this context from the restoremap. This implies that every context can return only one value. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Look into possible use cases for multiple return values. See if these are worth the drawback of the added synchronization through the matcher. </dd></dl>
+<p>In order to do this, we simply look up the previous context and the return instruction that are bound to this context.s </p>
 
 </div>
 </div>
@@ -460,10 +559,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae3fbfdffdd71cc02d60174f6fd5caf8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.tokenCreator.TokenCreator.tokenStore</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63fd0db8d3197f93a18d9d3deddb2e18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.tokenCreator.TokenCreator.switchMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 03:24:57 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 23 2014 18:12:00 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
