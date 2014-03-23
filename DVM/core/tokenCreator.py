@@ -77,8 +77,12 @@ class TokenCreator(object):
  			token.tag.inst = dst
  			self.core.add(token)
  		else:
- 			self.tokenStore.update({key : token})
- 			
+ 			if key in self.tokenStore:
+ 				lst = self.tokenStore[key]
+ 				lst.append(token)
+ 			else:
+ 				self.tokenStore.update({key : [token]})
+
  	##
  	# Set the destination of tokens for
  	# a given (switch instruction, context) pair.
