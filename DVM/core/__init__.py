@@ -83,6 +83,18 @@ def addSink():
 	return _addInstruction(instruction.Sink)
 
 ##
+# Create a switch instruction.
+# 
+# \param dstList
+#		The list of the possible destinations.
+#
+# \return 
+#		The key of the switch instruction.
+##
+def addSwitch(dstList):
+	return _addInstruction(instruction.Switch, [dstList])
+
+##
 # Add a context change instruction.
 #
 # \param destSink

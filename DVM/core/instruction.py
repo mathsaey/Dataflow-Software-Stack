@@ -241,7 +241,6 @@ class ContextChange(AbstractInstruction):
 		super(ContextChange, self).__init__()
 		self.retnSink = returnSink
 		self.destSink = destSink
-		self.contexts = {}
 		self.literals = {}
 
 	def addLiteral(self, port, val):
@@ -254,6 +253,42 @@ class ContextChange(AbstractInstruction):
 		log.info("%s, changing context of: %s", self, token)
 
 		core.tokenCreator.changeContext(token, self)
+
+##
+# Represents an instruction that will dynamically
+# determine the destination of it's tokens at runtime.
+#
+# The value of the token arriving at port 0 will determine
+# the next goal of the tokens. Tokens that arrive before this
+# token will be stored until their destination is resolved.
+#
+# This value should be an index corresponding to an entry in
+# the dstLst of the instruction. This entry is the destination of
+# the tokens that this instruction receives (for this context).
+##
+class Switch(AbstractInstruction):
+
+	def __init__(self, dstLst):
+		super(Switch, self).__init__()
+		self.dstLst = dstLst
+
+	def getDst(self, token):
+		try:
+			return self.dstLst[token.datum]
+		except IndexError:
+			log.error("%s: Invalid switch destination idx: %s, using 0", self, token.datum)
+			return self.dstLst[0]
+
+	def execute(self, token, core):
+		port = token.tag.port
+
+		if port == 0:
+			cnt = token.tag.cont
+			dst = self.getDst(token)
+			log.info("%s, switching to destination %s, for context %d", self, dst, cnt)
+			core.tokenCreator.setSwitch(self, cnt, dst)
+		else:
+			core.tokenCreator.switchToken(token, self)
 
 # --------------- #
 # Context Restore #

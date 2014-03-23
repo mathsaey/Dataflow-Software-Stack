@@ -47,6 +47,9 @@ class TokenCreator(object):
 		self.contextMap = {}
 		self.restoreMap = {}
 
+		self.tokenStore = {}
+		self.switchMap  = {}
+
 	## 
 	# Create a simple token, with a known destination.
 	# The token will remain on the current core.
@@ -55,6 +58,52 @@ class TokenCreator(object):
 		tag = token.Tag(self.core.identifier, toInst, toPort, context)
 		tok = token.Token(datum, tag)
  		self.core.add(tok)
+
+ 	##
+ 	# Send a token to the destination of a SwitchInstruction.
+ 	# Store the token if the destination is currently unknown.
+ 	# Only the instruction address of the token tag is modified.
+ 	#
+ 	# \param token
+ 	#		The token to switch
+ 	# \param inst
+ 	#		The instruction that sent the token.
+ 	##
+ 	def switchToken(self, token, inst):
+ 		key = (inst.key, token.tag.cont)
+
+ 		if key in self.switchMap:
+ 			dst = self.switchMap[key]
+ 			token.tag.inst = dst
+ 			self.core.add(token)
+ 		else:
+ 			self.tokenStore.update({key : token})
+ 			
+ 	##
+ 	# Set the destination of tokens for
+ 	# a given (switch instruction, context) pair.
+ 	# This will also release all the tokens that are
+ 	# stored for this context.
+ 	#
+ 	# \param inst
+ 	#		The instruction that sent the switch.
+ 	# \param cont
+ 	#		The context that received the setSwitch
+ 	# \param dst
+ 	#		The destination of the tokens of the switch.
+ 	##
+ 	def setSwitch(self, inst, cont, dst):
+ 		key = (inst.key, cont)
+
+ 		self.switchMap.update({key : dst})
+
+ 		if key in self.tokenStore:
+ 			lst = self.tokenStore[key]
+ 			del self.tokenStore[key]
+
+ 			for token in lst:
+ 				token.tag.inst = dst
+ 				self.core.add(token)
 
  	##
  	# Create a new context for a token.
@@ -74,7 +123,7 @@ class TokenCreator(object):
  	def createNewContext(self, tok, inst, dest):
  		core = tok.tag.core
  		cont = tok.tag.cont
- 		key  = (inst, cont)
+ 		key  = (inst.key, cont)
 
  		new = self.core.contextCreator.get()
 		self.contextMap.update({key : new})
@@ -133,7 +182,7 @@ class TokenCreator(object):
 	def changeContext(self, token, inst):
 		dest = inst.destSink
 		cont = token.tag.cont
-		key  = (inst, cont)
+		key  = (inst.key, cont)
 
 		if key not in self.contextMap:
 			self.createNewContext(token, inst, dest)
@@ -144,19 +193,11 @@ class TokenCreator(object):
 	# Restore the old context of a token.
 	# 
 	# In order to do this, we simply look up the previous context 
-	# and the return instruction that are bound to this context.
-	#
-	# This also deletes this context from the restoremap.
-	# This implies that every context can return only one value.
-	# \todo 
-	#	Look into possible use cases for multiple return values.
-	#	See if these are worth the drawback of the added synchronization
-	#	through the matcher. 
+	# and the return instruction that are bound to this context.s
 	##
 	def restoreContext(self, token):
 		cont = token.tag.cont
 		pair = self.restoreMap[cont]
-		del self.restoreMap[cont]
 
 		token.tag.cont = pair[0]
 		token.tag.inst = pair[1]

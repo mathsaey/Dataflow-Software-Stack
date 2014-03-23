@@ -82,11 +82,20 @@ def createOperation(arr):
 
 	return core.addOperationInstruction(op, inputs)
 
+## Create a switch instruction.
+def createSwitch(arr):
+	try:
+		lst = [(int(arr[i]), int(arr[i+1])) for i in xrange(3, len(arr), 2)]
+		return core.addSwitch(lst)
+	except IndexError:
+		log.error("Invalid destination list encountered: %s", arr)
+
 ## 
 # Defines the operation codes 
 # and the functions to create them.
 ##
 instructions = {
+	'SW' : createSwitch,
 	'SI' : createSink,
 	'PB' : createStart,
 	'PE' : createStop,
@@ -118,11 +127,23 @@ def parseChunk(arr, stmt):
 
 	log.info("Starting chunk: %d", chunk)
 
+##
+# Parse a literal declarations.
+#
+# A literal declaration has the form:
+# `LITR <instruction> <port> <= <value>`
+##
 def parseLit(arr, stmt):
 	inst = int(arr[1])
 	port = int(arr[2])
 
-	lit = stmt[stmt.find(arr[3]):]
+	litStart = stmt.find('<= ')
+
+	if litStart == -1:
+		log.error("Invalid literal declaraction: %s", stmt)
+		return
+	
+	lit = stmt[litStart + 3:]
 	lit = evalLit(lit)
 
 	log.info("Adding Literal: '%s' to c %d i %d p %d", 

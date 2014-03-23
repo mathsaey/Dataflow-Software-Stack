@@ -134,11 +134,11 @@ Some instructions can take some arguments that are known in advance. Examples ar
 
 A literal is defined with the following statement:
 
-    LITR <instruction> <port> <value>
+    LITR <instruction> <port> <= <value>
 
 Where instruction is the index of an instruction, which is located in the current chunk. Port is the idx of the port where the literal will end up and value is the value of the literal. Thus adding a literal to an instruction at address 0 at port 1 is done in the following way.
 
-    LITR 0 1 "A literal string"
+    LITR 0 1 <= "A literal string"
 
 Literals can only be added to operation and context change instructions. The following table defines the various types that can be defined as literals.
 

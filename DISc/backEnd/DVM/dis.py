@@ -164,7 +164,7 @@ class DIS(object):
 	#		The value of the literal.
 	##
 	def addLiteral(self, key, port, value):
-		str = "LITR %d %d %s" % (key[1], port, value)
+		str = "LITR %d %d <= %s" % (key[1], port, value)
 		self.addString(str, key[0])
 
 	##
