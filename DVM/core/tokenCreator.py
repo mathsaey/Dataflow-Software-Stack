@@ -149,6 +149,7 @@ class TokenCreator(object):
 	def restoreContext(self, token):
 		cont = token.tag.cont
 		pair = self.restoreMap[cont]
+		del self.restoreMap[cont]
 
 		token.tag.cont = pair[0]
 		token.tag.inst = pair[1]
