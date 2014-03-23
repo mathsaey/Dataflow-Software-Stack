@@ -3962,16 +3962,6 @@
                     <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
                    </Node>
                    <Node>
-                    <Name>checkGraph</Name>
-                    <Path>literals_8py.html</Path>
-                    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>exitSubGraph</Name>
-                    <Path>literals_8py.html</Path>
-                    <Anchor>a95251b583c30495bb9ad4596fc86253f</Anchor>
-                   </Node>
-                   <Node>
                     <Name>removeLiterals</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>af3c0fd54f4943ccedb7b37e19b3e160c</Anchor>

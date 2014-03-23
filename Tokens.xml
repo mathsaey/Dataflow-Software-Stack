@@ -278,30 +278,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>checkGraph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
-    <Abstract>See if the subgraph is trivial. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>exitSubGraph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a95251b583c30495bb9ad4596fc86253f</Anchor>
-    <Abstract>Perform the necessary actions after leaving a subgraph. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>removeLiterals</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3838,30 +3814,6 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
     <Abstract>Clean up the nodes to be deleted. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>checkGraph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
-    <Abstract>See if the subgraph is trivial. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>exitSubGraph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a95251b583c30495bb9ad4596fc86253f</Anchor>
-    <Abstract>Perform the necessary actions after leaving a subgraph. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
