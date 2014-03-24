@@ -6,24 +6,11 @@
 
 define Main
 
-function test(returns integer)
-	let 
-		a :=
-		if 1 < 2
-			then 1 + 2
-			else 3 + 4 
-		end if;
-		b := 
-			if 1 > 2 
-				then 1 + 2 
-				else 3 + 4 
-			end if
-	in
+
+function main(a, b : integer returns integer)
+	if a < b then
 		a + b
-	end let
-end function
-
-
-function main(returns integer)
-	test()
+	else
+		a - b
+	end if
 end function

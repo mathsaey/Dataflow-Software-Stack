@@ -11,19 +11,17 @@ INST CR 3
 
 LINK 0 2 0 1 0 0
 LINK 0 2 1 1 0 1
-
 $ Leaving subgraph test
 
 $ Starting subgraph main
 INST SI 4 
 INST CR 5 
-INST SI 6 
-INST CC 7 0 2 0 6
+INST CC 6 0 2 0 7
+INST SI 7 
 
-LINK 0 4 0 0 7 0
-LINK 0 4 1 0 7 1
-LINK 0 6 0 1 1 0
-
+LINK 0 4 0 0 6 0
+LINK 0 4 1 0 6 1
+LINK 0 7 0 1 1 0
 $ Leaving subgraph main
 
 $ Implicit call to main
@@ -36,14 +34,12 @@ $ Starting subgraph test
 INST OP 0 add 2
 
 LINK 1 0 0 0 3 0
-
 $ Leaving subgraph test
 
 $ Starting subgraph main
 INST OP 1 add 2
 
 LINK 1 1 0 0 5 0
-
 LITR 1 1 <= 7
 $ Leaving subgraph main
 

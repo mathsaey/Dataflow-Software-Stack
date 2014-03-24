@@ -35,42 +35,20 @@
 import IGR
 import IGR.node
 
-##
-# Store the keys that
-# nodes have received.
-#
-# Stored with the node key as
-# key and the (chunk, inst) tuple
-# as value.
-##
-nodes = {}
-
-def linkNode(node, key):
-	nodes.update({node.key : key})
-
-def getKey(node):
-	return nodes[node.key]
-
-def reset():
-	nodes.clear()
-
 def addLinks(dis, node):
-	fromKey = getKey(node)
-
-	if node.isCall(): 
-		fromKey = (fromKey[0], fromKey[1] - 1)
+	fromKey = dis.getFromKey(node)
 
 	for port in node.outputPorts:
 		fromPort = port.idx
 
 		for port in port.targets:
-			toKey = getKey(port.node)
+			toKey = dis.getToKey(port.node)
 			toPort = port.idx
 
 			dis.addLink(fromKey, fromPort, toKey, toPort)
 
 def addLiterals(dis, node):
-	key = getKey(node)
+	key = dis.getToKey(node)
 
 	for port in node.inputPorts:
 		if port.acceptsLiteral():
@@ -78,8 +56,11 @@ def addLiterals(dis, node):
 
 def convertGeneralNode(dis, node, chunk, type, args):
 	key = dis.addInstruction(chunk, type, args)
-	linkNode(node, key)
+	dis.linkNode(node, key, key)
 	return key
+
+def convertNode(dis, node):
+	return convertGeneralNode(dis, node, 0, 'SI', [])
 
 def convertOpNode(dis, node): 
 	return convertGeneralNode(dis, node, 1, 'OP', [node.operation, node.inputs])
@@ -91,17 +72,27 @@ def convertSGExitNode(dis, node):
 	return convertGeneralNode(dis, node, 0, 'CR', [])
 
 def convertCallNode(dis, node):
-	dest = getKey(IGR.getSubGraph(node.function).entry)
+	dest = dis.getToKey(IGR.getSubGraph(node.function).entry)
+	ins  = dis.addInstruction(0, 'CC', [])
 	ret  = dis.addInstruction(0, 'SI', [])
-	ins  = dis.addInstruction(0, 'CC', [dest[0], dest[1], ret[0], ret[1]])
-	linkNode(node, ins)
+	dis.linkNode(node, ins, ret)
+
+	app = ' '.join(map(str, [dest[0], dest[1], ret[0], ret[1]]))
+	dis.modifyString(0, dis.getIdx(0) - 1, lambda str : str + app)
 	return ins
 
+def convertSelectNode(dis, node):
+	switch = dis.addInstruction(0, 'SW', [])
+	sink   = dis.addInstruction(0, 'SI', [])
+	dis.linkNode(node, switch, sink)
+
 converters = {
+	IGR.node.Node              : convertNode,
 	IGR.node.SubGraphEntryNode : convertSGEntryNode,
 	IGR.node.SubGraphExitNode  : convertSGExitNode,
 	IGR.node.OperationNode     : convertOpNode,
-	IGR.node.CallNode          : convertCallNode
+	IGR.node.CallNode          : convertCallNode,
+	IGR.node.SelectCNode       : convertSelectNode
 }
 
 ##

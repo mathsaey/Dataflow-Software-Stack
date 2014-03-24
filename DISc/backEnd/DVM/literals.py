@@ -160,4 +160,3 @@ def removeLiterals():
 		lambda x: None,
 		lambda x: None
 		)
-	converter.reset()

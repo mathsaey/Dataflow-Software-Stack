@@ -57,15 +57,20 @@ class DIS(object):
 	def __init__(self, inputs):
 		super(DIS, self).__init__()
 
+		## Stores the node -> (chunk, inst) mapping
+		self.nodes = {}
+
 		## Stores the strings per chunk
 		self.memory = [[] for i in xrange(0, DVM_CHUNKS)]
 
 		## Contains the current key per chunk
 		self.keys = [0 for i in xrange(0, DVM_CHUNKS)]
 
-		self.addPredefined(inputs)
 		self.chunks = DVM_CHUNKS
 		self.inputs = inputs
+		self.indent = 0
+
+		self.addPredefined(inputs)
 
 	## Add the standard statements to DIS.
 	def addPredefined(self, inputs):
@@ -74,14 +79,23 @@ class DIS(object):
 		self.addInstruction(0, 'PE', [])
 		self.addNewline(0)
 
-	## Link every output of start to an instruction.
-	def linkStart(self, key):
-		for i in xrange(0, self.inputs):
-			self.addLink((0,0), i, key, i)
+	## 
+	# Link a node to a key pair.
+	#
+	# We store the source and destination keys
+	# separately for nodes that are converted to multiple
+	# instructions.
+	##
+	def linkNode(self, node, toKey, fromKey):
+		self.nodes.update({node.key : (fromKey, toKey)})
 
-	## Link the output of a node to stop.
-	def linkStop(self, key):
-		self.addLink(key, 0, (0,1), 0)
+	## Get the from key for a node.
+	def getFromKey(self, node):
+		return self.nodes[node.key][0]
+
+	## Get the to key for a node.
+	def getToKey(self, node):
+		return self.nodes[node.key][1]
 
 	##
 	# Add a string to a chunk.
@@ -89,6 +103,7 @@ class DIS(object):
 	##
 	def addString(self, str, chunk):
 		lst = self.memory[chunk]
+		str = "%s%s" % (self.indent * '\t', str)
 		lst.append(str)
 
 	##
@@ -111,9 +126,28 @@ class DIS(object):
 		self.keys[chunk] += 1
 		str = str % key
 
+		str = "%s%s" % (self.indent * '\t', str)
 		self.memory[chunk].append(str)
 		return (chunk, key)
 
+	##
+	# Modify a string in the memory.
+	# The result of func(str) will be added to the
+	# instruction memory.
+	#
+	# \param chunk
+	#		The chunk where we can find the string.
+	# \param idx
+	#		The index of the string.
+	# \param func
+	#		The function to apply on the string.
+	##
+	def modifyString(self, chunk, idx, func):
+		self.memory[chunk][idx] = func(self.memory[chunk][idx])
+
+	## Return the index of the string that was added last.
+	def getIdx(self, chunk):
+		return len(self.memory[chunk]) - 1
 	## 
 	# Convenience function to add 
 	# a newline for prettier output.
@@ -121,12 +155,22 @@ class DIS(object):
 	def addNewline(self, chunk):
 		self.addString('', chunk)
 
+	## Adds a newline to every chunk
+	def addNewlines(self):
+		for c in xrange(0, self.chunks):
+			self.addNewline(c)
+
 	##
 	# Convenience function to add a 
 	# comment line for better documented output.
 	##
 	def addCommentLine(self, comment, chunk):
 		self.addString('$ %s' % comment, chunk)
+
+	## Add a comment to every chunk
+	def addCommentLines(self, comment):
+		for c in xrange(0, self.chunks):
+			self.addCommentLine(comment, c)
 
 	##
 	# Generate a chunk string.
@@ -189,6 +233,15 @@ class DIS(object):
 			toKey[0], toKey[1], toPort)
 
 		self.addString(str, fromKey[0])
+
+	## Link every output of start to an instruction.
+	def linkStart(self, key):
+		for i in xrange(0, self.inputs):
+			self.addLink((0,0), i, key, i)
+
+	## Link the output of a node to stop.
+	def linkStop(self, key):
+		self.addLink(key, 0, (0,1), 0)
 
 	##
 	# Return the DIS string for the current

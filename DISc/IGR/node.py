@@ -246,9 +246,6 @@ class CompoundNode(Node):
 
 	def isCompound(self): return True
 
-
-## \todo Add in and outputs to nodes where this is known in advance (e.g. select)
-
 class ForallCNode(CompoundNode): pass
 class SelectCNode(CompoundNode): pass
 class TagCaseCNode(CompoundNode): pass

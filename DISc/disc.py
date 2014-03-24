@@ -63,9 +63,9 @@ args = argParser.parse_args()
 # DEBUG
 
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/sort.sis"
-#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.sis"
+loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/select.sis"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/call.sis"
-loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/examples/simple.sis"
 
 args.path = loc
 # args.logLevel = 0
@@ -80,8 +80,9 @@ fileName, fileExtension = os.path.splitext(args.path)
 frontEnd.setUp(fileExtension, args.frontEnd)
 frontEnd.fromFile(args.path)
 
-#import IGR
-#IGR.dot(path="../igr.dot", skipCompound = False)
+import IGR
+IGR.dot(path="../igr.dot", skipCompound = False)
 
 backEnd.setUp(fileName, args.backEnd, args.output)
 backEnd.toFile()
+print backEnd.generate()

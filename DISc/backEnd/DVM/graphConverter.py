@@ -30,68 +30,99 @@
 #
 # This module converts the entire graph
 # into DVM.
+#
+# \todo
+#	Clean this up 
+#		- cleaner abstraction for not using first subgraph
+#		- Type check for compound node type.
 ##
 
 import IGR
 import dis
+import IGR.node
 import converter
+
+##
+# Add the contents of a collection of subGraphs
+# to a DIS program.
+#
+# \param subGraphs
+#		A list of subgraphs to compile.
+# \param prog
+#		The DIS object to add the data to. 
+##
+def convertSubGraphs(subGraphs, prog):
+	nodes = []
+
+	def compStart(comp):
+		prog.indent += 1
+
+		retKey = prog.getFromKey(comp)
+		for sg in comp.subGraphs[1:]:
+			prog.linkNode(sg.exit, retKey, retKey)
+			if sg.exit in sg.nodes:
+				sg.nodes.remove(sg.exit)
+
+	def compStop(comp, idx):
+		prog.indent -= 1
+
+		dstLst = []
+		for sg in comp.subGraphs[1:]:
+			pair = prog.getToKey(sg.entry)
+			dstLst.append(str(pair[0]))
+			dstLst.append(str(pair[1]))
+		prog.modifyString(0, idx, lambda str : str + ' '.join(dstLst))
+
+	def nodeProc(node):
+		converter.convertNode(prog, node)
+		nodes.append(node)
+
+		if node.isCompound():
+			idx = prog.getIdx(0) - 1
+			compStart(node)
+			convertSubGraphs(node.subGraphs[1:], prog)
+			compStop(node, idx)
+
+	def sgStart(sg):
+		prog.addCommentLines("Starting subgraph %s" % sg.name)
+
+	def sgStop(sg):
+		prog.addNewlines()
+
+		for node in nodes:
+			converter.addLinks(prog, node)
+			converter.addLiterals(prog, node)
+
+		prog.addCommentLines("Leaving subgraph %s" % sg.name)
+		prog.addNewlines()
+
+		del nodes[:]
+
+	IGR.traverse(
+		nodeProc, sgStart, sgStop, 
+		True, lambda x : None, lambda x : None,
+		subGraphs)
 
 ##
 # Convert a collection of subGraphs
 # to a DIS program.
 #
-# \param subGraphs
-#		A list of subgraphs to compile.
 # \param entryName
 #		The name of the entry point in the program.
 #		This subgraph will be linked to the entry and
 #		exit of the DVM program.
 ##
-def convert(subGraphs = IGR.getSubGraphs(), entryName = 'main'):
+def convert(entryName = 'main'):
 	main = IGR.getSubGraph(entryName).entry
 	inputs = main.outputs
 	prog = dis.DIS(inputs)
-	nodes = []
 
-	def node(n): 
-		converter.convertNode(prog, n)
-		nodes.append(n)
-
-	def sgStart(sg): 
-		for c in xrange(0, prog.chunks):
-			prog.addCommentLine("Starting subgraph %s" % sg.name, c)
-
-	def sgStop(sg):
-		for c in xrange(0, prog.chunks):
-			prog.addNewline(c)
-
-		for node in nodes:
-			converter.addLinks(prog, node)
-
-		for c in xrange(0, prog.chunks):
-			prog.addNewline(c)
-
-		for node in nodes:
-			converter.addLiterals(prog, node)
-
-		for c in xrange(0, prog.chunks):
-			prog.addCommentLine("Leaving subgraph %s" % sg.name, c)
-			prog.addNewline(c)
-
-		del nodes[:]
-
-	def cmpStart(comp): pass
-	def cmpStop(comp): pass
-
-	IGR.traverse(
-		node, sgStart, sgStop, 
-		False, cmpStart, cmpStop, 
-		subGraphs)
+	convertSubGraphs(IGR.getSubGraphs(), prog)
 
 	# Add an implicit call to main, which returns to the 
 	# program exit point.
 	prog.addCommentLine("Implicit call to main", 0)
-	mainKey = converter.getKey(main)
+	mainKey = prog.getToKey(main)
 	mainCall = prog.addInstruction(0, 'CC', [mainKey[0], mainKey[1], 0, 1])
 	prog.linkStart(mainCall)
 
