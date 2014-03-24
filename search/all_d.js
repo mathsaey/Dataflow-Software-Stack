@@ -10,5 +10,5 @@ var searchData=
   ['nodeidentifier',['nodeIdentifier',['../namespace_i_g_r_1_1dot.html#a852920d8b1f41945a0507ac7e54e9ab4',1,'IGR::dot']]],
   ['nodelabel',['nodeLabel',['../namespace_i_g_r_1_1dot.html#a0ed7e0a8b80f6b70852adf99cd161b0e',1,'IGR::dot']]],
   ['nodelinks',['nodeLinks',['../namespace_i_g_r_1_1dot.html#a4bf8bc67240f948ad26dc3ccff87cafc',1,'IGR::dot']]],
-  ['nodes',['nodes',['../classfront_end_1_1_i_f1_1_1environment_1_1_scope.html#ae0bd6036c59f7490f37670773a922dc4',1,'frontEnd.IF1.environment.Scope.nodes()'],['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#ac6d42bcb907b0fb90df72e9839d26874',1,'IGR.subgraph.SubGraph.nodes()'],['../namespaceback_end_1_1_d_v_m_1_1converter.html#a82d0fdbecdd17e64ba9aba3f199811cc',1,'backEnd.DVM.converter.nodes()']]]
+  ['nodes',['nodes',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a9e1f5508efa1cdb4648c30ad7854d062',1,'backEnd.DVM.dis.DIS.nodes()'],['../classfront_end_1_1_i_f1_1_1environment_1_1_scope.html#ae0bd6036c59f7490f37670773a922dc4',1,'frontEnd.IF1.environment.Scope.nodes()'],['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#ac6d42bcb907b0fb90df72e9839d26874',1,'IGR.subgraph.SubGraph.nodes()']]]
 ];

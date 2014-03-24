@@ -9,7 +9,7 @@ var searchData=
   ['setin',['setIn',['../namespacecore.html#a64a7b5be7fa0e4857117508b808dc889',1,'core']]],
   ['setkey',['setKey',['../classcore_1_1instruction_1_1_abstract_instruction.html#ac51b309847a681f30924519582fa29af',1,'core::instruction::AbstractInstruction']]],
   ['setswitch',['setSwitch',['../classcore_1_1token_creator_1_1_token_creator.html#a9d696d566aae0d189a41e9975a3d029e',1,'core::tokenCreator::TokenCreator']]],
-  ['setup',['setUp',['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()'],['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()']]],
+  ['setup',['setup',['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()'],['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()']]],
   ['simpletoken',['simpleToken',['../classcore_1_1token_creator_1_1_token_creator.html#a17cafd58974a9fdd79834817a012c602',1,'core::tokenCreator::TokenCreator']]],
   ['skipline',['skipLine',['../namespacefront_end_1_1_i_f1.html#a6298bf62d1e5ea5855c45dda1c48b3c2',1,'frontEnd::IF1']]],
   ['start',['start',['../classcore_1_1runtime_1_1_core.html#ad1c6da697790371c9dbd223aab9690bc',1,'core.runtime.Core.start()'],['../namespacecore.html#ad86476e99dd74e173d5949a6c486a03b',1,'core.start()'],['../namespacecore_1_1runtime.html#a7b2f8d99c507dcb53e31bf8296b8bd69',1,'core.runtime.start()']]],

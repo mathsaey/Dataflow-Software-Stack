@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">2e964b3</span>
+   &#160;<span id="projectnumber">3343a33</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -97,26 +97,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a53e4f450eef26c0545a275efacccbeed"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1graph_converter.html#a53e4f450eef26c0545a275efacccbeed">convertSubGraphs</a></td></tr>
+<tr class="memdesc:a53e4f450eef26c0545a275efacccbeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the contents of a collection of subGraphs to a DIS program.  <a href="#a53e4f450eef26c0545a275efacccbeed">More...</a><br/></td></tr>
+<tr class="separator:a53e4f450eef26c0545a275efacccbeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a3fcfd764a49a982ed45f73504a5739"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1graph_converter.html#a0a3fcfd764a49a982ed45f73504a5739">convert</a></td></tr>
 <tr class="memdesc:a0a3fcfd764a49a982ed45f73504a5739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a collection of subGraphs to a DIS program.  <a href="#a0a3fcfd764a49a982ed45f73504a5739">More...</a><br/></td></tr>
 <tr class="separator:a0a3fcfd764a49a982ed45f73504a5739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a0a3fcfd764a49a982ed45f73504a5739"></a>
+<a class="anchor" id="a53e4f450eef26c0545a275efacccbeed"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def backEnd.DVM.graphConverter.convert </td>
+          <td class="memname">def backEnd.DVM.graphConverter.convertSubGraphs </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>subGraphs</em> = <code><a class="el" href="namespace_i_g_r.html#a97236270f5dbabe7399b907178a00d28">IGR.getSubGraphs</a>()</code>, </td>
+          <td class="paramname"><em>subGraphs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>entryName</em> = <code>'main'</code>&#160;</td>
+          <td class="paramname"><em>prog</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -126,10 +129,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convert a collection of subGraphs to a DIS program. </p>
+<p>Add the contents of a collection of subGraphs to a DIS program. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">subGraphs</td><td>A list of subgraphs to compile. </td></tr>
+    <tr><td class="paramname">prog</td><td>The DIS object to add the data to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a3fcfd764a49a982ed45f73504a5739"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def backEnd.DVM.graphConverter.convert </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>entryName</em> = <code>'main'</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a collection of subGraphs to a DIS program. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">entryName</td><td>The name of the entry point in the program. This subgraph will be linked to the entry and exit of the <a class="el" href="namespaceback_end_1_1_d_v_m.html" title="DVM Backend. ">DVM</a> program. </td></tr>
   </table>
   </dd>
@@ -140,7 +167,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 19:17:16 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 24 2014 05:57:36 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -2,39 +2,6 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>linkNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a2e4e6371ef09e05b5f284f876e4ba3c1</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a54d3a43fded0ec0eb18bc767c389efcf</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ae8eb273a78baff6ecfdec645d6c50726</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>addLinks</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -64,6 +31,18 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>a4437fbfc3a6d2c63e13dc180614d6dfa</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+    <Anchor>a9604a3ceb794d161dd1a7fb9670fe305</Anchor>
+    <Abstract>Add the DIS equivalent of a certain node to a DIS object. </Abstract>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -112,26 +91,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>convertNode</Name>
+      <Name>convertSelectNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::converter</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a9604a3ceb794d161dd1a7fb9670fe305</Anchor>
-    <Abstract>Add the DIS equivalent of a certain node to a DIS object. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodes</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a82d0fdbecdd17e64ba9aba3f199811cc</Anchor>
-    <Abstract>Store the keys that nodes have received. </Abstract>
+    <Anchor>a7b9d55d82f821437540264a18ccc042b</Anchor>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -155,6 +121,18 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
     <Anchor>a6d420beb3004da764486ac5f6234451b</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertSubGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::graphConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+    <Anchor>a53e4f450eef26c0545a275efacccbeed</Anchor>
+    <Abstract>Add the contents of a collection of subGraphs to a DIS program. </Abstract>
+    <DeclaredIn>graphConverter.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3251,39 +3229,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>linkNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a2e4e6371ef09e05b5f284f876e4ba3c1</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a54d3a43fded0ec0eb18bc767c389efcf</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>reset</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ae8eb273a78baff6ecfdec645d6c50726</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>addLinks</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3313,6 +3258,18 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>a4437fbfc3a6d2c63e13dc180614d6dfa</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+    <Anchor>a9604a3ceb794d161dd1a7fb9670fe305</Anchor>
+    <Abstract>Add the DIS equivalent of a certain node to a DIS object. </Abstract>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -3361,26 +3318,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>convertNode</Name>
+      <Name>convertSelectNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::converter</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a9604a3ceb794d161dd1a7fb9670fe305</Anchor>
-    <Abstract>Add the DIS equivalent of a certain node to a DIS object. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodes</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a82d0fdbecdd17e64ba9aba3f199811cc</Anchor>
-    <Abstract>Store the keys that nodes have received. </Abstract>
+    <Anchor>a7b9d55d82f821437540264a18ccc042b</Anchor>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -3451,26 +3395,38 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>linkStart</Name>
+      <Name>linkNode</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>backEnd.DVM.dis.DIS</Scope>
     </TokenIdentifier>
     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
-    <Anchor>a92c53a51b8b03bea91376e0b2605ad17</Anchor>
-    <Abstract>Link every output of start to an instruction. </Abstract>
+    <Anchor>aaefc7520e5acd00aea360ce96ac45016</Anchor>
+    <Abstract>Link a node to a key pair. </Abstract>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>linkStop</Name>
+      <Name>getFromKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>backEnd.DVM.dis.DIS</Scope>
     </TokenIdentifier>
     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
-    <Anchor>a80cae4c1b193875e478106adbcae4aae</Anchor>
-    <Abstract>Link the output of a node to stop. </Abstract>
+    <Anchor>a59506bb0d47a4cd9cbb7cd5268d7d1de</Anchor>
+    <Abstract>Get the from key for a node. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getToKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a9d5402bfd22a0c953af2bad18ac31c9d</Anchor>
+    <Abstract>Get the to key for a node. </Abstract>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -3499,6 +3455,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>modifyString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>af7e2346739f6b9998e3cfa55c00ef937</Anchor>
+    <Abstract>Modify a string in the memory. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getIdx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a113b46091ed88960d44c26ca3e24b70f</Anchor>
+    <Abstract>Return the index of the string that was added last. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addNewline</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3511,6 +3491,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addNewlines</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a4204a9ba0508817ad1cec46f789c23a4</Anchor>
+    <Abstract>Adds a newline to every chunk. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addCommentLine</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3519,6 +3511,18 @@
     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
     <Anchor>ad226f9e812f573a107caf3f8cbe3da6a</Anchor>
     <Abstract>Convenience function to add a comment line for better documented output. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addCommentLines</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>ac920294a8652f0d4cc119bd871ba1f20</Anchor>
+    <Abstract>Add a comment to every chunk. </Abstract>
     <DeclaredIn>dis.py</DeclaredIn>
   </Token>
   <Token>
@@ -3571,6 +3575,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>linkStart</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a92c53a51b8b03bea91376e0b2605ad17</Anchor>
+    <Abstract>Link every output of start to an instruction. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>linkStop</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a80cae4c1b193875e478106adbcae4aae</Anchor>
+    <Abstract>Link the output of a node to stop. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>generate</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -3580,6 +3608,17 @@
     <Anchor>a77d955e98843c250cf2134fb77fe0bac</Anchor>
     <Abstract>Return the DIS string for the current contents of the memories. </Abstract>
     <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a9e1f5508efa1cdb4648c30ad7854d062</Anchor>
+    <Abstract>Stores the node -&amp;gt; (chunk, inst) mapping. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3622,6 +3661,16 @@
     </TokenIdentifier>
     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
     <Anchor>aa28d52be6d6442ade0934827328b4ffa</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>indent</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a370e1ff519ab11bbe5b096f67ccfe7e4</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3710,6 +3759,18 @@
       <Scope>backEnd::DVM::graphConverter</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertSubGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::graphConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+    <Anchor>a53e4f450eef26c0545a275efacccbeed</Anchor>
+    <Abstract>Add the contents of a collection of subGraphs to a DIS program. </Abstract>
+    <DeclaredIn>graphConverter.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
