@@ -3046,6 +3046,42 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>EXIT_OK</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Anchor>a2b9aa7afefcf4fa06234694e14622292</Anchor>
+    <Abstract>Exit code when the program exits with no issues. </Abstract>
+    <DeclaredIn>user.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>EXIT_INTERRUPT</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Anchor>abc207db9245a30559884b6eb76a12c02</Anchor>
+    <Abstract>Exit code when the user interrupts program execution. </Abstract>
+    <DeclaredIn>user.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>EXIT_INPUT</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Anchor>a2a2731ed31d3cc5020f4c9c11253e945</Anchor>
+    <Abstract>Exit code that is returned if some user input contains an error. </Abstract>
+    <DeclaredIn>user.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>md_doc_DIS</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
@@ -12401,5 +12437,51 @@
     <Anchor>a08937222a213e2af5ca289687b490b71</Anchor>
     <Abstract>Functions to parse the various statements. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>user</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Abstract>User Constants. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>EXIT_OK</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Anchor>a2b9aa7afefcf4fa06234694e14622292</Anchor>
+    <Abstract>Exit code when the program exits with no issues. </Abstract>
+    <DeclaredIn>user.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>EXIT_INTERRUPT</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Anchor>abc207db9245a30559884b6eb76a12c02</Anchor>
+    <Abstract>Exit code when the user interrupts program execution. </Abstract>
+    <DeclaredIn>user.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>EXIT_INPUT</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>user</Scope>
+    </TokenIdentifier>
+    <Path>namespaceuser.html</Path>
+    <Anchor>a2a2731ed31d3cc5020f4c9c11253e945</Anchor>
+    <Abstract>Exit code that is returned if some user input contains an error. </Abstract>
+    <DeclaredIn>user.py</DeclaredIn>
   </Token>
 </Tokens>

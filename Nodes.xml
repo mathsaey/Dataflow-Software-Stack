@@ -370,6 +370,10 @@
             <Name>read</Name>
             <Path>namespaceread.html</Path>
            </Node>
+           <Node>
+            <Name>user</Name>
+            <Path>namespaceuser.html</Path>
+           </Node>
           </Subnodes>
          </Node>
          <Node>
@@ -3422,6 +3426,10 @@
            <Node>
             <Name>read</Name>
             <Path>namespaceread.html</Path>
+           </Node>
+           <Node>
+            <Name>user</Name>
+            <Path>namespaceuser.html</Path>
            </Node>
           </Subnodes>
          </Node>
@@ -8233,6 +8241,27 @@
                 <Name>functions</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a08937222a213e2af5ca289687b490b71</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>user.py</Name>
+              <Path>user_8py.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>EXIT_OK</Name>
+                <Path>user_8py.html</Path>
+                <Anchor>a2b9aa7afefcf4fa06234694e14622292</Anchor>
+               </Node>
+               <Node>
+                <Name>EXIT_INTERRUPT</Name>
+                <Path>user_8py.html</Path>
+                <Anchor>abc207db9245a30559884b6eb76a12c02</Anchor>
+               </Node>
+               <Node>
+                <Name>EXIT_INPUT</Name>
+                <Path>user_8py.html</Path>
+                <Anchor>a2a2731ed31d3cc5020f4c9c11253e945</Anchor>
                </Node>
               </Subnodes>
              </Node>

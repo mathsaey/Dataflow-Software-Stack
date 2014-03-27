@@ -9,8 +9,8 @@ var indexSectionsWithContent =
 {
   0: "_abcdefghiklmnoprstuvw",
   1: "_acdefilnoprstuw",
-  2: "bcdfilnr",
-  3: "_cdegilmnoprst",
+  2: "bcdfilnru",
+  3: "_cdegilmnoprstu",
   4: "_abcdefghilmnoprstu",
   5: "_abcdefghiklmnoprstv",
   6: "dist"
