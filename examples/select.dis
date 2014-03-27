@@ -19,9 +19,25 @@ INST SI 5
 	
 	$ Starting subgraph 2
 	INST SI 7 
+	INST SW 8 0 10 0 11
+	INST SI 9 
+		$ Starting subgraph 1
+		INST SI 10 
+		
+		LINK 0 10 2 1 5 0
+		$ Leaving subgraph 1
+		
+		$ Starting subgraph 2
+		INST SI 11 
+		
+		LINK 0 11 1 1 6 0
+		$ Leaving subgraph 2
+		
 	
 	LINK 0 7 1 1 3 0
-	LINK 0 7 2 1 3 1
+	LINK 0 7 1 0 8 2
+	LINK 0 7 2 0 8 1
+	LINK 0 9 0 0 5 0
 	$ Leaving subgraph 2
 	
 
@@ -33,9 +49,9 @@ LINK 0 5 0 0 3 0
 $ Leaving subgraph main
 
 $ Implicit call to main
-INST CC 8 0 2 0 1
-LINK 0 0 0 0 8 0
-LINK 0 0 1 0 8 1
+INST CC 12 0 2 0 1
+LINK 0 0 0 0 12 0
+LINK 0 0 1 0 12 1
 
 CHUNK 1
 $ Starting subgraph main
@@ -48,9 +64,26 @@ INST OP 1 int 1
 	$ Leaving subgraph 1
 	
 	$ Starting subgraph 2
-	INST OP 3 add 2
+	INST OP 3 equals 2
+	INST OP 4 int 1
+		$ Starting subgraph 1
+		INST OP 5 add 2
+		
+		LINK 1 5 0 0 9 0
+		LITR 5 1 <= 2
+		$ Leaving subgraph 1
+		
+		$ Starting subgraph 2
+		INST OP 6 mul 2
+		
+		LINK 1 6 0 0 9 0
+		LITR 6 1 <= 2
+		$ Leaving subgraph 2
+		
 	
-	LINK 1 3 0 0 5 0
+	LINK 1 3 0 1 4 0
+	LITR 3 1 <= 0
+	LINK 1 4 0 0 8 0
 	$ Leaving subgraph 2
 	
 

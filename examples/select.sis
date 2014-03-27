@@ -9,7 +9,11 @@ define Main
 
 function main(a, b : integer returns integer)
 	if a < b then
-		a + b
+		if a = 0 then
+			b * 2
+		else
+			a + 2
+		end if
 	else
 		a - b
 	end if

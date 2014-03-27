@@ -68,7 +68,7 @@ _functions = {
 	121 : 'string',
 	122 : 'div',
 	123 : 'float',
-	124 : 'equal',
+	124 : 'equals',
 	#125 : Exp,
 #	126 : FirstValue,
 #	127 : FinalValue,

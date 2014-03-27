@@ -21,18 +21,37 @@ E	1 1	2 1	1	%mk=V
 { Compound   3   1
 G	0
 E	0 1	0 1	4	%mk=V
-G	0	%sl=13	%sf=select.sis
-N 1	135	%sl=14	%sf=select.sis
-E	0 2	1 1	4	 %na=a	%mk=V	%sl=14
-E	0 3	1 2	4	 %na=b	%mk=V	%sl=14
+G	0	%sl=17	%sf=select.sis
+N 1	135	%sl=18	%sf=select.sis
+E	0 2	1 1	4	 %na=a	%mk=V	%sl=18
+E	0 3	1 2	4	 %na=b	%mk=V	%sl=18
 E	1 1	0 1	4	%mk=V
 G	0	%sl=12	%sf=select.sis
-N 1	141	%sl=12	%sf=select.sis
+N 1	124	%sl=12	%sf=select.sis
 E	0 2	1 1	4	 %na=a	%mk=V	%sl=12
-E	0 3	1 2	4	 %na=b	%mk=V	%sl=12
+L		1 2	4 "0"	%mk=V
+N 2	129
+E	1 1	2 1	1	%mk=V
+{ Compound   3   1
+G	0
+E	0 1	0 1	4	%mk=V
+G	0	%sl=14	%sf=select.sis
+N 1	141	%sl=15	%sf=select.sis
+E	0 3	1 1	4	 %na=a	%mk=V	%sl=15
+L		1 2	4 "2"	%mk=V
 E	1 1	0 1	4	%mk=V
+G	0	%sl=13	%sf=select.sis
+N 1	152	%sl=13	%sf=select.sis
+E	0 2	1 1	4	 %na=b	%mk=V	%sl=13
+L		1 2	4 "2"	%mk=V
+E	1 1	0 1	4	%mk=V
+} 3 1 3 0 1 2	%sl=13	%sf=select.sis
+E	2 1	3 1	4	%mk=V
+E	0 3	3 2	4	 %na=b	%mk=V	%sl=13
+E	0 2	3 3	4	 %na=a	%mk=V	%sl=15
+E	3 1	0 1	4	%mk=V
 } 3 1 3 0 1 2	%sl=12	%sf=select.sis
 E	2 1	3 1	4	%mk=V
 E	0 1	3 2	4	 %na=a	%mk=V	%sl=12
-E	0 2	3 3	4	 %na=b	%mk=V	%sl=12
+E	0 2	3 3	4	 %na=b	%mk=V	%sl=13
 E	3 1	0 1	4	%mk=V
