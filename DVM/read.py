@@ -78,9 +78,13 @@ def createContextRestore(arr):
 def createOperation(arr):
 	opCode = arr[3]
 	inputs = int(arr[4])
-	op = natives.operations[opCode]
 
-	return core.addOperationInstruction(op, inputs)
+	try:
+		op = natives.operations[opCode]
+		return core.addOperationInstruction(op, inputs)
+	except KeyError:
+		log.error("Invalid operation key: %s, using noOp instead.", opCode)
+		return core.addOperationInstruction(natives.dvm_noOp, inputs)
 
 ## Create a switch instruction.
 def createSwitch(arr):
