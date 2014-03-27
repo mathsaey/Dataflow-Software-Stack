@@ -32,7 +32,9 @@
 # read DIS files.
 ##
 
+import sys
 import core
+import user
 import natives
 
 import logging
@@ -43,7 +45,11 @@ chunk = None
 
 ## Parse a literal string.
 def evalLit(str):
-	return eval(str)
+	try:
+		return eval(str)
+	except SyntaxError, e:
+		log.error("Invalid literal syntax: %s", e.text)
+		sys.exit(user.EXIT_INPUT)
 
 ## Create a sink.
 def createSink(arr):

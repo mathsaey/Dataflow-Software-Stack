@@ -41,6 +41,7 @@ import log
 import sys
 import core
 import read
+import user
 import signal
 import argparse
 import fileinput
@@ -52,7 +53,7 @@ import multiprocessing
 
 ## Handle an exit signal.
 def handle_exit(signal, frame):
-	sys.exit(1)
+	sys.exit(user.EXIT_INTERRUPT)
 
 ## Bind handle_exit to sigint.
 signal.signal(signal.SIGINT, handle_exit)
@@ -89,7 +90,7 @@ for line in fileinput.input(args.path):
 if args.path == "-":
 	if core.getIn() != len(args.input):
 		print "Missing input, aborting..."
-		sys.exit(2)
+		sys.exit(user.EXIT_INPUT)
 
 # Start the cores.
 core.start(args.cores)
