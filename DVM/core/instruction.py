@@ -307,7 +307,7 @@ class Switch(AbstractInstruction):
 		try:
 			return self.dstLst[token.datum]
 		except IndexError:
-			log.error("%s: Invalid switch destination idx: %s, using 0", self, token.datum)
+			log.info("%s: Invalid switch destination idx: %s, using 0", self, token.datum)
 			return self.dstLst[0]
 
 	def execute(self, token, core):
