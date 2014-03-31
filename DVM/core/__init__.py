@@ -74,6 +74,18 @@ def addOperationInstruction(op, inputs):
 		[op, inputs])
 
 ##
+# Add a constant instruction.
+#
+# \param value
+#		The value the constant should return.
+#
+# \return 
+#		The key of the constant instruction.
+## 
+def addConstant(value):
+	return _addInstruction(instruction.Constant, [value])
+
+##
 # Add a sink instruction.
 #
 # \return

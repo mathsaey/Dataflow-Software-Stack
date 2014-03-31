@@ -70,6 +70,7 @@ Type | Code | Args
 -----| -----|------
 [Sink](\ref core::instruction::Sink) | SI | `None`
 [Switch](\ref core::instruction::Switch) | SW | `<dstList>`
+[Constant](\ref core::instruction::Constant) | CO | `None`
 [ContextChange](\ref core::instruction::ContextChange) | CC | `<to> <return sink>`
 [ContextRestore](\ref core::instruction::ContextRestore) | CR | `None`
 [OperationInstruction](\ref core::instruction::OperationInstruction) | OP | `<opCode> <inputs>`
@@ -136,8 +137,17 @@ Example:
 
     INST OP 0 1 2
 
-
 The opCodes can be found in the [appendix](#Operations)
+
+#### Constant Instruction
+
+A constant instruction is an instruction that will always return the same result, regardless of the input. This operation should only be used if a literal cannot be eliminated from the program. A constant instruction should also only receive a single token from the same context, or it will resend it's result.
+
+A constant takes it's value as an argument and is declared in the following way:
+
+    INST CO <idx> <= <value>
+
+For possible values of this value, check the [literals](#Literals) section. Constant instructions should only be used when it is not possible to add this value as a literal to the program in another way.
 
 #### Entry and Exit point
 

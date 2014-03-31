@@ -104,5 +104,5 @@ if args.input:
 # Collect any data that we still need.
 while not core.hasIn():
 	data = raw_input("Please enter your data for port {}: ".format(core.getPort()))
-	data = read.evalLit(data)
+	data = read.parseValue(data)
 	core.addData(data)

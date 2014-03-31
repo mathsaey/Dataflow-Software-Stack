@@ -43,20 +43,41 @@ log.setLevel(logging.WARNING)
 
 chunk = None
 
-## Parse a literal string.
-def evalLit(str):
+## Parse a value string.
+def parseValue(str):
 	try:
 		return eval(str)
 	except SyntaxError, e:
 		log.error("Invalid literal syntax: %s", e.text)
 		sys.exit(user.EXIT_INPUT)
 
+##
+# Extract the value of a statement.
+#
+# The value of a statement is found after the statement,
+# and seperated from the statement by a `<=` and a space.
+##
+def extractValue(stmt):
+	valStart = stmt.find('<= ')
+
+	if valStart == -1:
+		log.error("Missing value in statement: %s", stmt)
+		return
+
+	val = stmt[valStart + 3:]
+	return parseValue(val)
+
+
 ## Create a sink.
-def createSink(arr):
+def createSink(arr, stmt):
 	return core.addSink()
 
+## Create a constant.
+def createConstant(arr, stmt):
+	return core.addConstant(extractValue(stmt))
+
 ## Create a stop instruction
-def createStop(arr):
+def createStop(arr, stmt):
 	return core.addStopInstruction()
 ##
 # Create a start instruction.
@@ -64,12 +85,12 @@ def createStop(arr):
 # Creates a sink and adds the amount
 # of incoming elements to the runtime.
 ##
-def createStart(arr):
+def createStart(arr, stmt):
 	core.setIn(int(arr[3]))
-	return createSink(arr)
+	return createSink(arr, stmt)
 
 ## Create a context change instruction.
-def createContextChange(arr):
+def createContextChange(arr, stmt):
 	dstChnk = int(arr[3])
 	dstInst = int(arr[4])
 	retChnk = int(arr[5])
@@ -77,11 +98,11 @@ def createContextChange(arr):
 	return core.addContextChange((dstChnk, dstInst), (retChnk, retInst))
 
 ## Create a context restore
-def createContextRestore(arr):
+def createContextRestore(arr, stmt):
 	return core.addContextRestore()
 
 ## Create an operation
-def createOperation(arr):
+def createOperation(arr, stmt):
 	opCode = arr[3]
 	inputs = int(arr[4])
 
@@ -93,7 +114,7 @@ def createOperation(arr):
 		return core.addOperationInstruction(natives.dvm_noOp, inputs)
 
 ## Create a switch instruction.
-def createSwitch(arr):
+def createSwitch(arr, stmt):
 	try:
 		lst = [(int(arr[i]), int(arr[i+1])) for i in xrange(3, len(arr), 2)]
 		return core.addSwitch(lst)
@@ -111,7 +132,8 @@ instructions = {
 	'PE' : createStop,
 	'CC' : createContextChange,
 	'CR' : createContextRestore,
-	'OP' : createOperation
+	'OP' : createOperation,
+	'CO' : createConstant
 }
 
 ##
@@ -120,7 +142,7 @@ instructions = {
 ##
 def parseInst(arr, stmt):
 	code = arr[1]
-	key = instructions[code](arr)
+	key = instructions[code](arr, stmt)
 	if key != (chunk, int(arr[2])):
 		log.error("Instruction %s added to memory with incorrect key %s", arr, key)
 	else: log.info("Added instruction with key %s", key)
@@ -147,14 +169,7 @@ def parseLit(arr, stmt):
 	inst = int(arr[1])
 	port = int(arr[2])
 
-	litStart = stmt.find('<= ')
-
-	if litStart == -1:
-		log.error("Invalid literal declaraction: %s", stmt)
-		return
-	
-	lit = stmt[litStart + 3:]
-	lit = evalLit(lit)
+	lit = extractValue(stmt)
 
 	log.info("Adding Literal: '%s' to c %d i %d p %d", 
 		lit, chunk, inst, port)

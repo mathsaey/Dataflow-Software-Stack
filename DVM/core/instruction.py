@@ -75,25 +75,21 @@ class AbstractInstruction(object):
 	##
 	def needsMatcher(self): return False
 
+	##
+	# Add a literal to the operation.
+	# An instruction should never accept only
+	# literals.
+	# Not all instructions accept literals.
+	##
+	def addLiteral(self, port, val):
+		log.error("Invalid literal: %s added to instruction: %s", val, self)
 
-# ---------- #
-# Operations #
-# ---------- #
 
-##
-# An operation instruction defines a single operation
-# on all of it's inputs.
-##
-class OperationInstruction(AbstractInstruction):
-	def needsMatcher(self): return True
+## DVM instruction that has a list of outputs.
+class DestinationListInstruction(AbstractInstruction):
 
-	def __init__(self, operation, inputs):
-		super(OperationInstruction, self).__init__()
+	def __init__(self):
 		self.destinations = []
-		self.totalinputs  = inputs
-		self.realInputs   = inputs
-		self.operation    = operation
-		self.litLst       = [None] * inputs
 
 	##
 	# Add a destination to this instruction.
@@ -127,11 +123,24 @@ class OperationInstruction(AbstractInstruction):
 			core.tokenCreator.simpleToken(
 				datum, inst, port, cont)
 
-	##
-	# Add a literal to the operation.
-	# An instruction should never accept only
-	# literals.
-	##
+# ---------- #
+# Operations #
+# ---------- #
+
+##
+# An operation instruction defines a single operation
+# on all of it's inputs.
+##
+class OperationInstruction(DestinationListInstruction):
+	def needsMatcher(self): return True
+
+	def __init__(self, operation, inputs):
+		super(OperationInstruction, self).__init__()
+		self.totalinputs  = inputs
+		self.realInputs   = inputs
+		self.operation    = operation
+		self.litLst       = [None] * inputs
+
 	def addLiteral(self, port, val):
 		self.litLst[port] = val
 		self.realInputs -= 1
@@ -160,6 +169,28 @@ class OperationInstruction(AbstractInstruction):
 		cont, lst = self.createArgLst(tokens)
 		res = self.operation(*lst)
 		self.sendDatum(res, core, cont)		
+
+# -------- # 
+# Constant #
+# -------- #
+
+##
+# Constant instruction.
+#
+# A special sink that always sends it's value
+# to it's destinations when it encounters input.
+# This is not really 'nice' according to dataflow 
+# semantics but necessary to allow literals that cannot
+# be propagated.
+##
+class Constant(DestinationListInstruction):
+
+	def __init__(self, value):
+		super(Constant, self).__init__()
+		self.value = value
+
+	def execute(self, token, core):
+		self.sendDatum(self.value, core, token.tag.cont)
 
 # ----- #
 # Sinks #
