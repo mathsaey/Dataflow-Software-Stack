@@ -83,6 +83,19 @@ def getSubGraphs():
 def getSubGraph(name):
 	return graph.getSubGraph(name)
 
+##
+# Remove a subgraph from the program.
+# This only works for subgraphs that are
+# not a part of a compound node.
+# Care should be taken to avoid calling this method
+# while iterating over the subgraph list.
+#
+# \param subGraph
+#		A reference to the subgraph to remove.
+##
+def removeSubGraph(subGraph):
+	graph.removeSubGraph(subGraph)
+
 ##\}
 
 # --------- #

@@ -42,20 +42,6 @@ import graphConverter
 import logging
 log = logging.getLogger(__name__)
 
-## 
-# Stores all the nodes that 
-# need to be deleted. 
-# The nodes are deleted separately
-# in order to not mess up the graph traversal.
-##
-deleteList = []
-
-##
-# Stores all the subgraphs
-# that can be reduced to a literal.
-##
-literalGraphs = {}
-
 ## See if a node only contains literals
 def isLit(node):
 	if not node.inputPorts: return False
@@ -111,9 +97,9 @@ def propagateLit(node):
 	elif isinstance(node, IGR.node.SubGraphExitNode):
 		# The graph has become trivial, so remove
 		# the exit node which does not support literals.
-		deleteList.append(node) 
+		deleteNode(node)
 		val = getInputs(node)[0]
-		literalGraphs.update({node.subGraph.name : val})
+		node.subGraph.reduce(val)
 		log.info("Reduced trivial graph: %s", node.subGraph)
 		return
 	else:
@@ -121,7 +107,7 @@ def propagateLit(node):
 		return	
 
 	val = dvm.run(dis = str, inputs = getInputs(node))	
-	deleteList.append(node) 
+	deleteNode(node)
 	transformNode(node, val)
 	log.info("Reducing node '%s' to literal '%s'", node, val)
 
@@ -130,11 +116,11 @@ def propagateLit(node):
 # constant. If possible, propagate.
 ##
 def checkCall(node):
-	if node.function in literalGraphs:
-		val = literalGraphs[node.function]
-		transformNode(node, val)
-		deleteList.append(node)
-		log.info("Replacing call '%s' with constant '%s'", node, val)
+	graph = IGR.getSubGraph(node.function)
+	if graph.isTrivial():
+		transformNode(node, graph.value)
+		deleteNode(node)
+		log.info("Replacing call '%s' with constant '%s'", node, graph.value)
 
 ## See if a node can be removed, do so if possible.
 def checkNode(node):
@@ -143,20 +129,37 @@ def checkNode(node):
 	elif isinstance(node, IGR.node.CallNode):
 		checkCall(node)	
 
+##
+# See if we can remove a graph from the program.
+# This assumes that it does not have to deal with 
+# compound node subgraphs!
+##
+def checkGraph(subGraph):
+	if subGraph.isTrivial():
+		IGR.removeSubGraph(subGraph)
+		log.info("Removing trivial function graph %s", subGraph)
+
 ## Clean up the nodes to be deleted.
-def deleteNodes(subGraph):
-	for node in deleteList: 
-		sg = node.subGraph
-		sg.nodes.remove(node)	
-	del deleteList[:]
+def deleteNode(node):
+	sg = node.subGraph
+	sg.nodes.remove(node)	
 
 ## Remove all operations that have predefined inputs.
 def removeLiterals():
 	IGR.traverse(
 		checkNode,
 		lambda x: None,
-		deleteNodes,
+		lambda x: None,
 		False,
 		lambda x: None,
 		lambda x: None
 		)
+	IGR.traverse(
+		lambda x : None,
+		checkGraph,
+		lambda x : None,
+		False,
+		lambda x : None,
+		lambda x : None
+		)
+

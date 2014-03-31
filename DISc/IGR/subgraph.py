@@ -42,10 +42,11 @@ class SubGraph(object):
 
 	def __init__(self, entry, exit, name):
 		super(SubGraph, self).__init__()
-		self.name = name
-		self.entry = entry
-		self.exit  = exit
-		self.nodes = []
+		self.name   = name
+		self.entry  = entry
+		self.exit   = exit
+		self.nodes  = []
+		self.value  = None
 
 	##
 	# Printable subgraph
@@ -83,3 +84,16 @@ class SubGraph(object):
 	##
 	def addNode(self, node):
 		self.nodes.append(node)
+
+	##
+	# See if a graph can be reduced to a 
+	# constant value.
+	##
+	def isTrivial(self):
+		return self.value is not None
+
+	##
+	# Attach a constant to a subgraph.
+	##
+	def reduce(self, value):
+		self.value = value

@@ -37,6 +37,8 @@ import graph
 
 ##
 # Traverse all the nodes in the program.
+# We traverse over a copy so it's safe to modify the IGR
+# structure while traversing over the graph.
 #
 # \param nodeProc
 #		The function that is called when we encounter a node.
@@ -73,7 +75,7 @@ def traverse(
 
 	def traverseSubGraph(subGraph, nodeProc):
 		subGraphStart(subGraph)
-		for node in subGraph.nodes:
+		for node in list(subGraph.nodes):
 			nodeProc(node)
 			checkCompound(node)
 		subGraphStop(subGraph)
@@ -92,5 +94,5 @@ def traverse(
 				)
 			compoundStop(node)
 
-	for subGraph in subGraphs:
+	for subGraph in list(subGraphs):
 		traverseSubGraph(subGraph, nodeProc)
