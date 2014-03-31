@@ -3,6 +3,7 @@
 % DVM examples
 
 % This file contains sisal code for testing function calls
+% and the removal of literals.
 
 define Main
 
@@ -10,6 +11,10 @@ function test(a, b : integer returns integer)
 	a + b
 end function
 
+function kek(returns integer)
+	5
+end function
+
 function main(a, b: integer returns integer)
-	test(a,b) + test(3,4)
+	test(a,b) + test(3,4) + kek()
 end function

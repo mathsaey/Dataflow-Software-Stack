@@ -2,6 +2,8 @@
 % Mathijs Saey
 % DVM examples
 
+% This file contains a simple factorial example.
+
 define Main
 
 function main(n : integer returns integer)
