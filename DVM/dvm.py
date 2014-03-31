@@ -98,7 +98,7 @@ core.start(args.cores)
 # Add command line arguments to runtime.
 if args.input:
 	for data in args.input:
-		data = read.evalLit(data)
+		data = read.parseValue(data)
 		core.addData(data)
 
 # Collect any data that we still need.
