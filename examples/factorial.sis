@@ -1,0 +1,13 @@
+% factorial.sis
+% Mathijs Saey
+% DVM examples
+
+define Main
+
+function main(n : integer returns integer)
+	if n > 0 then
+		n * main(n - 1)
+	else
+		1
+	end if 
+end function
