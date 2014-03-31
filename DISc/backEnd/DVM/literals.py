@@ -95,9 +95,6 @@ def propagateLit(node):
 	elif isinstance(node, IGR.node.CallNode):
 		str = createCallStr(node)
 	elif isinstance(node, IGR.node.SubGraphExitNode):
-		# The graph has become trivial, so remove
-		# the exit node which does not support literals.
-		deleteNode(node)
 		val = getInputs(node)[0]
 		node.subGraph.reduce(val)
 		log.info("Reduced trivial graph: %s", node.subGraph)
@@ -136,8 +133,16 @@ def checkNode(node):
 ##
 def checkGraph(subGraph):
 	if subGraph.isTrivial():
-		IGR.removeSubGraph(subGraph)
-		log.info("Removing trivial function graph %s", subGraph)
+		if subGraph.isFunc:
+			IGR.removeSubGraph(subGraph)
+			log.info("Removing trivial function graph %s", subGraph)
+		else:
+			# Remove the subgraph by a constant, followed by the exit node.
+			const = IGR.createConstantNode(subGraph, subGraph.value)
+			subGraph.entry = const
+			subGraph.nodes = [const , subGraph.exit]
+			IGR.connect(const, 0, subGraph.exit, 0)
+			log.info("Replacing trivial graph %s by constant: %s", subGraph, const)
 
 ## Clean up the nodes to be deleted.
 def deleteNode(node):

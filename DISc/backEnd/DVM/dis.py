@@ -85,6 +85,16 @@ class DIS(object):
 	# We store the source and destination keys
 	# separately for nodes that are converted to multiple
 	# instructions.
+	#
+	# \param node
+	#		The node to associate with the keys
+	# \param toKey
+	#		The key if you want to link from a different node
+	#		__to__ this node, in other words, when this node is the 
+	#		destination.
+	# \param fromKey
+	#		The key if you want to link __from__ this node,
+	#		in other words, when this node is the source.
 	##
 	def linkNode(self, node, toKey, fromKey):
 		self.nodes.update({node.key : (fromKey, toKey)})

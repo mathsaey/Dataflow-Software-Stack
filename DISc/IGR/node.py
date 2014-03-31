@@ -229,6 +229,20 @@ class CallNode(Node):
 
 	def isCall(self): return True
 	
+##
+# Constant node
+#
+# Represents an instruction that just
+# forwards it's value once it receives input.
+##
+class ConstantNode(Node):
+	def __init__(self, subGraph, value):
+		super(ConstantNode, self).__init__(subGraph)
+		self.value = value
+
+	def __str__(self):
+		return "Const '%d' %s" % (self.key, self.value)
+
 # -------------- #
 # Compound Nodes #
 # -------------- #

@@ -40,13 +40,14 @@
 ##
 class SubGraph(object):
 
-	def __init__(self, entry, exit, name):
+	def __init__(self, entry, exit, name, isFunc):
 		super(SubGraph, self).__init__()
 		self.name   = name
 		self.entry  = entry
 		self.exit   = exit
 		self.nodes  = []
 		self.value  = None
+		self.isFunc = isFunc
 
 	##
 	# Printable subgraph

@@ -59,8 +59,12 @@ def convertSubGraphs(subGraphs, prog):
 
 		retKey = prog.getFromKey(comp)
 		for sg in comp.subGraphs[1:]:
+			# Everything that links to exit node of sg will
+			# now link to the common exit sink instead.
 			prog.linkNode(sg.exit, retKey, retKey)
 			if sg.exit in sg.nodes:
+				# Make sure we don't parse exit node,
+				# but keep it as attribute.
 				sg.nodes.remove(sg.exit)
 
 	def compStop(comp, idx):

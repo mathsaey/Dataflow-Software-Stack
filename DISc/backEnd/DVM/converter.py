@@ -65,6 +65,9 @@ def convertNode(dis, node):
 def convertOpNode(dis, node): 
 	return convertGeneralNode(dis, node, 1, 'OP', [node.operation, node.inputs])
 
+def convertConstantNode(dis, node):
+	return convertGeneralNode(dis, node, 0, 'CO', ["<=", node.value])
+
 def convertSGEntryNode(dis, node):
 	return convertGeneralNode(dis, node, 0, 'SI', [])
 
@@ -92,7 +95,8 @@ converters = {
 	IGR.node.SubGraphExitNode  : convertSGExitNode,
 	IGR.node.OperationNode     : convertOpNode,
 	IGR.node.CallNode          : convertCallNode,
-	IGR.node.SelectCNode       : convertSelectNode
+	IGR.node.ConstantNode      : convertConstantNode,
+	IGR.node.SelectCNode       : convertSelectNode,
 }
 
 ##

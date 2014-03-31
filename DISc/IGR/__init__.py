@@ -116,8 +116,8 @@ def removeSubGraph(subGraph):
 #		should be used to access parameters and
 #		return values of this subgraph.
 #
-def createGeneralSubGraph(name , inputs, outputs):
-	subGraph = subgraph.SubGraph(None, None, name)
+def createGeneralSubGraph(name , inputs, outputs, isFunc):
+	subGraph = subgraph.SubGraph(None, None, name, isFunc)
 	entry = node.SubGraphEntryNode(subGraph, inputs)
 	exit  = node.SubGraphExitNode(subGraph, outputs)
 	subGraph.entry = entry
@@ -130,7 +130,7 @@ def createGeneralSubGraph(name , inputs, outputs):
 # Create a subgraph and add it to the program graph.
 ##
 def createSubGraph(name, inputs, outputs):
-	subGraph = createGeneralSubGraph(name, inputs, outputs)
+	subGraph = createGeneralSubGraph(name, inputs, outputs, True)
 	graph.addSubGraph(subGraph)
 	graph.bindName(subGraph)
 	return subGraph
@@ -139,7 +139,7 @@ def createSubGraph(name, inputs, outputs):
 # Create a subgraph for a compound node.
 ##
 def createCompoundSubGraph():
-	return createGeneralSubGraph(None, 0, 0)
+	return createGeneralSubGraph(None, 0, 0, False)
 
 ##\}
 
@@ -202,6 +202,17 @@ def createCompoundNode(constructor, subGraph, subGraphs):
 ##
 def createCallNode(subGraph):
 	return createNode(node.CallNode, subGraph)
+
+##
+# Create a constant node.
+#
+# \param subGraph
+#		The subgraph this node belongs to
+# \param value
+#		The value of this subgraph
+##
+def createConstantNode(subGraph, value):
+	return createNode(node.ConstantNode, subGraph, [value])
 
 ##\}
 
