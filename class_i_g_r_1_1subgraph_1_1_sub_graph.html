@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">5a10797</span>
+   &#160;<span id="projectnumber">a3c4533</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -120,6 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b7dc2bc9f285fc6cd293ceeccd32a70"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a7b7dc2bc9f285fc6cd293ceeccd32a70">addNode</a></td></tr>
 <tr class="memdesc:a7b7dc2bc9f285fc6cd293ceeccd32a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the node list of the subgraph.  <a href="#a7b7dc2bc9f285fc6cd293ceeccd32a70">More...</a><br/></td></tr>
 <tr class="separator:a7b7dc2bc9f285fc6cd293ceeccd32a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc6fad73911dc8a80071f6cc3a3a08d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a6bc6fad73911dc8a80071f6cc3a3a08d">isTrivial</a></td></tr>
+<tr class="memdesc:a6bc6fad73911dc8a80071f6cc3a3a08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if a graph can be reduced to a constant value.  <a href="#a6bc6fad73911dc8a80071f6cc3a3a08d">More...</a><br/></td></tr>
+<tr class="separator:a6bc6fad73911dc8a80071f6cc3a3a08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a39aee0f55a736167948e634ac29914"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a3a39aee0f55a736167948e634ac29914">reduce</a></td></tr>
+<tr class="memdesc:a3a39aee0f55a736167948e634ac29914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach a constant to a subgraph.  <a href="#a3a39aee0f55a736167948e634ac29914">More...</a><br/></td></tr>
+<tr class="separator:a3a39aee0f55a736167948e634ac29914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -131,6 +137,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a41d47337d37d6469a1b2a11ee9595913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6d42bcb907b0fb90df72e9839d26874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#ac6d42bcb907b0fb90df72e9839d26874">nodes</a></td></tr>
 <tr class="separator:ac6d42bcb907b0fb90df72e9839d26874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cf83ff4f41ec4daa83ceca63127bcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a81cf83ff4f41ec4daa83ceca63127bcc">value</a></td></tr>
+<tr class="separator:a81cf83ff4f41ec4daa83ceca63127bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ababc9500985aff1ed3fc44279b0cdf39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#ababc9500985aff1ed3fc44279b0cdf39">isFunc</a></td></tr>
+<tr class="separator:ababc9500985aff1ed3fc44279b0cdf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html" title="SubGraph. ">SubGraph</a>. </p>
@@ -162,7 +172,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>isFunc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -281,6 +297,52 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6bc6fad73911dc8a80071f6cc3a3a08d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def IGR.subgraph.SubGraph.isTrivial </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>See if a graph can be reduced to a constant value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3a39aee0f55a736167948e634ac29914"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def IGR.subgraph.SubGraph.reduce </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attach a constant to a subgraph. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="ab5ef8bcabe26041a28f3b36ca03a9f3b"></a>
 <div class="memitem">
@@ -330,10 +392,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a81cf83ff4f41ec4daa83ceca63127bcc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IGR.subgraph.SubGraph.value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ababc9500985aff1ed3fc44279b0cdf39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IGR.subgraph.SubGraph.isFunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 27 2014 15:21:41 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 31 2014 23:19:49 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

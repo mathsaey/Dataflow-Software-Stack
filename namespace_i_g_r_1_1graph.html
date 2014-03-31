@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">5a10797</span>
+   &#160;<span id="projectnumber">a3c4533</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -113,6 +113,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8bfa02a943148ecfacbcd0afedca711a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_i_g_r_1_1graph.html#a8bfa02a943148ecfacbcd0afedca711a">getSubGraph</a></td></tr>
 <tr class="memdesc:a8bfa02a943148ecfacbcd0afedca711a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a subgraph by name.  <a href="#a8bfa02a943148ecfacbcd0afedca711a">More...</a><br/></td></tr>
 <tr class="separator:a8bfa02a943148ecfacbcd0afedca711a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5c5ed6090e21d9d49779b412cac8d7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_i_g_r_1_1graph.html#a7e5c5ed6090e21d9d49779b412cac8d7">removeSubGraph</a></td></tr>
+<tr class="memdesc:a7e5c5ed6090e21d9d49779b412cac8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subgraph from the program.  <a href="#a7e5c5ed6090e21d9d49779b412cac8d7">More...</a><br/></td></tr>
+<tr class="separator:a7e5c5ed6090e21d9d49779b412cac8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -219,6 +222,31 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7e5c5ed6090e21d9d49779b412cac8d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def IGR.graph.removeSubGraph </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>subGraph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a subgraph from the program. </p>
+<p>This only works for subgraphs that are not a part of a compound node. Care should be taken to avoid calling this method while iterating over the subgraph list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subGraph</td><td>A reference to the subgraph to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="afe7eab2a94fd262b1bb8810624eb3c1e"></a>
 <div class="memitem">
@@ -251,7 +279,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 27 2014 15:21:41 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 31 2014 23:19:49 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

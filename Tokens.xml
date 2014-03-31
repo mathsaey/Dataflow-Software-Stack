@@ -58,6 +58,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>convertConstantNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+    <Anchor>a9f5c688da4472afbf2a332398d88555c</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>convertSGEntryNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -244,13 +255,25 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNodes</Name>
+      <Name>checkGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+    <Abstract>See if we can remove a graph from the program. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
     <Abstract>Clean up the nodes to be deleted. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
@@ -279,30 +302,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
-    <Abstract>Stores all the nodes that need to be deleted. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>literalGraphs</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aed6376dd2f6d8ac7e61c5b9ebf527917</Anchor>
-    <Abstract>Stores all the subgraphs that can be reduced to a literal. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>argParser</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -321,17 +320,6 @@
     </TokenIdentifier>
     <Path>namespacedisc.html</Path>
     <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
-    <DeclaredIn>disc.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>loc</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>disc</Scope>
-    </TokenIdentifier>
-    <Path>namespacedisc.html</Path>
-    <Anchor>a514324055e0953215c42fb956b979201</Anchor>
     <DeclaredIn>disc.py</DeclaredIn>
   </Token>
   <Token>
@@ -932,6 +920,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>removeSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>a7e5c5ed6090e21d9d49779b412cac8d7</Anchor>
+    <Abstract>Remove a subgraph from the program. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>__SUBGRAPHS__</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -1385,6 +1385,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addConstant</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a4186487684075869659f0cd83c5be56c</Anchor>
+    <Abstract>Add a constant instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addSink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1812,6 +1824,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>removeSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a65ebbe22884a8432dde8a09b2bd7abab</Anchor>
+    <Abstract>Remove a subgraph from the program. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>createGeneralSubGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1892,6 +1916,18 @@
     <Path>namespace_i_g_r.html</Path>
     <Anchor>ac8c72c16f2bdae91e9604815dfe7d648</Anchor>
     <Abstract>Create a call node. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createConstantNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a5a6aac70fde874b09e3c0832a58cea04</Anchor>
+    <Abstract>Create a constant node. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -2832,14 +2868,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>evalLit</Name>
+      <Name>parseValue</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>read</Scope>
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
-    <Anchor>a08aeed13e7f3aa8263fd491abb48b6be</Anchor>
-    <Abstract>Parse a literal string. </Abstract>
+    <Anchor>a76508dbebb4272ecd19b4d8431338097</Anchor>
+    <Abstract>Parse a value string. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>extractValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a857ad17d79fb748ba13a495b1cfdc50a</Anchor>
+    <Abstract>Extract the value of a statement. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -2852,6 +2900,18 @@
     <Path>namespaceread.html</Path>
     <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
     <Abstract>Create a sink. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createConstant</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>acbb19a9ecfdbfd525831207513c8eb08</Anchor>
+    <Abstract>Create a constant. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -3317,6 +3377,17 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
     <Anchor>ad7559cb47d74295d76b88eb2b36b6008</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertConstantNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
+    <Anchor>a9f5c688da4472afbf2a332398d88555c</Anchor>
     <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
@@ -3928,13 +3999,25 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNodes</Name>
+      <Name>checkGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a63b15499ac1cea0c182788e406366d01</Anchor>
+    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+    <Abstract>See if we can remove a graph from the program. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>deleteNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
     <Abstract>Clean up the nodes to be deleted. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
@@ -3959,30 +4042,6 @@
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>ab9c5608761bcd7eaf527796233a9bdd1</Anchor>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>deleteList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aca6f6ca9f0013af3f146bff1f2ebc1f4</Anchor>
-    <Abstract>Stores all the nodes that need to be deleted. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>literalGraphs</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aed6376dd2f6d8ac7e61c5b9ebf527917</Anchor>
-    <Abstract>Stores all the subgraphs that can be reduced to a literal. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -4015,6 +4074,18 @@
     <Path>namespacecore.html</Path>
     <Anchor>aa0358e6c4cd7ce27b25dfa19c7d1f97f</Anchor>
     <Abstract>Add an operation instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addConstant</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a4186487684075869659f0cd83c5be56c</Anchor>
+    <Abstract>Add a constant instruction. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -4625,6 +4696,143 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::DestinationListInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Abstract>DVM instruction that has a list of outputs. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>af3ea4c9b1b66d90b190bf6087aeec2df</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
+    <Abstract>Add a destination to this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
+    <Abstract>Send a datum to all of the destinations. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
+    <Abstract>Execute an instruction with a given input and a core. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>needsMatcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+    <Abstract>See if an instruction requires context matching. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -4667,30 +4875,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.OperationInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a27477e05a6e6dbf16939a4532e73b597</Anchor>
-    <Abstract>Add a destination to this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.OperationInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a14b34a4fdc90cc814c131496e996621b</Anchor>
-    <Abstract>Send a datum to all of the destinations. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>addLiteral</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -4698,7 +4882,6 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Anchor>ad3c13340b0993252d64253e3a7d46bb7</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -4726,6 +4909,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
+    <Abstract>Add a destination to this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
+    <Abstract>Send a datum to all of the destinations. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -4747,16 +4954,6 @@
     <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>destinations</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.OperationInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a0ffa039eaaca02bac84191551983f93d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4797,6 +4994,150 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Anchor>afefec2bba5b1fec590259ce5ebe9d427</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::Constant</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.Constant</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_constant.html</Path>
+    <Abstract>Constant instruction. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Constant</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_constant.html</Path>
+    <Anchor>a0ce24688ac4f93f4ff74ffccb9aedcd9</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Constant</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_constant.html</Path>
+    <Anchor>aa6f263d30e55d0e7fa3a48782873c22f</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
+    <Abstract>Add a destination to this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
+    <Abstract>Send a datum to all of the destinations. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>needsMatcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+    <Abstract>See if an instruction requires context matching. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>value</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Constant</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_constant.html</Path>
+    <Anchor>aa8ba35567b4658213cc6318a46cb8552</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationListInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4898,6 +5239,18 @@
     <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
     <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -5132,6 +5485,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dstLst</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -5209,6 +5574,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -5272,6 +5649,18 @@
     <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
     <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
     <Abstract>See if an instruction requires context matching. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLiteral</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.AbstractInstruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -6265,17 +6654,6 @@
     </TokenIdentifier>
     <Path>namespacedisc.html</Path>
     <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
-    <DeclaredIn>disc.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>loc</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>disc</Scope>
-    </TokenIdentifier>
-    <Path>namespacedisc.html</Path>
-    <Anchor>a514324055e0953215c42fb956b979201</Anchor>
     <DeclaredIn>disc.py</DeclaredIn>
   </Token>
   <Token>
@@ -7795,6 +8173,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>removeSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a65ebbe22884a8432dde8a09b2bd7abab</Anchor>
+    <Abstract>Remove a subgraph from the program. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>createGeneralSubGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -7875,6 +8265,18 @@
     <Path>namespace_i_g_r.html</Path>
     <Anchor>ac8c72c16f2bdae91e9604815dfe7d648</Anchor>
     <Abstract>Create a call node. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createConstantNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r.html</Path>
+    <Anchor>a5a6aac70fde874b09e3c0832a58cea04</Anchor>
+    <Abstract>Create a constant node. </Abstract>
     <DeclaredIn>__init__.py</DeclaredIn>
   </Token>
   <Token>
@@ -8192,6 +8594,18 @@
     <Path>namespace_i_g_r_1_1graph.html</Path>
     <Anchor>a8bfa02a943148ecfacbcd0afedca711a</Anchor>
     <Abstract>Get a subgraph by name. </Abstract>
+    <DeclaredIn>graph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeSubGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::graph</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1graph.html</Path>
+    <Anchor>a7e5c5ed6090e21d9d49779b412cac8d7</Anchor>
+    <Abstract>Remove a subgraph from the program. </Abstract>
     <DeclaredIn>graph.py</DeclaredIn>
   </Token>
   <Token>
@@ -9105,6 +9519,180 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
     <Anchor>ab593140999625b13121700d459aaf89b</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraph</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a9c3a203ce578faac93a1523f98d42d8a</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a59498dccde8b7d6f3cac8fb664304993</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inputs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a1f4b9e1d55deec35dc1c9a2af5221275</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>outputs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a7443d56423d81f6a56885efd59cfc2be</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inputPorts</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>ad43e8fb88ce8b2bad8655f1d2e263553</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>outputPorts</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>ab54e1c3fd0dd9b6009dd0ae2f01e17a2</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>IGR::node::ConstantNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>IGR.node.ConstantNode</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
+    <Abstract>Constant node. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.ConstantNode</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
+    <Anchor>a18200bb24f667c8a84398dc2e0d26218</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.ConstantNode</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
+    <Anchor>a05ef1e9a01c5b5c6224d2619d414959f</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getInputPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
+    <Abstract>Gets an input port. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getOutputPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a388eaacd1a1b23b7acdb5374a82eb877</Anchor>
+    <Abstract>Gets an output port. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hasNext</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>af27bf3cc1de20e545816b55c865a3445</Anchor>
+    <Abstract>See if this node can be followed to other nodes. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hasPrevious</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a0a8c1bd9f1287f13742853107e17c39a</Anchor>
+    <Abstract>See if this node can be follow to other nodes. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isCompound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>af913a53265d9ab50f3d5b117d2220dc1</Anchor>
+    <Abstract>Check if this node is a compound node. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isCall</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>afc491e4689de870cd1df991e3e2f9bad</Anchor>
+    <Abstract>Check if this node is a call node. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>value</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.node.ConstantNode</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
+    <Anchor>a1427b2a08a2d38f67e65bebef7d04d1d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -11522,6 +12110,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>isTrivial</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.subgraph.SubGraph</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+    <Anchor>a6bc6fad73911dc8a80071f6cc3a3a08d</Anchor>
+    <Abstract>See if a graph can be reduced to a constant value. </Abstract>
+    <DeclaredIn>subgraph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reduce</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.subgraph.SubGraph</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+    <Anchor>a3a39aee0f55a736167948e634ac29914</Anchor>
+    <Abstract>Attach a constant to a subgraph. </Abstract>
+    <DeclaredIn>subgraph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>name</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -11559,6 +12171,26 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
     <Anchor>ac6d42bcb907b0fb90df72e9839d26874</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>value</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.subgraph.SubGraph</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+    <Anchor>a81cf83ff4f41ec4daa83ceca63127bcc</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isFunc</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR.subgraph.SubGraph</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+    <Anchor>ababc9500985aff1ed3fc44279b0cdf39</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -12226,14 +12858,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>evalLit</Name>
+      <Name>parseValue</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>read</Scope>
     </TokenIdentifier>
     <Path>namespaceread.html</Path>
-    <Anchor>a08aeed13e7f3aa8263fd491abb48b6be</Anchor>
-    <Abstract>Parse a literal string. </Abstract>
+    <Anchor>a76508dbebb4272ecd19b4d8431338097</Anchor>
+    <Abstract>Parse a value string. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>extractValue</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a857ad17d79fb748ba13a495b1cfdc50a</Anchor>
+    <Abstract>Extract the value of a statement. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -12246,6 +12890,18 @@
     <Path>namespaceread.html</Path>
     <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
     <Abstract>Create a sink. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createConstant</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>acbb19a9ecfdbfd525831207513c8eb08</Anchor>
+    <Abstract>Create a constant. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

@@ -1,9 +1,10 @@
 <map id="IGR.node.Node" name="IGR.node.Node">
 <area shape="rect" id="node2" href="$class_i_g_r_1_1node_1_1_call_node.html" title="Call node. " alt="" coords="801,289,937,402"/>
 <area shape="rect" id="node3" href="$class_i_g_r_1_1node_1_1_compound_node.html" title="Compound node. " alt="" coords="962,302,1141,389"/>
-<area shape="rect" id="node15" href="$class_i_g_r_1_1node_1_1_operation_node.html" title="Operation node. " alt="" coords="1166,302,1337,389"/>
-<area shape="rect" id="node16" href="$class_i_g_r_1_1node_1_1_sub_graph_entry_node.html" title="Entry point of a subgraph. " alt="" coords="1362,295,1568,395"/>
-<area shape="rect" id="node17" href="$class_i_g_r_1_1node_1_1_sub_graph_exit_node.html" title="Exit point of a subgraph. " alt="" coords="1592,295,1788,395"/>
+<area shape="rect" id="node15" href="$class_i_g_r_1_1node_1_1_constant_node.html" title="Constant node. " alt="" coords="1166,302,1332,389"/>
+<area shape="rect" id="node16" href="$class_i_g_r_1_1node_1_1_operation_node.html" title="Operation node. " alt="" coords="1356,302,1528,389"/>
+<area shape="rect" id="node17" href="$class_i_g_r_1_1node_1_1_sub_graph_entry_node.html" title="Entry point of a subgraph. " alt="" coords="1553,295,1759,395"/>
+<area shape="rect" id="node18" href="$class_i_g_r_1_1node_1_1_sub_graph_exit_node.html" title="Exit point of a subgraph. " alt="" coords="1783,295,1979,395"/>
 <area shape="rect" id="node4" href="$class_i_g_r_1_1node_1_1_forall_c_node.html" title="{IGR.node.ForallCNode\n||}" alt="" coords="4,451,160,525"/>
 <area shape="rect" id="node5" href="$class_i_g_r_1_1node_1_1_if_then_else_c_node.html" title="{IGR.node.IfThenElseCNode\n||}" alt="" coords="185,451,372,525"/>
 <area shape="rect" id="node6" href="$class_i_g_r_1_1node_1_1_iterate_c_node.html" title="{IGR.node.IterateCNode\n||}" alt="" coords="397,451,557,525"/>

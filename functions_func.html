@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">5a10797</span>
+   &#160;<span id="projectnumber">a3c4533</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -130,7 +130,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classcore_1_1context_matcher_1_1_context_matcher.html#ae86db3f3998e735acbe29cff6f6543bd">core.contextMatcher.ContextMatcher</a>
 , <a class="el" href="classcore_1_1dispatcher_1_1_token_dispatcher.html#aa30c96ec3aa980af5ff5c42c22ef61d7">core.dispatcher.TokenDispatcher</a>
 , <a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#aae732b6ec590dac0cddc3426fa96658a">core.instruction.AbstractInstruction</a>
+, <a class="el" href="classcore_1_1instruction_1_1_constant.html#a0ce24688ac4f93f4ff74ffccb9aedcd9">core.instruction.Constant</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_change.html#a23525affdb05a164623a520998048ab4">core.instruction.ContextChange</a>
+, <a class="el" href="classcore_1_1instruction_1_1_destination_list_instruction.html#af3ea4c9b1b66d90b190bf6087aeec2df">core.instruction.DestinationListInstruction</a>
 , <a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html#af3c0e2b92be32e49dfbca6307833dfa7">core.instruction.OperationInstruction</a>
 , <a class="el" href="classcore_1_1instruction_1_1_sink.html#a015f4ff2df95bd364bc31e0358e3dff2">core.instruction.Sink</a>
 , <a class="el" href="classcore_1_1instruction_1_1_switch.html#abbb83a6185c97e00606b94fcada699fc">core.instruction.Switch</a>
@@ -153,6 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_i_g_r_1_1literal_1_1_literal.html#ad6530f602bb4916644022e9c924328da">IGR.literal.Literal</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_call_node.html#ac02cc243e62f3f72f7bfa4c433a6f68b">IGR.node.CallNode</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_compound_node.html#a157a70b973681be4340d8958ca556ffb">IGR.node.CompoundNode</a>
+, <a class="el" href="class_i_g_r_1_1node_1_1_constant_node.html#a18200bb24f667c8a84398dc2e0d26218">IGR.node.ConstantNode</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_node.html#a7ddacf2fada1a6819aef29b504042744">IGR.node.Node</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_operation_node.html#a4a1bdde4111c527d32f9d951fd21f8cc">IGR.node.OperationNode</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_sub_graph_entry_node.html#a7dc47966085e403e5a3199122567eac8">IGR.node.SubGraphEntryNode</a>
@@ -178,6 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classfront_end_1_1_i_f1_1_1type_1_1___type_pool.html#ac40f7f2692f68c506654341b96472af9">frontEnd.IF1.type._TypePool</a>
 , <a class="el" href="classfront_end_1_1_i_f1_1_1type_1_1___unknown_type.html#afcae37740720cc2bb10e864f2c9c7c2c">frontEnd.IF1.type._UnknownType</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_call_node.html#ab956b735b2a319b2c21c858366906a4c">IGR.node.CallNode</a>
+, <a class="el" href="class_i_g_r_1_1node_1_1_constant_node.html#a05ef1e9a01c5b5c6224d2619d414959f">IGR.node.ConstantNode</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_node.html#ac12f27ab33e889932546764ce499d460">IGR.node.Node</a>
 , <a class="el" href="class_i_g_r_1_1node_1_1_operation_node.html#afcaadd7dafc19178b81fb46e019f7403">IGR.node.OperationNode</a>
 , <a class="el" href="class_i_g_r_1_1port_1_1_port.html#a018583e2b8e88d1b723b2efeac0edf65">IGR.port.Port</a>
@@ -203,7 +207,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ac920294a8652f0d4cc119bd871ba1f20">backEnd.DVM.dis.DIS</a>
 </li>
 <li>addDestination()
-: <a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html#a27477e05a6e6dbf16939a4532e73b597">core.instruction.OperationInstruction</a>
+: <a class="el" href="classcore_1_1instruction_1_1_destination_list_instruction.html#a73eb72a7515768fb8ab4abbed8beed98">core.instruction.DestinationListInstruction</a>
 , <a class="el" href="classcore_1_1instruction_1_1_sink.html#a9545071b3712fea67400ae47e07e2c28">core.instruction.Sink</a>
 </li>
 <li>addInstruction()
@@ -217,6 +221,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>addLiteral()
 : <a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a0775112115a89da49f2e4b869e420d07">backEnd.DVM.dis.DIS</a>
+, <a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#a1ec6dc68630a9f397986cdafe1444b07">core.instruction.AbstractInstruction</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_change.html#a51e68dd7f4ff44e260ddff4bc7a0252d">core.instruction.ContextChange</a>
 , <a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html#ad3c13340b0993252d64253e3a7d46bb7">core.instruction.OperationInstruction</a>
 </li>
@@ -280,6 +285,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>execute()
 : <a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#a08e8731f144ffaff32ca0cf564356f1e">core.instruction.AbstractInstruction</a>
+, <a class="el" href="classcore_1_1instruction_1_1_constant.html#aa6f263d30e55d0e7fa3a48782873c22f">core.instruction.Constant</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_change.html#a5c61748c4ea33e916f5a3c57b0a04ae2">core.instruction.ContextChange</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_restore.html#a63c4736a4f2760e4d58a7ad6cf0fa9ed">core.instruction.ContextRestore</a>
 , <a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html#a8abe301191403572cbad6ad631081f0a">core.instruction.OperationInstruction</a>
@@ -386,6 +392,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classcore_1_1token_1_1_stop_tag.html#af761160324be7c1aa7a605dc18efb301">core.token.StopTag</a>
 , <a class="el" href="classcore_1_1token_1_1_tag.html#a72379c4ea74fcb10ee88d2e384652e12">core.token.Tag</a>
 </li>
+<li>isTrivial()
+: <a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a6bc6fad73911dc8a80071f6cc3a3a08d">IGR.subgraph.SubGraph</a>
+</li>
 </ul>
 
 
@@ -434,6 +443,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>reduce()
+: <a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a3a39aee0f55a736167948e634ac29914">IGR.subgraph.SubGraph</a>
+</li>
 <li>restoreContext()
 : <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#ae9ee1f333586314900f7c802ca984cf6">core.tokenCreator.TokenCreator</a>
 </li>
@@ -445,7 +457,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classcore_1_1scheduler_1_1_scheduler.html#a87b47093624481748a7d185c9527ae52">core.scheduler.Scheduler</a>
 </li>
 <li>sendDatum()
-: <a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html#a14b34a4fdc90cc814c131496e996621b">core.instruction.OperationInstruction</a>
+: <a class="el" href="classcore_1_1instruction_1_1_destination_list_instruction.html#a9a33ea8de7137eedb35edb02ca7098e0">core.instruction.DestinationListInstruction</a>
 , <a class="el" href="classcore_1_1instruction_1_1_sink.html#aedb57639f9f4a1c3adbea004fbd87958">core.instruction.Sink</a>
 </li>
 <li>sendToOldContext()
@@ -486,7 +498,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 27 2014 15:21:42 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 31 2014 23:19:50 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

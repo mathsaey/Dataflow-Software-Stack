@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">5a10797</span>
+   &#160;<span id="projectnumber">a3c4533</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -109,6 +109,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9604a3ceb794d161dd1a7fb9670fe305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7559cb47d74295d76b88eb2b36b6008"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1converter.html#ad7559cb47d74295d76b88eb2b36b6008">convertOpNode</a></td></tr>
 <tr class="separator:ad7559cb47d74295d76b88eb2b36b6008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5c688da4472afbf2a332398d88555c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1converter.html#a9f5c688da4472afbf2a332398d88555c">convertConstantNode</a></td></tr>
+<tr class="separator:a9f5c688da4472afbf2a332398d88555c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66c5b9cc40f86031474bb809d5818974"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1converter.html#a66c5b9cc40f86031474bb809d5818974">convertSGEntryNode</a></td></tr>
 <tr class="separator:a66c5b9cc40f86031474bb809d5818974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad57e55c5e53fcbd355092e5945e4a4af"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1converter.html#ad57e55c5e53fcbd355092e5945e4a4af">convertSGExitNode</a></td></tr>
@@ -271,6 +273,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9f5c688da4472afbf2a332398d88555c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def backEnd.DVM.converter.convertConstantNode </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a66c5b9cc40f86031474bb809d5818974"></a>
 <div class="memitem">
 <div class="memproto">
@@ -391,12 +419,14 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_sub_graph_exit_node.html">IGR.node.SubGraphExitNode</a>  : convertSGExitNode,</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_operation_node.html">IGR.node.OperationNode</a>     : convertOpNode,</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_call_node.html">IGR.node.CallNode</a>          : convertCallNode,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_select_c_node.html">IGR.node.SelectCNode</a>       : convertSelectNode</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_constant_node.html">IGR.node.ConstantNode</a>      : convertConstantNode,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_i_g_r_1_1node_1_1_select_c_node.html">IGR.node.SelectCNode</a>       : convertSelectNode,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="ttc" id="class_i_g_r_1_1node_1_1_sub_graph_entry_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_sub_graph_entry_node.html">IGR.node.SubGraphEntryNode</a></div><div class="ttdoc">Entry point of a subgraph. </div><div class="ttdef"><b>Definition:</b> node.py:160</div></div>
+<div class="ttc" id="class_i_g_r_1_1node_1_1_constant_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_constant_node.html">IGR.node.ConstantNode</a></div><div class="ttdoc">Constant node. </div><div class="ttdef"><b>Definition:</b> node.py:238</div></div>
 <div class="ttc" id="class_i_g_r_1_1node_1_1_operation_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_operation_node.html">IGR.node.OperationNode</a></div><div class="ttdoc">Operation node. </div><div class="ttdef"><b>Definition:</b> node.py:197</div></div>
 <div class="ttc" id="class_i_g_r_1_1node_1_1_sub_graph_exit_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_sub_graph_exit_node.html">IGR.node.SubGraphExitNode</a></div><div class="ttdoc">Exit point of a subgraph. </div><div class="ttdef"><b>Definition:</b> node.py:177</div></div>
-<div class="ttc" id="class_i_g_r_1_1node_1_1_select_c_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_select_c_node.html">IGR.node.SelectCNode</a></div><div class="ttdef"><b>Definition:</b> node.py:250</div></div>
+<div class="ttc" id="class_i_g_r_1_1node_1_1_select_c_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_select_c_node.html">IGR.node.SelectCNode</a></div><div class="ttdef"><b>Definition:</b> node.py:264</div></div>
 <div class="ttc" id="class_i_g_r_1_1node_1_1_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_node.html">IGR.node.Node</a></div><div class="ttdoc">Standard node. </div><div class="ttdef"><b>Definition:</b> node.py:63</div></div>
 <div class="ttc" id="class_i_g_r_1_1node_1_1_call_node_html"><div class="ttname"><a href="class_i_g_r_1_1node_1_1_call_node.html">IGR.node.CallNode</a></div><div class="ttdoc">Call node. </div><div class="ttdef"><b>Definition:</b> node.py:213</div></div>
 </div><!-- fragment -->
@@ -405,7 +435,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 27 2014 15:21:41 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 31 2014 23:19:49 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">5a10797</span>
+   &#160;<span id="projectnumber">a3c4533</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -145,6 +145,8 @@ Instructions</h2>
 <tr>
 <td><a class="el" href="classcore_1_1instruction_1_1_switch.html">Switch</a> </td><td>SW </td><td><code>&lt;dstList&gt;</code> </td></tr>
 <tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_constant.html">Constant</a> </td><td>CO </td><td><code>None</code> </td></tr>
+<tr>
 <td><a class="el" href="classcore_1_1instruction_1_1_context_change.html">ContextChange</a> </td><td>CC </td><td><code>&lt;to&gt; &lt;return sink&gt;</code> </td></tr>
 <tr>
 <td><a class="el" href="classcore_1_1instruction_1_1_context_restore.html">ContextRestore</a> </td><td>CR </td><td><code>None</code> </td></tr>
@@ -183,6 +185,11 @@ Instructions</h2>
 </pre><p>Example: </p>
 <pre class="fragment">INST OP 0 1 2
 </pre><p>The opCodes can be found in the <a href="#Operations">appendix</a></p>
+<h4>Constant Instruction</h4>
+<p>A constant instruction is an instruction that will always return the same result, regardless of the input. This operation should only be used if a literal cannot be eliminated from the program. A constant instruction should also only receive a single token from the same context, or it will resend it's result.</p>
+<p>A constant takes it's value as an argument and is declared in the following way: </p>
+<pre class="fragment">INST CO &lt;idx&gt; &lt;= &lt;value&gt;
+</pre><p>For possible values of this value, check the <a href="#Literals">literals</a> section. Constant instructions should only be used when it is not possible to add this value as a literal to the program in another way.</p>
 <h4>Entry and Exit point</h4>
 <p>In order to communicate with the outside world, the DVM needs to have a predefined entry and exit point to the program. These are added by using a special instruction that can only be used for this purpose. These special instructions have to be placed at predefined locations.</p>
 <p>The entry point of the program should be located in chunk 0 at address 0, while the exit point should be located at chunk 0 at address 0. These points are added through the program begin and program end points. The program entry point should also defined the amount of inputs the program accepts.</p>
@@ -361,7 +368,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 27 2014 15:21:41 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 31 2014 23:19:49 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
