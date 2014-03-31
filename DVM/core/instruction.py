@@ -285,7 +285,7 @@ class Switch(AbstractInstruction):
 		if port == 0:
 			cnt = token.tag.cont
 			dst = self.getDst(token)
-			log.info("%s, switching to destination %s, for context %d", self, dst, cnt)
+			log.info("%s, switching to destination %s, for context %s", self, dst, cnt)
 			core.tokenCreator.setSwitch(self, cnt, dst)
 		core.tokenCreator.switchToken(token, self)
 
