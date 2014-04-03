@@ -1,0 +1,15 @@
+% fibonacci.sis
+% Mathijs Saey
+% DVM tests
+
+% This file contains a simple fibonacci example.
+
+define Main
+
+function main(n : integer returns integer)
+	if n < 2 then
+		n
+	else
+		main(n - 1) + main(n - 2)
+	end if
+end function

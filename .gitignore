@@ -2,7 +2,7 @@
 # Generated files #
 ###################
 
-examples/s.out
+test/s.out
 *.dot*
 *.pyc
 *.log

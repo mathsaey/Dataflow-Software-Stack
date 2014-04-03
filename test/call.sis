@@ -1,6 +1,6 @@
 % call.sis
 % Mathijs Saey
-% DVM examples
+% DVM tests
 
 % This file contains sisal code for testing function calls
 % and the removal of literals.
