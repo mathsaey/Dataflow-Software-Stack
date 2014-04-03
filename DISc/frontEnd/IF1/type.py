@@ -34,7 +34,9 @@
 ##
 
 import logging
-log = logging.getLogger(__name__)
+# Logging levels do not propagate decently for some reason
+# if the name contains .IF1
+log = logging.getLogger('frontEnd.IF1_type')
 
 # -------------------- #
 # Forward declarations #
