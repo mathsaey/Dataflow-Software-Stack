@@ -27,6 +27,7 @@
 import subprocess
 import tempfile
 import IF1
+import os
 
 ##
 # \package frontEnd.Sisal
@@ -48,7 +49,8 @@ def fromString(str):
 	file.write(str)
 	file.flush()
 
-	subprocess.check_call(["sisalc", "-IF1", name])
+	FNULL = open(os.devnull, 'w')
+	subprocess.check_call(["sisalc", "-IF1", name], stdout = FNULL)
 
 	# Get the name of the output file
 	name = name.replace('.sis', '.if1')
