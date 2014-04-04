@@ -549,6 +549,7 @@ operations = {
 	'arrFrnt'     : dvm_arr_add_front,
 	'arrBck'      : dvm_arr_add_back,
 	'arrSub'      : dvm_arr_sub,
+	'arrGather'   : dvm_arr_gather,
 
 	'tupGet'      : dvm_tup_get
 }
