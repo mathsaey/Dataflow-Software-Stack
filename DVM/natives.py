@@ -462,6 +462,21 @@ def dvm_arr_add_back(arr, el):
 def dvm_arr_sub(arr, start, stop):
 	return arr[start:stop]
 
+##
+# Create an array with the value of the
+# first array if the value of the second
+# array is true.
+#
+# \param arr
+#		The array to gather elements from.
+# \param bools
+#		An array of booleans.
+# \return
+#		An array with all the elements of arr for 
+#		which the corresponding element in bools is true.
+##
+def dvm_arr_gather(arr, bools):
+	return [el[0] for el in zip(arr, bools) if el[1]]
 
 # ---------------- #
 # Tuple Operations #
