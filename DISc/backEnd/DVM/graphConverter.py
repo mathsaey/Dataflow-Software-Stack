@@ -119,8 +119,12 @@ def convertSubGraphs(subGraphs, prog):
 def convert(entryName = 'main'):
 	main = IGR.getSubGraph(entryName).entry
 	inputs = main.outputs
-	prog = dis.DIS(inputs)
 
+	if inputs == 0:
+		print main.subGraph.value
+		return "TRIV <= %s" % main.subGraph.value
+
+	prog = dis.DIS(inputs)
 	convertSubGraphs(IGR.getSubGraphs(), prog)
 
 	# Add an implicit call to main, which returns to the 

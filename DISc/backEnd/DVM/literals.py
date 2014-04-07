@@ -155,7 +155,7 @@ def removeLiterals():
 	IGR.traverse(
 		checkNode,
 		lambda x: None,
-		lambda x: None,
+		lambda x: checkNode(x.exit),
 		False,
 		lambda x: None,
 		lambda x: None
