@@ -200,12 +200,23 @@ def parseLink(arr, stmt):
 		(srcChnk, srcInst), srcPort, 
 		(dstChnk, dstInst), dstPort)
 
+##
+# Parse a trivial statement.
+#
+# A trivial statement has the form:
+# `TRIV <= <value>`
+##
+def parseTriv(arr, stmt):
+	val = extractValue(stmt)
+	core.addTrivial(val)
+
 ## Functions to parse the various statements.
 functions = {
 	'CHUNK' : parseChunk,
 	'INST'   : parseInst,
 	'LINK'   : parseLink,
-	'LITR'   : parseLit
+	'LITR'   : parseLit,
+	'TRIV'   : parseTriv
 }
 
 ## Parse a single DIS line.

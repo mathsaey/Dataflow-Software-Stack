@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>LINK|CHUNK|INST|LITR|&lt;=</string>
+			<string>LINK|CHUNK|INST|LITR|TRIV|&lt;=</string>
 			<key>name</key>
 			<string>keyword.operator.dis</string>
 		</dict>

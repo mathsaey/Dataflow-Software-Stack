@@ -184,6 +184,22 @@ Number  | 1298
 String  | "Hello World"
 Array   | [21, "test"]
 
+## Trivial Programs {#Trivial}
+
+Some programs do not need any external input to complete, in this case, the dataflow semantics do not allow DVM to actually execute anything. This is why the triv statement is introduced. If a program can be completely predetermined, it's value can be defined by using the triv statement. 
+
+The triv statement is similar to a literal without a real destination, instead, upon program start, the runtime will see if we have encountered any trivial statements. If we did, we simply return the value and stop execution. Only one triv statement should be present in a dis file.
+
+A trivial program is defined with the following statement:
+
+    TRIV <= <value>
+
+Thus the program
+
+    TRIV <= 42
+
+Will never really execute and just return 42 instead.
+
 # An Example {#Example}
 
 The example below presents the DIS code for a program that contains most of the available DIS functionality while still remaining simple.

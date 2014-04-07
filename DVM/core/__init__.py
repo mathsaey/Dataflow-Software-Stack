@@ -186,6 +186,17 @@ def start(cores): runtime.start(cores)
 def addData(data): runtime.addData(data)
 
 ##
+# Add data to the core, that immediately 
+# adds a stop token containing data.
+#
+# This can be used if the program does not require
+# any user input. 
+#
+# \see runtime::addTrivial()
+##
+def addTrivial(data): runtime.addTrivial(data)
+
+##
 # Check the current port of the runtime.
 ##
 def getPort():

@@ -49,10 +49,4 @@ class Test(unittest.TestCase):
 			res = self.runDvm('select.dis', pair[0])
 			self.assertEqual(res, pair[1])
 
-
-
-
-
-
 unittest.main()
-

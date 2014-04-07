@@ -157,10 +157,16 @@ class Core(object):
 		return value
 
 __cores__ = []
-__port__ = 0
-__in__ = None
+__port__  = 0
+__triv__  = None
+__in__    = None
 
 def start(cores):
+	if __triv__:
+		log.info("Aborting and returning trivial data...")
+		print __triv__
+		return __triv__
+
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
 	queues   = [coreLst[i].inbox  for i in xrange(0, cores)]
 
@@ -182,3 +188,8 @@ def addData(datum):
 	__cores__[0].add(tok)
 	__port__ += 1
 	log.info("Adding data to runtime: %s", tok)
+
+def addTrivial(datum):
+	global __triv__
+	__triv__ = datum
+	log.info("Added trivial data to runtime")
