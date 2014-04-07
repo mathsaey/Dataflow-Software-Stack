@@ -90,6 +90,11 @@
             <Path>md_doc__d_i_s.html</Path>
             <Anchor>Literals</Anchor>
            </Node>
+           <Node>
+            <Name>Trivial Programs</Name>
+            <Path>md_doc__d_i_s.html</Path>
+            <Anchor>Trivial</Anchor>
+           </Node>
           </Subnodes>
          </Node>
          <Node>
@@ -827,99 +832,117 @@
               <Path>namespacecore_1_1instruction.html</Path>
               <Subnodes>
                <Node>
-                <Name>AbstractInstruction</Name>
-                <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+                <Name>Instruction</Name>
+                <Path>classcore_1_1instruction_1_1_instruction.html</Path>
                 <Subnodes>
                  <Node>
                   <Name>__init__</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>aae732b6ec590dac0cddc3426fa96658a</Anchor>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                  <Anchor>a0806ce8e49c3f3b601445cda080093d1</Anchor>
                  </Node>
                  <Node>
                   <Name>setKey</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
                   <Name>execute</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                  <Anchor>ad3968ddb6c634765fd9ce8d470b5d57f</Anchor>
                  </Node>
                  <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addLiteral</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
                <Node>
-                <Name>DestinationListInstruction</Name>
-                <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+                <Name>Literal</Name>
+                <Path>classcore_1_1instruction_1_1_literal.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>__init__</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>af3ea4c9b1b66d90b190bf6087aeec2df</Anchor>
+                  <Name>addLiteral</Name>
+                  <Path>classcore_1_1instruction_1_1_literal.html</Path>
+                  <Anchor>afd48dab527c750246d849023c877cd51</Anchor>
                  </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>Destination</Name>
+                <Path>classcore_1_1instruction_1_1_destination.html</Path>
+                <Subnodes>
                  <Node>
                   <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
+                  <Path>classcore_1_1instruction_1_1_destination.html</Path>
+                  <Anchor>a10075feceafef84f978463526af05b71</Anchor>
                  </Node>
                  <Node>
                   <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
+                  <Path>classcore_1_1instruction_1_1_destination.html</Path>
+                  <Anchor>abd124edaf7316350624f26210a7e50b9</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>DestinationList</Name>
+                <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                  <Anchor>a4f7b2b139e41b1bf9e49e25ee29b9eb2</Anchor>
                  </Node>
                  <Node>
-                  <Name>setKey</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Name>addDestination</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                  <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
                  </Node>
                  <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>execute</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addLiteral</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                  <Name>sendDatum</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                  <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                  </Node>
                  <Node>
                   <Name>destinations</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+                  <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                  <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>DestinationMap</Name>
+                <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                  <Anchor>a01d8b5c95b87e1c2ee4472451195102a</Anchor>
                  </Node>
                  <Node>
-                  <Name>key</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Name>addDestination</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                  <Anchor>a307c5198e59a6363f45c37a16eda4527</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sendDatum</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                  <Anchor>a7c757374167f7aa15ead196b488d6086</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                  <Anchor>af8ca893125d8747b63ec48e564a703cb</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -931,11 +954,6 @@
                   <Name>__init__</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                   <Anchor>af3c0e2b92be32e49dfbca6307833dfa7</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
                  </Node>
                  <Node>
                   <Name>addLiteral</Name>
@@ -953,24 +971,24 @@
                   <Anchor>a8abe301191403572cbad6ad631081f0a</Anchor>
                  </Node>
                  <Node>
-                  <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-                 </Node>
-                 <Node>
                   <Name>setKey</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>addDestination</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sendDatum</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                  </Node>
                  <Node>
                   <Name>totalinputs</Name>
@@ -993,14 +1011,19 @@
                   <Anchor>afefec2bba5b1fec590259ce5ebe9d427</Anchor>
                  </Node>
                  <Node>
-                  <Name>destinations</Name>
+                  <Name>chunk</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                  <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1019,34 +1042,24 @@
                   <Anchor>aa6f263d30e55d0e7fa3a48782873c22f</Anchor>
                  </Node>
                  <Node>
-                  <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-                 </Node>
-                 <Node>
                   <Name>setKey</Name>
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
-                  <Name>needsMatcher</Name>
+                  <Name>addDestination</Name>
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+                  <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
                  </Node>
                  <Node>
-                  <Name>addLiteral</Name>
+                  <Name>sendDatum</Name>
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                  <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                  </Node>
                  <Node>
                   <Name>value</Name>
@@ -1054,14 +1067,19 @@
                   <Anchor>aa8ba35567b4658213cc6318a46cb8552</Anchor>
                  </Node>
                  <Node>
-                  <Name>destinations</Name>
+                  <Name>chunk</Name>
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1instruction_1_1_constant.html</Path>
+                  <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1075,16 +1093,6 @@
                   <Anchor>a015f4ff2df95bd364bc31e0358e3dff2</Anchor>
                  </Node>
                  <Node>
-                  <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a9545071b3712fea67400ae47e07e2c28</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>aedb57639f9f4a1c3adbea004fbd87958</Anchor>
-                 </Node>
-                 <Node>
                   <Name>execute</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
                   <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
@@ -1092,32 +1100,37 @@
                  <Node>
                   <Name>setKey</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
-                  <Name>needsMatcher</Name>
+                  <Name>addDestination</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+                  <Anchor>a307c5198e59a6363f45c37a16eda4527</Anchor>
                  </Node>
                  <Node>
-                  <Name>addLiteral</Name>
+                  <Name>sendDatum</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                  <Anchor>a7c757374167f7aa15ead196b488d6086</Anchor>
                  </Node>
                  <Node>
-                  <Name>destinations</Name>
+                  <Name>chunk</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>a02113388d825011118e5981d57bf960e</Anchor>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1instruction_1_1_sink.html</Path>
+                  <Anchor>af8ca893125d8747b63ec48e564a703cb</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1148,17 +1161,12 @@
                  <Node>
                   <Name>setKey</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
                   <Name>retnSink</Name>
@@ -1176,9 +1184,45 @@
                   <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
                  </Node>
                  <Node>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                 </Node>
+                 <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>ContextRestore</Name>
+                <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>execute</Name>
+                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                  <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>setKey</Name>
+                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__str__</Name>
+                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>key</Name>
+                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1204,22 +1248,12 @@
                  <Node>
                   <Name>setKey</Name>
                   <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addLiteral</Name>
-                  <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
                   <Name>dstLst</Name>
@@ -1227,45 +1261,14 @@
                   <Anchor>a47e2b6ade4960c07b616da3c9a3feba1</Anchor>
                  </Node>
                  <Node>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_switch.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                 </Node>
+                 <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>ContextRestore</Name>
-                <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>execute</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>setKey</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addLiteral</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>key</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1281,27 +1284,22 @@
                  <Node>
                   <Name>setKey</Name>
                   <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                  <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                  </Node>
                  <Node>
                   <Name>__str__</Name>
                   <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                  <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
-                  <Name>needsMatcher</Name>
+                  <Name>chunk</Name>
                   <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                  <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addLiteral</Name>
-                  <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                  <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                  </Node>
                  <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                  <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -3709,20 +3707,12 @@
               <Path>classcore_1_1dispatcher_1_1_token_dispatcher.html</Path>
              </Node>
              <Node>
-              <Name>core.instruction.AbstractInstruction</Name>
-              <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+              <Name>core.instruction.Destination</Name>
+              <Path>classcore_1_1instruction_1_1_destination.html</Path>
               <Subnodes>
                <Node>
-                <Name>core.instruction.ContextChange</Name>
-                <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-               </Node>
-               <Node>
-                <Name>core.instruction.ContextRestore</Name>
-                <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-               </Node>
-               <Node>
-                <Name>core.instruction.DestinationListInstruction</Name>
-                <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+                <Name>core.instruction.DestinationList</Name>
+                <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
                 <Subnodes>
                  <Node>
                   <Name>core.instruction.Constant</Name>
@@ -3735,6 +3725,38 @@
                 </Subnodes>
                </Node>
                <Node>
+                <Name>core.instruction.DestinationMap</Name>
+                <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>core.instruction.Sink</Name>
+                  <Path>classcore_1_1instruction_1_1_sink.html</Path>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>core.instruction.Instruction</Name>
+              <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>core.instruction.Constant</Name>
+                <Path>classcore_1_1instruction_1_1_constant.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.ContextChange</Name>
+                <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.ContextRestore</Name>
+                <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.OperationInstruction</Name>
+                <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+               </Node>
+               <Node>
                 <Name>core.instruction.Sink</Name>
                 <Path>classcore_1_1instruction_1_1_sink.html</Path>
                </Node>
@@ -3745,6 +3767,20 @@
                <Node>
                 <Name>core.instruction.Switch</Name>
                 <Path>classcore_1_1instruction_1_1_switch.html</Path>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>core.instruction.Literal</Name>
+              <Path>classcore_1_1instruction_1_1_literal.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>core.instruction.ContextChange</Name>
+                <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.OperationInstruction</Name>
+                <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                </Node>
               </Subnodes>
              </Node>
@@ -7236,6 +7272,11 @@
                   <Anchor>a1d75a7ff0a5d7d0ad350455a21bceef2</Anchor>
                  </Node>
                  <Node>
+                  <Name>addTrivial</Name>
+                  <Path>_d_v_m_2core_2____init_____8py.html</Path>
+                  <Anchor>a3b75a9183f2fbf3bf6acd93a9041f9b9</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getPort</Name>
                   <Path>_d_v_m_2core_2____init_____8py.html</Path>
                   <Anchor>a89956e4c036740132c8cba32795c5d61</Anchor>
@@ -7434,99 +7475,117 @@
                 <Path>instruction_8py.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>AbstractInstruction</Name>
-                  <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+                  <Name>Instruction</Name>
+                  <Path>classcore_1_1instruction_1_1_instruction.html</Path>
                   <Subnodes>
                    <Node>
                     <Name>__init__</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>aae732b6ec590dac0cddc3426fa96658a</Anchor>
+                    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                    <Anchor>a0806ce8e49c3f3b601445cda080093d1</Anchor>
                    </Node>
                    <Node>
                     <Name>setKey</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
                     <Name>execute</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
+                    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                    <Anchor>ad3968ddb6c634765fd9ce8d470b5d57f</Anchor>
                    </Node>
                    <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addLiteral</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
-                    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>DestinationListInstruction</Name>
-                  <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
+                  <Name>Literal</Name>
+                  <Path>classcore_1_1instruction_1_1_literal.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>__init__</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>af3ea4c9b1b66d90b190bf6087aeec2df</Anchor>
+                    <Name>addLiteral</Name>
+                    <Path>classcore_1_1instruction_1_1_literal.html</Path>
+                    <Anchor>afd48dab527c750246d849023c877cd51</Anchor>
                    </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>Destination</Name>
+                  <Path>classcore_1_1instruction_1_1_destination.html</Path>
+                  <Subnodes>
                    <Node>
                     <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
+                    <Path>classcore_1_1instruction_1_1_destination.html</Path>
+                    <Anchor>a10075feceafef84f978463526af05b71</Anchor>
                    </Node>
                    <Node>
                     <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
+                    <Path>classcore_1_1instruction_1_1_destination.html</Path>
+                    <Anchor>abd124edaf7316350624f26210a7e50b9</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>DestinationList</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                    <Anchor>a4f7b2b139e41b1bf9e49e25ee29b9eb2</Anchor>
                    </Node>
                    <Node>
-                    <Name>setKey</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Name>addDestination</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
                    </Node>
                    <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>execute</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addLiteral</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                    <Name>sendDatum</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                    </Node>
                    <Node>
                     <Name>destinations</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+                    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+                    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>DestinationMap</Name>
+                  <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                    <Anchor>a01d8b5c95b87e1c2ee4472451195102a</Anchor>
                    </Node>
                    <Node>
-                    <Name>key</Name>
-                    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Name>addDestination</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                    <Anchor>a307c5198e59a6363f45c37a16eda4527</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>sendDatum</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                    <Anchor>a7c757374167f7aa15ead196b488d6086</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+                    <Anchor>af8ca893125d8747b63ec48e564a703cb</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7538,11 +7597,6 @@
                     <Name>__init__</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                     <Anchor>af3c0e2b92be32e49dfbca6307833dfa7</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
                    </Node>
                    <Node>
                     <Name>addLiteral</Name>
@@ -7560,24 +7614,24 @@
                     <Anchor>a8abe301191403572cbad6ad631081f0a</Anchor>
                    </Node>
                    <Node>
-                    <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-                   </Node>
-                   <Node>
                     <Name>setKey</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addDestination</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>sendDatum</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                    </Node>
                    <Node>
                     <Name>totalinputs</Name>
@@ -7600,14 +7654,19 @@
                     <Anchor>afefec2bba5b1fec590259ce5ebe9d427</Anchor>
                    </Node>
                    <Node>
-                    <Name>destinations</Name>
+                    <Name>chunk</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
+                    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7626,34 +7685,24 @@
                     <Anchor>aa6f263d30e55d0e7fa3a48782873c22f</Anchor>
                    </Node>
                    <Node>
-                    <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-                   </Node>
-                   <Node>
                     <Name>setKey</Name>
                     <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
-                    <Name>needsMatcher</Name>
+                    <Name>addDestination</Name>
                     <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+                    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
                    </Node>
                    <Node>
-                    <Name>addLiteral</Name>
+                    <Name>sendDatum</Name>
                     <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                    </Node>
                    <Node>
                     <Name>value</Name>
@@ -7661,14 +7710,19 @@
                     <Anchor>aa8ba35567b4658213cc6318a46cb8552</Anchor>
                    </Node>
                    <Node>
-                    <Name>destinations</Name>
+                    <Name>chunk</Name>
                     <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_constant.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1instruction_1_1_constant.html</Path>
+                    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7682,16 +7736,6 @@
                     <Anchor>a015f4ff2df95bd364bc31e0358e3dff2</Anchor>
                    </Node>
                    <Node>
-                    <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a9545071b3712fea67400ae47e07e2c28</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>aedb57639f9f4a1c3adbea004fbd87958</Anchor>
-                   </Node>
-                   <Node>
                     <Name>execute</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
                     <Anchor>a6f6222f282aecf2ac4f6c56660667d5d</Anchor>
@@ -7699,32 +7743,37 @@
                    <Node>
                     <Name>setKey</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
-                    <Name>needsMatcher</Name>
+                    <Name>addDestination</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+                    <Anchor>a307c5198e59a6363f45c37a16eda4527</Anchor>
                    </Node>
                    <Node>
-                    <Name>addLiteral</Name>
+                    <Name>sendDatum</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                    <Anchor>a7c757374167f7aa15ead196b488d6086</Anchor>
                    </Node>
                    <Node>
-                    <Name>destinations</Name>
+                    <Name>chunk</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>a02113388d825011118e5981d57bf960e</Anchor>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_sink.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1instruction_1_1_sink.html</Path>
+                    <Anchor>af8ca893125d8747b63ec48e564a703cb</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7755,17 +7804,12 @@
                    <Node>
                     <Name>setKey</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
                     <Name>retnSink</Name>
@@ -7783,9 +7827,45 @@
                     <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
                    </Node>
                    <Node>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                   </Node>
+                   <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>ContextRestore</Name>
+                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>execute</Name>
+                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                    <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setKey</Name>
+                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>__str__</Name>
+                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>key</Name>
+                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7811,22 +7891,12 @@
                    <Node>
                     <Name>setKey</Name>
                     <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addLiteral</Name>
-                    <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
                     <Name>dstLst</Name>
@@ -7834,45 +7904,14 @@
                     <Anchor>a47e2b6ade4960c07b616da3c9a3feba1</Anchor>
                    </Node>
                    <Node>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_switch.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                   </Node>
+                   <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_switch.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>ContextRestore</Name>
-                  <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>execute</Name>
-                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                    <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setKey</Name>
-                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>needsMatcher</Name>
-                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addLiteral</Name>
-                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>key</Name>
-                    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7888,27 +7927,22 @@
                    <Node>
                     <Name>setKey</Name>
                     <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
                    </Node>
                    <Node>
                     <Name>__str__</Name>
                     <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
-                    <Name>needsMatcher</Name>
+                    <Name>chunk</Name>
                     <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addLiteral</Name>
-                    <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
                    </Node>
                    <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_stop_instruction.html</Path>
-                    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7970,14 +8004,14 @@
                   <Anchor>adcd75eabf1c237556ef1c8fc10702036</Anchor>
                  </Node>
                  <Node>
-                  <Name>needsMatcher</Name>
-                  <Path>memory_8py.html</Path>
-                  <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
-                 </Node>
-                 <Node>
                   <Name>add</Name>
                   <Path>memory_8py.html</Path>
                   <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>needsMatcher</Name>
+                  <Path>memory_8py.html</Path>
+                  <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
                  </Node>
                  <Node>
                   <Name>__MEMORY__</Name>
@@ -8092,6 +8126,11 @@
                   <Anchor>a4fe3e65a2c62930486886a5095446389</Anchor>
                  </Node>
                  <Node>
+                  <Name>addTrivial</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>ad57172b4521f8ad0c74ca7a077ff724c</Anchor>
+                 </Node>
+                 <Node>
                   <Name>log</Name>
                   <Path>runtime_8py.html</Path>
                   <Anchor>ad0f367bed031f8b4f82413776061fb30</Anchor>
@@ -8105,6 +8144,11 @@
                   <Name>__port__</Name>
                   <Path>runtime_8py.html</Path>
                   <Anchor>aa752c279cf56ec5a6ea35d0e09a7253a</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__triv__</Name>
+                  <Path>runtime_8py.html</Path>
+                  <Anchor>ac1ca9c97f336106153a10b34602074da</Anchor>
                  </Node>
                  <Node>
                   <Name>__in__</Name>
@@ -8652,6 +8696,11 @@
                 <Anchor>a220fa9b2fdd9f0c3abe88fbd13cf3c5d</Anchor>
                </Node>
                <Node>
+                <Name>dvm_arr_gather</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>a26c9b61480edd5d9776f112f3c4f4ed4</Anchor>
+               </Node>
+               <Node>
                 <Name>dvm_tup_get</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
@@ -8736,6 +8785,11 @@
                 <Name>parseLink</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a354881061ece79f80981fa712f5e76ba</Anchor>
+               </Node>
+               <Node>
+                <Name>parseTriv</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a2147167b940f5de6c1a8092ccd40379d</Anchor>
                </Node>
                <Node>
                 <Name>parseLine</Name>

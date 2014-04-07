@@ -17,6 +17,7 @@ var searchData=
   ['parsenode',['parseNode',['../namespacefront_end_1_1_i_f1_1_1graph.html#a3b96a38fd829649d932ae5ec079bd560',1,'frontEnd::IF1::graph']]],
   ['parsestandardnode',['parseStandardNode',['../namespacefront_end_1_1_i_f1_1_1graph.html#a6c564c1107c93f9e290dfad09c497b2b',1,'frontEnd::IF1::graph']]],
   ['parsesubgraph',['parseSubGraph',['../namespacefront_end_1_1_i_f1_1_1graph.html#a507960bf11a92961a199bc75f8526a34',1,'frontEnd::IF1::graph']]],
+  ['parsetriv',['parseTriv',['../namespaceread.html#a2147167b940f5de6c1a8092ccd40379d',1,'read']]],
   ['parsetype',['parseType',['../namespacefront_end_1_1_i_f1_1_1type.html#ab32c81047066ac3fb6322eb1615a470f',1,'frontEnd::IF1::type']]],
   ['parsevalue',['parseValue',['../namespaceread.html#a76508dbebb4272ecd19b4d8431338097',1,'read']]],
   ['path',['path',['../namespaceback_end.html#aa5f2c35790b2bf18a94e66a1a207223a',1,'backEnd.path()'],['../namespaceback_end_1_1_d_v_m_1_1dvm.html#a962c0895671f5ed5463d5b0c17d8a471',1,'backEnd.DVM.dvm.path()']]],

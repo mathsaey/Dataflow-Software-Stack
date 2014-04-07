@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">a3c4533</span>
+   &#160;<span id="projectnumber">deb6280</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level2"><a href="#Links">Links</a></li>
 <li class="level2"><a href="#Instructions">Instructions</a></li>
 <li class="level2"><a href="#Literals">Literals</a></li>
+<li class="level2"><a href="#Trivial">Trivial Programs</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#Example">An Example</a></li>
@@ -217,6 +218,15 @@ Literals</h2>
 <tr>
 <td>Array </td><td>[21, "test"] </td></tr>
 </table>
+<h2><a class="anchor" id="Trivial"></a>
+Trivial Programs</h2>
+<p>Some programs do not need any external input to complete, in this case, the dataflow semantics do not allow DVM to actually execute anything. This is why the triv statement is introduced. If a program can be completely predetermined, it's value can be defined by using the triv statement.</p>
+<p>The triv statement is similar to a literal without a real destination, instead, upon program start, the runtime will see if we have encountered any trivial statements. If we did, we simply return the value and stop execution. Only one triv statement should be present in a dis file.</p>
+<p>A trivial program is defined with the following statement: </p>
+<pre class="fragment">TRIV &lt;= &lt;value&gt;
+</pre><p>Thus the program </p>
+<pre class="fragment">TRIV &lt;= 42
+</pre><p>Will never really execute and just return 42 instead.</p>
 <h1><a class="anchor" id="Example"></a>
 An Example</h1>
 <p>The example below presents the DIS code for a program that contains most of the available DIS functionality while still remaining simple.</p>
@@ -227,49 +237,7 @@ An Example</h1>
 <div class="line">function Main(x, y):</div>
 <div class="line">    return <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a>(x, y, 4)</div>
 <div class="line">end function</div>
-</div><!-- fragment --><div class="fragment"><div class="line">$ example.dis</div>
-<div class="line">$ Mathijs Saey</div>
-<div class="line">$ A simple DIS Example</div>
-<div class="line"></div>
-<div class="line">$ TODO: Add a Switch example</div>
-<div class="line"></div>
-<div class="line">CHUNK 0</div>
-<div class="line">$ Instructions without a matcher</div>
-<div class="line"></div>
-<div class="line">$ Program entry and exit point</div>
-<div class="line">INST PB 0 2 $ Program entry point</div>
-<div class="line">INST PE 1 1 $ Program exit  point</div>
-<div class="line"></div>
-<div class="line">$ <span class="stringliteral">&quot;main function&quot;</span></div>
-<div class="line">INST CC 2 0 4 0 3 $ A call to a <span class="keyword">function</span>.</div>
-<div class="line">INST SI 3         $ A sink that leads to the program exit point.</div>
-<div class="line"></div>
-<div class="line">LITR 2 2 &lt;= 4       $ Add literal to call</div>
-<div class="line">LINK 0 0 0 0 2 0 $ Accept input from entry point</div>
-<div class="line">LINK 0 0 1 0 2 1 $ Accept input from entry point</div>
-<div class="line">LINK 0 3 0 0 1 0 $ Send <span class="keywordflow">return</span> value to program exit</div>
-<div class="line"></div>
-<div class="line">$ <span class="keyword">function</span></div>
-<div class="line">INST SI 4 $ Entry sink of the <span class="keyword">function</span></div>
-<div class="line">INST CR 5 $ Function <span class="keywordflow">return</span> </div>
-<div class="line"></div>
-<div class="line">$ Send input to <a class="code" href="namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5">operations</a></div>
-<div class="line">LINK 0 4 0 1 0 0</div>
-<div class="line">LINK 0 4 1 1 0 1</div>
-<div class="line">LINK 0 4 2 1 1 1 </div>
-<div class="line"></div>
-<div class="line">CHUNK 1</div>
-<div class="line">$ Sum <a class="code" href="namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5">operations</a> with 2 inputs</div>
-<div class="line">INST OP 0 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
-<div class="line">INST OP 1 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
-<div class="line">INST OP 2 <a class="code" href="namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2">add</a> 2</div>
-<div class="line"></div>
-<div class="line">LITR 2 1 &lt;= 5 $ Adding a 5 as one of the inputs</div>
-<div class="line"></div>
-<div class="line">LINK 1 0 0 1 1 0 $ Link x + y to (x + y) + z</div>
-<div class="line">LINK 1 1 0 1 2 0 $ Link x + y + z to (x + y + z) + 5</div>
-<div class="line">LINK 1 2 0 0 5 0 $ Link result to <span class="keywordflow">return</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="Operations"></a>
+</div><!-- fragment --><div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="Operations"></a>
 Appendix: Operations</h1>
 <table class="doxtable">
 <tr>
@@ -368,7 +336,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 31 2014 23:19:49 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 19:28:54 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

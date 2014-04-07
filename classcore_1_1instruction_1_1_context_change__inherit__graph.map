@@ -1,3 +1,4 @@
 <map id="core.instruction.ContextChange" name="core.instruction.ContextChange">
-<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="4,6,168,159"/>
+<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_instruction.html" title="General DVM instruction. " alt="" coords="5,6,181,133"/>
+<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_literal.html" title="Instruction that accepts a literal. " alt="" coords="205,33,356,106"/>
 </map>

@@ -12,6 +12,7 @@ var searchData=
   ['dvm_5farr_5fcatenate',['dvm_arr_catenate',['../namespacenatives.html#aabc798c93f8ca42270e94fb7a91c6a1f',1,'natives']]],
   ['dvm_5farr_5fcreate',['dvm_arr_create',['../namespacenatives.html#a222b597973b736d6e3421d68e99db250',1,'natives']]],
   ['dvm_5farr_5fempty',['dvm_arr_empty',['../namespacenatives.html#acf26b1de8845f072eb27dd89f2f163c2',1,'natives']]],
+  ['dvm_5farr_5fgather',['dvm_arr_gather',['../namespacenatives.html#a26c9b61480edd5d9776f112f3c4f4ed4',1,'natives']]],
   ['dvm_5farr_5fget',['dvm_arr_get',['../namespacenatives.html#ae6df364d41ad69e2557253b7cc6570ba',1,'natives']]],
   ['dvm_5farr_5finsert',['dvm_arr_insert',['../namespacenatives.html#af1035915155c3d811f71d5b0fe21b92e',1,'natives']]],
   ['dvm_5farr_5fisempty',['dvm_arr_isEmpty',['../namespacenatives.html#a078294ea31372ab0dbcc2386c3c5cf5f',1,'natives']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['chunk',['chunk',['../namespaceread.html#aa64d6b999bc20e4cd80f35ece2aee2fe',1,'read']]],
+  ['chunk',['chunk',['../classcore_1_1instruction_1_1_instruction.html#a91177f4c4ea31c8ddfb9b579bb62c6af',1,'core.instruction.Instruction.chunk()'],['../namespaceread.html#aa64d6b999bc20e4cd80f35ece2aee2fe',1,'read.chunk()']]],
   ['chunks',['chunks',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ac022615797c0e2e46c63acb664a66c22',1,'backEnd::DVM::dis::DIS']]],
   ['cont',['cont',['../classcore_1_1token_1_1_tag.html#aa795f56c33f2d4889874f92895ac5554',1,'core::token::Tag']]],
   ['container',['container',['../classfront_end_1_1_i_f1_1_1type_1_1___container_type.html#a482a26cba5ed867352f60f6ee8f0f447',1,'frontEnd::IF1::type::_ContainerType']]],

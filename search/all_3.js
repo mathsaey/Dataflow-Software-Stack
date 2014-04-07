@@ -6,7 +6,7 @@ var searchData=
   ['checkgraph',['checkGraph',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a98756589a380f220c22befed86a29acc',1,'backEnd::DVM::literals']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
   ['checknode',['checkNode',['../namespaceback_end_1_1_d_v_m_1_1literals.html#ae72b1d4296d23cc05877a0ca6de97cda',1,'backEnd::DVM::literals']]],
-  ['chunk',['chunk',['../namespaceread.html#aa64d6b999bc20e4cd80f35ece2aee2fe',1,'read']]],
+  ['chunk',['chunk',['../classcore_1_1instruction_1_1_instruction.html#a91177f4c4ea31c8ddfb9b579bb62c6af',1,'core.instruction.Instruction.chunk()'],['../namespaceread.html#aa64d6b999bc20e4cd80f35ece2aee2fe',1,'read.chunk()']]],
   ['chunks',['chunks',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ac022615797c0e2e46c63acb664a66c22',1,'backEnd::DVM::dis::DIS']]],
   ['compound_2epy',['compound.py',['../compound_8py.html',1,'']]],
   ['compoundfooter',['compoundFooter',['../namespace_i_g_r_1_1dot.html#ac646de3e1d3a4805bbfd4e57a4c2e1cb',1,'IGR::dot']]],

@@ -1,0 +1,9 @@
+<map id="core.instruction.Instruction" name="core.instruction.Instruction">
+<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_constant.html" title="Constant instruction. " alt="" coords="5,222,173,309"/>
+<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="198,189,359,342"/>
+<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_context_restore.html" title="Represents the restoration of context. " alt="" coords="383,222,544,309"/>
+<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="569,182,743,349"/>
+<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="767,222,908,309"/>
+<area shape="rect" id="node7" href="$classcore_1_1instruction_1_1_stop_instruction.html" title="Represents the end of the program. " alt="" coords="932,229,1136,302"/>
+<area shape="rect" id="node8" href="$classcore_1_1instruction_1_1_switch.html" title="Represents an instruction that will dynamically determine the destination of it&#39;s tokens at runtime..." alt="" coords="1161,215,1316,315"/>
+</map>

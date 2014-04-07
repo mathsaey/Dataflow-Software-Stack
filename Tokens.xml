@@ -1505,6 +1505,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addTrivial</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a3b75a9183f2fbf3bf6acd93a9041f9b9</Anchor>
+    <Abstract>Add data to the core, that immediately adds a stop token containing data. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getPort</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2025,18 +2037,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core::memory</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1memory.html</Path>
-    <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
-    <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2045,6 +2045,18 @@
     <Path>namespacecore_1_1memory.html</Path>
     <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
     <Abstract>Add an instruction to the main memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>needsMatcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
+    <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
@@ -2083,6 +2095,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addTrivial</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>ad57172b4521f8ad0c74ca7a077ff724c</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -2112,6 +2135,17 @@
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
     <Anchor>aa752c279cf56ec5a6ea35d0e09a7253a</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__triv__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>ac1ca9c97f336106153a10b34602074da</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -2844,6 +2878,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_arr_gather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a26c9b61480edd5d9776f112f3c4f4ed4</Anchor>
+    <Abstract>Create an array with the value of the first array if the value of the second array is true...</Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm_tup_get</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3032,6 +3078,18 @@
     <Path>namespaceread.html</Path>
     <Anchor>a354881061ece79f80981fa712f5e76ba</Anchor>
     <Abstract>Parse a link statement. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseTriv</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a2147167b940f5de6c1a8092ccd40379d</Anchor>
+    <Abstract>Parse a trivial statement. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -4198,6 +4256,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addTrivial</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a3b75a9183f2fbf3bf6acd93a9041f9b9</Anchor>
+    <Abstract>Add data to the core, that immediately adds a stop token containing data. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getPort</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -4627,12 +4697,12 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::instruction::AbstractInstruction</Name>
+      <Name>core::instruction::Instruction</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
     <Abstract>General DVM instruction. </Abstract>
   </Token>
   <Token>
@@ -4640,10 +4710,10 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>aae732b6ec590dac0cddc3426fa96658a</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0806ce8e49c3f3b601445cda080093d1</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -4651,10 +4721,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -4663,10 +4733,10 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -4675,77 +4745,74 @@
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>ad3968ddb6c634765fd9ce8d470b5d57f</Anchor>
     <Abstract>Execute an instruction with a given input and a core. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>needsMatcher</Name>
+      <Name>chunk</Name>
       <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::instruction::DestinationListInstruction</Name>
+      <Name>core::instruction::Literal</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.Literal</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Abstract>DVM instruction that has a list of outputs. </Abstract>
+    <Path>classcore_1_1instruction_1_1_literal.html</Path>
+    <Abstract>Instruction that accepts a literal. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>__init__</Name>
+      <Name>addLiteral</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.Literal</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>af3ea4c9b1b66d90b190bf6087aeec2df</Anchor>
+    <Path>classcore_1_1instruction_1_1_literal.html</Path>
+    <Anchor>afd48dab527c750246d849023c877cd51</Anchor>
+    <Abstract>Add a literal to the operation. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::Destination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.Destination</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination.html</Path>
+    <Abstract>An instruction that inherits from this class promises to send it&amp;#39;s output to a destination that can b...</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.Destination</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
+    <Path>classcore_1_1instruction_1_1_destination.html</Path>
+    <Anchor>a10075feceafef84f978463526af05b71</Anchor>
     <Abstract>Add a destination to this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -4754,71 +4821,54 @@
       <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.Destination</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-    <Abstract>Send a datum to all of the destinations. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination.html</Path>
+    <Anchor>abd124edaf7316350624f26210a7e50b9</Anchor>
+    <Abstract>Send a datum to any destination of a given output port. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>setKey</Name>
+      <Name>core::instruction::DestinationList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Abstract>DVM instruction that sends any token it produces to all of the memebers of it&amp;#39;s destination list...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationList</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-    <Abstract>Set the instruction address. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a4f7b2b139e41b1bf9e49e25ee29b9eb2</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>__str__</Name>
+      <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationList</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-    <Abstract>Return a string representation of this instruction. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>execute</Name>
+      <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationList</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a08e8731f144ffaff32ca0cf564356f1e</Anchor>
-    <Abstract>Execute an instruction with a given input and a core. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -4826,20 +4876,63 @@
       <Name>destinations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.DestinationList</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>key</Name>
+      <Name>core::instruction::DestinationMap</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.DestinationMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Abstract>DVM instruction that sends output it produces to a destination based on the output port of the output...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>a01d8b5c95b87e1c2ee4472451195102a</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>a307c5198e59a6363f45c37a16eda4527</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>a7c757374167f7aa15ead196b488d6086</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationMap</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>af8ca893125d8747b63ec48e564a703cb</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4850,17 +4943,6 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
     <Abstract>An operation instruction defines a single operation on all of it&amp;#39;s inputs. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.OperationInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a59e4eed24a5a5395d64544af975114b1</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4909,37 +4991,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
-    <Abstract>Add a destination to this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-    <Abstract>Send a datum to all of the destinations. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -4948,11 +5006,33 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -4997,23 +5077,33 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>destinations</Name>
+      <Name>chunk</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5049,37 +5139,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a73eb72a7515768fb8ab4abbed8beed98</Anchor>
-    <Abstract>Add a destination to this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a9a33ea8de7137eedb35edb02ca7098e0</Anchor>
-    <Abstract>Send a datum to all of the destinations. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -5088,35 +5154,33 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>needsMatcher</Name>
+      <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationList</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addLiteral</Name>
+      <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationList</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -5131,23 +5195,33 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>destinations</Name>
+      <Name>chunk</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.DestinationListInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list_instruction.html</Path>
-    <Anchor>a1a28d3c77eacba3c1506e6276e1b4971</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5172,30 +5246,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Sink</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_sink.html</Path>
-    <Anchor>a9545071b3712fea67400ae47e07e2c28</Anchor>
-    <Abstract>Add a destination to this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Sink</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_sink.html</Path>
-    <Anchor>aedb57639f9f4a1c3adbea004fbd87958</Anchor>
-    <Abstract>Send a datum to any destination of a given output port. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>execute</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -5210,10 +5260,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -5222,56 +5272,64 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>needsMatcher</Name>
+      <Name>addDestination</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationMap</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>a307c5198e59a6363f45c37a16eda4527</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addLiteral</Name>
+      <Name>sendDatum</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.DestinationMap</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>a7c757374167f7aa15ead196b488d6086</Anchor>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>destinations</Name>
+      <Name>chunk</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.Sink</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_sink.html</Path>
-    <Anchor>a02113388d825011118e5981d57bf960e</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_map.html</Path>
+    <Anchor>af8ca893125d8747b63ec48e564a703cb</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5333,10 +5391,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -5345,23 +5403,11 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -5396,13 +5442,88 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::ContextRestore</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.ContextRestore</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+    <Abstract>Represents the restoration of context. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.ContextRestore</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+    <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5452,10 +5573,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -5464,35 +5585,11 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
@@ -5507,92 +5604,23 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>key</Name>
+      <Name>chunk</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>core::instruction::ContextRestore</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.instruction.ContextRestore</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-    <Abstract>Represents the restoration of context. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>execute</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.ContextRestore</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-    <Anchor>a63c4736a4f2760e4d58a7ad6cf0fa9ed</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
-    <Abstract>Set the instruction address. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
-    <Abstract>Return a string representation of this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5620,10 +5648,10 @@
       <Name>setKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>ac51b309847a681f30924519582fa29af</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
     <Abstract>Set the instruction address. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
@@ -5632,46 +5660,32 @@
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a655687cf84baeae06920ce2646815002</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
     <Abstract>Return a string representation of this instruction. </Abstract>
     <DeclaredIn>instruction.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>needsMatcher</Name>
+      <Name>chunk</Name>
       <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a64e94d241511dc768fac2e70a02e570e</Anchor>
-    <Abstract>See if an instruction requires context matching. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>a1ec6dc68630a9f397986cdafe1444b07</Anchor>
-    <Abstract>Add a literal to the operation. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>key</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.instruction.AbstractInstruction</Scope>
+      <Scope>core.instruction.Instruction</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_abstract_instruction.html</Path>
-    <Anchor>add17318f1f80dc01de0c6d08b3108c8f</Anchor>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5721,18 +5735,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>needsMatcher</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core::memory</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore_1_1memory.html</Path>
-    <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
-    <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -5741,6 +5743,18 @@
     <Path>namespacecore_1_1memory.html</Path>
     <Anchor>adadafaa74f91e37b9c0d0f7bb51988f2</Anchor>
     <Abstract>Add an instruction to the main memory. </Abstract>
+    <DeclaredIn>memory.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>needsMatcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::memory</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1memory.html</Path>
+    <Anchor>a8b68327efca6249f5bde090d43374d7e</Anchor>
+    <Abstract>See if an instruction needs to pass the matcher Instructions that require a context manager are store...</Abstract>
     <DeclaredIn>memory.py</DeclaredIn>
   </Token>
   <Token>
@@ -5857,6 +5871,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addTrivial</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>ad57172b4521f8ad0c74ca7a077ff724c</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>log</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -5886,6 +5911,17 @@
     </TokenIdentifier>
     <Path>namespacecore_1_1runtime.html</Path>
     <Anchor>aa752c279cf56ec5a6ea35d0e09a7253a</Anchor>
+    <DeclaredIn>runtime.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__triv__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::runtime</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1runtime.html</Path>
+    <Anchor>ac1ca9c97f336106153a10b34602074da</Anchor>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -12824,6 +12860,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_arr_gather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a26c9b61480edd5d9776f112f3c4f4ed4</Anchor>
+    <Abstract>Create an array with the value of the first array if the value of the second array is true...</Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm_tup_get</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -13022,6 +13070,18 @@
     <Path>namespaceread.html</Path>
     <Anchor>a354881061ece79f80981fa712f5e76ba</Anchor>
     <Abstract>Parse a link statement. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>parseTriv</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a2147167b940f5de6c1a8092ccd40379d</Anchor>
+    <Abstract>Parse a trivial statement. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

@@ -11,6 +11,7 @@ var searchData=
   ['_5f_5fport_5f_5f',['__port__',['../namespacecore_1_1runtime.html#aa752c279cf56ec5a6ea35d0e09a7253a',1,'core::runtime']]],
   ['_5f_5fstack_5f_5f',['__STACK__',['../namespacefront_end_1_1_i_f1_1_1environment.html#a2ad3e8faf02f03227e8def45f3bdc58e',1,'frontEnd::IF1::environment']]],
   ['_5f_5fsubgraphs_5f_5f',['__SUBGRAPHS__',['../namespace_i_g_r_1_1graph.html#afe7eab2a94fd262b1bb8810624eb3c1e',1,'IGR::graph']]],
+  ['_5f_5ftriv_5f_5f',['__triv__',['../namespacecore_1_1runtime.html#ac1ca9c97f336106153a10b34602074da',1,'core::runtime']]],
   ['_5farg_5f1_5fidx',['_arg_1_idx',['../namespacefront_end_1_1_i_f1_1_1type.html#a6597008016eb3161a2886f6d049d409d',1,'frontEnd::IF1::type']]],
   ['_5farg_5f2_5fidx',['_arg_2_idx',['../namespacefront_end_1_1_i_f1_1_1type.html#ac631114265ac5777d595dbd156529121',1,'frontEnd::IF1::type']]],
   ['_5fbasic_5ftypes',['_basic_types',['../namespacefront_end_1_1_i_f1_1_1type.html#a431d68841a0c6d230973ea8612860003',1,'frontEnd::IF1::type']]],

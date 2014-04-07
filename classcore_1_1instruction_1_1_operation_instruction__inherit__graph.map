@@ -1,4 +1,6 @@
 <map id="core.instruction.OperationInstruction" name="core.instruction.OperationInstruction">
-<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_destination_list_instruction.html" title="DVM instruction that has a list of outputs. " alt="" coords="5,209,187,322"/>
-<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="14,6,177,159"/>
+<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_instruction.html" title="General DVM instruction. " alt="" coords="5,142,181,269"/>
+<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_destination_list.html" title="DVM instruction that sends any token it produces to all of the memebers of it&#39;s destination list..." alt="" coords="205,155,408,255"/>
+<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_destination.html" title="An instruction that inherits from this class promises to send it&#39;s output to a destination that can b..." alt="" coords="216,6,397,93"/>
+<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_literal.html" title="Instruction that accepts a literal. " alt="" coords="432,169,583,242"/>
 </map>

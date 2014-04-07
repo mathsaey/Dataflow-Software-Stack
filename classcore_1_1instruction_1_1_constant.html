@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">a3c4533</span>
+   &#160;<span id="projectnumber">deb6280</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -106,7 +106,7 @@ Inheritance diagram for core.instruction.Constant:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcore_1_1instruction_1_1_constant__inherit__graph.png" border="0" usemap="#core_8instruction_8_constant_inherit__map" alt="Inheritance graph"/></div>
 <map name="core_8instruction_8_constant_inherit__map" id="core_8instruction_8_constant_inherit__map">
-<area shape="rect" id="node2" href="classcore_1_1instruction_1_1_destination_list_instruction.html" title="DVM instruction that has a list of outputs. " alt="" coords="5,209,187,322"/><area shape="rect" id="node3" href="classcore_1_1instruction_1_1_abstract_instruction.html" title="General DVM instruction. " alt="" coords="14,6,177,159"/></map>
+<area shape="rect" id="node2" href="classcore_1_1instruction_1_1_instruction.html" title="General DVM instruction. " alt="" coords="5,142,181,269"/><area shape="rect" id="node3" href="classcore_1_1instruction_1_1_destination_list.html" title="DVM instruction that sends any token it produces to all of the memebers of it&#39;s destination list..." alt="" coords="205,155,408,255"/><area shape="rect" id="node4" href="classcore_1_1instruction_1_1_destination.html" title="An instruction that inherits from this class promises to send it&#39;s output to a destination that can b..." alt="" coords="216,6,397,93"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -115,33 +115,27 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0ce24688ac4f93f4ff74ffccb9aedcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f263d30e55d0e7fa3a48782873c22f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_constant.html#aa6f263d30e55d0e7fa3a48782873c22f">execute</a></td></tr>
 <tr class="separator:aa6f263d30e55d0e7fa3a48782873c22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73eb72a7515768fb8ab4abbed8beed98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_destination_list_instruction.html#a73eb72a7515768fb8ab4abbed8beed98">addDestination</a></td></tr>
-<tr class="memdesc:a73eb72a7515768fb8ab4abbed8beed98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a destination to this instruction.  <a href="#a73eb72a7515768fb8ab4abbed8beed98">More...</a><br/></td></tr>
-<tr class="separator:a73eb72a7515768fb8ab4abbed8beed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a33ea8de7137eedb35edb02ca7098e0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_destination_list_instruction.html#a9a33ea8de7137eedb35edb02ca7098e0">sendDatum</a></td></tr>
-<tr class="memdesc:a9a33ea8de7137eedb35edb02ca7098e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a datum to all of the destinations.  <a href="#a9a33ea8de7137eedb35edb02ca7098e0">More...</a><br/></td></tr>
-<tr class="separator:a9a33ea8de7137eedb35edb02ca7098e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac51b309847a681f30924519582fa29af"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#ac51b309847a681f30924519582fa29af">setKey</a></td></tr>
-<tr class="memdesc:ac51b309847a681f30924519582fa29af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the instruction address.  <a href="#ac51b309847a681f30924519582fa29af">More...</a><br/></td></tr>
-<tr class="separator:ac51b309847a681f30924519582fa29af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a655687cf84baeae06920ce2646815002"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#a655687cf84baeae06920ce2646815002">__str__</a></td></tr>
-<tr class="memdesc:a655687cf84baeae06920ce2646815002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of this instruction.  <a href="#a655687cf84baeae06920ce2646815002">More...</a><br/></td></tr>
-<tr class="separator:a655687cf84baeae06920ce2646815002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e94d241511dc768fac2e70a02e570e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#a64e94d241511dc768fac2e70a02e570e">needsMatcher</a></td></tr>
-<tr class="memdesc:a64e94d241511dc768fac2e70a02e570e"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if an instruction requires context matching.  <a href="#a64e94d241511dc768fac2e70a02e570e">More...</a><br/></td></tr>
-<tr class="separator:a64e94d241511dc768fac2e70a02e570e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ec6dc68630a9f397986cdafe1444b07"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#a1ec6dc68630a9f397986cdafe1444b07">addLiteral</a></td></tr>
-<tr class="memdesc:a1ec6dc68630a9f397986cdafe1444b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a literal to the operation.  <a href="#a1ec6dc68630a9f397986cdafe1444b07">More...</a><br/></td></tr>
-<tr class="separator:a1ec6dc68630a9f397986cdafe1444b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7c9bbf4724b95a7aa459cb0bb11364"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#aee7c9bbf4724b95a7aa459cb0bb11364">setKey</a></td></tr>
+<tr class="memdesc:aee7c9bbf4724b95a7aa459cb0bb11364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the instruction address.  <a href="#aee7c9bbf4724b95a7aa459cb0bb11364">More...</a><br/></td></tr>
+<tr class="separator:aee7c9bbf4724b95a7aa459cb0bb11364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0966adf9213da275782f0005dfb8573b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#a0966adf9213da275782f0005dfb8573b">__str__</a></td></tr>
+<tr class="memdesc:a0966adf9213da275782f0005dfb8573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of this instruction.  <a href="#a0966adf9213da275782f0005dfb8573b">More...</a><br/></td></tr>
+<tr class="separator:a0966adf9213da275782f0005dfb8573b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc0bb5c782bdaa77d73639e170869e1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_destination_list.html#a3fc0bb5c782bdaa77d73639e170869e1">addDestination</a></td></tr>
+<tr class="separator:a3fc0bb5c782bdaa77d73639e170869e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33502dcaa555a398e198ad805036e492"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_destination_list.html#a33502dcaa555a398e198ad805036e492">sendDatum</a></td></tr>
+<tr class="separator:a33502dcaa555a398e198ad805036e492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa8ba35567b4658213cc6318a46cb8552"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_constant.html#aa8ba35567b4658213cc6318a46cb8552">value</a></td></tr>
 <tr class="separator:aa8ba35567b4658213cc6318a46cb8552"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a28d3c77eacba3c1506e6276e1b4971"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_destination_list_instruction.html#a1a28d3c77eacba3c1506e6276e1b4971">destinations</a></td></tr>
-<tr class="separator:a1a28d3c77eacba3c1506e6276e1b4971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add17318f1f80dc01de0c6d08b3108c8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_abstract_instruction.html#add17318f1f80dc01de0c6d08b3108c8f">key</a></td></tr>
-<tr class="separator:add17318f1f80dc01de0c6d08b3108c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91177f4c4ea31c8ddfb9b579bb62c6af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#a91177f4c4ea31c8ddfb9b579bb62c6af">chunk</a></td></tr>
+<tr class="separator:a91177f4c4ea31c8ddfb9b579bb62c6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527cedfacb1a6de78809642b6ad4aeb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#a527cedfacb1a6de78809642b6ad4aeb3">key</a></td></tr>
+<tr class="separator:a527cedfacb1a6de78809642b6ad4aeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a10e82b7f205df7a6f185acb4ec4b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_destination_list.html#a7a10e82b7f205df7a6f185acb4ec4b8a">destinations</a></td></tr>
+<tr class="separator:a7a10e82b7f205df7a6f185acb4ec4b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classcore_1_1instruction_1_1_constant.html" title="Constant instruction. ">Constant</a> instruction. </p>
@@ -206,7 +200,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a73eb72a7515768fb8ab4abbed8beed98"></a>
+<a class="anchor" id="aee7c9bbf4724b95a7aa459cb0bb11364"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -214,7 +208,69 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def core.instruction.DestinationListInstruction.addDestination </td>
+          <td class="memname">def core.instruction.Instruction.setKey </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the instruction address. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0966adf9213da275782f0005dfb8573b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.instruction.Instruction.__str__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a string representation of this instruction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3fc0bb5c782bdaa77d73639e170869e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.instruction.DestinationList.addDestination </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -250,19 +306,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Add a destination to this instruction. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">inst</td><td>The instruction to send the output to. </td></tr>
-    <tr><td class="paramname">_</td><td>This is an argument that is used to define the output port, when this method is called on a sink. It is ignored for operationInstructions. </td></tr>
-    <tr><td class="paramname">port</td><td>The port to send the output to. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a class="anchor" id="a9a33ea8de7137eedb35edb02ca7098e0"></a>
+<a class="anchor" id="a33502dcaa555a398e198ad805036e492"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -270,7 +316,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def core.instruction.DestinationListInstruction.sendDatum </td>
+          <td class="memname">def core.instruction.DestinationList.sendDatum </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -291,6 +337,12 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>cont</em>&#160;</td>
         </tr>
         <tr>
@@ -305,147 +357,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Send a datum to all of the destinations. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">datum</td><td>The datum to send </td></tr>
-    <tr><td class="paramname">core</td><td>The core to utilise </td></tr>
-    <tr><td class="paramname">cont</td><td>The context of the token that will be created. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ac51b309847a681f30924519582fa29af"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def core.instruction.AbstractInstruction.setKey </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>key</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the instruction address. </p>
-
-</div>
-</div>
-<a class="anchor" id="a655687cf84baeae06920ce2646815002"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def core.instruction.AbstractInstruction.__str__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a string representation of this instruction. </p>
-
-</div>
-</div>
-<a class="anchor" id="a64e94d241511dc768fac2e70a02e570e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def core.instruction.AbstractInstruction.needsMatcher </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>See if an instruction requires context matching. </p>
-
-</div>
-</div>
-<a class="anchor" id="a1ec6dc68630a9f397986cdafe1444b07"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">def core.instruction.AbstractInstruction.addLiteral </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add a literal to the operation. </p>
-<p>An instruction should never accept only literals. Not all instructions accept literals. </p>
 
 </div>
 </div>
@@ -462,7 +373,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1a28d3c77eacba3c1506e6276e1b4971"></a>
+<a class="anchor" id="a91177f4c4ea31c8ddfb9b579bb62c6af"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -470,7 +381,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">core.instruction.DestinationListInstruction.destinations</td>
+          <td class="memname">core.instruction.Instruction.chunk</td>
         </tr>
       </table>
   </td>
@@ -482,7 +393,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="add17318f1f80dc01de0c6d08b3108c8f"></a>
+<a class="anchor" id="a527cedfacb1a6de78809642b6ad4aeb3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -490,7 +401,27 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">core.instruction.AbstractInstruction.key</td>
+          <td class="memname">core.instruction.Instruction.key</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a10e82b7f205df7a6f185acb4ec4b8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.instruction.DestinationList.destinations</td>
         </tr>
       </table>
   </td>
@@ -505,7 +436,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 31 2014 23:19:49 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 19:28:54 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
