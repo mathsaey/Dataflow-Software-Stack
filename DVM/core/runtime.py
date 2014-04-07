@@ -164,8 +164,8 @@ __in__    = None
 def start(cores):
 	if __triv__:
 		log.info("Aborting and returning trivial data...")
-		print __triv__
-		return __triv__
+		print  __triv__
+		return
 
 	coreLst  = [Core(i, memory.memory()) for i in xrange(0, cores)]
 	queues   = [coreLst[i].inbox  for i in xrange(0, cores)]

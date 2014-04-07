@@ -148,7 +148,9 @@ def checkGraph(subGraph):
 ## Clean up the nodes to be deleted.
 def deleteNode(node):
 	sg = node.subGraph
-	sg.nodes.remove(node)	
+	try:
+		sg.nodes.remove(node)	
+	except ValueError: pass
 
 ## Remove all operations that have predefined inputs.
 def removeLiterals():

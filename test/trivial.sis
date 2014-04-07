@@ -1,0 +1,12 @@
+% trivial.sis
+% Mathijs Saey
+% DVM tests
+
+% This file contains some code
+% that does not need user input to run
+
+define Main
+
+function main(returns integer)
+	5 + 3
+end function
