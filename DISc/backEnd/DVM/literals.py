@@ -97,6 +97,7 @@ def propagateLit(node):
 	elif isinstance(node, IGR.node.SubGraphExitNode):
 		val = getInputs(node)[0]
 		node.subGraph.reduce(val)
+		deleteNode(node)
 		log.info("Reduced trivial graph: %s", node.subGraph)
 		return
 	else:
