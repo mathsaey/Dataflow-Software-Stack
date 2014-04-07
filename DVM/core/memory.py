@@ -80,9 +80,9 @@ class InstructionMemory(object):
 	##
 	# Add an instruction to the memory.
 	##
-	def add(self, inst, chunk):
-		key = (chunk, len(self.memory[chunk]))
-		lst = self.memory[chunk]
+	def add(self, inst):
+		key = (inst.chunk, len(self.memory[inst.chunk]))
+		lst = self.memory[inst.chunk]
 		lst.append(inst)
 		inst.setKey(key)
 		return key
@@ -107,6 +107,10 @@ def reset():
 ## Get an instruction from the main memory
 def get(key): return memory().get(key)
 
+## Add an instruction to the main memory.
+def add(inst): 
+	return memory().add(inst)
+
 ## 
 # See if an instruction needs to pass the matcher
 # Instructions that require a context manager are stored
@@ -117,15 +121,3 @@ def get(key): return memory().get(key)
 # \return 
 #		True if the instruction needs to be matched.
 def needsMatcher(key): return key[0] is 1
-
-## 
-# Add an instruction to the main memory.
-#
-# This function has to determine the chunk
-# of memory that the instruction will use.
-##
-def add(inst): 
-	chunk = None
-	if inst.needsMatcher(): chunk = 1
-	else: chunk = 0
-	return memory().add(inst, chunk)

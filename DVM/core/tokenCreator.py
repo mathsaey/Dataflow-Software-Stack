@@ -197,7 +197,7 @@ class TokenCreator(object):
 	# Restore the old context of a token.
 	# 
 	# In order to do this, we simply look up the previous context 
-	# and the return instruction that are bound to this context.s
+	# and the return instructions that are bound to this context.
 	##
 	def restoreContext(self, token):
 		cont = token.tag.cont
