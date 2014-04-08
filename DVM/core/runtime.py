@@ -45,7 +45,7 @@ import multiprocessing
 from context import ContextCreator
 from scheduler import Scheduler
 from dispatcher import TokenDispatcher
-from tokenCreator import TokenCreator
+from tokenizer import Tokenizer
 from contextMatcher import ContextMatcher
 
 import logging
@@ -94,8 +94,8 @@ class Core(object):
 		self.inbox          = multiprocessing.Queue()
 		## Context creator for this core
 		self.contextCreator = ContextCreator(self)
-		## Token creator for this core
-		self.tokenCreator   = TokenCreator(self)
+		## Tokenizer for this core
+		self.tokenizer   = Tokenizer(self)
 		## Token dispatcher for this core
 		self.dispatcher     = TokenDispatcher(self)
 		## Scheduler for this core

@@ -1,4 +1,4 @@
-# tokenCreator.py
+# tokenizer.py
 # Mathijs Saey
 # DVM
 
@@ -25,7 +25,7 @@
 # THE SOFTWARE.
 
 ##
-# \package core.tokenCreator
+# \package core.tokenizer
 # \brief DVM token creator
 #
 # This module defines the token creator.
@@ -39,9 +39,9 @@ import token
 # The token creator is responsible for
 # wrapping results of instructions in tokens.
 ##
-class TokenCreator(object):
+class Tokenizer(object):
 	def __init__(self, core):
-		super(TokenCreator, self).__init__()
+		super(Tokenizer, self).__init__()
 		self.core = core
 
 		self.contextMap = {}

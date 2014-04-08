@@ -142,7 +142,7 @@ class DestinationList(Destination):
 		for dst in self.destinations:
 			inst = dst[0]
 			port = dst[1]
-			core.tokenCreator.simpleToken(
+			core.tokenizer.simpleToken(
 				datum, inst, port, cont)
 
 ##
@@ -165,7 +165,7 @@ class DestinationMap(Destination):
 		for dst in self.destinations[port]:
 			inst = dst[0]
 			port = dst[1]
-			core.tokenCreator.simpleToken(
+			core.tokenizer.simpleToken(
 				datum, inst, port, cont)
 
 # ---------- #
@@ -288,7 +288,7 @@ class ContextChange(Instruction, Literal):
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)
 
-		core.tokenCreator.changeContext(token, self)
+		core.tokenizer.changeContext(token, self)
 
 # --------------- #
 # Context Restore #
@@ -301,7 +301,7 @@ class ContextChange(Instruction, Literal):
 class ContextRestore(Instruction):
 	def execute(self, token, core):
 		log.info("%s, restoring: %s", self, token)
-		core.tokenCreator.restoreContext(token)
+		core.tokenizer.restoreContext(token)
 
 # ------ #
 # Switch #
@@ -339,8 +339,8 @@ class Switch(Instruction):
 			cnt = token.tag.cont
 			dst = self.getDst(token)
 			log.info("%s, switching to destination %s, for context %s", self, dst, cnt)
-			core.tokenCreator.setSwitch(self, cnt, dst)
-		core.tokenCreator.switchToken(token, self)
+			core.tokenizer.setSwitch(self, cnt, dst)
+		core.tokenizer.switchToken(token, self)
 
 # ---------------- #
 # Stop Instruction #
@@ -354,4 +354,4 @@ class Switch(Instruction):
 class StopInstruction(Instruction):
 	def execute(self, token, core):
 		log.info("%s reached stop instruction: %s", token, self)
-		core.tokenCreator.stopToken(token)
+		core.tokenizer.stopToken(token)
