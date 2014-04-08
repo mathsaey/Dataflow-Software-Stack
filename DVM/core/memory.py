@@ -32,8 +32,6 @@
 # the instruction memory stores all the instructions in the program.
 ##
 
-import StringIO
-
 ##
 # The Instruction memory stores all of the 
 # instructions in the program.
