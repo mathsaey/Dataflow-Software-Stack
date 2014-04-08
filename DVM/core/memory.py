@@ -56,28 +56,6 @@ class InstructionMemory(object):
 		self.memory = [[] for i in xrange(0, chunks)]
 
 	##
-	# Print the contents of the instruction memory.
-	# Mainly used for debugging purposes.
-	##
-	def __str__(self):
-		buffer = StringIO.StringIO()
-		buffer.write("<<< Instruction Memory >>>\n")
-		buffer.write("==========================\n")
-
-		for mem in self.memory:
-			buffer.write("Starting chunk...\n")
-			for inst in mem:
-				buffer.write(str(inst))
-				buffer.write("\n")
-			buffer.write("End of chunk...\n\n")
-
-		buffer.write("==========================\n")
-		buffer.write("<<< Instruction Memory >>>\n")
-		res = buffer.getvalue()
-		buffer.close()
-		return res
-
-	##
 	# Add an instruction to the memory.
 	##
 	def add(self, inst):
