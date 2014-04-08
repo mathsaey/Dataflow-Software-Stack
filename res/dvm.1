@@ -7,7 +7,7 @@
 DVM \-\- The Dataflow Virtual Machine
 
 .SH SYNOPSIS
-dvm [-c cores][-i input][-ll logLevel] path
+dvm [-c cores][-i input][-ll logLevel][--dot][--dry_run] path
 
 .SH DESCRIPTION
 Runs the DIS file specified by path on the dataflow based virtual machine. The VM will accept input until it's main function has received all of it's data. And terminate once the main function received enough results.
@@ -29,4 +29,16 @@ Pass input to the Virtual machine. By default, DVM will keep on asking for input
 .HP
 -ll logLevel, --logLevel
 .br
-Determine the loglevel of DVM, usefull to find bugs. Logging is disabled by default.
+Determine the loglevel of DVM, useful to find bugs. Logging is disabled by default.
+
+.HP
+--dot
+.br
+Generate a dot graph of the input file. This requires graphviz dot to be in your path.
+This will store the generated dot file in dis.dot and it's generated graph in dis.dot.png
+
+.HP
+--dry_run
+.br
+Abort DVM just before starting the runtime. This can be useful if you only want to generate a dot
+graph without actually running anything.

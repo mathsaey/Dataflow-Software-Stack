@@ -39,6 +39,7 @@
 
 import log
 import sys
+import dot
 import core
 import read
 import user
@@ -67,6 +68,9 @@ argParser.add_argument("path", help = "The path to the DIS file you want to run,
 argParser.add_argument("-i", "--input", action = 'append', help = "A value to pass to the program")
 argParser.add_argument("-c", "--cores", type = int, default = multiprocessing.cpu_count(), help = "The number of cores to use")
 argParser.add_argument("-ll", "--logLevel", type = int, default = 50, help = "Specify the log level")
+argParser.add_argument("--dot", action = "store_true", help = "Generate a dot graph of the program")
+argParser.add_argument("--dry_run", action = "store_true", help = "Don't run the program but abort after parsing the dis file.")
+
 args = argParser.parse_args()
 
 ##args.logLevel = 0
@@ -84,6 +88,14 @@ log.setup(args.logLevel)
 # Parse the input files/stdin.
 for line in fileinput.input(args.path):
 	read.parseLine(line)
+
+# Generate a dot graph of the program
+if args.dot:
+	dot.dot()
+
+# Abort if dry_run was specified.
+if args.dry_run:
+	sys.exit(user.EXIT_OK)
 
 # Abort if we need extra input while 
 # stdin is already bound to a pipe.
