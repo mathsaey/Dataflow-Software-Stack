@@ -192,6 +192,7 @@ def getDot(skipCompound):
 def dotToFile(path, skipCompound = True):
 	f = open(path, 'w')
 	f.write(getDot(skipCompound))
+	f.close()
 
 ##
 # Convert the IGR graph to dot, save it,

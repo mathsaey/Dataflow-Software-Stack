@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pypy
 
 # disc.py
 # Mathijs Saey
@@ -57,6 +57,14 @@ argParser.add_argument("-f", "--frontEnd", type = str, help = "The frontEnd to u
 argParser.add_argument("-ll", "--logLevel", type = int, default = 30, help = "Specify the log level")
 
 args = argParser.parse_args()
+
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/sort.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/select.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/call.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/simple.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/factorial.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/trivial.sis"
+#args.path = loc
 
 # ------------- #
 # Program Setup #
