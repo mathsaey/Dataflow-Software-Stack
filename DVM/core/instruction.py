@@ -142,7 +142,7 @@ class DestinationList(Destination):
 		for dst in self.destinations:
 			inst = dst[0]
 			port = dst[1]
-			core.tokenizer.simpleToken(
+			core.tokenizer.simple(
 				datum, inst, port, cont)
 
 ##
@@ -165,7 +165,7 @@ class DestinationMap(Destination):
 		for dst in self.destinations[port]:
 			inst = dst[0]
 			port = dst[1]
-			core.tokenizer.simpleToken(
+			core.tokenizer.simple(
 				datum, inst, port, cont)
 
 # ---------- #
@@ -287,8 +287,7 @@ class ContextChange(Instruction, Literal):
 
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)
-
-		core.tokenizer.changeContext(token, self)
+		core.tokenizer.contexts.change(token, self)
 
 # --------------- #
 # Context Restore #
@@ -301,7 +300,7 @@ class ContextChange(Instruction, Literal):
 class ContextRestore(Instruction):
 	def execute(self, token, core):
 		log.info("%s, restoring: %s", self, token)
-		core.tokenizer.restoreContext(token)
+		core.tokenizer.contexts.restore(token)
 
 # ------ #
 # Switch #
@@ -339,8 +338,8 @@ class Switch(Instruction):
 			cnt = token.tag.cont
 			dst = self.getDst(token)
 			log.info("%s, switching to destination %s, for context %s", self, dst, cnt)
-			core.tokenizer.setSwitch(self, cnt, dst)
-		core.tokenizer.switchToken(token, self)
+			core.tokenizer.switcher.set(self, cnt, dst)
+		core.tokenizer.switcher.switch(token, self)
 
 # ---------------- #
 # Stop Instruction #
