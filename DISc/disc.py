@@ -40,7 +40,9 @@
 import argparse
 import frontEnd
 import backEnd
+import IGR
 import log
+import sys
 import os
 
 # ---------------------- #
@@ -55,6 +57,9 @@ argParser.add_argument("-o", "--output", help = "The location of the output file
 argParser.add_argument("-b", "--backEnd", default = 'DVM', help = "The backEnd to use.")
 argParser.add_argument("-f", "--frontEnd", type = str, help = "The frontEnd to use.")
 argParser.add_argument("-ll", "--logLevel", type = int, default = 30, help = "Specify the log level")
+
+argParser.add_argument("--dot", action = "store_true", help = "Generate a dot graph of the program")
+argParser.add_argument("--dry_run", action = "store_true", help = "Don't compile the program but abort after parsing the input file.")
 
 args = argParser.parse_args()
 
@@ -77,8 +82,11 @@ fileName, fileExtension = os.path.splitext(args.path)
 frontEnd.setUp(fileExtension, args.frontEnd)
 frontEnd.fromFile(args.path)
 
-import IGR
-IGR.dot(path="../igr.dot", skipCompound = False)
+if args.dot:
+	IGR.dot(skipCompound = False)
+
+if args.dry_run:
+	sys.exit(0)
 
 backEnd.setUp(fileName, args.backEnd, args.output)
 backEnd.toFile()
