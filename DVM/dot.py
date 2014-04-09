@@ -72,7 +72,7 @@ def processSink(inst):
 def processOp(inst):
 	shape = "shape = Mrecord"
 
-	lits = [str(l) if l else "" for l in inst.litLst]
+	lits = [str(l) if l is not None else "" for l in inst.litLst]
 	inputs = "|".join(["<%d> %s" % (i, lits[i]) for i in xrange(0, inst.totalinputs)])
 
 	name = inst.operation.__name__
