@@ -35,7 +35,7 @@
 # the instruction call for it.
 ##
 
-import token
+from token import Tag, StopTag, Token
 
 ##
 # DVM Token creator.
@@ -65,8 +65,8 @@ class Tokenizer(object):
 
 	## Create a simple token, with a known destination.
 	def simple(self, datum, toInst, toPort, context):
-		tag = token.Tag(self.core.identifier, toInst, toPort, context)
-		tok = token.Token(datum, tag)
+		tag = Tag(self.core.identifier, toInst, toPort, context)
+		tok = Token(datum, tag)
  		self.add(tok)
 
 	##
@@ -77,7 +77,7 @@ class Tokenizer(object):
 	#		a stop token.
 	##
 	def stopToken(self, tok):
-		tok.tag = token.StopTag()
+		tok.tag = StopTag()
 		self.add(tok)
 
 ##
@@ -93,7 +93,8 @@ class ContextManager(object):
 
 		##
 		# Stores the contexts that have already been
-		# created.
+		# created. This is needed incase multiple tokens
+		# need to be sent to the same context (e.g. function call)
 		##
 		self.contextMap = {}
 
@@ -103,103 +104,69 @@ class ContextManager(object):
 		##
 		self.restoreMap = {}
 
-	##
- 	# Create a new context for a token.
- 	# And send it. This should only be called
- 	# if we have not sent any token for this context.
- 	#
- 	# This method will also send any literals that belong
- 	# to the call node.
- 	#
- 	# \param tok
- 	#		The token to modify and send.
- 	# \param inst
- 	#		The instruction that started the context change.
- 	# \param dest
- 	#		The new destination of the token.
- 	##
- 	def createNewContext(self, tok, inst, dest):
- 		core = tok.tag.core
- 		cont = tok.tag.cont
- 		key  = (inst.key, cont)
-
- 		# Get the new context and update the maps
- 		new = self.tokenizer.core.contextCreator.get()
-		self.contextMap.update({key : new})
-		self.restoreMap.update({new : (cont, inst.retnSink)})
-
-		# Update the token
-		tok.tag.cont = new
-		tok.tag.inst = dest
-		self.tokenizer.add(tok)
-
-		# Add the literals of the call
-		for key in inst.getLiterals():
-			val = inst.getLiterals()[key]
-			tag = token.Tag(core, dest, key, new)
-			tok = token.Token(val, tag)
-			self.tokenizer.add(tok)
-
- 	##
- 	# Change the context of a token.
- 	# Only use this if the context has already
- 	# been created.
- 	#
- 	# \param token 
- 	#		The token to send.
- 	# \param key
- 	#		The instruction, context pair of the token.
- 	# \param dest
-	#		The destination of the token.
- 	##
- 	def sendToOldContext(self, token, key, dest):
- 		cont = self.contextMap[key]
- 		token.tag.cont = cont
- 		token.tag.inst = dest
- 		self.tokenizer.add(token)
-
 	## 
-	# Change the context of a token.
-	# This will bind the context of this token to a 
-	# certain return instruction.
-	#
-	# The runtime may decide to send these tokens
-	# to a different runtime core.
-	#
-	# Multiple tokens that are sent from the same instruction with the same 
-	# context will receive the same context.
+	# Send a token to a different context.
+	# Create this context first if it does not exist yet.
+	# Further tokens from the same source (instruction, context) pair
+	# will be sent to the same context.
 	#
 	# \param token
-	#		The token to modify. The destination port of this token
-	#		will remain unchanged.
+	#		The token to change and send.
 	# \param inst
-	#		The instruction that called the contextchange.
-	#		this has to be a contextChange instruction.
-	#
-	# \see restore
+	#		The instruction that wants to change the token.
+	# \param dest
+	#		The new destination of the token.
+	# \param retInst
+	#		The instance to send the token to
+	#		when restoring the context.
 	##
-	def change(self, token, inst):
-		dest = inst.destSink
-		cont = token.tag.cont
-		key  = (inst.key, cont)
+	def change(self, token, inst, dest, retInst):
+		key = (inst.key, token.tag.cont)
+		cont = None
 
-		if key not in self.contextMap:
-			self.createNewContext(token, inst, dest)
+		if key in self.contextMap:
+			cont = self.contextMap[key]
+
 		else:
-			self.sendToOldContext(token, key, dest)
+			retTag = Tag(token.tag.core, retInst, 0, token.tag.cont)
+			cont   = self.bind(retTag)
+			self.contextMap.update({key : cont})
+
+			for key in inst.getLiterals():
+				val = inst.getLiterals()[key]
+				tag = Tag(token.tag.core, dest, key, cont)
+				tok = Token(val, tag)
+				self.tokenizer.add(tok)
+
+		token.tag.cont = cont
+		token.tag.inst = dest
+		self.tokenizer.add(token)
+
+ 	##
+ 	# Bind a new context to a given tag.
+ 	# When a token with the new context encounters a context restore
+ 	# operation, it will receive the tag.
+ 	#
+ 	# \param tag
+ 	#		The tag to bind to the new context
+ 	##
+ 	def bind(self, tag):
+ 		cont = self.tokenizer.core.contextCreator.get()
+ 		self.restoreMap.update({cont : tag})
+ 		return cont
 
 	##
-	# Restore the old context of a token.
-	# 
-	# In order to do this, we simply look up the previous context 
-	# and the return instructions that are bound to this context.
+	# Restore a token.
+	#
+	# In order to do this, we simply bind the tag of the
+	# token to the tag bound to this context.
 	##
 	def restore(self, token):
 		cont = token.tag.cont
-		pair = self.restoreMap[cont]
+		tag  = self.restoreMap[cont]
+		del self.restoreMap[cont]
 
-		token.tag.cont = pair[0]
-		token.tag.inst = pair[1]
+		token.tag = tag
 		self.tokenizer.add(token)
 
 ##

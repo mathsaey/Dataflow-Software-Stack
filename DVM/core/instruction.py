@@ -287,7 +287,29 @@ class ContextChange(Instruction, Literal):
 
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)
-		core.tokenizer.contexts.change(token, self)
+		core.tokenizer.contexts.change(token, self, self.destSink, self.retnSink)
+
+
+# ----------- #
+# Context Map #
+# ----------- #
+
+##
+# Sends every element of a compound data
+# type to a sink, with a new context.
+#
+# Restoring this context will now set the 
+# index of the element as new port.
+##
+class ContextMap(Instruction):
+	
+	def __init__(self, destSink, returnSink, mergeOp):
+		super(ContextMap, self).__init__()
+		self.destSink = destSink
+		self.mergeOp  = mergeOp
+
+	def execute(self, token, core):
+		pass
 
 # --------------- #
 # Context Restore #

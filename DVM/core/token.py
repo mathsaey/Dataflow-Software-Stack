@@ -67,7 +67,7 @@ class AbstractTag(object):
 # * A static part, it's port and instruction which are part of the program
 # * A dynamic part, it's core and context, which are dynamically assigned at runtime.
 ##
-class Tag(object):
+class Tag(AbstractTag):
 	def __init__(self, core, inst, port, cont):
 		super(Tag, self).__init__()
 		self.core = core
@@ -76,11 +76,11 @@ class Tag(object):
 		self.inst = inst
 
 	def __str__(self):
-		core = "core " + str(self.core) + " | "
-		inst = "inst " + str(self.inst) + " | "
-		port = "port " + str(self.port) + " | "
+		core = "core " + str(self.core)
+		inst = "inst " + str(self.inst)
+		port = "port " + str(self.port)
 		cont = "cont " + str(self.cont) 
-		return core + inst + port + cont
+		return "%s | %s | %s | %s " % (core, inst, port, cont)
 
 	def isStop(self): return False
 
@@ -99,6 +99,6 @@ class ExternalTag(Tag):
 #
 # Signals the end of program execution.
 ##
-class StopTag(object):
+class StopTag(AbstractTag):
 	def __str__(self): return "<STOP>"
 	def isStop(self): return True
