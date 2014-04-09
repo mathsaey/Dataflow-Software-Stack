@@ -244,7 +244,7 @@ def dot(
 	else: output = "-O"
 
 	try:
-		subprocess.check_call([dotpath, format, path, output] + other)
+		subprocess.check_call([dotpath, format, path, output, '-q'] + other)
 	except subprocess.CalledProcessError, e:
 		log.error("Dot returned with exit code %d", e.returncode)
 	except OSError:
