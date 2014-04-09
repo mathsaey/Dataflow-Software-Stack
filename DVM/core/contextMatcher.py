@@ -69,7 +69,7 @@ class ContextMatcher(object):
 	##
 	def prepareInstruction(self, inst, cont, inputs):
 		key = (inst, cont)
-		self.tokens.update({key : ([None] * inputs, 0, inputs)})
+		self.tokens.update({key : [[None] * inputs, 0, inputs]})
 
 	##
 	# See if a given key is already a part of the 

@@ -73,8 +73,8 @@ argParser.add_argument("--dry_run", action = "store_true", help = "Don't run the
 
 args = argParser.parse_args()
 
-##args.logLevel = 0
-#args.path = "../examples/call.dis"
+#args.logLevel = 0
+#args.path = "../test/simple.dis"
 args.cores = 1
 #args.input = ["1","2", "3", "4"]
 

@@ -111,6 +111,8 @@ class ContextManager(object):
 	#		The datum to send.s
 	# \param dest
 	#		The location to send the token to
+	# \param core
+	#		The current execution core.
 	# \param cont
 	#		The original context of the datum
 	# \param retInst
@@ -118,11 +120,11 @@ class ContextManager(object):
 	# \param retPort
 	#		The port to send the token to after restoring
 	##
-	def send(self, datum, dest, cont, retInst, retPort):
-		restoreTag = Tag(self.tokenizer.core, retInst, retPort, cont)
+	def send(self, datum, dest, core, cont, retInst, retPort):
+		restoreTag = Tag(core, retInst, retPort, cont)
 		new = self.bind(restoreTag)
 
-		tag = Tag(self.tokenizer.core, dest, 0, new)
+		tag = Tag(core, dest, 0, new)
 		tok = Token(datum, tag)
 		self.tokenizer.add(tok)
 

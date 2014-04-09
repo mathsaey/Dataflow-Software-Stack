@@ -311,14 +311,18 @@ class ContextMap(Instruction):
 	def execute(self, token, core):
 		cont = token.tag.cont
 		comp = token.datum
-
+		
 		for idx in xrange(0, len(comp)):
 			el = comp[idx]
-			self.core.tokenizer.contexts.send(
-				el, self.destSink, 
-				cont, self.mergeOp, idx)
+			core.tokenizer.contexts.send(
+				el, 
+				self.destSink, 
+				token.tag.core, 
+				cont, 
+				self.mergeOp, 
+				idx)
 
-		self.core.matcher.perpareInstruction(
+		core.matcher.prepareInstruction(
 			self.mergeOp, cont, len(comp))
 
 # --------------- #

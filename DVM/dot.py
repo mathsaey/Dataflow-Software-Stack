@@ -84,13 +84,13 @@ def processConst(inst):
 	return "shape = circle, label = %s" % inst.value
 
 def processContMap(inst):
-	return 'shape = doubleoctagon, label = "Send: %s"' % inst.destSink[1]
+	return 'shape = ellipse, label = "Split: %s"' % inst.destSink[1]
 
 def processContChange(inst):
 	return 'shape = ellipse, label = "Send: %s"' % inst.destSink[1]
 
 def processContRestore(inst):
-	return 'shape = doublecircle, style = dashed, label = ""'
+	return 'shape = ellipse, style = dashed, label = ""'
 
 def processSwitch(inst):
 	return "shape = diamond, label = Switch"
