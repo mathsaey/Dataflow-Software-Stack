@@ -97,6 +97,14 @@ def createContextChange(arr, stmt):
 	retInst = int(arr[6])
 	return core.addContextChange((dstChnk, dstInst), (retChnk, retInst))
 
+## Create a context map function
+def createContextMap(arr, stmt):
+	destChnk = int(arr[3])
+	destInst = int(arr[4])
+	mergChnk = int(arr[5])
+	mergInst = int(arr[6])	
+	return core.addContextMap((destChnk, destInst), (mergChnk, mergInst))
+
 ## Create a context restore
 def createContextRestore(arr, stmt):
 	return core.addContextRestore()
@@ -130,6 +138,7 @@ instructions = {
 	'SI' : createSink,
 	'PB' : createStart,
 	'PE' : createStop,
+	'MP' : createContextMap,
 	'CC' : createContextChange,
 	'CR' : createContextRestore,
 	'OP' : createOperation,

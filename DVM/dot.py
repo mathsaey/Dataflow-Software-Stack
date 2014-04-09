@@ -45,8 +45,6 @@ log = logging.getLogger(__name__)
 # General #
 # ------- #
 
-currentChunk = 0
-
 ## Generate a unique idea for a chunk/key pair.
 def generateIdentifier(chunk, key):
 	if chunk >= key: return chunk ** 2 + chunk + key 
@@ -85,6 +83,9 @@ def processOp(inst):
 def processConst(inst):
 	return "shape = circle, label = %s" % inst.value
 
+def processContMap(inst):
+	return 'shape = doubleoctagon, label = "Send: %s"' % inst.destSink[1]
+
 def processContChange(inst):
 	return 'shape = ellipse, label = "Send: %s"' % inst.destSink[1]
 
@@ -101,6 +102,7 @@ attributes = {
 	core.instruction.OperationInstruction : processOp,
 	core.instruction.Constant             : processConst,
 	core.instruction.Sink                 : processSink,
+	core.instruction.ContextMap           : processContMap,
 	core.instruction.ContextChange        : processContChange,
 	core.instruction.ContextRestore       : processContRestore,
 	core.instruction.Switch               : processSwitch,
@@ -139,6 +141,11 @@ def addContextChangeLinks(buffer, inst):
 	retKey = generateTupleIdentifier(inst.retnSink)
 	buffer.write("%s -> %s ; \n" % (srcKey, retKey))
 
+def addContextMapLinks(buffer, inst):
+	srcKey = generateInstIdentifier(inst)
+	retKey = generateTupleIdentifier(inst.mergeOp)
+	buffer.write("%s -> %s ; \n" % (srcKey, retKey))
+
 def addSwitchLinks(buffer, inst):
 	for dst in inst.dstLst:
 		srcKey = generateInstIdentifier(inst)
@@ -155,6 +162,8 @@ def addLinks(buffer, inst):
 	# Hard links
 	if isinstance(inst, core.instruction.ContextChange):
 		addContextChangeLinks(buffer, inst)
+	elif isinstance(inst, core.instruction.ContextMap):
+		addContextMapLinks(buffer, inst)
 	elif isinstance(inst, core.instruction.Switch):
 		addSwitchLinks(buffer, inst)
 

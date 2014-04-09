@@ -303,7 +303,7 @@ class ContextChange(Instruction, Literal):
 ##
 class ContextMap(Instruction):
 	
-	def __init__(self, destSink, returnSink, mergeOp):
+	def __init__(self, destSink, mergeOp):
 		super(ContextMap, self).__init__()
 		self.destSink = destSink
 		self.mergeOp  = mergeOp

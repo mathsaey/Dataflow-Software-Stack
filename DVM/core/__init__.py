@@ -125,6 +125,24 @@ def addContextChange(destSink, retSink):
 		[destSink, retSink])
 
 ##
+# Add a context map instruction.
+#
+# \param destSink
+#		The destination of the elements 
+#		in the collection.
+# \param mergeOp
+#		The address of the instruction 
+#		that remerges the collection elements.
+#
+# \return
+#		The key of the context map instruction.
+##
+def addContextMap(destSink, mergeOp):
+	return _addInstruction(
+		instruction.ContextMap,
+		[destSink, mergeOp])
+
+##
 # Add a context restore instruction.
 #
 # \return 
