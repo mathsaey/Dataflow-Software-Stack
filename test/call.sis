@@ -16,5 +16,5 @@ function kek(returns integer)
 end function
 
 function main(a, b: integer returns integer)
-	test(a,b) + test(3,4) + kek()
+	test(a,b) + test(3,4) + kek() + test(a, 5)
 end function

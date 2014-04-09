@@ -33,7 +33,7 @@ class Test(unittest.TestCase):
 
 	def test_fac(self): self.abstract('factorial', ['5'], '120')
 	def test_fib(self): self.abstract('fibonacci', ['10'], '55')
-	def test_call(self): self.abstract('call', ['1', '2'], '15')
+	def test_call(self): self.abstract('call', ['1', '2'], '21')
 	def test_simple(self): self.abstract('simple', ['1', '2', '3', '4'], '10')
 	def test_trivial(self): self.abstract('trivial', [], '8')
 
