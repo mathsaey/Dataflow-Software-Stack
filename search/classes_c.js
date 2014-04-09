@@ -10,5 +10,6 @@ var searchData=
   ['subgraph',['SubGraph',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html',1,'IGR::subgraph']]],
   ['subgraphentrynode',['SubGraphEntryNode',['../class_i_g_r_1_1node_1_1_sub_graph_entry_node.html',1,'IGR::node']]],
   ['subgraphexitnode',['SubGraphExitNode',['../class_i_g_r_1_1node_1_1_sub_graph_exit_node.html',1,'IGR::node']]],
-  ['switch',['Switch',['../classcore_1_1instruction_1_1_switch.html',1,'core::instruction']]]
+  ['switch',['Switch',['../classcore_1_1instruction_1_1_switch.html',1,'core::instruction']]],
+  ['switcher',['Switcher',['../classcore_1_1tokenizer_1_1_switcher.html',1,'core::tokenizer']]]
 ];

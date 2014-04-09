@@ -1113,231 +1113,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>subGraphHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a4bd3bade93d0c9cc2639909fcd69df67</Anchor>
-    <Abstract>Add the attributes of the subgraph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>subGraphFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a5baab6aaadcf5140cfbb898db02b05b8</Anchor>
-    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compoundHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>ae5e8d3e2913028ae98733ddcf020e92e</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>compoundFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>ac646de3e1d3a4805bbfd4e57a4c2e1cb</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>portString</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a5a22fe85fa8282dad19c1b89d9321197</Anchor>
-    <Abstract>Get a representation for a port. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ports</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>ab79b8194b24dd32372e38dc81ba38699</Anchor>
-    <Abstract>String representation of a port list. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>inputList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a48a74ea4c04164cae3ea5629cfc36f17</Anchor>
-    <Abstract>Get the portlist for the inputs of a node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outputList</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a5a68597ca34591a3d97d7282bfe67872</Anchor>
-    <Abstract>Get the portlist for the outputs of a node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeIdentifier</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a852920d8b1f41945a0507ac7e54e9ab4</Anchor>
-    <Abstract>Identifier of the node. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>edgeStr</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a2f144e23d21de41e8dd391dfc6aac7b5</Anchor>
-    <Abstract>Convert a connection to a string. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeLabel</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a0ed7e0a8b80f6b70852adf99cd161b0e</Anchor>
-    <Abstract>Add the label of the node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>nodeLinks</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a4bf8bc67240f948ad26dc3ccff87cafc</Anchor>
-    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>node</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a2fa4fdf242aff219099986af386e1751</Anchor>
-    <Abstract>Write the information of a node to the buffer. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotHeader</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a7ce9fa8e72127cc7889c1a94afff20fa</Anchor>
-    <Abstract>Write general dot information. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotFooter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>aaa36857df44a7aaf9eeb95b5966c40a0</Anchor>
-    <Abstract>Close the dot graph. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>getDot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>ad2dcf03200a33c5368bc5ac31bf518e5</Anchor>
-    <Abstract>Create the dot string. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dotToFile</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>aa15087bf161d5c705a29e7ab84d9fdf9</Anchor>
-    <Abstract>Get the dot representation and write it to a file. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>dot</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>a849825adcd89144f89c2e7fa6a826052</Anchor>
-    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>log</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>IGR::dot</Scope>
-    </TokenIdentifier>
-    <Path>namespace_i_g_r_1_1dot.html</Path>
-    <Anchor>ab3de22a8cb6b97c5257cb23f3078fd74</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>getKey</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2169,6 +1944,512 @@
     <Path>namespacecore_1_1scheduler.html</Path>
     <Anchor>a5ea400a0ded1ee3859e42a606c92507d</Anchor>
     <DeclaredIn>scheduler.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>generateIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a0c3282ad21a1d327df8fc25f3318e6d3</Anchor>
+    <Abstract>Generate a unique idea for a chunk/key pair. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>generateInstIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a2a668ea61a6d8ae7533522161c7561dd</Anchor>
+    <Abstract>Generate a unique identifier for an instruction. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>generateTupleIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a19f01ceb0142f40fe3d58a26b8296d0a</Anchor>
+    <Abstract>Generate a unique identifier for a chunk, key pair. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processSink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>addc1cd94c068bab252b4233e606a5d86</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processOp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>ab87f45fcb6dec791455408f301d08286</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processConst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>aade0f9177bccad59210663904257bbf7</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processContChange</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a6d0b3beff192082b64a2add0fcc27e97</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processContRestore</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a2110a38408d9a6d2f6bf2456ca668ca9</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>abffeb350cfc7c32d544b269668c5d772</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processStop</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a9376767496b5fd633e82591f6ec6a8b5</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getAttributes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a140922136e7dbf0c1a183cbd72047ac6</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addInst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>af6dce01b9077e6cf6d5ed2671accc660</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destMapLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>af1621d5b7b40daf77fbe9c5097e93099</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destListLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a94463d17ebfcaf2bbf2d838c87801f93</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addContextChangeLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a1d7e6f7cfad193b8c70a1cf0ef2c337b</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addSwitchLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a4ee8bbdd1f21b74194fc214dd27568df</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>abdd0b96a89d7e641dace6bf44c5fb4d2</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a7a6533ae0aad7e9f943ceeafa8c9a3b3</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a5b17d1e10261ef6ea1d54d2265af51f4</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a49783850adb845f6b8900f6e35df6dce</Anchor>
+    <Abstract>Generate a dot string from the instruction memory. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a0d12268bc5d3ec9ede8c1e5250f05898</Anchor>
+    <Abstract>Write the dot string to a file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a585f47ab21c5d42d372903684c5e97bc</Anchor>
+    <Abstract>Convert the instruction memory to dot, save it and run dot on this file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>adb410604368bba3962625b814210b36a</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>currentChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a706bfbed1642361265db229d7288f754</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>attributes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a10b096462e81776da910c4490c0c5559</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a4bd3bade93d0c9cc2639909fcd69df67</Anchor>
+    <Abstract>Add the attributes of the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>subGraphFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5baab6aaadcf5140cfbb898db02b05b8</Anchor>
+    <Abstract>&amp;quot;close&amp;quot; the subgraph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ae5e8d3e2913028ae98733ddcf020e92e</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>compoundFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ac646de3e1d3a4805bbfd4e57a4c2e1cb</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>portString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5a22fe85fa8282dad19c1b89d9321197</Anchor>
+    <Abstract>Get a representation for a port. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ports</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ab79b8194b24dd32372e38dc81ba38699</Anchor>
+    <Abstract>String representation of a port list. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>inputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a48a74ea4c04164cae3ea5629cfc36f17</Anchor>
+    <Abstract>Get the portlist for the inputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>outputList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a5a68597ca34591a3d97d7282bfe67872</Anchor>
+    <Abstract>Get the portlist for the outputs of a node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a852920d8b1f41945a0507ac7e54e9ab4</Anchor>
+    <Abstract>Identifier of the node. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>edgeStr</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a2f144e23d21de41e8dd391dfc6aac7b5</Anchor>
+    <Abstract>Convert a connection to a string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLabel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a0ed7e0a8b80f6b70852adf99cd161b0e</Anchor>
+    <Abstract>Add the label of the node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>nodeLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a4bf8bc67240f948ad26dc3ccff87cafc</Anchor>
+    <Abstract>Add all the outgoing edges of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>node</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a2fa4fdf242aff219099986af386e1751</Anchor>
+    <Abstract>Write the information of a node to the buffer. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a7ce9fa8e72127cc7889c1a94afff20fa</Anchor>
+    <Abstract>Write general dot information. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>aaa36857df44a7aaf9eeb95b5966c40a0</Anchor>
+    <Abstract>Close the dot graph. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ad2dcf03200a33c5368bc5ac31bf518e5</Anchor>
+    <Abstract>Create the dot string. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotToFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>aa15087bf161d5c705a29e7ab84d9fdf9</Anchor>
+    <Abstract>Get the dot representation and write it to a file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>a849825adcd89144f89c2e7fa6a826052</Anchor>
+    <Abstract>Convert the IGR graph to dot, save it, and run dot on this file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>IGR::dot</Scope>
+    </TokenIdentifier>
+    <Path>namespace_i_g_r_1_1dot.html</Path>
+    <Anchor>ab3de22a8cb6b97c5257cb23f3078fd74</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4509,6 +4790,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>prepareInstruction</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a342056524a070a5f84e8f91e3c8c8d1a</Anchor>
+    <Abstract>Dynamically define the amount of inputs of a (instruction, context) pair. </Abstract>
+    <DeclaredIn>contextMatcher.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>checkKey</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -5462,6 +5755,102 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>core::instruction::ContextMap</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.ContextMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+    <Abstract>Sends every element of a compound data type to a sink, with a new context. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.ContextMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+    <Anchor>a8dbd9852e5ecbc88a00b580dea26ae4b</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.ContextMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+    <Anchor>a7d29a1e378eb1dda0f92c8255ee03ae3</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destSink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.ContextMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+    <Anchor>a3232261f9bb265e3811f75428199dd95</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>mergeOp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.ContextMap</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+    <Anchor>adf5acba4f0832424696d1b01490caa19</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>core::instruction::ContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -5793,18 +6182,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.memory.InstructionMemory</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-    <Anchor>aacf2e2bcf33a79017dbf5ebad1e10d2c</Anchor>
-    <Abstract>Print the contents of the instruction memory. </Abstract>
-    <DeclaredIn>memory.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -6097,14 +6474,14 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>tokenCreator</Name>
+      <Name>tokenizer</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core.runtime.Core</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1runtime_1_1_core.html</Path>
-    <Anchor>ae8c7893d3330ff05188d87aa7f792d2b</Anchor>
-    <Abstract>Token creator for this core. </Abstract>
+    <Anchor>accc678d5eda610455f35330725cfa9dc</Anchor>
+    <Abstract>Tokenizer for this core. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6485,22 +6862,22 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::tokenCreator</Name>
+      <Name>core::tokenizer</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
-      <Scope>core::tokenCreator</Scope>
+      <Scope>core::tokenizer</Scope>
     </TokenIdentifier>
-    <Path>namespacecore_1_1token_creator.html</Path>
+    <Path>namespacecore_1_1tokenizer.html</Path>
     <Abstract>DVM token creator. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::tokenCreator::TokenCreator</Name>
+      <Name>core::tokenizer::Tokenizer</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
     <Abstract>DVM Token creator. </Abstract>
   </Token>
   <Token>
@@ -6508,157 +6885,309 @@
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>abf795842433cb150ff2cd58f42d019ad</Anchor>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a4912421cf43235c083d14bdda4c03fce</Anchor>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>simpleToken</Name>
+      <Name>add</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a17cafd58974a9fdd79834817a012c602</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a872e4904119cbc98977bed20a3b6445f</Anchor>
+    <Abstract>Add a token to the runtime. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>simple</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Tokenizer</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a45d66fb9fe22b61249a72ae62053a603</Anchor>
     <Abstract>Create a simple token, with a known destination. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>switchToken</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>ada40e396958217f3e8c0ca6cc32dc74c</Anchor>
-    <Abstract>Send a token to the destination of a SwitchInstruction. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setSwitch</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a9d696d566aae0d189a41e9975a3d029e</Anchor>
-    <Abstract>Set the destination of tokens for a given (switch instruction, context) pair. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>createNewContext</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a1f735ff6e672f56b5481f5ff9a35a4c1</Anchor>
-    <Abstract>Create a new context for a token. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendToOldContext</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a6bc2d079feb518a714d05942fab09eb4</Anchor>
-    <Abstract>Change the context of a token. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>changeContext</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>ac53d82a6f9d74687751b24c733000ca4</Anchor>
-    <Abstract>Change the context of a token. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>restoreContext</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>ae9ee1f333586314900f7c802ca984cf6</Anchor>
-    <Abstract>Restore the old context of a token. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>stopToken</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a7ddc78b04b447b0102525e13786c2d70</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>adbde0e57be9541f0b167119d669bf95d</Anchor>
     <Abstract>Create a stop token. </Abstract>
-    <DeclaredIn>tokenCreator.py</DeclaredIn>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>core</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a62a05bacf3c7343a4dfdde2b1db95a57</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>switcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Tokenizer</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>contexts</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Tokenizer</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>aea12569c3d8c981b8d58d80a9a80eeee</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>contextMap</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>aedeba572df87c091e34f2e8234d03d16</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a8f5718ab8b902ba0b5afcfe5ab3ed425</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>restoreMap</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.Tokenizer</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>abd6fde0a66238ec75a2c929acd2eee66</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>a0391daefcf7fe9f47b041fe51fbb43c1</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>tokenStore</Name>
+      <Name>core::tokenizer::ContextManager</Name>
       <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Type>cl</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>ae3fbfdffdd71cc02d60174f6fd5caf8b</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Abstract>Context Manager. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>switchMap</Name>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a5579bad3a81f1495fd96024db50c483b</Anchor>
+    <Abstract>Stores the contexts that have already been created. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>send</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a64b3bcd58ecb590c8911ad67bf857e82</Anchor>
+    <Abstract>Send a single datum to a new context. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>change</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a97eca37f370fa581feeeb05a5f678eb4</Anchor>
+    <Abstract>Send a token to a different context. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>bind</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a5f68e95eac32d4fb1876271dc5f54bf0</Anchor>
+    <Abstract>Bind a new context to a given tag. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>restore</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a17483f5845cf737bb93785dba9646277</Anchor>
+    <Abstract>Restore a token. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tokenizer</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
-      <Scope>core.tokenCreator.TokenCreator</Scope>
+      <Scope>core.tokenizer.ContextManager</Scope>
     </TokenIdentifier>
-    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-    <Anchor>a63fd0db8d3197f93a18d9d3deddb2e18</Anchor>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a2248e96bc325804a7d568d97623cf259</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>contextMap</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a02362c7a1e03a14f58ead99bd517a3b0</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>restoreMap</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.ContextManager</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+    <Anchor>a395781005e76f8d0ebb63784ca94508d</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::tokenizer::Switcher</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Abstract>Token Switcher. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a96fbc5857375322e11e695d63106136b</Anchor>
+    <Abstract>Store the tokens that have not received a destination. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>send</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>ac1701de7810d75a919aefea8691ac7ec</Anchor>
+    <Abstract>Send a token to it&amp;#39;s destination. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>store</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a151ad602b45107dd1495f2f15e02ff4c</Anchor>
+    <Abstract>Store a token. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendStored</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a53bda16217586ccf23856b8a6a6a0187</Anchor>
+    <Abstract>Send all the stored tokens that were waiting for a switch to be set. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>add32cf9c74eeca72017fa4cb995ee2ba</Anchor>
+    <Abstract>Set the destination of tokens for a given (switch instruction, context) pair. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>switch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a28c971a62aa4a1fa4da9de9140f5fa69</Anchor>
+    <Abstract>Send a token to the destination of a SwitchInstruction. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tokenizer</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a2bcb5a34021207b3a38b2d1f4d28beab</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>storage</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a3fcc851b1ed8c8f5045c89efbe7706ad</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Switcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+    <Anchor>a621b97773f8da957fe462447715dc329</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6691,6 +7220,297 @@
     <Path>namespacedisc.html</Path>
     <Anchor>a23955ae2256bf6894a99e83b72b4c55d</Anchor>
     <DeclaredIn>disc.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Abstract>dot generator </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>generateIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a0c3282ad21a1d327df8fc25f3318e6d3</Anchor>
+    <Abstract>Generate a unique idea for a chunk/key pair. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>generateInstIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a2a668ea61a6d8ae7533522161c7561dd</Anchor>
+    <Abstract>Generate a unique identifier for an instruction. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>generateTupleIdentifier</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a19f01ceb0142f40fe3d58a26b8296d0a</Anchor>
+    <Abstract>Generate a unique identifier for a chunk, key pair. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processSink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>addc1cd94c068bab252b4233e606a5d86</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processOp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>ab87f45fcb6dec791455408f301d08286</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processConst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>aade0f9177bccad59210663904257bbf7</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processContChange</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a6d0b3beff192082b64a2add0fcc27e97</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processContRestore</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a2110a38408d9a6d2f6bf2456ca668ca9</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processSwitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>abffeb350cfc7c32d544b269668c5d772</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processStop</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a9376767496b5fd633e82591f6ec6a8b5</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getAttributes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a140922136e7dbf0c1a183cbd72047ac6</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addInst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>af6dce01b9077e6cf6d5ed2671accc660</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destMapLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>af1621d5b7b40daf77fbe9c5097e93099</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destListLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a94463d17ebfcaf2bbf2d838c87801f93</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addContextChangeLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a1d7e6f7cfad193b8c70a1cf0ef2c337b</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addSwitchLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a4ee8bbdd1f21b74194fc214dd27568df</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>abdd0b96a89d7e641dace6bf44c5fb4d2</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotHeader</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a7a6533ae0aad7e9f943ceeafa8c9a3b3</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFooter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a5b17d1e10261ef6ea1d54d2265af51f4</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotString</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a49783850adb845f6b8900f6e35df6dce</Anchor>
+    <Abstract>Generate a dot string from the instruction memory. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dotFile</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a0d12268bc5d3ec9ede8c1e5250f05898</Anchor>
+    <Abstract>Write the dot string to a file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dot</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a585f47ab21c5d42d372903684c5e97bc</Anchor>
+    <Abstract>Convert the instruction memory to dot, save it and run dot on this file. </Abstract>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>adb410604368bba3962625b814210b36a</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>currentChunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a706bfbed1642361265db229d7288f754</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>attributes</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a10b096462e81776da910c4490c0c5559</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>

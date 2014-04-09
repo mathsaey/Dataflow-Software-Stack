@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['changecontext',['changeContext',['../classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4',1,'core::tokenCreator::TokenCreator']]],
+  ['change',['change',['../classcore_1_1tokenizer_1_1_context_manager.html#a97eca37f370fa581feeeb05a5f678eb4',1,'core::tokenizer::ContextManager']]],
   ['checkcall',['checkCall',['../namespaceback_end_1_1_d_v_m_1_1literals.html#abaa230ff06b7b7193890216d48dcec18',1,'backEnd::DVM::literals']]],
   ['checkgraph',['checkGraph',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a98756589a380f220c22befed86a29acc',1,'backEnd::DVM::literals']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
@@ -29,7 +29,6 @@ var searchData=
   ['createcontextchange',['createContextChange',['../namespaceread.html#a781d4f0b3d1d7c56d5fd02bb3ecb47c3',1,'read']]],
   ['createcontextrestore',['createContextRestore',['../namespaceread.html#a492fa7ea038cfe45fa32a71e85d25c27',1,'read']]],
   ['creategeneralsubgraph',['createGeneralSubGraph',['../namespace_i_g_r.html#aa5e01d9c08014a16c7515ccda09fce12',1,'IGR']]],
-  ['createnewcontext',['createNewContext',['../classcore_1_1token_creator_1_1_token_creator.html#a1f735ff6e672f56b5481f5ff9a35a4c1',1,'core::tokenCreator::TokenCreator']]],
   ['createnode',['createNode',['../namespace_i_g_r.html#a27668aa4e23763aa37d853a2e13b4279',1,'IGR']]],
   ['createoperation',['createOperation',['../namespaceread.html#a54792d77f1b24a49d36ef7f44721a581',1,'read']]],
   ['createoperationnode',['createOperationNode',['../namespace_i_g_r.html#aa19a1174fd67a1b35805b32137b3d8be',1,'IGR']]],

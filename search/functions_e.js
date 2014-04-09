@@ -23,8 +23,15 @@ var searchData=
   ['popscope',['popScope',['../namespacefront_end_1_1_i_f1_1_1environment.html#aac5a1b7869d743eb4847013b4c69ec4d',1,'frontEnd::IF1::environment']]],
   ['ports',['ports',['../namespace_i_g_r_1_1dot.html#ab79b8194b24dd32372e38dc81ba38699',1,'IGR::dot']]],
   ['portstring',['portString',['../namespace_i_g_r_1_1dot.html#a5a22fe85fa8282dad19c1b89d9321197',1,'IGR::dot']]],
+  ['prepareinstruction',['prepareInstruction',['../classcore_1_1context_matcher_1_1_context_matcher.html#a342056524a070a5f84e8f91e3c8c8d1a',1,'core::contextMatcher::ContextMatcher']]],
   ['process',['process',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#aea9d3ed1662329987b9a886c8e2b5466',1,'core::dispatcher::TokenDispatcher']]],
+  ['processconst',['processConst',['../namespacedot.html#aade0f9177bccad59210663904257bbf7',1,'dot']]],
+  ['processcontchange',['processContChange',['../namespacedot.html#a6d0b3beff192082b64a2add0fcc27e97',1,'dot']]],
+  ['processcontrestore',['processContRestore',['../namespacedot.html#a2110a38408d9a6d2f6bf2456ca668ca9',1,'dot']]],
+  ['processop',['processOp',['../namespacedot.html#ab87f45fcb6dec791455408f301d08286',1,'dot']]],
+  ['processsink',['processSink',['../namespacedot.html#addc1cd94c068bab252b4233e606a5d86',1,'dot']]],
   ['processstandard',['processStandard',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a2f14155d26e17d4ab14dbf1dbf821623',1,'core::dispatcher::TokenDispatcher']]],
-  ['processstop',['processStop',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a6e46961e9f9745e13947edf1852cf547',1,'core::dispatcher::TokenDispatcher']]],
+  ['processstop',['processStop',['../classcore_1_1dispatcher_1_1_token_dispatcher.html#a6e46961e9f9745e13947edf1852cf547',1,'core.dispatcher.TokenDispatcher.processStop()'],['../namespacedot.html#a9376767496b5fd633e82591f6ec6a8b5',1,'dot.processStop()']]],
+  ['processswitch',['processSwitch',['../namespacedot.html#abffeb350cfc7c32d544b269668c5d772',1,'dot']]],
   ['propagatelit',['propagateLit',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a1a5a92a73deeb22cac93310f9756a568',1,'backEnd::DVM::literals']]]
 ];

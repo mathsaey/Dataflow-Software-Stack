@@ -9,5 +9,5 @@ var searchData=
   ['runtime',['runtime',['../namespacecore_1_1runtime.html',1,'core']]],
   ['scheduler',['scheduler',['../namespacecore_1_1scheduler.html',1,'core']]],
   ['token',['token',['../namespacecore_1_1token.html',1,'core']]],
-  ['tokencreator',['tokenCreator',['../namespacecore_1_1token_creator.html',1,'core']]]
+  ['tokenizer',['tokenizer',['../namespacecore_1_1tokenizer.html',1,'core']]]
 ];

@@ -276,14 +276,18 @@
               <Path>namespacecore_1_1token.html</Path>
              </Node>
              <Node>
-              <Name>tokenCreator</Name>
-              <Path>namespacecore_1_1token_creator.html</Path>
+              <Name>tokenizer</Name>
+              <Path>namespacecore_1_1tokenizer.html</Path>
              </Node>
             </Subnodes>
            </Node>
            <Node>
             <Name>disc</Name>
             <Path>namespacedisc.html</Path>
+           </Node>
+           <Node>
+            <Name>dot</Name>
+            <Path>namespacedot.html</Path>
            </Node>
            <Node>
             <Name>dvm</Name>
@@ -466,6 +470,72 @@
            <Node>
             <Name>Functions</Name>
             <Path>namespacemembers_func.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>a</Name>
+              <Path>namespacemembers_func.html</Path>
+             </Node>
+             <Node>
+              <Name>b</Name>
+              <Path>namespacemembers_func_b.html</Path>
+             </Node>
+             <Node>
+              <Name>c</Name>
+              <Path>namespacemembers_func_c.html</Path>
+             </Node>
+             <Node>
+              <Name>d</Name>
+              <Path>namespacemembers_func_d.html</Path>
+             </Node>
+             <Node>
+              <Name>e</Name>
+              <Path>namespacemembers_func_e.html</Path>
+             </Node>
+             <Node>
+              <Name>f</Name>
+              <Path>namespacemembers_func_f.html</Path>
+             </Node>
+             <Node>
+              <Name>g</Name>
+              <Path>namespacemembers_func_g.html</Path>
+             </Node>
+             <Node>
+              <Name>h</Name>
+              <Path>namespacemembers_func_h.html</Path>
+             </Node>
+             <Node>
+              <Name>i</Name>
+              <Path>namespacemembers_func_i.html</Path>
+             </Node>
+             <Node>
+              <Name>m</Name>
+              <Path>namespacemembers_func_m.html</Path>
+             </Node>
+             <Node>
+              <Name>n</Name>
+              <Path>namespacemembers_func_n.html</Path>
+             </Node>
+             <Node>
+              <Name>o</Name>
+              <Path>namespacemembers_func_o.html</Path>
+             </Node>
+             <Node>
+              <Name>p</Name>
+              <Path>namespacemembers_func_p.html</Path>
+             </Node>
+             <Node>
+              <Name>r</Name>
+              <Path>namespacemembers_func_r.html</Path>
+             </Node>
+             <Node>
+              <Name>s</Name>
+              <Path>namespacemembers_func_s.html</Path>
+             </Node>
+             <Node>
+              <Name>t</Name>
+              <Path>namespacemembers_func_t.html</Path>
+             </Node>
+            </Subnodes>
            </Node>
            <Node>
             <Name>Variables</Name>
@@ -750,6 +820,11 @@
                   <Name>__init__</Name>
                   <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
                   <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>prepareInstruction</Name>
+                  <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+                  <Anchor>a342056524a070a5f84e8f91e3c8c8d1a</Anchor>
                  </Node>
                  <Node>
                   <Name>checkKey</Name>
@@ -1196,6 +1271,52 @@
                 </Subnodes>
                </Node>
                <Node>
+                <Name>ContextMap</Name>
+                <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>a8dbd9852e5ecbc88a00b580dea26ae4b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>execute</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>a7d29a1e378eb1dda0f92c8255ee03ae3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>setKey</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__str__</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destSink</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>a3232261f9bb265e3811f75428199dd95</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>mergeOp</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>adf5acba4f0832424696d1b01490caa19</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>key</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
                 <Name>ContextRestore</Name>
                 <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
                 <Subnodes>
@@ -1319,11 +1440,6 @@
                   <Anchor>a8f22fa3395b472a1156813e40234b4a3</Anchor>
                  </Node>
                  <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                  <Anchor>aacf2e2bcf33a79017dbf5ebad1e10d2c</Anchor>
-                 </Node>
-                 <Node>
                   <Name>add</Name>
                   <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
                   <Anchor>a5b9011b58141e7c5820fbd1626b5cfc6</Anchor>
@@ -1416,9 +1532,9 @@
                   <Anchor>af063d02573dfb186742531c844fd8f95</Anchor>
                  </Node>
                  <Node>
-                  <Name>tokenCreator</Name>
+                  <Name>tokenizer</Name>
                   <Path>classcore_1_1runtime_1_1_core.html</Path>
-                  <Anchor>ae8c7893d3330ff05188d87aa7f792d2b</Anchor>
+                  <Anchor>accc678d5eda610455f35330725cfa9dc</Anchor>
                  </Node>
                  <Node>
                   <Name>dispatcher</Name>
@@ -1608,82 +1724,154 @@
               </Subnodes>
              </Node>
              <Node>
-              <Name>tokenCreator</Name>
-              <Path>namespacecore_1_1token_creator.html</Path>
+              <Name>tokenizer</Name>
+              <Path>namespacecore_1_1tokenizer.html</Path>
               <Subnodes>
                <Node>
-                <Name>TokenCreator</Name>
-                <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+                <Name>Tokenizer</Name>
+                <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
                 <Subnodes>
                  <Node>
                   <Name>__init__</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>abf795842433cb150ff2cd58f42d019ad</Anchor>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a4912421cf43235c083d14bdda4c03fce</Anchor>
                  </Node>
                  <Node>
-                  <Name>simpleToken</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a17cafd58974a9fdd79834817a012c602</Anchor>
+                  <Name>add</Name>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a872e4904119cbc98977bed20a3b6445f</Anchor>
                  </Node>
                  <Node>
-                  <Name>switchToken</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>ada40e396958217f3e8c0ca6cc32dc74c</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>setSwitch</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a9d696d566aae0d189a41e9975a3d029e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>createNewContext</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a1f735ff6e672f56b5481f5ff9a35a4c1</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendToOldContext</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a6bc2d079feb518a714d05942fab09eb4</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>changeContext</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>ac53d82a6f9d74687751b24c733000ca4</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>restoreContext</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>ae9ee1f333586314900f7c802ca984cf6</Anchor>
+                  <Name>simple</Name>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a45d66fb9fe22b61249a72ae62053a603</Anchor>
                  </Node>
                  <Node>
                   <Name>stopToken</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a7ddc78b04b447b0102525e13786c2d70</Anchor>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>adbde0e57be9541f0b167119d669bf95d</Anchor>
                  </Node>
                  <Node>
                   <Name>core</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a62a05bacf3c7343a4dfdde2b1db95a57</Anchor>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>switcher</Name>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>contexts</Name>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>aea12569c3d8c981b8d58d80a9a80eeee</Anchor>
                  </Node>
                  <Node>
                   <Name>contextMap</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>aedeba572df87c091e34f2e8234d03d16</Anchor>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a8f5718ab8b902ba0b5afcfe5ab3ed425</Anchor>
                  </Node>
                  <Node>
                   <Name>restoreMap</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>abd6fde0a66238ec75a2c929acd2eee66</Anchor>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>a0391daefcf7fe9f47b041fe51fbb43c1</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>ContextManager</Name>
+                <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a5579bad3a81f1495fd96024db50c483b</Anchor>
                  </Node>
                  <Node>
-                  <Name>tokenStore</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>ae3fbfdffdd71cc02d60174f6fd5caf8b</Anchor>
+                  <Name>send</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a64b3bcd58ecb590c8911ad67bf857e82</Anchor>
                  </Node>
                  <Node>
-                  <Name>switchMap</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                  <Anchor>a63fd0db8d3197f93a18d9d3deddb2e18</Anchor>
+                  <Name>change</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a97eca37f370fa581feeeb05a5f678eb4</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>bind</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a5f68e95eac32d4fb1876271dc5f54bf0</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>restore</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a17483f5845cf737bb93785dba9646277</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>tokenizer</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a2248e96bc325804a7d568d97623cf259</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>contextMap</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a02362c7a1e03a14f58ead99bd517a3b0</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>restoreMap</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Anchor>a395781005e76f8d0ebb63784ca94508d</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>Switcher</Name>
+                <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a96fbc5857375322e11e695d63106136b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>send</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>ac1701de7810d75a919aefea8691ac7ec</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>store</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a151ad602b45107dd1495f2f15e02ff4c</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sendStored</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a53bda16217586ccf23856b8a6a6a0187</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>add32cf9c74eeca72017fa4cb995ee2ba</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>switch</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a28c971a62aa4a1fa4da9de9140f5fa69</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>tokenizer</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a2bcb5a34021207b3a38b2d1f4d28beab</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>storage</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a3fcc851b1ed8c8f5045c89efbe7706ad</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Anchor>a621b97773f8da957fe462447715dc329</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1694,6 +1882,10 @@
            <Node>
             <Name>disc</Name>
             <Path>namespacedisc.html</Path>
+           </Node>
+           <Node>
+            <Name>dot</Name>
+            <Path>namespacedot.html</Path>
            </Node>
            <Node>
             <Name>dvm</Name>
@@ -3749,6 +3941,10 @@
                 <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                </Node>
                <Node>
+                <Name>core.instruction.ContextMap</Name>
+                <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+               </Node>
+               <Node>
                 <Name>core.instruction.ContextRestore</Name>
                 <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
                </Node>
@@ -3799,18 +3995,20 @@
              <Node>
               <Name>core.token.AbstractTag</Name>
               <Path>classcore_1_1token_1_1_abstract_tag.html</Path>
-             </Node>
-             <Node>
-              <Name>core.token.StopTag</Name>
-              <Path>classcore_1_1token_1_1_stop_tag.html</Path>
-             </Node>
-             <Node>
-              <Name>core.token.Tag</Name>
-              <Path>classcore_1_1token_1_1_tag.html</Path>
               <Subnodes>
                <Node>
-                <Name>core.token.ExternalTag</Name>
-                <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                <Name>core.token.StopTag</Name>
+                <Path>classcore_1_1token_1_1_stop_tag.html</Path>
+               </Node>
+               <Node>
+                <Name>core.token.Tag</Name>
+                <Path>classcore_1_1token_1_1_tag.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>core.token.ExternalTag</Name>
+                  <Path>classcore_1_1token_1_1_external_tag.html</Path>
+                 </Node>
+                </Subnodes>
                </Node>
               </Subnodes>
              </Node>
@@ -3819,8 +4017,16 @@
               <Path>classcore_1_1token_1_1_token.html</Path>
              </Node>
              <Node>
-              <Name>core.tokenCreator.TokenCreator</Name>
-              <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+              <Name>core.tokenizer.ContextManager</Name>
+              <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+             </Node>
+             <Node>
+              <Name>core.tokenizer.Switcher</Name>
+              <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+             </Node>
+             <Node>
+              <Name>core.tokenizer.Tokenizer</Name>
+              <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
              </Node>
              <Node>
               <Name>frontEnd.IF1.environment.CompoundScope</Name>
@@ -5350,101 +5556,101 @@
                </Node>
                <Node>
                 <Name>dot.py</Name>
-                <Path>dot_8py.html</Path>
+                <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                 <Subnodes>
                  <Node>
                   <Name>subGraphHeader</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a4bd3bade93d0c9cc2639909fcd69df67</Anchor>
                  </Node>
                  <Node>
                   <Name>subGraphFooter</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a5baab6aaadcf5140cfbb898db02b05b8</Anchor>
                  </Node>
                  <Node>
                   <Name>compoundHeader</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>ae5e8d3e2913028ae98733ddcf020e92e</Anchor>
                  </Node>
                  <Node>
                   <Name>compoundFooter</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>ac646de3e1d3a4805bbfd4e57a4c2e1cb</Anchor>
                  </Node>
                  <Node>
                   <Name>portString</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a5a22fe85fa8282dad19c1b89d9321197</Anchor>
                  </Node>
                  <Node>
                   <Name>ports</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>ab79b8194b24dd32372e38dc81ba38699</Anchor>
                  </Node>
                  <Node>
                   <Name>inputList</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a48a74ea4c04164cae3ea5629cfc36f17</Anchor>
                  </Node>
                  <Node>
                   <Name>outputList</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a5a68597ca34591a3d97d7282bfe67872</Anchor>
                  </Node>
                  <Node>
                   <Name>nodeIdentifier</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a852920d8b1f41945a0507ac7e54e9ab4</Anchor>
                  </Node>
                  <Node>
                   <Name>edgeStr</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a2f144e23d21de41e8dd391dfc6aac7b5</Anchor>
                  </Node>
                  <Node>
                   <Name>nodeLabel</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a0ed7e0a8b80f6b70852adf99cd161b0e</Anchor>
                  </Node>
                  <Node>
                   <Name>nodeLinks</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a4bf8bc67240f948ad26dc3ccff87cafc</Anchor>
                  </Node>
                  <Node>
                   <Name>node</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a2fa4fdf242aff219099986af386e1751</Anchor>
                  </Node>
                  <Node>
                   <Name>dotHeader</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a7ce9fa8e72127cc7889c1a94afff20fa</Anchor>
                  </Node>
                  <Node>
                   <Name>dotFooter</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>aaa36857df44a7aaf9eeb95b5966c40a0</Anchor>
                  </Node>
                  <Node>
                   <Name>getDot</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>ad2dcf03200a33c5368bc5ac31bf518e5</Anchor>
                  </Node>
                  <Node>
                   <Name>dotToFile</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>aa15087bf161d5c705a29e7ab84d9fdf9</Anchor>
                  </Node>
                  <Node>
                   <Name>dot</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>a849825adcd89144f89c2e7fa6a826052</Anchor>
                  </Node>
                  <Node>
                   <Name>log</Name>
-                  <Path>dot_8py.html</Path>
+                  <Path>_d_i_sc_2_i_g_r_2dot_8py.html</Path>
                   <Anchor>ab3de22a8cb6b97c5257cb23f3078fd74</Anchor>
                  </Node>
                 </Subnodes>
@@ -7385,6 +7591,11 @@
                     <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
                    </Node>
                    <Node>
+                    <Name>prepareInstruction</Name>
+                    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+                    <Anchor>a342056524a070a5f84e8f91e3c8c8d1a</Anchor>
+                   </Node>
+                   <Node>
                     <Name>checkKey</Name>
                     <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
                     <Anchor>a9e6d1dde230adb9e29d0c0fd3d3ad250</Anchor>
@@ -7839,6 +8050,52 @@
                   </Subnodes>
                  </Node>
                  <Node>
+                  <Name>ContextMap</Name>
+                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>a8dbd9852e5ecbc88a00b580dea26ae4b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>execute</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>a7d29a1e378eb1dda0f92c8255ee03ae3</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setKey</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>__str__</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destSink</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>a3232261f9bb265e3811f75428199dd95</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>mergeOp</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>adf5acba4f0832424696d1b01490caa19</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>key</Name>
+                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
                   <Name>ContextRestore</Name>
                   <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
                   <Subnodes>
@@ -7967,11 +8224,6 @@
                     <Anchor>a8f22fa3395b472a1156813e40234b4a3</Anchor>
                    </Node>
                    <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
-                    <Anchor>aacf2e2bcf33a79017dbf5ebad1e10d2c</Anchor>
-                   </Node>
-                   <Node>
                     <Name>add</Name>
                     <Path>classcore_1_1memory_1_1_instruction_memory.html</Path>
                     <Anchor>a5b9011b58141e7c5820fbd1626b5cfc6</Anchor>
@@ -8094,9 +8346,9 @@
                     <Anchor>af063d02573dfb186742531c844fd8f95</Anchor>
                    </Node>
                    <Node>
-                    <Name>tokenCreator</Name>
+                    <Name>tokenizer</Name>
                     <Path>classcore_1_1runtime_1_1_core.html</Path>
-                    <Anchor>ae8c7893d3330ff05188d87aa7f792d2b</Anchor>
+                    <Anchor>accc678d5eda610455f35330725cfa9dc</Anchor>
                    </Node>
                    <Node>
                     <Name>dispatcher</Name>
@@ -8331,86 +8583,289 @@
                 </Subnodes>
                </Node>
                <Node>
-                <Name>tokenCreator.py</Name>
-                <Path>token_creator_8py.html</Path>
+                <Name>tokenizer.py</Name>
+                <Path>tokenizer_8py.html</Path>
                 <Subnodes>
                  <Node>
-                  <Name>TokenCreator</Name>
-                  <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
+                  <Name>Tokenizer</Name>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
                   <Subnodes>
                    <Node>
                     <Name>__init__</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>abf795842433cb150ff2cd58f42d019ad</Anchor>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a4912421cf43235c083d14bdda4c03fce</Anchor>
                    </Node>
                    <Node>
-                    <Name>simpleToken</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a17cafd58974a9fdd79834817a012c602</Anchor>
+                    <Name>add</Name>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a872e4904119cbc98977bed20a3b6445f</Anchor>
                    </Node>
                    <Node>
-                    <Name>switchToken</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>ada40e396958217f3e8c0ca6cc32dc74c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setSwitch</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a9d696d566aae0d189a41e9975a3d029e</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>createNewContext</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a1f735ff6e672f56b5481f5ff9a35a4c1</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendToOldContext</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a6bc2d079feb518a714d05942fab09eb4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>changeContext</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>ac53d82a6f9d74687751b24c733000ca4</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>restoreContext</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>ae9ee1f333586314900f7c802ca984cf6</Anchor>
+                    <Name>simple</Name>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a45d66fb9fe22b61249a72ae62053a603</Anchor>
                    </Node>
                    <Node>
                     <Name>stopToken</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a7ddc78b04b447b0102525e13786c2d70</Anchor>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>adbde0e57be9541f0b167119d669bf95d</Anchor>
                    </Node>
                    <Node>
                     <Name>core</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a62a05bacf3c7343a4dfdde2b1db95a57</Anchor>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>switcher</Name>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>contexts</Name>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>aea12569c3d8c981b8d58d80a9a80eeee</Anchor>
                    </Node>
                    <Node>
                     <Name>contextMap</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>aedeba572df87c091e34f2e8234d03d16</Anchor>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a8f5718ab8b902ba0b5afcfe5ab3ed425</Anchor>
                    </Node>
                    <Node>
                     <Name>restoreMap</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>abd6fde0a66238ec75a2c929acd2eee66</Anchor>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>a0391daefcf7fe9f47b041fe51fbb43c1</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>ContextManager</Name>
+                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a5579bad3a81f1495fd96024db50c483b</Anchor>
                    </Node>
                    <Node>
-                    <Name>tokenStore</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>ae3fbfdffdd71cc02d60174f6fd5caf8b</Anchor>
+                    <Name>send</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a64b3bcd58ecb590c8911ad67bf857e82</Anchor>
                    </Node>
                    <Node>
-                    <Name>switchMap</Name>
-                    <Path>classcore_1_1token_creator_1_1_token_creator.html</Path>
-                    <Anchor>a63fd0db8d3197f93a18d9d3deddb2e18</Anchor>
+                    <Name>change</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a97eca37f370fa581feeeb05a5f678eb4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>bind</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a5f68e95eac32d4fb1876271dc5f54bf0</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>restore</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a17483f5845cf737bb93785dba9646277</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>tokenizer</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a2248e96bc325804a7d568d97623cf259</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>contextMap</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a02362c7a1e03a14f58ead99bd517a3b0</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>restoreMap</Name>
+                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+                    <Anchor>a395781005e76f8d0ebb63784ca94508d</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>Switcher</Name>
+                  <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a96fbc5857375322e11e695d63106136b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>send</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>ac1701de7810d75a919aefea8691ac7ec</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>store</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a151ad602b45107dd1495f2f15e02ff4c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>sendStored</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a53bda16217586ccf23856b8a6a6a0187</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>set</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>add32cf9c74eeca72017fa4cb995ee2ba</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>switch</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a28c971a62aa4a1fa4da9de9140f5fa69</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>tokenizer</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a2bcb5a34021207b3a38b2d1f4d28beab</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>storage</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a3fcc851b1ed8c8f5045c89efbe7706ad</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
+                    <Anchor>a621b97773f8da957fe462447715dc329</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
                 </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>dot.py</Name>
+              <Path>_d_v_m_2dot_8py.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>generateIdentifier</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a0c3282ad21a1d327df8fc25f3318e6d3</Anchor>
+               </Node>
+               <Node>
+                <Name>generateInstIdentifier</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a2a668ea61a6d8ae7533522161c7561dd</Anchor>
+               </Node>
+               <Node>
+                <Name>generateTupleIdentifier</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a19f01ceb0142f40fe3d58a26b8296d0a</Anchor>
+               </Node>
+               <Node>
+                <Name>processSink</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>addc1cd94c068bab252b4233e606a5d86</Anchor>
+               </Node>
+               <Node>
+                <Name>processOp</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>ab87f45fcb6dec791455408f301d08286</Anchor>
+               </Node>
+               <Node>
+                <Name>processConst</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>aade0f9177bccad59210663904257bbf7</Anchor>
+               </Node>
+               <Node>
+                <Name>processContChange</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a6d0b3beff192082b64a2add0fcc27e97</Anchor>
+               </Node>
+               <Node>
+                <Name>processContRestore</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a2110a38408d9a6d2f6bf2456ca668ca9</Anchor>
+               </Node>
+               <Node>
+                <Name>processSwitch</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>abffeb350cfc7c32d544b269668c5d772</Anchor>
+               </Node>
+               <Node>
+                <Name>processStop</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a9376767496b5fd633e82591f6ec6a8b5</Anchor>
+               </Node>
+               <Node>
+                <Name>getAttributes</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a140922136e7dbf0c1a183cbd72047ac6</Anchor>
+               </Node>
+               <Node>
+                <Name>addInst</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>af6dce01b9077e6cf6d5ed2671accc660</Anchor>
+               </Node>
+               <Node>
+                <Name>destMapLinks</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>af1621d5b7b40daf77fbe9c5097e93099</Anchor>
+               </Node>
+               <Node>
+                <Name>destListLinks</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a94463d17ebfcaf2bbf2d838c87801f93</Anchor>
+               </Node>
+               <Node>
+                <Name>addContextChangeLinks</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a1d7e6f7cfad193b8c70a1cf0ef2c337b</Anchor>
+               </Node>
+               <Node>
+                <Name>addSwitchLinks</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a4ee8bbdd1f21b74194fc214dd27568df</Anchor>
+               </Node>
+               <Node>
+                <Name>addLinks</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>abdd0b96a89d7e641dace6bf44c5fb4d2</Anchor>
+               </Node>
+               <Node>
+                <Name>dotHeader</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a7a6533ae0aad7e9f943ceeafa8c9a3b3</Anchor>
+               </Node>
+               <Node>
+                <Name>dotFooter</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a5b17d1e10261ef6ea1d54d2265af51f4</Anchor>
+               </Node>
+               <Node>
+                <Name>dotString</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a49783850adb845f6b8900f6e35df6dce</Anchor>
+               </Node>
+               <Node>
+                <Name>dotFile</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a0d12268bc5d3ec9ede8c1e5250f05898</Anchor>
+               </Node>
+               <Node>
+                <Name>dot</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a585f47ab21c5d42d372903684c5e97bc</Anchor>
+               </Node>
+               <Node>
+                <Name>log</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>adb410604368bba3962625b814210b36a</Anchor>
+               </Node>
+               <Node>
+                <Name>currentChunk</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a706bfbed1642361265db229d7288f754</Anchor>
+               </Node>
+               <Node>
+                <Name>attributes</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a10b096462e81776da910c4490c0c5559</Anchor>
                </Node>
               </Subnodes>
              </Node>

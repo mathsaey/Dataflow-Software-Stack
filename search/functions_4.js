@@ -1,9 +1,13 @@
 var searchData=
 [
   ['deletenode',['deleteNode',['../namespaceback_end_1_1_d_v_m_1_1literals.html#aeccc2a181d4ca275701e9ece1fd160e4',1,'backEnd::DVM::literals']]],
-  ['dot',['dot',['../namespace_i_g_r_1_1dot.html#a849825adcd89144f89c2e7fa6a826052',1,'IGR::dot']]],
-  ['dotfooter',['dotFooter',['../namespace_i_g_r_1_1dot.html#aaa36857df44a7aaf9eeb95b5966c40a0',1,'IGR::dot']]],
-  ['dotheader',['dotHeader',['../namespace_i_g_r_1_1dot.html#a7ce9fa8e72127cc7889c1a94afff20fa',1,'IGR::dot']]],
+  ['destlistlinks',['destListLinks',['../namespacedot.html#a94463d17ebfcaf2bbf2d838c87801f93',1,'dot']]],
+  ['destmaplinks',['destMapLinks',['../namespacedot.html#af1621d5b7b40daf77fbe9c5097e93099',1,'dot']]],
+  ['dot',['dot',['../namespacedot.html#a585f47ab21c5d42d372903684c5e97bc',1,'dot.dot()'],['../namespace_i_g_r_1_1dot.html#a849825adcd89144f89c2e7fa6a826052',1,'IGR.dot.dot()']]],
+  ['dotfile',['dotFile',['../namespacedot.html#a0d12268bc5d3ec9ede8c1e5250f05898',1,'dot']]],
+  ['dotfooter',['dotFooter',['../namespacedot.html#a5b17d1e10261ef6ea1d54d2265af51f4',1,'dot.dotFooter()'],['../namespace_i_g_r_1_1dot.html#aaa36857df44a7aaf9eeb95b5966c40a0',1,'IGR.dot.dotFooter()']]],
+  ['dotheader',['dotHeader',['../namespacedot.html#a7a6533ae0aad7e9f943ceeafa8c9a3b3',1,'dot.dotHeader()'],['../namespace_i_g_r_1_1dot.html#a7ce9fa8e72127cc7889c1a94afff20fa',1,'IGR.dot.dotHeader()']]],
+  ['dotstring',['dotString',['../namespacedot.html#a49783850adb845f6b8900f6e35df6dce',1,'dot']]],
   ['dottofile',['dotToFile',['../namespace_i_g_r_1_1dot.html#aa15087bf161d5c705a29e7ab84d9fdf9',1,'IGR::dot']]],
   ['dvm_5fadd',['dvm_add',['../namespacenatives.html#a02049f1feebcffefe7962b4fb083d6c7',1,'natives']]],
   ['dvm_5fand',['dvm_and',['../namespacenatives.html#ad9af42003b8677c6e6ecfe3545dcfabc',1,'natives']]],

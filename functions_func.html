@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">deb6280</span>
+   &#160;<span id="projectnumber">43b51e2</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -130,6 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classcore_1_1dispatcher_1_1_token_dispatcher.html#aa30c96ec3aa980af5ff5c42c22ef61d7">core.dispatcher.TokenDispatcher</a>
 , <a class="el" href="classcore_1_1instruction_1_1_constant.html#a0ce24688ac4f93f4ff74ffccb9aedcd9">core.instruction.Constant</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_change.html#a23525affdb05a164623a520998048ab4">core.instruction.ContextChange</a>
+, <a class="el" href="classcore_1_1instruction_1_1_context_map.html#a8dbd9852e5ecbc88a00b580dea26ae4b">core.instruction.ContextMap</a>
 , <a class="el" href="classcore_1_1instruction_1_1_destination_list.html#a4f7b2b139e41b1bf9e49e25ee29b9eb2">core.instruction.DestinationList</a>
 , <a class="el" href="classcore_1_1instruction_1_1_destination_map.html#a01d8b5c95b87e1c2ee4472451195102a">core.instruction.DestinationMap</a>
 , <a class="el" href="classcore_1_1instruction_1_1_instruction.html#a0806ce8e49c3f3b601445cda080093d1">core.instruction.Instruction</a>
@@ -142,7 +143,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classcore_1_1token_1_1_external_tag.html#aa50ae3a351c92bf42a6951088e0ca5a6">core.token.ExternalTag</a>
 , <a class="el" href="classcore_1_1token_1_1_tag.html#aa5769c1f47cfc3ae74a3553247ab9d99">core.token.Tag</a>
 , <a class="el" href="classcore_1_1token_1_1_token.html#a266d13c3ecfbafc4dde0a46d3a8936e7">core.token.Token</a>
-, <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#abf795842433cb150ff2cd58f42d019ad">core.tokenCreator.TokenCreator</a>
+, <a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a5579bad3a81f1495fd96024db50c483b">core.tokenizer.ContextManager</a>
+, <a class="el" href="classcore_1_1tokenizer_1_1_switcher.html#a96fbc5857375322e11e695d63106136b">core.tokenizer.Switcher</a>
+, <a class="el" href="classcore_1_1tokenizer_1_1_tokenizer.html#a4912421cf43235c083d14bdda4c03fce">core.tokenizer.Tokenizer</a>
 , <a class="el" href="classfront_end_1_1_i_f1_1_1environment_1_1_compound_scope.html#a6e2b86123ff42d3521dcca1261f5fda8">frontEnd.IF1.environment.CompoundScope</a>
 , <a class="el" href="classfront_end_1_1_i_f1_1_1environment_1_1_scope.html#aed1915e68615cf96e1418db9ba78b15f">frontEnd.IF1.environment.Scope</a>
 , <a class="el" href="classfront_end_1_1_i_f1_1_1type_1_1___basic_type.html#a0b6a4223cd0bdcfdad81c2dac3963534">frontEnd.IF1.type._BasicType</a>
@@ -168,7 +171,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>__str__()
 : <a class="el" href="classcore_1_1context_1_1_context.html#ab787fc52c9b425cbf793763950710689">core.context.Context</a>
 , <a class="el" href="classcore_1_1instruction_1_1_instruction.html#a0966adf9213da275782f0005dfb8573b">core.instruction.Instruction</a>
-, <a class="el" href="classcore_1_1memory_1_1_instruction_memory.html#aacf2e2bcf33a79017dbf5ebad1e10d2c">core.memory.InstructionMemory</a>
 , <a class="el" href="classcore_1_1runtime_1_1_core.html#ae748c9fd32214e858f8e0b54330c5bac">core.runtime.Core</a>
 , <a class="el" href="classcore_1_1token_1_1_stop_tag.html#a3b0fc00ec9b2831e855d9eb3aa5b5aa3">core.token.StopTag</a>
 , <a class="el" href="classcore_1_1token_1_1_tag.html#a2218733abfa5d6df7a31de2585f70676">core.token.Tag</a>
@@ -199,6 +201,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classcore_1_1context_matcher_1_1_context_matcher.html#a898844014caa85d4f0c1ceb99237e80d">core.contextMatcher.ContextMatcher</a>
 , <a class="el" href="classcore_1_1memory_1_1_instruction_memory.html#a5b9011b58141e7c5820fbd1626b5cfc6">core.memory.InstructionMemory</a>
 , <a class="el" href="classcore_1_1runtime_1_1_core.html#ad51c3e0d80dfb4b84389014432ba8c58">core.runtime.Core</a>
+, <a class="el" href="classcore_1_1tokenizer_1_1_tokenizer.html#a872e4904119cbc98977bed20a3b6445f">core.tokenizer.Tokenizer</a>
 </li>
 <li>addCommentLine()
 : <a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ad226f9e812f573a107caf3f8cbe3da6a">backEnd.DVM.dis.DIS</a>
@@ -258,6 +261,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>bind()
+: <a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a5f68e95eac32d4fb1876271dc5f54bf0">core.tokenizer.ContextManager</a>
+</li>
 <li>bindFunction()
 : <a class="el" href="class_i_g_r_1_1node_1_1_call_node.html#a28f9abce157e5b85d6df1d33cadb7b8f">IGR.node.CallNode</a>
 </li>
@@ -265,8 +271,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
-<li>changeContext()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#ac53d82a6f9d74687751b24c733000ca4">core.tokenCreator.TokenCreator</a>
+<li>change()
+: <a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a97eca37f370fa581feeeb05a5f678eb4">core.tokenizer.ContextManager</a>
 </li>
 <li>checkKey()
 : <a class="el" href="classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250">core.contextMatcher.ContextMatcher</a>
@@ -277,9 +283,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>createChunk()
 : <a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a056c431f3b3d9106dec012dcb5a9aa9a">backEnd.DVM.dis.DIS</a>
 </li>
-<li>createNewContext()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a1f735ff6e672f56b5481f5ff9a35a4c1">core.tokenCreator.TokenCreator</a>
-</li>
 </ul>
 
 
@@ -287,6 +290,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>execute()
 : <a class="el" href="classcore_1_1instruction_1_1_constant.html#aa6f263d30e55d0e7fa3a48782873c22f">core.instruction.Constant</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_change.html#a5c61748c4ea33e916f5a3c57b0a04ae2">core.instruction.ContextChange</a>
+, <a class="el" href="classcore_1_1instruction_1_1_context_map.html#a7d29a1e378eb1dda0f92c8255ee03ae3">core.instruction.ContextMap</a>
 , <a class="el" href="classcore_1_1instruction_1_1_context_restore.html#a63c4736a4f2760e4d58a7ad6cf0fa9ed">core.instruction.ContextRestore</a>
 , <a class="el" href="classcore_1_1instruction_1_1_instruction.html#ad3968ddb6c634765fd9ce8d470b5d57f">core.instruction.Instruction</a>
 , <a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html#a8abe301191403572cbad6ad631081f0a">core.instruction.OperationInstruction</a>
@@ -423,6 +427,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>prepareInstruction()
+: <a class="el" href="classcore_1_1context_matcher_1_1_context_matcher.html#a342056524a070a5f84e8f91e3c8c8d1a">core.contextMatcher.ContextMatcher</a>
+</li>
 <li>process()
 : <a class="el" href="classcore_1_1dispatcher_1_1_token_dispatcher.html#aea9d3ed1662329987b9a886c8e2b5466">core.dispatcher.TokenDispatcher</a>
 </li>
@@ -439,8 +446,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>reduce()
 : <a class="el" href="class_i_g_r_1_1subgraph_1_1_sub_graph.html#a3a39aee0f55a736167948e634ac29914">IGR.subgraph.SubGraph</a>
 </li>
-<li>restoreContext()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#ae9ee1f333586314900f7c802ca984cf6">core.tokenCreator.TokenCreator</a>
+<li>restore()
+: <a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a17483f5845cf737bb93785dba9646277">core.tokenizer.ContextManager</a>
 </li>
 </ul>
 
@@ -449,22 +456,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>schedule()
 : <a class="el" href="classcore_1_1scheduler_1_1_scheduler.html#a87b47093624481748a7d185c9527ae52">core.scheduler.Scheduler</a>
 </li>
+<li>send()
+: <a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a64b3bcd58ecb590c8911ad67bf857e82">core.tokenizer.ContextManager</a>
+, <a class="el" href="classcore_1_1tokenizer_1_1_switcher.html#ac1701de7810d75a919aefea8691ac7ec">core.tokenizer.Switcher</a>
+</li>
 <li>sendDatum()
 : <a class="el" href="classcore_1_1instruction_1_1_destination.html#abd124edaf7316350624f26210a7e50b9">core.instruction.Destination</a>
 , <a class="el" href="classcore_1_1instruction_1_1_destination_list.html#a33502dcaa555a398e198ad805036e492">core.instruction.DestinationList</a>
 , <a class="el" href="classcore_1_1instruction_1_1_destination_map.html#a7c757374167f7aa15ead196b488d6086">core.instruction.DestinationMap</a>
 </li>
-<li>sendToOldContext()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a6bc2d079feb518a714d05942fab09eb4">core.tokenCreator.TokenCreator</a>
+<li>sendStored()
+: <a class="el" href="classcore_1_1tokenizer_1_1_switcher.html#a53bda16217586ccf23856b8a6a6a0187">core.tokenizer.Switcher</a>
+</li>
+<li>set()
+: <a class="el" href="classcore_1_1tokenizer_1_1_switcher.html#add32cf9c74eeca72017fa4cb995ee2ba">core.tokenizer.Switcher</a>
 </li>
 <li>setKey()
 : <a class="el" href="classcore_1_1instruction_1_1_instruction.html#aee7c9bbf4724b95a7aa459cb0bb11364">core.instruction.Instruction</a>
 </li>
-<li>setSwitch()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a9d696d566aae0d189a41e9975a3d029e">core.tokenCreator.TokenCreator</a>
-</li>
-<li>simpleToken()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a17cafd58974a9fdd79834817a012c602">core.tokenCreator.TokenCreator</a>
+<li>simple()
+: <a class="el" href="classcore_1_1tokenizer_1_1_tokenizer.html#a45d66fb9fe22b61249a72ae62053a603">core.tokenizer.Tokenizer</a>
 </li>
 <li>start()
 : <a class="el" href="classcore_1_1runtime_1_1_core.html#ad1c6da697790371c9dbd223aab9690bc">core.runtime.Core</a>
@@ -473,10 +484,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classcore_1_1runtime_1_1_core.html#a8fac04766062ea999c54c68f974badfa">core.runtime.Core</a>
 </li>
 <li>stopToken()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#a7ddc78b04b447b0102525e13786c2d70">core.tokenCreator.TokenCreator</a>
+: <a class="el" href="classcore_1_1tokenizer_1_1_tokenizer.html#adbde0e57be9541f0b167119d669bf95d">core.tokenizer.Tokenizer</a>
 </li>
-<li>switchToken()
-: <a class="el" href="classcore_1_1token_creator_1_1_token_creator.html#ada40e396958217f3e8c0ca6cc32dc74c">core.tokenCreator.TokenCreator</a>
+<li>store()
+: <a class="el" href="classcore_1_1tokenizer_1_1_switcher.html#a151ad602b45107dd1495f2f15e02ff4c">core.tokenizer.Switcher</a>
+</li>
+<li>switch()
+: <a class="el" href="classcore_1_1tokenizer_1_1_switcher.html#a28c971a62aa4a1fa4da9de9140f5fa69">core.tokenizer.Switcher</a>
 </li>
 </ul>
 
@@ -492,7 +506,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 19:28:54 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
