@@ -104,6 +104,28 @@ class ContextManager(object):
 		##
 		self.restoreMap = {}
 
+	##
+	# Send a single datum to a new context.
+	#
+	# \param datum
+	#		The datum to send.s
+	# \param dest
+	#		The location to send the token to
+	# \param cont
+	#		The original context of the datum
+	# \param retInst
+	#		The instance to send the token to after restoring
+	# \param retPort
+	#		The port to send the token to after restoring
+	##
+	def send(self, datum, dest, cont, retInst, retPort):
+		restoreTag = Tag(self.tokenizer.core, retInst, retPort, cont)
+		new = self.bind(restoreTag)
+
+		tag = Tag(self.tokenizer.core, dest, 0, new)
+		tok = Token(datum, tag)
+		self.tokenizer.add(tok)
+
 	## 
 	# Send a token to a different context.
 	# Create this context first if it does not exist yet.

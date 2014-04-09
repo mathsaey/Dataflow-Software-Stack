@@ -309,7 +309,17 @@ class ContextMap(Instruction):
 		self.mergeOp  = mergeOp
 
 	def execute(self, token, core):
-		pass
+		cont = token.tag.cont
+		comp = token.datum
+
+		for idx in xrange(0, len(comp)):
+			el = comp[idx]
+			self.core.tokenizer.contexts.send(
+				el, self.destSink, 
+				cont, self.mergeOp, idx)
+
+		self.core.matcher.perpareInstruction(
+			self.mergeOp, cont, len(comp))
 
 # --------------- #
 # Context Restore #

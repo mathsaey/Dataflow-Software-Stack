@@ -67,7 +67,8 @@ class ContextMatcher(object):
 	# (instruction, context) pair. This allows us to
 	# dynamically join arrays of unknown length at runtime.
 	##
-	def prepareKey(self, key, inputs):
+	def prepareInstruction(self, inst, cont, inputs):
+		key = (inst, cont)
 		self.tokens.update({key : ([None] * inputs, 0, inputs)})
 
 	##
