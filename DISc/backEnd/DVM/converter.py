@@ -76,12 +76,12 @@ def convertSGExitNode(dis, node):
 
 def convertCallNode(dis, node):
 	dest = dis.getToKey(IGR.getSubGraph(node.function).entry)
-	ins  = dis.addInstruction(0, 'CC', [])
+	ins  = dis.addInstruction(0, 'CC', [node.inputs, node.outputs])
 	ret  = dis.addInstruction(0, 'SI', [])
 	dis.linkNode(node, ins, ret)
 
 	app = ' '.join(map(str, [dest[0], dest[1], ret[0], ret[1]]))
-	dis.modifyString(0, dis.getIdx(0) - 1, lambda str : str + app)
+	dis.modifyString(0, dis.getIdx(0) - 1, lambda str : "%s %s" % (str, app))
 	return ins
 
 def convertSelectNode(dis, node):
