@@ -18,7 +18,7 @@ INST SI 5
 	
 	$ Starting subgraph 2
 	INST SI 7 
-	INST CC 8 0 2 0 9
+	INST CC 8 1 1 0 2 0 9
 	INST SI 9 
 	
 	LINK 0 7 1 1 3 0
@@ -33,7 +33,7 @@ LINK 0 5 0 0 3 0
 $ Leaving subgraph main
 
 $ Implicit call to main
-INST CC 10 0 2 0 1
+INST CC 10 1 1 0 2 0 1
 LINK 0 0 0 0 10 0
 
 CHUNK 1

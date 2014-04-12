@@ -49,7 +49,7 @@ LINK 0 5 0 0 3 0
 $ Leaving subgraph main
 
 $ Implicit call to main
-INST CC 12 0 2 0 1
+INST CC 12 2 1 0 2 0 1
 LINK 0 0 0 0 12 0
 LINK 0 0 1 0 12 1
 
