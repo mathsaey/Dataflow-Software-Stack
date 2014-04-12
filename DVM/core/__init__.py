@@ -109,6 +109,12 @@ def addSwitch(dstList):
 ##
 # Add a context change instruction.
 #
+# \param binds
+#		The amount of tokens to bind to a new
+#		context.
+# \param restores
+#		The amount of tokens the context will
+#		produce before being deleted.
 # \param destSink
 #		The destination of the token after
 #		the context change.
@@ -119,10 +125,10 @@ def addSwitch(dstList):
 # \return 
 #		The key of the context change instruction.
 ##
-def addContextChange(destSink, retSink):
+def addContextChange(binds, restores, destSink, retSink):
 	return _addInstruction(
 		instruction.ContextChange,
-		[destSink, retSink])
+		[binds, restores, destSink, retSink])
 
 ##
 # Add a context map instruction.

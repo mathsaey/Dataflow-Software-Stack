@@ -267,16 +267,25 @@ class ContextChange(Instruction, Literal):
 	##
 	# Initialize a context change instruction.
 	#
+	# \param binds
+	#		The amount of tokens to bind to a new
+	#		context.
+	# \param restores
+	#		The amount of tokens the context will
+	#		produce before being deleted.
 	# \param destSink
-	#		The destination of the tokens
+	#		The destination of the token after
+	#		the context change.
 	# \param returnSink
 	#		The destination of the tokens 
 	#		**after** their context is restored.
 	##
-	def __init__(self, destSink, returnSink):
+	def __init__(self, binds, restores, destSink, returnSink):
 		super(ContextChange, self).__init__()
 		self.retnSink = returnSink
 		self.destSink = destSink
+		self.restores = restores
+		self.bindargs = binds
 		self.literals = {}
 
 	def addLiteral(self, port, val):
@@ -287,7 +296,10 @@ class ContextChange(Instruction, Literal):
 
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)
-		core.tokenizer.contexts.bindMany(token, self, self.destSink, self.retnSink)
+		core.tokenizer.contexts.bindMany(
+			token, self, 
+			self.destSink, self.retnSink, 
+			self.bindargs, self.restores)
 
 # --------------- #
 # Context Restore #

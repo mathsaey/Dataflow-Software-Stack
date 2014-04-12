@@ -119,17 +119,28 @@ class ContextManager(object):
 	# \param retInst
 	#		The instance to send the token to
 	#		when restoring the context.
+	# \param binds
+	#		The amount of tokens that will 
+	#		be bound to the context.
+	# \param restores
+	#		The amount of tokens the context will 
+	#		produce before being deleted.
 	##
-	def bindMany(self, token, inst, dest, retInst):
+	def bindMany(self, token, inst, dest, retInst, binds, restores):
 		key = (inst.key, token.tag.cont)
 		cont = None
 
 		if key in self.contextMap:
-			cont = self.contextMap[key]
+			pair = self.contextMap[key]
+			cont = self.contextMap[0]
+			pair[1] -= 1
+
+			if pair[1] <= 0:
+				del self.contextMap[key]
 
 		else:
-			cont = self.bind(retInst, token.tag.cont)
-			self.contextMap.update({key : cont})
+			cont = self.bind(retInst, token.tag.cont, restores)
+			self.contextMap.update({key : [cont, binds - 1]})
 
 			for key in inst.getLiterals():
 				val = inst.getLiterals()[key]
@@ -150,10 +161,12 @@ class ContextManager(object):
  	#		The instruction to bind to the context.
  	# \param context
  	#		The context to restore.
+ 	# \param restores
+ 	#		The amount of tokens the context will produce.
  	##
- 	def bind(self, destination, context):
+ 	def bind(self, destination, context, restores):
  		cont = self.tokenizer.core.contextCreator.get()
- 		self.restoreMap.update({cont : (destination, context)})
+ 		self.restoreMap.update({cont : [destination, context, restores]})
  		return cont
 
 	##
@@ -166,7 +179,11 @@ class ContextManager(object):
 	def restore(self, token):
 		cont = token.tag.cont
 		pair = self.restoreMap[cont]
-		del self.restoreMap[cont]
+
+		pair[2] -= 1
+
+		if pair[2] <= 0:
+			del self.restoreMap[cont]
 
 		token.tag.inst = pair[0]
 		token.tag.cont = pair[1]

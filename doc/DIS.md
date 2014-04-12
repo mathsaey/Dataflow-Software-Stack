@@ -109,9 +109,15 @@ Index 0 would correspond to sending further tokens to instruction (0, 22), while
 
 A Context change instruction changes the context of a token. Look into the [documentation](\ref core::instruction::ContextChange) for further information.
 
-A context change instruction takes 2 arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored. Thus a context change will look like this:
+A context change instruction takes 4 arguments:
+    * Amount of binds, the amount of tokens that will "enter" the contextchange.
+    * Amount of restores, the amount of tokens that will be returned to the return sink.
+    * Address of a sink, which will be the destination of any token that enters the instruction. 
+    * Address of a return sink, which will catch anything that is returned when the context is restored. 
 
-    INST CC <idx> <address> <address>
+Thus a context change will look like this:
+
+    INST CC <idx> <binds> <restores> <address> <address>
 
 Such an address is similar to a link address:
 
@@ -119,7 +125,7 @@ Such an address is similar to a link address:
 
 Thus a context change instruction is added in the following manner:
 
-    INST CC 2 0 4 0 3
+    INST CC 2 2 1 0 4 0 3
 
 #### Context Restore
 

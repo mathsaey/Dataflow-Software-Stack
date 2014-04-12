@@ -91,11 +91,13 @@ def createStart(arr, stmt):
 
 ## Create a context change instruction.
 def createContextChange(arr, stmt):
-	dstChnk = int(arr[3])
-	dstInst = int(arr[4])
-	retChnk = int(arr[5])
-	retInst = int(arr[6])
-	return core.addContextChange((dstChnk, dstInst), (retChnk, retInst))
+	changes = int(arr[3])
+	returns = int(arr[4])
+	dstChnk = int(arr[5])
+	dstInst = int(arr[6])
+	retChnk = int(arr[7])
+	retInst = int(arr[8])
+	return core.addContextChange(changes, returns, (dstChnk, dstInst), (retChnk, retInst))
 
 ## Create a context map function
 def createSplit(arr, stmt):
