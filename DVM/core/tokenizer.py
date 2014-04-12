@@ -104,30 +104,6 @@ class ContextManager(object):
 		##
 		self.restoreMap = {}
 
-	##
-	# Send a single datum to a new context.
-	#
-	# \param datum
-	#		The datum to send.s
-	# \param dest
-	#		The location to send the token to
-	# \param core
-	#		The current execution core.
-	# \param cont
-	#		The original context of the datum
-	# \param retInst
-	#		The instance to send the token to after restoring
-	# \param retPort
-	#		The port to send the token to after restoring
-	##
-	def send(self, datum, dest, core, cont, retInst, retPort):
-		restoreTag = Tag(core, retInst, retPort, cont)
-		new = self.bind(restoreTag)
-
-		tag = Tag(core, dest, 0, new)
-		tok = Token(datum, tag)
-		self.tokenizer.add(tok)
-
 	## 
 	# Send a token to a different context.
 	# Create this context first if it does not exist yet.
@@ -144,7 +120,7 @@ class ContextManager(object):
 	#		The instance to send the token to
 	#		when restoring the context.
 	##
-	def change(self, token, inst, dest, retInst):
+	def bindMany(self, token, inst, dest, retInst):
 		key = (inst.key, token.tag.cont)
 		cont = None
 
@@ -152,8 +128,7 @@ class ContextManager(object):
 			cont = self.contextMap[key]
 
 		else:
-			retTag = Tag(token.tag.core, retInst, 0, token.tag.cont)
-			cont   = self.bind(retTag)
+			cont = self.bind(retInst, token.tag.cont)
 			self.contextMap.update({key : cont})
 
 			for key in inst.getLiterals():
@@ -167,30 +142,34 @@ class ContextManager(object):
 		self.tokenizer.add(token)
 
  	##
- 	# Bind a new context to a given tag.
+ 	# Bind a new context to a given context and destination.
  	# When a token with the new context encounters a context restore
- 	# operation, it will receive the tag.
+ 	# operation, it will be bound to the old context, and new instruction.
  	#
- 	# \param tag
- 	#		The tag to bind to the new context
+ 	# \param destination
+ 	#		The instruction to bind to the context.
+ 	# \param context
+ 	#		The context to restore.
  	##
- 	def bind(self, tag):
+ 	def bind(self, destination, context):
  		cont = self.tokenizer.core.contextCreator.get()
- 		self.restoreMap.update({cont : tag})
+ 		self.restoreMap.update({cont : (destination, context)})
  		return cont
 
 	##
 	# Restore a token.
 	#
-	# In order to do this, we simply bind the tag of the
-	# token to the tag bound to this context.
+	# In order to do this, we simply change the
+	# destination and context of the token to those
+	# found in the restoremap.
 	##
 	def restore(self, token):
 		cont = token.tag.cont
-		tag  = self.restoreMap[cont]
+		pair = self.restoreMap[cont]
 		del self.restoreMap[cont]
 
-		token.tag = tag
+		token.tag.inst = pair[0]
+		token.tag.cont = pair[1]
 		self.tokenizer.add(token)
 
 ##

@@ -83,7 +83,7 @@ def processOp(inst):
 def processConst(inst):
 	return "shape = circle, label = %s" % inst.value
 
-def processContMap(inst):
+def processSplit(inst):
 	return 'shape = ellipse, label = "Split: %s"' % inst.destSink[1]
 
 def processContChange(inst):
@@ -102,7 +102,7 @@ attributes = {
 	core.instruction.OperationInstruction : processOp,
 	core.instruction.Constant             : processConst,
 	core.instruction.Sink                 : processSink,
-	core.instruction.ContextMap           : processContMap,
+	core.instruction.Split                : processSplit,
 	core.instruction.ContextChange        : processContChange,
 	core.instruction.ContextRestore       : processContRestore,
 	core.instruction.Switch               : processSwitch,

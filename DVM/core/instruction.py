@@ -287,43 +287,7 @@ class ContextChange(Instruction, Literal):
 
 	def execute(self, token, core):
 		log.info("%s, changing context of: %s", self, token)
-		core.tokenizer.contexts.change(token, self, self.destSink, self.retnSink)
-
-
-# ----------- #
-# Context Map #
-# ----------- #
-
-##
-# Sends every element of a compound data
-# type to a sink, with a new context.
-#
-# Restoring this context will now set the 
-# index of the element as new port.
-##
-class ContextMap(Instruction):
-	
-	def __init__(self, destSink, mergeOp):
-		super(ContextMap, self).__init__()
-		self.destSink = destSink
-		self.mergeOp  = mergeOp
-
-	def execute(self, token, core):
-		cont = token.tag.cont
-		comp = token.datum
-		
-		for idx in xrange(0, len(comp)):
-			el = comp[idx]
-			core.tokenizer.contexts.send(
-				el, 
-				self.destSink, 
-				token.tag.core, 
-				cont, 
-				self.mergeOp, 
-				idx)
-
-		core.matcher.prepareInstruction(
-			self.mergeOp, cont, len(comp))
+		core.tokenizer.contexts.bindMany(token, self, self.destSink, self.retnSink)
 
 # --------------- #
 # Context Restore #
@@ -376,6 +340,41 @@ class Switch(Instruction):
 			log.info("%s, switching to destination %s, for context %s", self, dst, cnt)
 			core.tokenizer.switcher.set(self, cnt, dst)
 		core.tokenizer.switcher.switch(token, self)
+
+# ----- #
+# Split #
+# ----- #
+
+##
+# Sends every element of a compound data
+# type to a sink, with a new context.
+#
+# Restoring this context will now set the 
+# index of the element as new port.
+##
+class Split(Instruction):
+	
+	def __init__(self, destSink, mergeOp):
+		super(Split, self).__init__()
+		self.destSink = destSink
+		self.mergeOp  = mergeOp
+
+	def execute(self, token, core):
+		cont = token.tag.cont
+		comp = token.datum
+		
+		for idx in xrange(0, len(comp)):
+			el = comp[idx]
+			core.tokenizer.contexts.send(
+				el, 
+				self.destSink, 
+				token.tag.core, 
+				cont, 
+				self.mergeOp, 
+				idx)
+
+		core.matcher.prepareInstruction(
+			self.mergeOp, cont, len(comp))
 
 # ---------------- #
 # Stop Instruction #

@@ -137,7 +137,7 @@ def addContextChange(destSink, retSink):
 # \return
 #		The key of the context map instruction.
 ##
-def addContextMap(destSink, mergeOp):
+def addSplit(destSink, mergeOp):
 	return _addInstruction(
 		instruction.ContextMap,
 		[destSink, mergeOp])
