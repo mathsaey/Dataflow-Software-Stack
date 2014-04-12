@@ -52,4 +52,4 @@ class Scheduler(object):
 			log.info("Scheduling: %s", inst)
 			inst.execute(args, self.core)
 		except KeyError:
-			log.error("Encountered token with faulty destination!")
+			log.error("Encountered token(s) with faulty destination! %s", args)
