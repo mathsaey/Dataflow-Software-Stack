@@ -132,7 +132,7 @@ class ContextManager(object):
 
 		if key in self.contextMap:
 			pair = self.contextMap[key]
-			cont = self.contextMap[0]
+			cont = pair[0]
 			pair[1] -= 1
 
 			if pair[1] <= 0:
