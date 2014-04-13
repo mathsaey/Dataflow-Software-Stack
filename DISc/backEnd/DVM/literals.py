@@ -97,7 +97,7 @@ def propagateLit(node):
 	elif isinstance(node, IGR.node.SubGraphExitNode):
 		val = getInputs(node)[0]
 		node.subGraph.reduce(val)
-		deleteNode(node)
+		node.subGraph.removeNode(node)
 		log.info("Reduced trivial graph: %s", node.subGraph)
 		return
 	else:
@@ -105,7 +105,7 @@ def propagateLit(node):
 		return	
 
 	val = dvm.run(dis = str, inputs = getInputs(node))	
-	deleteNode(node)
+	node.subGraph.removeNode(node)
 	transformNode(node, val)
 	log.info("Reducing node '%s' to literal '%s'", node, val)
 
@@ -117,7 +117,7 @@ def checkCall(node):
 	graph = IGR.getSubGraph(node.function)
 	if graph.isTrivial():
 		transformNode(node, graph.value)
-		deleteNode(node)
+		node.subGraph.removeNode(node)
 		log.info("Replacing call '%s' with constant '%s'", node, graph.value)
 
 ## See if a node can be removed, do so if possible.
@@ -144,13 +144,6 @@ def checkGraph(subGraph):
 			subGraph.nodes = [const , subGraph.exit]
 			IGR.connect(const, 0, subGraph.exit, 0)
 			log.info("Replacing trivial graph %s by constant: %s", subGraph, const)
-
-## Clean up the nodes to be deleted.
-def deleteNode(node):
-	sg = node.subGraph
-	try:
-		sg.nodes.remove(node)	
-	except ValueError: pass
 
 ## Remove all operations that have predefined inputs.
 def removeLiterals():

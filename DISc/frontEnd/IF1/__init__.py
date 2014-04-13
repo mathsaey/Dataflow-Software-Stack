@@ -36,6 +36,7 @@
 import type
 import edge
 import graph
+import converter
 
 import logging
 log = logging.getLogger(__name__)
@@ -102,3 +103,5 @@ def fromString(str):
 		if len(line) is not 0:
 			parseLine(line, ctr)
 			ctr += 1
+
+	converter.run()

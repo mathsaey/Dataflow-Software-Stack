@@ -69,6 +69,7 @@ args = argParser.parse_args()
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/simple.sis"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/factorial.sis"
 #loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/trivial.sis"
+#loc = "/Users/mathsaey/Documents/Vub/Thesis/Repo/test/forin.sis"
 #args.path = loc
 
 # ------------- #

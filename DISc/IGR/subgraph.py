@@ -98,3 +98,39 @@ class SubGraph(object):
 	##
 	def reduce(self, value):
 		self.value = value
+
+	##
+	# Remove a node.
+	#
+	# This only removes the node from the
+	# node list. It does not clean up any 
+	# edges possibly leading to the node.
+	#
+	# It silently fails if the node does not 
+	# exist.
+	##
+	def removeNode(self, node):
+		try:
+			self.nodes.remove(node)	
+		except ValueError: pass
+
+	##
+	# Replace a node.
+	#
+	# This replaces a node in the node list
+	# of the subgraph by new. All of the in and
+	# output ports of the node are added to new.
+	##
+	def replaceNode(self, node, new):
+		idx = self.nodes.index(node)
+		self.nodes[idx] = new
+
+		new.inputs  = node.inputs
+		new.outputs = node.outputs
+		new.inputPorts = node.inputPorts
+		new.outputPorts = node.outputPorts
+
+		for port in new.inputPorts:
+			port.node = new
+		for port in new.outputPorts:
+			port.node = new

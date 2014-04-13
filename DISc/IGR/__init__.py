@@ -200,8 +200,8 @@ def createCompoundNode(constructor, subGraph, subGraphs):
 # \param inputs
 #		the amount of inputs this 
 ##
-def createCallNode(subGraph):
-	return createNode(node.CallNode, subGraph)
+def createCallNode(subGraph, function):
+	return createNode(node.CallNode, subGraph, [function])
 
 ##
 # Create a constant node.

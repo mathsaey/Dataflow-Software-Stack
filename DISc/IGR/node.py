@@ -76,7 +76,7 @@ class Node(object):
 	#		The amount of outputs this node will return.
 	#		The same rules that apply to inputs apply here.
 	##
-	def __init__(self, subGraph, inputs = 0, outputs = 0):
+	def __init__(self, subGraph, inputs = 0, outputs = 0, key = None):
 		super(Node, self).__init__()
 		self.subGraph    = subGraph
 		self.key         = getKey()
@@ -211,21 +211,13 @@ class OperationNode(Node):
 # The output ports of the callnode are bound to the return values of the function.
 ##
 class CallNode(Node):
-	def __init__(self, subGraph):
+	def __init__(self, subGraph, function):
 		super(CallNode, self).__init__(subGraph)
-		self.function = None
+		self.function = function
 
 	def __str__(self):
 		func = str(self.function)
 		return "CallN '%d' %s" % (self.key, func)
-
-	##
-	# Binds the call node to a certain value.
-	# Can be a graph, a graph identifier or a name.
-	# The exact value depends on the stage.
-	##
-	def bindFunction(self, func):
-		self.function = func
 
 	def isCall(self): return True
 	

@@ -102,23 +102,14 @@ def parseGraph(arr, ctr):
 # Node Parser #
 # ----------- #
 
-def parseStandardNode(opCode):
-	operation = operations.getFunction(opCode)
-	return IGR.createOperationNode(environment.getSubGraph(), operation)
-
-def parseCallNode():
-	return IGR.createCallNode(environment.getSubGraph())
-
 def parseNode(arr, ctr): 
 	label  = int(arr[_n_label_idx])
 	opCode = int(arr[_n_code_idx])
 	node   = None
 
-	if opCode is 120:
-		node = parseCallNode()
-	else:
-		node = parseStandardNode(opCode)
-	
+	operation = operations.get(opCode)
+	node = IGR.createOperationNode(environment.getSubGraph(), operation)
+
 	environment.addNode(label, node)
 
 # --------------- #

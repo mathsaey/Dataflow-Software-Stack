@@ -72,10 +72,7 @@ def parseEdge(arr, ctr):
 	srcNode  = environment.getNode(srcLabel)
 	dstNode  = environment.getNode(dstLabel)
 
-	if isinstance(dstNode, IGR.node.CallNode):
-		IGR.connect(srcNode, srcPort, dstNode, dstPort - 1)
-	else: 
-		IGR.connect(srcNode, srcPort, dstNode, dstPort)
+	IGR.connect(srcNode, srcPort, dstNode, dstPort)
 
 # -------------- #
 # Literal Parser #
@@ -100,12 +97,6 @@ def _parseLitStr(str, typ, ctr):
 	else:
 		log.error("Line %d, Unsupported literal, %s encountered.", ctr, str)
 
-def parseCallLiteral(node, port, value):
-	if port != 0:
-		IGR.addLiteral(value, node, port - 1)
-	else:
-		node.bindFunction(value)
-
 ## Parse an IF1 literal
 def parseLiteral(arr, ctr):
 	label   = int(arr[_l_dst_idx])
@@ -117,7 +108,4 @@ def parseLiteral(arr, ctr):
 	typ     = type.getType(typeKey)
 	val     = _parseLitStr(string, typ, ctr)
 
-	if isinstance(node, IGR.node.CallNode):
-		parseCallLiteral(node, port, val)
-	else:
-		IGR.addLiteral(val, node, port)
+	IGR.addLiteral(val, node, port)
