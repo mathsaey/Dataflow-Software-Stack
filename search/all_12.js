@@ -10,7 +10,7 @@ var searchData=
   ['token_2epy',['token.py',['../token_8py.html',1,'']]],
   ['tokendispatcher',['TokenDispatcher',['../classcore_1_1dispatcher_1_1_token_dispatcher.html',1,'core::dispatcher']]],
   ['tokenizer',['Tokenizer',['../classcore_1_1tokenizer_1_1_tokenizer.html',1,'core::tokenizer']]],
-  ['tokenizer',['tokenizer',['../classcore_1_1runtime_1_1_core.html#accc678d5eda610455f35330725cfa9dc',1,'core.runtime.Core.tokenizer()'],['../classcore_1_1tokenizer_1_1_context_manager.html#a2248e96bc325804a7d568d97623cf259',1,'core.tokenizer.ContextManager.tokenizer()'],['../classcore_1_1tokenizer_1_1_switcher.html#a2bcb5a34021207b3a38b2d1f4d28beab',1,'core.tokenizer.Switcher.tokenizer()']]],
+  ['tokenizer',['tokenizer',['../classcore_1_1runtime_1_1_core.html#accc678d5eda610455f35330725cfa9dc',1,'core.runtime.Core.tokenizer()'],['../classcore_1_1tokenizer_1_1_context_manager.html#a2248e96bc325804a7d568d97623cf259',1,'core.tokenizer.ContextManager.tokenizer()'],['../classcore_1_1tokenizer_1_1_switcher.html#a2bcb5a34021207b3a38b2d1f4d28beab',1,'core.tokenizer.Switcher.tokenizer()'],['../classcore_1_1tokenizer_1_1_merger.html#ace51326d25573993ac33e87184dbb063',1,'core.tokenizer.Merger.tokenizer()']]],
   ['tokenizer_2epy',['tokenizer.py',['../tokenizer_8py.html',1,'']]],
   ['tokens',['tokens',['../classcore_1_1context_matcher_1_1_context_matcher.html#a8e5a39e53adfd4c5c0dfd08a42a6ad7b',1,'core::contextMatcher::ContextMatcher']]],
   ['totalinputs',['totalinputs',['../classcore_1_1instruction_1_1_operation_instruction.html#a96dd2e7341bbcc906326cd71502f9f7c',1,'core::instruction::OperationInstruction']]],

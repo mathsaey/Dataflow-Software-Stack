@@ -1,4 +1,4 @@
 <map id="core.instruction.Literal" name="core.instruction.Literal">
-<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="5,135,165,289"/>
-<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="190,129,364,295"/>
+<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="5,129,165,309"/>
+<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="190,135,364,302"/>
 </map>

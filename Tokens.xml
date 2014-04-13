@@ -1208,6 +1208,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addSplit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a2160367b1944bca0cd466923b26e002b</Anchor>
+    <Abstract>Add a split instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addMerge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>abc1a678c8e15442a334e4c1e47740ebf</Anchor>
+    <Abstract>Add a merge instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -1947,6 +1971,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::tokenizer</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1tokenizer.html</Path>
+    <Anchor>a36bd6a5e6915a6fca1d10d6d50d6ce86</Anchor>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>generateIdentifier</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2012,6 +2047,28 @@
     </TokenIdentifier>
     <Path>namespacedot.html</Path>
     <Anchor>aade0f9177bccad59210663904257bbf7</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processSplit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a044fb77be296af098189feb4a76bad98</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processMerge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a227f9c4f328f7a85a9327c509d8239b1</Anchor>
     <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
@@ -2115,6 +2172,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addSplitLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a738ab4a4413c6b6550ae41a2736ad933</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addSwitchLinks</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2202,17 +2270,6 @@
     </TokenIdentifier>
     <Path>namespacedot.html</Path>
     <Anchor>adb410604368bba3962625b814210b36a</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>currentChunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacedot.html</Path>
-    <Anchor>a706bfbed1642361265db229d7288f754</Anchor>
     <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
@@ -2495,7 +2552,6 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>ab12ff8b46e7c77add9ddc198e2a6fbb5</Anchor>
-    <Abstract>args.logLevel = 0 args.path = &amp;quot;../examples/call.dis&amp;quot; </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -3219,6 +3275,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getInstructionList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a63cec9fa4802599cdaf659d9f738cfbd</Anchor>
+    <Abstract>Get a list of instruction addresses from the array, starting at idx start. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>createSink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3275,6 +3343,30 @@
     <Path>namespaceread.html</Path>
     <Anchor>a781d4f0b3d1d7c56d5fd02bb3ecb47c3</Anchor>
     <Abstract>Create a context change instruction. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createSplit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a141d094ab5d5144dfd509925e99f4339</Anchor>
+    <Abstract>Create a context map function. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createMerge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>af2f41b87a10540cf45fe823346970be4</Anchor>
+    <Abstract>Create a merge instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>
@@ -4465,6 +4557,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addSplit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>a2160367b1944bca0cd466923b26e002b</Anchor>
+    <Abstract>Add a split instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addMerge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>core</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore.html</Path>
+    <Anchor>abc1a678c8e15442a334e4c1e47740ebf</Anchor>
+    <Abstract>Add a merge instruction. </Abstract>
+    <DeclaredIn>__init__.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -4786,18 +4902,6 @@
     <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
     <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
     <Abstract>Initialize a context matcher. </Abstract>
-    <DeclaredIn>contextMatcher.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>prepareInstruction</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.contextMatcher.ContextMatcher</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
-    <Anchor>a342056524a070a5f84e8f91e3c8c8d1a</Anchor>
-    <Abstract>Dynamically define the amount of inputs of a (instruction, context) pair. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -5725,6 +5829,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>restores</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.ContextChange</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>ac88fe952357304c4c61f4ea89f3b97be</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>bindargs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.ContextChange</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+    <Anchor>a73289a4f7bcb735f945ab04f49378a64</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>literals</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -5732,102 +5856,6 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
     <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>chunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>core::instruction::ContextMap</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.instruction.ContextMap</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-    <Abstract>Sends every element of a compound data type to a sink, with a new context. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__init__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.ContextMap</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-    <Anchor>a8dbd9852e5ecbc88a00b580dea26ae4b</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>execute</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.ContextMap</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-    <Anchor>a7d29a1e378eb1dda0f92c8255ee03ae3</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
-    <Abstract>Set the instruction address. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
-    <Abstract>Return a string representation of this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>destSink</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.ContextMap</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-    <Anchor>a3232261f9bb265e3811f75428199dd95</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>mergeOp</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.ContextMap</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-    <Anchor>adf5acba4f0832424696d1b01490caa19</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6010,6 +6038,219 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_instruction.html</Path>
     <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::Split</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Abstract>Split instruction. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Anchor>a064b4d9d427d25f8503c06628b693188</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Anchor>afec2c5befb5c87ceb3f9a5f4f43ff0e5</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destSink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Anchor>a861941ea5fc04282f458605eb017fb11</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>retnSink</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Anchor>a9c24a11c5be04986a3643d645412fdaf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>mergeLst</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Anchor>aa7f4232be2cd9b9eeb90c965dce5fbb9</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>restores</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Split</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_split.html</Path>
+    <Anchor>a3ef8839a23db4e0ec571cf64713e60db</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>core::instruction::Merge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.instruction.Merge</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+    <Abstract>Merge Instruction. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>execute</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Merge</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+    <Anchor>ad0a308cb08f5054718c3cd6cd3f126b2</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+    <Abstract>Set the instruction address. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__str__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+    <Abstract>Return a string representation of this instruction. </Abstract>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addDestination</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>sendDatum</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
+    <DeclaredIn>instruction.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>chunk</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>key</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.Instruction</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
+    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>destinations</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.instruction.DestinationList</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
+    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6872,6 +7113,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core::tokenizer</Scope>
+    </TokenIdentifier>
+    <Path>namespacecore_1_1tokenizer.html</Path>
+    <Anchor>a36bd6a5e6915a6fca1d10d6d50d6ce86</Anchor>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>core::tokenizer::Tokenizer</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -6939,6 +7191,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>merger</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Tokenizer</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+    <Anchor>af6add4268a6603b6eb5aa9bdc10e5b17</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>switcher</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7001,25 +7263,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>send</Name>
+      <Name>bindMany</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>core.tokenizer.ContextManager</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-    <Anchor>a64b3bcd58ecb590c8911ad67bf857e82</Anchor>
-    <Abstract>Send a single datum to a new context. </Abstract>
-    <DeclaredIn>tokenizer.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>change</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenizer.ContextManager</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-    <Anchor>a97eca37f370fa581feeeb05a5f678eb4</Anchor>
+    <Anchor>ad19090f8f8471a55536bd125bc2068bf</Anchor>
     <Abstract>Send a token to a different context. </Abstract>
     <DeclaredIn>tokenizer.py</DeclaredIn>
   </Token>
@@ -7032,7 +7282,7 @@
     </TokenIdentifier>
     <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
     <Anchor>a5f68e95eac32d4fb1876271dc5f54bf0</Anchor>
-    <Abstract>Bind a new context to a given tag. </Abstract>
+    <Abstract>Bind a new context to a given context and destination. </Abstract>
     <DeclaredIn>tokenizer.py</DeclaredIn>
   </Token>
   <Token>
@@ -7191,6 +7441,72 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>core::tokenizer::Merger</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>core.tokenizer.Merger</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+    <Abstract>Token Merger. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>__init__</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Merger</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+    <Anchor>ad4254acdceca143ddb06871f7fe62111</Anchor>
+    <Abstract>Store the arrays that are currently under construction. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setLength</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Merger</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+    <Anchor>a69efaa8786acc3021dcfbfc7fe0b3ef3</Anchor>
+    <Abstract>Store the length of an array. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>add</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.tokenizer.Merger</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+    <Anchor>a15f25dc8ec16f2c0cade165642e9475d</Anchor>
+    <Abstract>Add the value of a token to an array under construction. </Abstract>
+    <DeclaredIn>tokenizer.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>tokenizer</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Merger</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+    <Anchor>ace51326d25573993ac33e87184dbb063</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>mergeLists</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.tokenizer.Merger</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+    <Anchor>a3fc0f4ce49067164e40beb4e989eae2f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>disc</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -7302,6 +7618,28 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>processSplit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a044fb77be296af098189feb4a76bad98</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>processMerge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a227f9c4f328f7a85a9327c509d8239b1</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>processContChange</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -7401,6 +7739,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addSplitLinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>dot</Scope>
+    </TokenIdentifier>
+    <Path>namespacedot.html</Path>
+    <Anchor>a738ab4a4413c6b6550ae41a2736ad933</Anchor>
+    <DeclaredIn>dot.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addSwitchLinks</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -7492,17 +7841,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>currentChunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacedot.html</Path>
-    <Anchor>a706bfbed1642361265db229d7288f754</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>attributes</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7566,7 +7904,6 @@
     </TokenIdentifier>
     <Path>namespacedvm.html</Path>
     <Anchor>ab12ff8b46e7c77add9ddc198e2a6fbb5</Anchor>
-    <Abstract>args.logLevel = 0 args.path = &amp;quot;../examples/call.dis&amp;quot; </Abstract>
     <DeclaredIn>dvm.py</DeclaredIn>
   </Token>
   <Token>
@@ -13750,6 +14087,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>getInstructionList</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a63cec9fa4802599cdaf659d9f738cfbd</Anchor>
+    <Abstract>Get a list of instruction addresses from the array, starting at idx start. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>createSink</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -13806,6 +14155,30 @@
     <Path>namespaceread.html</Path>
     <Anchor>a781d4f0b3d1d7c56d5fd02bb3ecb47c3</Anchor>
     <Abstract>Create a context change instruction. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createSplit</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>a141d094ab5d5144dfd509925e99f4339</Anchor>
+    <Abstract>Create a context map function. </Abstract>
+    <DeclaredIn>read.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>createMerge</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>read</Scope>
+    </TokenIdentifier>
+    <Path>namespaceread.html</Path>
+    <Anchor>af2f41b87a10540cf45fe823346970be4</Anchor>
+    <Abstract>Create a merge instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">43b51e2</span>
+   &#160;<span id="projectnumber">64e0783</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -133,6 +133,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a6213f85f71514131906b37e1201d1976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3d69bd61884b15c178e10b938d61fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_context_change.html#a8c3d69bd61884b15c178e10b938d61fb">destSink</a></td></tr>
 <tr class="separator:a8c3d69bd61884b15c178e10b938d61fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88fe952357304c4c61f4ea89f3b97be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_context_change.html#ac88fe952357304c4c61f4ea89f3b97be">restores</a></td></tr>
+<tr class="separator:ac88fe952357304c4c61f4ea89f3b97be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73289a4f7bcb735f945ab04f49378a64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_context_change.html#a73289a4f7bcb735f945ab04f49378a64">bindargs</a></td></tr>
+<tr class="separator:a73289a4f7bcb735f945ab04f49378a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e806596b699c69c18c61e8397686422"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_context_change.html#a8e806596b699c69c18c61e8397686422">literals</a></td></tr>
 <tr class="separator:a8e806596b699c69c18c61e8397686422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91177f4c4ea31c8ddfb9b579bb62c6af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#a91177f4c4ea31c8ddfb9b579bb62c6af">chunk</a></td></tr>
@@ -158,6 +162,18 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>binds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>restores</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>destSink</em>, </td>
         </tr>
         <tr>
@@ -177,7 +193,9 @@ Public Attributes</h2></td></tr>
 <p>Initialize a context change instruction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">destSink</td><td>The destination of the tokens </td></tr>
+    <tr><td class="paramname">binds</td><td>The amount of tokens to bind to a new context. </td></tr>
+    <tr><td class="paramname">restores</td><td>The amount of tokens the context will produce before being deleted. </td></tr>
+    <tr><td class="paramname">destSink</td><td>The destination of the token after the context change. </td></tr>
     <tr><td class="paramname">returnSink</td><td>The destination of the tokens <b>after</b> their context is restored. </td></tr>
   </table>
   </dd>
@@ -353,6 +371,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac88fe952357304c4c61f4ea89f3b97be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.instruction.ContextChange.restores</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a73289a4f7bcb735f945ab04f49378a64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.instruction.ContextChange.bindargs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8e806596b699c69c18c61e8397686422"></a>
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +450,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 13 2014 16:13:28 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">43b51e2</span>
+   &#160;<span id="projectnumber">64e0783</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -142,17 +142,17 @@ Instructions</h2>
 <tr>
 <th>Type </th><th>Code </th><th>Args  </th></tr>
 <tr>
-<td><a class="el" href="classcore_1_1instruction_1_1_sink.html">Sink</a> </td><td>SI </td><td><code>None</code> </td></tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_sink.html">Sink</a> </td><td>SNK </td><td><code>None</code> </td></tr>
 <tr>
-<td><a class="el" href="classcore_1_1instruction_1_1_switch.html">Switch</a> </td><td>SW </td><td><code>&lt;dstList&gt;</code> </td></tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_switch.html">Switch</a> </td><td>SWI </td><td><code>&lt;dstList&gt;</code> </td></tr>
 <tr>
-<td><a class="el" href="classcore_1_1instruction_1_1_constant.html">Constant</a> </td><td>CO </td><td><code>None</code> </td></tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_constant.html">Constant</a> </td><td>CNS </td><td><code>None</code> </td></tr>
 <tr>
-<td><a class="el" href="classcore_1_1instruction_1_1_context_change.html">ContextChange</a> </td><td>CC </td><td><code>&lt;to&gt; &lt;return sink&gt;</code> </td></tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_context_change.html">ContextChange</a> </td><td>CHN </td><td><code>&lt;to&gt; &lt;return sink&gt;</code> </td></tr>
 <tr>
-<td><a class="el" href="classcore_1_1instruction_1_1_context_restore.html">ContextRestore</a> </td><td>CR </td><td><code>None</code> </td></tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_context_restore.html">ContextRestore</a> </td><td>RST </td><td><code>None</code> </td></tr>
 <tr>
-<td><a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html">OperationInstruction</a> </td><td>OP </td><td><code>&lt;opCode&gt; &lt;inputs&gt;</code> </td></tr>
+<td><a class="el" href="classcore_1_1instruction_1_1_operation_instruction.html">OperationInstruction</a> </td><td>OPR </td><td><code>&lt;opCode&gt; &lt;inputs&gt;</code> </td></tr>
 </table>
 <h4>Sinks</h4>
 <p>Sinks are the the simplest instruction that is available. A sink is a simple link between a from and to. It will send whatever input it receives on a port to the destination for that port.</p>
@@ -171,12 +171,19 @@ Instructions</h2>
 </pre><p>Index 0 would correspond to sending further tokens to instruction (0, 22), while index 1 would correspond to sending the tokens to instruction (1, 5).</p>
 <h4>ContextChange</h4>
 <p>A Context change instruction changes the context of a token. Look into the <a class="el" href="classcore_1_1instruction_1_1_context_change.html">documentation</a> for further information.</p>
-<p>A context change instruction takes 2 arguments, the address to a sink, which will be the destination of any token that enters the instruction. And the address of a return sink, which will catch anything that is returned when the context is restored. Thus a context change will look like this: </p>
-<pre class="fragment">INST CC &lt;idx&gt; &lt;address&gt; &lt;address&gt;
+<p>A context change instruction takes 4 arguments:</p>
+<ul>
+<li>Amount of binds, the amount of tokens that will "enter" the contextchange.</li>
+<li>Amount of restores, the amount of tokens that will be returned to the return sink.</li>
+<li>Address of a sink, which will be the destination of any token that enters the instruction.</li>
+<li>Address of a return sink, which will catch anything that is returned when the context is restored.</li>
+</ul>
+<p>Thus a context change will look like this: </p>
+<pre class="fragment">INST CC &lt;idx&gt; &lt;binds&gt; &lt;restores&gt; &lt;address&gt; &lt;address&gt;
 </pre><p>Such an address is similar to a link address: </p>
 <pre class="fragment">&lt;chunk&gt; &lt;instruction&gt;
 </pre><p>Thus a context change instruction is added in the following manner: </p>
-<pre class="fragment">INST CC 2 0 4 0 3
+<pre class="fragment">INST CC 2 2 1 0 4 0 3
 </pre><h4>Context Restore</h4>
 <p>A context Restore finds the return instruction of a token based on it's context and sends it to that location. It can be compared to a return from a call. Once again, we refer to the <a class="el" href="classcore_1_1instruction_1_1_context_restore.html">documentation</a> for additional information.</p>
 <p>A context restore takes no arguments.</p>
@@ -336,7 +343,7 @@ Appendix: Operations</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 13 2014 16:13:28 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

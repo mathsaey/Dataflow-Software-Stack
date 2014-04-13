@@ -1,7 +1,8 @@
 <map id="core.instruction.Destination" name="core.instruction.Destination">
-<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_destination_list.html" title="DVM instruction that sends any token it produces to all of the memebers of it&#39;s destination list..." alt="" coords="160,142,363,242"/>
-<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_destination_map.html" title="DVM instruction that sends output it produces to a destination based on the output port of the output..." alt="" coords="387,142,595,242"/>
+<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_destination_list.html" title="DVM instruction that sends any token it produces to all of the memebers of it&#39;s destination list..." alt="" coords="208,142,411,242"/>
+<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_destination_map.html" title="DVM instruction that sends output it produces to a destination based on the output port of the output..." alt="" coords="504,142,712,242"/>
 <area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_constant.html" title="Constant instruction. " alt="" coords="5,331,173,418"/>
-<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="198,291,372,458"/>
-<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="420,331,561,418"/>
+<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_merge.html" title="Merge Instruction. " alt="" coords="198,338,351,411"/>
+<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="376,291,549,458"/>
+<area shape="rect" id="node7" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="573,331,715,418"/>
 </map>

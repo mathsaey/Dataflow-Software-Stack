@@ -822,11 +822,6 @@
                   <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
                  </Node>
                  <Node>
-                  <Name>prepareInstruction</Name>
-                  <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
-                  <Anchor>a342056524a070a5f84e8f91e3c8c8d1a</Anchor>
-                 </Node>
-                 <Node>
                   <Name>checkKey</Name>
                   <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
                   <Anchor>a9e6d1dde230adb9e29d0c0fd3d3ad250</Anchor>
@@ -1254,6 +1249,16 @@
                   <Anchor>a8c3d69bd61884b15c178e10b938d61fb</Anchor>
                  </Node>
                  <Node>
+                  <Name>restores</Name>
+                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                  <Anchor>ac88fe952357304c4c61f4ea89f3b97be</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>bindargs</Name>
+                  <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                  <Anchor>a73289a4f7bcb735f945ab04f49378a64</Anchor>
+                 </Node>
+                 <Node>
                   <Name>literals</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                   <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
@@ -1266,52 +1271,6 @@
                  <Node>
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>ContextMap</Name>
-                <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__init__</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>a8dbd9852e5ecbc88a00b580dea26ae4b</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>execute</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>a7d29a1e378eb1dda0f92c8255ee03ae3</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>setKey</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>destSink</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>a3232261f9bb265e3811f75428199dd95</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>mergeOp</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>adf5acba4f0832424696d1b01490caa19</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>chunk</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>key</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
                   <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                  </Node>
                 </Subnodes>
@@ -1390,6 +1349,108 @@
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_switch.html</Path>
                   <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>Split</Name>
+                <Path>classcore_1_1instruction_1_1_split.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a064b4d9d427d25f8503c06628b693188</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>execute</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>afec2c5befb5c87ceb3f9a5f4f43ff0e5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>setKey</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__str__</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destSink</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a861941ea5fc04282f458605eb017fb11</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>retnSink</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a9c24a11c5be04986a3643d645412fdaf</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>mergeLst</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>aa7f4232be2cd9b9eeb90c965dce5fbb9</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>restores</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a3ef8839a23db4e0ec571cf64713e60db</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>key</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>Merge</Name>
+                <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>execute</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>ad0a308cb08f5054718c3cd6cd3f126b2</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>setKey</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>__str__</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>addDestination</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sendDatum</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>chunk</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>key</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>destinations</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1757,6 +1818,11 @@
                   <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
                  </Node>
                  <Node>
+                  <Name>merger</Name>
+                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                  <Anchor>af6add4268a6603b6eb5aa9bdc10e5b17</Anchor>
+                 </Node>
+                 <Node>
                   <Name>switcher</Name>
                   <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
                   <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
@@ -1788,14 +1854,9 @@
                   <Anchor>a5579bad3a81f1495fd96024db50c483b</Anchor>
                  </Node>
                  <Node>
-                  <Name>send</Name>
+                  <Name>bindMany</Name>
                   <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-                  <Anchor>a64b3bcd58ecb590c8911ad67bf857e82</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>change</Name>
-                  <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-                  <Anchor>a97eca37f370fa581feeeb05a5f678eb4</Anchor>
+                  <Anchor>ad19090f8f8471a55536bd125bc2068bf</Anchor>
                  </Node>
                  <Node>
                   <Name>bind</Name>
@@ -1872,6 +1933,37 @@
                   <Name>destinations</Name>
                   <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
                   <Anchor>a621b97773f8da957fe462447715dc329</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>Merger</Name>
+                <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                  <Anchor>ad4254acdceca143ddb06871f7fe62111</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>setLength</Name>
+                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                  <Anchor>a69efaa8786acc3021dcfbfc7fe0b3ef3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>add</Name>
+                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                  <Anchor>a15f25dc8ec16f2c0cade165642e9475d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>tokenizer</Name>
+                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                  <Anchor>ace51326d25573993ac33e87184dbb063</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>mergeLists</Name>
+                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                  <Anchor>a3fc0f4ce49067164e40beb4e989eae2f</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -3911,6 +4003,10 @@
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
                  </Node>
                  <Node>
+                  <Name>core.instruction.Merge</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                 </Node>
+                 <Node>
                   <Name>core.instruction.OperationInstruction</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                  </Node>
@@ -3941,12 +4037,12 @@
                 <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                </Node>
                <Node>
-                <Name>core.instruction.ContextMap</Name>
-                <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-               </Node>
-               <Node>
                 <Name>core.instruction.ContextRestore</Name>
                 <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.Merge</Name>
+                <Path>classcore_1_1instruction_1_1_merge.html</Path>
                </Node>
                <Node>
                 <Name>core.instruction.OperationInstruction</Name>
@@ -3955,6 +4051,10 @@
                <Node>
                 <Name>core.instruction.Sink</Name>
                 <Path>classcore_1_1instruction_1_1_sink.html</Path>
+               </Node>
+               <Node>
+                <Name>core.instruction.Split</Name>
+                <Path>classcore_1_1instruction_1_1_split.html</Path>
                </Node>
                <Node>
                 <Name>core.instruction.StopInstruction</Name>
@@ -4019,6 +4119,10 @@
              <Node>
               <Name>core.tokenizer.ContextManager</Name>
               <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
+             </Node>
+             <Node>
+              <Name>core.tokenizer.Merger</Name>
+              <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
              </Node>
              <Node>
               <Name>core.tokenizer.Switcher</Name>
@@ -7448,6 +7552,16 @@
                   <Anchor>ade0cb4a02aac6b081a9f3c7108e74b14</Anchor>
                  </Node>
                  <Node>
+                  <Name>addSplit</Name>
+                  <Path>_d_v_m_2core_2____init_____8py.html</Path>
+                  <Anchor>a2160367b1944bca0cd466923b26e002b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>addMerge</Name>
+                  <Path>_d_v_m_2core_2____init_____8py.html</Path>
+                  <Anchor>abc1a678c8e15442a334e4c1e47740ebf</Anchor>
+                 </Node>
+                 <Node>
                   <Name>addContextRestore</Name>
                   <Path>_d_v_m_2core_2____init_____8py.html</Path>
                   <Anchor>ad150c9d50bdacb978da6423a3316abc4</Anchor>
@@ -7589,11 +7703,6 @@
                     <Name>__init__</Name>
                     <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
                     <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>prepareInstruction</Name>
-                    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
-                    <Anchor>a342056524a070a5f84e8f91e3c8c8d1a</Anchor>
                    </Node>
                    <Node>
                     <Name>checkKey</Name>
@@ -8033,6 +8142,16 @@
                     <Anchor>a8c3d69bd61884b15c178e10b938d61fb</Anchor>
                    </Node>
                    <Node>
+                    <Name>restores</Name>
+                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                    <Anchor>ac88fe952357304c4c61f4ea89f3b97be</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>bindargs</Name>
+                    <Path>classcore_1_1instruction_1_1_context_change.html</Path>
+                    <Anchor>a73289a4f7bcb735f945ab04f49378a64</Anchor>
+                   </Node>
+                   <Node>
                     <Name>literals</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
                     <Anchor>a8e806596b699c69c18c61e8397686422</Anchor>
@@ -8045,52 +8164,6 @@
                    <Node>
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_context_change.html</Path>
-                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>ContextMap</Name>
-                  <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>__init__</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>a8dbd9852e5ecbc88a00b580dea26ae4b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>execute</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>a7d29a1e378eb1dda0f92c8255ee03ae3</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setKey</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>destSink</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>a3232261f9bb265e3811f75428199dd95</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>mergeOp</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>adf5acba4f0832424696d1b01490caa19</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>chunk</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
-                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>key</Name>
-                    <Path>classcore_1_1instruction_1_1_context_map.html</Path>
                     <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
                    </Node>
                   </Subnodes>
@@ -8169,6 +8242,108 @@
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_switch.html</Path>
                     <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>Split</Name>
+                  <Path>classcore_1_1instruction_1_1_split.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a064b4d9d427d25f8503c06628b693188</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>execute</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>afec2c5befb5c87ceb3f9a5f4f43ff0e5</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setKey</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>__str__</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destSink</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a861941ea5fc04282f458605eb017fb11</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>retnSink</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a9c24a11c5be04986a3643d645412fdaf</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>mergeLst</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>aa7f4232be2cd9b9eeb90c965dce5fbb9</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>restores</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a3ef8839a23db4e0ec571cf64713e60db</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>key</Name>
+                    <Path>classcore_1_1instruction_1_1_split.html</Path>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>Merge</Name>
+                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>execute</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>ad0a308cb08f5054718c3cd6cd3f126b2</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setKey</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>__str__</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addDestination</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>sendDatum</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>chunk</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>key</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>destinations</Name>
+                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
+                    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -8616,6 +8791,11 @@
                     <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
                    </Node>
                    <Node>
+                    <Name>merger</Name>
+                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
+                    <Anchor>af6add4268a6603b6eb5aa9bdc10e5b17</Anchor>
+                   </Node>
+                   <Node>
                     <Name>switcher</Name>
                     <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
                     <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
@@ -8647,14 +8827,9 @@
                     <Anchor>a5579bad3a81f1495fd96024db50c483b</Anchor>
                    </Node>
                    <Node>
-                    <Name>send</Name>
+                    <Name>bindMany</Name>
                     <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-                    <Anchor>a64b3bcd58ecb590c8911ad67bf857e82</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>change</Name>
-                    <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-                    <Anchor>a97eca37f370fa581feeeb05a5f678eb4</Anchor>
+                    <Anchor>ad19090f8f8471a55536bd125bc2068bf</Anchor>
                    </Node>
                    <Node>
                     <Name>bind</Name>
@@ -8734,6 +8909,42 @@
                    </Node>
                   </Subnodes>
                  </Node>
+                 <Node>
+                  <Name>Merger</Name>
+                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>__init__</Name>
+                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                    <Anchor>ad4254acdceca143ddb06871f7fe62111</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setLength</Name>
+                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                    <Anchor>a69efaa8786acc3021dcfbfc7fe0b3ef3</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>add</Name>
+                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                    <Anchor>a15f25dc8ec16f2c0cade165642e9475d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>tokenizer</Name>
+                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                    <Anchor>ace51326d25573993ac33e87184dbb063</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>mergeLists</Name>
+                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
+                    <Anchor>a3fc0f4ce49067164e40beb4e989eae2f</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>log</Name>
+                  <Path>tokenizer_8py.html</Path>
+                  <Anchor>a36bd6a5e6915a6fca1d10d6d50d6ce86</Anchor>
+                 </Node>
                 </Subnodes>
                </Node>
               </Subnodes>
@@ -8771,6 +8982,16 @@
                 <Name>processConst</Name>
                 <Path>_d_v_m_2dot_8py.html</Path>
                 <Anchor>aade0f9177bccad59210663904257bbf7</Anchor>
+               </Node>
+               <Node>
+                <Name>processSplit</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a044fb77be296af098189feb4a76bad98</Anchor>
+               </Node>
+               <Node>
+                <Name>processMerge</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a227f9c4f328f7a85a9327c509d8239b1</Anchor>
                </Node>
                <Node>
                 <Name>processContChange</Name>
@@ -8818,6 +9039,11 @@
                 <Anchor>a1d7e6f7cfad193b8c70a1cf0ef2c337b</Anchor>
                </Node>
                <Node>
+                <Name>addSplitLinks</Name>
+                <Path>_d_v_m_2dot_8py.html</Path>
+                <Anchor>a738ab4a4413c6b6550ae41a2736ad933</Anchor>
+               </Node>
+               <Node>
                 <Name>addSwitchLinks</Name>
                 <Path>_d_v_m_2dot_8py.html</Path>
                 <Anchor>a4ee8bbdd1f21b74194fc214dd27568df</Anchor>
@@ -8856,11 +9082,6 @@
                 <Name>log</Name>
                 <Path>_d_v_m_2dot_8py.html</Path>
                 <Anchor>adb410604368bba3962625b814210b36a</Anchor>
-               </Node>
-               <Node>
-                <Name>currentChunk</Name>
-                <Path>_d_v_m_2dot_8py.html</Path>
-                <Anchor>a706bfbed1642361265db229d7288f754</Anchor>
                </Node>
                <Node>
                 <Name>attributes</Name>
@@ -9182,6 +9403,11 @@
                 <Anchor>a857ad17d79fb748ba13a495b1cfdc50a</Anchor>
                </Node>
                <Node>
+                <Name>getInstructionList</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a63cec9fa4802599cdaf659d9f738cfbd</Anchor>
+               </Node>
+               <Node>
                 <Name>createSink</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a7b8d23d7bcbb7065fdcced37d5c7b461</Anchor>
@@ -9205,6 +9431,16 @@
                 <Name>createContextChange</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a781d4f0b3d1d7c56d5fd02bb3ecb47c3</Anchor>
+               </Node>
+               <Node>
+                <Name>createSplit</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>a141d094ab5d5144dfd509925e99f4339</Anchor>
+               </Node>
+               <Node>
+                <Name>createMerge</Name>
+                <Path>read_8py.html</Path>
+                <Anchor>af2f41b87a10540cf45fe823346970be4</Anchor>
                </Node>
                <Node>
                 <Name>createContextRestore</Name>

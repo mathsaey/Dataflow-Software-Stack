@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['change',['change',['../classcore_1_1tokenizer_1_1_context_manager.html#a97eca37f370fa581feeeb05a5f678eb4',1,'core::tokenizer::ContextManager']]],
   ['checkcall',['checkCall',['../namespaceback_end_1_1_d_v_m_1_1literals.html#abaa230ff06b7b7193890216d48dcec18',1,'backEnd::DVM::literals']]],
   ['checkgraph',['checkGraph',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a98756589a380f220c22befed86a29acc',1,'backEnd::DVM::literals']]],
   ['checkkey',['checkKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a9e6d1dde230adb9e29d0c0fd3d3ad250',1,'core::contextMatcher::ContextMatcher']]],
@@ -29,11 +28,13 @@ var searchData=
   ['createcontextchange',['createContextChange',['../namespaceread.html#a781d4f0b3d1d7c56d5fd02bb3ecb47c3',1,'read']]],
   ['createcontextrestore',['createContextRestore',['../namespaceread.html#a492fa7ea038cfe45fa32a71e85d25c27',1,'read']]],
   ['creategeneralsubgraph',['createGeneralSubGraph',['../namespace_i_g_r.html#aa5e01d9c08014a16c7515ccda09fce12',1,'IGR']]],
+  ['createmerge',['createMerge',['../namespaceread.html#af2f41b87a10540cf45fe823346970be4',1,'read']]],
   ['createnode',['createNode',['../namespace_i_g_r.html#a27668aa4e23763aa37d853a2e13b4279',1,'IGR']]],
   ['createoperation',['createOperation',['../namespaceread.html#a54792d77f1b24a49d36ef7f44721a581',1,'read']]],
   ['createoperationnode',['createOperationNode',['../namespace_i_g_r.html#aa19a1174fd67a1b35805b32137b3d8be',1,'IGR']]],
   ['createopstr',['createOpStr',['../namespaceback_end_1_1_d_v_m_1_1literals.html#a19fa65ddaf2a155ea11f9014071906ae',1,'backEnd::DVM::literals']]],
   ['createsink',['createSink',['../namespaceread.html#a7b8d23d7bcbb7065fdcced37d5c7b461',1,'read']]],
+  ['createsplit',['createSplit',['../namespaceread.html#a141d094ab5d5144dfd509925e99f4339',1,'read']]],
   ['createstart',['createStart',['../namespaceread.html#ab7a5fd94b4a8dbcbff3be11dfd6d13f1',1,'read']]],
   ['createstop',['createStop',['../namespaceread.html#a30ddba6e3e6fcb02f5fb4f4bc4840772',1,'read']]],
   ['createsubgraph',['createSubGraph',['../namespace_i_g_r.html#a8d809c5810700d1e88c378e40b949784',1,'IGR']]],

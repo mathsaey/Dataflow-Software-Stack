@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">43b51e2</span>
+   &#160;<span id="projectnumber">64e0783</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -103,6 +103,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a857ad17d79fb748ba13a495b1cfdc50a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a857ad17d79fb748ba13a495b1cfdc50a">extractValue</a></td></tr>
 <tr class="memdesc:a857ad17d79fb748ba13a495b1cfdc50a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the value of a statement.  <a href="#a857ad17d79fb748ba13a495b1cfdc50a">More...</a><br/></td></tr>
 <tr class="separator:a857ad17d79fb748ba13a495b1cfdc50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63cec9fa4802599cdaf659d9f738cfbd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a63cec9fa4802599cdaf659d9f738cfbd">getInstructionList</a></td></tr>
+<tr class="memdesc:a63cec9fa4802599cdaf659d9f738cfbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of instruction addresses from the array, starting at idx start.  <a href="#a63cec9fa4802599cdaf659d9f738cfbd">More...</a><br/></td></tr>
+<tr class="separator:a63cec9fa4802599cdaf659d9f738cfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8d23d7bcbb7065fdcced37d5c7b461"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a7b8d23d7bcbb7065fdcced37d5c7b461">createSink</a></td></tr>
 <tr class="memdesc:a7b8d23d7bcbb7065fdcced37d5c7b461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a sink.  <a href="#a7b8d23d7bcbb7065fdcced37d5c7b461">More...</a><br/></td></tr>
 <tr class="separator:a7b8d23d7bcbb7065fdcced37d5c7b461"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,6 +121,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a781d4f0b3d1d7c56d5fd02bb3ecb47c3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a781d4f0b3d1d7c56d5fd02bb3ecb47c3">createContextChange</a></td></tr>
 <tr class="memdesc:a781d4f0b3d1d7c56d5fd02bb3ecb47c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a context change instruction.  <a href="#a781d4f0b3d1d7c56d5fd02bb3ecb47c3">More...</a><br/></td></tr>
 <tr class="separator:a781d4f0b3d1d7c56d5fd02bb3ecb47c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141d094ab5d5144dfd509925e99f4339"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a141d094ab5d5144dfd509925e99f4339">createSplit</a></td></tr>
+<tr class="memdesc:a141d094ab5d5144dfd509925e99f4339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a context map function.  <a href="#a141d094ab5d5144dfd509925e99f4339">More...</a><br/></td></tr>
+<tr class="separator:a141d094ab5d5144dfd509925e99f4339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f41b87a10540cf45fe823346970be4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#af2f41b87a10540cf45fe823346970be4">createMerge</a></td></tr>
+<tr class="memdesc:af2f41b87a10540cf45fe823346970be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a merge instruction.  <a href="#af2f41b87a10540cf45fe823346970be4">More...</a><br/></td></tr>
+<tr class="separator:af2f41b87a10540cf45fe823346970be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492fa7ea038cfe45fa32a71e85d25c27"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a492fa7ea038cfe45fa32a71e85d25c27">createContextRestore</a></td></tr>
 <tr class="memdesc:a492fa7ea038cfe45fa32a71e85d25c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a context restore.  <a href="#a492fa7ea038cfe45fa32a71e85d25c27">More...</a><br/></td></tr>
 <tr class="separator:a492fa7ea038cfe45fa32a71e85d25c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +209,34 @@ Variables</h2></td></tr>
 
 <p>Extract the value of a statement. </p>
 <p>The value of a statement is found after the statement, and seperated from the statement by a <code>&lt;=</code> and a space. </p>
+
+</div>
+</div>
+<a class="anchor" id="a63cec9fa4802599cdaf659d9f738cfbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def read.getInstructionList </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>start</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a list of instruction addresses from the array, starting at idx start. </p>
 
 </div>
 </div>
@@ -341,6 +378,62 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a context change instruction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a141d094ab5d5144dfd509925e99f4339"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def read.createSplit </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>stmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a context map function. </p>
+
+</div>
+</div>
+<a class="anchor" id="af2f41b87a10540cf45fe823346970be4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def read.createMerge </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>stmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a merge instruction. </p>
 
 </div>
 </div>
@@ -644,15 +737,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceread.html">    1</a></span>&#160;= {</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;SW&#39;</span> : createSwitch,</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;SI&#39;</span> : createSink,</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;PB&#39;</span> : createStart,</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;PE&#39;</span> : createStop,</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;CC&#39;</span> : createContextChange,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;CR&#39;</span> : createContextRestore,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;OP&#39;</span> : createOperation,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;CO&#39;</span> : createConstant</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;SWI&#39;</span> : createSwitch,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;SNK&#39;</span> : createSink,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;BGN&#39;</span> : createStart,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;STP&#39;</span> : createStop,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;SPL&#39;</span> : createSplit,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;MRG&#39;</span> : createMerge,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;CHN&#39;</span> : createContextChange,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;RST&#39;</span> : createContextRestore,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;OPR&#39;</span> : createOperation,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;CNS&#39;</span> : createConstant</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 </div><!-- fragment -->
 <p>Defines the operation codes and the functions to create them. </p>
 
@@ -682,7 +777,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 13 2014 16:13:29 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

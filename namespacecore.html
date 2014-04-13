@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">43b51e2</span>
+   &#160;<span id="projectnumber">64e0783</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -142,6 +142,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ade0cb4a02aac6b081a9f3c7108e74b14"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#ade0cb4a02aac6b081a9f3c7108e74b14">addContextChange</a></td></tr>
 <tr class="memdesc:ade0cb4a02aac6b081a9f3c7108e74b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a context change instruction.  <a href="#ade0cb4a02aac6b081a9f3c7108e74b14">More...</a><br/></td></tr>
 <tr class="separator:ade0cb4a02aac6b081a9f3c7108e74b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2160367b1944bca0cd466923b26e002b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#a2160367b1944bca0cd466923b26e002b">addSplit</a></td></tr>
+<tr class="memdesc:a2160367b1944bca0cd466923b26e002b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a split instruction.  <a href="#a2160367b1944bca0cd466923b26e002b">More...</a><br/></td></tr>
+<tr class="separator:a2160367b1944bca0cd466923b26e002b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1a678c8e15442a334e4c1e47740ebf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#abc1a678c8e15442a334e4c1e47740ebf">addMerge</a></td></tr>
+<tr class="memdesc:abc1a678c8e15442a334e4c1e47740ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a merge instruction.  <a href="#abc1a678c8e15442a334e4c1e47740ebf">More...</a><br/></td></tr>
+<tr class="separator:abc1a678c8e15442a334e4c1e47740ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad150c9d50bdacb978da6423a3316abc4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore.html#ad150c9d50bdacb978da6423a3316abc4">addContextRestore</a></td></tr>
 <tr class="memdesc:ad150c9d50bdacb978da6423a3316abc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a context restore instruction.  <a href="#ad150c9d50bdacb978da6423a3316abc4">More...</a><br/></td></tr>
 <tr class="separator:ad150c9d50bdacb978da6423a3316abc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,6 +299,18 @@ Functions</h2></td></tr>
           <td class="memname">def core.addContextChange </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>binds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>restores</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>destSink</em>, </td>
         </tr>
         <tr>
@@ -312,12 +330,82 @@ Functions</h2></td></tr>
 <p>Add a context change instruction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">binds</td><td>The amount of tokens to bind to a new context. </td></tr>
+    <tr><td class="paramname">restores</td><td>The amount of tokens the context will produce before being deleted. </td></tr>
     <tr><td class="paramname">destSink</td><td>The destination of the token after the context change. </td></tr>
     <tr><td class="paramname">retSink</td><td>The destination of the token after the context restore.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The key of the context change instruction. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2160367b1944bca0cd466923b26e002b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.addSplit </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>restores</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>destSink</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>retnSink</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mergeLst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a split instruction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">restores</td><td>The amount of tokens the context will produce before being deleted. Think about this in terms of merges that will be performed. The actual amount of restores will be based on this value * the length of the compound type. </td></tr>
+    <tr><td class="paramname">destSink</td><td>The destination of the tokens after the context change. </td></tr>
+    <tr><td class="paramname">retSink</td><td>The destination of the tokens after the context restore. </td></tr>
+    <tr><td class="paramname">mergeLst</td><td>A list of merge instructions. The length of the compound type will be sent to each of these in order to merge properly. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The key of the context map instruction. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc1a678c8e15442a334e4c1e47740ebf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def core.addMerge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a merge instruction. </p>
+<dl class="section return"><dt>Returns</dt><dd>The key of the merge instruction. </dd></dl>
 
 </div>
 </div>
@@ -573,7 +661,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 13 2014 16:13:28 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

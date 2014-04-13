@@ -11,7 +11,8 @@ var searchData=
   ['reset',['reset',['../namespacecore_1_1memory.html#a1765945bfc16abcf7ecf4b56c4d5d1ee',1,'core::memory']]],
   ['restore',['restore',['../classcore_1_1tokenizer_1_1_context_manager.html#a17483f5845cf737bb93785dba9646277',1,'core::tokenizer::ContextManager']]],
   ['restoremap',['restoreMap',['../classcore_1_1tokenizer_1_1_tokenizer.html#a0391daefcf7fe9f47b041fe51fbb43c1',1,'core.tokenizer.Tokenizer.restoreMap()'],['../classcore_1_1tokenizer_1_1_context_manager.html#a395781005e76f8d0ebb63784ca94508d',1,'core.tokenizer.ContextManager.restoreMap()']]],
-  ['retnsink',['retnSink',['../classcore_1_1instruction_1_1_context_change.html#a6213f85f71514131906b37e1201d1976',1,'core::instruction::ContextChange']]],
+  ['restores',['restores',['../classcore_1_1instruction_1_1_context_change.html#ac88fe952357304c4c61f4ea89f3b97be',1,'core.instruction.ContextChange.restores()'],['../classcore_1_1instruction_1_1_split.html#a3ef8839a23db4e0ec571cf64713e60db',1,'core.instruction.Split.restores()']]],
+  ['retnsink',['retnSink',['../classcore_1_1instruction_1_1_context_change.html#a6213f85f71514131906b37e1201d1976',1,'core.instruction.ContextChange.retnSink()'],['../classcore_1_1instruction_1_1_split.html#a9c24a11c5be04986a3643d645412fdaf',1,'core.instruction.Split.retnSink()']]],
   ['run',['run',['../namespaceback_end_1_1_d_v_m_1_1dvm.html#a4c5f5cb49eb78f3d7590b7d2d07115dd',1,'backEnd::DVM::dvm']]],
   ['runtime_2epy',['runtime.py',['../runtime_8py.html',1,'']]]
 ];

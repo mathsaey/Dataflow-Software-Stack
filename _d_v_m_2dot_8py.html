@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">43b51e2</span>
+   &#160;<span id="projectnumber">64e0783</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -119,6 +119,10 @@ Functions</h2></td></tr>
 <tr class="separator:ab87f45fcb6dec791455408f301d08286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aade0f9177bccad59210663904257bbf7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#aade0f9177bccad59210663904257bbf7">dot.processConst</a></td></tr>
 <tr class="separator:aade0f9177bccad59210663904257bbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044fb77be296af098189feb4a76bad98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a044fb77be296af098189feb4a76bad98">dot.processSplit</a></td></tr>
+<tr class="separator:a044fb77be296af098189feb4a76bad98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227f9c4f328f7a85a9327c509d8239b1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a227f9c4f328f7a85a9327c509d8239b1">dot.processMerge</a></td></tr>
+<tr class="separator:a227f9c4f328f7a85a9327c509d8239b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d0b3beff192082b64a2add0fcc27e97"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a6d0b3beff192082b64a2add0fcc27e97">dot.processContChange</a></td></tr>
 <tr class="separator:a6d0b3beff192082b64a2add0fcc27e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2110a38408d9a6d2f6bf2456ca668ca9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a2110a38408d9a6d2f6bf2456ca668ca9">dot.processContRestore</a></td></tr>
@@ -137,6 +141,8 @@ Functions</h2></td></tr>
 <tr class="separator:a94463d17ebfcaf2bbf2d838c87801f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d7e6f7cfad193b8c70a1cf0ef2c337b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a1d7e6f7cfad193b8c70a1cf0ef2c337b">dot.addContextChangeLinks</a></td></tr>
 <tr class="separator:a1d7e6f7cfad193b8c70a1cf0ef2c337b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738ab4a4413c6b6550ae41a2736ad933"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a738ab4a4413c6b6550ae41a2736ad933">dot.addSplitLinks</a></td></tr>
+<tr class="separator:a738ab4a4413c6b6550ae41a2736ad933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ee8bbdd1f21b74194fc214dd27568df"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a4ee8bbdd1f21b74194fc214dd27568df">dot.addSwitchLinks</a></td></tr>
 <tr class="separator:a4ee8bbdd1f21b74194fc214dd27568df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd0b96a89d7e641dace6bf44c5fb4d2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#abdd0b96a89d7e641dace6bf44c5fb4d2">dot.addLinks</a></td></tr>
@@ -159,15 +165,13 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:adb410604368bba3962625b814210b36a"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#adb410604368bba3962625b814210b36a">dot.log</a> = logging.getLogger(__name__)</td></tr>
 <tr class="separator:adb410604368bba3962625b814210b36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a706bfbed1642361265db229d7288f754"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a706bfbed1642361265db229d7288f754">dot.currentChunk</a> = 0</td></tr>
-<tr class="separator:a706bfbed1642361265db229d7288f754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10b096462e81776da910c4490c0c5559"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a10b096462e81776da910c4490c0c5559">dot.attributes</a></td></tr>
 <tr class="separator:a10b096462e81776da910c4490c0c5559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 13 2014 16:13:28 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

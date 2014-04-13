@@ -9,7 +9,6 @@ var searchData=
   ['contextchange',['ContextChange',['../classcore_1_1instruction_1_1_context_change.html',1,'core::instruction']]],
   ['contextcreator',['ContextCreator',['../classcore_1_1context_1_1_context_creator.html',1,'core::context']]],
   ['contextmanager',['ContextManager',['../classcore_1_1tokenizer_1_1_context_manager.html',1,'core::tokenizer']]],
-  ['contextmap',['ContextMap',['../classcore_1_1instruction_1_1_context_map.html',1,'core::instruction']]],
   ['contextmatcher',['ContextMatcher',['../classcore_1_1context_matcher_1_1_context_matcher.html',1,'core::contextMatcher']]],
   ['contextrestore',['ContextRestore',['../classcore_1_1instruction_1_1_context_restore.html',1,'core::instruction']]],
   ['core',['Core',['../classcore_1_1runtime_1_1_core.html',1,'core::runtime']]]

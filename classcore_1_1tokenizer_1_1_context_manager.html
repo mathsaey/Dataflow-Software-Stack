@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">43b51e2</span>
+   &#160;<span id="projectnumber">64e0783</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -109,14 +109,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5579bad3a81f1495fd96024db50c483b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a5579bad3a81f1495fd96024db50c483b">__init__</a></td></tr>
 <tr class="memdesc:a5579bad3a81f1495fd96024db50c483b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the contexts that have already been created.  <a href="#a5579bad3a81f1495fd96024db50c483b">More...</a><br/></td></tr>
 <tr class="separator:a5579bad3a81f1495fd96024db50c483b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b3bcd58ecb590c8911ad67bf857e82"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a64b3bcd58ecb590c8911ad67bf857e82">send</a></td></tr>
-<tr class="memdesc:a64b3bcd58ecb590c8911ad67bf857e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a single datum to a new context.  <a href="#a64b3bcd58ecb590c8911ad67bf857e82">More...</a><br/></td></tr>
-<tr class="separator:a64b3bcd58ecb590c8911ad67bf857e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97eca37f370fa581feeeb05a5f678eb4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a97eca37f370fa581feeeb05a5f678eb4">change</a></td></tr>
-<tr class="memdesc:a97eca37f370fa581feeeb05a5f678eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a token to a different context.  <a href="#a97eca37f370fa581feeeb05a5f678eb4">More...</a><br/></td></tr>
-<tr class="separator:a97eca37f370fa581feeeb05a5f678eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19090f8f8471a55536bd125bc2068bf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#ad19090f8f8471a55536bd125bc2068bf">bindMany</a></td></tr>
+<tr class="memdesc:ad19090f8f8471a55536bd125bc2068bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a token to a different context.  <a href="#ad19090f8f8471a55536bd125bc2068bf">More...</a><br/></td></tr>
+<tr class="separator:ad19090f8f8471a55536bd125bc2068bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f68e95eac32d4fb1876271dc5f54bf0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a5f68e95eac32d4fb1876271dc5f54bf0">bind</a></td></tr>
-<tr class="memdesc:a5f68e95eac32d4fb1876271dc5f54bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a new context to a given tag.  <a href="#a5f68e95eac32d4fb1876271dc5f54bf0">More...</a><br/></td></tr>
+<tr class="memdesc:a5f68e95eac32d4fb1876271dc5f54bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a new context to a given context and destination.  <a href="#a5f68e95eac32d4fb1876271dc5f54bf0">More...</a><br/></td></tr>
 <tr class="separator:a5f68e95eac32d4fb1876271dc5f54bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17483f5845cf737bb93785dba9646277"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1tokenizer_1_1_context_manager.html#a17483f5845cf737bb93785dba9646277">restore</a></td></tr>
 <tr class="memdesc:a17483f5845cf737bb93785dba9646277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore a token.  <a href="#a17483f5845cf737bb93785dba9646277">More...</a><br/></td></tr>
@@ -165,74 +162,12 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a64b3bcd58ecb590c8911ad67bf857e82"></a>
+<a class="anchor" id="ad19090f8f8471a55536bd125bc2068bf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def core.tokenizer.ContextManager.send </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>datum</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cont</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>retInst</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>retPort</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Send a single datum to a new context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">datum</td><td>The datum to send.s </td></tr>
-    <tr><td class="paramname">dest</td><td>The location to send the token to </td></tr>
-    <tr><td class="paramname">cont</td><td>The original context of the datum </td></tr>
-    <tr><td class="paramname">retInst</td><td>The instance to send the token to after restoring </td></tr>
-    <tr><td class="paramname">retPort</td><td>The port to send the token to after restoring </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a97eca37f370fa581feeeb05a5f678eb4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def core.tokenizer.ContextManager.change </td>
+          <td class="memname">def core.tokenizer.ContextManager.bindMany </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -259,7 +194,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>retInst</em>&#160;</td>
+          <td class="paramname"><em>retInst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>binds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>restores</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -277,6 +224,8 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">inst</td><td>The instruction that wants to change the token. </td></tr>
     <tr><td class="paramname">dest</td><td>The new destination of the token. </td></tr>
     <tr><td class="paramname">retInst</td><td>The instance to send the token to when restoring the context. </td></tr>
+    <tr><td class="paramname">binds</td><td>The amount of tokens that will be bound to the context. </td></tr>
+    <tr><td class="paramname">restores</td><td>The amount of tokens the context will produce before being deleted. </td></tr>
   </table>
   </dd>
 </dl>
@@ -297,7 +246,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>tag</em>&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>restores</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -307,11 +268,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Bind a new context to a given tag. </p>
-<p>When a token with the new context encounters a context restore operation, it will receive the tag.</p>
+<p>Bind a new context to a given context and destination. </p>
+<p>When a token with the new context encounters a context restore operation, it will be bound to the old context, and new instruction.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tag</td><td>The tag to bind to the new context </td></tr>
+    <tr><td class="paramname">destination</td><td>The instruction to bind to the context. </td></tr>
+    <tr><td class="paramname">context</td><td>The context to restore. </td></tr>
+    <tr><td class="paramname">restores</td><td>The amount of tokens the context will produce. </td></tr>
   </table>
   </dd>
 </dl>
@@ -343,7 +306,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Restore a token. </p>
-<p>In order to do this, we simply bind the tag of the token to the tag bound to this context. </p>
+<p>In order to do this, we simply change the destination and context of the token to those found in the restoremap. </p>
 
 </div>
 </div>
@@ -387,7 +350,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 9 2014 04:16:14 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 13 2014 16:13:28 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

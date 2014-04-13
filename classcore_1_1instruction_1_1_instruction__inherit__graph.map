@@ -1,10 +1,11 @@
 <map id="core.instruction.Instruction" name="core.instruction.Instruction">
-<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_constant.html" title="Constant instruction. " alt="" coords="5,222,173,309"/>
-<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="198,189,359,342"/>
-<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_context_map.html" title="Sends every element of a compound data type to a sink, with a new context. " alt="" coords="384,215,571,315"/>
-<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_context_restore.html" title="Represents the restoration of context. " alt="" coords="595,222,756,309"/>
-<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="781,182,955,349"/>
-<area shape="rect" id="node7" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="979,222,1120,309"/>
-<area shape="rect" id="node8" href="$classcore_1_1instruction_1_1_stop_instruction.html" title="Represents the end of the program. " alt="" coords="1144,229,1348,302"/>
-<area shape="rect" id="node9" href="$classcore_1_1instruction_1_1_switch.html" title="Represents an instruction that will dynamically determine the destination of it&#39;s tokens at runtime..." alt="" coords="1373,215,1528,315"/>
+<area shape="rect" id="node2" href="$classcore_1_1instruction_1_1_constant.html" title="Constant instruction. " alt="" coords="5,229,173,315"/>
+<area shape="rect" id="node3" href="$classcore_1_1instruction_1_1_context_change.html" title="Represents a context change in the program. " alt="" coords="198,182,359,362"/>
+<area shape="rect" id="node4" href="$classcore_1_1instruction_1_1_context_restore.html" title="Represents the restoration of context. " alt="" coords="383,229,544,315"/>
+<area shape="rect" id="node5" href="$classcore_1_1instruction_1_1_merge.html" title="Merge Instruction. " alt="" coords="569,235,721,309"/>
+<area shape="rect" id="node6" href="$classcore_1_1instruction_1_1_operation_instruction.html" title="An operation instruction defines a single operation on all of it&#39;s inputs. " alt="" coords="746,189,920,355"/>
+<area shape="rect" id="node7" href="$classcore_1_1instruction_1_1_sink.html" title="Sink instruction. " alt="" coords="944,229,1085,315"/>
+<area shape="rect" id="node8" href="$classcore_1_1instruction_1_1_split.html" title="Split instruction. " alt="" coords="1109,209,1251,335"/>
+<area shape="rect" id="node9" href="$classcore_1_1instruction_1_1_stop_instruction.html" title="Represents the end of the program. " alt="" coords="1275,235,1479,309"/>
+<area shape="rect" id="node10" href="$classcore_1_1instruction_1_1_switch.html" title="Represents an instruction that will dynamically determine the destination of it&#39;s tokens at runtime..." alt="" coords="1504,222,1659,322"/>
 </map>
