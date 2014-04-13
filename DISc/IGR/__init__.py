@@ -182,15 +182,15 @@ def createOperationNode(subGraph, operation):
 ##
 # Create a Compound node
 #
-# \param constructor
-#		The constructor of the compound node to use
+# \param type
+#		The type of the compound node (e.g. forAll)
 # \param subGraph
 #		The subgraph this node belongs too
 # \param subGraphss
 #		The subgraphs that are part of this compound node
 ##
-def createCompoundNode(constructor, subGraph, subGraphs):
-	return createNode(constructor, subGraph, [subGraphs])
+def createCompoundNode(type, subGraph, subGraphs):
+	return createNode(node.CompoundNode, subGraph, [type, subGraphs])
 
 ##
 # Create a call node.

@@ -32,24 +32,22 @@
 # their IGR counterparts.
 ##
 
-import IGR.node
-
 import logging
 log = logging.getLogger(__name__)
 
 ## Various IGR compound nodes.
 __COMPOUNDS__ = {
-	0  : IGR.node.ForallCNode,
-	1  : IGR.node.SelectCNode,
-	2  : IGR.node.TagCaseCNode,
-	3  : IGR.node.LoopACNode,
-	4  : IGR.node.LoopBCNode,
-	5  : IGR.node.IfThenElseCNode,
-	6  : IGR.node.IterateCNode,
-	7  : IGR.node.WhileLoopCNode,
-	8  : IGR.node.RepeatLoopCNode,
-	9  : IGR.node.SeqForallCNode,
-	10 : IGR.node.UReduceCNode
+	0  : 'forall',
+	1  : 'select',
+	2  : 'tagCase',
+	3  : 'LoopA',
+	4  : 'loopB',
+	5  : 'ifThenElse',
+	6  : 'iterate',
+	7  : 'while',
+	8  : 'repeat',
+	9  : 'seqForAll',
+	10 : 'uReduce'
 }
 
 def getCompound(label, ctr = "?"):

@@ -153,9 +153,9 @@ def parseCompoundEnd(arr, ctr):
 
 	# Create the compound node
 	compType = arr[_ce_code_idx]
-	const = compound.getCompound(compType, ctr)
+	compType = compound.getCompound(compType, ctr)
 	node = IGR.createCompoundNode(
-		const, 
+		compType, 
 		environment.getSubGraph(), 
 		resGraphs)
 

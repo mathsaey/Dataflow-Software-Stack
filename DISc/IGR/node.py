@@ -246,20 +246,12 @@ class ConstantNode(Node):
 # Examples of such nodes include if-then-else, for loops, ...
 ##
 class CompoundNode(Node):
-	def __init__(self, subGraph, subGraphs):
+	def __init__(self, subGraph, type, subGraphs):
 		super(CompoundNode, self).__init__(subGraph)
 		self.subGraphs = subGraphs
+		self.type = type
 
 	def isCompound(self): return True
-
-class ForallCNode(CompoundNode): pass
-class SelectCNode(CompoundNode): pass
-class TagCaseCNode(CompoundNode): pass
-class LoopACNode(CompoundNode): pass
-class LoopBCNode(CompoundNode): pass
-class IfThenElseCNode(CompoundNode): pass
-class IterateCNode(CompoundNode): pass
-class WhileLoopCNode(CompoundNode): pass
-class RepeatLoopCNode(CompoundNode): pass
-class SeqForallCNode(CompoundNode): pass
-class UReduceCNode(CompoundNode): pass
+	
+	def __str__(self): 
+		return "C %d: %s" % (self.key, self.type)
