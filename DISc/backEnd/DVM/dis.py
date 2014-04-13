@@ -75,8 +75,8 @@ class DIS(object):
 	## Add the standard statements to DIS.
 	def addPredefined(self, inputs):
 		self.addCommentLine("Program entry and exit point", 0)
-		self.addInstruction(0, 'PB', [inputs])
-		self.addInstruction(0, 'PE', [])
+		self.addInstruction(0, 'BGN', [inputs])
+		self.addInstruction(0, 'STP', [])
 		self.addNewline(0)
 
 	## 

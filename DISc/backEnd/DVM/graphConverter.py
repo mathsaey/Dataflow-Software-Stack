@@ -131,7 +131,7 @@ def convert(entryName = 'main'):
 	# program exit point.
 	prog.addCommentLine("Implicit call to main", 0)
 	mainKey = prog.getToKey(main)
-	mainCall = prog.addInstruction(0, 'CC', [inputs, 1,mainKey[0], mainKey[1], 0, 1])
+	mainCall = prog.addInstruction(0, 'CHN', [inputs, 1,mainKey[0], mainKey[1], 0, 1])
 	prog.linkStart(mainCall)
 
 	return prog.generate()

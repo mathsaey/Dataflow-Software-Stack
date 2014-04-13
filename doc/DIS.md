@@ -68,12 +68,12 @@ The following table defines the possible instruction types, their type code and 
 
 Type | Code | Args 
 -----| -----|------
-[Sink](\ref core::instruction::Sink) | SI | `None`
-[Switch](\ref core::instruction::Switch) | SW | `<dstList>`
-[Constant](\ref core::instruction::Constant) | CO | `None`
-[ContextChange](\ref core::instruction::ContextChange) | CC | `<to> <return sink>`
-[ContextRestore](\ref core::instruction::ContextRestore) | CR | `None`
-[OperationInstruction](\ref core::instruction::OperationInstruction) | OP | `<opCode> <inputs>`
+[Sink](\ref core::instruction::Sink) | SNK | `None`
+[Switch](\ref core::instruction::Switch) | SWI | `<dstList>`
+[Constant](\ref core::instruction::Constant) | CNS | `None`
+[ContextChange](\ref core::instruction::ContextChange) | CHN | `<to> <return sink>`
+[ContextRestore](\ref core::instruction::ContextRestore) | RST | `None`
+[OperationInstruction](\ref core::instruction::OperationInstruction) | OPR | `<opCode> <inputs>`
 
 #### Sinks
 

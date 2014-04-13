@@ -36,7 +36,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>OP|CC|CR|SI|SA|PB|PE|SW|CO|SP</string>
+			<string>OPR|CHN|RST|SNK|BGN|STP|SWI|CNS|SPL|MRG</string>
 			<key>name</key>
 			<string>support.type.dis</string>
 		</dict>

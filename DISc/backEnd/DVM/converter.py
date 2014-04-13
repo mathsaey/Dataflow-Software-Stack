@@ -60,24 +60,24 @@ def convertGeneralNode(dis, node, chunk, type, args):
 	return key
 
 def convertNode(dis, node):
-	return convertGeneralNode(dis, node, 0, 'SI', [])
+	return convertGeneralNode(dis, node, 0, 'SNK', [])
 
 def convertOpNode(dis, node): 
-	return convertGeneralNode(dis, node, 1, 'OP', [node.operation, node.inputs])
+	return convertGeneralNode(dis, node, 1, 'OPR', [node.operation, node.inputs])
 
 def convertConstantNode(dis, node):
-	return convertGeneralNode(dis, node, 0, 'CO', ["<=", node.value])
+	return convertGeneralNode(dis, node, 0, 'CNS', ["<=", node.value])
 
 def convertSGEntryNode(dis, node):
-	return convertGeneralNode(dis, node, 0, 'SI', [])
+	return convertGeneralNode(dis, node, 0, 'SNK', [])
 
 def convertSGExitNode(dis, node): 
-	return convertGeneralNode(dis, node, 0, 'CR', [])
+	return convertGeneralNode(dis, node, 0, 'RST', [])
 
 def convertCallNode(dis, node):
 	dest = dis.getToKey(IGR.getSubGraph(node.function).entry)
-	ins  = dis.addInstruction(0, 'CC', [node.inputs, node.outputs])
-	ret  = dis.addInstruction(0, 'SI', [])
+	ins  = dis.addInstruction(0, 'CHN', [node.inputs, node.outputs])
+	ret  = dis.addInstruction(0, 'SNK', [])
 	dis.linkNode(node, ins, ret)
 
 	app = ' '.join(map(str, [dest[0], dest[1], ret[0], ret[1]]))
@@ -85,8 +85,8 @@ def convertCallNode(dis, node):
 	return ins
 
 def convertSelectNode(dis, node):
-	switch = dis.addInstruction(0, 'SW', [])
-	sink   = dis.addInstruction(0, 'SI', [])
+	switch = dis.addInstruction(0, 'SWI', [])
+	sink   = dis.addInstruction(0, 'SNK', [])
 	dis.linkNode(node, switch, sink)
 
 converters = {

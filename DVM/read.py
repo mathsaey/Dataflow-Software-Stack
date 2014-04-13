@@ -136,15 +136,15 @@ def createSwitch(arr, stmt):
 # and the functions to create them.
 ##
 instructions = {
-	'SW' : createSwitch,
-	'SI' : createSink,
-	'PB' : createStart,
-	'PE' : createStop,
-	'SP' : createSplit,
-	'CC' : createContextChange,
-	'CR' : createContextRestore,
-	'OP' : createOperation,
-	'CO' : createConstant
+	'SWI' : createSwitch,
+	'SNK' : createSink,
+	'BGN' : createStart,
+	'STP' : createStop,
+	'SPL' : createSplit,
+	'CHN' : createContextChange,
+	'RST' : createContextRestore,
+	'OPR' : createOperation,
+	'CNS' : createConstant
 }
 
 ##
