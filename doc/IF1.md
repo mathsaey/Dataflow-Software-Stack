@@ -230,7 +230,7 @@ Label   | Name                  | Input                         | Output        
 103     | ABuild                | `Int x (T)*`                  |   `AS(T)`                         | Create an array/stream with a lower bound, following arguments are elements of the array
 104     | ACatenate             | `AS(T) x (AS(T))+`            |   `Array(T)`                      | Catenate arrays/streams.
 105     | AElement              | `AS(T) x Int`                 |   `T`                             | Returns element at a given index. 
-106     | AFill                 | `Int x Int x (T)*`            |   `AS(T)`                         | Create an array/stream with a lower and upper bound and fill it with the last argument.<br/> An empty array/stream is created if the lower bound > upper bound
+106     | AFill                 | `Int x Int x T`               |   `AS(T)`                         | Create an array/stream with a lower and upper bound and fill it with the last argument.<br/> An empty array/stream is created if the lower bound > upper bound
 107     | AGather               | `Int x Mult(T) x [Mult(T)]`   |   `AS(T)`                         | **Only used in return subgraph** <br/>Creates an array or stream with the values of the 2nd argument, <br/>if the corresponding 3rd argument is true (or not given <br/>The first argument represents the lower bound of the array.
 108     | AIsEmpty              | `AS(T)`                       |   `Bool`                          | Returns True if the array/stream is empty
 109     | ALimH                 | `AS(T)`                       |   `Int`                           | upper bound of array/stream
