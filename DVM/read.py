@@ -43,6 +43,10 @@ log.setLevel(logging.WARNING)
 
 chunk = None
 
+# ----------- #
+# Convenience #
+# ----------- #
+
 ## Parse a value string.
 def parseValue(str):
 	try:
@@ -67,6 +71,20 @@ def extractValue(stmt):
 	val = stmt[valStart + 3:]
 	return parseValue(val)
 
+## 
+# Get a list of instruction addresses
+# from the array, starting at idx start.
+##
+def getInstructionList(arr, start):
+	try:
+		return [(int(arr[i]), int(arr[i+1])) for i in xrange(start, len(arr), 2)]
+	except IndexError:
+		log.error("Invalid destination list encountered: %s", arr)
+		return []
+
+# ------------ #
+# Instructions #
+# ------------ #
 
 ## Create a sink.
 def createSink(arr, stmt):
@@ -101,11 +119,17 @@ def createContextChange(arr, stmt):
 
 ## Create a context map function
 def createSplit(arr, stmt):
-	destChnk = int(arr[3])
-	destInst = int(arr[4])
-	mergChnk = int(arr[5])
-	mergInst = int(arr[6])	
-	return core.addSplit((destChnk, destInst), (mergChnk, mergInst))
+	restores = int(arr[3])
+	destChnk = int(arr[4])
+	destInst = int(arr[5])
+	retnChnk = int(arr[6])
+	retnInst = int(arr[7])
+	mergeLst = getInstructionList(arr, 8)
+	return core.addSplit(restores, (destChnk, destInst), (retnChnk, retnInst), mergeLst)
+
+## Create a merge instruction.
+def createMerge(arr, stmt):
+	return core.addMerge()
 
 ## Create a context restore
 def createContextRestore(arr, stmt):
@@ -125,11 +149,7 @@ def createOperation(arr, stmt):
 
 ## Create a switch instruction.
 def createSwitch(arr, stmt):
-	try:
-		lst = [(int(arr[i]), int(arr[i+1])) for i in xrange(3, len(arr), 2)]
-		return core.addSwitch(lst)
-	except IndexError:
-		log.error("Invalid destination list encountered: %s", arr)
+	return core.addSwitch(getInstructionList(arr, 3))
 
 ## 
 # Defines the operation codes 
@@ -141,11 +161,16 @@ instructions = {
 	'BGN' : createStart,
 	'STP' : createStop,
 	'SPL' : createSplit,
+	'MRG' : createMerge,
 	'CHN' : createContextChange,
 	'RST' : createContextRestore,
 	'OPR' : createOperation,
 	'CNS' : createConstant
 }
+
+# ---------- #
+# Statements #
+# ---------- #
 
 ##
 # Parse an instruction declaration.
@@ -220,6 +245,10 @@ def parseLink(arr, stmt):
 def parseTriv(arr, stmt):
 	val = extractValue(stmt)
 	core.addTrivial(val)
+
+# ------- #
+# General #
+# ------- #
 
 ## Functions to parse the various statements.
 functions = {

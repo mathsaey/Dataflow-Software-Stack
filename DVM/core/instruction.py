@@ -358,35 +358,63 @@ class Switch(Instruction):
 # ----- #
 
 ##
-# Sends every element of a compound data
-# type to a sink, with a new context.
+# Split instruction.
 #
-# Restoring this context will now set the 
-# index of the element as new port.
+# This instruction only accepts compound data.
+# It stores a destination sink, a return sink 
+# and a merge list.
+#
+# When it receives a compound data type, it splits
+# up the type into it's elements. For each of those 
+# elements, it sends the element to idx 0 of the destSink.
+# The index of this element is sent to port 1.
+# The index can be used to reconstruct the compound type later on.
+#
+# Finally, the split instruction also accepts a merge list. 
+# The merge list is a list of addresses. On splitting a compound
+# data type, the split instruction will tell the context matcher
+# to reserve the correct amount of slots for the length of the compound
+# data type.
 ##
 class Split(Instruction):
 	
-	def __init__(self, destSink, mergeOp):
+	def __init__(self, restores, destSink, retnSink, mergeLst):
 		super(Split, self).__init__()
 		self.destSink = destSink
-		self.mergeOp  = mergeOp
+		self.retnSink = retnSink
+		self.mergeLst = mergeLst
+		self.restores = restores
 
 	def execute(self, token, core):
+		log.info("%s, splitting compound: %s", self, token)
+		length = len(token.datum)
 		cont = token.tag.cont
-		comp = token.datum
-		
-		for idx in xrange(0, len(comp)):
-			el = comp[idx]
-			core.tokenizer.contexts.send(
-				el, 
-				self.destSink, 
-				token.tag.core, 
-				cont, 
-				self.mergeOp, 
-				idx)
 
-		core.matcher.prepareInstruction(
-			self.mergeOp, cont, len(comp))
+		for idx in xrange(0, length):
+			elm = token.datum[idx]
+			new = core.tokenizer.contexts.bind(
+				self.retnSink, cont, self.restores * length)
+
+			core.tokenizer.simple(elm, self.destSink, 0, new)
+			core.tokenizer.simple(idx, self.destSink, 1, new)
+
+		for merge in self.mergeLst:
+			core.tokenizer.merger.setLength(merge, cont, length)
+
+##
+# Merge Instruction
+#
+# This instruction accepts tokens with 
+# (idx, value) as their data. When it has
+# received all of it's inputs, it creates an
+# array out of the received values, ordered by
+# the indices found in the data.
+##
+class Merge(Instruction, DestinationList):
+	def execute(self, token, core):
+		log.info("%s, merging: %s", self, token)
+		res = core.tokenizer.merger.add(self, token)
+		if res: self.sendDatum(res, core, None, token.tag.cont)
 
 # ---------------- #
 # Stop Instruction #

@@ -131,22 +131,40 @@ def addContextChange(binds, restores, destSink, retSink):
 		[binds, restores, destSink, retSink])
 
 ##
-# Add a context map instruction.
+# Add a split instruction.
 #
+# \param restores
+#		The amount of tokens the context will
+#		produce before being deleted. 
+#		Think about this in terms of merges that will
+#		be performed. The actual amount of restores will
+#		be based on this value * the length of the compound type.
 # \param destSink
-#		The destination of the elements 
-#		in the collection.
-# \param mergeOp
-#		The address of the instruction 
-#		that remerges the collection elements.
-#
+#		The destination of the tokens after
+#		the context change.
+# \param retSink
+#		The destination of the tokens
+#		after the context restore.
+# \param mergeLst
+#		A list of merge instructions. The length
+#		of the compound type will be sent to each
+#		of these in order to merge properly.
 # \return
 #		The key of the context map instruction.
 ##
-def addSplit(destSink, mergeOp):
+def addSplit(restores, destSink, retnSink, mergeLst):
 	return _addInstruction(
-		instruction.ContextMap,
-		[destSink, mergeOp])
+		instruction.Split,
+		[restores, destSink, retnSink, mergeLst])
+
+##
+# Add a merge instruction.
+#
+# \return 
+#		The key of the merge instruction.
+##
+def addMerge():
+	return _addInstruction(instruction.Merge)
 
 ##
 # Add a context restore instruction.

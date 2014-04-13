@@ -63,15 +63,6 @@ class ContextMatcher(object):
 		self.core = core
 
 	##
-	# Dynamically define the amount of inputs of a 
-	# (instruction, context) pair. This allows us to
-	# dynamically join arrays of unknown length at runtime.
-	##
-	def prepareInstruction(self, inst, cont, inputs):
-		key = (inst, cont)
-		self.tokens.update({key : [[None] * inputs, 0, inputs]})
-
-	##
 	# See if a given key is already a part of the 
 	# tokens we are matching.
 	# 

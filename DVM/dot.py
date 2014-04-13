@@ -86,6 +86,9 @@ def processConst(inst):
 def processSplit(inst):
 	return 'shape = ellipse, label = "Split: %s"' % inst.destSink[1]
 
+def processMerge(inst):
+	return 'shape = ellipse, style = dashed, label = "merge"'
+
 def processContChange(inst):
 	return 'shape = ellipse, label = "Send: %s"' % inst.destSink[1]
 
@@ -103,6 +106,7 @@ attributes = {
 	core.instruction.Constant             : processConst,
 	core.instruction.Sink                 : processSink,
 	core.instruction.Split                : processSplit,
+	core.instruction.Merge                : processMerge,
 	core.instruction.ContextChange        : processContChange,
 	core.instruction.ContextRestore       : processContRestore,
 	core.instruction.Switch               : processSwitch,
@@ -141,9 +145,9 @@ def addContextChangeLinks(buffer, inst):
 	retKey = generateTupleIdentifier(inst.retnSink)
 	buffer.write("%s -> %s ; \n" % (srcKey, retKey))
 
-def addContextMapLinks(buffer, inst):
+def addSplitLinks(buffer, inst):
 	srcKey = generateInstIdentifier(inst)
-	retKey = generateTupleIdentifier(inst.mergeOp)
+	retKey = generateTupleIdentifier(inst.retnSink)
 	buffer.write("%s -> %s ; \n" % (srcKey, retKey))
 
 def addSwitchLinks(buffer, inst):
@@ -162,10 +166,10 @@ def addLinks(buffer, inst):
 	# Hard links
 	if isinstance(inst, core.instruction.ContextChange):
 		addContextChangeLinks(buffer, inst)
-	elif isinstance(inst, core.instruction.ContextMap):
-		addContextMapLinks(buffer, inst)
 	elif isinstance(inst, core.instruction.Switch):
 		addSwitchLinks(buffer, inst)
+	elif isinstance(inst, core.instruction.Split):
+		addSplitLinks(buffer, inst)
 
 # ----- #
 # Other #
