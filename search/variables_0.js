@@ -27,7 +27,6 @@ var searchData=
   ['_5fe_5fsrc_5fidx',['_e_src_idx',['../namespacefront_end_1_1_i_f1_1_1edge.html#a066b507406458804bc4806b95ebaf586',1,'frontEnd::IF1::edge']]],
   ['_5fe_5fsrcp_5fidx',['_e_srcp_idx',['../namespacefront_end_1_1_i_f1_1_1edge.html#ac4ceb75e08df06a6dadeab8a8340946a',1,'frontEnd::IF1::edge']]],
   ['_5fe_5ftype_5fidx',['_e_type_idx',['../namespacefront_end_1_1_i_f1_1_1edge.html#a7640a51a6213faa18f106a99fa97a4b1',1,'frontEnd::IF1::edge']]],
-  ['_5ffunctions',['_functions',['../namespacefront_end_1_1_i_f1_1_1operations.html#af7fb1f27652afbcfca3791bf35f96fc5',1,'frontEnd::IF1::operations']]],
   ['_5fg_5fname_5fidx',['_g_name_idx',['../namespacefront_end_1_1_i_f1_1_1graph.html#a800ddf7df1b2825dff60465490e97fe3',1,'frontEnd::IF1::graph']]],
   ['_5fg_5ftype_5fidx',['_g_type_idx',['../namespacefront_end_1_1_i_f1_1_1graph.html#a365d1a4f550b72a9b113754235334a28',1,'frontEnd::IF1::graph']]],
   ['_5fl_5fdst_5fidx',['_l_dst_idx',['../namespacefront_end_1_1_i_f1_1_1edge.html#a3202a440e26f85fe996067b0f2ca585a',1,'frontEnd::IF1::edge']]],

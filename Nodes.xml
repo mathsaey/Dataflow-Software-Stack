@@ -306,6 +306,14 @@
                 <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
                </Node>
                <Node>
+                <Name>converter</Name>
+                <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+               </Node>
+               <Node>
+                <Name>convert</Name>
+                <Path>namespacefront_end_1_1_i_f1_1_1convert.html</Path>
+               </Node>
+               <Node>
                 <Name>edge</Name>
                 <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
                </Node>
@@ -1996,6 +2004,14 @@
                 <Path>namespacefront_end_1_1_i_f1_1_1compound.html</Path>
                </Node>
                <Node>
+                <Name>converter</Name>
+                <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+               </Node>
+               <Node>
+                <Name>convert</Name>
+                <Path>namespacefront_end_1_1_i_f1_1_1convert.html</Path>
+               </Node>
+               <Node>
                 <Name>edge</Name>
                 <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
                </Node>
@@ -2635,11 +2651,6 @@
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                   <Anchor>ab956b735b2a319b2c21c858366906a4c</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>bindFunction</Name>
-                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                  <Anchor>a28f9abce157e5b85d6df1d33cadb7b8f</Anchor>
                  </Node>
                  <Node>
                   <Name>isCall</Name>
@@ -3819,6 +3830,16 @@
                   <Anchor>a6099aad27956c8063541e9a44ac6dd61</Anchor>
                  </Node>
                  <Node>
+                  <Name>addTargets</Name>
+                  <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
+                  <Anchor>adedc55a56e0743d409e58c87629267c5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>removeTarget</Name>
+                  <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
+                  <Anchor>a703248bb27b70a5d1f8580eeb38c39c9</Anchor>
+                 </Node>
+                 <Node>
                   <Name>isConnected</Name>
                   <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
                   <Anchor>ad26b4fc3bfd9d1578543b8d18caea076</Anchor>
@@ -3899,6 +3920,16 @@
                   <Name>reduce</Name>
                   <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
                   <Anchor>a3a39aee0f55a736167948e634ac29914</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>removeNode</Name>
+                  <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+                  <Anchor>a469fd6ff5a8998ed8f2b3a3dbb470d44</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>replaceNode</Name>
+                  <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+                  <Anchor>a140ea922546d43d0306aeb765e191df8</Anchor>
                  </Node>
                  <Node>
                   <Name>name</Name>
@@ -4420,61 +4451,61 @@
                  </Node>
                  <Node>
                   <Name>converter.py</Name>
-                  <Path>converter_8py.html</Path>
+                  <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                   <Subnodes>
                    <Node>
                     <Name>addLinks</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a0df95be7f79f91da0ce23cdf964a1501</Anchor>
                    </Node>
                    <Node>
                     <Name>addLiterals</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a8ed0970535287cacc773ccba19831bbb</Anchor>
                    </Node>
                    <Node>
                     <Name>convertGeneralNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a4437fbfc3a6d2c63e13dc180614d6dfa</Anchor>
                    </Node>
                    <Node>
                     <Name>convertNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a9604a3ceb794d161dd1a7fb9670fe305</Anchor>
                    </Node>
                    <Node>
                     <Name>convertOpNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>ad7559cb47d74295d76b88eb2b36b6008</Anchor>
                    </Node>
                    <Node>
                     <Name>convertConstantNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a9f5c688da4472afbf2a332398d88555c</Anchor>
                    </Node>
                    <Node>
                     <Name>convertSGEntryNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a66c5b9cc40f86031474bb809d5818974</Anchor>
                    </Node>
                    <Node>
                     <Name>convertSGExitNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>ad57e55c5e53fcbd355092e5945e4a4af</Anchor>
                    </Node>
                    <Node>
                     <Name>convertCallNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a4f4d290197b40fa629b15fa2f08a5972</Anchor>
                    </Node>
                    <Node>
                     <Name>convertSelectNode</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a7b9d55d82f821437540264a18ccc042b</Anchor>
                    </Node>
                    <Node>
                     <Name>converters</Name>
-                    <Path>converter_8py.html</Path>
+                    <Path>back_end_2_d_v_m_2converter_8py.html</Path>
                     <Anchor>a9018c3fa81a6f9aa2ee43de6b88c96ef</Anchor>
                    </Node>
                   </Subnodes>
@@ -4723,11 +4754,6 @@
                     <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
                    </Node>
                    <Node>
-                    <Name>deleteNode</Name>
-                    <Path>literals_8py.html</Path>
-                    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-                   </Node>
-                   <Node>
                     <Name>removeLiterals</Name>
                     <Path>literals_8py.html</Path>
                     <Anchor>af3c0fd54f4943ccedb7b37e19b3e160c</Anchor>
@@ -4845,6 +4871,92 @@
                   </Subnodes>
                  </Node>
                  <Node>
+                  <Name>converter.py</Name>
+                  <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>checkLowerBound</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a5f6cc4b81a57fc82c4c1511fa80cf582</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>removeInputPort</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a07396c25c4dcf292a2fc6b48cb3368dd</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertABuild</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>af912514a30b2c912dd3f154fdf33616b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertAFill</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a2d7eb2e4e03da8b70c23214f263b6199</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertAGather</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a5089a2dc3c6aec3821a42ec2f44bf03c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertAScatter</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a99563437e07f6c076cb92d7039eef575</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertALimL</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a0fc8d616d914d1d074c56901dcd3092a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertASetL</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>ad680ffff6cf4b5b3209f04345ee19ada</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertCall</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a8dcf9d850f28a27920dfde75c932750a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertLessChain</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>ab5fab16a0b4a8be4f9f0c4b0acfd0970</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertLess</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>ad53e5d8c9dbc35aa2923b0284cc3d41d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertLessEq</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>af039873f71ad52301e94a697df77d6f1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>checkNode</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>aae6b2a9a4304b3c2b560d7bf04272f64</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>run</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>ae1ad7d88ad19a25678eee5fb7742aa1e</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>log</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a3c3b1d27fe4b10237d40fea015ed96f9</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>conversions</Name>
+                    <Path>front_end_2_i_f1_2converter_8py.html</Path>
+                    <Anchor>a72b40bbc737ec2cada44e2e55b964166</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
                   <Name>edge.py</Name>
                   <Path>edge_8py.html</Path>
                   <Subnodes>
@@ -4862,11 +4974,6 @@
                     <Name>_parseLitStr</Name>
                     <Path>edge_8py.html</Path>
                     <Anchor>aa32b98da9df649ba2f001566b541de6a</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>parseCallLiteral</Name>
-                    <Path>edge_8py.html</Path>
-                    <Anchor>abfc97be40e9fc8fbe8b082054d4a530f</Anchor>
                    </Node>
                    <Node>
                     <Name>parseLiteral</Name>
@@ -5073,16 +5180,6 @@
                     <Anchor>a3911c6e633459eb847115cc2c64a736d</Anchor>
                    </Node>
                    <Node>
-                    <Name>parseStandardNode</Name>
-                    <Path>front_end_2_i_f1_2graph_8py.html</Path>
-                    <Anchor>a6c564c1107c93f9e290dfad09c497b2b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>parseCallNode</Name>
-                    <Path>front_end_2_i_f1_2graph_8py.html</Path>
-                    <Anchor>ad1b6f67cdde9dc5915aba037a0abef8d</Anchor>
-                   </Node>
-                   <Node>
                     <Name>parseNode</Name>
                     <Path>front_end_2_i_f1_2graph_8py.html</Path>
                     <Anchor>a3b96a38fd829649d932ae5ec079bd560</Anchor>
@@ -5154,9 +5251,9 @@
                   <Path>operations_8py.html</Path>
                   <Subnodes>
                    <Node>
-                    <Name>getFunction</Name>
+                    <Name>get</Name>
                     <Path>operations_8py.html</Path>
-                    <Anchor>a7adddda9015af7031ebfa41eb0b04af5</Anchor>
+                    <Anchor>a6d7fb346e20824609ae5265880956d67</Anchor>
                    </Node>
                    <Node>
                     <Name>log</Name>
@@ -5164,9 +5261,9 @@
                     <Anchor>aa87acac587b0fda80a1f2fba3d7574f4</Anchor>
                    </Node>
                    <Node>
-                    <Name>_functions</Name>
+                    <Name>operations</Name>
                     <Path>operations_8py.html</Path>
-                    <Anchor>af7fb1f27652afbcfca3791bf35f96fc5</Anchor>
+                    <Anchor>ac066fa8c71057a70b5c10a19f5611de1</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -6158,11 +6255,6 @@
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                     <Anchor>ab956b735b2a319b2c21c858366906a4c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>bindFunction</Name>
-                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-                    <Anchor>a28f9abce157e5b85d6df1d33cadb7b8f</Anchor>
                    </Node>
                    <Node>
                     <Name>isCall</Name>
@@ -7352,6 +7444,16 @@
                     <Anchor>a6099aad27956c8063541e9a44ac6dd61</Anchor>
                    </Node>
                    <Node>
+                    <Name>addTargets</Name>
+                    <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
+                    <Anchor>adedc55a56e0743d409e58c87629267c5</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>removeTarget</Name>
+                    <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
+                    <Anchor>a703248bb27b70a5d1f8580eeb38c39c9</Anchor>
+                   </Node>
+                   <Node>
                     <Name>isConnected</Name>
                     <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
                     <Anchor>ad26b4fc3bfd9d1578543b8d18caea076</Anchor>
@@ -7432,6 +7534,16 @@
                     <Name>reduce</Name>
                     <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
                     <Anchor>a3a39aee0f55a736167948e634ac29914</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>removeNode</Name>
+                    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+                    <Anchor>a469fd6ff5a8998ed8f2b3a3dbb470d44</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>replaceNode</Name>
+                    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+                    <Anchor>a140ea922546d43d0306aeb765e191df8</Anchor>
                    </Node>
                    <Node>
                     <Name>name</Name>
@@ -9217,6 +9329,11 @@
                 <Anchor>a833d2b610bb87309d5f921a66b65349c</Anchor>
                </Node>
                <Node>
+                <Name>dvm_abs</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>a67facfbe603ffd3413b1cbd51e508c0b</Anchor>
+               </Node>
+               <Node>
                 <Name>dvm_add</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>a02049f1feebcffefe7962b4fb083d6c7</Anchor>
@@ -9235,6 +9352,16 @@
                 <Name>dvm_div</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>adaa5098622415dfccbf95a6fef897c6e</Anchor>
+               </Node>
+               <Node>
+                <Name>dvm_mod</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>a339144a59bc6c02029f621f965c5daee</Anchor>
+               </Node>
+               <Node>
+                <Name>dvm_exp</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>a0bb3c4b90d98b4d780cca24319954a2b</Anchor>
                </Node>
                <Node>
                 <Name>dvm_floor</Name>
@@ -9372,14 +9499,19 @@
                 <Anchor>a220fa9b2fdd9f0c3abe88fbd13cf3c5d</Anchor>
                </Node>
                <Node>
-                <Name>dvm_arr_gather</Name>
+                <Name>dvm_arr_prune</Name>
                 <Path>natives_8py.html</Path>
-                <Anchor>a26c9b61480edd5d9776f112f3c4f4ed4</Anchor>
+                <Anchor>a5337042ae7f53cc78851039aed55eb31</Anchor>
                </Node>
                <Node>
                 <Name>dvm_tup_get</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
+               </Node>
+               <Node>
+                <Name>dvm_range</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>adc3be34c6328d7105a6472952e65290b</Anchor>
                </Node>
                <Node>
                 <Name>operations</Name>

@@ -3,7 +3,7 @@ var searchData=
   ['operation',['operation',['../classcore_1_1instruction_1_1_operation_instruction.html#a80fc6d22e7a4cca9d863d874cce28379',1,'core.instruction.OperationInstruction.operation()'],['../class_i_g_r_1_1node_1_1_operation_node.html#ad088cba4697b93191c42436fb035f573',1,'IGR.node.OperationNode.operation()']]],
   ['operationinstruction',['OperationInstruction',['../classcore_1_1instruction_1_1_operation_instruction.html',1,'core::instruction']]],
   ['operationnode',['OperationNode',['../class_i_g_r_1_1node_1_1_operation_node.html',1,'IGR::node']]],
-  ['operations',['operations',['../namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5',1,'natives']]],
+  ['operations',['operations',['../namespacenatives.html#afec9c8802e439b4aa0e432c18411a5f5',1,'natives.operations()'],['../namespacefront_end_1_1_i_f1_1_1operations.html#ac066fa8c71057a70b5c10a19f5611de1',1,'frontEnd.IF1.operations.operations()']]],
   ['operations_2epy',['operations.py',['../operations_8py.html',1,'']]],
   ['outputlist',['outputList',['../namespace_i_g_r_1_1dot.html#a5a68597ca34591a3d97d7282bfe67872',1,'IGR::dot']]],
   ['outputport',['OutputPort',['../class_i_g_r_1_1port_1_1_output_port.html',1,'IGR::port']]],

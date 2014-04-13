@@ -124,6 +124,194 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>checkLowerBound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5f6cc4b81a57fc82c4c1511fa80cf582</Anchor>
+    <Abstract>See if a port utilizes a correct lower bound of an array. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeInputPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a07396c25c4dcf292a2fc6b48cb3368dd</Anchor>
+    <Abstract>Remove the first input port of a node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertABuild</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af912514a30b2c912dd3f154fdf33616b</Anchor>
+    <Abstract>Convert ABuild. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAFill</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a2d7eb2e4e03da8b70c23214f263b6199</Anchor>
+    <Abstract>Convert AFill. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAGather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5089a2dc3c6aec3821a42ec2f44bf03c</Anchor>
+    <Abstract>Convert AGather. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAScatter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a99563437e07f6c076cb92d7039eef575</Anchor>
+    <Abstract>Convert AScatter. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertALimL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a0fc8d616d914d1d074c56901dcd3092a</Anchor>
+    <Abstract>Convert ALimL. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertASetL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad680ffff6cf4b5b3209f04345ee19ada</Anchor>
+    <Abstract>A lower bound of an array cannot be changed in DVM. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertCall</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a8dcf9d850f28a27920dfde75c932750a</Anchor>
+    <Abstract>Convert a call operation to a call node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessChain</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ab5fab16a0b4a8be4f9f0c4b0acfd0970</Anchor>
+    <Abstract>Convert &amp;#39;less chains&amp;#39;. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLess</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad53e5d8c9dbc35aa2923b0284cc3d41d</Anchor>
+    <Abstract>Convert a less chain: not smaller =&amp;gt; greater or eq. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessEq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af039873f71ad52301e94a697df77d6f1</Anchor>
+    <Abstract>Convert a less chain: not smaller or eq =&amp;gt; greater. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>aae6b2a9a4304b3c2b560d7bf04272f64</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ae1ad7d88ad19a25678eee5fb7742aa1e</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a3c3b1d27fe4b10237d40fea015ed96f9</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>conversions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a72b40bbc737ec2cada44e2e55b964166</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>DVM_CHUNKS</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -267,18 +455,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>deleteNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-    <Abstract>Clean up the nodes to be deleted. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>removeLiterals</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -366,17 +542,6 @@
     <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
     <Anchor>aa597fb2db81faf8c1e12026d7e20518f</Anchor>
     <Abstract>Parse an IF1 edge. </Abstract>
-    <DeclaredIn>edge.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseCallLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>frontEnd::IF1::edge</Scope>
-    </TokenIdentifier>
-    <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
-    <Anchor>abfc97be40e9fc8fbe8b082054d4a530f</Anchor>
     <DeclaredIn>edge.py</DeclaredIn>
   </Token>
   <Token>
@@ -706,28 +871,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>parseStandardNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>frontEnd::IF1::graph</Scope>
-    </TokenIdentifier>
-    <Path>namespacefront_end_1_1_i_f1_1_1graph.html</Path>
-    <Anchor>a6c564c1107c93f9e290dfad09c497b2b</Anchor>
-    <DeclaredIn>graph.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseCallNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>frontEnd::IF1::graph</Scope>
-    </TokenIdentifier>
-    <Path>namespacefront_end_1_1_i_f1_1_1graph.html</Path>
-    <Anchor>ad1b6f67cdde9dc5915aba037a0abef8d</Anchor>
-    <DeclaredIn>graph.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>parseNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -956,13 +1099,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>getFunction</Name>
+      <Name>get</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>frontEnd::IF1::operations</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1operations.html</Path>
-    <Anchor>a7adddda9015af7031ebfa41eb0b04af5</Anchor>
+    <Anchor>a6d7fb346e20824609ae5265880956d67</Anchor>
     <DeclaredIn>operations.py</DeclaredIn>
   </Token>
   <Token>
@@ -978,13 +1121,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>_functions</Name>
+      <Name>operations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>frontEnd::IF1::operations</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1operations.html</Path>
-    <Anchor>af7fb1f27652afbcfca3791bf35f96fc5</Anchor>
+    <Anchor>ac066fa8c71057a70b5c10a19f5611de1</Anchor>
     <DeclaredIn>operations.py</DeclaredIn>
   </Token>
   <Token>
@@ -2843,6 +2986,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_abs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a67facfbe603ffd3413b1cbd51e508c0b</Anchor>
+    <Abstract>Absolute value. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm_add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2887,6 +3042,30 @@
     <Path>namespacenatives.html</Path>
     <Anchor>adaa5098622415dfccbf95a6fef897c6e</Anchor>
     <Abstract>Subtraction. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_mod</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a339144a59bc6c02029f621f965c5daee</Anchor>
+    <Abstract>Modulo. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_exp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0bb3c4b90d98b4d780cca24319954a2b</Anchor>
+    <Abstract>Exponent. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
@@ -3215,13 +3394,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>dvm_arr_gather</Name>
+      <Name>dvm_arr_prune</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>natives</Scope>
     </TokenIdentifier>
     <Path>namespacenatives.html</Path>
-    <Anchor>a26c9b61480edd5d9776f112f3c4f4ed4</Anchor>
+    <Anchor>a5337042ae7f53cc78851039aed55eb31</Anchor>
     <Abstract>Create an array with the value of the first array if the value of the second array is true...</Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
@@ -3235,6 +3414,18 @@
     <Path>namespacenatives.html</Path>
     <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
     <Abstract>Access an element of a tuple. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_range</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>adc3be34c6328d7105a6472952e65290b</Anchor>
+    <Abstract>Generate a range. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
@@ -4438,18 +4629,6 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
     <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
     <Abstract>See if we can remove a graph from the program. </Abstract>
-    <DeclaredIn>literals.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>deleteNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::literals</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>aeccc2a181d4ca275701e9ece1fd160e4</Anchor>
-    <Abstract>Clean up the nodes to be deleted. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -8114,6 +8293,213 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>frontEnd::IF1::convert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>frontEnd::IF1::convert</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1convert.html</Path>
+    <Abstract>Node converter. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>frontEnd::IF1::converter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkLowerBound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5f6cc4b81a57fc82c4c1511fa80cf582</Anchor>
+    <Abstract>See if a port utilizes a correct lower bound of an array. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeInputPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a07396c25c4dcf292a2fc6b48cb3368dd</Anchor>
+    <Abstract>Remove the first input port of a node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertABuild</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af912514a30b2c912dd3f154fdf33616b</Anchor>
+    <Abstract>Convert ABuild. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAFill</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a2d7eb2e4e03da8b70c23214f263b6199</Anchor>
+    <Abstract>Convert AFill. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAGather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5089a2dc3c6aec3821a42ec2f44bf03c</Anchor>
+    <Abstract>Convert AGather. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAScatter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a99563437e07f6c076cb92d7039eef575</Anchor>
+    <Abstract>Convert AScatter. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertALimL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a0fc8d616d914d1d074c56901dcd3092a</Anchor>
+    <Abstract>Convert ALimL. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertASetL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad680ffff6cf4b5b3209f04345ee19ada</Anchor>
+    <Abstract>A lower bound of an array cannot be changed in DVM. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertCall</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a8dcf9d850f28a27920dfde75c932750a</Anchor>
+    <Abstract>Convert a call operation to a call node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessChain</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ab5fab16a0b4a8be4f9f0c4b0acfd0970</Anchor>
+    <Abstract>Convert &amp;#39;less chains&amp;#39;. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLess</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad53e5d8c9dbc35aa2923b0284cc3d41d</Anchor>
+    <Abstract>Convert a less chain: not smaller =&amp;gt; greater or eq. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessEq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af039873f71ad52301e94a697df77d6f1</Anchor>
+    <Abstract>Convert a less chain: not smaller or eq =&amp;gt; greater. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>aae6b2a9a4304b3c2b560d7bf04272f64</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ae1ad7d88ad19a25678eee5fb7742aa1e</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a3c3b1d27fe4b10237d40fea015ed96f9</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>conversions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a72b40bbc737ec2cada44e2e55b964166</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>frontEnd::IF1::edge</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -8132,17 +8518,6 @@
     <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
     <Anchor>aa597fb2db81faf8c1e12026d7e20518f</Anchor>
     <Abstract>Parse an IF1 edge. </Abstract>
-    <DeclaredIn>edge.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseCallLiteral</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>frontEnd::IF1::edge</Scope>
-    </TokenIdentifier>
-    <Path>namespacefront_end_1_1_i_f1_1_1edge.html</Path>
-    <Anchor>abfc97be40e9fc8fbe8b082054d4a530f</Anchor>
     <DeclaredIn>edge.py</DeclaredIn>
   </Token>
   <Token>
@@ -8603,28 +8978,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>parseStandardNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>frontEnd::IF1::graph</Scope>
-    </TokenIdentifier>
-    <Path>namespacefront_end_1_1_i_f1_1_1graph.html</Path>
-    <Anchor>a6c564c1107c93f9e290dfad09c497b2b</Anchor>
-    <DeclaredIn>graph.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>parseCallNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>frontEnd::IF1::graph</Scope>
-    </TokenIdentifier>
-    <Path>namespacefront_end_1_1_i_f1_1_1graph.html</Path>
-    <Anchor>ad1b6f67cdde9dc5915aba037a0abef8d</Anchor>
-    <DeclaredIn>graph.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>parseNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -8779,13 +9132,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>getFunction</Name>
+      <Name>get</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>frontEnd::IF1::operations</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1operations.html</Path>
-    <Anchor>a7adddda9015af7031ebfa41eb0b04af5</Anchor>
+    <Anchor>a6d7fb346e20824609ae5265880956d67</Anchor>
     <DeclaredIn>operations.py</DeclaredIn>
   </Token>
   <Token>
@@ -8801,13 +9154,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>_functions</Name>
+      <Name>operations</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>frontEnd::IF1::operations</Scope>
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_i_f1_1_1operations.html</Path>
-    <Anchor>af7fb1f27652afbcfca3791bf35f96fc5</Anchor>
+    <Anchor>ac066fa8c71057a70b5c10a19f5611de1</Anchor>
     <DeclaredIn>operations.py</DeclaredIn>
   </Token>
   <Token>
@@ -10618,18 +10971,6 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
     <Anchor>ab956b735b2a319b2c21c858366906a4c</Anchor>
-    <DeclaredIn>node.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>bindFunction</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>IGR.node.CallNode</Scope>
-    </TokenIdentifier>
-    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
-    <Anchor>a28f9abce157e5b85d6df1d33cadb7b8f</Anchor>
-    <Abstract>Binds the call node to a certain value. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
@@ -13147,6 +13488,30 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addTargets</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.port.OutputPort</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
+    <Anchor>adedc55a56e0743d409e58c87629267c5</Anchor>
+    <Abstract>Add a list of targets to this output port. </Abstract>
+    <DeclaredIn>port.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeTarget</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.port.OutputPort</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1port_1_1_output_port.html</Path>
+    <Anchor>a703248bb27b70a5d1f8580eeb38c39c9</Anchor>
+    <Abstract>Remove a target from the port. </Abstract>
+    <DeclaredIn>port.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>isConnected</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -13323,6 +13688,30 @@
     <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
     <Anchor>a3a39aee0f55a736167948e634ac29914</Anchor>
     <Abstract>Attach a constant to a subgraph. </Abstract>
+    <DeclaredIn>subgraph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.subgraph.SubGraph</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+    <Anchor>a469fd6ff5a8998ed8f2b3a3dbb470d44</Anchor>
+    <Abstract>Remove a node. </Abstract>
+    <DeclaredIn>subgraph.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>replaceNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.subgraph.SubGraph</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1subgraph_1_1_sub_graph.html</Path>
+    <Anchor>a140ea922546d43d0306aeb765e191df8</Anchor>
+    <Abstract>Replace a node. </Abstract>
     <DeclaredIn>subgraph.py</DeclaredIn>
   </Token>
   <Token>
@@ -13645,6 +14034,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_abs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a67facfbe603ffd3413b1cbd51e508c0b</Anchor>
+    <Abstract>Absolute value. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm_add</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -13689,6 +14090,30 @@
     <Path>namespacenatives.html</Path>
     <Anchor>adaa5098622415dfccbf95a6fef897c6e</Anchor>
     <Abstract>Subtraction. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_mod</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a339144a59bc6c02029f621f965c5daee</Anchor>
+    <Abstract>Modulo. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_exp</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>a0bb3c4b90d98b4d780cca24319954a2b</Anchor>
+    <Abstract>Exponent. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>
@@ -14017,13 +14442,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>dvm_arr_gather</Name>
+      <Name>dvm_arr_prune</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>natives</Scope>
     </TokenIdentifier>
     <Path>namespacenatives.html</Path>
-    <Anchor>a26c9b61480edd5d9776f112f3c4f4ed4</Anchor>
+    <Anchor>a5337042ae7f53cc78851039aed55eb31</Anchor>
     <Abstract>Create an array with the value of the first array if the value of the second array is true...</Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
@@ -14037,6 +14462,18 @@
     <Path>namespacenatives.html</Path>
     <Anchor>a9c427a29c131341dd518e43090dfea94</Anchor>
     <Abstract>Access an element of a tuple. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_range</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>adc3be34c6328d7105a6472952e65290b</Anchor>
+    <Abstract>Generate a range. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>

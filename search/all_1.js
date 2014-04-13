@@ -34,6 +34,7 @@ var searchData=
   ['addswitch',['addSwitch',['../namespacecore.html#a0d21c6b4b8e5aa3fa35ec025d56ea2d9',1,'core']]],
   ['addswitchlinks',['addSwitchLinks',['../namespacedot.html#a4ee8bbdd1f21b74194fc214dd27568df',1,'dot']]],
   ['addtarget',['addTarget',['../class_i_g_r_1_1port_1_1_output_port.html#a6099aad27956c8063541e9a44ac6dd61',1,'IGR::port::OutputPort']]],
+  ['addtargets',['addTargets',['../class_i_g_r_1_1port_1_1_output_port.html#adedc55a56e0743d409e58c87629267c5',1,'IGR::port::OutputPort']]],
   ['addtrivial',['addTrivial',['../namespacecore.html#a3b75a9183f2fbf3bf6acd93a9041f9b9',1,'core.addTrivial()'],['../namespacecore_1_1runtime.html#ad57172b4521f8ad0c74ca7a077ff724c',1,'core.runtime.addTrivial()']]],
   ['addtype',['addType',['../classfront_end_1_1_i_f1_1_1type_1_1___type_pool.html#a17ed047ea2dc3407d7f6d9e5fb33fa1e',1,'frontEnd::IF1::type::_TypePool']]],
   ['argparser',['argParser',['../namespacedvm.html#aa067e7021475dc71ccd9019423b3a7c5',1,'dvm.argParser()'],['../namespacedisc.html#a5dfcf8d99fe7c0a94c95ecaa54f8ad33',1,'disc.argParser()']]],

@@ -1,8 +1,6 @@
 var searchData=
 [
   ['parse',['parse',['../namespaceread.html#a87ff76bbd5ab3c200bb0532c04afee95',1,'read']]],
-  ['parsecallliteral',['parseCallLiteral',['../namespacefront_end_1_1_i_f1_1_1edge.html#abfc97be40e9fc8fbe8b082054d4a530f',1,'frontEnd::IF1::edge']]],
-  ['parsecallnode',['parseCallNode',['../namespacefront_end_1_1_i_f1_1_1graph.html#ad1b6f67cdde9dc5915aba037a0abef8d',1,'frontEnd::IF1::graph']]],
   ['parsechunk',['parseChunk',['../namespaceread.html#ad2a6cdad4d073bf680c47ee61c280ba6',1,'read']]],
   ['parsecompoundend',['parseCompoundEnd',['../namespacefront_end_1_1_i_f1_1_1graph.html#aea7ab4376085489279fbc96c2a487577',1,'frontEnd::IF1::graph']]],
   ['parsecompoundstart',['parseCompoundStart',['../namespacefront_end_1_1_i_f1_1_1graph.html#a0c84597ede466784e96743d0121eeb15',1,'frontEnd::IF1::graph']]],
@@ -15,7 +13,6 @@ var searchData=
   ['parselit',['parseLit',['../namespaceread.html#a5fc0d76c4ec00f5778d0baec95bf9d67',1,'read']]],
   ['parseliteral',['parseLiteral',['../namespacefront_end_1_1_i_f1_1_1edge.html#aaf9a955972731c081fc17c330a920f1d',1,'frontEnd::IF1::edge']]],
   ['parsenode',['parseNode',['../namespacefront_end_1_1_i_f1_1_1graph.html#a3b96a38fd829649d932ae5ec079bd560',1,'frontEnd::IF1::graph']]],
-  ['parsestandardnode',['parseStandardNode',['../namespacefront_end_1_1_i_f1_1_1graph.html#a6c564c1107c93f9e290dfad09c497b2b',1,'frontEnd::IF1::graph']]],
   ['parsesubgraph',['parseSubGraph',['../namespacefront_end_1_1_i_f1_1_1graph.html#a507960bf11a92961a199bc75f8526a34',1,'frontEnd::IF1::graph']]],
   ['parsetriv',['parseTriv',['../namespaceread.html#a2147167b940f5de6c1a8092ccd40379d',1,'read']]],
   ['parsetype',['parseType',['../namespacefront_end_1_1_i_f1_1_1type.html#ab32c81047066ac3fb6322eb1615a470f',1,'frontEnd::IF1::type']]],
