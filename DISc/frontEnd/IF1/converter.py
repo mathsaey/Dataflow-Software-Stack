@@ -148,7 +148,7 @@ def convertCall(node):
 	function = node.inputPorts[0].source.value
 	callNode = IGR.node.CallNode(subGraph, function)
 	subGraph.replaceNode(node, callNode)
-	removeInputPort(node)
+	removeInputPort(callNode)
 
 ##
 # Convert 'less chains'
@@ -196,8 +196,8 @@ conversions = {
 	'ALimL'    : convertALimL,
 	'ASetL'    : convertASetL,
 	'Call'     : convertCall,
-	'Less'     : convertLess,
-	'LessEq'   : convertLessEq
+	'less'     : convertLess,
+	'lessEq'   : convertLessEq
 }
 
 def checkNode(node):
