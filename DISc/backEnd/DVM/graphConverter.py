@@ -26,7 +26,7 @@
 
 ##
 # \package backEnd.DVM.graphconverter
-# \brief IGR converter
+# \brief IGR graph converter
 #
 # This module converts the entire graph
 # into DVM.
@@ -40,7 +40,7 @@
 import IGR
 import dis
 import IGR.node
-import converter
+import nodeConverter
 
 ##
 # Add the contents of a collection of subGraphs
@@ -78,7 +78,7 @@ def convertSubGraphs(subGraphs, prog):
 		prog.modifyString(0, idx, lambda str : str + ' '.join(dstLst))
 
 	def nodeProc(node):
-		converter.convertNode(prog, node)
+		nodeConverter.convertNode(prog, node)
 		nodes.append(node)
 
 		if node.isCompound():
@@ -94,8 +94,8 @@ def convertSubGraphs(subGraphs, prog):
 		prog.addNewlines()
 
 		for node in nodes:
-			converter.addLinks(prog, node)
-			converter.addLiterals(prog, node)
+			nodeConverter.addLinks(prog, node)
+			nodeConverter.addLiterals(prog, node)
 
 		prog.addCommentLines("Leaving subgraph %s" % sg.name)
 		prog.addNewlines()

@@ -36,7 +36,7 @@
 import dvm
 import dis
 import IGR.node
-import converter
+import nodeConverter
 import graphConverter
 
 import logging
@@ -63,7 +63,7 @@ def getInputs(node):
 ##
 def createOpStr(node):
 	prog = dis.DIS(node.inputs)
-	key = converter.convertNode(prog, node)
+	key = nodeConverter.convertNode(prog, node)
 	prog.linkStart(key)
 	prog.linkStop(key)
 	return prog.generate()
