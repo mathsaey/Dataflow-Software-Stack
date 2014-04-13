@@ -128,5 +128,21 @@ class OutputPort(Port):
 	def addTarget(self, target):
 		self.targets.append(target)
 
+	##
+	# Add a list of targets to this
+	# output port.
+	##
+	def addTargets(self, targets):
+		self.targets += targets
+
+	##
+	# Remove a target from the port.
+	#
+	# \param target
+	#		The target to remove.
+	##
+	def removeTarget(self, target):
+		self.targets.remove(target)
+
 	def isConnected(self):
 		return self.targets != []

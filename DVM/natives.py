@@ -106,7 +106,7 @@ def dvm_notEqual(l, r): return l != r
 ## 
 # Logical and
 #
-# param l, r booleans
+# \param l, r booleans
 # \return A boolean
 ##
 def dvm_and(l, r): return l and r
@@ -114,7 +114,7 @@ def dvm_and(l, r): return l and r
 ## 
 # Logical Or
 #
-# param l, r booleans
+# \param l, r booleans
 # \return A boolean
 ##
 def dvm_or(l, r): return l or r
@@ -122,7 +122,7 @@ def dvm_or(l, r): return l or r
 ##
 # Logical xor
 #
-# param l, r booleans
+# \param l, r booleans
 # \return a boolean
 ##
 def dvm_xor(l, r): return l ^ r
@@ -148,9 +148,17 @@ def dvm_not(x): return not x
 def dvm_neg(x): return - x
 
 ##
+# Absolute value
+# 
+# \param x a number
+# \return The absolute value of x
+##
+def dvm_abs(x): return math.fabs(x)
+
+##
 # Addition.
 #
-# param l, r numeric parameters
+# \param l, r numeric parameters
 # \return A number
 ##
 def dvm_add(l, r): return l + r
@@ -158,7 +166,7 @@ def dvm_add(l, r): return l + r
 ##
 # Subtraction.
 #
-# param l, r numeric parameters
+# \param l, r numeric parameters
 # \return A number
 ##
 def dvm_sub(l, r): return l - r
@@ -166,7 +174,7 @@ def dvm_sub(l, r): return l - r
 ##
 # Multiplication.
 #
-# param l, r numeric parameters
+# \param l, r numeric parameters
 # \return A number
 ##
 def dvm_mul(l, r): return l * r
@@ -174,10 +182,26 @@ def dvm_mul(l, r): return l * r
 ##
 # Subtraction.
 #
-# param l, r numeric parameters
+# \param l, r numeric parameters
 # \return A number
 ##
 def dvm_div(l, r): return l / (r * 1.0)
+
+##
+# Modulo.
+#
+# \param l,r numbers
+# \return modulo of l and r 
+##
+def dvm_mod(l, r): return l % r
+
+##
+# Exponent.
+#
+# \param l, r numbers
+# \return A number
+##
+def dvm_exp(l, r): return l ** r
 
 ##
 # Round down
@@ -198,7 +222,7 @@ def dvm_ceil(x): return math.ceil(x)
 ## 
 # Maximum
 #
-# param l, r numeric parameters
+# \param l, r numeric parameters
 # \return A number
 ##
 def dvm_min(l, r): return min(l, r)
@@ -206,7 +230,7 @@ def dvm_min(l, r): return min(l, r)
 ## 
 # Minimum
 #
-# param l, r numeric parameters
+# \param l, r numeric parameters
 # \return A number
 ##
 def dvm_max(l, r): return max(l, r)
@@ -218,7 +242,7 @@ def dvm_max(l, r): return max(l, r)
 ##
 # Smaller than
 #
-# param l, r numbers
+# \param l, r numbers
 # \return true if l < r
 ##
 def dvm_less(l, r): return l < r
@@ -226,7 +250,7 @@ def dvm_less(l, r): return l < r
 ##
 # Greater than
 #
-# param l, r numbers
+# \param l, r numbers
 # \return true if l > r
 ##
 def dvm_more(l, r): return l > r
@@ -234,7 +258,7 @@ def dvm_more(l, r): return l > r
 ##
 # Smaller or equal than
 #
-# param l, r numbers
+# \param l, r numbers
 # \return true if l =< r
 ##
 def dvm_less_eq(l, r): return l <= r
@@ -242,7 +266,7 @@ def dvm_less_eq(l, r): return l <= r
 ##
 # Greatar or equal than
 #
-# param l, r numbers
+# \param l, r numbers
 # \return true if l >= r
 ##
 def dvm_more_eq(l, r): return l >= r
@@ -254,7 +278,7 @@ def dvm_more_eq(l, r): return l >= r
 ##
 # See if a string contains a value.
 #
-# param str, x strings
+# \param str, x strings
 # \return True if x is an element of str
 ##
 def dvm_str_contains(str, x): return x in str
@@ -262,7 +286,7 @@ def dvm_str_contains(str, x): return x in str
 ##
 # Return the idx of x in str.
 #
-# param str, x strings
+# \param str, x strings
 # \return 
 #	the idx of x in str.
 #	-1 if x is not in str.
@@ -396,7 +420,7 @@ def dvm_arr_insert(arr, idx, *el):
 ##
 # Replace elements in an array. 
 # Similar to dvm_arr_insert, but
-# replaces the elemets starting at idx.
+# replaces the elements starting at idx.
 #
 # e.g: 
 #    
@@ -420,10 +444,16 @@ def dvm_arr_replace(arr, idx, *el):
 # Array concatenation.
 #
 # \param l,r arrays.
+# \param rest (optional) other arrays to concatenate.
 # \return concatenation of l and r.
 ##
-def dvm_arr_catenate(l, r):
-	return l + r
+def dvm_arr_catenate(l, r, *rest):
+	if rest:
+		res = l + r
+		for lst in rest: res += lst
+		return res
+	else: 
+		return l + r
 
 ##
 # Add an element to the start of an array.
@@ -475,7 +505,7 @@ def dvm_arr_sub(arr, start, stop):
 #		An array with all the elements of arr for 
 #		which the corresponding element in bools is true.
 ##
-def dvm_arr_gather(arr, bools):
+def dvm_arr_prune(arr, bools):
 	return [el[0] for el in zip(arr, bools) if el[1]]
 
 # ---------------- #
@@ -491,6 +521,17 @@ def dvm_arr_gather(arr, bools):
 ##
 def dvm_tup_get(tup, idx):
 	return tup[idx]
+
+# ----- #
+# Other #
+# ----- #
+
+##
+# Generate a range.
+# \param start, stop The lower and upper bounds of the range
+# \return An array containing [start..stop]
+##
+def dvm_range(start, stop): return range(start, stop)
 
 ## 
 # Contains references to all
@@ -516,10 +557,13 @@ operations = {
 	'not'         : dvm_not,
 
 	'neg'         : dvm_neg,
+	'abs'         : dvm_abs,
 	'add'         : dvm_add,
 	'sub'         : dvm_sub,
 	'mul'         : dvm_mul,
 	'div'         : dvm_div,
+	'mod'         : dvm_mod,
+	'exp'         : dvm_exp,
 	'floor'       : dvm_floor,
 	'ceil'        : dvm_ceil,
 	'min'         : dvm_min,
@@ -537,7 +581,7 @@ operations = {
 	'strRev'      : dvm_str_reverse,
 	'strApp'      : dvm_str_append,
 
-	'arrEmpty'    : dvm_arr_isEmpty,
+	'arrIsEmpty'    : dvm_arr_isEmpty,
 	'arrLen'      : dvm_arr_length,
 	'arrEmpty'    : dvm_arr_empty,
 	'arrCreate'   : dvm_arr_create,
@@ -546,10 +590,11 @@ operations = {
 	'arrIns'      : dvm_arr_insert,
 	'arrRepl'     : dvm_arr_replace,
 	'arrCat'      : dvm_arr_catenate,
-	'arrFrnt'     : dvm_arr_add_front,
-	'arrBck'      : dvm_arr_add_back,
+	'arrAddFrnt'  : dvm_arr_add_front,
+	'arrAddBck'   : dvm_arr_add_back,
 	'arrSub'      : dvm_arr_sub,
-	'arrGather'   : dvm_arr_gather,
+	'arrPrune'    : dvm_arr_prune,
 
-	'tupGet'      : dvm_tup_get
+	'tupGet'      : dvm_tup_get,
+	'range'       : dvm_range
 }
