@@ -38,6 +38,10 @@
             "id": "repl_python_run",
             //"id": "repl_pypy_run",
             "file": "config/Python/Main.sublime-menu"
+        },{
+            "name": "run DIS",
+            "selector": "source.dis",
+            "cmd":["dvm", "${file_name}"]
         }
     ]
 }
