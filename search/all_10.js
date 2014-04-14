@@ -9,7 +9,6 @@ var searchData=
   ['removenode',['removeNode',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a469fd6ff5a8998ed8f2b3a3dbb470d44',1,'IGR::subgraph::SubGraph']]],
   ['removesubgraph',['removeSubGraph',['../namespace_i_g_r.html#a65ebbe22884a8432dde8a09b2bd7abab',1,'IGR.removeSubGraph()'],['../namespace_i_g_r_1_1graph.html#a7e5c5ed6090e21d9d49779b412cac8d7',1,'IGR.graph.removeSubGraph()']]],
   ['removetarget',['removeTarget',['../class_i_g_r_1_1port_1_1_output_port.html#a703248bb27b70a5d1f8580eeb38c39c9',1,'IGR::port::OutputPort']]],
-  ['repeatloopcnode',['RepeatLoopCNode',['../class_i_g_r_1_1node_1_1_repeat_loop_c_node.html',1,'IGR::node']]],
   ['replacenode',['replaceNode',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a140ea922546d43d0306aeb765e191df8',1,'IGR::subgraph::SubGraph']]],
   ['res',['res',['../classfront_end_1_1_i_f1_1_1type_1_1___function_type.html#a6ce99995629f7748b7bd9c3e92e09947',1,'frontEnd::IF1::type::_FunctionType']]],
   ['reset',['reset',['../namespacecore_1_1memory.html#a1765945bfc16abcf7ecf4b56c4d5d1ee',1,'core::memory']]],
