@@ -39,6 +39,10 @@ import graphConverter
 # Select Node #
 # ----------- #
 
+##
+# Ensure all the subgraphs
+# link to the exit sink.
+##
 def selectStart(dis, comp):
 	dis.indent += 1
 
@@ -52,6 +56,10 @@ def selectStart(dis, comp):
 			# but keep it as attribute.
 			sg.nodes.remove(sg.exit)
 
+##
+# Add all the subgraph entry points
+# to the destination list of select.
+##
 def selectStop(dis, comp, idx):
 	dis.indent -= 1
 
@@ -62,7 +70,23 @@ def selectStop(dis, comp, idx):
 		dstLst.append(str(pair[1]))
 	dis.modifyString(0, idx, lambda str : str + ' '.join(dstLst))
 
-
+##
+# Convert a select node.
+#
+# First, we add the node itself to dis.
+# We add a sink and a switch. The switch is the
+# actual select while the sink will be the exit point
+# of any results coming out of the compound node.
+#
+# We register the switch as the destination for any incoming links
+# while the sink is registered as the source of outgoing links.
+#
+# Next, we simply ensure all the subgraphs link to the shard sink,
+# and compile the subgraphs.
+#
+# Finally, we get the dis addresses of the possible destinations, after
+# which we add them to the destination list of the switch node.
+##
 def convertSelectNode(dis, node):
 	switch = dis.addInstruction(0, 'SWI', [])
 	sink   = dis.addInstruction(0, 'SNK', [])
