@@ -108,7 +108,7 @@ class Node(object):
 			return res
 		except IndexError:
 			self.inputs += 1
-			self.inputPorts += [port.InputPort(self, idx)]
+			self.inputPorts += [port.InputPort(self, self.inputs)]
 			return self.getInputPort(idx)
 
 	##
@@ -127,7 +127,7 @@ class Node(object):
 			return res
 		except IndexError:
 			self.outputs += 1
-			self.outputPorts += [port.OutputPort(self, idx)]
+			self.outputPorts += [port.OutputPort(self, self.outputs)]
 			return self.getOutputPort(idx)
 
 
