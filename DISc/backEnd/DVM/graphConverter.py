@@ -41,6 +41,7 @@ import IGR
 import dis
 import IGR.node
 import nodeConverter
+import compoundConverter
 
 ##
 # Add the contents of a collection of subGraphs
@@ -54,38 +55,12 @@ import nodeConverter
 def convertSubGraphs(subGraphs, prog):
 	nodes = []
 
-	def compStart(comp):
-		prog.indent += 1
-
-		retKey = prog.getFromKey(comp)
-		for sg in comp.subGraphs[1:]:
-			# Everything that links to exit node of sg will
-			# now link to the common exit sink instead.
-			prog.linkNode(sg.exit, retKey, retKey)
-			if sg.exit in sg.nodes:
-				# Make sure we don't parse exit node,
-				# but keep it as attribute.
-				sg.nodes.remove(sg.exit)
-
-	def compStop(comp, idx):
-		prog.indent -= 1
-
-		dstLst = []
-		for sg in comp.subGraphs[1:]:
-			pair = prog.getToKey(sg.entry)
-			dstLst.append(str(pair[0]))
-			dstLst.append(str(pair[1]))
-		prog.modifyString(0, idx, lambda str : str + ' '.join(dstLst))
-
 	def nodeProc(node):
-		nodeConverter.convertNode(prog, node)
-		nodes.append(node)
-
 		if node.isCompound():
-			idx = prog.getIdx(0) - 1
-			compStart(node)
-			convertSubGraphs(node.subGraphs[1:], prog)
-			compStop(node, idx)
+			compoundConverter.convertNode(prog, node)
+		else:
+			nodeConverter.convertNode(prog, node)
+		nodes.append(node)
 
 	def sgStart(sg):
 		prog.addCommentLines("Starting subgraph %s" % sg.name)

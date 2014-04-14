@@ -29,5 +29,67 @@
 # \brief IGR compound node
 #
 # This module contains functions for the compilation of compound nodes.
+# It's worth noting that the links to and from a compound node are made by
+# the regular nodeConverter.
 ##
 
+import graphConverter
+
+# ----------- #
+# Select Node #
+# ----------- #
+
+def selectStart(dis, comp):
+	dis.indent += 1
+
+	retKey = dis.getFromKey(comp)
+	for sg in comp.subGraphs[1:]:
+		# Everything that links to exit node of sg will
+		# now link to the common exit sink instead.
+		dis.linkNode(sg.exit, retKey, retKey)
+		if sg.exit in sg.nodes:
+			# Make sure we don't parse exit node,
+			# but keep it as attribute.
+			sg.nodes.remove(sg.exit)
+
+def selectStop(dis, comp, idx):
+	dis.indent -= 1
+
+	dstLst = []
+	for sg in comp.subGraphs[1:]:
+		pair = dis.getToKey(sg.entry)
+		dstLst.append(str(pair[0]))
+		dstLst.append(str(pair[1]))
+	dis.modifyString(0, idx, lambda str : str + ' '.join(dstLst))
+
+
+def convertSelectNode(dis, node):
+	switch = dis.addInstruction(0, 'SWI', [])
+	sink   = dis.addInstruction(0, 'SNK', [])
+	dis.linkNode(node, switch, sink)
+
+	idx = dis.getIdx(0) - 1
+	selectStart(dis, node)
+	graphConverter.convertSubGraphs(node.subGraphs[1:], dis)
+	selectStop(dis, node, idx)
+
+# ------- #
+# General #
+# ------- #
+
+converters = {
+	'select' : convertSelectNode
+}
+
+##
+# Add the DIS equivalent of a certain node
+# to a DIS object.
+#
+# \param dis
+#		A DIS instance that will contain the DIS version
+#		of the node.
+# \param node
+#		The node to convert.
+##
+def convertNode(dis, node):
+	return converters[node.type](dis, node)

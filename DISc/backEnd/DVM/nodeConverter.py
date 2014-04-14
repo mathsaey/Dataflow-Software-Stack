@@ -84,11 +84,6 @@ def convertCallNode(dis, node):
 	dis.modifyString(0, dis.getIdx(0) - 1, lambda str : "%s %s" % (str, app))
 	return ins
 
-def convertSelectNode(dis, node):
-	switch = dis.addInstruction(0, 'SWI', [])
-	sink   = dis.addInstruction(0, 'SNK', [])
-	dis.linkNode(node, switch, sink)
-
 converters = {
 	IGR.node.Node              : convertNode,
 	IGR.node.SubGraphEntryNode : convertSGEntryNode,
@@ -96,7 +91,6 @@ converters = {
 	IGR.node.OperationNode     : convertOpNode,
 	IGR.node.CallNode          : convertCallNode,
 	IGR.node.ConstantNode      : convertConstantNode,
-	IGR.node.SelectCNode       : convertSelectNode,
 }
 
 ##
