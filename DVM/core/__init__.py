@@ -156,10 +156,10 @@ def addContextChange(binds, restores, destSink, retSink):
 # \return
 #		The key of the context map instruction.
 ##
-def addSplit(restores, destSink, retnSink, mergeLst):
+def addSplit(binds, restores, destSink, retnSink, mergeLst):
 	return _addInstruction(
 		instruction.Split,
-		[restores, destSink, retnSink, mergeLst])
+		[binds, restores, destSink, retnSink, mergeLst])
 
 ##
 # Add a merge instruction.

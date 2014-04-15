@@ -74,7 +74,7 @@ class ContextMatcher(object):
 	def checkKey(self, key):
 		if key not in self.tokens:
 			inst = self.core.memory.get(key[0])
-			arr = [None] * inst.totalinputs
+			arr = [None] * inst.totalInputs
 			inp = inst.realInputs
 			self.tokens.update({key : [arr, 0, inp]})
 

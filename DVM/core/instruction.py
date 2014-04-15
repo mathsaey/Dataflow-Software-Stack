@@ -179,7 +179,7 @@ class DestinationMap(Destination):
 class OperationInstruction(Instruction, DestinationList, Literal):
 	def __init__(self, operation, inputs):
 		super(OperationInstruction, self).__init__(chunk = 1)
-		self.totalinputs  = inputs
+		self.totalInputs  = inputs
 		self.realInputs   = inputs
 		self.operation    = operation
 		self.litLst       = [None] * inputs
@@ -386,7 +386,10 @@ class Split(Instruction):
 		self.retnSink = retnSink
 		self.mergeLst = mergeLst
 		self.restores = restores
-		self.bindArgs = binds
+
+		self.totalInputs = binds
+		self.realInputs  = binds
+
 
 	def execute(self, tokens, core):
 		log.info("%s, splitting compound: %s", self, tokens)

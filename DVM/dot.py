@@ -73,7 +73,7 @@ def processOp(inst):
 	shape = "shape = Mrecord"
 
 	lits = [str(l) if l is not None else "" for l in inst.litLst]
-	inputs = "|".join(["<%d> %s" % (i, lits[i]) for i in xrange(0, inst.totalinputs)])
+	inputs = "|".join(["<%d> %s" % (i, lits[i]) for i in xrange(0, inst.totalInputs)])
 
 	name = inst.operation.__name__
 	label = 'label = "{{%s} | %s}"' % (inputs, name)
