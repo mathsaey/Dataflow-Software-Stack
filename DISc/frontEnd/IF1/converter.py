@@ -102,6 +102,14 @@ def convertAGather(node):
 	checkLowerBound(node.inputPorts[0], 0)
 	removeInputPort(node)
 
+	if node.inputs <= 1:
+		inputPort = node.inputPorts[0]
+		targets = [target for port in node.outputPorts for target in port.targets]
+
+		inputPort.source.removeTarget(inputPort)
+		inputPort.source.addTargets(targets)
+		node.subGraph.removeNode(node)	
+
 ##
 # Convert AScatter.
 #
@@ -109,8 +117,15 @@ def convertAGather(node):
 # be provided by the compiler.
 ##
 def convertAScatter(node):
-	pass
+	inputPort = node.inputPorts[0]
+	targets = [target for target in node.outputPorts[0].targets]
+	inputPort.source.removeTarget(inputPort)
+	inputPort.source.addTargets(targets)
+	node.subGraph.removeNode(node)
 
+	for target in node.outputPorts[1].targets:
+		target.source = None
+	
 ##
 # Convert ALimL
 #
@@ -137,6 +152,9 @@ def convertASetL(node):
 	checkLowerBound(bndPort, 0)
 
 	targets = [target for port in node.outputPorts for target in port.targets]
+
+	if not bndPort.acceptsLiteral():
+		bndPort.source.removeTarget(bndPort)
 
 	arrPort.source.removeTarget(arrPort)
 	arrPort.source.addTargets(targets)
