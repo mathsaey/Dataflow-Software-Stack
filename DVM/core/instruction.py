@@ -178,7 +178,7 @@ class DestinationMap(Destination):
 ##
 class OperationInstruction(Instruction, DestinationList, Literal):
 	def __init__(self, operation, inputs):
-		super(OperationInstruction, self).__init__(1)
+		super(OperationInstruction, self).__init__(chunk = 1)
 		self.totalinputs  = inputs
 		self.realInputs   = inputs
 		self.operation    = operation
@@ -360,46 +360,60 @@ class Switch(Instruction):
 ##
 # Split instruction.
 #
-# This instruction only accepts compound data.
-# It stores a destination sink, a return sink 
-# and a merge list.
+# This receives at least one input, 
+# which should be a compound data type.
+# The argument sent to port 0 should be a compound data type.
 #
-# When it receives a compound data type, it splits
-# up the type into it's elements. For each of those 
-# elements, it sends the element to idx 0 of the destSink.
-# The index of this element is sent to port 1.
-# The index can be used to reconstruct the compound type later on.
+# Upon executing, the element at port 0 will be 'split',
+# all of it's elements will be sent to port 0 of the destSink,
+# with a new context. The indices of the elements will be sent to port 1.
+# All of the other inputs of the split will be sent to the subgraph, 
+# with shifted ports.
 #
-# Finally, the split instruction also accepts a merge list. 
-# The merge list is a list of addresses. On splitting a compound
-# data type, the split instruction will tell the context matcher
-# to reserve the correct amount of slots for the length of the compound
-# data type.
+# When these tokens reach a context change, they will be sent to the retnSink.
+# This returnsink will probably lead to a merge instruction. This instruction 
+# accepts tokens with a (value, idx) pair as datum, the new array will then be
+# constructed from this data. 
+#
+# The Split instruction will notify any merge operation in it's mergeLst of the
+# length of any array it splits.
 ##
 class Split(Instruction):
 	
-	def __init__(self, restores, destSink, retnSink, mergeLst):
-		super(Split, self).__init__()
+	def __init__(self, binds, restores, destSink, retnSink, mergeLst):
+		super(Split, self).__init__(chunk = 1)
 		self.destSink = destSink
 		self.retnSink = retnSink
 		self.mergeLst = mergeLst
 		self.restores = restores
+		self.bindArgs = binds
 
-	def execute(self, token, core):
-		log.info("%s, splitting compound: %s", self, token)
-		length = len(token.datum)
-		cont = token.tag.cont
+	def execute(self, tokens, core):
+		log.info("%s, splitting compound: %s", self, tokens)
+		cont = tokens[0].tag.cont
+		comp = tokens[0].datum
+		args = tokens[1:]
+		leng = len(comp)
 
-		for idx in xrange(0, length):
-			elm = token.datum[idx]
+		# Adjust the tags of the args
+		for token in tokens: token.tag.port += 1
+
+		# Notify the merge instructions.
+		for merge in self.mergeLst:
+			core.tokenizer.merger.setLength(merge, cont, leng)
+
+		# Split the compound and send it's elements
+		# and the args to the destSink
+		for idx in xrange(0, leng):
+			elm = comp[idx]
 			new = core.tokenizer.contexts.bind(
-				self.retnSink, cont, self.restores * length)
+				self.retnSink, cont, self.restores)
 
 			core.tokenizer.simple(elm, self.destSink, 0, new)
 			core.tokenizer.simple(idx, self.destSink, 1, new)
 
-		for merge in self.mergeLst:
-			core.tokenizer.merger.setLength(merge, cont, length)
+			for arg in args:
+				core.tokenizer.simple(arg.datum, self.destSink, arg.tag.port, new)
 
 ##
 # Merge Instruction

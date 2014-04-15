@@ -119,13 +119,14 @@ def createContextChange(arr, stmt):
 
 ## Create a context map function
 def createSplit(arr, stmt):
-	restores = int(arr[3])
-	destChnk = int(arr[4])
-	destInst = int(arr[5])
-	retnChnk = int(arr[6])
-	retnInst = int(arr[7])
-	mergeLst = getInstructionList(arr, 8)
-	return core.addSplit(restores, (destChnk, destInst), (retnChnk, retnInst), mergeLst)
+	changes  = int(arr[3])
+	restores = int(arr[4])
+	destChnk = int(arr[5])
+	destInst = int(arr[6])
+	retnChnk = int(arr[7])
+	retnInst = int(arr[8])
+	mergeLst = getInstructionList(arr, 9)
+	return core.addSplit(changes, restores, (destChnk, destInst), (retnChnk, retnInst), mergeLst)
 
 ## Create a merge instruction.
 def createMerge(arr, stmt):

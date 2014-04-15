@@ -133,6 +133,10 @@ def addContextChange(binds, restores, destSink, retSink):
 ##
 # Add a split instruction.
 #
+# \param binds
+#		The amount of inputs that the split will take.
+#		A split should always take at least one argument,
+#		which is the array that will be split.
 # \param restores
 #		The amount of tokens the context will
 #		produce before being deleted. 
