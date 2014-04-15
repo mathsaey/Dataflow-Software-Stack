@@ -238,7 +238,7 @@ class DIS(object):
 	#		The port to send to.
 	##
 	def addLink(self, fromKey, fromPort, toKey, toPort):
-		str = "LINK %d %d %d %d %d %d" % (
+		str = "LINK %d %d %d -> %d %d %d" % (
 			fromKey[0], fromKey[1], fromPort,
 			toKey[0], toKey[1], toPort)
 

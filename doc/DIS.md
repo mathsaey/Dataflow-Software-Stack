@@ -38,7 +38,7 @@ Where chunk is a keyword while idx is the index of the chunk. A chunk ends when 
 
 A link allows us to define from-to relationships between instructions. A link is added in the following way:
 
-    LINK <from> <to>
+    LINK <from> -> <to>
 
 Where LINK is a keyword while from is the address (chunk, instruction, port) of the port on the source node while to is the address of the port on the to node.
 
@@ -49,7 +49,7 @@ A port address is represented with the following syntax:
 
 Thus a link from port 0 of instruction 3 in chunk 0 to port 0 of instruction 1 in chunk 1 would look like this:
 
-    LINK 0 3 0 0 1 0
+    LINK 0 3 0 -> 0 1 0
 
 Links can occur anywhere in the file, and transcend chunk boundaries. However, a link should never precede the declaration of it's source.
 

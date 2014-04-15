@@ -217,7 +217,7 @@ def parseLit(arr, stmt):
 # Parse a link statement.
 #
 # A link statement has the form:
-# `LINK <from> <to>` where from and
+# `LINK <from> -> <to>` where from and
 # to have the form:
 # `<chunk> <instruction> <port>`
 ##
@@ -226,9 +226,9 @@ def parseLink(arr, stmt):
 	srcInst = int(arr[2])
 	srcPort = int(arr[3])
 
-	dstChnk = int(arr[4])
-	dstInst = int(arr[5])
-	dstPort = int(arr[6])
+	dstChnk = int(arr[5])
+	dstInst = int(arr[6])
+	dstPort = int(arr[7])
 
 	log.info("Adding link from: c %d i %d p %d to: c %d i %d p %d", 
 		srcChnk, srcInst, srcPort, dstChnk, dstInst, dstPort)

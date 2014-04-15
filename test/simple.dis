@@ -9,18 +9,18 @@ $ Starting subgraph main
 INST SNK 2 
 INST RST 3 
 
-LINK 0 2 0 1 0 0
-LINK 0 2 1 1 0 1
-LINK 0 2 2 1 1 0
-LINK 0 2 3 1 1 1
+LINK 0 2 0 -> 1 0 0
+LINK 0 2 1 -> 1 0 1
+LINK 0 2 2 -> 1 1 0
+LINK 0 2 3 -> 1 1 1
 $ Leaving subgraph main
 
 $ Implicit call to main
 INST CHN 4 4 1 0 2 0 1
-LINK 0 0 0 0 4 0
-LINK 0 0 1 0 4 1
-LINK 0 0 2 0 4 2
-LINK 0 0 3 0 4 3
+LINK 0 0 0 -> 0 4 0
+LINK 0 0 1 -> 0 4 1
+LINK 0 0 2 -> 0 4 2
+LINK 0 0 3 -> 0 4 3
 
 CHUNK 1
 $ Starting subgraph main
@@ -28,9 +28,9 @@ INST OPR 0 add 2
 INST OPR 1 add 2
 INST OPR 2 add 2
 
-LINK 1 0 0 1 2 0
-LINK 1 1 0 1 2 1
-LINK 1 2 0 0 3 0
+LINK 1 0 0 -> 1 2 0
+LINK 1 1 0 -> 1 2 1
+LINK 1 2 0 -> 0 3 0
 $ Leaving subgraph main
 
 
