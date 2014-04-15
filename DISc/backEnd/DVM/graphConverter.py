@@ -70,6 +70,7 @@ def convertSubGraphs(subGraphs, prog):
 
 		for node in nodes:
 			nodeConverter.addLinks(prog, node)
+		for node in nodes:
 			nodeConverter.addLiterals(prog, node)
 
 		prog.addCommentLines("Leaving subgraph %s" % sg.name)
@@ -96,7 +97,6 @@ def convert(entryName = 'main'):
 	inputs = main.outputs
 
 	if inputs == 0:
-		print main.subGraph.value
 		return "TRIV <= %s" % main.subGraph.value
 
 	prog = dis.DIS(inputs)
