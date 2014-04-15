@@ -366,30 +366,19 @@ class Switch(Instruction):
 #
 # Upon executing, the element at port 0 will be 'split',
 # all of it's elements will be sent to port 0 of the destSink,
-# with a new context. The indices of the elements will be sent to port 1.
-# All of the other inputs of the split will be sent to the subgraph, 
-# with shifted ports.
+# with a new context. All of the other arguments will also be sent to the sink.
 #
-# When these tokens reach a context change, they will be sent to the retnSink.
-# This returnsink will probably lead to a merge instruction. This instruction 
-# accepts tokens with a (value, idx) pair as datum, the new array will then be
-# constructed from this data. 
-#
-# The Split instruction will notify any merge operation in it's mergeLst of the
-# length of any array it splits.
+# Upon reaching a context restore, the resulting tokens will each receive a port
+# matching their index in the split array.
 ##
 class Split(Instruction):
 	
-	def __init__(self, binds, restores, destSink, retnSink, mergeLst):
+	def __init__(self, binds, dest, merge):
 		super(Split, self).__init__(chunk = 1)
-		self.destSink = destSink
-		self.retnSink = retnSink
-		self.mergeLst = mergeLst
-		self.restores = restores
-
 		self.totalInputs = binds
 		self.realInputs  = binds
-
+		self.merge = merge
+		self.dest = dest
 
 	def execute(self, tokens, core):
 		log.info("%s, splitting compound: %s", self, tokens)
@@ -398,40 +387,19 @@ class Split(Instruction):
 		args = tokens[1:]
 		leng = len(comp)
 
-		# Adjust the tags of the args
-		for token in tokens: token.tag.port += 1
-
-		# Notify the merge instructions.
-		for merge in self.mergeLst:
-			core.tokenizer.merger.setLength(merge, cont, leng)
+		core.matcher.setKey(self.merge, cont, leng)
 
 		# Split the compound and send it's elements
 		# and the args to the destSink
 		for idx in xrange(0, leng):
 			elm = comp[idx]
 			new = core.tokenizer.contexts.bind(
-				self.retnSink, cont, self.restores)
+				self.merge, idx, cont, 1)
 
-			core.tokenizer.simple(elm, self.destSink, 0, new)
-			core.tokenizer.simple(idx, self.destSink, 1, new)
+			core.tokenizer.simple(elm, self.dest, 0, new)
 
 			for arg in args:
-				core.tokenizer.simple(arg.datum, self.destSink, arg.tag.port, new)
-
-##
-# Merge Instruction
-#
-# This instruction accepts tokens with 
-# (idx, value) as their data. When it has
-# received all of it's inputs, it creates an
-# array out of the received values, ordered by
-# the indices found in the data.
-##
-class Merge(Instruction, DestinationList):
-	def execute(self, token, core):
-		log.info("%s, merging: %s", self, token)
-		res = core.tokenizer.merger.add(self, token)
-		if res: self.sendDatum(res, core, None, token.tag.cont)
+				core.tokenizer.simple(arg.datum, self.dest, arg.tag.port, new)
 
 # ---------------- #
 # Stop Instruction #

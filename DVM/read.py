@@ -119,18 +119,12 @@ def createContextChange(arr, stmt):
 
 ## Create a context map function
 def createSplit(arr, stmt):
-	changes  = int(arr[3])
-	restores = int(arr[4])
-	destChnk = int(arr[5])
-	destInst = int(arr[6])
-	retnChnk = int(arr[7])
-	retnInst = int(arr[8])
-	mergeLst = getInstructionList(arr, 9)
-	return core.addSplit(changes, restores, (destChnk, destInst), (retnChnk, retnInst), mergeLst)
-
-## Create a merge instruction.
-def createMerge(arr, stmt):
-	return core.addMerge()
+	binds     = int(arr[3])
+	destChnk  = int(arr[4])
+	destInst  = int(arr[5])
+	mergeChnk = int(arr[6])
+	mergeInst = int(arr[7])
+	return core.addSplit(binds, (destChnk, destInst), (mergeChnk, mergeInst))
 
 ## Create a context restore
 def createContextRestore(arr, stmt):
@@ -162,7 +156,6 @@ instructions = {
 	'BGN' : createStart,
 	'STP' : createStop,
 	'SPL' : createSplit,
-	'MRG' : createMerge,
 	'CHN' : createContextChange,
 	'RST' : createContextRestore,
 	'OPR' : createOperation,

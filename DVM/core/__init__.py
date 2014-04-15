@@ -137,38 +137,19 @@ def addContextChange(binds, restores, destSink, retSink):
 #		The amount of inputs that the split will take.
 #		A split should always take at least one argument,
 #		which is the array that will be split.
-# \param restores
-#		The amount of tokens the context will
-#		produce before being deleted. 
-#		Think about this in terms of merges that will
-#		be performed. The actual amount of restores will
-#		be based on this value * the length of the compound type.
-# \param destSink
+# \param dest
 #		The destination of the tokens after
 #		the context change.
-# \param retSink
-#		The destination of the tokens
-#		after the context restore.
-# \param mergeLst
-#		A list of merge instructions. The length
-#		of the compound type will be sent to each
-#		of these in order to merge properly.
+# \param merge
+#		The instruction that will recreate
+#		the array after the contextrestore.
 # \return
 #		The key of the context map instruction.
 ##
-def addSplit(binds, restores, destSink, retnSink, mergeLst):
+def addSplit(binds, dest, merge):
 	return _addInstruction(
 		instruction.Split,
-		[binds, restores, destSink, retnSink, mergeLst])
-
-##
-# Add a merge instruction.
-#
-# \return 
-#		The key of the merge instruction.
-##
-def addMerge():
-	return _addInstruction(instruction.Merge)
+		[binds, dest, merge])
 
 ##
 # Add a context restore instruction.

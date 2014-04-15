@@ -143,7 +143,7 @@ class ContextManager(object):
 				del self.contextMap[key]
 
 		else:
-			cont = self.bind(retInst, token.tag.cont, restores)
+			cont = self.bind(retInst, None, token.tag.cont, restores)
 			self.contextMap.update({key : [cont, binds - 1]})
 
 			for key in inst.getLiterals():
@@ -163,14 +163,17 @@ class ContextManager(object):
  	#
  	# \param destination
  	#		The instruction to bind to the context.
+ 	# \param port
+ 	#		The port to bind to the context.
+ 	#		None if the port should not change.
  	# \param context
  	#		The context to restore.
  	# \param restores
  	#		The amount of tokens the context will produce.
  	##
- 	def bind(self, destination, context, restores):
+ 	def bind(self, destInst, destPort, context, restores):
  		cont = self.tokenizer.core.contextCreator.get()
- 		self.restoreMap.update({cont : [destination, context, restores]})
+ 		self.restoreMap.update({cont : [destInst, destPort, context, restores]})
  		return cont
 
 	##
@@ -184,13 +187,14 @@ class ContextManager(object):
 		cont = token.tag.cont
 		pair = self.restoreMap[cont]
 
-		pair[2] -= 1
+		pair[3] -= 1
 
-		if pair[2] <= 0:
+		if pair[3] <= 0:
 			del self.restoreMap[cont]
 
 		token.tag.inst = pair[0]
-		token.tag.cont = pair[1]
+		token.tag.cont = pair[2]
+		if pair[1]: token.tag.port = pair[1]
 		self.tokenizer.add(token)
 
 ##

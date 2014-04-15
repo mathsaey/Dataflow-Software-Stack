@@ -84,10 +84,7 @@ def processConst(inst):
 	return "shape = circle, label = %s" % inst.value
 
 def processSplit(inst):
-	return 'shape = ellipse, label = "Split: %s"' % inst.destSink[1]
-
-def processMerge(inst):
-	return 'shape = ellipse, style = dashed, label = "merge"'
+	return 'shape = ellipse, label = "Split"'
 
 def processContChange(inst):
 	return 'shape = ellipse, label = "Send: %s"' % inst.destSink[1]
@@ -106,7 +103,6 @@ attributes = {
 	core.instruction.Constant             : processConst,
 	core.instruction.Sink                 : processSink,
 	core.instruction.Split                : processSplit,
-	core.instruction.Merge                : processMerge,
 	core.instruction.ContextChange        : processContChange,
 	core.instruction.ContextRestore       : processContRestore,
 	core.instruction.Switch               : processSwitch,
@@ -147,7 +143,7 @@ def addContextChangeLinks(buffer, inst):
 
 def addSplitLinks(buffer, inst):
 	srcKey = generateInstIdentifier(inst)
-	dstKey = generateTupleIdentifier(inst.destSink)
+	dstKey = generateTupleIdentifier(inst.dest)
 	buffer.write("%s -> %s [style = dashed]; \n" % (srcKey, dstKey))
 
 def addSwitchLinks(buffer, inst):

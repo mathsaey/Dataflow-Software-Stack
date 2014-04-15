@@ -63,6 +63,23 @@ class ContextMatcher(object):
 		self.core = core
 
 	##
+	# Dynamically set the amount
+	# of tokens a certain instruction should receive.
+	#
+	# \param inst
+	#		The address of the instruction to set the token amount for.
+	# \param cont
+	#		The context for which this amount is valid. 
+	# \param amount
+	#		The amount of tokens this matcher requires for this key.
+	##
+	def setKey(self, inst, cont, amount):
+		key  = (inst, cont)
+
+		arr = [None] * amount
+		self.tokens.update({key : [arr, 0, amount]})
+
+	##
 	# See if a given key is already a part of the 
 	# tokens we are matching.
 	# 
