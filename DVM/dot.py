@@ -147,8 +147,8 @@ def addContextChangeLinks(buffer, inst):
 
 def addSplitLinks(buffer, inst):
 	srcKey = generateInstIdentifier(inst)
-	retKey = generateTupleIdentifier(inst.retnSink)
-	buffer.write("%s -> %s ; \n" % (srcKey, retKey))
+	dstKey = generateTupleIdentifier(inst.destSink)
+	buffer.write("%s -> %s [style = dashed]; \n" % (srcKey, dstKey))
 
 def addSwitchLinks(buffer, inst):
 	for dst in inst.dstLst:
