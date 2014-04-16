@@ -355,6 +355,14 @@ def dvm_arr_isEmpty(arr): return arr == []
 def dvm_arr_length(arr): return len(arr)
 
 ##
+# Get the upper bound of an array.
+#
+# \param arr An array
+# \return highest index of the array.
+##
+def dvm_arr_bound(arr): return len(arr) - 1
+
+##
 # Create an empty array
 ##
 def dvm_arr_empty(): return []
@@ -581,8 +589,9 @@ operations = {
 	'strRev'      : dvm_str_reverse,
 	'strApp'      : dvm_str_append,
 
-	'arrIsEmpty'    : dvm_arr_isEmpty,
+	'arrIsEmpty'  : dvm_arr_isEmpty,
 	'arrLen'      : dvm_arr_length,
+	'arrBound'    : dvm_arr_bound,
 	'arrEmpty'    : dvm_arr_empty,
 	'arrCreate'   : dvm_arr_create,
 	'arrGet'      : dvm_arr_get,

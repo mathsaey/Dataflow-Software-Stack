@@ -52,21 +52,27 @@ INST SNK 13
 	LINK 0 12 0 -> 1 6 0
 	LINK 0 12 1 -> 1 6 1
 	LINK 0 12 2 -> 1 6 2
+	LINK 0 12 3 -> 1 6 3
 	LINK 0 12 0 -> 1 7 0
 	LINK 0 12 1 -> 1 7 1
 	LINK 0 12 2 -> 1 7 2
+	LINK 0 12 3 -> 1 7 3
 	LINK 0 12 0 -> 1 8 0
 	LINK 0 12 1 -> 1 8 1
 	LINK 0 12 2 -> 1 8 2
+	LINK 0 12 3 -> 1 8 3
 	LINK 0 12 0 -> 1 9 0
 	LINK 0 12 1 -> 1 9 1
 	LINK 0 12 2 -> 1 9 2
+	LINK 0 12 3 -> 1 9 3
 	LINK 0 12 0 -> 1 10 0
 	LINK 0 12 1 -> 1 10 1
 	LINK 0 12 2 -> 1 10 2
+	LINK 0 12 3 -> 1 10 3
 	LINK 0 12 0 -> 1 11 0
 	LINK 0 12 1 -> 1 11 1
 	LINK 0 12 2 -> 1 11 2
+	LINK 0 12 3 -> 1 11 3
 	$ Starting subgraph Generate
 	
 	$ Leaving subgraph Generate
@@ -97,7 +103,7 @@ INST SNK 13
 	INST RST 21 
 	
 	LINK 0 20 0 -> 1 16 0
-	LINK 0 20 1 -> 1 16 1
+	LINK 0 20 2 -> 1 16 1
 	$ Leaving subgraph body_8
 	
 	$ Starting subgraph body_9
@@ -105,8 +111,8 @@ INST SNK 13
 	INST RST 23 
 	
 	LINK 0 22 0 -> 1 18 0
-	LINK 0 22 1 -> 1 18 1
-	LINK 0 22 2 -> 1 17 1
+	LINK 0 22 2 -> 1 18 1
+	LINK 0 22 3 -> 1 17 1
 	$ Leaving subgraph body_9
 	
 	$ Starting subgraph body_10
@@ -122,9 +128,9 @@ INST SNK 13
 	
 
 LINK 0 8 0 -> 0 10 0
-LINK 0 8 0 -> 0 12 1
+LINK 0 8 0 -> 0 12 2
 LINK 0 8 1 -> 0 10 1
-LINK 0 8 1 -> 0 12 2
+LINK 0 8 1 -> 0 12 3
 LINK 0 8 2 -> 1 5 0
 LINK 0 8 3 -> 1 5 1
 LINK 0 11 0 -> 1 31 1
@@ -172,12 +178,12 @@ $ Starting subgraph main
 INST OPR 5 arrCat 2
 
 $ Starting for...in
-	INST SPL 6 3 0 14 1 23
-	INST SPL 7 3 0 16 1 24
-	INST SPL 8 3 0 18 1 25
-	INST SPL 9 3 0 20 1 26
-	INST SPL 10 3 0 22 1 27
-	INST SPL 11 3 0 24 1 28
+	INST SPL 6 4 0 14 1 23
+	INST SPL 7 4 0 16 1 24
+	INST SPL 8 4 0 18 1 25
+	INST SPL 9 4 0 20 1 26
+	INST SPL 10 4 0 22 1 27
+	INST SPL 11 4 0 24 1 28
 	$ Starting subgraph Generate
 	
 	$ Leaving subgraph Generate
@@ -253,6 +259,7 @@ INST OPR 29 arrCat 2
 INST OPR 30 arrCat 2
 INST OPR 31 arrCat 2
 
+LINK 1 5 0 -> 0 12 1
 LINK 1 5 0 -> 0 12 0
 LINK 1 29 0 -> 1 30 0
 LINK 1 30 0 -> 1 31 0

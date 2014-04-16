@@ -49,7 +49,7 @@ operations = {
 	106 : 'AFill',
 	107 : 'AGather',
 	108 : 'arrIsEmpty',
-	109 : 'arrLen',
+	109 : 'arrBound',
 	110 : 'ALimL',
 #	111 : 'ARemH',
 #	112 : 'ARemL',

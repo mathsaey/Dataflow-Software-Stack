@@ -73,9 +73,11 @@ def acceptsArray(node):
 # We also update the map with the idx -> instruction mapping.
 ##
 def addMerges(node):
-	start = node.subGraphs[0].exit.inputs
+	start  = node.subGraphs[0].exit.inputs
+	entry  = node.subGraphs[2].entry
 
-	for port in node.subGraphs[2].entry.outputPorts[start:]:
+	# Add merge outputs to the exit points of the body
+	for port in entry.outputPorts[start:]:
 		merge = IGR.createOperationNode(node.subGraphs[2], 'array')
 
 		merge.getOutputPort(0).targets = port.targets
@@ -85,6 +87,26 @@ def addMerges(node):
 			target.source = merge.outputPorts[0]
 
 		map.update({port.idx : [None, merge]})
+
+	# Shift the indices so that the array
+	# is at element 0 with everything else behind it.
+	arrIdx = node.inputs
+	arrPort = entry.getOutputPort(arrIdx)
+
+	entry.outputPorts[1:arrIdx + 1] = entry.outputPorts[:arrIdx]
+	entry.outputPorts[0] = arrPort
+
+	for idx in xrange(0, arrIdx + 1):
+		entry.outputPorts[idx].idx = idx
+
+	# Attach any external input.
+	for port in entry.outputPorts[:arrIdx]:
+		if port.isConnected():
+			genPort = node.subGraphs[0].getOutputPort(port.idx)
+			genPort.addTargets(port.targets)
+			for target in port.targets:
+				target.source = genPort
+
 	node.subGraphs[2].removeNode(node.subGraphs[2].entry)
 
 # --------- #
@@ -102,21 +124,16 @@ def adjustGenerator(node):
 	arrPort.source = None
 	
 	# If we are dealing with a generated array
-	# (instead of an external one, link the array
+	# (instead of an external one), link the array
 	# generator.
-	if not acceptsArray(node):
-		src.addTarget(dst)
-		dst.source = src
+	src.addTarget(dst)
+	dst.source = src
 
 	# Get the arguments to the node linked to the
 	# exit node (which will lead to the split)
 	for port in node.inputPorts:
 		src = port.source
-		idx = port.idx
-
-		# Shift the elements to the right if we
-		# had to generate our own array
-		if not acceptsArray(node): idx += 1
+		idx = port.idx + 1
 
 		dst = gen.exit.getInputPort(idx)
 		src.removeTarget(port)
@@ -145,22 +162,12 @@ def shiftBodyPorts(node):
 	entry = node.subGraphs[1].entry
 	arrIdx = node.inputs
 
-	if acceptsArray(node):	
-		oldArrPort = entry.getOutputPort(arrIdx)
-		newArrPort = entry.getOutputPort(0)
-	
-		newArrPort.targets = oldArrPort.targets
-		oldArrPort.targets = []
+	arrPort = entry.getOutputPort(arrIdx)
+	entry.outputPorts[1:arrIdx + 1] = entry.outputPorts[:arrIdx]
+	entry.outputPorts[0] = arrPort
 
-		for target in newArrPort.targets:
-			target.source = newArrPort
-	else:
-		arrPort = entry.getOutputPort(arrIdx)
-		entry.outputPorts[1:arrIdx + 1] = entry.outputPorts[:arrIdx]
-		entry.outputPorts[0] = arrPort
-
-		for idx in xrange(0, arrIdx + 1):
-			entry.outputPorts[idx].idx = idx
+	for idx in xrange(0, arrIdx + 1):
+		entry.outputPorts[idx].idx = idx
 
 ##
 # Follow the path through the body,
@@ -227,8 +234,8 @@ def convertForIn(node):
 	node.subGraphs[0].name = "Generate"
 	node.subGraphs[2].name = "Return"
 
-	adjustGenerator(node)	
 	addMerges(node)
+	adjustGenerator(node)	
 
 	shiftBodyPorts(node)
 	splitBody(node)

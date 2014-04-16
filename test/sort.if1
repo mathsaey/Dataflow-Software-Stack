@@ -262,7 +262,7 @@ E	5 1	0 1	9	%mk=V
 E	4 1	5 1	4	%mk=V
 E	0 1	5 2	9	 %na=arr	%mk=V	%sl=68
 E	5 1	0 1	9	%mk=V
-X	11	"Main"	%sl=77	%sf=sort.sis
+X	11	"main"	%sl=77	%sf=sort.sis
 N 1	120	%sl=78	%sf=sort.sis
 L		1 1	11 "sort"	%mk=V
 E	0 1	1 2	9	 %na=arr	%mk=V	%sl=78

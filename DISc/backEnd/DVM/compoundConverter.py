@@ -110,9 +110,7 @@ def convertForAllNode(dis, node):
 
 	dis.indent += 1
 
-	inputs = node.inputs
-	if len(node.subGraphs[0].nodes) > 1:
-		inputs += 1
+	inputs = node.inputs + 1
 
 	splits = [dis.addInstruction(1, 'SPL', [inputs]) for e in node.map]
 	stopIdx = dis.getIdx(1)
@@ -152,7 +150,6 @@ def convertForAllNode(dis, node):
 converters = {
 	'select' : convertSelectNode,
 	'forall' : convertForAllNode
-
 }
 
 ##
