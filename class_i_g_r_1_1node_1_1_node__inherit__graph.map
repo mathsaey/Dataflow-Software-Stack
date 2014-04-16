@@ -1,8 +1,8 @@
 <map id="IGR.node.Node" name="IGR.node.Node">
-<area shape="rect" id="node2" href="$class_i_g_r_1_1node_1_1_call_node.html" title="Call node. " alt="" coords="5,295,141,395"/>
-<area shape="rect" id="node3" href="$class_i_g_r_1_1node_1_1_compound_node.html" title="Compound node. " alt="" coords="166,289,345,402"/>
-<area shape="rect" id="node4" href="$class_i_g_r_1_1node_1_1_constant_node.html" title="Constant node. " alt="" coords="370,302,536,389"/>
-<area shape="rect" id="node5" href="$class_i_g_r_1_1node_1_1_operation_node.html" title="Operation node. " alt="" coords="560,302,732,389"/>
-<area shape="rect" id="node6" href="$class_i_g_r_1_1node_1_1_sub_graph_entry_node.html" title="Entry point of a subgraph. " alt="" coords="757,295,963,395"/>
-<area shape="rect" id="node7" href="$class_i_g_r_1_1node_1_1_sub_graph_exit_node.html" title="Exit point of a subgraph. " alt="" coords="987,295,1183,395"/>
+<area shape="rect" id="node2" href="$class_i_g_r_1_1node_1_1_call_node.html" title="Call node. " alt="" coords="5,309,141,409"/>
+<area shape="rect" id="node3" href="$class_i_g_r_1_1node_1_1_compound_node.html" title="Compound node. " alt="" coords="166,302,345,415"/>
+<area shape="rect" id="node4" href="$class_i_g_r_1_1node_1_1_constant_node.html" title="Constant node. " alt="" coords="370,315,536,402"/>
+<area shape="rect" id="node5" href="$class_i_g_r_1_1node_1_1_operation_node.html" title="Operation node. " alt="" coords="560,315,732,402"/>
+<area shape="rect" id="node6" href="$class_i_g_r_1_1node_1_1_sub_graph_entry_node.html" title="Entry point of a subgraph. " alt="" coords="757,309,963,409"/>
+<area shape="rect" id="node7" href="$class_i_g_r_1_1node_1_1_sub_graph_exit_node.html" title="Exit point of a subgraph. " alt="" coords="987,309,1183,409"/>
 </map>

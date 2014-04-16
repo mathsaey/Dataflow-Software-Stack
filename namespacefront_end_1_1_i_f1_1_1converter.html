@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0ad20cc</span>
+   &#160;<span id="projectnumber">9d98d10</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -247,8 +247,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convert AGather. </p>
-<p>The node that emerges from this has different semantics in DVM. In dvm, the second argument is an array that is already constructed.</p>
-<p>The merge instruction should be provided by the compiler when it's compiling compound nodes. </p>
+<p>Gathers only occur in the returns subgraph of compound nodes. This has different semantics in DVM.</p>
+<p>The actual instruction that constructs the array is added during the compilation of the compound node. Thus, we can remove the gather operation if it only does this. If it also filters out a part of the array, a prune instruction is added to do the actual filtering. </p>
 
 </div>
 </div>
@@ -267,7 +267,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convert AScatter. </p>
-<p>Once again, the actual split should be provided by the compiler. </p>
+<p>There is no concept of a scatter opertaion in DVM. Instead a Split operation provides this functionality. The split is added when compiling the compound node. </p>
 
 </div>
 </div>
@@ -462,7 +462,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2014 02:08:51 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 07:40:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

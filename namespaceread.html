@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0ad20cc</span>
+   &#160;<span id="projectnumber">9d98d10</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -124,9 +124,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a141d094ab5d5144dfd509925e99f4339"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a141d094ab5d5144dfd509925e99f4339">createSplit</a></td></tr>
 <tr class="memdesc:a141d094ab5d5144dfd509925e99f4339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a context map function.  <a href="#a141d094ab5d5144dfd509925e99f4339">More...</a><br/></td></tr>
 <tr class="separator:a141d094ab5d5144dfd509925e99f4339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f41b87a10540cf45fe823346970be4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#af2f41b87a10540cf45fe823346970be4">createMerge</a></td></tr>
-<tr class="memdesc:af2f41b87a10540cf45fe823346970be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a merge instruction.  <a href="#af2f41b87a10540cf45fe823346970be4">More...</a><br/></td></tr>
-<tr class="separator:af2f41b87a10540cf45fe823346970be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492fa7ea038cfe45fa32a71e85d25c27"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread.html#a492fa7ea038cfe45fa32a71e85d25c27">createContextRestore</a></td></tr>
 <tr class="memdesc:a492fa7ea038cfe45fa32a71e85d25c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a context restore.  <a href="#a492fa7ea038cfe45fa32a71e85d25c27">More...</a><br/></td></tr>
 <tr class="separator:a492fa7ea038cfe45fa32a71e85d25c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -409,34 +406,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af2f41b87a10540cf45fe823346970be4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def read.createMerge </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>arr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>stmt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a merge instruction. </p>
-
-</div>
-</div>
 <a class="anchor" id="a492fa7ea038cfe45fa32a71e85d25c27"></a>
 <div class="memitem">
 <div class="memproto">
@@ -633,7 +602,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Parse a link statement. </p>
-<p>A link statement has the form: <code>LINK &lt;from&gt; &lt;to&gt;</code> where from and to have the form: <code>&lt;chunk&gt; &lt;instruction&gt; &lt;port&gt;</code> </p>
+<p>A link statement has the form: <code>LINK &lt;from&gt; -&gt; &lt;to&gt;</code> where from and to have the form: <code>&lt;chunk&gt; &lt;instruction&gt; &lt;port&gt;</code> </p>
 
 </div>
 </div>
@@ -742,12 +711,11 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;BGN&#39;</span> : createStart,</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;STP&#39;</span> : createStop,</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;SPL&#39;</span> : createSplit,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;MRG&#39;</span> : createMerge,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;CHN&#39;</span> : createContextChange,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;RST&#39;</span> : createContextRestore,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;OPR&#39;</span> : createOperation,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;CNS&#39;</span> : createConstant</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;CHN&#39;</span> : createContextChange,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;RST&#39;</span> : createContextRestore,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;OPR&#39;</span> : createOperation,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;CNS&#39;</span> : createConstant</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
 </div><!-- fragment -->
 <p>Defines the operation codes and the functions to create them. </p>
 
@@ -777,7 +745,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2014 02:08:51 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 07:40:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

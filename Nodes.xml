@@ -220,6 +220,10 @@
                 <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
                </Node>
                <Node>
+                <Name>forin</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+               </Node>
+               <Node>
                 <Name>graphConverter</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
                </Node>
@@ -720,6 +724,10 @@
                 <Path>namespaceback_end_1_1_d_v_m_1_1dvm.html</Path>
                </Node>
                <Node>
+                <Name>forin</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+               </Node>
+               <Node>
                 <Name>graphConverter</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
                </Node>
@@ -828,6 +836,11 @@
                   <Name>__init__</Name>
                   <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
                   <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>setKey</Name>
+                  <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+                  <Anchor>a415b34f7e97120fd028b82fbf952fee8</Anchor>
                  </Node>
                  <Node>
                   <Name>checkKey</Name>
@@ -1069,9 +1082,9 @@
                   <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                  </Node>
                  <Node>
-                  <Name>totalinputs</Name>
+                  <Name>totalInputs</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                  <Anchor>a96dd2e7341bbcc906326cd71502f9f7c</Anchor>
+                  <Anchor>a72219ffbc54de61eb0d811e483cb435f</Anchor>
                  </Node>
                  <Node>
                   <Name>realInputs</Name>
@@ -1385,24 +1398,24 @@
                   <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                  </Node>
                  <Node>
-                  <Name>destSink</Name>
+                  <Name>totalInputs</Name>
                   <Path>classcore_1_1instruction_1_1_split.html</Path>
-                  <Anchor>a861941ea5fc04282f458605eb017fb11</Anchor>
+                  <Anchor>a6917f88342a99604d1a9424070b7c73b</Anchor>
                  </Node>
                  <Node>
-                  <Name>retnSink</Name>
+                  <Name>realInputs</Name>
                   <Path>classcore_1_1instruction_1_1_split.html</Path>
-                  <Anchor>a9c24a11c5be04986a3643d645412fdaf</Anchor>
+                  <Anchor>a0099f88ef14ea8344f25f1f5fc9a97a4</Anchor>
                  </Node>
                  <Node>
-                  <Name>mergeLst</Name>
+                  <Name>merge</Name>
                   <Path>classcore_1_1instruction_1_1_split.html</Path>
-                  <Anchor>aa7f4232be2cd9b9eeb90c965dce5fbb9</Anchor>
+                  <Anchor>a9c7b6d06e2b8be49df1f3fed0cf1567f</Anchor>
                  </Node>
                  <Node>
-                  <Name>restores</Name>
+                  <Name>dest</Name>
                   <Path>classcore_1_1instruction_1_1_split.html</Path>
-                  <Anchor>a3ef8839a23db4e0ec571cf64713e60db</Anchor>
+                  <Anchor>a126c39b55c4d1a22571cea7ab6710c54</Anchor>
                  </Node>
                  <Node>
                   <Name>chunk</Name>
@@ -1413,52 +1426,6 @@
                   <Name>key</Name>
                   <Path>classcore_1_1instruction_1_1_split.html</Path>
                   <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>Merge</Name>
-                <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>execute</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>ad0a308cb08f5054718c3cd6cd3f126b2</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>setKey</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>__str__</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>addDestination</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sendDatum</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>chunk</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>key</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>destinations</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -1826,11 +1793,6 @@
                   <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
                  </Node>
                  <Node>
-                  <Name>merger</Name>
-                  <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
-                  <Anchor>af6add4268a6603b6eb5aa9bdc10e5b17</Anchor>
-                 </Node>
-                 <Node>
                   <Name>switcher</Name>
                   <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
                   <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
@@ -1941,37 +1903,6 @@
                   <Name>destinations</Name>
                   <Path>classcore_1_1tokenizer_1_1_switcher.html</Path>
                   <Anchor>a621b97773f8da957fe462447715dc329</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>Merger</Name>
-                <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__init__</Name>
-                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                  <Anchor>ad4254acdceca143ddb06871f7fe62111</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>setLength</Name>
-                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                  <Anchor>a69efaa8786acc3021dcfbfc7fe0b3ef3</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>add</Name>
-                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                  <Anchor>a15f25dc8ec16f2c0cade165642e9475d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>tokenizer</Name>
-                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                  <Anchor>ace51326d25573993ac33e87184dbb063</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>mergeLists</Name>
-                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                  <Anchor>a3fc0f4ce49067164e40beb4e989eae2f</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -2339,6 +2270,11 @@
                   <Anchor>a7ddacf2fada1a6819aef29b504042744</Anchor>
                  </Node>
                  <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                 </Node>
+                 <Node>
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
@@ -2425,6 +2361,11 @@
                   <Anchor>a8ab74d2b56c312401337ae62d847e598</Anchor>
                  </Node>
                  <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                 </Node>
+                 <Node>
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
@@ -2501,6 +2442,11 @@
                   <Anchor>aca620c5d04bd61225a91c8edf6e92fdd</Anchor>
                  </Node>
                  <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                 </Node>
+                 <Node>
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                   <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
@@ -2570,6 +2516,11 @@
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                   <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
                  </Node>
                  <Node>
                   <Name>getInputPort</Name>
@@ -2658,6 +2609,11 @@
                   <Anchor>a7cb449ad9469a45007c9a3806c7d1575</Anchor>
                  </Node>
                  <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                 </Node>
+                 <Node>
                   <Name>getInputPort</Name>
                   <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                   <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -2732,6 +2688,11 @@
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
                   <Anchor>a05ef1e9a01c5b5c6224d2619d414959f</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
                  </Node>
                  <Node>
                   <Name>getInputPort</Name>
@@ -2818,6 +2779,11 @@
                   <Name>__str__</Name>
                   <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                   <Anchor>af4904091fc8d46604dec7608eee117b2</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>copy</Name>
+                  <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                  <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
                  </Node>
                  <Node>
                   <Name>getInputPort</Name>
@@ -3203,10 +3169,6 @@
                   <Path>classcore_1_1instruction_1_1_constant.html</Path>
                  </Node>
                  <Node>
-                  <Name>core.instruction.Merge</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                 </Node>
-                 <Node>
                   <Name>core.instruction.OperationInstruction</Name>
                   <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
                  </Node>
@@ -3239,10 +3201,6 @@
                <Node>
                 <Name>core.instruction.ContextRestore</Name>
                 <Path>classcore_1_1instruction_1_1_context_restore.html</Path>
-               </Node>
-               <Node>
-                <Name>core.instruction.Merge</Name>
-                <Path>classcore_1_1instruction_1_1_merge.html</Path>
                </Node>
                <Node>
                 <Name>core.instruction.OperationInstruction</Name>
@@ -3319,10 +3277,6 @@
              <Node>
               <Name>core.tokenizer.ContextManager</Name>
               <Path>classcore_1_1tokenizer_1_1_context_manager.html</Path>
-             </Node>
-             <Node>
-              <Name>core.tokenizer.Merger</Name>
-              <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
              </Node>
              <Node>
               <Name>core.tokenizer.Switcher</Name>
@@ -3592,6 +3546,11 @@
                     <Anchor>a5e40cfc3fde5b6732b0e2f466b4be8f3</Anchor>
                    </Node>
                    <Node>
+                    <Name>convertForAllNode</Name>
+                    <Path>compound_converter_8py.html</Path>
+                    <Anchor>a173606809ebfcab19262584110df0140</Anchor>
+                   </Node>
+                   <Node>
                     <Name>convertNode</Name>
                     <Path>compound_converter_8py.html</Path>
                     <Anchor>ac2bbfb7d2a23e6d474ab0c657b2e63bf</Anchor>
@@ -3778,6 +3737,72 @@
                     <Name>logLevel</Name>
                     <Path>_d_i_sc_2back_end_2_d_v_m_2dvm_8py.html</Path>
                     <Anchor>ae31b46dd72807e5a67434feb14bda152</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>forin.py</Name>
+                  <Path>forin_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>getArrayCount</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a371a84c155a7128e5fbe3e9d9f354c6b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>acceptsArray</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a727cdaabee6de8bd26c15b535113dbb5</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addMerges</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a7619fb0f53f6a71374b4f25ec84cb586</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>adjustGenerator</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a3de133f5e15d20557e72d4061f00e359</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>shiftBodyPorts</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a08643dd7330f4111f69907328c5616c4</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>duplicatePath</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>af2b427a76805255ae5e32a65a5d5b472</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>splitBody</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a7bab726c01689becb90564c947b44e2c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>addBodySinks</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>ac38b20b237313c6a20fca4e76834071a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertForIn</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>aa1ed12dab4bd60430a2220f204995eaf</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>checkNode</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a58596d8f8f2d7692f7c54f46dffa6159</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convert</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>a91c0db9c4e6af4ec81aaa1b6733e70e8</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>map</Name>
+                    <Path>forin_8py.html</Path>
+                    <Anchor>ab7cc9ce9b39b15bd3b311d731fde057f</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -5092,6 +5117,11 @@
                     <Anchor>a7ddacf2fada1a6819aef29b504042744</Anchor>
                    </Node>
                    <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                   </Node>
+                   <Node>
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_node.html</Path>
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
@@ -5178,6 +5208,11 @@
                     <Anchor>a8ab74d2b56c312401337ae62d847e598</Anchor>
                    </Node>
                    <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                   </Node>
+                   <Node>
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_entry_node.html</Path>
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
@@ -5254,6 +5289,11 @@
                     <Anchor>aca620c5d04bd61225a91c8edf6e92fdd</Anchor>
                    </Node>
                    <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                   </Node>
+                   <Node>
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_sub_graph_exit_node.html</Path>
                     <Anchor>ac12f27ab33e889932546764ce499d460</Anchor>
@@ -5323,6 +5363,11 @@
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
                     <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputPort</Name>
@@ -5411,6 +5456,11 @@
                     <Anchor>a7cb449ad9469a45007c9a3806c7d1575</Anchor>
                    </Node>
                    <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+                   </Node>
+                   <Node>
                     <Name>getInputPort</Name>
                     <Path>class_i_g_r_1_1node_1_1_call_node.html</Path>
                     <Anchor>ac027c6e51dd93ee101de90af78e15010</Anchor>
@@ -5485,6 +5535,11 @@
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
                     <Anchor>a05ef1e9a01c5b5c6224d2619d414959f</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputPort</Name>
@@ -5571,6 +5626,11 @@
                     <Name>__str__</Name>
                     <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
                     <Anchor>af4904091fc8d46604dec7608eee117b2</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>copy</Name>
+                    <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
+                    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
                    </Node>
                    <Node>
                     <Name>getInputPort</Name>
@@ -5987,11 +6047,6 @@
                   <Anchor>a2160367b1944bca0cd466923b26e002b</Anchor>
                  </Node>
                  <Node>
-                  <Name>addMerge</Name>
-                  <Path>_d_v_m_2core_2____init_____8py.html</Path>
-                  <Anchor>abc1a678c8e15442a334e4c1e47740ebf</Anchor>
-                 </Node>
-                 <Node>
                   <Name>addContextRestore</Name>
                   <Path>_d_v_m_2core_2____init_____8py.html</Path>
                   <Anchor>ad150c9d50bdacb978da6423a3316abc4</Anchor>
@@ -6133,6 +6188,11 @@
                     <Name>__init__</Name>
                     <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
                     <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>setKey</Name>
+                    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+                    <Anchor>a415b34f7e97120fd028b82fbf952fee8</Anchor>
                    </Node>
                    <Node>
                     <Name>checkKey</Name>
@@ -6384,9 +6444,9 @@
                     <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
                    </Node>
                    <Node>
-                    <Name>totalinputs</Name>
+                    <Name>totalInputs</Name>
                     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-                    <Anchor>a96dd2e7341bbcc906326cd71502f9f7c</Anchor>
+                    <Anchor>a72219ffbc54de61eb0d811e483cb435f</Anchor>
                    </Node>
                    <Node>
                     <Name>realInputs</Name>
@@ -6700,24 +6760,24 @@
                     <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
                    </Node>
                    <Node>
-                    <Name>destSink</Name>
+                    <Name>totalInputs</Name>
                     <Path>classcore_1_1instruction_1_1_split.html</Path>
-                    <Anchor>a861941ea5fc04282f458605eb017fb11</Anchor>
+                    <Anchor>a6917f88342a99604d1a9424070b7c73b</Anchor>
                    </Node>
                    <Node>
-                    <Name>retnSink</Name>
+                    <Name>realInputs</Name>
                     <Path>classcore_1_1instruction_1_1_split.html</Path>
-                    <Anchor>a9c24a11c5be04986a3643d645412fdaf</Anchor>
+                    <Anchor>a0099f88ef14ea8344f25f1f5fc9a97a4</Anchor>
                    </Node>
                    <Node>
-                    <Name>mergeLst</Name>
+                    <Name>merge</Name>
                     <Path>classcore_1_1instruction_1_1_split.html</Path>
-                    <Anchor>aa7f4232be2cd9b9eeb90c965dce5fbb9</Anchor>
+                    <Anchor>a9c7b6d06e2b8be49df1f3fed0cf1567f</Anchor>
                    </Node>
                    <Node>
-                    <Name>restores</Name>
+                    <Name>dest</Name>
                     <Path>classcore_1_1instruction_1_1_split.html</Path>
-                    <Anchor>a3ef8839a23db4e0ec571cf64713e60db</Anchor>
+                    <Anchor>a126c39b55c4d1a22571cea7ab6710c54</Anchor>
                    </Node>
                    <Node>
                     <Name>chunk</Name>
@@ -6728,52 +6788,6 @@
                     <Name>key</Name>
                     <Path>classcore_1_1instruction_1_1_split.html</Path>
                     <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
-                  <Name>Merge</Name>
-                  <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>execute</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>ad0a308cb08f5054718c3cd6cd3f126b2</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setKey</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>__str__</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>addDestination</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>sendDatum</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>chunk</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>key</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>destinations</Name>
-                    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-                    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -7221,11 +7235,6 @@
                     <Anchor>a59de1da3ca27e92b05644acda3783b05</Anchor>
                    </Node>
                    <Node>
-                    <Name>merger</Name>
-                    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
-                    <Anchor>af6add4268a6603b6eb5aa9bdc10e5b17</Anchor>
-                   </Node>
-                   <Node>
                     <Name>switcher</Name>
                     <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
                     <Anchor>a71435922dfda22564e1b696783e7c103</Anchor>
@@ -7340,37 +7349,6 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>Merger</Name>
-                  <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>__init__</Name>
-                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                    <Anchor>ad4254acdceca143ddb06871f7fe62111</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>setLength</Name>
-                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                    <Anchor>a69efaa8786acc3021dcfbfc7fe0b3ef3</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>add</Name>
-                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                    <Anchor>a15f25dc8ec16f2c0cade165642e9475d</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>tokenizer</Name>
-                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                    <Anchor>ace51326d25573993ac33e87184dbb063</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>mergeLists</Name>
-                    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-                    <Anchor>a3fc0f4ce49067164e40beb4e989eae2f</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
                   <Name>log</Name>
                   <Path>tokenizer_8py.html</Path>
                   <Anchor>a36bd6a5e6915a6fca1d10d6d50d6ce86</Anchor>
@@ -7417,11 +7395,6 @@
                 <Name>processSplit</Name>
                 <Path>_d_v_m_2dot_8py.html</Path>
                 <Anchor>a044fb77be296af098189feb4a76bad98</Anchor>
-               </Node>
-               <Node>
-                <Name>processMerge</Name>
-                <Path>_d_v_m_2dot_8py.html</Path>
-                <Anchor>a227f9c4f328f7a85a9327c509d8239b1</Anchor>
                </Node>
                <Node>
                 <Name>processContChange</Name>
@@ -7886,11 +7859,6 @@
                 <Name>createSplit</Name>
                 <Path>read_8py.html</Path>
                 <Anchor>a141d094ab5d5144dfd509925e99f4339</Anchor>
-               </Node>
-               <Node>
-                <Name>createMerge</Name>
-                <Path>read_8py.html</Path>
-                <Anchor>af2f41b87a10540cf45fe823346970be4</Anchor>
                </Node>
                <Node>
                 <Name>createContextRestore</Name>

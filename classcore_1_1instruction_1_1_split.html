@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0ad20cc</span>
+   &#160;<span id="projectnumber">9d98d10</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -124,14 +124,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a861941ea5fc04282f458605eb017fb11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a861941ea5fc04282f458605eb017fb11">destSink</a></td></tr>
-<tr class="separator:a861941ea5fc04282f458605eb017fb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c24a11c5be04986a3643d645412fdaf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a9c24a11c5be04986a3643d645412fdaf">retnSink</a></td></tr>
-<tr class="separator:a9c24a11c5be04986a3643d645412fdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7f4232be2cd9b9eeb90c965dce5fbb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#aa7f4232be2cd9b9eeb90c965dce5fbb9">mergeLst</a></td></tr>
-<tr class="separator:aa7f4232be2cd9b9eeb90c965dce5fbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ef8839a23db4e0ec571cf64713e60db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a3ef8839a23db4e0ec571cf64713e60db">restores</a></td></tr>
-<tr class="separator:a3ef8839a23db4e0ec571cf64713e60db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6917f88342a99604d1a9424070b7c73b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a6917f88342a99604d1a9424070b7c73b">totalInputs</a></td></tr>
+<tr class="separator:a6917f88342a99604d1a9424070b7c73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0099f88ef14ea8344f25f1f5fc9a97a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a0099f88ef14ea8344f25f1f5fc9a97a4">realInputs</a></td></tr>
+<tr class="separator:a0099f88ef14ea8344f25f1f5fc9a97a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7b6d06e2b8be49df1f3fed0cf1567f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a9c7b6d06e2b8be49df1f3fed0cf1567f">merge</a></td></tr>
+<tr class="separator:a9c7b6d06e2b8be49df1f3fed0cf1567f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126c39b55c4d1a22571cea7ab6710c54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_split.html#a126c39b55c4d1a22571cea7ab6710c54">dest</a></td></tr>
+<tr class="separator:a126c39b55c4d1a22571cea7ab6710c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91177f4c4ea31c8ddfb9b579bb62c6af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#a91177f4c4ea31c8ddfb9b579bb62c6af">chunk</a></td></tr>
 <tr class="separator:a91177f4c4ea31c8ddfb9b579bb62c6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527cedfacb1a6de78809642b6ad4aeb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1instruction_1_1_instruction.html#a527cedfacb1a6de78809642b6ad4aeb3">key</a></td></tr>
@@ -139,9 +139,9 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classcore_1_1instruction_1_1_split.html" title="Split instruction. ">Split</a> instruction. </p>
-<p>This instruction only accepts compound data. It stores a destination sink, a return sink and a merge list.</p>
-<p>When it receives a compound data type, it splits up the type into it's elements. For each of those elements, it sends the element to idx 0 of the destSink. The index of this element is sent to port 1. The index can be used to reconstruct the compound type later on.</p>
-<p>Finally, the split instruction also accepts a merge list. The merge list is a list of addresses. On splitting a compound data type, the split instruction will tell the context matcher to reserve the correct amount of slots for the length of the compound data type. </p>
+<p>This receives at least one input, which should be a compound data type. The argument sent to port 0 should be a compound data type.</p>
+<p>Upon executing, the element at port 0 will be 'split', all of it's elements will be sent to port 0 of the destSink, with a new context. All of the other arguments will also be sent to the sink.</p>
+<p>Upon reaching a context restore, the resulting tokens will each receive a port matching their index in the split array. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a064b4d9d427d25f8503c06628b693188"></a>
 <div class="memitem">
@@ -157,25 +157,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>restores</em>, </td>
+          <td class="paramname"><em>binds</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>destSink</em>, </td>
+          <td class="paramname"><em>dest</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>retnSink</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>mergeLst</em>&#160;</td>
+          <td class="paramname"><em>merge</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -202,7 +196,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>token</em>, </td>
+          <td class="paramname"><em>tokens</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -283,48 +277,48 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a861941ea5fc04282f458605eb017fb11"></a>
+<a class="anchor" id="a6917f88342a99604d1a9424070b7c73b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">core.instruction.Split.destSink</td>
+          <td class="memname">core.instruction.Split.totalInputs</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a9c24a11c5be04986a3643d645412fdaf"></a>
+<a class="anchor" id="a0099f88ef14ea8344f25f1f5fc9a97a4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">core.instruction.Split.retnSink</td>
+          <td class="memname">core.instruction.Split.realInputs</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="aa7f4232be2cd9b9eeb90c965dce5fbb9"></a>
+<a class="anchor" id="a9c7b6d06e2b8be49df1f3fed0cf1567f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">core.instruction.Split.mergeLst</td>
+          <td class="memname">core.instruction.Split.merge</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a3ef8839a23db4e0ec571cf64713e60db"></a>
+<a class="anchor" id="a126c39b55c4d1a22571cea7ab6710c54"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">core.instruction.Split.restores</td>
+          <td class="memname">core.instruction.Split.dest</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -374,7 +368,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2014 02:08:51 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 07:40:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

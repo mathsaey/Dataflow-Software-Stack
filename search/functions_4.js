@@ -8,6 +8,7 @@ var searchData=
   ['dotheader',['dotHeader',['../namespacedot.html#a7a6533ae0aad7e9f943ceeafa8c9a3b3',1,'dot.dotHeader()'],['../namespace_i_g_r_1_1dot.html#a7ce9fa8e72127cc7889c1a94afff20fa',1,'IGR.dot.dotHeader()']]],
   ['dotstring',['dotString',['../namespacedot.html#a49783850adb845f6b8900f6e35df6dce',1,'dot']]],
   ['dottofile',['dotToFile',['../namespace_i_g_r_1_1dot.html#aa15087bf161d5c705a29e7ab84d9fdf9',1,'IGR::dot']]],
+  ['duplicatepath',['duplicatePath',['../namespaceback_end_1_1_d_v_m_1_1forin.html#af2b427a76805255ae5e32a65a5d5b472',1,'backEnd::DVM::forin']]],
   ['dvm_5fabs',['dvm_abs',['../namespacenatives.html#a67facfbe603ffd3413b1cbd51e508c0b',1,'natives']]],
   ['dvm_5fadd',['dvm_add',['../namespacenatives.html#a02049f1feebcffefe7962b4fb083d6c7',1,'natives']]],
   ['dvm_5fand',['dvm_and',['../namespacenatives.html#ad9af42003b8677c6e6ecfe3545dcfabc',1,'natives']]],

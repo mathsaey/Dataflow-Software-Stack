@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">0ad20cc</span>
+   &#160;<span id="projectnumber">9d98d10</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -114,8 +114,6 @@ Functions</h2></td></tr>
 <tr class="separator:aade0f9177bccad59210663904257bbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a044fb77be296af098189feb4a76bad98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a044fb77be296af098189feb4a76bad98">processSplit</a></td></tr>
 <tr class="separator:a044fb77be296af098189feb4a76bad98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a227f9c4f328f7a85a9327c509d8239b1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a227f9c4f328f7a85a9327c509d8239b1">processMerge</a></td></tr>
-<tr class="separator:a227f9c4f328f7a85a9327c509d8239b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d0b3beff192082b64a2add0fcc27e97"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a6d0b3beff192082b64a2add0fcc27e97">processContChange</a></td></tr>
 <tr class="separator:a6d0b3beff192082b64a2add0fcc27e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2110a38408d9a6d2f6bf2456ca668ca9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedot.html#a2110a38408d9a6d2f6bf2456ca668ca9">processContRestore</a></td></tr>
@@ -283,22 +281,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">def dot.processSplit </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>inst</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a227f9c4f328f7a85a9327c509d8239b1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def dot.processMerge </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>inst</em></td><td>)</td>
@@ -728,19 +710,17 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_constant.html">core.instruction.Constant</a>             : processConst,</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_sink.html">core.instruction.Sink</a>                 : processSink,</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_split.html">core.instruction.Split</a>                : processSplit,</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_merge.html">core.instruction.Merge</a>                : processMerge,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_context_change.html">core.instruction.ContextChange</a>        : processContChange,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_context_restore.html">core.instruction.ContextRestore</a>       : processContRestore,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_switch.html">core.instruction.Switch</a>               : processSwitch,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_stop_instruction.html">core.instruction.StopInstruction</a>      : processStop</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_context_change.html">core.instruction.ContextChange</a>        : processContChange,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_context_restore.html">core.instruction.ContextRestore</a>       : processContRestore,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_switch.html">core.instruction.Switch</a>               : processSwitch,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classcore_1_1instruction_1_1_stop_instruction.html">core.instruction.StopInstruction</a>      : processStop</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
 <div class="ttc" id="classcore_1_1instruction_1_1_context_restore_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_context_restore.html">core.instruction.ContextRestore</a></div><div class="ttdoc">Represents the restoration of context. </div><div class="ttdef"><b>Definition:</b> instruction.py:312</div></div>
 <div class="ttc" id="classcore_1_1instruction_1_1_operation_instruction_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_operation_instruction.html">core.instruction.OperationInstruction</a></div><div class="ttdoc">An operation instruction defines a single operation on all of it&#39;s inputs. </div><div class="ttdef"><b>Definition:</b> instruction.py:179</div></div>
 <div class="ttc" id="classcore_1_1instruction_1_1_switch_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_switch.html">core.instruction.Switch</a></div><div class="ttdoc">Represents an instruction that will dynamically determine the destination of it&#39;s tokens at runtime...</div><div class="ttdef"><b>Definition:</b> instruction.py:333</div></div>
-<div class="ttc" id="classcore_1_1instruction_1_1_stop_instruction_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_stop_instruction.html">core.instruction.StopInstruction</a></div><div class="ttdoc">Represents the end of the program. </div><div class="ttdef"><b>Definition:</b> instruction.py:428</div></div>
+<div class="ttc" id="classcore_1_1instruction_1_1_stop_instruction_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_stop_instruction.html">core.instruction.StopInstruction</a></div><div class="ttdoc">Represents the end of the program. </div><div class="ttdef"><b>Definition:</b> instruction.py:413</div></div>
 <div class="ttc" id="classcore_1_1instruction_1_1_constant_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_constant.html">core.instruction.Constant</a></div><div class="ttdoc">Constant instruction. </div><div class="ttdef"><b>Definition:</b> instruction.py:229</div></div>
-<div class="ttc" id="classcore_1_1instruction_1_1_split_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_split.html">core.instruction.Split</a></div><div class="ttdoc">Split instruction. </div><div class="ttdef"><b>Definition:</b> instruction.py:379</div></div>
-<div class="ttc" id="classcore_1_1instruction_1_1_merge_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_merge.html">core.instruction.Merge</a></div><div class="ttdoc">Merge Instruction. </div><div class="ttdef"><b>Definition:</b> instruction.py:413</div></div>
+<div class="ttc" id="classcore_1_1instruction_1_1_split_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_split.html">core.instruction.Split</a></div><div class="ttdoc">Split instruction. </div><div class="ttdef"><b>Definition:</b> instruction.py:374</div></div>
 <div class="ttc" id="classcore_1_1instruction_1_1_context_change_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_context_change.html">core.instruction.ContextChange</a></div><div class="ttdoc">Represents a context change in the program. </div><div class="ttdef"><b>Definition:</b> instruction.py:265</div></div>
 <div class="ttc" id="classcore_1_1instruction_1_1_sink_html"><div class="ttname"><a href="classcore_1_1instruction_1_1_sink.html">core.instruction.Sink</a></div><div class="ttdoc">Sink instruction. </div><div class="ttdef"><b>Definition:</b> instruction.py:247</div></div>
 </div><!-- fragment -->
@@ -749,7 +729,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2014 02:08:51 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 07:40:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

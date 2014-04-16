@@ -38,6 +38,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>convertForAllNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::compoundConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1compound_converter.html</Path>
+    <Anchor>a173606809ebfcab19262584110df0140</Anchor>
+    <DeclaredIn>compoundConverter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>convertNode</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -69,6 +80,145 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
     <Anchor>a6d420beb3004da764486ac5f6234451b</Anchor>
     <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getArrayCount</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a371a84c155a7128e5fbe3e9d9f354c6b</Anchor>
+    <Abstract>See how many arrays a for...in node generates internally. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>acceptsArray</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a727cdaabee6de8bd26c15b535113dbb5</Anchor>
+    <Abstract>See if the generator accepts an array or creates on. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addMerges</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a7619fb0f53f6a71374b4f25ec84cb586</Anchor>
+    <Abstract>Replace the subgraphHeader of the return subgraph with array instructions that will merge our inputs...</Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>adjustGenerator</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a3de133f5e15d20557e72d4061f00e359</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>shiftBodyPorts</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a08643dd7330f4111f69907328c5616c4</Anchor>
+    <Abstract>Adjust the ports of the body so that the array elements are at port 0 and the other arguments after i...</Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>duplicatePath</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>af2b427a76805255ae5e32a65a5d5b472</Anchor>
+    <Abstract>Follow the path through the body, starting from the exit point and add every node we encounter up to ...</Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>splitBody</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a7bab726c01689becb90564c947b44e2c</Anchor>
+    <Abstract>Duplicate the path for every out port that produces an array. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addBodySinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>ac38b20b237313c6a20fca4e76834071a</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertForIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>aa1ed12dab4bd60430a2220f204995eaf</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a58596d8f8f2d7692f7c54f46dffa6159</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a91c0db9c4e6af4ec81aaa1b6733e70e8</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>map</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>ab7cc9ce9b39b15bd3b311d731fde057f</Anchor>
+    <Abstract>Stores the destination of the context change for every split. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1411,18 +1561,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addMerge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore.html</Path>
-    <Anchor>abc1a678c8e15442a334e4c1e47740ebf</Anchor>
-    <Abstract>Add a merge instruction. </Abstract>
-    <DeclaredIn>__init__.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>addContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -2249,17 +2387,6 @@
     </TokenIdentifier>
     <Path>namespacedot.html</Path>
     <Anchor>a044fb77be296af098189feb4a76bad98</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>processMerge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacedot.html</Path>
-    <Anchor>a227f9c4f328f7a85a9327c509d8239b1</Anchor>
     <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
@@ -3598,18 +3725,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>createMerge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>read</Scope>
-    </TokenIdentifier>
-    <Path>namespaceread.html</Path>
-    <Anchor>af2f41b87a10540cf45fe823346970be4</Anchor>
-    <Abstract>Create a merge instruction. </Abstract>
-    <DeclaredIn>read.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>createContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -3992,7 +4107,7 @@
       <Scope>backEnd::DVM::compoundConverter</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1compound_converter.html</Path>
-    <Abstract>IGR compound node. </Abstract>
+    <Abstract>IGR compound node compiler. </Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4028,6 +4143,17 @@
     <Path>namespaceback_end_1_1_d_v_m_1_1compound_converter.html</Path>
     <Anchor>a5e40cfc3fde5b6732b0e2f466b4be8f3</Anchor>
     <Abstract>Convert a select node. </Abstract>
+    <DeclaredIn>compoundConverter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertForAllNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::compoundConverter</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1compound_converter.html</Path>
+    <Anchor>a173606809ebfcab19262584110df0140</Anchor>
     <DeclaredIn>compoundConverter.py</DeclaredIn>
   </Token>
   <Token>
@@ -4458,6 +4584,155 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>backEnd::DVM::forin</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Abstract>IGR for in structure changer. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getArrayCount</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a371a84c155a7128e5fbe3e9d9f354c6b</Anchor>
+    <Abstract>See how many arrays a for...in node generates internally. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>acceptsArray</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a727cdaabee6de8bd26c15b535113dbb5</Anchor>
+    <Abstract>See if the generator accepts an array or creates on. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addMerges</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a7619fb0f53f6a71374b4f25ec84cb586</Anchor>
+    <Abstract>Replace the subgraphHeader of the return subgraph with array instructions that will merge our inputs...</Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>adjustGenerator</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a3de133f5e15d20557e72d4061f00e359</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>shiftBodyPorts</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a08643dd7330f4111f69907328c5616c4</Anchor>
+    <Abstract>Adjust the ports of the body so that the array elements are at port 0 and the other arguments after i...</Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>duplicatePath</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>af2b427a76805255ae5e32a65a5d5b472</Anchor>
+    <Abstract>Follow the path through the body, starting from the exit point and add every node we encounter up to ...</Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>splitBody</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a7bab726c01689becb90564c947b44e2c</Anchor>
+    <Abstract>Duplicate the path for every out port that produces an array. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>addBodySinks</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>ac38b20b237313c6a20fca4e76834071a</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertForIn</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>aa1ed12dab4bd60430a2220f204995eaf</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a58596d8f8f2d7692f7c54f46dffa6159</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convert</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>a91c0db9c4e6af4ec81aaa1b6733e70e8</Anchor>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>map</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd::DVM::forin</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
+    <Anchor>ab7cc9ce9b39b15bd3b311d731fde057f</Anchor>
+    <Abstract>Stores the destination of the context change for every split. </Abstract>
+    <DeclaredIn>forin.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>backEnd::DVM::graphconverter</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -4845,18 +5120,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>addMerge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>core</Scope>
-    </TokenIdentifier>
-    <Path>namespacecore.html</Path>
-    <Anchor>abc1a678c8e15442a334e4c1e47740ebf</Anchor>
-    <Abstract>Add a merge instruction. </Abstract>
-    <DeclaredIn>__init__.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>addContextRestore</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -5178,6 +5441,18 @@
     <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
     <Anchor>ae86db3f3998e735acbe29cff6f6543bd</Anchor>
     <Abstract>Initialize a context matcher. </Abstract>
+    <DeclaredIn>contextMatcher.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>setKey</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>core.contextMatcher.ContextMatcher</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1context_matcher_1_1_context_matcher.html</Path>
+    <Anchor>a415b34f7e97120fd028b82fbf952fee8</Anchor>
+    <Abstract>Dynamically set the amount of tokens a certain instruction should receive. </Abstract>
     <DeclaredIn>contextMatcher.py</DeclaredIn>
   </Token>
   <Token>
@@ -5710,13 +5985,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>totalinputs</Name>
+      <Name>totalInputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core.instruction.OperationInstruction</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_operation_instruction.html</Path>
-    <Anchor>a96dd2e7341bbcc906326cd71502f9f7c</Anchor>
+    <Anchor>a72219ffbc54de61eb0d811e483cb435f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6373,43 +6648,43 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>destSink</Name>
+      <Name>totalInputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core.instruction.Split</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_split.html</Path>
-    <Anchor>a861941ea5fc04282f458605eb017fb11</Anchor>
+    <Anchor>a6917f88342a99604d1a9424070b7c73b</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>retnSink</Name>
+      <Name>realInputs</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core.instruction.Split</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_split.html</Path>
-    <Anchor>a9c24a11c5be04986a3643d645412fdaf</Anchor>
+    <Anchor>a0099f88ef14ea8344f25f1f5fc9a97a4</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>mergeLst</Name>
+      <Name>merge</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core.instruction.Split</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_split.html</Path>
-    <Anchor>aa7f4232be2cd9b9eeb90c965dce5fbb9</Anchor>
+    <Anchor>a9c7b6d06e2b8be49df1f3fed0cf1567f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>restores</Name>
+      <Name>dest</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
       <Scope>core.instruction.Split</Scope>
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_split.html</Path>
-    <Anchor>a3ef8839a23db4e0ec571cf64713e60db</Anchor>
+    <Anchor>a126c39b55c4d1a22571cea7ab6710c54</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6430,103 +6705,6 @@
     </TokenIdentifier>
     <Path>classcore_1_1instruction_1_1_instruction.html</Path>
     <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>core::instruction::Merge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.instruction.Merge</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-    <Abstract>Merge Instruction. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>execute</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Merge</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_merge.html</Path>
-    <Anchor>ad0a308cb08f5054718c3cd6cd3f126b2</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setKey</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>aee7c9bbf4724b95a7aa459cb0bb11364</Anchor>
-    <Abstract>Set the instruction address. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__str__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>a0966adf9213da275782f0005dfb8573b</Anchor>
-    <Abstract>Return a string representation of this instruction. </Abstract>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>addDestination</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.DestinationList</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
-    <Anchor>a3fc0bb5c782bdaa77d73639e170869e1</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>sendDatum</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.instruction.DestinationList</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
-    <Anchor>a33502dcaa555a398e198ad805036e492</Anchor>
-    <DeclaredIn>instruction.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>chunk</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>a91177f4c4ea31c8ddfb9b579bb62c6af</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.Instruction</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_instruction.html</Path>
-    <Anchor>a527cedfacb1a6de78809642b6ad4aeb3</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>destinations</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.instruction.DestinationList</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1instruction_1_1_destination_list.html</Path>
-    <Anchor>a7a10e82b7f205df7a6f185acb4ec4b8a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7467,16 +7645,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>merger</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.tokenizer.Tokenizer</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_tokenizer.html</Path>
-    <Anchor>af6add4268a6603b6eb5aa9bdc10e5b17</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>switcher</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7717,72 +7885,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>core::tokenizer::Merger</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>core.tokenizer.Merger</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-    <Abstract>Token Merger. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__init__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenizer.Merger</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-    <Anchor>ad4254acdceca143ddb06871f7fe62111</Anchor>
-    <Abstract>Store the arrays that are currently under construction. </Abstract>
-    <DeclaredIn>tokenizer.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>setLength</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenizer.Merger</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-    <Anchor>a69efaa8786acc3021dcfbfc7fe0b3ef3</Anchor>
-    <Abstract>Store the length of an array. </Abstract>
-    <DeclaredIn>tokenizer.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>add</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>core.tokenizer.Merger</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-    <Anchor>a15f25dc8ec16f2c0cade165642e9475d</Anchor>
-    <Abstract>Add the value of a token to an array under construction. </Abstract>
-    <DeclaredIn>tokenizer.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tokenizer</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.tokenizer.Merger</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-    <Anchor>ace51326d25573993ac33e87184dbb063</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>mergeLists</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.tokenizer.Merger</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1tokenizer_1_1_merger.html</Path>
-    <Anchor>a3fc0f4ce49067164e40beb4e989eae2f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>disc</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -7901,17 +8003,6 @@
     </TokenIdentifier>
     <Path>namespacedot.html</Path>
     <Anchor>a044fb77be296af098189feb4a76bad98</Anchor>
-    <DeclaredIn>dot.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>processMerge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>dot</Scope>
-    </TokenIdentifier>
-    <Path>namespacedot.html</Path>
-    <Anchor>a227f9c4f328f7a85a9327c509d8239b1</Anchor>
     <DeclaredIn>dot.py</DeclaredIn>
   </Token>
   <Token>
@@ -10396,6 +10487,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -10583,6 +10686,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -10746,6 +10861,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>__str__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -10894,6 +11021,18 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_operation_node.html</Path>
     <Anchor>afcaadd7dafc19178b81fb46e019f7403</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
@@ -11083,6 +11222,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>getInputPort</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -11241,6 +11392,18 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_constant_node.html</Path>
     <Anchor>a05ef1e9a01c5b5c6224d2619d414959f</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
@@ -11426,6 +11589,18 @@
     </TokenIdentifier>
     <Path>class_i_g_r_1_1node_1_1_compound_node.html</Path>
     <Anchor>af4904091fc8d46604dec7608eee117b2</Anchor>
+    <DeclaredIn>node.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>copy</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>IGR.node.Node</Scope>
+    </TokenIdentifier>
+    <Path>class_i_g_r_1_1node_1_1_node.html</Path>
+    <Anchor>a50c0a53f27c157ca2423d409d44ec222</Anchor>
+    <Abstract>Create a copy of a node. </Abstract>
     <DeclaredIn>node.py</DeclaredIn>
   </Token>
   <Token>
@@ -12928,18 +13103,6 @@
     <Path>namespaceread.html</Path>
     <Anchor>a141d094ab5d5144dfd509925e99f4339</Anchor>
     <Abstract>Create a context map function. </Abstract>
-    <DeclaredIn>read.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>createMerge</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>read</Scope>
-    </TokenIdentifier>
-    <Path>namespaceread.html</Path>
-    <Anchor>af2f41b87a10540cf45fe823346970be4</Anchor>
-    <Abstract>Create a merge instruction. </Abstract>
     <DeclaredIn>read.py</DeclaredIn>
   </Token>
   <Token>

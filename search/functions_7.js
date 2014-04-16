@@ -5,6 +5,7 @@ var searchData=
   ['generateinstidentifier',['generateInstIdentifier',['../namespacedot.html#a2a668ea61a6d8ae7533522161c7561dd',1,'dot']]],
   ['generatetupleidentifier',['generateTupleIdentifier',['../namespacedot.html#a19f01ceb0142f40fe3d58a26b8296d0a',1,'dot']]],
   ['get',['get',['../classcore_1_1context_1_1_context_creator.html#aaee11a8561c03ae27303a03886cb2602',1,'core.context.ContextCreator.get()'],['../classcore_1_1memory_1_1_instruction_memory.html#a047af687ab2c0eff932921536d372ee5',1,'core.memory.InstructionMemory.get()'],['../namespacecore_1_1memory.html#adcd75eabf1c237556ef1c8fc10702036',1,'core.memory.get()'],['../namespacefront_end_1_1_i_f1_1_1operations.html#a6d7fb346e20824609ae5265880956d67',1,'frontEnd.IF1.operations.get()']]],
+  ['getarraycount',['getArrayCount',['../namespaceback_end_1_1_d_v_m_1_1forin.html#a371a84c155a7128e5fbe3e9d9f354c6b',1,'backEnd::DVM::forin']]],
   ['getattributes',['getAttributes',['../namespacedot.html#a140922136e7dbf0c1a183cbd72047ac6',1,'dot']]],
   ['getcompound',['getCompound',['../namespacefront_end_1_1_i_f1_1_1compound.html#aa3f94e445b385305aec08fcdb27d4838',1,'frontEnd::IF1::compound']]],
   ['getdot',['getDot',['../namespace_i_g_r_1_1dot.html#ad2dcf03200a33c5368bc5ac31bf518e5',1,'IGR::dot']]],
