@@ -3449,6 +3449,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>dvm_arr_bound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ad9e2b003b1c3262ea89b9c85fc8711a5</Anchor>
+    <Abstract>Get the upper bound of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>dvm_arr_empty</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
@@ -4272,6 +4284,18 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>addCallIdx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a3c1d9198aef6599c1255c568736c8579</Anchor>
+    <Abstract>Add the index of a string waiting for the address of a call to become known. </Abstract>
+    <DeclaredIn>dis.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>addString</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -4482,6 +4506,16 @@
     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
     <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
     <Abstract>Contains the current key per chunk. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>callMap</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>backEnd.DVM.dis.DIS</Scope>
+    </TokenIdentifier>
+    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+    <Anchor>a3678650c5e557ad25b60fd2ced4ca0db</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -12817,6 +12851,18 @@
     <Path>namespacenatives.html</Path>
     <Anchor>ab4d313f7f69e1a0f25ccc1f70386979d</Anchor>
     <Abstract>Get the length of an array. </Abstract>
+    <DeclaredIn>natives.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dvm_arr_bound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>natives</Scope>
+    </TokenIdentifier>
+    <Path>namespacenatives.html</Path>
+    <Anchor>ad9e2b003b1c3262ea89b9c85fc8711a5</Anchor>
+    <Abstract>Get the upper bound of an array. </Abstract>
     <DeclaredIn>natives.py</DeclaredIn>
   </Token>
   <Token>

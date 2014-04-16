@@ -17,7 +17,7 @@ var searchData=
   ['set',['set',['../classcore_1_1tokenizer_1_1_switcher.html#add32cf9c74eeca72017fa4cb995ee2ba',1,'core.tokenizer.Switcher.set()'],['../namespaceback_end.html#a8fb37509b863bbe85fce88efe04582db',1,'backEnd.set()'],['../namespacefront_end.html#a9c7248fd78783fd6023b426b0df7f2cd',1,'frontEnd.set()']]],
   ['setin',['setIn',['../namespacecore.html#a64a7b5be7fa0e4857117508b808dc889',1,'core']]],
   ['setkey',['setKey',['../classcore_1_1context_matcher_1_1_context_matcher.html#a415b34f7e97120fd028b82fbf952fee8',1,'core.contextMatcher.ContextMatcher.setKey()'],['../classcore_1_1instruction_1_1_instruction.html#aee7c9bbf4724b95a7aa459cb0bb11364',1,'core.instruction.Instruction.setKey()']]],
-  ['setup',['setUp',['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()'],['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()']]],
+  ['setup',['setup',['../namespacelog.html#a52a782581d935521b9f10662c0b08eb1',1,'log.setup()'],['../namespaceback_end.html#ac3d5661bdafdf1cd91add6f3984f4bcd',1,'backEnd.setUp()'],['../namespacefront_end.html#a94d8f9060a7c31662ebc71efa876a61f',1,'frontEnd.setUp()']]],
   ['shiftbodyports',['shiftBodyPorts',['../namespaceback_end_1_1_d_v_m_1_1forin.html#a08643dd7330f4111f69907328c5616c4',1,'backEnd::DVM::forin']]],
   ['simple',['simple',['../classcore_1_1tokenizer_1_1_tokenizer.html#a45d66fb9fe22b61249a72ae62053a603',1,'core.tokenizer.Tokenizer.simple()'],['../_simple.html',1,'(Global Namespace)']]],
   ['sink',['Sink',['../classcore_1_1instruction_1_1_sink.html',1,'core::instruction']]],

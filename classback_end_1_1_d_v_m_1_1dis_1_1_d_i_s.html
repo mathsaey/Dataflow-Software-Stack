@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">9d98d10</span>
+   &#160;<span id="projectnumber">95ea7bf</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d5402bfd22a0c953af2bad18ac31c9d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a9d5402bfd22a0c953af2bad18ac31c9d">getToKey</a></td></tr>
 <tr class="memdesc:a9d5402bfd22a0c953af2bad18ac31c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the to key for a node.  <a href="#a9d5402bfd22a0c953af2bad18ac31c9d">More...</a><br/></td></tr>
 <tr class="separator:a9d5402bfd22a0c953af2bad18ac31c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1d9198aef6599c1255c568736c8579"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a3c1d9198aef6599c1255c568736c8579">addCallIdx</a></td></tr>
+<tr class="memdesc:a3c1d9198aef6599c1255c568736c8579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the index of a string waiting for the address of a call to become known.  <a href="#a3c1d9198aef6599c1255c568736c8579">More...</a><br/></td></tr>
+<tr class="separator:a3c1d9198aef6599c1255c568736c8579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e51346ffd8a35a3072fbf65eae1b957"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a8e51346ffd8a35a3072fbf65eae1b957">addString</a></td></tr>
 <tr class="memdesc:a8e51346ffd8a35a3072fbf65eae1b957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a string to a chunk.  <a href="#a8e51346ffd8a35a3072fbf65eae1b957">More...</a><br/></td></tr>
 <tr class="separator:a8e51346ffd8a35a3072fbf65eae1b957"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +181,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1a5e98a5530d867f884d13e2678b3bb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a1a5e98a5530d867f884d13e2678b3bb9">keys</a></td></tr>
 <tr class="memdesc:a1a5e98a5530d867f884d13e2678b3bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the current key per chunk.  <a href="#a1a5e98a5530d867f884d13e2678b3bb9">More...</a><br/></td></tr>
 <tr class="separator:a1a5e98a5530d867f884d13e2678b3bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3678650c5e557ad25b60fd2ced4ca0db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a3678650c5e557ad25b60fd2ced4ca0db">callMap</a></td></tr>
+<tr class="separator:a3678650c5e557ad25b60fd2ced4ca0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac022615797c0e2e46c63acb664a66c22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ac022615797c0e2e46c63acb664a66c22">chunks</a></td></tr>
 <tr class="separator:ac022615797c0e2e46c63acb664a66c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa28d52be6d6442ade0934827328b4ffa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#aa28d52be6d6442ade0934827328b4ffa">inputs</a></td></tr>
@@ -355,6 +360,47 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the to key for a node. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3c1d9198aef6599c1255c568736c8579"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def backEnd.DVM.dis.DIS.addCallIdx </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add the index of a string waiting for the address of a call to become known. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node that is not bound to an address yet. </td></tr>
+    <tr><td class="paramname">idx</td><td>The idx of the string that needs to be updated when the node is bound. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -918,6 +964,18 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3678650c5e557ad25b60fd2ced4ca0db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">backEnd.DVM.dis.DIS.callMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac022615797c0e2e46c63acb664a66c22"></a>
 <div class="memitem">
 <div class="memproto">
@@ -957,7 +1015,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 16 2014 07:40:24 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 16 2014 20:35:24 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

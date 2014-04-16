@@ -6,6 +6,7 @@ var searchData=
   ['active',['active',['../classcore_1_1runtime_1_1_core.html#a4e2ec1436045d4e89011202f44382521',1,'core::runtime::Core']]],
   ['add',['add',['../classcore_1_1context_matcher_1_1_context_matcher.html#a898844014caa85d4f0c1ceb99237e80d',1,'core.contextMatcher.ContextMatcher.add()'],['../classcore_1_1memory_1_1_instruction_memory.html#a5b9011b58141e7c5820fbd1626b5cfc6',1,'core.memory.InstructionMemory.add()'],['../classcore_1_1runtime_1_1_core.html#ad51c3e0d80dfb4b84389014432ba8c58',1,'core.runtime.Core.add()'],['../classcore_1_1tokenizer_1_1_tokenizer.html#a872e4904119cbc98977bed20a3b6445f',1,'core.tokenizer.Tokenizer.add()'],['../namespacecore_1_1memory.html#adadafaa74f91e37b9c0d0f7bb51988f2',1,'core.memory.add()']]],
   ['addbodysinks',['addBodySinks',['../namespaceback_end_1_1_d_v_m_1_1forin.html#ac38b20b237313c6a20fca4e76834071a',1,'backEnd::DVM::forin']]],
+  ['addcallidx',['addCallIdx',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a3c1d9198aef6599c1255c568736c8579',1,'backEnd::DVM::dis::DIS']]],
   ['addcommentline',['addCommentLine',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ad226f9e812f573a107caf3f8cbe3da6a',1,'backEnd::DVM::dis::DIS']]],
   ['addcommentlines',['addCommentLines',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#ac920294a8652f0d4cc119bd871ba1f20',1,'backEnd::DVM::dis::DIS']]],
   ['addconstant',['addConstant',['../namespacecore.html#a4186487684075869659f0cd83c5be56c',1,'core']]],

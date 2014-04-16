@@ -611,6 +611,11 @@
                     <Anchor>a9d5402bfd22a0c953af2bad18ac31c9d</Anchor>
                    </Node>
                    <Node>
+                    <Name>addCallIdx</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a3c1d9198aef6599c1255c568736c8579</Anchor>
+                   </Node>
+                   <Node>
                     <Name>addString</Name>
                     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                     <Anchor>a8e51346ffd8a35a3072fbf65eae1b957</Anchor>
@@ -699,6 +704,11 @@
                     <Name>keys</Name>
                     <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                     <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>callMap</Name>
+                    <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                    <Anchor>a3678650c5e557ad25b60fd2ced4ca0db</Anchor>
                    </Node>
                    <Node>
                     <Name>chunks</Name>
@@ -3596,6 +3606,11 @@
                       <Anchor>a9d5402bfd22a0c953af2bad18ac31c9d</Anchor>
                      </Node>
                      <Node>
+                      <Name>addCallIdx</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a3c1d9198aef6599c1255c568736c8579</Anchor>
+                     </Node>
+                     <Node>
                       <Name>addString</Name>
                       <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                       <Anchor>a8e51346ffd8a35a3072fbf65eae1b957</Anchor>
@@ -3684,6 +3699,11 @@
                       <Name>keys</Name>
                       <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
                       <Anchor>a1a5e98a5530d867f884d13e2678b3bb9</Anchor>
+                     </Node>
+                     <Node>
+                      <Name>callMap</Name>
+                      <Path>classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html</Path>
+                      <Anchor>a3678650c5e557ad25b60fd2ced4ca0db</Anchor>
                      </Node>
                      <Node>
                       <Name>chunks</Name>
@@ -7738,6 +7758,11 @@
                 <Name>dvm_arr_length</Name>
                 <Path>natives_8py.html</Path>
                 <Anchor>ab4d313f7f69e1a0f25ccc1f70386979d</Anchor>
+               </Node>
+               <Node>
+                <Name>dvm_arr_bound</Name>
+                <Path>natives_8py.html</Path>
+                <Anchor>ad9e2b003b1c3262ea89b9c85fc8711a5</Anchor>
                </Node>
                <Node>
                 <Name>dvm_arr_empty</Name>

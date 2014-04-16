@@ -14,6 +14,7 @@ var searchData=
   ['dvm_5fand',['dvm_and',['../namespacenatives.html#ad9af42003b8677c6e6ecfe3545dcfabc',1,'natives']]],
   ['dvm_5farr_5fadd_5fback',['dvm_arr_add_back',['../namespacenatives.html#a1386b2f1dd931140e6e316a8d1cf304f',1,'natives']]],
   ['dvm_5farr_5fadd_5ffront',['dvm_arr_add_front',['../namespacenatives.html#aecd072979a8a6929ca0228990e24bfaa',1,'natives']]],
+  ['dvm_5farr_5fbound',['dvm_arr_bound',['../namespacenatives.html#ad9e2b003b1c3262ea89b9c85fc8711a5',1,'natives']]],
   ['dvm_5farr_5fcatenate',['dvm_arr_catenate',['../namespacenatives.html#aabc798c93f8ca42270e94fb7a91c6a1f',1,'natives']]],
   ['dvm_5farr_5fcreate',['dvm_arr_create',['../namespacenatives.html#a222b597973b736d6e3421d68e99db250',1,'natives']]],
   ['dvm_5farr_5fempty',['dvm_arr_empty',['../namespacenatives.html#acf26b1de8845f072eb27dd89f2f163c2',1,'natives']]],
