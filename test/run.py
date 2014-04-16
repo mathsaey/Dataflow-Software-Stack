@@ -36,6 +36,9 @@ class Test(unittest.TestCase):
 	def test_call(self): self.abstract('call', ['1', '2'], '21')
 	def test_simple(self): self.abstract('simple', ['1', '2', '3', '4'], '10')
 	def test_trivial(self): self.abstract('trivial', [], '8')
+	def test_forin(self): self.abstract('forin', 
+		['5', '10', '[5, 10, 30, 3, 40]', '[4, 20, 5]'],
+		'[13, 11, 12, 13, 12, 45, 55, 35, 20, 21, 22, 23, 24, 25]')
 
 	def test_select(self): 
 		self.compile('select.sis')

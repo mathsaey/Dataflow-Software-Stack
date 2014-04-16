@@ -1,0 +1,26 @@
+% forin.sis
+% Mathijs Saey
+% DVM tests
+
+% This file contains a simple for .. in example.
+
+define Main
+
+function test(a, b: integer returns array[integer])
+	for el in a, b
+		returns array of el + a + b
+	end for
+end function
+
+function main(a, b: integer; arrL, arrR : array[integer] returns array[integer])
+	let Smaller, Equals, Greater := 
+	for el in arrL || arrR
+		returns
+			array of el + a + 3 when el < 10
+			array of el + 2 when el = 10
+			array of el + a + b when el > 10
+		end for
+		in
+		Smaller || Equals || Greater || test(a, b)
+	end let
+end function

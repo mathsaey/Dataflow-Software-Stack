@@ -51,7 +51,6 @@ class Tokenizer(object):
 		super(Tokenizer, self).__init__()
 		self.core = core
 
-		self.merger   = Merger(self)
 		self.switcher = Switcher(self)
 		self.contexts = ContextManager(self)
 
@@ -194,7 +193,8 @@ class ContextManager(object):
 
 		token.tag.inst = pair[0]
 		token.tag.cont = pair[2]
-		if pair[1]: token.tag.port = pair[1]
+		if pair[1] is not None:
+			token.tag.port = pair[1]
 		self.tokenizer.add(token)
 
 ##
@@ -302,67 +302,3 @@ class Switcher(object):
  			self.send(key, token)
  		else:
  			self.store(key, token)
-
-##
-# Token Merger
-# 
-# The merger is reponsible for gathering 
-# all the inputs to recreate an array after a split.
-##
-class Merger(object):
-
-	def __init__(self, tokenizer):
-		super(Merger, self).__init__()
-		self.tokenizer = tokenizer
-
-		##
-		# Store the arrays that
-		# are currently under construction.
-		##
-		self.mergeLists = {}
-
-	##
-	# Store the length of an array.
-	# This will be used to determine the
-	# amount of tokens needed to return the array.
-	#
-	# \param inst
-	#		A __key__ of a merge instruction.
-	# \param cont
-	# 		The context in which this length occurs.
-	# \param length
-	#		The length of the array for the specified
-	#		instruction and context.
-	##
-	def setLength(self, inst, cont, length):
-		key = (inst, cont)
-		self.mergeLists.update({key : [[None] * length, length]})
-
-	##
-	# Add the value of a token to an 
-	# array under construction.
-	#
-	# \param inst
-	#		The merge instruction in question.
-	# \param token
-	#		The token to add.
-	#		Should have a datum that looks 
-	#		like (value, idx)
-	##
-	def add(self, inst, token):
-		try:
-			key = (inst.key, token.tag.cont)
-			arr = self.mergeLists[key]
-			val = token.datum[0]
-			idx = token.datum[1]
-			lst = arr[0]
-
-			lst[idx] = val
-			arr[1] -= 1
-
-			if arr[1] == 0:
-				del self.mergeLists[key]
-				return lst
-
-		except KeyError:
-			log.error("Token %s added to merger %s with unset length.", token, inst)

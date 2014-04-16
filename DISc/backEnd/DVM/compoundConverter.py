@@ -26,7 +26,7 @@
 
 ##
 # \package backEnd.DVM.compoundConverter
-# \brief IGR compound node
+# \brief IGR compound node compiler
 #
 # This module contains functions for the compilation of compound nodes.
 # It's worth noting that the links to and from a compound node are made by
@@ -97,12 +97,62 @@ def convertSelectNode(dis, node):
 	graphConverter.convertSubGraphs(node.subGraphs[1:], dis)
 	selectStop(dis, node, idx)
 
+# ---------- #
+# Forin Node #
+# ---------- #
+
+def convertForAllNode(dis, node):
+	dis.addNewlines()
+	dis.addCommentLines("Starting for...in")
+	bgn = dis.addInstruction(0, 'SNK', [])
+	end = dis.addInstruction(0, 'SNK', [])
+	dis.linkNode(node, bgn, end)
+
+	dis.indent += 1
+
+	inputs = node.inputs
+	if len(node.subGraphs[0].nodes) > 1:
+		inputs += 1
+
+	splits = [dis.addInstruction(1, 'SPL', [inputs]) for e in node.map]
+	stopIdx = dis.getIdx(1)
+	startIdx = stopIdx - len(node.map) + 1
+
+	for key in splits:
+		for i in xrange(0, inputs):
+			dis.addLink(bgn, i, key, i)
+
+	gen = node.subGraphs[0]
+	dis.linkNode(gen.exit, bgn, bgn)
+	gen.removeNode(gen.exit)
+	graphConverter.convertSubGraphs(node.subGraphs[0:1], dis)
+
+	graphConverter.convertSubGraphs(node.subGraphs[3:], dis)
+
+	ret = node.subGraphs[2]
+	dis.linkNode(ret.exit, end, end)
+	ret.removeNode(ret.exit)
+	graphConverter.convertSubGraphs(node.subGraphs[2:3], dis)
+
+	for key, idx in zip(node.map,xrange(startIdx, stopIdx + 1)):
+		sink, merge = node.map[key]
+		dstChunk, dstInst = dis.getToKey(sink)
+		mergeChunk, mergeInst = dis.getToKey(merge)
+
+		dis.modifyString(1, idx, 
+			lambda str : str + " %s %s %s %s" % 
+			(dstChunk, dstInst, mergeChunk, mergeInst))
+
+	dis.indent -= 1
+
 # ------- #
 # General #
 # ------- #
 
 converters = {
-	'select' : convertSelectNode
+	'select' : convertSelectNode,
+	'forall' : convertForAllNode
+
 }
 
 ##

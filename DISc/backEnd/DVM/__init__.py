@@ -33,11 +33,13 @@
 # This module contains the backend to compile IGR to DVM.
 ##
 
+import forin
 import literals
 import graphConverter
 
 extension = 'dis'
 
 def generate():
+	forin.convert()
 	literals.removeLiterals()
 	return graphConverter.convert()

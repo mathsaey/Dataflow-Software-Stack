@@ -89,20 +89,21 @@ def convertAFill(node):
 
 ##
 # Convert AGather.
-# The node that emerges from this
-# has different semantics in DVM.
-# In dvm, the second argument is an array
-# that is already constructed.
+# Gathers only occur in the returns subgraph of 
+# compound nodes. This has different semantics in DVM.
 #
-# The merge instruction should be provided
-# by the compiler when it's compiling compound nodes.
+# The actual instruction that constructs the array is added 
+# during the compilation of the compound node. Thus, we can remove
+# the gather operation if it only does this. If it also filters out a 
+# part of the array, a prune instruction is added to do the actual filtering.
 ##
 def convertAGather(node):
-	node.operation = 'arrPrune'
 	checkLowerBound(node.inputPorts[0], 0)
 	removeInputPort(node)
 
-	if node.inputs <= 1:
+	if node.inputs > 1:
+		node.operation = 'arrPrune'
+	else:
 		inputPort = node.inputPorts[0]
 		targets = [target for port in node.outputPorts for target in port.targets]
 
@@ -113,15 +114,20 @@ def convertAGather(node):
 ##
 # Convert AScatter.
 #
-# Once again, the actual split should
-# be provided by the compiler.
+# There is no concept of a scatter opertaion in DVM.
+# Instead a Split operation provides this functionality.
+# The split is added when compiling the compound node.
 ##
 def convertAScatter(node):
 	inputPort = node.inputPorts[0]
 	targets = [target for target in node.outputPorts[0].targets]
+
 	inputPort.source.removeTarget(inputPort)
 	inputPort.source.addTargets(targets)
 	node.subGraph.removeNode(node)
+
+	for target in targets:
+		target.source = inputPort.source
 
 	for target in node.outputPorts[1].targets:
 		target.source = None

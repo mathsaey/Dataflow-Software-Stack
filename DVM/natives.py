@@ -531,7 +531,7 @@ def dvm_tup_get(tup, idx):
 # \param start, stop The lower and upper bounds of the range
 # \return An array containing [start..stop]
 ##
-def dvm_range(start, stop): return range(start, stop)
+def dvm_range(start, stop): return range(start, stop + 1)
 
 ## 
 # Contains references to all

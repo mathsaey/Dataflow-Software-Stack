@@ -32,6 +32,7 @@
 ##
 
 import port
+import copy
 
 # ------------------ #
 # Unique Identifiers #
@@ -84,6 +85,21 @@ class Node(object):
 		self.outputs     = outputs
 		self.inputPorts  = [port.InputPort(self, i) for i in xrange(0,inputs)]
 		self.outputPorts = [port.OutputPort(self, i) for i in xrange(0,outputs)]
+
+	##
+	# Create a copy of a node.
+	# This will create an identical, unique node, 
+	# but with unconnected in and output ports.
+	##
+	def copy(self, subGraph):
+		node = copy.deepcopy(self)
+		node.subGraph = subGraph
+		node.key = getKey()
+
+		node.inputPorts  = [port.InputPort(node, i) for i in xrange(0,node.inputs)]
+		node.outputPorts = [port.OutputPort(node, i) for i in xrange(0,node.outputs)]
+
+		return node
 
 	##
 	# Create a printable version of the node

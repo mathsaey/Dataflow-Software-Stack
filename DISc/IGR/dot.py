@@ -86,7 +86,7 @@ def compoundFooter(buffer, node):
 def portString(port, preFix = ""):
 	if port.acceptsLiteral(): return str(port.source.value)
 	elif port.isConnected():  return "<" + preFix + str(port.idx) + ">" + " *"
-	else: return ""
+	else: return "<" + preFix + str(port.idx) + ">"
 
 ##
 # String representation of a port list.
