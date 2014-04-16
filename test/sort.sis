@@ -74,6 +74,6 @@ function sort (arr : IntArr returns IntArr)
 end function
 
 
-function Main (arr : IntArr returns IntArr)
+function main (arr : IntArr returns IntArr)
     sort(arr)
 end function
