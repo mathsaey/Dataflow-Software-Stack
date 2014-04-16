@@ -66,6 +66,12 @@ class DIS(object):
 		## Contains the current key per chunk
 		self.keys = [0 for i in xrange(0, DVM_CHUNKS)]
 
+		## 
+		# Contains the context changes that do not known
+		# their destination sinks yet.
+		##
+		self.callMap = {}
+
 		self.chunks = DVM_CHUNKS
 		self.inputs = inputs
 		self.indent = 0
@@ -99,6 +105,12 @@ class DIS(object):
 	def linkNode(self, node, toKey, fromKey):
 		self.nodes.update({node.key : (fromKey, toKey)})
 
+		if node.key in self.callMap:
+			for idx in self.callMap[node.key]:
+				self.modifyString(0, idx, 
+					lambda str : str % (toKey[0], toKey[1]))
+			del self.callMap[node.key]
+
 	## Get the from key for a node.
 	def getFromKey(self, node):
 		return self.nodes[node.key][0]
@@ -106,6 +118,22 @@ class DIS(object):
 	## Get the to key for a node.
 	def getToKey(self, node):
 		return self.nodes[node.key][1]
+
+	## 
+	# Add the index of a string waiting for the address
+	# of a call to become known.
+	#
+	# \param node
+	#		The node that is not bound to an address yet.
+	# \param idx
+	#		The idx of the string that needs to be updated
+	#		when the node is bound.
+	##
+	def addCallIdx(self, node, idx):
+		if node.key in self.callMap:
+			self.callMap[node.key].append(idx)
+		else:
+			self.callMap.update({node.key : [idx]})
 
 	##
 	# Add a string to a chunk.
