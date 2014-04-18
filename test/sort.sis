@@ -16,64 +16,64 @@ type IntArr = array[integer]
 % Insertion sort definition
 function insertion_sort(arr: IntArr returns IntArr)
 
-    % Inserts an element in at the correct spot in the sorted part of the array
-    function insert_el(arr: IntArr; el :integer returns IntArr)
-        let L, M, R := 
-        for E in arr
-            returns 
-                array of E when E < el
-                array of E when E = el
-                array of E when E > el
-        end for
-        in 
-            if array_size(arr) = 0 then
-                array [0: el]
-            else
-                L || M || array [0: el] || R
-            end if
-        end let
-    end function
+	% Inserts an element in at the correct spot in the sorted part of the array
+	function insert_el(arr: IntArr; el :integer returns IntArr)
+		let L, M, R := 
+		for E in arr
+			returns 
+				array of E when E < el
+				array of E when E = el
+				array of E when E > el
+		end for
+		in 
+			if array_size(arr) = 0 then
+				array [0: el]
+			else
+				L || M || array [0: el] || R
+			end if
+		end let
+	end function
 
-    % Inserts every element into the sorted part of the array one by one.
-    function inner_loop(source, res: IntArr ; idx, max_idx : integer returns IntArr)
-            if max_idx >= idx then
-                let new_res := insert_el(res, source[idx]);
-                in inner_loop(source, new_res, idx + 1, max_idx)
-                end let
-            else
-                res
-            end if
-    end function
+	% Inserts every element into the sorted part of the array one by one.
+	function inner_loop(source, res: IntArr ; idx, max_idx : integer returns IntArr)
+			if max_idx >= idx then
+				let new_res := insert_el(res, source[idx]);
+				in inner_loop(source, new_res, idx + 1, max_idx)
+				end let
+			else
+				res
+			end if
+	end function
 
-    inner_loop(arr, array IntArr [], array_liml(arr), array_limh(arr))
+	inner_loop(arr, array IntArr [], array_liml(arr), array_limh(arr))
 end function
 
 % Returns 2 arrays, one with every element smaller than or equal to the pivot,
 % and one more with every element greater than the pivot
 function split (arr : IntArr returns IntArr, IntArr, IntArr)
-    for E in arr
-      pivot := array_liml(arr)
-      returns 
-        array of E when E < arr[pivot]
-        array of E when E = arr[pivot]
-        array of E when E > arr[pivot]
-    end for
+	for E in arr
+	  pivot := array_liml(arr)
+	  returns 
+		array of E when E < arr[pivot]
+		array of E when E = arr[pivot]
+		array of E when E > arr[pivot]
+	end for
 end function
 
 % Keeps on splitting the array in smaller parts using split
 % until the cutoff point is reached, after this, insertion sort is called.
 function sort (arr : IntArr returns IntArr)
-    % We use bubble sort instead once only 10 elements remain
-    if array_size(arr) > 10 then
-        let lower, pivot, higher := split(arr)
-        in sort(lower) || pivot || sort(higher)
-        end let
-    else
-        insertion_sort(arr)
-    end if
+	% We use bubble sort instead once only 10 elements remain
+	if array_size(arr) > 10 then
+		let lower, pivot, higher := split(arr)
+		in sort(lower) || pivot || sort(higher)
+		end let
+	else
+		insertion_sort(arr)
+	end if
 end function
 
 
 function main (arr : IntArr returns IntArr)
-    sort(arr)
+	sort(arr)
 end function
