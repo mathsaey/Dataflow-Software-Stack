@@ -113,8 +113,13 @@ if args.input:
 		data = read.parseValue(data)
 		core.addData(data)
 
-# Collect any data that we still need.
+# Print the header text:
+print "DVM running on {} core(s).".format(args.cores)
+
 while not core.hasIn():
-	data = raw_input("Please enter your data for port {}: ".format(core.getPort()))
+	if sys.stdin.isatty():
+		data = raw_input("> ")
+	else:
+		data = raw_input("reading input for port {}...\n".format(core.getPort()))
 	data = read.parseValue(data)
 	core.addData(data)
