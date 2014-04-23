@@ -104,6 +104,10 @@ if args.path == "-":
 		print "Missing input, aborting..."
 		sys.exit(user.EXIT_INPUT)
 
+# Print the header text:
+if sys.stdout.isatty():
+	print "DVM running on {} core(s).".format(args.cores)
+
 # Start the cores.
 core.start(args.cores)
 
@@ -113,9 +117,7 @@ if args.input:
 		data = read.parseValue(data)
 		core.addData(data)
 
-# Print the header text:
-print "DVM running on {} core(s).".format(args.cores)
-
+# Fetch the remaining input
 while not core.hasIn():
 	if sys.stdin.isatty():
 		data = raw_input("> ")
