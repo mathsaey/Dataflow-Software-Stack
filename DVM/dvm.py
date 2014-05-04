@@ -75,7 +75,7 @@ args = argParser.parse_args()
 
 #args.logLevel = 0
 #args.path = "../test/simple.dis"
-args.cores = 1
+#args.cores = 1
 #args.input = ["1","2", "3", "4"]
 
 # ------------ #

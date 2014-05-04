@@ -100,5 +100,11 @@ class ExternalTag(Tag):
 # Signals the end of program execution.
 ##
 class StopTag(AbstractTag):
+	def __init__(self):
+		super(AbstractTag, self).__init__()
+		self.init = True
+
 	def __str__(self): return "<STOP>"
+	def notify(self): self.init = False
+	def isInit(self): return self.init
 	def isStop(self): return True

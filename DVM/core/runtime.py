@@ -95,7 +95,7 @@ class Core(object):
 		## Context creator for this core
 		self.contextCreator = ContextCreator(self)
 		## Tokenizer for this core
-		self.tokenizer   = Tokenizer(self)
+		self.tokenizer      = Tokenizer(self)
 		## Token dispatcher for this core
 		self.dispatcher     = TokenDispatcher(self)
 		## Scheduler for this core
@@ -128,6 +128,14 @@ class Core(object):
 			self.inbox.put(token)
 
 	##
+	# Add a token to all the
+	# other cores.
+	##
+	def addToAll(self, token): 
+		for core in self.cores:
+			core.put(token)
+
+	##
 	# Add a reference to the message
 	# queues of the other cores.
 	##
@@ -145,16 +153,20 @@ class Core(object):
 
 	##
 	# Stop the current core.
+	##
+	def stop(self):
+		log.info("Core %s terminated", self)
+		self.active = False
+
+	##
+	# Return a value to the user.
 	#
 	# \param value
-	#		The result that the program
-	#		returned.
+	#		The value to return
+	#		to the user.
 	##
-	def stop(self, value):
-		log.info("Core %s terminated with %s", self, value)
-		self.active = False
-		print  value
-		return value
+	def returnValue(self, value):
+		print value
 
 __cores__ = []
 __port__  = 0

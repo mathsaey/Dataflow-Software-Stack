@@ -51,7 +51,12 @@ class TokenDispatcher(object):
 		self.core = core
 
 	def processStop(self, token):
-		self.core.stop(token.datum)
+		self.core.stop()
+
+		if token.tag.isInit():
+			token.tag.notify()
+			self.core.addToAll(token)
+			self.core.returnValue(token.datum)
 
 	def processStandard(self, token):
 		inst = token.tag.inst
