@@ -15,9 +15,11 @@ DISC_PATH = "../DISc/disc.py"
 class Test(unittest.TestCase):
 
 	def compile(self, path):
+		print "Compiling", path
 		subprocess.check_call([DISC_PATH, path, '-d', DVM_PATH, '-ll', '40'])
 
 	def runDvm(self, path, inputs):
+		print "Running", path
 		args = [DVM_PATH, path]
 
 		for e in inputs:
