@@ -290,6 +290,7 @@ class ContextChange(Instruction, Literal):
 
 	def addLiteral(self, port, val):
 		self.literals.update({port : val})
+		self.bindargs -= 1
 
 	def getLiterals(self):
 		return self.literals

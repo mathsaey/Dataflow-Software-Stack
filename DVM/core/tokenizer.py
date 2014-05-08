@@ -143,7 +143,8 @@ class ContextManager(object):
 
 		else:
 			cont = self.bind(retInst, None, token.tag.cont, restores)
-			self.contextMap.update({key : [cont, binds - 1]})
+			if binds > 1:
+				self.contextMap.update({key : [cont, binds - 1]})
 
 			for key in inst.getLiterals():
 				val = inst.getLiterals()[key]
@@ -190,6 +191,7 @@ class ContextManager(object):
 
 		if pair[3] <= 0:
 			del self.restoreMap[cont]
+			self.tokenizer.core.contextCreator.restore(cont)
 
 		token.tag.inst = pair[0]
 		token.tag.cont = pair[2]
