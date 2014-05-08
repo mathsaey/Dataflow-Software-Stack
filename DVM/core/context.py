@@ -115,12 +115,12 @@ class ContextCreator(object):
 		self.available = []
 
 	def get(self):
-		# if self.available:
-		# 	return self.available.pop()
-		# else:
+		#if self.available:
+		#	return self.available.pop()
+		#else:
 		res = self.current
 		self.current += 1
 		return Context(self.prefix, res)
 
-	def restore(self, context):
-		self.available.append(context)
+	def restore(self, context): pass
+		#self.available.append(context)

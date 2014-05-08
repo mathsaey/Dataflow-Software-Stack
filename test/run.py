@@ -20,7 +20,7 @@ class Test(unittest.TestCase):
 
 	def runDvm(self, path, inputs):
 		print "Running", path
-		args = [DVM_PATH, path]
+		args = [DVM_PATH, path, '-ll', '40']
 
 		for e in inputs:
 			args.append("-i")

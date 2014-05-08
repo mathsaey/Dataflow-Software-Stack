@@ -162,11 +162,15 @@ class DestinationMap(Destination):
 			self.destinations.update({port : [(toInst, toPort)]})
 
 	def sendDatum(self, datum, core, port, cont):
-		for dst in self.destinations[port]:
-			inst = dst[0]
-			port = dst[1]
-			core.tokenizer.simple(
-				datum, inst, port, cont)
+		try:
+			for dst in self.destinations[port]:
+				inst = dst[0]
+				port = dst[1]
+				core.tokenizer.simple(
+					datum, inst, port, cont)
+		except KeyError:
+			pass
+
 
 # ---------- #
 # Operations #
@@ -225,6 +229,12 @@ class OperationInstruction(Instruction, DestinationList, Literal):
 # This is not really 'nice' according to dataflow 
 # semantics but necessary to allow literals that cannot
 # be propagated.
+#
+# The constant instruction will only send it's value
+# when receiving data on port 0. This allows it to
+# only generate a single token when it is placed 
+# after a switch statement 
+# (which is the only place where it should occur).
 ##
 class Constant(Instruction, DestinationList):
 	def __init__(self, value):
@@ -232,7 +242,8 @@ class Constant(Instruction, DestinationList):
 		self.value = value
 
 	def execute(self, token, core):
-		self.sendDatum(self.value, core, None, token.tag.cont)
+		if token.tag.port == 0:
+			self.sendDatum(self.value, core, None, token.tag.cont)
 
 # ----- #
 # Sinks #
