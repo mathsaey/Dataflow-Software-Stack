@@ -35,7 +35,7 @@
 import logging
 
 ## String for formatting log records
-FORMAT_STR = "[%(levelname)7s][%(module)14s:%(lineno)3d][%(processName)3s] %(message)s"
+FORMAT_STR = "[%(levelname)7s][%(module)14s:%(lineno)3d] %(message)s"
 
 ## Set up the root logger.
 def setup(lvl):

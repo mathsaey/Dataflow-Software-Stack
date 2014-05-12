@@ -63,14 +63,18 @@ class Tokenizer(object):
 	# we have a central point for redirecting the token
 	# to a different core.
 	##
-	def add(self, token):
-		self.core.add(token)
+	def add(self, token, core = None):
+		self.core.add(token, core)
 
 	## Create a simple token, with a known destination.
-	def simple(self, datum, toInst, toPort, context):
+	def simple(self, datum, toInst, toPort, context, core = None):
 		tag = Tag(toInst, toPort, context)
 		tok = Token(datum, tag)
- 		self.add(tok)
+
+		if core == None:
+ 			self.add(tok)
+ 		else:
+ 			self.add(tok, core)
 
 	##
 	# Create a stop token.
@@ -132,29 +136,31 @@ class ContextManager(object):
 	def bindMany(self, token, inst, dest, retInst, binds, restores):
 		key = (inst.key, token.tag.cont)
 		cont = None
+		core = None
 
 		if key in self.contextMap:
-			pair = self.contextMap[key]
-			cont = pair[0]
-			pair[1] -= 1
+			tup = self.contextMap[key]
+			cont = tup[0]
+			core = tup[2]
+			tup[1] -= 1
 
-			if pair[1] <= 0:
+			if tup[1] <= 0:
 				del self.contextMap[key]
 
 		else:
-			cont = self.bind(retInst, None, token.tag.cont, restores)
+			cont, core = self.bind(retInst, None, token.tag.cont, restores)
 			if binds > 1:
-				self.contextMap.update({key : [cont, binds - 1]})
+				self.contextMap.update({key : [cont, binds - 1, core]})
 
 			for key in inst.getLiterals():
 				val = inst.getLiterals()[key]
 				tag = Tag(dest, key, cont)
 				tok = Token(val, tag)
-				self.tokenizer.add(tok)
+				self.tokenizer.add(tok, core)
 
 		token.tag.cont = cont
 		token.tag.inst = dest
-		self.tokenizer.add(token)
+		self.tokenizer.add(token, core)
 
  	##
  	# Bind a new context to a given context and destination.
@@ -172,9 +178,10 @@ class ContextManager(object):
  	#		The amount of tokens the context will produce.
  	##
  	def bind(self, destInst, destPort, context, restores):
+ 		core = self.tokenizer.core.getCore()
  		cont = self.tokenizer.core.contextCreator.get()
  		self.restoreMap.update({cont : [destInst, destPort, context, restores]})
- 		return cont
+ 		return (cont, core)
 
 	##
 	# Restore a token.
@@ -185,6 +192,11 @@ class ContextManager(object):
 	##
 	def restore(self, token):
 		cont = token.tag.cont
+
+		if cont.core != self.tokenizer.core.identifier:
+			self.tokenizer.add(token, cont.core)
+			return
+
 		pair = self.restoreMap[cont]
 
 		pair[3] -= 1

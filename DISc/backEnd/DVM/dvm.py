@@ -41,7 +41,7 @@ log = logging.getLogger(__name__)
 path = 'dvm'
 
 ## Default amount of cores to use.
-cores = 1
+cores = 8
 
 ## Default loglevel to use.
 logLevel = 50

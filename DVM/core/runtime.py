@@ -40,6 +40,7 @@
 
 import token
 import memory
+import collections
 import multiprocessing
 
 from context import ContextCreator
@@ -122,7 +123,7 @@ class Core(object):
 	#		this argument is not added.
 	#
 	def add(self, token, core = None):
-		if core:
+		if core != None:
 			self.cores[core].put(token)
 		else: 
 			self.inbox.put(token)
@@ -135,12 +136,22 @@ class Core(object):
 		for core in self.cores:
 			core.put(token)
 
+	## 
+	# Find the core under the lowest load. 
+	# Uses round robin for now
+	##
+	def getCore(self):
+		res = self.ring.popleft()
+		self.ring.append(res)
+		return res
+
 	##
 	# Add a reference to the message
 	# queues of the other cores.
 	##
 	def link(self, cores):
 		self.cores = cores
+		self.ring = collections.deque(xrange(len(cores)))
 
 	## 
 	# Start the runtime

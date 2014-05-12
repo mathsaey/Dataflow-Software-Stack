@@ -405,13 +405,11 @@ class Split(Instruction):
 		# and the args to the destSink
 		for idx in xrange(0, leng):
 			elm = comp[idx]
-			new = core.tokenizer.contexts.bind(
-				self.merge, idx, cont, 1)
-
-			core.tokenizer.simple(elm, self.dest, 0, new)
-
+			newCont, newCore = core.tokenizer.contexts.bind(self.merge, idx, cont, 1)
+			core.tokenizer.simple(elm, self.dest, 0, newCont, newCore)
+			
 			for arg in args:
-				core.tokenizer.simple(arg.datum, self.dest, arg.tag.port, new)
+				core.tokenizer.simple(arg.datum, self.dest, arg.tag.port, newCont, newCore)
 
 # ---------------- #
 # Stop Instruction #
