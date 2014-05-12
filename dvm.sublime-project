@@ -4,44 +4,44 @@
 		{
 			"path": "./",
 			"name":"Root",
-            "folder_exclude_patterns": 
-                ["DVM", "DISc", "docpages", "obj", "documentation", "documentationPy",
-                "DataFlow Virtual Machine.xcodeproj", "prototypes"],
-            "file_exclude_patterns":["DVM"]
-        },{
-        	"path": "./DVM",
-        	"name": "DVM"
-        },{
-            "path": "./DISc",
-            "name": "DISc"
-        },{
-            "path": "./docpages",
-            "name": "Documentation"
-        }
+			"folder_exclude_patterns": 
+				["DVM", "DISc", "docpages", "obj", "documentation", "documentationPy",
+				"DataFlow Virtual Machine.xcodeproj", "prototypes"],
+			"file_exclude_patterns":["DVM"]
+		},{
+			"path": "./DVM",
+			"name": "DVM"
+		},{
+			"path": "./DISc",
+			"name": "DISc"
+		},{
+			"path": "./docpages",
+			"name": "Documentation"
+		}
 	],
 	"build_systems":
-    [
-        {
-            "name": "C++ make",
-            "selector": "source.c++",
-            "working_dir": "${project_path}",
-            "cmd": ["make"]
-        },{
-            "name": "doxygen markdown",
-            "selector":"text.html.markdown",
-            "working_dir": "${project_path}",
-            "cmd": ["make", "doc"]
-        },{
-            "name":"sublimeRepl",
-            "selector":"source.python",
-            "target": "run_existing_window_command",
-            "id": "repl_python_run",
-            //"id": "repl_pypy_run",
-            "file": "config/Python/Main.sublime-menu"
-        },{
-            "name": "run DIS",
-            "selector": "source.dis",
-            "cmd":["dvm", "${file_name}"]
-        }
-    ]
+	[
+		{
+			"name": "C++ make",
+			"selector": "source.c++",
+			"working_dir": "${project_path}",
+			"cmd": ["make"]
+		},{
+			"name": "doxygen markdown",
+			"selector":"text.html.markdown",
+			"working_dir": "${project_path}",
+			"cmd": ["make", "doc"]
+		},{
+			"name":"sublimeRepl",
+			"selector":"source.python",
+			"target": "run_existing_window_command",
+			"id": "repl_python_run",
+			//"id": "repl_pypy_run",
+			"file": "config/Python/Main.sublime-menu"
+		},{
+			"name": "run DIS",
+			"selector": "source.dis",
+			"cmd":["dvm", "${file_name}"]
+		}
+	]
 }
