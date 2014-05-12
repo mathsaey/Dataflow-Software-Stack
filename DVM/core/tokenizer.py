@@ -68,7 +68,7 @@ class Tokenizer(object):
 
 	## Create a simple token, with a known destination.
 	def simple(self, datum, toInst, toPort, context):
-		tag = Tag(self.core.identifier, toInst, toPort, context)
+		tag = Tag(toInst, toPort, context)
 		tok = Token(datum, tag)
  		self.add(tok)
 
@@ -148,7 +148,7 @@ class ContextManager(object):
 
 			for key in inst.getLiterals():
 				val = inst.getLiterals()[key]
-				tag = Tag(token.tag.core, dest, key, cont)
+				tag = Tag(dest, key, cont)
 				tok = Token(val, tag)
 				self.tokenizer.add(tok)
 

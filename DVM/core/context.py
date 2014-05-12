@@ -50,9 +50,10 @@ from math import sqrt, floor
 # Internally, a context is a wrapper around a unique integer.
 ##
 class Context(object):
-	def __init__(self, prefix, key):
+	def __init__(self, core, key):
 		super(Context,self).__init__()
-		self.hash = self.hashPair(prefix, key)
+		self.hash = self.hashPair(core, key)
+		self.core = core
 
 	def __str__(self):
 		return "{" + str(self.hash) + "}"
@@ -110,7 +111,7 @@ class Context(object):
 ##
 class ContextCreator(object):
 	def __init__(self, core):
-		self.prefix = core.identifier
+		self.core = core.identifier
 		self.current = 0
 		self.available = []
 
@@ -120,7 +121,7 @@ class ContextCreator(object):
 		#else:
 		res = self.current
 		self.current += 1
-		return Context(self.prefix, res)
+		return Context(self.core, res)
 
-	def restore(self, context): pass
-		#self.available.append(context)
+	def restore(self, context):
+		self.available.append(context)
