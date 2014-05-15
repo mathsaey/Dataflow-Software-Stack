@@ -1,5 +1,5 @@
 <map id="core.token.AbstractTag" name="core.token.AbstractTag">
-<area shape="rect" id="node2" href="$classcore_1_1token_1_1_stop_tag.html" title="Stop Tag. " alt="" coords="5,155,141,242"/>
-<area shape="rect" id="node3" href="$classcore_1_1token_1_1_tag.html" title="Standard tag. " alt="" coords="166,129,273,269"/>
-<area shape="rect" id="node4" href="$classcore_1_1token_1_1_external_tag.html" title="External Tag. " alt="" coords="141,318,299,391"/>
+<area shape="rect" id="node2" href="$classcore_1_1token_1_1_stop_tag.html" title="Stop Tag. " alt="" coords="5,127,142,253"/>
+<area shape="rect" id="node3" href="$classcore_1_1token_1_1_tag.html" title="Standard tag. " alt="" coords="166,127,275,253"/>
+<area shape="rect" id="node4" href="$classcore_1_1token_1_1_external_tag.html" title="External Tag. " alt="" coords="141,301,299,375"/>
 </map>

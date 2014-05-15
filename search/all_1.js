@@ -38,11 +38,13 @@ var searchData=
   ['addswitchlinks',['addSwitchLinks',['../namespacedot.html#a4ee8bbdd1f21b74194fc214dd27568df',1,'dot']]],
   ['addtarget',['addTarget',['../class_i_g_r_1_1port_1_1_output_port.html#a6099aad27956c8063541e9a44ac6dd61',1,'IGR::port::OutputPort']]],
   ['addtargets',['addTargets',['../class_i_g_r_1_1port_1_1_output_port.html#adedc55a56e0743d409e58c87629267c5',1,'IGR::port::OutputPort']]],
+  ['addtoall',['addToAll',['../classcore_1_1runtime_1_1_core.html#ac623fec455685ddbea2a918d3509b59a',1,'core::runtime::Core']]],
   ['addtrivial',['addTrivial',['../namespacecore.html#a3b75a9183f2fbf3bf6acd93a9041f9b9',1,'core.addTrivial()'],['../namespacecore_1_1runtime.html#ad57172b4521f8ad0c74ca7a077ff724c',1,'core.runtime.addTrivial()']]],
   ['addtype',['addType',['../classfront_end_1_1_i_f1_1_1type_1_1___type_pool.html#a17ed047ea2dc3407d7f6d9e5fb33fa1e',1,'frontEnd::IF1::type::_TypePool']]],
   ['adjustgenerator',['adjustGenerator',['../namespaceback_end_1_1_d_v_m_1_1forin.html#a3de133f5e15d20557e72d4061f00e359',1,'backEnd::DVM::forin']]],
   ['argparser',['argParser',['../namespacedvm.html#aa067e7021475dc71ccd9019423b3a7c5',1,'dvm.argParser()'],['../namespacedisc.html#a5dfcf8d99fe7c0a94c95ecaa54f8ad33',1,'disc.argParser()']]],
   ['args',['args',['../classfront_end_1_1_i_f1_1_1type_1_1___function_type.html#a80968bdb2e7edda430827cdcf4f2a6e5',1,'frontEnd.IF1.type._FunctionType.args()'],['../namespacedvm.html#a0df66969824d161dbff839bc07aa2d19',1,'dvm.args()'],['../namespacedisc.html#a23955ae2256bf6894a99e83b72b4c55d',1,'disc.args()']]],
   ['attach',['attach',['../class_i_g_r_1_1port_1_1_input_port.html#a369193b3dcb94bbe685c5944737626cf',1,'IGR::port::InputPort']]],
-  ['attributes',['attributes',['../namespacedot.html#a10b096462e81776da910c4490c0c5559',1,'dot']]]
+  ['attributes',['attributes',['../namespacedot.html#a10b096462e81776da910c4490c0c5559',1,'dot']]],
+  ['available',['available',['../classcore_1_1context_1_1_context_creator.html#a82da168ad8060a0edcd933d44ca5d27a',1,'core::context::ContextCreator']]]
 ];

@@ -8,6 +8,7 @@ var searchData=
   ['getarraycount',['getArrayCount',['../namespaceback_end_1_1_d_v_m_1_1forin.html#a371a84c155a7128e5fbe3e9d9f354c6b',1,'backEnd::DVM::forin']]],
   ['getattributes',['getAttributes',['../namespacedot.html#a140922136e7dbf0c1a183cbd72047ac6',1,'dot']]],
   ['getcompound',['getCompound',['../namespacefront_end_1_1_i_f1_1_1compound.html#aa3f94e445b385305aec08fcdb27d4838',1,'frontEnd::IF1::compound']]],
+  ['getcore',['getCore',['../classcore_1_1runtime_1_1_core.html#a51729f1e6f60ddeffe9efdb9a0f7c075',1,'core::runtime::Core']]],
   ['getdot',['getDot',['../namespace_i_g_r_1_1dot.html#ad2dcf03200a33c5368bc5ac31bf518e5',1,'IGR::dot']]],
   ['getdst',['getDst',['../classcore_1_1instruction_1_1_switch.html#af6d9158ac4e8d16a827253e88ba4e9bf',1,'core::instruction::Switch']]],
   ['getfromkey',['getFromKey',['../classback_end_1_1_d_v_m_1_1dis_1_1_d_i_s.html#a59506bb0d47a4cd9cbb7cd5268d7d1de',1,'backEnd::DVM::dis::DIS']]],
