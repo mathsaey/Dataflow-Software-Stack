@@ -35,13 +35,11 @@
 
 import forin
 import literals
-import converter
 import graphConverter
 
 extension = 'dis'
 
 def generate():
-	converter.run()
 	forin.convert()
 	literals.removeLiterals()
 	return graphConverter.convert()
