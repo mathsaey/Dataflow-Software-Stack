@@ -127,17 +127,17 @@ def checkNode(node):
 	elif isinstance(node, IGR.node.CallNode):
 		checkCall(node)	
 
-##
-# See if we can remove a graph from the program.
-# This assumes that it does not have to deal with 
-# compound node subgraphs!
-##
-def checkGraph(subGraph):
+## See if we can remove a graph from the program.
+def checkFunctionGraph(subGraph):
 	if subGraph.isTrivial():
 		if subGraph.isFunc:
 			IGR.removeSubGraph(subGraph)
 			log.info("Removing trivial function graph %s", subGraph)
-		else:
+
+## See if we need to convert a subgraph to a constant
+def checkCompoundGraphs(node):
+	for subGraph in node.subGraphs:
+		if subGraph.isTrivial():
 			# Remove the subgraph by a constant, followed by the exit node.
 			const = IGR.createConstantNode(subGraph, subGraph.value)
 			subGraph.entry = const
@@ -153,14 +153,13 @@ def removeLiterals():
 		lambda x: checkNode(x.exit),
 		False,
 		lambda x: None,
-		lambda x: None
-		)
+		checkCompoundGraphs		
+	)
 	IGR.traverse(
 		lambda x : None,
-		checkGraph,
+		checkFunctionGraph,
 		lambda x : None,
 		False,
 		lambda x : None,
 		lambda x : None
-		)
-
+	)
