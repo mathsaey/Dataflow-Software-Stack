@@ -79,7 +79,7 @@ def createCallStr(node):
 # Add the result of executing
 # a node to all it's outputs.
 ##
-def transformNode(node, value): 
+def transformNode(node, value):
 	for port in node.outputPorts:
 		for port in port.targets:
 			IGR.addLiteral(value, port.node, port.idx)	
@@ -129,10 +129,9 @@ def checkNode(node):
 
 ## See if we can remove a graph from the program.
 def checkFunctionGraph(subGraph):
-	if subGraph.isTrivial():
-		if subGraph.isFunc:
-			IGR.removeSubGraph(subGraph)
-			log.info("Removing trivial function graph %s", subGraph)
+	if subGraph.isTrivial() and subGraph.isFunc:
+		IGR.removeSubGraph(subGraph)
+		log.info("Removing trivial function graph %s", subGraph)
 
 ## See if we need to convert a subgraph to a constant
 def checkCompoundGraphs(node):
@@ -141,7 +140,7 @@ def checkCompoundGraphs(node):
 			# Remove the subgraph by a constant, followed by the exit node.
 			const = IGR.createConstantNode(subGraph, subGraph.value)
 			subGraph.entry = const
-			subGraph.nodes = [const , subGraph.exit]
+			subGraph.nodes = [subGraph.exit, const]
 			IGR.connect(const, 0, subGraph.exit, 0)
 			log.info("Replacing trivial graph %s by constant: %s", subGraph, const)
 

@@ -59,6 +59,7 @@ def selectStart(dis, comp):
 ##
 # Add all the subgraph entry points
 # to the destination list of select.
+# Restore exit nodes.
 ##
 def selectStop(dis, comp, idx):
 	dis.indent -= 1
@@ -68,6 +69,7 @@ def selectStop(dis, comp, idx):
 		pair = dis.getToKey(sg.entry)
 		dstLst.append(str(pair[0]))
 		dstLst.append(str(pair[1]))
+		sg.nodes.insert(0, sg.exit)
 	dis.modifyString(0, idx, lambda str : str + ' '.join(dstLst))
 
 ##
