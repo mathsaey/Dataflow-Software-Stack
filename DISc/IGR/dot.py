@@ -159,7 +159,7 @@ def node(buffer, node):
 ## Write general dot information
 def dotHeader(buffer):
 	buffer.write("digraph IGR {\n")
-	buffer.write("graph [compound=true];\n")
+	buffer.write("graph [compound=true, dpi = 300];\n")
 	buffer.write("node [shape=record];\n")
 
 ## Close the dot graph
