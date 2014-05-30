@@ -39,8 +39,8 @@
 ##
 
 import token
+import random
 import memory
-import collections
 import multiprocessing
 
 from context import ContextCreator
@@ -90,6 +90,8 @@ class Core(object):
 		self.active         = True
 		## Message Queues of the other cores
 		self.cores          = None
+		## Highest index of the core array
+		self.maxIdx         = None
 
 		## Message Queue of this core
 		self.inbox          = multiprocessing.Queue()
@@ -138,20 +140,18 @@ class Core(object):
 
 	## 
 	# Find the core under the lowest load. 
-	# Uses round robin for now
+
 	##
 	def getCore(self):
-		res = self.ring.popleft()
-		self.ring.append(res)
-		return res
+		return random.randint(0, len(self.cores) - 1)
 
 	##
 	# Add a reference to the message
 	# queues of the other cores.
 	##
 	def link(self, cores):
+		self.maxIdx = len(cores) - 1
 		self.cores = cores
-		self.ring = collections.deque(xrange(len(cores)))
 
 	## 
 	# Start the runtime
