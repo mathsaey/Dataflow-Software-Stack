@@ -27,7 +27,11 @@
 import subprocess
 import tempfile
 import IF1
+import sys
 import os
+
+import logging
+log = logging.getLogger(__name__)
 
 ##
 # \package frontEnd.Sisal
@@ -49,8 +53,12 @@ def fromString(str):
 	file.write(str)
 	file.flush()
 
-	FNULL = open(os.devnull, 'w')
-	subprocess.check_call(["sisalc", "-IF1", name], stdout = FNULL)
+	try:
+		FNULL = open(os.devnull, 'w')
+		subprocess.check_call(["sisalc", "-IF1", name], stdout = FNULL)
+	except subprocess.CalledProcessError:
+		log.error("Error while compiling Sisal file!")
+		sys.exit(1)
 
 	# Get the name of the output file
 	name = name.replace('.sis', '.if1')
