@@ -143,7 +143,11 @@ class Core(object):
 
 	##
 	def getCore(self):
-		return random.randint(0, len(self.cores) - 1)
+		try:
+			idx, _ = min([tup for tup in enumerate(self.cores)], key = lambda (idx, q): q.qsize())
+			return idx
+		except NotImplementedError:
+			return random.randint(0, len(self.cores) - 1)
 
 	##
 	# Add a reference to the message
