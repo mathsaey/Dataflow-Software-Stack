@@ -7,7 +7,6 @@ var searchData=
   ['bindmany',['bindMany',['../classcore_1_1tokenizer_1_1_context_manager.html#ad19090f8f8471a55536bd125bc2068bf',1,'core::tokenizer::ContextManager']]],
   ['bindname',['bindName',['../namespace_i_g_r_1_1graph.html#a7daf14d676e6a93810df093fd0d5b48f',1,'IGR::graph']]],
   ['compoundconverter',['compoundConverter',['../namespaceback_end_1_1_d_v_m_1_1compound_converter.html',1,'backEnd::DVM']]],
-  ['converter',['converter',['../namespaceback_end_1_1_d_v_m_1_1converter.html',1,'backEnd::DVM']]],
   ['dis',['dis',['../namespaceback_end_1_1_d_v_m_1_1dis.html',1,'backEnd::DVM']]],
   ['dvm',['DVM',['../namespaceback_end_1_1_d_v_m.html',1,'backEnd']]],
   ['dvm',['dvm',['../namespaceback_end_1_1_d_v_m_1_1dvm.html',1,'backEnd::DVM']]],

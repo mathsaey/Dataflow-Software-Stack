@@ -4,7 +4,7 @@ var searchData=
   ['read_2epy',['read.py',['../read_8py.html',1,'']]],
   ['realinputs',['realInputs',['../classcore_1_1instruction_1_1_operation_instruction.html#ac0b0bf32c9d265b39f2ab00ad57b9b20',1,'core.instruction.OperationInstruction.realInputs()'],['../classcore_1_1instruction_1_1_split.html#a0099f88ef14ea8344f25f1f5fc9a97a4',1,'core.instruction.Split.realInputs()']]],
   ['reduce',['reduce',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a3a39aee0f55a736167948e634ac29914',1,'IGR::subgraph::SubGraph']]],
-  ['removeinputport',['removeInputPort',['../namespaceback_end_1_1_d_v_m_1_1converter.html#a0d3a7925353fb1a962e4d60a3ae83ad3',1,'backEnd::DVM::converter']]],
+  ['removeinputport',['removeInputPort',['../namespacefront_end_1_1_i_f1_1_1converter.html#a07396c25c4dcf292a2fc6b48cb3368dd',1,'frontEnd::IF1::converter']]],
   ['removeliterals',['removeLiterals',['../namespaceback_end_1_1_d_v_m_1_1literals.html#af3c0fd54f4943ccedb7b37e19b3e160c',1,'backEnd::DVM::literals']]],
   ['removenode',['removeNode',['../class_i_g_r_1_1subgraph_1_1_sub_graph.html#a469fd6ff5a8998ed8f2b3a3dbb470d44',1,'IGR::subgraph::SubGraph']]],
   ['removesubgraph',['removeSubGraph',['../namespace_i_g_r.html#a65ebbe22884a8432dde8a09b2bd7abab',1,'IGR.removeSubGraph()'],['../namespace_i_g_r_1_1graph.html#a7e5c5ed6090e21d9d49779b412cac8d7',1,'IGR.graph.removeSubGraph()']]],
@@ -17,7 +17,6 @@ var searchData=
   ['restores',['restores',['../classcore_1_1instruction_1_1_context_change.html#ac88fe952357304c4c61f4ea89f3b97be',1,'core::instruction::ContextChange']]],
   ['retnsink',['retnSink',['../classcore_1_1instruction_1_1_context_change.html#a6213f85f71514131906b37e1201d1976',1,'core::instruction::ContextChange']]],
   ['returnvalue',['returnValue',['../classcore_1_1runtime_1_1_core.html#adbf677359fbd15e74a49efc3816fa526',1,'core::runtime::Core']]],
-  ['ring',['ring',['../classcore_1_1runtime_1_1_core.html#a30d48c73c89c4b550436febf30e3b648',1,'core::runtime::Core']]],
-  ['run',['run',['../namespaceback_end_1_1_d_v_m_1_1converter.html#a23dc548cf08b133b546362ed53dfffb6',1,'backEnd.DVM.converter.run()'],['../namespaceback_end_1_1_d_v_m_1_1dvm.html#a4c5f5cb49eb78f3d7590b7d2d07115dd',1,'backEnd.DVM.dvm.run()']]],
+  ['run',['run',['../namespaceback_end_1_1_d_v_m_1_1dvm.html#a4c5f5cb49eb78f3d7590b7d2d07115dd',1,'backEnd.DVM.dvm.run()'],['../namespacefront_end_1_1_i_f1_1_1converter.html#ae1ad7d88ad19a25678eee5fb7742aa1e',1,'frontEnd.IF1.converter.run()']]],
   ['runtime_2epy',['runtime.py',['../runtime_8py.html',1,'']]]
 ];

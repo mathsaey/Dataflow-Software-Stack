@@ -212,10 +212,6 @@
                 <Path>namespaceback_end_1_1_d_v_m_1_1compound_converter.html</Path>
                </Node>
                <Node>
-                <Name>converter</Name>
-                <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-               </Node>
-               <Node>
                 <Name>dis</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1dis.html</Path>
                </Node>
@@ -228,12 +224,12 @@
                 <Path>namespaceback_end_1_1_d_v_m_1_1forin.html</Path>
                </Node>
                <Node>
-                <Name>graphconverter</Name>
-                <Path>namespaceback_end_1_1_d_v_m_1_1graphconverter.html</Path>
-               </Node>
-               <Node>
                 <Name>graphConverter</Name>
                 <Path>namespaceback_end_1_1_d_v_m_1_1graph_converter.html</Path>
+               </Node>
+               <Node>
+                <Name>graphconverter</Name>
+                <Path>namespaceback_end_1_1_d_v_m_1_1graphconverter.html</Path>
                </Node>
                <Node>
                 <Name>literals</Name>
@@ -316,6 +312,10 @@
                <Node>
                 <Name>convert</Name>
                 <Path>namespacefront_end_1_1_i_f1_1_1convert.html</Path>
+               </Node>
+               <Node>
+                <Name>converter</Name>
+                <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
                </Node>
                <Node>
                 <Name>edge</Name>
@@ -1570,6 +1570,11 @@
                   <Anchor>a90a51e4b4297931c50cfd3c12ba4d517</Anchor>
                  </Node>
                  <Node>
+                  <Name>maxIdx</Name>
+                  <Path>classcore_1_1runtime_1_1_core.html</Path>
+                  <Anchor>a8efa3153301ab66849c8f26ed45d674d</Anchor>
+                 </Node>
+                 <Node>
                   <Name>inbox</Name>
                   <Path>classcore_1_1runtime_1_1_core.html</Path>
                   <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
@@ -1598,11 +1603,6 @@
                   <Name>matcher</Name>
                   <Path>classcore_1_1runtime_1_1_core.html</Path>
                   <Anchor>af4759bad6aa35362a6efd93487c974d1</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>ring</Name>
-                  <Path>classcore_1_1runtime_1_1_core.html</Path>
-                  <Anchor>a30d48c73c89c4b550436febf30e3b648</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -3522,92 +3522,6 @@
                   </Subnodes>
                  </Node>
                  <Node>
-                  <Name>converter.py</Name>
-                  <Path>converter_8py.html</Path>
-                  <Subnodes>
-                   <Node>
-                    <Name>checkLowerBound</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a9258231b40456b0d1c2597998d53ae65</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>removeInputPort</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a0d3a7925353fb1a962e4d60a3ae83ad3</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertABuild</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a6414025b891665b8a55ec84338246512</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertAFill</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>abb736136a1232aa00d79227edd42859b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertAGather</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a8e586759cd612069397eda87db7f33fb</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertAScatter</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a4a9b366ce0c1c9d87066cf4a7389e849</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertALimL</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a5aed935401964da1447fbae3c843c1b2</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertASetL</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a37b2ef64719de224cebc5a66a9f12436</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertCall</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a9f1122d233a029d2a5fc60ed7413e65b</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertLessChain</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a16f8ab40594f02117c9fc4971f7e1584</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertLess</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>aaa6d13712796172dc70b529cfe4edec0</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>convertLessEq</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>ad02c2b80c84e4f9fac506f5b2ad83f04</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>checkNode</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>ac32bb9ccc6e58e5cb452e6f334ef2f0c</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>run</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a23dc548cf08b133b546362ed53dfffb6</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>log</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>ad7b107c56c6de78ebf187d5bbded5bbc</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>conversions</Name>
-                    <Path>converter_8py.html</Path>
-                    <Anchor>a06b44f1392def4ab1103e9bb068b09f6</Anchor>
-                   </Node>
-                  </Subnodes>
-                 </Node>
-                 <Node>
                   <Name>dis.py</Name>
                   <Path>dis_8py.html</Path>
                   <Subnodes>
@@ -3922,9 +3836,14 @@
                     <Anchor>ae72b1d4296d23cc05877a0ca6de97cda</Anchor>
                    </Node>
                    <Node>
-                    <Name>checkGraph</Name>
+                    <Name>checkFunctionGraph</Name>
                     <Path>literals_8py.html</Path>
-                    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+                    <Anchor>aa6e42139f0d4ebb80f4720d7ef381b21</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>checkCompoundGraphs</Name>
+                    <Path>literals_8py.html</Path>
+                    <Anchor>afca0a347715ed55e26f77d42a2853905</Anchor>
                    </Node>
                    <Node>
                     <Name>removeLiterals</Name>
@@ -4096,6 +4015,92 @@
                     <Name>__COMPOUNDS__</Name>
                     <Path>compound_8py.html</Path>
                     <Anchor>af28ac736ed87c38a133b39ea02e6a84c</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                 <Node>
+                  <Name>converter.py</Name>
+                  <Path>converter_8py.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>checkLowerBound</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a5f6cc4b81a57fc82c4c1511fa80cf582</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>removeInputPort</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a07396c25c4dcf292a2fc6b48cb3368dd</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertABuild</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>af912514a30b2c912dd3f154fdf33616b</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertAFill</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a2d7eb2e4e03da8b70c23214f263b6199</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertAGather</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a5089a2dc3c6aec3821a42ec2f44bf03c</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertAScatter</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a99563437e07f6c076cb92d7039eef575</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertALimL</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a0fc8d616d914d1d074c56901dcd3092a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertASetL</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ad680ffff6cf4b5b3209f04345ee19ada</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertCall</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a8dcf9d850f28a27920dfde75c932750a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertLessChain</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ab5fab16a0b4a8be4f9f0c4b0acfd0970</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertLess</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ad53e5d8c9dbc35aa2923b0284cc3d41d</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>convertLessEq</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>af039873f71ad52301e94a697df77d6f1</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>checkNode</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>aae6b2a9a4304b3c2b560d7bf04272f64</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>run</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>ae1ad7d88ad19a25678eee5fb7742aa1e</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>log</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a3c3b1d27fe4b10237d40fea015ed96f9</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>conversions</Name>
+                    <Path>converter_8py.html</Path>
+                    <Anchor>a72b40bbc737ec2cada44e2e55b964166</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>
@@ -4818,6 +4823,11 @@
                   <Name>fromString</Name>
                   <Path>_sisal_8py.html</Path>
                   <Anchor>a07d185fe199f22e2471104b3d2c81189</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>log</Name>
+                  <Path>_sisal_8py.html</Path>
+                  <Anchor>aad1841a7cf37b30cf6df872fd46d0856</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -6954,6 +6964,11 @@
                     <Anchor>a90a51e4b4297931c50cfd3c12ba4d517</Anchor>
                    </Node>
                    <Node>
+                    <Name>maxIdx</Name>
+                    <Path>classcore_1_1runtime_1_1_core.html</Path>
+                    <Anchor>a8efa3153301ab66849c8f26ed45d674d</Anchor>
+                   </Node>
+                   <Node>
                     <Name>inbox</Name>
                     <Path>classcore_1_1runtime_1_1_core.html</Path>
                     <Anchor>a0da35aef8039255d37eec8bd2e3ab2dd</Anchor>
@@ -6982,11 +6997,6 @@
                     <Name>matcher</Name>
                     <Path>classcore_1_1runtime_1_1_core.html</Path>
                     <Anchor>af4759bad6aa35362a6efd93487c974d1</Anchor>
-                   </Node>
-                   <Node>
-                    <Name>ring</Name>
-                    <Path>classcore_1_1runtime_1_1_core.html</Path>
-                    <Anchor>a30d48c73c89c4b550436febf30e3b648</Anchor>
                    </Node>
                   </Subnodes>
                  </Node>

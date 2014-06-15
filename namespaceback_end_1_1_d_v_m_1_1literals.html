@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">DVM
-   &#160;<span id="projectnumber">46a482d</span>
+   &#160;<span id="projectnumber">fdd9f94</span>
    </div>
    <div id="projectbrief">DataFlow Virtual Machine</div>
   </td>
@@ -125,9 +125,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae72b1d4296d23cc05877a0ca6de97cda"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1literals.html#ae72b1d4296d23cc05877a0ca6de97cda">checkNode</a></td></tr>
 <tr class="memdesc:ae72b1d4296d23cc05877a0ca6de97cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if a node can be removed, do so if possible.  <a href="#ae72b1d4296d23cc05877a0ca6de97cda">More...</a><br /></td></tr>
 <tr class="separator:ae72b1d4296d23cc05877a0ca6de97cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98756589a380f220c22befed86a29acc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1literals.html#a98756589a380f220c22befed86a29acc">checkGraph</a></td></tr>
-<tr class="memdesc:a98756589a380f220c22befed86a29acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if we can remove a graph from the program.  <a href="#a98756589a380f220c22befed86a29acc">More...</a><br /></td></tr>
-<tr class="separator:a98756589a380f220c22befed86a29acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e42139f0d4ebb80f4720d7ef381b21"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1literals.html#aa6e42139f0d4ebb80f4720d7ef381b21">checkFunctionGraph</a></td></tr>
+<tr class="memdesc:aa6e42139f0d4ebb80f4720d7ef381b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if we can remove a graph from the program.  <a href="#aa6e42139f0d4ebb80f4720d7ef381b21">More...</a><br /></td></tr>
+<tr class="separator:aa6e42139f0d4ebb80f4720d7ef381b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca0a347715ed55e26f77d42a2853905"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1literals.html#afca0a347715ed55e26f77d42a2853905">checkCompoundGraphs</a></td></tr>
+<tr class="memdesc:afca0a347715ed55e26f77d42a2853905"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if we need to convert a subgraph to a constant.  <a href="#afca0a347715ed55e26f77d42a2853905">More...</a><br /></td></tr>
+<tr class="separator:afca0a347715ed55e26f77d42a2853905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3c0fd54f4943ccedb7b37e19b3e160c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceback_end_1_1_d_v_m_1_1literals.html#af3c0fd54f4943ccedb7b37e19b3e160c">removeLiterals</a></td></tr>
 <tr class="memdesc:af3c0fd54f4943ccedb7b37e19b3e160c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all operations that have predefined inputs.  <a href="#af3c0fd54f4943ccedb7b37e19b3e160c">More...</a><br /></td></tr>
 <tr class="separator:af3c0fd54f4943ccedb7b37e19b3e160c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,12 +299,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a98756589a380f220c22befed86a29acc"></a>
+<a class="anchor" id="aa6e42139f0d4ebb80f4720d7ef381b21"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def backEnd.DVM.literals.checkGraph </td>
+          <td class="memname">def backEnd.DVM.literals.checkFunctionGraph </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>subGraph</em></td><td>)</td>
@@ -311,7 +314,24 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>See if we can remove a graph from the program. </p>
-<p>This assumes that it does not have to deal with compound node subgraphs! </p>
+
+</div>
+</div>
+<a class="anchor" id="afca0a347715ed55e26f77d42a2853905"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def backEnd.DVM.literals.checkCompoundGraphs </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>See if we need to convert a subgraph to a constant. </p>
 
 </div>
 </div>
@@ -348,7 +368,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 15 2014 02:54:13 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 15 2014 22:30:25 for DVM by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

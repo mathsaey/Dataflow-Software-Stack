@@ -72,194 +72,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>checkLowerBound</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a9258231b40456b0d1c2597998d53ae65</Anchor>
-    <Abstract>See if a port utilizes a correct lower bound of an array. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>removeInputPort</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a0d3a7925353fb1a962e4d60a3ae83ad3</Anchor>
-    <Abstract>Remove the first input port of a node. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertABuild</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a6414025b891665b8a55ec84338246512</Anchor>
-    <Abstract>Convert ABuild. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertAFill</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>abb736136a1232aa00d79227edd42859b</Anchor>
-    <Abstract>Convert AFill. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertAGather</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a8e586759cd612069397eda87db7f33fb</Anchor>
-    <Abstract>Convert AGather. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertAScatter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a4a9b366ce0c1c9d87066cf4a7389e849</Anchor>
-    <Abstract>Convert AScatter. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertALimL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a5aed935401964da1447fbae3c843c1b2</Anchor>
-    <Abstract>Convert ALimL. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertASetL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a37b2ef64719de224cebc5a66a9f12436</Anchor>
-    <Abstract>A lower bound of an array cannot be changed in DVM. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertCall</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a9f1122d233a029d2a5fc60ed7413e65b</Anchor>
-    <Abstract>Convert a call operation to a call node. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertLessChain</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a16f8ab40594f02117c9fc4971f7e1584</Anchor>
-    <Abstract>Convert &amp;#39;less chains&amp;#39;. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertLess</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>aaa6d13712796172dc70b529cfe4edec0</Anchor>
-    <Abstract>Convert a less chain: not smaller =&gt; greater or eq. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertLessEq</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ad02c2b80c84e4f9fac506f5b2ad83f04</Anchor>
-    <Abstract>Convert a less chain: not smaller or eq =&gt; greater. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>checkNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ac32bb9ccc6e58e5cb452e6f334ef2f0c</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>run</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a23dc548cf08b133b546362ed53dfffb6</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>log</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ad7b107c56c6de78ebf187d5bbded5bbc</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>conversions</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a06b44f1392def4ab1103e9bb068b09f6</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>DVM_CHUNKS</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -530,14 +342,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>checkGraph</Name>
+      <Name>checkFunctionGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+    <Anchor>aa6e42139f0d4ebb80f4720d7ef381b21</Anchor>
     <Abstract>See if we can remove a graph from the program. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkCompoundGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>afca0a347715ed55e26f77d42a2853905</Anchor>
+    <Abstract>See if we need to convert a subgraph to a constant. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -729,6 +553,194 @@
     <Anchor>af28ac736ed87c38a133b39ea02e6a84c</Anchor>
     <Abstract>Various IGR compound nodes. </Abstract>
     <DeclaredIn>compound.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkLowerBound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5f6cc4b81a57fc82c4c1511fa80cf582</Anchor>
+    <Abstract>See if a port utilizes a correct lower bound of an array. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeInputPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a07396c25c4dcf292a2fc6b48cb3368dd</Anchor>
+    <Abstract>Remove the first input port of a node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertABuild</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af912514a30b2c912dd3f154fdf33616b</Anchor>
+    <Abstract>Convert ABuild. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAFill</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a2d7eb2e4e03da8b70c23214f263b6199</Anchor>
+    <Abstract>Convert AFill. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAGather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5089a2dc3c6aec3821a42ec2f44bf03c</Anchor>
+    <Abstract>Convert AGather. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAScatter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a99563437e07f6c076cb92d7039eef575</Anchor>
+    <Abstract>Convert AScatter. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertALimL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a0fc8d616d914d1d074c56901dcd3092a</Anchor>
+    <Abstract>Convert ALimL. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertASetL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad680ffff6cf4b5b3209f04345ee19ada</Anchor>
+    <Abstract>A lower bound of an array cannot be changed in DVM. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertCall</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a8dcf9d850f28a27920dfde75c932750a</Anchor>
+    <Abstract>Convert a call operation to a call node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessChain</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ab5fab16a0b4a8be4f9f0c4b0acfd0970</Anchor>
+    <Abstract>Convert &amp;#39;less chains&amp;#39;. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLess</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad53e5d8c9dbc35aa2923b0284cc3d41d</Anchor>
+    <Abstract>Convert a less chain: not smaller =&gt; greater or eq. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessEq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af039873f71ad52301e94a697df77d6f1</Anchor>
+    <Abstract>Convert a less chain: not smaller or eq =&gt; greater. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>aae6b2a9a4304b3c2b560d7bf04272f64</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ae1ad7d88ad19a25678eee5fb7742aa1e</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a3c3b1d27fe4b10237d40fea015ed96f9</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>conversions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a72b40bbc737ec2cada44e2e55b964166</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1450,6 +1462,17 @@
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_sisal.html</Path>
     <Anchor>a07d185fe199f22e2471104b3d2c81189</Anchor>
+    <DeclaredIn>Sisal.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::Sisal</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_sisal.html</Path>
+    <Anchor>aad1841a7cf37b30cf6df872fd46d0856</Anchor>
     <DeclaredIn>Sisal.py</DeclaredIn>
   </Token>
   <Token>
@@ -4193,203 +4216,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>backEnd::DVM::converter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>ns</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>checkLowerBound</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a9258231b40456b0d1c2597998d53ae65</Anchor>
-    <Abstract>See if a port utilizes a correct lower bound of an array. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>removeInputPort</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a0d3a7925353fb1a962e4d60a3ae83ad3</Anchor>
-    <Abstract>Remove the first input port of a node. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertABuild</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a6414025b891665b8a55ec84338246512</Anchor>
-    <Abstract>Convert ABuild. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertAFill</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>abb736136a1232aa00d79227edd42859b</Anchor>
-    <Abstract>Convert AFill. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertAGather</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a8e586759cd612069397eda87db7f33fb</Anchor>
-    <Abstract>Convert AGather. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertAScatter</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a4a9b366ce0c1c9d87066cf4a7389e849</Anchor>
-    <Abstract>Convert AScatter. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertALimL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a5aed935401964da1447fbae3c843c1b2</Anchor>
-    <Abstract>Convert ALimL. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertASetL</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a37b2ef64719de224cebc5a66a9f12436</Anchor>
-    <Abstract>A lower bound of an array cannot be changed in DVM. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertCall</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a9f1122d233a029d2a5fc60ed7413e65b</Anchor>
-    <Abstract>Convert a call operation to a call node. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertLessChain</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a16f8ab40594f02117c9fc4971f7e1584</Anchor>
-    <Abstract>Convert &amp;#39;less chains&amp;#39;. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertLess</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>aaa6d13712796172dc70b529cfe4edec0</Anchor>
-    <Abstract>Convert a less chain: not smaller =&gt; greater or eq. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>convertLessEq</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ad02c2b80c84e4f9fac506f5b2ad83f04</Anchor>
-    <Abstract>Convert a less chain: not smaller or eq =&gt; greater. </Abstract>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>checkNode</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ac32bb9ccc6e58e5cb452e6f334ef2f0c</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>run</Name>
-      <APILanguage>python</APILanguage>
-      <Type>func</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a23dc548cf08b133b546362ed53dfffb6</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>log</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>ad7b107c56c6de78ebf187d5bbded5bbc</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>conversions</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>backEnd::DVM::converter</Scope>
-    </TokenIdentifier>
-    <Path>namespaceback_end_1_1_d_v_m_1_1converter.html</Path>
-    <Anchor>a06b44f1392def4ab1103e9bb068b09f6</Anchor>
-    <DeclaredIn>converter.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>backEnd::DVM::dis</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -5113,14 +4939,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>checkGraph</Name>
+      <Name>checkFunctionGraph</Name>
       <APILanguage>python</APILanguage>
       <Type>func</Type>
       <Scope>backEnd::DVM::literals</Scope>
     </TokenIdentifier>
     <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
-    <Anchor>a98756589a380f220c22befed86a29acc</Anchor>
+    <Anchor>aa6e42139f0d4ebb80f4720d7ef381b21</Anchor>
     <Abstract>See if we can remove a graph from the program. </Abstract>
+    <DeclaredIn>literals.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkCompoundGraphs</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>backEnd::DVM::literals</Scope>
+    </TokenIdentifier>
+    <Path>namespaceback_end_1_1_d_v_m_1_1literals.html</Path>
+    <Anchor>afca0a347715ed55e26f77d42a2853905</Anchor>
+    <Abstract>See if we need to convert a subgraph to a constant. </Abstract>
     <DeclaredIn>literals.py</DeclaredIn>
   </Token>
   <Token>
@@ -7348,7 +7186,6 @@
     </TokenIdentifier>
     <Path>classcore_1_1runtime_1_1_core.html</Path>
     <Anchor>a51729f1e6f60ddeffe9efdb9a0f7c075</Anchor>
-    <Abstract>Find the core under the lowest load. </Abstract>
     <DeclaredIn>runtime.py</DeclaredIn>
   </Token>
   <Token>
@@ -7445,6 +7282,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>maxIdx</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>core.runtime.Core</Scope>
+    </TokenIdentifier>
+    <Path>classcore_1_1runtime_1_1_core.html</Path>
+    <Anchor>a8efa3153301ab66849c8f26ed45d674d</Anchor>
+    <Abstract>Highest index of the core array. </Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>inbox</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -7508,16 +7356,6 @@
     <Path>classcore_1_1runtime_1_1_core.html</Path>
     <Anchor>af4759bad6aa35362a6efd93487c974d1</Anchor>
     <Abstract>Context matcher for this core. </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ring</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>core.runtime.Core</Scope>
-    </TokenIdentifier>
-    <Path>classcore_1_1runtime_1_1_core.html</Path>
-    <Anchor>a30d48c73c89c4b550436febf30e3b648</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8822,6 +8660,203 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>frontEnd::IF1::converter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>ns</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkLowerBound</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5f6cc4b81a57fc82c4c1511fa80cf582</Anchor>
+    <Abstract>See if a port utilizes a correct lower bound of an array. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>removeInputPort</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a07396c25c4dcf292a2fc6b48cb3368dd</Anchor>
+    <Abstract>Remove the first input port of a node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertABuild</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af912514a30b2c912dd3f154fdf33616b</Anchor>
+    <Abstract>Convert ABuild. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAFill</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a2d7eb2e4e03da8b70c23214f263b6199</Anchor>
+    <Abstract>Convert AFill. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAGather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a5089a2dc3c6aec3821a42ec2f44bf03c</Anchor>
+    <Abstract>Convert AGather. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertAScatter</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a99563437e07f6c076cb92d7039eef575</Anchor>
+    <Abstract>Convert AScatter. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertALimL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a0fc8d616d914d1d074c56901dcd3092a</Anchor>
+    <Abstract>Convert ALimL. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertASetL</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad680ffff6cf4b5b3209f04345ee19ada</Anchor>
+    <Abstract>A lower bound of an array cannot be changed in DVM. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertCall</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a8dcf9d850f28a27920dfde75c932750a</Anchor>
+    <Abstract>Convert a call operation to a call node. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessChain</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ab5fab16a0b4a8be4f9f0c4b0acfd0970</Anchor>
+    <Abstract>Convert &amp;#39;less chains&amp;#39;. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLess</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ad53e5d8c9dbc35aa2923b0284cc3d41d</Anchor>
+    <Abstract>Convert a less chain: not smaller =&gt; greater or eq. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>convertLessEq</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>af039873f71ad52301e94a697df77d6f1</Anchor>
+    <Abstract>Convert a less chain: not smaller or eq =&gt; greater. </Abstract>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkNode</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>aae6b2a9a4304b3c2b560d7bf04272f64</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>run</Name>
+      <APILanguage>python</APILanguage>
+      <Type>func</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>ae1ad7d88ad19a25678eee5fb7742aa1e</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a3c3b1d27fe4b10237d40fea015ed96f9</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>conversions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::IF1::converter</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_i_f1_1_1converter.html</Path>
+    <Anchor>a72b40bbc737ec2cada44e2e55b964166</Anchor>
+    <DeclaredIn>converter.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>frontEnd::IF1::edge</Name>
       <APILanguage>python</APILanguage>
       <Type>ns</Type>
@@ -10003,6 +10038,17 @@
     </TokenIdentifier>
     <Path>namespacefront_end_1_1_sisal.html</Path>
     <Anchor>a07d185fe199f22e2471104b3d2c81189</Anchor>
+    <DeclaredIn>Sisal.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>log</Name>
+      <APILanguage>python</APILanguage>
+      <Type>data</Type>
+      <Scope>frontEnd::Sisal</Scope>
+    </TokenIdentifier>
+    <Path>namespacefront_end_1_1_sisal.html</Path>
+    <Anchor>aad1841a7cf37b30cf6df872fd46d0856</Anchor>
     <DeclaredIn>Sisal.py</DeclaredIn>
   </Token>
   <Token>
