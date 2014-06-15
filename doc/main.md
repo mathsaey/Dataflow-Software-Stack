@@ -68,7 +68,7 @@ To recap, DVM is a virtual machine that attempts to achieve high levels of paral
 
 # Getting started {#Start}
 
-Running DVM is quite trivial at the moment. All you need is a working [python](http://www.python.org/) interpreter. We recommend using [pypy](http://pypy.org/) if you want to benchmark DVM or test it for speed. However, wherever possible, compatibility is maintained with CPython, the default python interpreter.
+Running DVM is quite trivial at the moment. All you need is a working [python](http://www.python.org/) interpreter.
 
 You need to install [sisalc](http://sourceforge.net/projects/sisal/), the sisal C compiler if you want to produce your own IF1 files from sisal source code.
 
@@ -80,11 +80,10 @@ Command  | Version | Website
 ---------|---------|--------
 `sisalc` | 14.1.0  | http://sourceforge.net/projects/sisal/
 `python` | 2.7.6   | http://www.python.org/
-`pypy`   | 2.2.1   | http://pypy.org/
 
 ## On Python and speed {#Performance}
 
-Running a virtual machine on an interpreted language seems like a pretty bad idea. Python performance is pretty slow, even with the speedup that using pypy nets us. So why did we opt to use python instead of going for a fast language, such as C++?
+Running a virtual machine on an interpreted language seems like a pretty bad idea. Python performance is pretty slow. So why did we opt to use python instead of going for a fast language, such as C++?
 
 The use of python can be explained by a number of reasons. First of all, using python significantly speeds up development time, which is important in a project with a limited amount of time. Secondly, rapid prototyping and testing multiple approaches to a single problem is quite important due to the academic nature of our work. Initially, we only wanted to use python for a prototyping stage, but time constraints led us to using python as our primary language. A [C++ version](https://github.com/mathsaey/DVM/tree/DVM%2B%2B) of DVM is in the works, but no progress should be expected anytime soon, or even at all.
 
