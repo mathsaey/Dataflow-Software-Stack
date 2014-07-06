@@ -36,13 +36,6 @@
         <Name>Getting started</Name>
         <Path>index.html</Path>
         <Anchor>Start</Anchor>
-        <Subnodes>
-         <Node>
-          <Name>On Python and speed</Name>
-          <Path>index.html</Path>
-          <Anchor>Performance</Anchor>
-         </Node>
-        </Subnodes>
        </Node>
        <Node>
         <Name>Overall Structure</Name>
