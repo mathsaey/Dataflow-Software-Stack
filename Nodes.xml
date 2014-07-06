@@ -11,7 +11,7 @@
         <Anchor>Introduction</Anchor>
        </Node>
        <Node>
-        <Name>About DVM</Name>
+        <Name>About the Software Stack</Name>
         <Path>index.html</Path>
         <Anchor>About</Anchor>
         <Subnodes>
@@ -26,11 +26,6 @@
           <Anchor>IF1</Anchor>
          </Node>
         </Subnodes>
-       </Node>
-       <Node>
-        <Name>General</Name>
-        <Path>index.html</Path>
-        <Anchor>General</Anchor>
        </Node>
        <Node>
         <Name>Getting started</Name>
