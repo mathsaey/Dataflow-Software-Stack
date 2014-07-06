@@ -1,7 +1,7 @@
 .\" DISc Man Page
 .\" Copyright (c) 2013, 2014 Mathijs Saey
 .\" All Rights Reserved
-.TH DISc 1 "4 March 2014" VUB DISc
+.TH DISc 1 "6 July 2014" VUB DISc
 
 .SH NAME
 DISc \-\- The DIS Compiler
@@ -32,3 +32,15 @@ from the extention of the input if no frontEnd is specified.
 -ll logLevel, --logLevel
 .br
 Determine the loglevel of DVM, usefull to find bugs. Logging is disabled by default.
+
+.HP
+--dot
+.br
+Generate a dot graph of the input file. This requires graphviz dot to be in your path.
+This will store the generated dot file in igr.dot and its generated graph in igr.dot.png
+
+.HP
+--dry_run
+.br
+Abort compilation after converting the input program to the intermediate representation. This can be useful
+if you only want to generate a dot graph.

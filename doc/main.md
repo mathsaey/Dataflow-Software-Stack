@@ -19,14 +19,12 @@ Finally, the main repository of this project can be found [on github](https://gi
 
 # About DVM {#About}
 
-The goal of DVM is to create a highly parallel virtual machine. This machine will use the [dataflow architecture](http://en.wikipedia.org/wiki/Dataflow_architecture) to achieve a high amount of concurrency.
+The goal of DVM is to create a highly parallel virtual machine. This machine will use the [dataflow architecturee](http://en.wikipedia.org/wiki/Dataflow_architecture) to achieve a high amount of parallelism.
 
 ## Dataflow {#Dataflow}
 <img style="float: right" src="simpleStatic.png"/>
 
-In short, the general idea behind [dataflow](http://en.wikipedia.org/wiki/Dataflow_architecture) is that an instruction in the program is executed once it's inputs are ready. This property allows us to exploit the implicit parallelism of programs.
-
-There are 2 general flavors of dataflow, static and dynamic. In static dataflow, the program is represented as a graph, and data travels along the edges of this graph. Each node of the graph represents an operation on this data.
+In short, the general idea behind [dataflow](http://en.wikipedia.org/wiki/Dataflow_architecture) is that an instruction in the program is executed once it's inputs are ready. This property allows us to exploit the implicit parallelism of programs. A dataflow program can be represented as a graph, in such a graph, nodes represent operations while edges represent data dependencies between these operations.
 
 A visual representation of such a dataflow graph can be seen right of this section. This graph was generated from the following Sisal code.
 
@@ -43,49 +41,34 @@ end function
 
 As we can see, this program simply takes 4 inputs, and adds all of these together. The generated dataflow graph shows us that both of the additions could be carried out in parallel.
 
-The second flavor, dynamic dataflow, is a less intuitive representation, which is better suited to parallel execution. Dynamic dataflow is the model of dataflow that is generally used in practice.
-This is because static dataflow is very poor at running the same piece of code without internally copying it. 
+Concretely, DVM utilizes a tagged-token dataflow architecture to execute such a dataflow program. In such an architecture, each token (i.e. a piece of data traveling through the program) contains a *tag* which contains the destination of this token, and a datum, which stores the actual data that is transported. Various elements of the DVM execution pipeline handle such a token, which leads to the production of new tokens. This pipeline system is represented in the image below.
 
-In dynamic dataflow, the program is not represented as a graph, instead, the program is represented as a set of instructions kept in the instruction memory. Providing these instructions with data is done through using tagged tokens. 
-
-These tokens consists of 2 pieces, a datum and a tag. The datum is simply the piece of data that we want to transport to some instruction, while the tag contains all the information that the program needs to get this token to it's destination. Furthermore, this tag contains some additional information that allows us to have multiple invocations of the same piece of code without causing concurrency issues. 
-
-Executing the program is now done by sending these tagged tokens to their destinations. These destination instructions will in turn return new tokens, which can be added to the program again, continuing the cycle until we reach the end of our program.
-
-The exact details of a dynamic dataflow architecture are not presented here for the sake of brevity, people looking for a more detailed explanation should consider reading: `Executing a Program on the MIT Tagged-Token Dataflow Architecture` (Arvind and RISHIYUR R.S., 1990).
+![DVM execution pipeline](pipeline.png)
 
 ## Sisal and IF1 {#IF1}
 
 [Sisal](http://en.wikipedia.org/wiki/SISAL) is a language designed to be a high level variant for languages such as PASCAL that can work on multicore machines. During the first compilation phase sisalc (the sisal compiler) compiles Sisal to IF1, an intermediate language, which represents the sisal source code as a dataflow graph. 
 
-The focus of DVM lies on the optimization and execution of dataflow programs, and not on the language or compiler design. For this reason, we decided to use IF1 as the primary input language of DVM. Using DVM in combination with [sisalc](http://sourceforge.net/projects/sisal/) offers us a good language for writing dataflow program, along with a compiler that removes the complexity of the language for us.
+DVM is focused on the execution of a dataflow program, and not on the language or compiler design. For this reason, we decided to use IF1 as the primary input language of DVM. Using DVM in combination with [sisalc](http://sourceforge.net/projects/sisal/) offers us a high-level language for writing dataflow programs, along with a compiler that removes the complexity of the language for us.
 
 More information about IF1 along with some sisal and IF1 code samples can be found in the [IF1 overview](md_doc__i_f1.html). 
 
 ## In General {#General}
 
-To recap, DVM is a virtual machine that attempts to achieve high levels of parallelism. In order to do this, DVM utilizes a dynamic dataflow architecture. DVM uses IF1 as an input language, as generated by sisalc, the Sisal compiler. 
+To recap, DVM is a virtual machine that attempts to achieve high levels of parallelism. In order to do this, DVM utilizes a tagged-token dataflow architecture. DVM uses IF1 as an input language, as generated by sisalc, the Sisal compiler. 
 
 # Getting started {#Start}
 
-Running DVM is quite trivial at the moment. All you need is a working [python](http://www.python.org/) interpreter.
+Running DVM is quite trivial at the moment. All you need is a working [python](http://www.python.org/) interpreter. Man pages for DVM and DISc can be found in the [resources folder of the repository](https://github.com/mathsaey/DVM/tree/master/res).
 
 You need to install [sisalc](http://sourceforge.net/projects/sisal/), the sisal C compiler if you want to produce your own IF1 files from sisal source code.
 
-For the time being, input files are manually added in the source code. A decent way to invoke DVM from the command line is planned for the future.
-
 The sites of all these tools and the used versions can be found below:
 
-Command  | Version | Website
+Tool     | Version | Website
 ---------|---------|--------
 `sisalc` | 14.1.0  | http://sourceforge.net/projects/sisal/
 `python` | 2.7.6   | http://www.python.org/
-
-## On Python and speed {#Performance}
-
-Running a virtual machine on an interpreted language seems like a pretty bad idea. Python performance is pretty slow. So why did we opt to use python instead of going for a fast language, such as C++?
-
-The use of python can be explained by a number of reasons. First of all, using python significantly speeds up development time, which is important in a project with a limited amount of time. Secondly, rapid prototyping and testing multiple approaches to a single problem is quite important due to the academic nature of our work. Initially, we only wanted to use python for a prototyping stage, but time constraints led us to using python as our primary language. A [C++ version](https://github.com/mathsaey/DVM/tree/DVM%2B%2B) of DVM is in the works, but no progress should be expected anytime soon, or even at all.
 
 # Overall Structure {#Structure}
 
