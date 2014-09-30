@@ -4,7 +4,7 @@
 <plist version="1.0">
 <dict>
      <key>CFBundleName</key>
-     <string>DataflowSoftwareStack</string>
+     <string>Dataflow Software Stack</string>
      <key>CFBundleIdentifier</key>
      <string>edu.vub.soft.DVM</string>
      <key>CFBundleVersion</key>
