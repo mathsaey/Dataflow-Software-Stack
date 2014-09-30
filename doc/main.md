@@ -4,7 +4,7 @@
 
 # Introduction {#Introduction}
 
-This is the main documentation of the dataflow software stack, created by Mathijs Saey for his thesis at the VUB. 
+This is the main documentation of the [dataflow software stack](https://github.com/mathsaey/Dataflow-Software-Stack), created by Mathijs Saey for his thesis at the VUB. 
 
 These pages serve a number of purposes:
 * [Provide a basic overview about the dataflow software stack.](#About)
@@ -13,13 +13,9 @@ These pages serve a number of purposes:
 * [Collect all the necessary information to get the software stack up and running](#Start)
 * [Collect references and examples that can come in handy while working on DVM.](pages.html)
 
-It should be noted that the version string next to the project name in the header of any page of this documentation corresponds to a commit hash. This hash can be used to find the exact codebase that was used to generate the docs.
-
-Finally, the main repository of this project can be found [on github](https://github.com/mathsaey/Dataflow-Software-Stack).
-
 # About the Software Stack {#About}
 
-The main goal or the dataflow software stack was to experiment with a prototypical implementation of a dataflow virtual machine and a compiler that generates input for such a machine. As the name implies, this machine utilizes the the [dataflow architecture](http://en.wikipedia.org/wiki/Dataflow_architecture) to achieve a high amount of parallelism. Concretely, our compiler accepts IF1, which it transforms into [DIS](md_doc__d_i_s.html), a low-level dataflow language. Afterwards, this DIS program can be utilized by DVM to execute our program.
+The main goal of the dataflow software stack was to experiment with a prototypical implementation of a dataflow virtual machine and a compiler that generates input for such a machine. As the name implies, this machine utilizes the the [dataflow architecture](http://en.wikipedia.org/wiki/Dataflow_architecture) to achieve a high amount of parallelism. Concretely, our compiler accepts IF1, which it transforms into [DIS](md_doc__d_i_s.html), a low-level dataflow language. Afterwards, this DIS program can be utilized by DVM to execute our program. Utilizing DIS instead of a more traditional low-level language such as x86 allows us to keep track of the data dependencies in the program on every level of the software stack.
 
 ## Dataflow {#Dataflow}
 <img style="float: right" src="simpleStatic.png"/>
