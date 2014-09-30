@@ -4,11 +4,11 @@
 <plist version="1.0">
 <dict>
      <key>CFBundleName</key>
-     <string>DVM</string>
+     <string>DataflowSoftwareStack</string>
      <key>CFBundleIdentifier</key>
      <string>edu.vub.soft.DVM</string>
      <key>CFBundleVersion</key>
-     <string>df6e496</string>
+     <string>032db78</string>
      <key>DocSetFeedName</key>
      <string>DVM</string>
      <key>DocSetPublisherIdentifier</key>
